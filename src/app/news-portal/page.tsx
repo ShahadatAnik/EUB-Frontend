@@ -25,6 +25,8 @@ import PageHeader from '@/components/page-header';
 import Link from 'next/link';
 import PageContainer from '@/components/page-container';
 
+import { Badge } from '@/components/ui/badge';
+
 const NewsPortalPage = () => {
   return (
     <div>
@@ -40,6 +42,13 @@ const NewsPortalPage = () => {
                   fill
                   alt={item.cover_image?.alt}
                 />
+
+                <div className='absolute -top-2 left-0 right-0 bottom-0 bg-gradient-to-b from-black/50  to-black/0'></div>
+                <div className='absolute left-4 top-2'>
+                  <Badge variant={'light'} className='rounded-sm'>
+                    {new Date().toLocaleDateString()}
+                  </Badge>
+                </div>
               </CardHeader>
               <CardContent className='pt-4'>
                 <Link
