@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "University Introduces New Sustainability Initiatives",
+    "description": "The university has launched an ambitious sustainability program aimed at reducing campus carbon emissions by 30% within the next five years. Key projects include solar panel installations, an expanded recycling program, and student-led energy conservation efforts. Officials hope the initiative will inspire other institutions to follow suit, prioritizing environmental responsibility and enhancing campus life. Faculty and students alike are encouraged to participate in awareness programs and join sustainability committees to create long-lasting impact across the university.",
+    "cover_image": {
+      "src": "/images/news-portal/1.jpg",
+      "alt": "An aerial view of a modern university campus with solar panels, recycling bins, and students walking on a tree-lined path under bright skies."
+    }
+  },
+  {
+    "id": 2,
+    "title": "Campus Library Unveils Modern Renovations",
+    "description": "After months of construction, the university's main library has reopened with several impressive upgrades, including new study rooms, state-of-the-art technology, and ergonomic seating. The renovations also include a dedicated research lab, online book reservation kiosks, and more collaborative spaces to foster academic discussion. The redesign aims to make the library more accessible, comfortable, and conducive to student needs. Librarians encourage everyone to explore the new space and provide feedback for further enhancements.",
+    "cover_image": {
+      "src": "/images/news-portal/2.jpg",
+      "alt": "An aerial view of a modern university campus with solar panels, recycling bins, and students walking on a tree-lined path under bright skies."
+    }
+  },
+  {
+    "id": 3,
+    "title": "New Scholarship Program for Underrepresented Students",
+    "description": "In an effort to promote inclusivity and equal opportunity, the university has announced a new scholarship program for underrepresented students. The program, named the \u201cInclusive Excellence Scholarship,\u201d provides tuition assistance and mentorship to students from diverse backgrounds. Eligible students are encouraged to apply, and faculty members have pledged to provide additional support. The initiative aims to cultivate a more diverse learning environment that reflects the values of equity and inclusion.",
+    "cover_image": {
+      "src": "/images/news-portal/3.jpg",
+      "alt": "An aerial view of a modern university campus with solar panels, recycling bins, and students walking on a tree-lined path under bright skies."
+    }
+  },
+  {
+    "id": 4,
+    "title": "University Launches Entrepreneurship Hub for Aspiring Innovators",
+    "description": "Recognizing the growing interest in entrepreneurship among students, the university has introduced a dedicated Entrepreneurship Hub. This new space offers resources such as business mentors, networking opportunities, and funding options for student startups. Equipped with conference rooms, collaborative spaces, and advanced technology, the hub is designed to help students turn their ideas into successful ventures. The university hopes to foster innovation, preparing students for successful business careers post-graduation.",
+    "cover_image": {
+      "src": "/images/news-portal/4.jpg",
+      "alt": "An aerial view of a modern university campus with solar panels, recycling bins, and students walking on a tree-lined path under bright skies."
+    }
+  },
+  {
+    "id": 5,
+    "title": "Groundbreaking Research on Climate Change by University Professors",
+    "description": "Professors from the Environmental Science Department have published a comprehensive study on climate change impacts in coastal regions. The research, which has been praised for its depth and innovation, examines the effects of rising sea levels and changing weather patterns on local communities. The findings aim to inform public policy and inspire further research. Faculty members are calling on students to get involved in ongoing research projects to help address pressing environmental issues.",
+    "cover_image": {
+      "src": "/images/news-portal/5.jpg",
+      "alt": "An aerial view of a modern university campus with solar panels, recycling bins, and students walking on a tree-lined path under bright skies."
+    }
+  },
+  {
+    "id": 6,
+    "title": "Students Organize Campus Cleanup Drive to Promote Environmental Awareness",
+    "description": "Over 200 students gathered last weekend to participate in a campus-wide cleanup drive aimed at raising environmental awareness. Organized by the university's Environmental Club, the event focused on reducing litter and promoting recycling across campus. Participants collected over 500 pounds of waste, which was sorted and sent for proper disposal or recycling. This event has inspired students to commit to daily environmentally-friendly habits, contributing positively to the campus community.",
+    "cover_image": {
+      "src": "/images/news-portal/6.jpg",
+      "alt": "An aerial view of a modern university campus with solar panels, recycling bins, and students walking on a tree-lined path under bright skies."
+    }
+  },
+  {
+    "id": 7,
+    "title": "Alumni Share Career Insights with Current Students in Annual Forum",
+    "description": "The university\u2019s alumni network hosted its annual career forum, bringing together successful graduates from various fields to share their professional experiences with current students. The event included panel discussions, workshops, and networking sessions, offering students valuable advice on career growth and job search strategies. Alumni shared stories of challenges and successes, providing students with inspiration and a clearer path for their own professional journeys.",
+    "cover_image": {
+      "src": "/images/news-portal/7.jpg",
+      "alt": "An aerial view of a modern university campus with solar panels, recycling bins, and students walking on a tree-lined path under bright skies."
+    }
+  },
+  {
+    "id": 8,
+    "title": "New Online Learning Tools Launched to Support Remote Education",
+    "description": "In response to increased demand for flexible learning options, the university has launched a suite of online tools to enhance remote education. These tools include virtual labs, interactive learning modules, and enhanced video conferencing capabilities. Faculty and students can now access coursework and collaborate on projects from any location. The university aims to make learning more accessible and adaptable, supporting students\u2019 success in an increasingly digital world.",
+    "cover_image": {
+      "src": "/images/news-portal/8.jpg",
+      "alt": "An aerial view of a modern university campus with solar panels, recycling bins, and students walking on a tree-lined path under bright skies."
+    }
+  },
+  {
+    "id": 9,
+    "title": "New Online Learning Tools Launched to Support Remote Education",
+    "description": "In response to increased demand for flexible learning options, the university has launched a suite of online tools to enhance remote education. These tools include virtual labs, interactive learning modules, and enhanced video conferencing capabilities. Faculty and students can now access coursework and collaborate on projects from any location. The university aims to make learning more accessible and adaptable, supporting students\u2019 success in an increasingly digital world.",
+    "cover_image": {
+      "src": "/images/news-portal/9.jpg",
+      "alt": "An aerial view of a modern university campus with solar panels, recycling bins, and students walking on a tree-lined path under bright skies."
+    }
+  }
+]
