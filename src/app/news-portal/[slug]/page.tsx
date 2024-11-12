@@ -23,7 +23,9 @@ export default async function Page({
       <PageContainer className='pb-40'>
         <div className='flex flex-col lg:flex-row gap-8 '>
           <div className='flex-1'>
-            <h2 className='text-3xl font-medium font-poppins'>{post?.title}</h2>
+            <h2 className='text-xl lg:text-3xl font-medium font-poppins'>
+              {post?.title}
+            </h2>
             <div className='mt-4'>
               <p>{date.toLocaleDateString()}</p>
             </div>
