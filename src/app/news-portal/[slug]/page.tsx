@@ -1,11 +1,11 @@
-import Image from 'next/image';
-
 import data from '@/lib/data.json';
 
 import LatestPosts from '@/components/latest-posts';
 import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
 import { Separator } from '@/components/ui/separator';
+import AlbumSlider from '@/components/album-slider';
+import { PdfReader } from '@/components/pdf-reader';
 
 export default async function Page({
   params,
@@ -32,14 +32,16 @@ export default async function Page({
             <Separator className='mt-3 mb-6' />
 
             <div>
-              <div className='aspect-video w-full relative'>
+              <AlbumSlider />
+              {/* <PdfReader fileURL='https://morth.nic.in/sites/default/files/dd12-13_0.pdf' /> */}
+              {/* <div className='aspect-video w-full relative'>
                 <Image
                   className='object-cover'
                   fill
                   src={post?.cover_image.src || ''}
                   alt={post?.cover_image?.alt || ''}
                 />
-              </div>
+              </div> */}
 
               <p className='mt-4'>{post?.description}</p>
             </div>
