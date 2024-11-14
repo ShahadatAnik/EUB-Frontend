@@ -5,7 +5,7 @@ import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
 import { Separator } from '@/components/ui/separator';
 import AlbumSlider from '@/components/album-slider';
-import { PdfReader } from '@/components/pdf-reader';
+import PdfViewer from '@/components/pdf-viewer';
 
 export default async function Page({
   params,
@@ -33,16 +33,7 @@ export default async function Page({
 
             <div>
               <AlbumSlider />
-              {/* <PdfReader fileURL='https://morth.nic.in/sites/default/files/dd12-13_0.pdf' /> */}
-              {/* <div className='aspect-video w-full relative'>
-                <Image
-                  className='object-cover'
-                  fill
-                  src={post?.cover_image.src || ''}
-                  alt={post?.cover_image?.alt || ''}
-                />
-              </div> */}
-
+              <PdfViewer />
               <p className='mt-4'>{post?.description}</p>
             </div>
           </div>
