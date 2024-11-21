@@ -6,6 +6,8 @@ import PageHeader from '@/components/page-header';
 import { Separator } from '@/components/ui/separator';
 import AlbumSlider from '@/components/album-slider';
 import PdfViewer from '@/components/pdf-viewer';
+import { INewsPortal } from '@/types';
+import { formatDate } from 'date-fns';
 
 export default async function Page({
   params,
@@ -14,8 +16,14 @@ export default async function Page({
 }) {
   const slug = (await params).slug;
 
-  const post = data.find((item) => item.id.toString() === slug);
-  const date = new Date();
+  console.log({
+    slug,
+  });
+
+  const res = await fetch(
+    `http://103.147.163.46:4030/news/news-portal/${slug}`
+  );
+  const data = (await res.json()).data as INewsPortal;
 
   return (
     <div>
@@ -24,17 +32,17 @@ export default async function Page({
         <div className='flex flex-col lg:flex-row gap-8 '>
           <div className='flex-1'>
             <h2 className='text-xl lg:text-3xl font-medium font-poppins'>
-              {post?.title}
+              {data?.title}
             </h2>
             <div className='mt-4'>
-              <p>{date.toLocaleDateString()}</p>
+              <p>{formatDate(new Date(data.published_date), 'dd MMM, yyyy')}</p>
             </div>
             <Separator className='mt-3 mb-6' />
 
             <div>
               <AlbumSlider />
               <PdfViewer />
-              <p className='mt-4'>{post?.description}</p>
+              <p className='mt-4'>{data?.description}</p>
             </div>
           </div>
 
