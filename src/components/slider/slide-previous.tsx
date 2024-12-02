@@ -9,15 +9,15 @@ const SlidePrevious: React.FC<{ isBeginning?: boolean }> = ({
   const swiper = useSwiper();
 
   return (
-    <div className='h-full w-[100px] flex items-center justify-center'>
+    <div className='h-full w-10 lg:w-[100px] flex items-center justify-center'>
       <Button
         disabled={isBeginning}
-        variant={'outline'}
+        variant={'secondary'}
         size={'icon'}
         onClick={() => swiper.slidePrev()}
-        className='size-12 rounded-full'
+        className=' lg:size-12 rounded-full '
       >
-        <ChevronLeft />
+        <ChevronLeft className='!size-6 lg:!size-8' />
       </Button>
     </div>
   );

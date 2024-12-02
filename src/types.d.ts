@@ -19,3 +19,9 @@ export type INavLink = {
   href?: string;
   children?: INavLink[];
 };
+
+export type IFooterSocialLink = {
+  title: string;
+  href: string;
+  icon: string;
+};

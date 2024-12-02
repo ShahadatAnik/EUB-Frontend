@@ -39,7 +39,7 @@ const Slider: React.FC<ISliderProps> = ({ sliders }) => {
     >
       {sliders.map((slide, index) => (
         <SwiperSlide key={index} className='relative'>
-          <div className='absolute inset-0 bg-black/20 z-[1] flex justify-between'>
+          <div className='absolute inset-0 bg-black/20 z-[1] flex justify-between gap-4'>
             <SlidePrevious isBeginning={isBeginning} />
             <div className='flex-1 flex items-center justify-center'>
               {slide.content}

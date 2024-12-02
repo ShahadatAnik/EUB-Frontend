@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'eub-bucket.s3.ap-south-1.amazonaws.com',
       },
+      {
+        protocol: 'http',
+        hostname: '103.147.163.46',
+      },
     ],
   },
 };

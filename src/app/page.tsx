@@ -1,13 +1,12 @@
 import Hero from '@/components/hero';
-import Navbar from '@/components/layout/navbar';
+import Layout from '@/components/layout';
 import Notice from '@/components/notice';
 
 export default function Home() {
   return (
-    <div className='relative'>
-      <Navbar />
+    <Layout>
       <Hero />
       <Notice />
-    </div>
+    </Layout>
   );
 }

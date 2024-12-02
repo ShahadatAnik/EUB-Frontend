@@ -1,5 +1,3 @@
-import data from '@/lib/data.json';
-
 import LatestPosts from '@/components/latest-posts';
 import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
@@ -15,10 +13,6 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
-
-  console.log({
-    slug,
-  });
 
   const res = await fetch(
     `http://103.147.163.46:4030/news/news-portal/${slug}`
