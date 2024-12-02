@@ -15,20 +15,20 @@ const LatestPosts = () => {
       <Separator className='mt-2 mb-2' />
       <ScrollArea className='h-full lg:h-[500px]'>
         <ul className='space-y-4 mt-4'>
-          {data.map((item) => (
-            <li key={item.id}>
+          {data.map((item, index) => (
+            <li key={index}>
               <div className='flex gap-2'>
                 <div className='aspect-video h-[70px] relative'>
                   <Image
                     className='object-cover'
                     fill
-                    src={item.cover_image.src}
-                    alt={item.cover_image.alt}
+                    src={item.cover_image}
+                    alt={item.title}
                   />
                 </div>
                 <div>
                   <Link
-                    href={`/news-portal/${item.id}`}
+                    href={`/news-portal/${item.uuid}`}
                     className='hover:underline'
                   >
                     <h6 className='line-clamp-1 text-base font-medium'>

@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Undergraduate Study",
+    "links": [
+      {
+        "title": "Undergraduate Programs",
+        "href": "/academic/undergraduate-study/undergraduate-programs"
+      },
+      {
+        "title": "Admission Requirements",
+        "href": "/academic/undergraduate-study/admission-requirements"
+      },
+      {
+        "title": "Apply Online",
+        "href": "/academic/undergraduate-study/apply-online"
+      }
+    ]
+  },
+  {
+    "title": "Graduate Study",
+    "links": [
+      {
+        "title": "Graduate Programs",
+        "href": "/academic/graduate-study/graduate-programs"
+      },
+      {
+        "title": "Admission Requirements",
+        "href": "/academic/graduate-study/admission-requirements"
+      },
+      {
+        "title": "Apply Online",
+        "href": "/academic/graduate-study/apply-online"
+      }
+    ]
+  },
+  {
+    "title": "Research",
+    "links": [
+      {
+        "title": "EUB Research Projects",
+        "href": "/academic/research/eub-research-projects"
+      },
+      {
+        "title": "Departments Research",
+        "href": "/academic/research/departments-research"
+      },
+      {
+        "title": "Policies & Templates",
+        "href": "/academic/research/policies-and-templates"
+      }
+    ]
+  }
+]

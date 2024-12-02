@@ -66,7 +66,10 @@ export default {
 
     container: {
       center: true,
-      padding: '2rem',
+      padding: {
+        DEFAULT: '1rem',
+        lg: '0rem',
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports

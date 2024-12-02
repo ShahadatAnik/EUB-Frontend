@@ -1,11 +1,11 @@
-import Image from 'next/image';
-
-import data from '@/lib/data.json';
-
 import LatestPosts from '@/components/latest-posts';
 import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
 import { Separator } from '@/components/ui/separator';
+import AlbumSlider from '@/components/album-slider';
+import PdfViewer from '@/components/pdf-viewer';
+import { INewsPortal } from '@/types';
+import { formatDate } from 'date-fns';
 
 export default async function Page({
   params,
@@ -14,8 +14,10 @@ export default async function Page({
 }) {
   const slug = (await params).slug;
 
-  const post = data.find((item) => item.id.toString() === slug);
-  const date = new Date();
+  const res = await fetch(
+    `http://103.147.163.46:4030/news/news-portal/${slug}`
+  );
+  const data = (await res.json()).data as INewsPortal;
 
   return (
     <div>
@@ -24,24 +26,17 @@ export default async function Page({
         <div className='flex flex-col lg:flex-row gap-8 '>
           <div className='flex-1'>
             <h2 className='text-xl lg:text-3xl font-medium font-poppins'>
-              {post?.title}
+              {data?.title}
             </h2>
             <div className='mt-4'>
-              <p>{date.toLocaleDateString()}</p>
+              <p>{formatDate(new Date(data.published_date), 'dd MMM, yyyy')}</p>
             </div>
             <Separator className='mt-3 mb-6' />
 
             <div>
-              <div className='aspect-video w-full relative'>
-                <Image
-                  className='object-cover'
-                  fill
-                  src={post?.cover_image.src || ''}
-                  alt={post?.cover_image?.alt || ''}
-                />
-              </div>
-
-              <p className='mt-4'>{post?.description}</p>
+              <AlbumSlider />
+              <PdfViewer />
+              <p className='mt-4'>{data?.description}</p>
             </div>
           </div>
 
