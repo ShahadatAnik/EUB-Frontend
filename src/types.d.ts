@@ -8,3 +8,14 @@ export type INewsPortal = {
   published_date: string;
   documents: [];
 };
+
+export type ITopNavLink = {
+  title: string;
+  href: string;
+};
+
+export type INavLink = {
+  title: string;
+  href?: string;
+  children?: INavLink[];
+};
