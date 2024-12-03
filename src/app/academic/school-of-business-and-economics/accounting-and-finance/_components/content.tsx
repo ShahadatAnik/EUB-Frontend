@@ -22,16 +22,13 @@ const Content = () => {
   );
 
   return (
-    <div
-      className='
-    space-y-10
-    '
-    >
-      <div className='grid lg:grid-cols-3 gap-10'>
+    <div className='space-y-10'>
+      <div className='grid lg:grid-cols-3 gap-4 lg:gap-10'>
         <div className='lg:col-span-2'>
-          <div className='w-full aspect-video relative'>
+          <div className='w-full aspect-video lg:aspect-auto lg:h-full  relative'>
             <Image
               fill
+              className='object-cover'
               src={'/images/accounting-and-finance.jpg'}
               alt='Accounting and Finance image'
             />
@@ -44,7 +41,7 @@ const Content = () => {
         </div>
       </div>
 
-      <div className='grid lg:grid-cols-3 gap-10'>
+      <div className='grid lg:grid-cols-5 gap-10'>
         <div>
           <Accordion type='single' collapsible className='space-y-1'>
             {accordions.map((item, index) => (
@@ -92,7 +89,7 @@ const Content = () => {
             ))}
           </Accordion>
         </div>
-        <div className='lg:col-span-2'>{content}</div>
+        <div className='lg:col-span-4'>{content}</div>
       </div>
     </div>
   );

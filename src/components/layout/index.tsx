@@ -13,10 +13,7 @@ const Layout: React.FC<ILayoutProps> = ({ children, navbarClassName }) => {
   return (
     <div className='relative'>
       <div
-        className={cn(
-          'absolute top-0 left-0 right-0 z-50   hidden lg:block',
-          navbarClassName
-        )}
+        className={cn('absolute top-0 left-0 right-0 z-50', navbarClassName)}
       >
         <TopNavbar />
         <Navbar />

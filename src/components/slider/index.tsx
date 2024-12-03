@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 
 import SlideNext from './slide-next';
 import SlidePrevious from './slide-previous';
+import { Autoplay } from 'swiper/modules';
 
 export interface ISlide {
   img: string;
@@ -35,6 +36,11 @@ const Slider: React.FC<ISliderProps> = ({ sliders }) => {
       onSlideChange={(swiper) => {
         setIsEnd(swiper.isEnd);
         setIsBeginning(swiper.isBeginning);
+      }}
+      modules={[Autoplay]}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
       }}
     >
       {sliders.map((slide, index) => (
