@@ -1,6 +1,6 @@
-import Hero from '@/components/hero';
+import Hero from '@/app/(home)/_components/hero';
 import Layout from '@/components/layout';
-import Notice from '@/components/notice';
+import Notice from '@/app/(home)/_components/notice';
 
 export default function Home() {
   return (

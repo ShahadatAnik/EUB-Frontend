@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import NoticeSlider from './slider/notice-slider';
+import NoticeSlider from '../../../components/slider/notice-slider';
 import data from '@/lib/data.json';
-import NewsCard from './cards/news-card';
-import ProgramCard from './cards/program-card';
+import NewsCard from '../../../components/cards/news-card';
+import ProgramCard from '../../../components/cards/program-card';
 import programs from '@/lib/programs.json';
-import { Separator } from './ui/separator';
-import NoticeBoard from './notice-board';
+import { Separator } from '../../../components/ui/separator';
+import NoticeBoard from '../../../components/notice-board';
 
 const Notice = () => {
   return (

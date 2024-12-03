@@ -4,7 +4,7 @@ import React from 'react';
 
 const TopNavbar = () => {
   return (
-    <div className='bg-primary w-full py-2'>
+    <div className='bg-primary w-full py-2 hidden lg:block'>
       <div className='container flex justify-center gap-4 items-center divide-x divide-border'>
         {topNavLinks.map((link) => (
           <Link

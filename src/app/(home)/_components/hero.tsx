@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 
 import React from 'react';
 
-import Slider, { ISlide } from './slider';
+import Slider, { ISlide } from '../../../components/slider';
 import Link from 'next/link';
 
 const Hero = () => {
