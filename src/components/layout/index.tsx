@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from './navbar';
+
 import TopNavbar from './top-nav-bar';
 import Footer from './footer';
 import { cn } from '@/lib/utils';
+import Navbar from './navbar';
 
 interface ILayoutProps {
   children: React.ReactNode;

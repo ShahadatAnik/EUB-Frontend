@@ -25,3 +25,12 @@ export type IFooterSocialLink = {
   href: string;
   icon: string;
 };
+
+export type IFaculty = {
+  name: string;
+  designation: string;
+  image: string;
+  education: string[];
+  achievements: string[];
+  experiences: string[];
+};

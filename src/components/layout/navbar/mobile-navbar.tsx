@@ -19,7 +19,7 @@ import Link from 'next/link';
 
 const MobileNavbar = () => {
   return (
-    <nav className='block lg:hidden bg-white/80 backdrop-blur-sm py-4'>
+    <nav className='block lg:hidden bg-[#FFFBF5]/80 backdrop-blur-sm py-4'>
       <div className='container flex justify-between items-center'>
         <BrandLogo />
         <Sheet>
