@@ -1,7 +1,7 @@
 import React from 'react';
 
-import DesktopNavbar from './navbar/desktop-navbar';
-import MobileNavbar from './navbar/mobile-navbar';
+import DesktopNavbar from './desktop-navbar';
+import MobileNavbar from './mobile-navbar';
 
 const Navbar = () => {
   return (

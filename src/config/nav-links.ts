@@ -214,6 +214,29 @@ export const navLinks: INavLink[] = [
   },
   {
     title: 'Faculty',
+    children: [
+      {
+        title: 'School of Business & Economics',
+        children: [
+          {
+            title: 'Accounting & Finance',
+            href: '/faculty/school-of-business-and-economics/accounting-and-finance',
+          },
+          {
+            title: 'Economics',
+            href: '/faculty/school-of-business-and-economics/economics',
+          },
+          {
+            title: 'Management',
+            href: '/faculty/school-of-business-and-economics/management',
+          },
+          {
+            title: 'Marketing & International Business',
+            href: '/faculty/school-of-business-and-economics/marketing-and-international-business',
+          },
+        ],
+      },
+    ],
   },
   {
     title: 'Offices',
