@@ -3,13 +3,13 @@ import React from 'react';
 interface IPageHeaderProps {
   title: string;
   description?: string;
-  image: string;
+  image?: string;
 }
 
 const PageHeader: React.FC<IPageHeaderProps> = ({
   title,
   description,
-  image,
+  image = '/images/bg-1.jpg',
 }) => {
   return (
     <div
@@ -19,7 +19,7 @@ const PageHeader: React.FC<IPageHeaderProps> = ({
       className=' h-[120px] lg:h-[200px] bg-default relative flex items-center'
     >
       <div className='absolute inset-0 bg-black/70'></div>
-      <div className='container relative z-50 text-center'>
+      <div className='container relative z-10 text-center'>
         <h1 className=' text-3xl lg:text-6xl text-white font-poppins font-semibold '>
           {title}
         </h1>

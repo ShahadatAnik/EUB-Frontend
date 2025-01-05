@@ -210,6 +210,68 @@ export const navLinks: INavLink[] = [
           },
         ],
       },
+      {
+        title: 'Miscellaneous',
+        children: [
+          {
+            title: 'Grading Policy',
+            href: '/academic/miscellaneous/grading-policy',
+          },
+          {
+            title: 'Student Records',
+            href: '/academic/miscellaneous/student-records',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Authorities',
+    children: [
+      {
+        title: 'Chancellor',
+        href: '/authorities/chancellor',
+      },
+      {
+        title: 'Syndicate',
+        href: '/authorities/syndicate',
+      },
+      {
+        title: 'Vice Chancellor',
+        href: '/authorities/vice-chancellor',
+      },
+      {
+        title: 'Treasurer',
+        href: '/authorities/treasurer',
+      },
+      {
+        title: 'Director (Coordination)',
+        href: '/authorities/director-coordination',
+      },
+      {
+        title: 'Offices',
+        href: '/authorities/offices',
+      },
+      {
+        title: 'Chairman',
+        href: '/authorities/chairman',
+      },
+      {
+        title: 'Academic Council',
+        href: '/authorities/academic-council',
+      },
+      {
+        title: 'Pro Vice Chancellor',
+        href: '/authorities/pro-vice-chancellor',
+      },
+      {
+        title: 'Deans',
+        href: '/authorities/deans',
+      },
+      {
+        title: 'Register',
+        href: '/authorities/register',
+      },
     ],
   },
   {
@@ -243,6 +305,12 @@ export const navLinks: INavLink[] = [
   },
   {
     title: 'Admission',
+    children: [
+      {
+        title: 'Graduate Admission Requirements',
+        href: '/admission/graduate-admission-requirements',
+      },
+    ],
   },
   {
     title: 'EUB Online',

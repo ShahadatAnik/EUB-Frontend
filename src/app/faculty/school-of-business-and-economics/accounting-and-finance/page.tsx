@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '@/components/layout';
+
 import PageHeader from '@/components/page-header';
 
 import {
@@ -17,7 +17,7 @@ import FacultyCard from '@/components/cards/faculty-card';
 
 const Page = () => {
   return (
-    <Layout navbarClassName='relative'>
+    <>
       <PageHeader image='/images/news-portal/13.jpg' title='Faculty Members' />
 
       <div className='container py-10'>
@@ -44,7 +44,7 @@ const Page = () => {
           </PaginationContent>
         </Pagination>
       </div>
-    </Layout>
+    </>
   );
 };
 
