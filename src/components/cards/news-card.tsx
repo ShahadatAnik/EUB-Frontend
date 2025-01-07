@@ -36,7 +36,7 @@ const NewsCard: React.FC<{ item: INewsPortal }> = ({ item }) => {
         </div>
       </CardHeader>
       <CardContent className='pt-4'>
-        <Link href={`/news-portal/${item.uuid}`} className='hover:underline'>
+        <Link href={`/news-events/${item.uuid}`} className='hover:underline'>
           <CardTitle className='leading-normal line-clamp-2'>
             {item.title}
           </CardTitle>
@@ -46,7 +46,7 @@ const NewsCard: React.FC<{ item: INewsPortal }> = ({ item }) => {
         </CardDescription>
       </CardContent>
       <CardFooter className='flex justify-between'>
-        <Link href={`/news-portal/${item.uuid}`}>
+        <Link href={`/news-events/${item.uuid}`}>
           <Button>Read more</Button>
         </Link>
       </CardFooter>

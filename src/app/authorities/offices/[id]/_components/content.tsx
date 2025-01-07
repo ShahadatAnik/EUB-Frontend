@@ -1,18 +1,19 @@
 import Image from 'next/image';
 import React from 'react';
 import ListOfOffices from './list-of-offices';
+import Employees from './employees';
 
 const Content = () => {
   return (
     <div className='py-6 lg:py-12'>
       <div className='container flex gap-8'>
         <ListOfOffices />
-        <div className='flex-1'>
+        <div className='flex-1 space-y-12'>
           <div className='w-full aspect-video relative'>
             <Image src={'/placeholder.svg'} fill alt='EUB Logo' />
           </div>
 
-          <div className='mt-6 space-y-2'>
+          <div className='space-y-2'>
             <h1 className='text-4xl font-semibold'>Office of the Registrar</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint unde
@@ -53,6 +54,8 @@ const Content = () => {
               </li>
             </ul>
           </div>
+
+          <Employees />
         </div>
       </div>
     </div>

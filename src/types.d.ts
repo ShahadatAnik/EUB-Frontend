@@ -51,3 +51,24 @@ export type IAuthority = {
   title: string;
   href: string;
 };
+
+export type IDepartmentContact = {
+  title: string;
+  emails?: string[];
+  extensions?: string[];
+  phones?: string[];
+};
+
+export type IEmployee = {
+  name: string;
+  designation: string;
+  email: string;
+  image: string;
+  phone: string;
+};
+
+export type INotice = {
+  title: string;
+  description: string;
+  date: string;
+};

@@ -18,8 +18,8 @@ export const topNavLinks: ITopNavLink[] = [
     href: '/library',
   },
   {
-    title: 'News Letters',
-    href: '/news-letters',
+    title: 'News & Events',
+    href: '/news-events',
   },
   {
     title: 'Journals',
