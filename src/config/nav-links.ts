@@ -30,8 +30,8 @@ export const topNavLinks: ITopNavLink[] = [
     href: '/catalog',
   },
   {
-    title: 'Archive',
-    href: '/archive',
+    title: 'Gallery',
+    href: '/gallery',
   },
   {
     title: 'Contact Us',

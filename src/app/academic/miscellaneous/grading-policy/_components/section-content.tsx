@@ -1,4 +1,3 @@
-import { type } from 'os';
 import React from 'react';
 
 const SectionContent: React.FC<{

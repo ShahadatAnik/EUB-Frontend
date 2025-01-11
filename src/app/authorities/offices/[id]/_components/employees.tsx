@@ -1,35 +1,32 @@
 import React from 'react';
 import data from '../_const/employees-data';
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import Image from 'next/image';
+import { Mail, Phone } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 const Employees = () => {
   return (
-    <div className='grid grid-cols-2 gap-4'>
+    <div className='grid grid-cols-1 gap-4'>
       {data.map((item, index) => (
-        <Card key={index} className='border border-gray-300'>
-          <CardHeader className='p-4'>
-            <div className='w-full aspect-square relative rounded overflow-hidden'>
-              <Image fill src={item.image} alt={item.name} />
+        <div key={index} className='py-3 border rounded-lg'>
+          <div className='space-y-0.5 px-4 '>
+            <h6 className='text-xl font-semibold'>{item.name}</h6>
+            <p className='text-base text-muted-foreground'>
+              {item.designation}
+            </p>
+          </div>
+
+          <Separator className='my-3' />
+          <div className='px-4'>
+            <div className='flex items-center gap-2 text-muted-foreground'>
+              <Mail className='size-4' />
+              <span>{item.email}</span>
             </div>
-          </CardHeader>
-          <CardContent
-            className='text-center space-y-2
-          '
-          >
-            <CardTitle>{item.name}</CardTitle>
-            <CardDescription>{item.designation}</CardDescription>
-            <p>{item.email}</p>
-            <p>{item.phone}</p>
-          </CardContent>
-        </Card>
+            <div className='flex items-center gap-2 text-muted-foreground'>
+              <Phone className='size-4' />
+              <span>{item.phone}</span>
+            </div>
+          </div>
+        </div>
       ))}
     </div>
   );

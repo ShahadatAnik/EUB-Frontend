@@ -72,3 +72,26 @@ export type INotice = {
   description: string;
   date: string;
 };
+
+export type IGallery = {
+  title: string;
+  description: string;
+  banner_image: string;
+  attachments: string[];
+};
+export type IAcademicAccordion = {
+  title: string;
+  href?: string;
+  content?: React.ReactNode | string;
+  children?: IAccordion[];
+};
+
+export type IFacultyMember = {
+  name: string;
+  designation: string;
+  image: string;
+  mobile: string;
+  email: string;
+  publication: string[];
+  department: string;
+};

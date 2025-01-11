@@ -1,6 +1,7 @@
 import AboutUs from './about-us';
 import CFAProgram from './cfa-program';
 import Chairman from './chairman';
+import ExamSchedule from './exam-schedule';
 
 interface IAccordion {
   title: string;
@@ -23,6 +24,11 @@ export const accordions: IAccordion[] = [
         content: <Chairman />,
       },
     ],
+  },
+
+  {
+    title: 'Exam Schedule',
+    content: <ExamSchedule />,
   },
   {
     title: 'CFA University Affiliation Program',
