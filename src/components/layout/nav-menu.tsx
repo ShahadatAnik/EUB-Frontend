@@ -26,7 +26,7 @@ export function NavMenu() {
               {item.title}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className='gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[800px] xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-4'>
+              <ul className='gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[800px] xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-3'>
                 {item.children &&
                   item.children.map((child, index) => (
                     <div key={index}>
@@ -64,7 +64,9 @@ export function NavMenu() {
                                   className={cn(navigationMenuTriggerStyle())}
                                 >
                                   <ChevronsRight className='mr-1 size-3' />
-                                  <p>{item.title}</p>
+                                  <p className='w-full text-wrap'>
+                                    {item.title}
+                                  </p>
                                 </NavigationMenuLink>
                               </Link>
                             </li>

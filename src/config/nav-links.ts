@@ -26,8 +26,9 @@ export const topNavLinks: ITopNavLink[] = [
     href: '/journals',
   },
   {
-    title: 'Catalog',
-    href: '/catalog',
+    title: 'Student Portal',
+    href: 'https://iems.eub.edu.bd/',
+    newTab: true,
   },
   {
     title: 'Gallery',
@@ -106,110 +107,100 @@ export const navLinks: INavLink[] = [
     ],
   },
   {
-    title: 'Academic',
-
+    title: 'Courses',
     children: [
       {
-        title: 'School of Business & Economics',
+        title: 'School of Business Administration',
         href: '/academic/school-of-business-and-economics',
         children: [
           {
-            title: 'Accounting & Finance',
+            title: 'BBA',
             href: '/academic/school-of-business-and-economics/accounting-and-finance',
           },
           {
-            title: 'Economics',
+            title: 'MBA',
             href: '/academic/school-of-business-and-economics/economics',
           },
           {
-            title: 'Management',
+            title: 'Executive MBA',
             href: '/academic/school-of-business-and-economics/management',
           },
           {
-            title: 'Marketing & International Business',
+            title: 'MBA (1 Year)',
             href: '/academic/school-of-business-and-economics/marketing-and-international-business',
           },
           {
-            title: 'MBA & EMBA Programs',
+            title: 'THM',
             href: '/academic/school-of-business-and-economics/mba-and-emba-programs',
-          },
-          {
-            title: 'BBA Program',
-            href: '/academic/school-of-business-and-economics/bba-program',
           },
         ],
       },
       {
-        title: 'School of Humanities and Social Sciences',
+        title: 'School of Arts and Social Sciences',
         href: '/academic/school-of-humanities-and-social-sciences',
         children: [
           {
-            title: 'English Language',
+            title: 'BA in English',
             href: '/academic/school-of-humanities-and-social-sciences/english-language',
           },
           {
-            title: 'History',
+            title: 'MA in English',
             href: '/academic/school-of-humanities-and-social-sciences/history',
           },
           {
-            title: 'Philosophy',
+            title: 'BSS in Economics',
             href: '/academic/school-of-humanities-and-social-sciences/philosophy',
           },
           {
-            title: 'Social Sciences',
+            title: 'MSS in Economics',
+            href: '/academic/school-of-humanities-and-social-sciences/social-sciences',
+          },
+          {
+            title: 'MGDS (1 Year)',
+            href: '/academic/school-of-humanities-and-social-sciences/social-sciences',
+          },
+          {
+            title: 'LLB',
+            href: '/academic/school-of-humanities-and-social-sciences/social-sciences',
+          },
+          {
+            title: 'LLM',
             href: '/academic/school-of-humanities-and-social-sciences/social-sciences',
           },
         ],
       },
 
       {
-        title: 'School of Engineering and Physical Sciences',
+        title: 'School of Engineering',
         href: '/academic/school-of-engineering-and-physical-sciences',
         children: [
           {
-            title: 'Chemistry',
+            title: 'BSc in Civil',
             href: '/academic/school-of-engineering-and-physical-sciences/chemistry',
           },
           {
-            title: 'Computer Science',
+            title: 'BSc in Computer Science',
             href: '/academic/school-of-engineering-and-physical-sciences/computer-science',
           },
           {
-            title: 'Mathematics',
+            title: 'BSc in Electrical and Electronics',
             href: '/academic/school-of-engineering-and-physical-sciences/mathematics',
           },
           {
-            title: 'Physics',
+            title: 'BSc in Textile',
             href: '/academic/school-of-engineering-and-physical-sciences/physics',
           },
           {
-            title: 'Chemical Engineering',
+            title: 'BSc in Industrial & Production',
+            href: '/academic/school-of-engineering-and-physical-sciences/chemical-engineering',
+          },
+          {
+            title: 'BSc in Mechanical',
             href: '/academic/school-of-engineering-and-physical-sciences/chemical-engineering',
           },
         ],
       },
-      {
-        title: 'School of Health & Life Sciences',
-        href: '/academic/school-of-health-and-life-sciences',
-        children: [
-          {
-            title: 'Biomedical Sciences',
-            href: '/academic/school-of-health-and-life-sciences/biomedical-sciences',
-          },
-          {
-            title: 'Health Sciences',
-            href: '/academic/school-of-health-and-life-sciences/health-sciences',
-          },
-          {
-            title: 'Life Sciences',
-            href: '/academic/school-of-health-and-life-sciences/life-sciences',
-          },
-          {
-            title: 'Pharmaceutical Sciences',
-            href: '/academic/school-of-health-and-life-sciences/pharmaceutical-sciences',
-          },
-        ],
-      },
+
       {
         title: 'Miscellaneous',
         children: [
@@ -274,35 +265,7 @@ export const navLinks: INavLink[] = [
       },
     ],
   },
-  {
-    title: 'Faculty',
-    children: [
-      {
-        title: 'School of Business & Economics',
-        children: [
-          {
-            title: 'Accounting & Finance',
-            href: '/faculty/school-of-business-and-economics/accounting-and-finance',
-          },
-          {
-            title: 'Economics',
-            href: '/faculty/school-of-business-and-economics/economics',
-          },
-          {
-            title: 'Management',
-            href: '/faculty/school-of-business-and-economics/management',
-          },
-          {
-            title: 'Marketing & International Business',
-            href: '/faculty/school-of-business-and-economics/marketing-and-international-business',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Offices',
-  },
+
   {
     title: 'Admission',
     children: [

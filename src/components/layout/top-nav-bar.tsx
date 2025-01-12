@@ -6,15 +6,30 @@ const TopNavbar = () => {
   return (
     <div className='bg-primary w-full py-2 hidden lg:block'>
       <div className='container flex justify-center gap-4 items-center divide-x divide-border'>
-        {topNavLinks.map((link) => (
-          <Link
-            key={link.title}
-            href={link.href}
-            className='text-white hover:underline text-sm pl-4'
-          >
-            {link.title}
-          </Link>
-        ))}
+        {topNavLinks.map((link) => {
+          if (link.newTab) {
+            return (
+              <Link
+                target='_blank'
+                key={link.title}
+                href={link.href}
+                className='text-white hover:underline text-sm pl-4'
+              >
+                {link.title}
+              </Link>
+            );
+          }
+
+          return (
+            <Link
+              key={link.title}
+              href={link.href}
+              className='text-white hover:underline text-sm pl-4'
+            >
+              {link.title}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

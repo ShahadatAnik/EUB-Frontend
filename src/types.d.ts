@@ -12,6 +12,7 @@ export type INewsPortal = {
 export type ITopNavLink = {
   title: string;
   href: string;
+  newTab?: boolean;
 };
 
 export type INavLink = {

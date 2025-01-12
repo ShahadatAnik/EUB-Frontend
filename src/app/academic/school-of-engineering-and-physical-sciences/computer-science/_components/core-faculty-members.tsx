@@ -5,19 +5,19 @@ import { Mail, Phone } from 'lucide-react';
 
 const CoreFacultyMembers = () => {
   return (
-    <div className='grid grid-cols-2 gap-8'>
+    <div className='grid grid-cols-2 gap-4'>
       {data.map((faculty, index) => (
         <div key={index} className='flex  border rounded-md overflow-hidden'>
           <div className=''>
             <Image
               src={faculty.image}
               alt={faculty.name}
-              height={200}
-              width={200}
+              height={160}
+              width={160}
             />
           </div>
 
-          <div className='p-4 flex flex-col justify-between'>
+          <div className='px-6 py-3 flex flex-col gap-0'>
             <div>
               <h3 className='text-xl font-semibold'>{faculty.name}</h3>
               <p className='mt-1 text-muted-foreground'>

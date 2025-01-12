@@ -4,7 +4,7 @@ const facultyMembers: IFacultyMember[] = [
   {
     name: 'John Doe',
     designation: 'Designation',
-    image: '/placeholder.svg',
+    image: '/person-placeholder.jpg',
     mobile: '+1 (123) 456-7890',
     email: 'john.doe@example.com',
     publication: ['Publication 1', 'Publication 2'],
@@ -13,7 +13,7 @@ const facultyMembers: IFacultyMember[] = [
   {
     name: 'John Doe',
     designation: 'Designation',
-    image: '/placeholder.svg',
+    image: '/person-placeholder.jpg',
     mobile: '+1 (123) 456-7890',
     email: 'john.doe@example.com',
     publication: ['Publication 1', 'Publication 2'],
@@ -22,7 +22,7 @@ const facultyMembers: IFacultyMember[] = [
   {
     name: 'John Doe',
     designation: 'Designation',
-    image: '/placeholder.svg',
+    image: '/person-placeholder.jpg',
     mobile: '+1 (123) 456-7890',
     email: 'john.doe@example.com',
     publication: ['Publication 1', 'Publication 2'],
@@ -31,7 +31,7 @@ const facultyMembers: IFacultyMember[] = [
   {
     name: 'John Doe',
     designation: 'Designation',
-    image: '/placeholder.svg',
+    image: '/person-placeholder.jpg',
     mobile: '+1 (123) 456-7890',
     email: 'john.doe@example.com',
     publication: ['Publication 1', 'Publication 2'],

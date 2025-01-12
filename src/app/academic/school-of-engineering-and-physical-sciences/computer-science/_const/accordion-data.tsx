@@ -9,6 +9,22 @@ import Chairman from '../_components/overview/chairman';
 import PhotoGallery from '../_components/photo-gallery';
 import StudentServiceDesk from '../_components/student-service-desk';
 
+// Regular Program
+import RProgramDetails from '../_components/regular-program/program-details';
+import RCurriculum from '../_components/regular-program/curriculum';
+import RCoursePath from '../_components/regular-program/course-path';
+import RDegreeRequirements from '../_components/regular-program/degree-requirements';
+import RClassRoutine from '../_components/regular-program/class-routine';
+import RExamSchedule from '../_components/regular-program/exam-schedule';
+
+// Evening Program
+import EProgramDetails from '../_components/evening-program/program-details';
+import ECurriculum from '../_components/evening-program/curriculum';
+import ECoursePath from '../_components/evening-program/course-path';
+import EDegreeRequirements from '../_components/evening-program/degree-requirements';
+import EClassRoutine from '../_components/evening-program/class-routine';
+import EExamSchedule from '../_components/evening-program/exam-schedule';
+
 const accordions: IAcademicAccordion[] = [
   {
     title: 'Overview',
@@ -31,27 +47,27 @@ const accordions: IAcademicAccordion[] = [
     children: [
       {
         title: 'Program Details',
-        content: 'Program Details',
+        content: <RProgramDetails />,
       },
       {
         title: 'Curriculum',
-        content: 'Curriculum',
+        content: <RCurriculum />,
       },
       {
         title: 'Course Map and Path',
-        content: 'Course Map and Path',
+        content: <RCoursePath />,
       },
       {
         title: 'Degree Requirements',
-        content: 'Degree Requirements',
+        content: <RDegreeRequirements />,
       },
       {
         title: 'Class Routine',
-        content: 'Class Routine',
+        content: <RClassRoutine />,
       },
       {
         title: 'Exam Schedule',
-        content: 'Exam Schedule',
+        content: <RExamSchedule />,
       },
     ],
   },
@@ -60,27 +76,27 @@ const accordions: IAcademicAccordion[] = [
     children: [
       {
         title: 'Program Details',
-        content: 'Program Details',
+        content: <EProgramDetails />,
       },
       {
         title: 'Curriculum',
-        content: 'Curriculum',
+        content: <ECurriculum />,
       },
       {
         title: 'Course Map and Path',
-        content: 'Course Map and Path',
+        content: <ECoursePath />,
       },
       {
         title: 'Degree Requirements',
-        content: 'Degree Requirements',
+        content: <EDegreeRequirements />,
       },
       {
         title: 'Class Routine',
-        content: 'Class Routine',
+        content: <EClassRoutine />,
       },
       {
         title: 'Exam Schedule',
-        content: 'Exam Schedule',
+        content: <EExamSchedule />,
       },
     ],
   },
