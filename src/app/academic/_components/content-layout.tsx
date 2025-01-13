@@ -71,8 +71,39 @@ const ContentLayout: React.FC<{
           });
         }
       });
+    } else {
+      if (
+        accordions.length > 0 &&
+        accordions[0].children &&
+        accordions[0]?.children.length > 0
+      ) {
+        router.replace(
+          `${pathName}?content=${slugify(
+            accordions[0].title + ' ' + accordions?.[0]?.children?.[0].title,
+            {
+              lower: true,
+              remove: /[*+~()'"!:@]/g,
+              trim: true,
+            }
+          )}`,
+          {
+            scroll: false,
+          }
+        );
+      } else {
+        router.replace(
+          `${pathName}?content=${slugify(accordions[0].title, {
+            lower: true,
+            remove: /[*+~()'"!:@]/g,
+            trim: true,
+          })}`,
+          {
+            scroll: false,
+          }
+        );
+      }
     }
-  }, [contentParam, accordions]);
+  }, [contentParam, accordions, pathName, router]);
 
   return (
     <div className='space-y-10'>

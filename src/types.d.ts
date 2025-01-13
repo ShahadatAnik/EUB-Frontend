@@ -96,3 +96,9 @@ export type IFacultyMember = {
   publication: string[];
   department: string;
 };
+
+export type ICourse = {
+  code: string;
+  title: string;
+  credit: string;
+};

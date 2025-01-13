@@ -1,12 +1,10 @@
 import React from 'react';
+import ContentWrapper from '../content-wrapper';
 
 const Chairman = () => {
   return (
-    <div>
-      <h4 className='text-lg text-primary font-medium'>
-        Message from the Chairman
-      </h4>
-      <p className='mt-1 leading-relaxed'>
+    <ContentWrapper title='Message from the Chairman' className='py-4'>
+      <p className='leading-relaxed'>
         I welcome you all to the Department of Accounting & Finance. It is one
         of the four departments under the School of Business and Economics at
         North South University (NSU). The Department of Accounting & Finance at
@@ -31,7 +29,7 @@ const Chairman = () => {
         <br />
         FJ Mohaimen, Assistant Professor & Chair
       </p>
-    </div>
+    </ContentWrapper>
   );
 };
 

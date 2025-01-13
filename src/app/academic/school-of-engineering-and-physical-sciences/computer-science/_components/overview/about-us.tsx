@@ -1,29 +1,62 @@
 import React from 'react';
 
+import ContentWrapper from '../content-wrapper';
+
 const AboutUs = () => {
   return (
-    <div>
-      <h4 className='text-lg text-primary font-medium'>About Us</h4>
-      <p className='mt- leading-relaxed'>
-        The Department of Accounting & Finance currently offers BBA degrees
-        Major in Accounting and Finance and assist NSU&apos;s E/MBA programs in
-        offering all accounting and finance courses. Offered degree programs by
-        the Deparyment are all ACBSP accredited. Our BBA degree in Finance is a
-        CFA partner program. Location: North Academic Building (NAC) 7th Floor.
-        <br />
-        Number of Core Faculty Members: 35.
-        <br />
-        Number of Core Faculty Members on study Leave: 10.
-        <br />
-        Number of Adjunct Faculty Members: 01
-        <br />
-        Department Chair: Dr. Md. Nurul Kabir, Tel: 55668200, ext. 1704
-        <br />
-        Department Secretary: Enamul Karim Mazumder, Tel: 55668200, ext. 1770
-        <br />
-        Student Activity: Finance Club
-      </p>
-    </div>
+    <ContentWrapper title='About Us'>
+      <div className='text-center'>
+        <h3 className='text-xl font-semibold text-primary'>
+          Bachelor of Science in Computer Science and Engineering (CSE){' '}
+        </h3>
+
+        <p className='text-sm  text-muted-foreground mt-1'>
+          Department of Computer Science and Engineering (CSE), Science and
+          Engineering
+        </p>
+      </div>
+
+      <div className='mt-4'>
+        <h6 className='text-lg font-semibold'>Objectives and Goals</h6>
+        <p className='mt-1'>
+          The increasing needs for computer science and engineers in worldwide
+          job markets need not to be overemphasized. To keep pace with the
+          advancement in computer science and engineering and provide emphasis
+          in fulfilling the needs, it is essential that efforts to be made both
+          in the public and private sectors to develop human resources in this
+          particular field in Bangladesh
+        </p>
+
+        <ul className='mt-2 list-disc pl-6 space-y-2'>
+          <li>
+            The prime objective in establishing the Computer Science and
+            Engineering Department at the European University of Bangladesh is
+            to make a concerted effort towards achieving the goal to provide
+            quality education of 4 years duration at the undergraduate level.
+          </li>
+          <li>
+            To give students of undergraduate programs a rigorous and
+            comprehensive academic training on both the fundamental and advanced
+            aspects of Computer Science and Engineering (CSE).
+          </li>
+          <li>
+            To make provisions for research and development and dissemination of
+            knowledge in the field of Computer Science and Engineering.
+          </li>
+        </ul>
+
+        <p className='mt-2'>
+          A student in CSE must not only have a sound basis in the fundamental
+          of Engineering but also should be aware of socio-economic problems of
+          the country. Therefore, courses in science, humanities, economics and
+          management are also included in the curricula. The last two semesters
+          will offer the students a number of alternatives to choose from and to
+          specialize in a particular field. Theory and Sessional work shall be
+          supplemented by Project/Thesis work, seminars and visits to relevant
+          research and industrial organization.
+        </p>
+      </div>
+    </ContentWrapper>
   );
 };
 
