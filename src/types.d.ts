@@ -18,6 +18,7 @@ export type ITopNavLink = {
 export type INavLink = {
   title: string;
   href?: string;
+  className?: string;
   children?: INavLink[];
 };
 
@@ -101,4 +102,13 @@ export type ICourse = {
   code: string;
   title: string;
   credit: string;
+};
+
+export type ISemesterCourse = {
+  code: string;
+  course_name: string;
+  contact_hours_theory: string;
+  contact_hours_sessional: string;
+  credit: string;
+  prerequisite: string;
 };

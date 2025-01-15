@@ -26,7 +26,12 @@ export function NavMenu() {
               {item.title}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className='gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[800px] xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-3'>
+              <ul
+                className={cn(
+                  'gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[400px] xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-3',
+                  item.className
+                )}
+              >
                 {item.children &&
                   item.children.map((child, index) => (
                     <div key={index}>
@@ -36,7 +41,8 @@ export function NavMenu() {
                             asChild
                             className={cn(
                               navigationMenuTriggerStyle(),
-                              'w-full'
+                              'w-full',
+                              child.className
                             )}
                           >
                             <p className='text-sm font-bold text-primary'>
@@ -61,7 +67,10 @@ export function NavMenu() {
                             <li key={index}>
                               <Link href={item.href!} legacyBehavior passHref>
                                 <NavigationMenuLink
-                                  className={cn(navigationMenuTriggerStyle())}
+                                  className={cn(
+                                    navigationMenuTriggerStyle(),
+                                    item.className
+                                  )}
                                 >
                                   <ChevronsRight className='mr-1 size-3' />
                                   <p className='w-full text-wrap'>

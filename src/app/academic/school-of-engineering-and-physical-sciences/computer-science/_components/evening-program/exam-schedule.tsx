@@ -9,6 +9,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import Link from 'next/link';
+import ContentWrapper from '../content-wrapper';
 
 const pdfs = [
   {
@@ -20,30 +21,32 @@ const pdfs = [
 
 const ExamSchedule = () => {
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>Description</TableHead>
-          <TableHead>Update Date</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {pdfs.map((pdf, index) => (
-          <TableRow key={index}>
-            <TableCell className='font-medium'>
-              <Link
-                className='underline text-primary'
-                target='_blank'
-                href={pdf.pdf}
-              >
-                {pdf.title}
-              </Link>
-            </TableCell>
-            <TableCell>{pdf.updatedAt}</TableCell>
+    <ContentWrapper title='Exam Schedule'>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Description</TableHead>
+            <TableHead>Update Date</TableHead>
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHeader>
+        <TableBody>
+          {pdfs.map((pdf, index) => (
+            <TableRow key={index}>
+              <TableCell className='font-medium'>
+                <Link
+                  className='underline text-primary'
+                  target='_blank'
+                  href={pdf.pdf}
+                >
+                  {pdf.title}
+                </Link>
+              </TableCell>
+              <TableCell>{pdf.updatedAt}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </ContentWrapper>
   );
 };
 

@@ -43,66 +43,29 @@ export const topNavLinks: ITopNavLink[] = [
 export const navLinks: INavLink[] = [
   {
     title: 'About',
+    className: 'gap-2',
     children: [
       {
-        title: 'About EUB',
-        children: [
-          {
-            title: 'Brief History',
-            href: '/about/brief-history',
-          },
+        title: 'Brief History',
+        href: '/about/brief-history',
+      },
 
-          {
-            title: 'Vision, Mission and Strategy',
-            href: '/about/vision-mission-strategy',
-          },
-          {
-            title: 'International Advisory Board',
-            href: '/about/international-advisory-board',
-          },
+      {
+        title: 'Vision, Mission and Strategy',
+        href: '/about/vision-mission-strategy',
+      },
+      {
+        title: 'International Advisory Board',
+        href: '/about/international-advisory-board',
+      },
 
-          {
-            title: 'Accreditation',
-            href: '/about/accreditation',
-          },
-          {
-            title: 'International Recognition',
-            href: '/about/international-recognition',
-          },
-          {
-            title: 'Facts About EUB',
-            href: '/about/facts-about-eub',
-          },
-        ],
+      {
+        title: 'Accreditation',
+        href: '/about/accreditation',
       },
       {
-        title: 'EUB Trustees',
-        children: [
-          {
-            title: 'Board of Trustees',
-            href: '/about/board-of-trustees',
-          },
-        ],
-      },
-      {
-        title: 'Executive Leaders',
-        children: [
-          {
-            title: 'VC, Pro-VC & Treasures',
-            href: '/about/vc-pro-vc-and-treasures',
-          },
-          {
-            title: 'Deans, Chairs & Directors',
-            href: '/about/deans-chairs-and-directors',
-          },
-          {
-            title: 'Administrators',
-            href: '/about/administrators',
-          },
-        ],
-      },
-      {
-        title: 'Authorities',
+        title: 'Facts About EUB',
+        href: '/about/facts-about-eub',
       },
     ],
   },
@@ -218,6 +181,7 @@ export const navLinks: INavLink[] = [
   },
   {
     title: 'Authorities',
+    className: 'gap-2',
     children: [
       {
         title: 'Chancellor',
@@ -286,5 +250,29 @@ export const navLinks: INavLink[] = [
   },
   {
     title: 'Useful Links',
+    className: 'gap-0 d:grid-cols-1 xl:grid-cols-1',
+    children: [
+      {
+        title: 'Notices',
+        href: '/notices',
+      },
+      {
+        title: 'News & Events',
+        href: '/news-events',
+      },
+      {
+        title: 'Student Service Desk',
+        href: '/student-service-desk',
+      },
+
+      {
+        title: 'Clubs & Societies',
+        href: '/clubs-societies',
+      },
+      {
+        title: 'Online Admission',
+        href: '/online-admission',
+      },
+    ],
   },
 ];

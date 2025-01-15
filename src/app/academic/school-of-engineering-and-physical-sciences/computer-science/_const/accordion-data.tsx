@@ -1,8 +1,6 @@
 import { IAcademicAccordion } from '@/types';
-import AdmissionInformation from '../_components/admission-information';
 import AlumniIndustry from '../_components/alumni-industry';
 import CoreFacultyMembers from '../_components/core-faculty-members';
-import FinancialInformation from '../_components/financial-information';
 import LaboratoriesResources from '../_components/laboratories-resources';
 import AboutUs from '../_components/overview/about-us';
 import Chairman from '../_components/overview/chairman';
@@ -114,11 +112,11 @@ const accordions: IAcademicAccordion[] = [
   },
   {
     title: 'Admission Information',
-    content: <AdmissionInformation />,
+    href: '/admission-information',
   },
   {
     title: 'Financial Information',
-    content: <FinancialInformation />,
+    href: '/financial-information',
   },
   {
     title: 'Photo Gallery',
