@@ -20,6 +20,7 @@ export type INavLink = {
   href?: string;
   className?: string;
   children?: INavLink[];
+  newTab?: boolean;
 };
 
 export type IFooterSocialLink = {

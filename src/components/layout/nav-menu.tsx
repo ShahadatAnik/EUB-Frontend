@@ -65,19 +65,40 @@ export function NavMenu() {
                         <ul className='mt-1'>
                           {child.children.map((item, index) => (
                             <li key={index}>
-                              <Link href={item.href!} legacyBehavior passHref>
-                                <NavigationMenuLink
-                                  className={cn(
-                                    navigationMenuTriggerStyle(),
-                                    item.className
-                                  )}
+                              {item.newTab ? (
+                                <Link
+                                  target='_blank'
+                                  href={item.href!}
+                                  legacyBehavior
+                                  passHref
                                 >
-                                  <ChevronsRight className='mr-1 size-3' />
-                                  <p className='w-full text-wrap'>
-                                    {item.title}
-                                  </p>
-                                </NavigationMenuLink>
-                              </Link>
+                                  <NavigationMenuLink
+                                    className={cn(
+                                      navigationMenuTriggerStyle(),
+                                      item.className
+                                    )}
+                                  >
+                                    <ChevronsRight className='mr-1 size-3' />
+                                    <p className='w-full text-wrap'>
+                                      {item.title}
+                                    </p>
+                                  </NavigationMenuLink>
+                                </Link>
+                              ) : (
+                                <Link href={item.href!} legacyBehavior passHref>
+                                  <NavigationMenuLink
+                                    className={cn(
+                                      navigationMenuTriggerStyle(),
+                                      item.className
+                                    )}
+                                  >
+                                    <ChevronsRight className='mr-1 size-3' />
+                                    <p className='w-full text-wrap'>
+                                      {item.title}
+                                    </p>
+                                  </NavigationMenuLink>
+                                </Link>
+                              )}
                             </li>
                           ))}
                         </ul>
