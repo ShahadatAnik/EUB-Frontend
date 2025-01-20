@@ -46,10 +46,6 @@ export const navLinks: INavLink[] = [
         title: 'Vision, Mission and Strategy',
         href: '/about/vision-mission-strategy',
       },
-      {
-        title: 'International Advisory Board',
-        href: '/about/international-advisory-board',
-      },
 
       {
         title: 'Accreditation',
