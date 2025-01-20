@@ -2,37 +2,29 @@ import { INavLink, ITopNavLink } from '@/types';
 
 export const topNavLinks: ITopNavLink[] = [
   {
-    title: 'Publications',
-    href: '/publications',
+    title: 'Research',
+    href: '/research',
   },
   {
-    title: 'International Partnership',
-    href: '/international-partnership',
+    title: 'EUB Journal',
+    href: '/eub-journal',
   },
   {
     title: 'Academic Calendar',
     href: '/academic-calendar',
   },
   {
-    title: 'Library',
-    href: '/library',
-  },
-  {
     title: 'News & Events',
     href: '/news-events',
   },
   {
-    title: 'Journals',
-    href: '/journals',
+    title: 'Gallery',
+    href: '/gallery',
   },
   {
     title: 'Student Portal',
     href: 'https://iems.eub.edu.bd/',
     newTab: true,
-  },
-  {
-    title: 'Gallery',
-    href: '/gallery',
   },
   {
     title: 'Contact Us',
