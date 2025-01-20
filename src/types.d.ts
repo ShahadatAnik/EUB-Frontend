@@ -118,3 +118,14 @@ export type IFAQ = {
   question: string;
   answer: string | React.ReactNode;
 };
+
+export type ITuitionFee = {
+  program: string;
+  admission_fee: string;
+  tuition_fee_per_credit: string;
+  student_activities_fee: string;
+  library_fee: string;
+  computer_lab_fee: string;
+  science_lab_fee?: string;
+  studio_lab_fee?: string;
+};

@@ -1,0 +1,444 @@
+import { ITuitionFee } from '@/types';
+
+export const undergraduateFeesData: ITuitionFee[] = [
+  {
+    program: 'Bachelor of Architecture',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '0',
+    studio_lab_fee: '2,500',
+  },
+  {
+    program: 'BS in Computer Science & Engineering (CSE)',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '2,500',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BS in Electrical and Electronics Engineering (EEE)',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '2,500',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BS in Biochemistry and Biotechnology',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '2,500',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BS in Microbiology',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '2,500',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BPharm Professional',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '4,500',
+    library_fee: '2,250',
+    computer_lab_fee: '3,750',
+    science_lab_fee: '5,000',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BS in Environmental Science and Environmental Management',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '2,500',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BS in Environmental Science',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '2,500',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BBA',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '0',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BA in English',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '0',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BS in Economics',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '0',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'BS in Civil & Environmental Engineering (CEE)',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '2,500',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'Bachelor of Laws (LLB Hons)',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,500',
+    computer_lab_fee: '2,500',
+    science_lab_fee: '0',
+    studio_lab_fee: '0',
+  },
+  {
+    program: 'Non Degree',
+    admission_fee: '10,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '4,500',
+    library_fee: '2,250',
+    computer_lab_fee: '3,750',
+    science_lab_fee: '0',
+    studio_lab_fee: '0',
+  },
+  {
+    program:
+      'Bachelor of Social Science in Media Communication and Journalism (BSS MCJ)',
+    admission_fee: '25,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '4,500',
+    library_fee: '2,250',
+    computer_lab_fee: '3,750',
+    science_lab_fee: '0',
+    studio_lab_fee: '0',
+  },
+];
+
+export const graduateFeesData: ITuitionFee[] = [
+  {
+    program: 'Executive Master of Business Administration (EMBA)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '6,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MS in Economics',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MS in Computer Science and Engineering',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MS in Electronic and Telecommunication Engineering',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MS in Electrical and Electronic Engineering',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MS in Biotechnology',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MPharm in Pharmaceutical Technology and Biopharmaceutics',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '5,000',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MPharm in Pharmacology and Clinical Pharmacy',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '5,000',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'Master of Public Health (MPH)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'Executive Master of Public Health (EMPH)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '5,000',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MS in Environmental Science and Management',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MA in English',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'Master in Public Policy and Governance (MPPG)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '300',
+  },
+  {
+    program: 'Master of Laws (LL.M)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'Master of Business Administration (MBA)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '6,000',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'Master in Development Studies (MDS)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'MA in History and Asian Studies',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program: 'Executive Masters in Policy and Governance (EMPG)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '3,000',
+    library_fee: '1,000',
+    computer_lab_fee: '2,000',
+  },
+  {
+    program: 'Master of Science in Civil Engineering (M.S. in CE)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '3,000',
+  },
+  {
+    program:
+      'Master of Science in Applied Mathematics and Computational Sciences (AMCS)',
+    admission_fee: '20,000',
+    tuition_fee_per_credit: '4,500',
+    student_activities_fee: '4,500',
+    library_fee: '1,500',
+    computer_lab_fee: '1,500',
+  },
+];
+
+export const courses = [
+  {
+    name: 'Digital and on-line Librarianship (CDOL)',
+    fees: '10,000',
+  },
+  {
+    name: 'English Certificate Course',
+    fees: '7,000',
+  },
+  {
+    name: 'English Spoken Course (CEP)',
+    fees: '7,000',
+  },
+  {
+    name: 'English Course General Skill for Professional',
+    fees: '6,000',
+  },
+  {
+    name: 'Chinese Language Course',
+    fees: '5,000 to 7,000',
+  },
+  {
+    name: 'French Language Course',
+    fees: '6,000',
+  },
+];
+
+export const accordions = [
+  {
+    title: 'Withholding Student Records',
+    content:
+      "The University withholds students' academic records for non-payment of tuition and fees and other appropriate charges or for not returning University property.",
+  },
+  {
+    title: 'Admission Fee',
+    content:
+      "The non-refundable admission fee is assessed for admitted applicants following an admission test and before registration begins. An applicant forfeits the right of admission if the Admission Fee is not paid by the due date. Applicants are notified of such due dates by notice posted at NSU Registrar's Office.",
+  },
+  {
+    title: 'Student Activity Fee',
+    content:
+      'The Student Activity Fee is due at the time of registration each semester the student is enrolled. This fee is used to support a broad range of student activities and interests.',
+  },
+  {
+    title: 'Non-degree Students',
+    content:
+      'The admission fee and other charges are assessed for non-degree students when they change status to degree candidates or when credits earned as a non-degree student are applied towards a degree from NSU.',
+  },
+  {
+    title: 'Tuition',
+    content:
+      "Tuition is due for registration at the beginning of each semester and is based upon the student's academic level (undergraduate or graduate) and the number of credits for which the student registers.",
+  },
+  {
+    title: 'Withdrawal and Refunds',
+    content: (
+      <>
+        <p>
+          Applications for withdrawal from the University or from a course after
+          the registration period is over must be made in writing to the
+          Department Chair or Program Director. Notification to an instructor is
+          not adequate.
+        </p>
+        <p>
+          In case of authorized withdrawals and changes in schedule/
+          registration (adds and drops) tuition will be adjusted as follows:
+        </p>
+        <ul className='my-2 space-y-2 list-inside list-disc'>
+          <li>
+            Through the last business day prior to the first day of classes:
+            100% refund
+          </li>
+          <li>Through the first week of classes: 70% refund</li>
+          <li>Through the second and third week of classes: 50% refund</li>
+          <li>After three weeks of classes: No refund</li>
+        </ul>
+        <p>
+          No adjustment is authorized for Admission or other assessed fees. In
+          case of death of a student, adjustments will be made any time during
+          the semester as authorized.
+        </p>
+        <p>
+          Withdrawal as a result of serious illness or disabling accident will
+          be subject to review by the University for possible variation from the
+          policy described above. No adjustment will be made for a student who
+          is facing academic difficulties, or who is suspended, dismissed or
+          expelled for breach of the code of conduct.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: 'Other Expenses',
+    content:
+      'In addition to the applicable fees, students are required to purchase textbooks, instruments, and other personal equipment and supplies when needed for courses in the chosen curriculum.',
+  },
+  {
+    title: 'Bank List for Tuition Fees',
+    content: (
+      <>
+        <p>
+          NSU has selected some banks to collect students&apos; fees. NSU
+          Students may deposit their fees to any of the following banks:
+        </p>
+        <h4 className='mt-2 mb-1 font-medium'>Online Banks:</h4>
+        <ul className='space-y-2 list-inside list-disc'>
+          <li>Southeast Bank, Any Branch, Bangladesh</li>
+          <li>United Commercial Bank (UCB), Bashundhara Branch, Bangladesh</li>
+          <li>ONE Bank, Any Branch, Bangladesh</li>
+          <li>Mutual Trust Bank (MTB), Any Branch, Bangladesh</li>
+        </ul>
+        <h4 className='mt-2 mb-1 font-medium'>Other Banks:</h4>
+        <ul className='space-y-2 list-inside list-disc'>
+          <li>Dutch Bangla Bank, Bashundhara Branch, Dhaka</li>
+          <li>Dhaka Bank, Banani Branch, Dhaka</li>
+          <li>National Credit & Commerce Bank (NCC), Banani Branch, Dhaka</li>
+          <li>Prime Bank, Bashundhara Branch, Dhaka</li>
+          <li>The City Bank Ltd., Gulshan Branch, Dhaka</li>
+          <li>Bank Asia, Bashundhara Branch, Dhaka</li>
+        </ul>
+      </>
+    ),
+  },
+];
