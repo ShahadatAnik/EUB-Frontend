@@ -1,9 +1,18 @@
 import React from 'react';
 import ContentWrapper from '../content-wrapper';
+import Image from 'next/image';
 
 const Chairman = () => {
   return (
     <ContentWrapper title='Message from the Chairman' className='py-4'>
+      <div className='flex justify-center mb-4'>
+        <Image
+          src={'/person-placeholder.jpg'}
+          alt='Chairman'
+          width={200}
+          height={200}
+        />
+      </div>
       <p className='leading-relaxed'>
         I welcome you all to the Department of Accounting & Finance. It is one
         of the four departments under the School of Business and Economics at

@@ -4,6 +4,7 @@ import CourseWaiver from './course-waiver';
 import MinimumRequirement from './minimum-requirement';
 import OnlineAdmissionProcess from './online-admission-process';
 import PaymentProcess from './payment-process';
+import RequiredDocumentsForms from './required-documents-forms';
 import Sidebar from './sidebar';
 
 const Content = () => {
@@ -20,6 +21,7 @@ const Content = () => {
         <OnlineAdmissionProcess />
         <PaymentProcess />
         <CourseWaiver />
+        <RequiredDocumentsForms />
       </div>
     </div>
   );

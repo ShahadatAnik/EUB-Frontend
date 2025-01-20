@@ -23,6 +23,10 @@ const data = [
     title: 'Course Waiver',
     id: 'course-waiver',
   },
+  {
+    title: 'Required Documents and Forms',
+    id: 'required-documents-and-forms',
+  },
 ];
 
 const Sidebar = () => {

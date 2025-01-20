@@ -113,3 +113,8 @@ export type ISemesterCourse = {
   credit: string;
   prerequisite: string;
 };
+
+export type IFAQ = {
+  question: string;
+  answer: string | React.ReactNode;
+};

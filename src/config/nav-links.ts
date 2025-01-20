@@ -168,12 +168,24 @@ export const navLinks: INavLink[] = [
         title: 'Miscellaneous',
         children: [
           {
+            title: 'Academic Information & Policies',
+            href: '/courses/miscellaneous/academic-information-policies',
+          },
+          {
             title: 'Grading Policy',
             href: '/courses/miscellaneous/grading-policy',
           },
           {
+            title: 'Examination Guidelines',
+            href: '/courses/miscellaneous/examination-guidelines',
+          },
+          {
             title: 'Student Records',
             href: '/courses/miscellaneous/student-records',
+          },
+          {
+            title: 'Information about Provisional Certificates',
+            href: '/courses/miscellaneous/information-about-provisional-certificates',
           },
         ],
       },
@@ -234,8 +246,32 @@ export const navLinks: INavLink[] = [
     title: 'Admission',
     children: [
       {
+        title: 'Admission Information',
+        href: '/admission-information',
+      },
+      {
+        title: 'Financial Information',
+        href: '/financial-information',
+      },
+      {
+        title: 'Tuition & Other Fees Structure',
+        href: '/tuition-and-other-fees-structure',
+      },
+      {
+        title: 'FAQs / Ask',
+        href: '/faq',
+      },
+      {
+        title: 'Credit Transfer',
+        href: '/credit-transfer',
+      },
+      {
+        title: 'Online Admission',
+        href: '/online-admission',
+      },
+      {
         title: 'Graduate Admission Requirements',
-        href: '/admission/graduate-admission-requirements',
+        href: '/graduate-admission-requirements',
       },
     ],
   },
@@ -273,6 +309,10 @@ export const navLinks: INavLink[] = [
       {
         title: 'Online Admission',
         href: '/online-admission',
+      },
+      {
+        title: 'Career',
+        href: '/career',
       },
     ],
   },
