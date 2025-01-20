@@ -35,7 +35,7 @@ export const topNavLinks: ITopNavLink[] = [
 export const navLinks: INavLink[] = [
   {
     title: 'About',
-    className: 'gap-2',
+    className: 'gap-2 ',
     children: [
       {
         title: 'Brief History',
