@@ -16,7 +16,7 @@ import { jobsOpening } from '../_const/data';
 import { Button } from '@/components/ui/button';
 import SystemTable, {
   SystemTableColumn,
-} from '@/components/table/common-table';
+} from '@/components/table/system-table';
 
 const columns: SystemTableColumn[] = [
   {
@@ -47,7 +47,7 @@ const columns: SystemTableColumn[] = [
   {
     accessorKey: 'action',
     header: 'Action',
-    cell: (props) => {
+    cell: () => {
       return <Button size={'sm'}>View Details</Button>;
     },
   },

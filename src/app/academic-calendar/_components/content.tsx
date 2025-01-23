@@ -5,7 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 import SystemTable, {
   SystemTableColumn,
-} from '@/components/table/common-table';
+} from '@/components/table/system-table';
 
 const columns: SystemTableColumn[] = [
   {

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ContentWrapper from '../content-wrapper';
 import SystemTable, {
   SystemTableColumn,
-} from '@/components/table/common-table';
+} from '@/components/table/system-table';
 
 const data = [
   {

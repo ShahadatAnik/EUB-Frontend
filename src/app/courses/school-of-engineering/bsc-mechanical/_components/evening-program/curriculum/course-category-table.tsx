@@ -2,7 +2,7 @@ import React from 'react';
 
 import SystemTable, {
   SystemTableColumn,
-} from '@/components/table/common-table';
+} from '@/components/table/system-table';
 
 const courseCategory = [
   {

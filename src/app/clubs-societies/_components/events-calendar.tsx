@@ -4,7 +4,7 @@ import React from 'react';
 
 import SystemTable, {
   SystemTableColumn,
-} from '@/components/table/common-table';
+} from '@/components/table/system-table';
 import Link from 'next/link';
 
 const EventsCalendar = () => {
