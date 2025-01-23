@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
@@ -18,17 +18,19 @@ import { navLinks } from '@/config/nav-links';
 import Link from 'next/link';
 
 const MobileNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className='block lg:hidden bg-[#FFFBF5]/80 backdrop-blur-sm py-4'>
       <div className='container flex justify-between items-center'>
         <BrandLogo />
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Button size={'icon'} variant='outline'>
               <Menu />
             </Button>
           </SheetTrigger>
-          <SheetContent className=' p-2 pt-12 w-full sm:'>
+          <SheetContent className='w-full space-y-8'>
+            <BrandLogo />
             <Accordion type='single' collapsible className='w-full space-y-1'>
               {navLinks.map((item, index) => (
                 <AccordionItem key={index} value={item.title}>
@@ -60,6 +62,7 @@ const MobileNavbar = () => {
                                     <li key={index}>
                                       {subChild.href ? (
                                         <Link
+                                          onClick={() => setIsOpen(false)}
                                           href={subChild.href!}
                                           className='flex items-center gap-1 hover:underline'
                                         >

@@ -1,13 +1,8 @@
 import React from 'react';
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/common-table';
 
 const courseCategory = [
   {
@@ -68,26 +63,25 @@ const courseCategory = [
   },
 ];
 
+const columns: SystemTableColumn[] = [
+  {
+    accessorKey: 'symbol',
+    header: 'Letter Symbol',
+    cellClassName: 'w-[200px] pl-4',
+  },
+  {
+    accessorKey: 'subject_name',
+    header: 'Subject Name',
+  },
+];
+
 const CourseCategoryTable = () => {
   return (
-    <Table>
-      <TableHeader>
-        <TableRow className='bg-primary hover:bg-primary'>
-          <TableHead className='text-white w-[200px] pl-4'>
-            Letter Symbol
-          </TableHead>
-          <TableHead className='text-white'>Subject Name</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {courseCategory.map((row, index) => (
-          <TableRow key={index}>
-            <TableCell className='font-medium pl-4'>{row.symbol}</TableCell>
-            <TableCell>{row.subject_name}</TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+    <SystemTable
+      caption='Course Category'
+      data={courseCategory}
+      columns={columns}
+    />
   );
 };
 

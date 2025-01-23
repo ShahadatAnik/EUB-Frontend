@@ -1,15 +1,8 @@
 import React from 'react';
 
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/common-table';
 
 const performanceCriteriaData = [
   {
@@ -30,31 +23,26 @@ const performanceCriteriaData = [
   },
 ];
 
+const columns: SystemTableColumn[] = [
+  {
+    accessorKey: 'criteriaName',
+    header: 'Criteria',
+    cell: (value) => value,
+  },
+  {
+    accessorKey: 'marks',
+    header: 'Marks',
+    cell: (value) => value,
+  },
+];
+
 const PerformanceCriteriaTable = () => {
   return (
-    <Table>
-      <TableCaption>Performance Evaluation of Courses</TableCaption>
-      <TableHeader>
-        <TableRow>
-          <TableHead>Evaluation Criteria</TableHead>
-          <TableHead>Marks/Weight</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {performanceCriteriaData.map((row, index) => (
-          <TableRow key={index}>
-            <TableCell className='font-medium'>{row.criteriaName}</TableCell>
-            <TableCell>{row.marks}</TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-      <TableFooter>
-        <TableRow>
-          <TableCell>Total</TableCell>
-          <TableCell>100</TableCell>
-        </TableRow>
-      </TableFooter>
-    </Table>
+    <SystemTable
+      caption='Performance Criteria'
+      data={performanceCriteriaData}
+      columns={columns}
+    />
   );
 };
 

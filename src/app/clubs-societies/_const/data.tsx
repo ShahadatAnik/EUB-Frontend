@@ -1,6 +1,8 @@
+import { IClubAndSociety } from '@/types';
 import ClubCard from '../_components/club-card';
+import EventsCalendar from '../_components/events-calendar';
 
-export const faculties = [
+export const faculties: IClubAndSociety[] = [
   {
     label: 'School of Business Administration',
     value: 'sba',
@@ -293,67 +295,6 @@ export const faculties = [
   {
     label: 'Events Calendar',
     value: 'events-calendar',
-    clubs: [
-      {
-        title: 'Robotics Club',
-        content: (
-          <ClubCard
-            name='John Doe'
-            image='/person-placeholder.jpg'
-            designation='President'
-            phone='+1 (123) 456-7890'
-            email='john.doe@example.com'
-          />
-        ),
-      },
-      {
-        title: 'Coding Society',
-        content: (
-          <ClubCard
-            name='Jane Smith'
-            image='/person-placeholder.jpg'
-            designation='Vice President'
-            phone='+1 (987) 654-3210'
-            email='jane.smith@example.com'
-          />
-        ),
-      },
-      {
-        title: 'Electronics Club',
-        content: (
-          <ClubCard
-            name='Michael Brown'
-            image='/person-placeholder.jpg'
-            designation='Treasurer'
-            phone='+1 (555) 123-4567'
-            email='michael.brown@example.com'
-          />
-        ),
-      },
-      {
-        title: 'Mechanical Society',
-        content: (
-          <ClubCard
-            name='Emily Davis'
-            image='/person-placeholder.jpg'
-            designation='Secretary'
-            phone='+1 (222) 333-4444'
-            email='emily.davis@example.com'
-          />
-        ),
-      },
-      {
-        title: 'Civil Engineering Club',
-        content: (
-          <ClubCard
-            name='Robert Johnson'
-            image='/person-placeholder.jpg'
-            designation='Coordinator'
-            phone='+1 (111) 222-3333'
-            email='robert.johnson@example.com'
-          />
-        ),
-      },
-    ],
+    content: <EventsCalendar />,
   },
 ];

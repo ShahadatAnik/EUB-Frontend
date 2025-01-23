@@ -25,9 +25,9 @@ const TuitionFees = () => {
           <span className='font-semibold'>Email : </span>
           admission@eub.edu.bd
         </h6>
-        <h6 className='mt-2 text-lg font-semibold'>
+        {/* <h6 className='mt-2 text-lg font-semibold'>
           100% waiver for Son/Daughter of Freedom Fighter
-        </h6>
+        </h6> */}
       </div>
     </div>
   );

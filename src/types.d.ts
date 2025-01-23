@@ -129,3 +129,13 @@ export type ITuitionFee = {
   science_lab_fee?: string;
   studio_lab_fee?: string;
 };
+
+export type IClubAndSociety = {
+  label: string;
+  value: string;
+  content?: React.ReactNode | string;
+  clubs?: {
+    title: string;
+    content: React.ReactNode | string;
+  }[];
+};

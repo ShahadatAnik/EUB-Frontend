@@ -62,7 +62,6 @@ const ProgramDetails = () => {
         </ul>
       </div>
       <PerformanceCriteriaTable />
-
       <div>
         <h6 className='text-lg font-semibold'>Tuition Fee Structure</h6>
         <p className='mt-1'>

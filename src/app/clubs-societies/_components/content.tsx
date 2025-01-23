@@ -17,6 +17,13 @@ const Content = () => {
     faculties[0].value
   );
 
+  const content =
+    faculties.find((faculty) => faculty.value === currentFaculty)?.content ||
+    '';
+
+  const clubs =
+    faculties.find((faculty) => faculty.value === currentFaculty)?.clubs || [];
+
   return (
     <div className='flex gap-16'>
       <div className='w-[400px] flex flex-col '>
@@ -33,10 +40,11 @@ const Content = () => {
         ))}
       </div>
 
-      <Accordion type='single' collapsible className='w-full s'>
-        {faculties
-          .find((faculty) => faculty.value === currentFaculty)
-          ?.clubs.map((club, index) => (
+      {content && <div className='w-full'>{content}</div>}
+
+      {clubs.length > 0 && (
+        <Accordion type='single' collapsible className='w-full s'>
+          {clubs.map((club, index) => (
             <AccordionItem value={club.title} key={index}>
               <AccordionTrigger
                 iconClassName='text-black size-6'
@@ -49,7 +57,8 @@ const Content = () => {
               </AccordionContent>
             </AccordionItem>
           ))}
-      </Accordion>
+        </Accordion>
+      )}
     </div>
   );
 };

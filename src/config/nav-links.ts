@@ -184,12 +184,28 @@ export const navLinks: INavLink[] = [
         href: '/authorities/chancellor',
       },
       {
+        title: 'Chairman',
+        href: '/authorities/chairman',
+      },
+      {
         title: 'Syndicate',
         href: '/authorities/syndicate',
       },
       {
+        title: 'Academic Council',
+        href: '/authorities/academic-council',
+      },
+      {
         title: 'Vice Chancellor',
         href: '/authorities/vice-chancellor',
+      },
+      {
+        title: 'Pro Vice Chancellor',
+        href: '/authorities/pro-vice-chancellor',
+      },
+      {
+        title: 'Dean',
+        href: '/authorities/dean',
       },
       {
         title: 'Treasurer',
@@ -200,28 +216,12 @@ export const navLinks: INavLink[] = [
         href: '/authorities/director-coordination',
       },
       {
+        title: 'Registrar',
+        href: '/authorities/registrar',
+      },
+      {
         title: 'Offices',
         href: '/authorities/offices',
-      },
-      {
-        title: 'Chairman',
-        href: '/authorities/chairman',
-      },
-      {
-        title: 'Academic Council',
-        href: '/authorities/academic-council',
-      },
-      {
-        title: 'Pro Vice Chancellor',
-        href: '/authorities/pro-vice-chancellor',
-      },
-      {
-        title: 'Deans',
-        href: '/authorities/deans',
-      },
-      {
-        title: 'Register',
-        href: '/authorities/register',
       },
     ],
   },
@@ -258,6 +258,10 @@ export const navLinks: INavLink[] = [
       //   href: '/graduate-admission-requirements',
       // },
     ],
+  },
+  {
+    title: 'IQAC',
+    href: '/iqac',
   },
   {
     title: 'Useful Links',

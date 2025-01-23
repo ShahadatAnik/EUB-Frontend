@@ -1,43 +1,35 @@
 'use client';
 
 import React from 'react';
-
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
-const pdfs = [
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/common-table';
+
+const columns: SystemTableColumn[] = [
   {
-    updatedAt: '2022-01-01',
-    pdf: '/pdf/test.pdf',
-    title: 'Test PDF',
+    accessorKey: 'description',
+    cell: (value) => (
+      <Link className='underline text-primary font-medium' href={value}>
+        Test Pdf
+      </Link>
+    ),
   },
   {
-    updatedAt: '2022-01-01',
-    pdf: '/pdf/test.pdf',
-    title: 'Test PDF',
+    accessorKey: 'updated_at',
+    cell: (value) => value,
+  },
+];
+
+const data = [
+  {
+    description: '/pdf/test.pdf',
+    updated_at: '2021-09-01',
   },
   {
-    updatedAt: '2022-01-01',
-    pdf: '/pdf/test.pdf',
-    title: 'Test PDF',
-  },
-  {
-    updatedAt: '2022-01-01',
-    pdf: '/pdf/test.pdf',
-    title: 'Test PDF',
-  },
-  {
-    updatedAt: '2022-01-01',
-    pdf: '/pdf/test.pdf',
-    title: 'Test PDF',
+    description: '/pdf/test.pdf',
+    updated_at: '2021-09-01',
   },
 ];
 
@@ -60,44 +52,7 @@ const Content = () => {
           </Link>
         </div>
       </div>
-      <Table className='border '>
-        <TableHeader>
-          <TableRow className='bg-primary hover:bg-primary'>
-            <TableHead className='border-r text-white pl-4'>
-              Description
-            </TableHead>
-            <TableHead className='border-r text-white pl-4'>
-              Update Date
-            </TableHead>
-            <TableHead className='text-white pl-4 text-center w-[140px]'>
-              Actions
-            </TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {pdfs.map((pdf, index) => (
-            <TableRow key={index}>
-              <TableCell className='font-medium border-r'>
-                <Link
-                  className='underline text-primary'
-                  target='_blank'
-                  href={pdf.pdf}
-                >
-                  {pdf.title}
-                </Link>
-              </TableCell>
-              <TableCell className='border-r'>{pdf.updatedAt}</TableCell>
-              <TableCell>
-                <Link href={pdf.pdf}>
-                  <Button className='w-full' size={'sm'}>
-                    Download
-                  </Button>
-                </Link>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <SystemTable data={data} columns={columns} />
     </div>
   );
 };

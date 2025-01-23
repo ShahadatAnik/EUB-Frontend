@@ -1,18 +1,19 @@
-import PageHeader from '@/components/page-header';
-import React from 'react';
+'use client';
 
-import { generateMetaData } from '@/lib/utils';
+import React from 'react';
+import { usePathname } from 'next/navigation';
+
+import PageHeader from '@/components/page-header';
 import Content from './_components/content';
 
-export const metadata = generateMetaData({
-  title: 'Office Details',
-  description: 'Office details of the European University of Bangladesh',
-});
+import data from '../_const/offices-data';
 
 const Page = () => {
+  const pathName = usePathname();
+  const title = data.find((item) => item.href === pathName)?.title;
   return (
     <>
-      <PageHeader title='Office Details' />
+      <PageHeader title={title || 'Office Details'} />
       <Content />
     </>
   );

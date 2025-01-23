@@ -20,7 +20,7 @@ const PageHeader: React.FC<IPageHeaderProps> = ({
     >
       <div className='absolute inset-0 bg-black/70'></div>
       <div className='container relative z-10 text-center'>
-        <h1 className=' text-3xl lg:text-6xl text-white font-poppins font-semibold '>
+        <h1 className='text-wrap text-3xl lg:text-6xl text-white font-poppins font-semibold '>
           {title}
         </h1>
         {description && (

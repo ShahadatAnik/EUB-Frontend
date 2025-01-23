@@ -1,52 +1,44 @@
 import React from 'react';
-
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 import Link from 'next/link';
+
 import ContentWrapper from './content-wrapper';
 import { Separator } from '@/components/ui/separator';
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/common-table';
 
-const pdfs = [
+const data = [
   {
     updatedAt: '2022-01-01',
-    pdf: '/pdf/test.pdf',
-    title: 'Student Service Desk',
+    description: '/pdf/test.pdf',
+  },
+];
+
+const columns: SystemTableColumn[] = [
+  {
+    accessorKey: 'description',
+    header: 'Description',
+    cell: (value) => (
+      <Link href={value} className='underline font-medium text-primary'>
+        Test Pdf
+      </Link>
+    ),
+  },
+
+  {
+    accessorKey: 'updatedAt',
+    header: 'Updated At',
   },
 ];
 
 const StudentServiceDesk = () => {
   return (
     <ContentWrapper title='Student Service Desk' className='space-y-6'>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Description</TableHead>
-            <TableHead>Update Date</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {pdfs.map((pdf, index) => (
-            <TableRow key={index}>
-              <TableCell className='font-medium'>
-                <Link
-                  className='underline text-primary'
-                  target='_blank'
-                  href={pdf.pdf}
-                >
-                  {pdf.title}
-                </Link>
-              </TableCell>
-              <TableCell>{pdf.updatedAt}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <SystemTable
+        caption='Student Service Desk'
+        data={data}
+        columns={columns}
+      />
 
       <div>
         <h4 className='text-lg font-medium'>Additional Information :</h4>

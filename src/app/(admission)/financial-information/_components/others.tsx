@@ -89,28 +89,16 @@ const Others = () => {
     <Table className='border'>
       <TableHeader>
         <TableRow className='bg-primary hover:bg-primary'>
-          <TableHead rowSpan={2} className=' py-3 border-r text-white'>
+          <TableHead className=' py-3 border-r text-white'>
             Name of Programs
           </TableHead>
-          <TableHead rowSpan={2} className='py-3 border-r text-white'>
+          <TableHead className='py-3 border-r text-white'>
             Total Credit
           </TableHead>
-          <TableHead rowSpan={2} className='py-3 border-r text-white'>
-            Total Cost
-          </TableHead>
-          <TableHead rowSpan={2} className='py-3 border-r text-white'>
+          <TableHead className='py-3 border-r text-white'>Total Cost</TableHead>
+          <TableHead className='py-3 border-r text-white'>
             Admission Fee
           </TableHead>
-          <TableHead className='py-3 border-r text-white'>
-            No Condition
-          </TableHead>
-          <TableHead className='py-3 border-r text-white'>
-            Son/ Daughter of FF
-            <br />
-            or Siblings
-          </TableHead>
-        </TableRow>
-        <TableRow className='bg-primary hover:bg-primary'>
           <TableHead className='py-3 border-r text-white'>50% Waiver</TableHead>
           <TableHead className='py-3 border-r text-white'>
             100% Waiver

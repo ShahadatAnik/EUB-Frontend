@@ -16,7 +16,6 @@ const Content = () => {
             implementing & coordinating body for execution of various decisions
             of the university.
           </p>
-
           <Employees />
         </div>
       </div>

@@ -1,13 +1,8 @@
 import React from 'react';
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/common-table';
 
 const tuitionFees = [
   {
@@ -28,24 +23,20 @@ const tuitionFees = [
   },
 ];
 
+const columns: SystemTableColumn[] = [
+  {
+    accessorKey: 'title',
+    header: 'Title',
+  },
+  {
+    accessorKey: 'amount',
+    header: 'Amount',
+  },
+];
+
 const TuitionFeesTable = () => {
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>Cost / Fee Structure</TableHead>
-          <TableHead>Amount (in Taka)</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {tuitionFees.map((row, index) => (
-          <TableRow key={index}>
-            <TableCell className='font-medium'>{row.title}</TableCell>
-            <TableCell>{row.amount}</TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+    <SystemTable caption='Tuition Fees' data={tuitionFees} columns={columns} />
   );
 };
 
