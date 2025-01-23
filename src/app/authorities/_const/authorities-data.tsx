@@ -41,6 +41,10 @@ const authoritiesData: IAuthority[] = [
     title: 'Registrar',
     href: '/authorities/registrar',
   },
+  {
+    title: 'Offices',
+    href: '/authorities/offices',
+  },
 ];
 
 export default authoritiesData;

@@ -290,4 +290,8 @@ export const faculties = [
       },
     ],
   },
+  {
+    label: 'Events Calendar',
+    value: 'events-calendar',
+  },
 ];

@@ -2,12 +2,12 @@ import { INavLink, ITopNavLink } from '@/types';
 
 export const topNavLinks: ITopNavLink[] = [
   {
-    title: 'Research',
-    href: '/research',
+    title: 'Publications',
+    href: '/publications',
   },
   {
-    title: 'EUB Journal',
-    href: '/eub-journal',
+    title: 'Journals',
+    href: '/journals',
   },
   {
     title: 'Academic Calendar',
@@ -16,10 +16,6 @@ export const topNavLinks: ITopNavLink[] = [
   {
     title: 'News & Events',
     href: '/news-events',
-  },
-  {
-    title: 'Gallery',
-    href: '/gallery',
   },
   {
     title: 'Student Portal',
@@ -257,20 +253,11 @@ export const navLinks: INavLink[] = [
         title: 'Online Admission',
         href: '/online-admission',
       },
-      {
-        title: 'Graduate Admission Requirements',
-        href: '/graduate-admission-requirements',
-      },
+      // {
+      //   title: 'Graduate Admission Requirements',
+      //   href: '/graduate-admission-requirements',
+      // },
     ],
-  },
-  {
-    title: 'EUB Online',
-  },
-  {
-    title: 'Alumni',
-  },
-  {
-    title: 'Research',
   },
   {
     title: 'Useful Links',
