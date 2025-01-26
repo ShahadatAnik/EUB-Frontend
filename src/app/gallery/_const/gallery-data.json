@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Campus Life Highlights",
+    "description": "A glimpse into the vibrant campus life of our university, featuring student events and gatherings.",
+    "banner_image": "https://universitywebsite.com/images/campus_life.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/gallery1.jpg",
+      "https://universitywebsite.com/images/gallery2.jpg",
+      "https://universitywebsite.com/images/gallery3.jpg"
+    ]
+  },
+  {
+    "title": "Research Symposium 2024",
+    "description": "Snapshots from our annual research symposium showcasing innovation and collaboration.",
+    "banner_image": "https://universitywebsite.com/images/research_symposium.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/research1.jpg",
+      "https://universitywebsite.com/images/research2.jpg",
+      "https://universitywebsite.com/images/research3.jpg"
+    ]
+  },
+  {
+    "title": "Graduation Ceremony",
+    "description": "Celebrating the achievements of our graduates during the annual commencement ceremony.",
+    "banner_image": "https://universitywebsite.com/images/graduation.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/grad1.jpg",
+      "https://universitywebsite.com/images/grad2.jpg",
+      "https://universitywebsite.com/images/grad3.jpg"
+    ]
+  },
+  {
+    "title": "Sports Fest",
+    "description": "Exciting moments from our sports fest featuring various competitions and events.",
+    "banner_image": "https://universitywebsite.com/images/sports_fest.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/sports1.jpg",
+      "https://universitywebsite.com/images/sports2.jpg",
+      "https://universitywebsite.com/images/sports3.jpg"
+    ]
+  },
+  {
+    "title": "Cultural Night",
+    "description": "An evening celebrating diverse cultures through performances and exhibits.",
+    "banner_image": "https://universitywebsite.com/images/cultural_night.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/culture1.jpg",
+      "https://universitywebsite.com/images/culture2.jpg",
+      "https://universitywebsite.com/images/culture3.jpg"
+    ]
+  },
+  {
+    "title": "Alumni Meet 2024",
+    "description": "Reuniting with our esteemed alumni during the annual meet.",
+    "banner_image": "https://universitywebsite.com/images/alumni_meet.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/alumni1.jpg",
+      "https://universitywebsite.com/images/alumni2.jpg",
+      "https://universitywebsite.com/images/alumni3.jpg"
+    ]
+  },
+  {
+    "title": "Science Fair",
+    "description": "Highlights from our student-driven science fair showcasing innovation and creativity.",
+    "banner_image": "https://universitywebsite.com/images/science_fair.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/science1.jpg",
+      "https://universitywebsite.com/images/science2.jpg",
+      "https://universitywebsite.com/images/science3.jpg"
+    ]
+  },
+  {
+    "title": "Open Day",
+    "description": "Welcoming prospective students and their families to explore our campus and facilities.",
+    "banner_image": "https://universitywebsite.com/images/open_day.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/open1.jpg",
+      "https://universitywebsite.com/images/open2.jpg",
+      "https://universitywebsite.com/images/open3.jpg"
+    ]
+  },
+  {
+    "title": "International Student Week",
+    "description": "Celebrating the diverse international community at our university.",
+    "banner_image": "https://universitywebsite.com/images/international_week.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/international1.jpg",
+      "https://universitywebsite.com/images/international2.jpg",
+      "https://universitywebsite.com/images/international3.jpg"
+    ]
+  },
+  {
+    "title": "Art Exhibition",
+    "description": "Showcasing artistic talent through our student and faculty art exhibition.",
+    "banner_image": "https://universitywebsite.com/images/art_exhibition.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/art1.jpg",
+      "https://universitywebsite.com/images/art2.jpg",
+      "https://universitywebsite.com/images/art3.jpg"
+    ]
+  },
+  {
+    "title": "Technology Conference",
+    "description": "Highlights from our technology conference with keynote speakers and panels.",
+    "banner_image": "https://universitywebsite.com/images/tech_conference.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/tech1.jpg",
+      "https://universitywebsite.com/images/tech2.jpg",
+      "https://universitywebsite.com/images/tech3.jpg"
+    ]
+  },
+  {
+    "title": "Environmental Day Activities",
+    "description": "Snapshots of activities held during our Environmental Day celebrations.",
+    "banner_image": "https://universitywebsite.com/images/environmental_day.jpg",
+    "attachments": [
+      "https://universitywebsite.com/images/environment1.jpg",
+      "https://universitywebsite.com/images/environment2.jpg",
+      "https://universitywebsite.com/images/environment3.jpg"
+    ]
+  }
+]

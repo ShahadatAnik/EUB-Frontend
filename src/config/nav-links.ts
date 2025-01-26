@@ -6,32 +6,21 @@ export const topNavLinks: ITopNavLink[] = [
     href: '/publications',
   },
   {
-    title: 'International Partnership',
-    href: '/international-partnership',
+    title: 'Journals',
+    href: '/journals',
   },
   {
     title: 'Academic Calendar',
     href: '/academic-calendar',
   },
   {
-    title: 'Library',
-    href: '/library',
+    title: 'News & Events',
+    href: '/news-events',
   },
   {
-    title: 'News Letters',
-    href: '/news-letters',
-  },
-  {
-    title: 'Journals',
-    href: '/journals',
-  },
-  {
-    title: 'Catalog',
-    href: '/catalog',
-  },
-  {
-    title: 'Archive',
-    href: '/archive',
+    title: 'Student Portal',
+    href: 'https://iems.eub.edu.bd/',
+    newTab: true,
   },
   {
     title: 'Contact Us',
@@ -42,218 +31,268 @@ export const topNavLinks: ITopNavLink[] = [
 export const navLinks: INavLink[] = [
   {
     title: 'About',
+    className: 'gap-2 ',
     children: [
       {
-        title: 'About EUB',
-        children: [
-          {
-            title: 'Brief History',
-            href: '/about/brief-history',
-          },
+        title: 'Brief History',
+        href: '/about/brief-history',
+      },
 
-          {
-            title: 'Vision, Mission and Strategy',
-            href: '/about/vision-mission-strategy',
-          },
-          {
-            title: 'International Advisory Board',
-            href: '/about/international-advisory-board',
-          },
+      {
+        title: 'Vision, Mission and Strategy',
+        href: '/about/vision-mission-strategy',
+      },
 
-          {
-            title: 'Accreditation',
-            href: '/about/accreditation',
-          },
-          {
-            title: 'International Recognition',
-            href: '/about/international-recognition',
-          },
-          {
-            title: 'Facts About EUB',
-            href: '/about/facts-about-eub',
-          },
-        ],
+      {
+        title: 'Accreditation',
+        href: '/about/accreditation',
       },
       {
-        title: 'EUB Trustees',
-        children: [
-          {
-            title: 'Board of Trustees',
-            href: '/about/board-of-trustees',
-          },
-        ],
-      },
-      {
-        title: 'Executive Leaders',
-        children: [
-          {
-            title: 'VC, Pro-VC & Treasures',
-            href: '/about/vc-pro-vc-and-treasures',
-          },
-          {
-            title: 'Deans, Chairs & Directors',
-            href: '/about/deans-chairs-and-directors',
-          },
-          {
-            title: 'Administrators',
-            href: '/about/administrators',
-          },
-        ],
-      },
-      {
-        title: 'Authorities',
+        title: 'Facts About EUB',
+        href: '/about/facts-about-eub',
       },
     ],
   },
   {
-    title: 'Academic',
-
+    title: 'Courses',
     children: [
       {
-        title: 'School of Business & Economics',
-        href: '/academic/school-of-business-and-economics',
+        title: 'School of Business Administration',
+        href: '/courses/school-of-business-administration',
         children: [
           {
-            title: 'Accounting & Finance',
-            href: '/academic/school-of-business-and-economics/accounting-and-finance',
+            title: 'BBA',
+            href: '/courses/school-of-business-administration/bba',
           },
           {
-            title: 'Economics',
-            href: '/academic/school-of-business-and-economics/economics',
+            title: 'MBA',
+            href: '/courses/school-of-business-administration/mba',
           },
           {
-            title: 'Management',
-            href: '/academic/school-of-business-and-economics/management',
+            title: 'Executive MBA',
+            href: '/courses/school-of-business-administration/emba',
           },
           {
-            title: 'Marketing & International Business',
-            href: '/academic/school-of-business-and-economics/marketing-and-international-business',
+            title: 'MBA (1 Year)',
+            href: '/courses/school-of-business-administration/mba-one-year',
           },
           {
-            title: 'MBA & EMBA Programs',
-            href: '/academic/school-of-business-and-economics/mba-and-emba-programs',
-          },
-          {
-            title: 'BBA Program',
-            href: '/academic/school-of-business-and-economics/bba-program',
+            title: 'THM',
+            href: '/courses/school-of-business-administration/thm',
           },
         ],
       },
       {
-        title: 'School of Humanities and Social Sciences',
-        href: '/academic/school-of-humanities-and-social-sciences',
+        title: 'School of Arts and Social Sciences',
+        href: '/courses/school-of-arts-and-social-sciences',
         children: [
           {
-            title: 'English Language',
-            href: '/academic/school-of-humanities-and-social-sciences/english-language',
+            title: 'BA in English',
+            href: '/courses/school-of-arts-and-social-sciences/ba-english',
           },
           {
-            title: 'History',
-            href: '/academic/school-of-humanities-and-social-sciences/history',
+            title: 'MA in English',
+            href: '/courses/school-of-arts-and-social-sciences/ma-english',
           },
           {
-            title: 'Philosophy',
-            href: '/academic/school-of-humanities-and-social-sciences/philosophy',
+            title: 'BSS in Economics',
+            href: '/courses/school-of-arts-and-social-sciences/bss-economics',
           },
           {
-            title: 'Social Sciences',
-            href: '/academic/school-of-humanities-and-social-sciences/social-sciences',
+            title: 'MSS in Economics',
+            href: '/courses/school-of-arts-and-social-sciences/mss-economics',
+          },
+          {
+            title: 'MGDS (1 Year)',
+            href: '/courses/school-of-arts-and-social-sciences/mgds-one-year',
+          },
+          {
+            title: 'LLB',
+            href: '/courses/school-of-arts-and-social-sciences/llb',
+          },
+          {
+            title: 'LLM',
+            href: '/courses/school-of-arts-and-social-sciences/llm',
           },
         ],
       },
 
       {
-        title: 'School of Engineering and Physical Sciences',
-        href: '/academic/school-of-engineering-and-physical-sciences',
+        title: 'School of Engineering',
+        href: '/courses/school-of-engineering',
         children: [
           {
-            title: 'Chemistry',
-            href: '/academic/school-of-engineering-and-physical-sciences/chemistry',
+            title: 'BSc in Civil',
+            href: '/courses/school-of-engineering/bsc-civil',
           },
           {
-            title: 'Computer Science',
-            href: '/academic/school-of-engineering-and-physical-sciences/computer-science',
+            title: 'BSc in Computer Science',
+            href: '/courses/school-of-engineering/bsc-computer-science',
           },
           {
-            title: 'Mathematics',
-            href: '/academic/school-of-engineering-and-physical-sciences/mathematics',
+            title: 'BSc in Electrical and Electronics',
+            href: '/courses/school-of-engineering/bsc-electrical-and-electronics',
           },
           {
-            title: 'Physics',
-            href: '/academic/school-of-engineering-and-physical-sciences/physics',
+            title: 'BSc in Textile',
+            href: '/courses/school-of-engineering/bsc-textile',
           },
           {
-            title: 'Chemical Engineering',
-            href: '/academic/school-of-engineering-and-physical-sciences/chemical-engineering',
+            title: 'BSc in Industrial & Production',
+            href: '/courses/school-of-engineering/bsc-industrial-and-production',
+          },
+          {
+            title: 'BSc in Mechanical',
+            href: '/courses/school-of-engineering/bsc-mechanical',
           },
         ],
       },
+
       {
-        title: 'School of Health & Life Sciences',
-        href: '/academic/school-of-health-and-life-sciences',
+        title: 'Miscellaneous',
         children: [
           {
-            title: 'Biomedical Sciences',
-            href: '/academic/school-of-health-and-life-sciences/biomedical-sciences',
+            title: 'Academic Information & Policies',
+            href: '/courses/miscellaneous/academic-information-policies',
           },
           {
-            title: 'Health Sciences',
-            href: '/academic/school-of-health-and-life-sciences/health-sciences',
+            title: 'Grading Policy',
+            href: '/courses/miscellaneous/grading-policy',
           },
           {
-            title: 'Life Sciences',
-            href: '/academic/school-of-health-and-life-sciences/life-sciences',
+            title: 'Examination Guidelines',
+            href: '/courses/miscellaneous/examination-guidelines',
           },
           {
-            title: 'Pharmaceutical Sciences',
-            href: '/academic/school-of-health-and-life-sciences/pharmaceutical-sciences',
+            title: 'Student Records',
+            href: '/courses/miscellaneous/student-records',
+          },
+          {
+            title: 'Information about Provisional Certificates',
+            href: '/courses/miscellaneous/information-about-provisional-certificates',
           },
         ],
       },
     ],
   },
   {
-    title: 'Faculty',
+    title: 'Authorities',
+    className: 'gap-2',
     children: [
       {
-        title: 'School of Business & Economics',
-        children: [
-          {
-            title: 'Accounting & Finance',
-            href: '/faculty/school-of-business-and-economics/accounting-and-finance',
-          },
-          {
-            title: 'Economics',
-            href: '/faculty/school-of-business-and-economics/economics',
-          },
-          {
-            title: 'Management',
-            href: '/faculty/school-of-business-and-economics/management',
-          },
-          {
-            title: 'Marketing & International Business',
-            href: '/faculty/school-of-business-and-economics/marketing-and-international-business',
-          },
-        ],
+        title: 'Chancellor',
+        href: '/authorities/chancellor',
+      },
+      {
+        title: 'Chairman',
+        href: '/authorities/chairman',
+      },
+      {
+        title: 'Syndicate',
+        href: '/authorities/syndicate',
+      },
+      {
+        title: 'Academic Council',
+        href: '/authorities/academic-council',
+      },
+      {
+        title: 'Vice Chancellor',
+        href: '/authorities/vice-chancellor',
+      },
+      {
+        title: 'Pro Vice Chancellor',
+        href: '/authorities/pro-vice-chancellor',
+      },
+      {
+        title: 'Dean',
+        href: '/authorities/dean',
+      },
+      {
+        title: 'Treasurer',
+        href: '/authorities/treasurer',
+      },
+      {
+        title: 'Director (Coordination)',
+        href: '/authorities/director-coordination',
+      },
+      {
+        title: 'Registrar',
+        href: '/authorities/registrar',
+      },
+      {
+        title: 'Offices',
+        href: '/authorities/offices',
       },
     ],
   },
-  {
-    title: 'Offices',
-  },
+
   {
     title: 'Admission',
+    children: [
+      {
+        title: 'Admission Information',
+        href: '/admission-information',
+      },
+      {
+        title: 'Financial Information',
+        href: '/financial-information',
+      },
+      {
+        title: 'Tuition & Other Fees Structure',
+        href: '/tuition-and-other-fees-structure',
+      },
+      {
+        title: 'FAQs / Ask',
+        href: '/faq',
+      },
+      {
+        title: 'Credit Transfer',
+        href: '/credit-transfer',
+      },
+      {
+        title: 'Online Admission',
+        href: '/online-admission',
+      },
+      // {
+      //   title: 'Graduate Admission Requirements',
+      //   href: '/graduate-admission-requirements',
+      // },
+    ],
   },
   {
-    title: 'EUB Online',
-  },
-  {
-    title: 'Alumni',
-  },
-  {
-    title: 'Research',
+    title: 'IQAC',
+    href: '/iqac',
   },
   {
     title: 'Useful Links',
+    className: 'gap-0 d:grid-cols-1 xl:grid-cols-1',
+    children: [
+      {
+        title: 'Notices',
+        href: '/notices',
+      },
+      {
+        title: 'News & Events',
+        href: '/news-events',
+      },
+      {
+        title: 'Student Service Desk',
+        href: '/student-service-desk',
+        newTab: true,
+      },
+
+      {
+        title: 'Clubs & Societies',
+        href: '/clubs-societies',
+      },
+      {
+        title: 'Online Admission',
+        href: '/online-admission',
+      },
+      {
+        title: 'Career',
+        href: '/career',
+      },
+    ],
   },
 ];

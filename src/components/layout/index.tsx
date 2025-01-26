@@ -1,9 +1,12 @@
+'use client';
+
 import React from 'react';
 
 import TopNavbar from './top-nav-bar';
 import Footer from './footer';
 import { cn } from '@/lib/utils';
 import Navbar from './navbar';
+import { usePathname } from 'next/navigation';
 
 interface ILayoutProps {
   children: React.ReactNode;
@@ -11,10 +14,16 @@ interface ILayoutProps {
 }
 
 const Layout: React.FC<ILayoutProps> = ({ children, navbarClassName }) => {
+  const pathName = usePathname();
+  const isHome = pathName === '/';
   return (
     <div className='relative'>
       <div
-        className={cn('absolute top-0 left-0 right-0 z-50', navbarClassName)}
+        className={cn(
+          ' top-0 left-0 right-0 z-50',
+          isHome ? 'absolute' : 'relative',
+          navbarClassName
+        )}
       >
         <TopNavbar />
         <Navbar />
