@@ -1,13 +1,8 @@
 import React from 'react';
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/system-table';
 
 const GradingTable = () => {
   const scores = [
@@ -79,30 +74,24 @@ const GradingTable = () => {
     },
   ];
 
+  const columns: SystemTableColumn[] = [
+    {
+      accessorKey: 'numerical_score',
+      header: 'Numerical Score',
+    },
+    {
+      accessorKey: 'letter_grade',
+      header: 'Letter Grade',
+    },
+    {
+      accessorKey: 'grade_points',
+      header: 'Grade Points',
+    },
+  ];
+
   return (
     <div className='space-y-4'>
-      <div className='max-w-[1000px]'>
-        <Table className='w-full'>
-          <TableHeader className='bg-primary'>
-            <TableRow>
-              <TableHead className='text-white'>Numerical Scores</TableHead>
-              <TableHead className='text-white'>Letter Grade</TableHead>
-              <TableHead className='text-white'>
-                Grade Points (Per Credit)
-              </TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {scores.map((score, index) => (
-              <TableRow key={index}>
-                <TableCell>{score.numerical_score}</TableCell>
-                <TableCell>{score.letter_grade}</TableCell>
-                <TableCell>{score.grade_points}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
+      <SystemTable className='max-w-[1000px]' data={scores} columns={columns} />
       <div>
         <p>* Credits for courses with this grade do not apply towards grad</p>
         <p>

@@ -1,3 +1,4 @@
+import Title from '@/components/title';
 import { cn } from '@/lib/utils';
 import React from 'react';
 
@@ -9,15 +10,10 @@ const SectionContent: React.FC<{
 }> = ({ title, titleClassName, children, className }) => {
   return (
     <div>
-      <h4
-        className={cn(
-          'bg-accent py-2 px-4 border-l-4 border-primary text-lg font-semibold text-primary',
-          titleClassName
-        )}
-      >
-        {title}
-      </h4>
-
+      <Title
+        title={title}
+        className={cn('font-sans font-semibold', titleClassName)}
+      />
       <div className={cn('pl-4 mt-4', className)}>{children}</div>
     </div>
   );

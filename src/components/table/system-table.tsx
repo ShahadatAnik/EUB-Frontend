@@ -23,12 +23,18 @@ interface IProps {
   columns: SystemTableColumn[];
   data: Record<string, string | React.ReactNode>[];
   caption?: string;
+  className?: string;
 }
 
-const SystemTable: React.FC<IProps> = ({ columns, data, caption }) => {
+const SystemTable: React.FC<IProps> = ({
+  columns,
+  data,
+  caption,
+  className,
+}) => {
   const headers = columns.map((column) => column.header || column.accessorKey);
   return (
-    <Table className='border'>
+    <Table className={cn('border', className)}>
       {caption && <TableCaption>{caption}</TableCaption>}
       <TableHeader>
         <TableRow className='bg-primary hover:bg-primary'>

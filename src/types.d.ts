@@ -139,3 +139,8 @@ export type IClubAndSociety = {
     content: React.ReactNode | string;
   }[];
 };
+
+export type IPublication = {
+  title: string;
+  content: string | React.ReactNode;
+};

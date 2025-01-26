@@ -1,54 +1,40 @@
 'use client';
 
 import React from 'react';
-
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 import Link from 'next/link';
 
-const pdfs = [
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/system-table';
+
+const columns: SystemTableColumn[] = [
   {
-    updatedAt: '2022-01-01',
-    pdf: '/pdf/test.pdf',
-    title: 'Academic Calendar',
+    accessorKey: 'description',
+    cell: (value) => (
+      <Link className='underline text-primary font-medium' href={value}>
+        Test Pdf
+      </Link>
+    ),
+  },
+  {
+    accessorKey: 'updated_at',
+    cell: (value) => value,
+  },
+];
+
+const data = [
+  {
+    description: '/pdf/test.pdf',
+    updated_at: '2021-09-01',
+  },
+  {
+    description: '/pdf/test.pdf',
+    updated_at: '2021-09-01',
   },
 ];
 
 const Content = () => {
-  return (
-    <div className='space-y-12'>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Description</TableHead>
-            <TableHead>Update Date</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {pdfs.map((pdf, index) => (
-            <TableRow key={index}>
-              <TableCell className='font-medium'>
-                <Link
-                  className='underline text-primary'
-                  target='_blank'
-                  href={pdf.pdf}
-                >
-                  {pdf.title}
-                </Link>
-              </TableCell>
-              <TableCell>{pdf.updatedAt}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </div>
-  );
+  return <SystemTable data={data} columns={columns} />;
 };
 
 export default Content;

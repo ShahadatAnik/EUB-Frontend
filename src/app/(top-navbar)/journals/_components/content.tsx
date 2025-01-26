@@ -6,6 +6,7 @@ import Link from 'next/link';
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
+import Title from '@/components/title';
 
 const columns: SystemTableColumn[] = [
   {
@@ -37,10 +38,8 @@ const Content = () => {
   return (
     <div className='space-y-8'>
       <div>
-        <h6 className='text-2xl font-semibold text-primary py-2 px-6 border-l-4 bg-accent border-primary'>
-          NSBR
-        </h6>
-        <div className='pl-4 mt-4 text-base   flex flex-col space-y-2'>
+        <Title title='NSBR' className='text-2xl' />
+        <div className='pl-4 text-base   flex flex-col space-y-2'>
           <Link href={'#'} className='underline text-primary'>
             NSBR Copy Right Agreement
           </Link>

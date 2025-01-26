@@ -1,11 +1,12 @@
+import Title from '@/components/title';
 import React from 'react';
 
 const Content = () => {
   return (
     <div className='py-6 lg:py-12'>
       <div className='container space-y-8'>
-        <div className='space-y-1'>
-          <h4 className='text-primary text-2xl font-semibold'>Vision</h4>
+        <div>
+          <Title title='Vision' />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi
             quaerat ad commodi velit perferendis maiores amet magnam quibusdam
@@ -21,8 +22,8 @@ const Content = () => {
             nisi corporis suscipit tempora quae.
           </p>
         </div>
-        <div className='space-y-1'>
-          <h4 className='text-primary text-2xl font-semibold'>Mission</h4>
+        <div>
+          <Title title='Mission' />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi
             quaerat ad commodi velit perferendis maiores amet magnam quibusdam
@@ -38,10 +39,8 @@ const Content = () => {
             nisi corporis suscipit tempora quae.
           </p>
         </div>
-        <div className='space-y-1'>
-          <h4 className='text-primary text-2xl font-semibold'>
-            Our students will be:
-          </h4>
+        <div>
+          <Title title='Our students will be:' />
           <ul className='list-decimal list-inside space-y-0.5'>
             <li>Life-long learners with good leadership skills</li>
             <li>
@@ -57,10 +56,8 @@ const Content = () => {
           </ul>
         </div>
 
-        <div className='space-y-1'>
-          <h4 className='text-primary text-2xl font-semibold'>
-            The university aims at:
-          </h4>
+        <div>
+          <Title title='The university aims at:' />
           <ul className='list-decimal list-inside space-y-0.5'>
             <li>
               Offering socially relevant academic programs consisting of a

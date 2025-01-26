@@ -1,6 +1,7 @@
 import React from 'react';
-import ContentHeader from './content-header';
+
 import { cn } from '@/lib/utils';
+import Title from '@/components/title';
 
 const ContentWrapper: React.FC<{
   title: string;
@@ -10,7 +11,7 @@ const ContentWrapper: React.FC<{
 }> = ({ title, titleClassName, className, children }) => {
   return (
     <div>
-      <ContentHeader title={title} className={titleClassName} />
+      <Title title={title} className={titleClassName} />
       <div className={cn('py-6', className)}>{children}</div>
     </div>
   );
