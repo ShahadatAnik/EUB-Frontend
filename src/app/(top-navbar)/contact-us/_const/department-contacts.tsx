@@ -61,6 +61,12 @@ const departmentContacts: IDepartmentContact[] = [
     extensions: ['1337', '1338', '1339', '1340'],
     phones: ['01968774927', '01968774933', '01968774928', '01968774930'],
   },
+  {
+    title: 'Dept. of IQAC',
+    emails: ['iqac@eub.edu.bd'],
+    extensions: ['1337', '1338', '1339', '1340'],
+    phones: ['01968774927', '01968774933', '01968774928', '01968774930'],
+  },
 ];
 
 export default departmentContacts;

@@ -2,7 +2,7 @@
 import React from 'react';
 import NoticeSlider from '../../../components/slider/notice-slider';
 import data from '@/lib/data.json';
-import NewsCard from '../../../components/cards/news-card';
+import NewsCard from '../../(top-navbar)/news-events/_components/news-card';
 import ProgramCard from '../../../components/cards/program-card';
 import programs from '@/lib/programs.json';
 import { Separator } from '../../../components/ui/separator';

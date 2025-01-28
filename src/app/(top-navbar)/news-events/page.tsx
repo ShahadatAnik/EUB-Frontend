@@ -13,7 +13,7 @@ import PageHeader from '@/components/page-header';
 import PageContainer from '@/components/page-container';
 
 import { INewsPortal } from '@/types';
-import NewsCard from '@/components/cards/news-card';
+import NewsCard from '@/app/(top-navbar)/news-events/_components/news-card';
 
 export default async function Page() {
   const res = await fetch('http://103.147.163.46:4030/news/news-portal');

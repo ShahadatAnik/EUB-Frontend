@@ -4,7 +4,6 @@ import CoreFacultyMembers from '../_components/core-faculty-members';
 import LaboratoriesResources from '../_components/laboratories-resources';
 import AboutUs from '../_components/overview/about-us';
 import Chairman from '../_components/overview/chairman';
-import PhotoGallery from '../_components/photo-gallery';
 import StudentServiceDesk from '../_components/student-service-desk';
 
 // Regular Program
@@ -22,6 +21,7 @@ import ECoursePath from '../_components/evening-program/course-path';
 import EDegreeRequirements from '../_components/evening-program/degree-requirements';
 import EClassRoutine from '../_components/evening-program/class-routine';
 import EExamSchedule from '../_components/evening-program/exam-schedule';
+import NewsEvents from '../_components/news-events';
 
 const accordions: IAcademicAccordion[] = [
   {
@@ -119,8 +119,8 @@ const accordions: IAcademicAccordion[] = [
     href: '/financial-information',
   },
   {
-    title: 'Photo Gallery',
-    content: <PhotoGallery />,
+    title: 'News & Events',
+    content: <NewsEvents />,
   },
   {
     title: 'Student Service Desk',

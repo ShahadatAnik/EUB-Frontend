@@ -11,12 +11,12 @@ import {
 const Content = () => {
   return (
     <div>
-      <Accordion type='multiple' className='w-full space-y-2'>
+      <Accordion type='multiple' className='w-full'>
         {data.map((item, index) => (
           <AccordionItem value={`item-${index + 1}`} key={index}>
             <AccordionTrigger
               iconClassName='text-primary'
-              className='px-6 py-3 bg-accent border  text-primary  text-lg'
+              className='px-6 py-3 bg-accent border-b text-lg'
             >
               {index + 1 + '. '}
               {item.question}

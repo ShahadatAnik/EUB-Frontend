@@ -57,13 +57,16 @@ const Content = () => {
           </SelectContent>
         </Select>
       </div>
-      <Accordion type='single' collapsible className='w-full space-y-2'>
+      <Accordion type='single' collapsible className='w-full '>
         {data.map((item, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className='bg-primary text-white text-lg p-4'>
+            <AccordionTrigger
+              iconClassName='text-primary'
+              className='bg-accent border-b text-primary text-lg px-6 py-3'
+            >
               {item.title}
             </AccordionTrigger>
-            <AccordionContent className='px-6 py-4  text-base border bg-background'>
+            <AccordionContent className='px-6 py-4  text-base bg-background'>
               {item.content}
             </AccordionContent>
           </AccordionItem>

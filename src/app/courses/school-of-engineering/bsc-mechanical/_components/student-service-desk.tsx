@@ -3,43 +3,16 @@ import Link from 'next/link';
 
 import ContentWrapper from './content-wrapper';
 import { Separator } from '@/components/ui/separator';
-import SystemTable, {
-  SystemTableColumn,
-} from '@/components/table/system-table';
-
-const data = [
-  {
-    updatedAt: '2022-01-01',
-    description: '/pdf/test.pdf',
-  },
-];
-
-const columns: SystemTableColumn[] = [
-  {
-    accessorKey: 'description',
-    header: 'Description',
-    cell: (value) => (
-      <Link href={value} className='underline font-medium text-primary'>
-        Test Pdf
-      </Link>
-    ),
-  },
-
-  {
-    accessorKey: 'updatedAt',
-    header: 'Updated At',
-  },
-];
 
 const StudentServiceDesk = () => {
   return (
-    <ContentWrapper title='Student Service Desk' className='space-y-6'>
-      <SystemTable
-        caption='Student Service Desk'
-        data={data}
-        columns={columns}
-      />
-
+    <ContentWrapper title='Student Service Desk' className='pt-2 space-y-6'>
+      <Link
+        className='underline text-primary font-medium flex items-center'
+        href={'/student-service-desk'}
+      >
+        Go to Student Service Desk
+      </Link>
       <div>
         <h4 className='text-lg font-medium'>Additional Information :</h4>
         <Separator className='mt-1 mb-2' />

@@ -12,7 +12,7 @@ const ContentWrapper: React.FC<{
   return (
     <div>
       <Title title={title} className={titleClassName} />
-      <div className={cn('py-6', className)}>{children}</div>
+      <div className={cn('py-2', className)}>{children}</div>
     </div>
   );
 };
