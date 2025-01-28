@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { buttonVariants } from './ui/button';
-import { Calendar, UserRoundCheck } from 'lucide-react';
+
 import { cn } from '@/lib/utils';
 
 const QuickLinks: React.FC<{ className?: string }> = ({ className }) => {
