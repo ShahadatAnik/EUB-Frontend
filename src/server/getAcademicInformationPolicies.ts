@@ -1,3 +1,5 @@
+'use server';
+
 import { secret } from '@/config/secret';
 import { IDataTable } from '@/types';
 

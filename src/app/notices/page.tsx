@@ -27,7 +27,7 @@ export default async function Page() {
     <>
       <PageHeader title='Notices' />
       <PageContainer>
-        <Content data={data} />
+        <Content initialData={data} />
         <Pagination>
           <PaginationContent>
             <PaginationItem>

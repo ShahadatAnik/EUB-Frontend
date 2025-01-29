@@ -155,3 +155,14 @@ export type IDataTable = {
   created_by: string;
   remarks: string;
 };
+
+export type IProgram = {
+  category: string;
+  created_at: Date;
+  created_by: string;
+  id: string;
+  name: string;
+  remarks: null;
+  updated_at: null;
+  uuid: string;
+};

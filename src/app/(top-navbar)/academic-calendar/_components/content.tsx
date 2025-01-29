@@ -8,6 +8,8 @@ import SystemTable, {
 } from '@/components/table/system-table';
 
 import { IDataTable } from '@/types';
+import { formatDate } from '@/lib/utils';
+import { useAcademicCalendar } from '../_const/query';
 
 const columns: SystemTableColumn<IDataTable>[] = [
   {
@@ -22,11 +24,13 @@ const columns: SystemTableColumn<IDataTable>[] = [
   },
   {
     accessorKey: 'updated_at',
-    cell: (value) => value,
+    cell: (value, row) => formatDate(value || row.created_at),
   },
 ];
 
-const Content: React.FC<{ data: IDataTable[] }> = ({ data }) => {
+const Content: React.FC<{ initialData: IDataTable[] }> = ({ initialData }) => {
+  const { data } = useAcademicCalendar({ initialData });
+
   return <SystemTable data={data} columns={columns} />;
 };
 

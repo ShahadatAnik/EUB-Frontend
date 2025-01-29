@@ -12,7 +12,7 @@ export default async function Page() {
     <>
       <PageHeader title='Examination Guidelines' />
       <PageContainer>
-        <Content data={data} />
+        <Content initialData={data} />
       </PageContainer>
     </>
   );
