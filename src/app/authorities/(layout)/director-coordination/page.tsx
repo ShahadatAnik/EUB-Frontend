@@ -1,16 +1,17 @@
-import React from 'react';
-import Content from './_components/content';
+import React from "react";
+import Content from "./_components/content";
 
-import { generateMetaData } from '@/lib/utils';
-
+import { generateMetaData } from "@/lib/utils";
+import { getAuthoritiesDirectorCoordination } from "@/server/get-authorities";
 export const metadata = generateMetaData({
-  title: 'Director Coordination',
-  description:
-    'The director coordination of the European University of Bangladesh',
+	title: "Director Coordination",
+	description:
+		"The director coordination of the European University of Bangladesh",
 });
 
-const Page = () => {
-  return <Content />;
+const Page = async () => {
+	const data = await getAuthoritiesDirectorCoordination();
+	return <Content data={data[0]} />;
 };
 
 export default Page;
