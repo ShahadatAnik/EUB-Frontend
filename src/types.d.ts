@@ -144,3 +144,14 @@ export type IPublication = {
   title: string;
   content: string | React.ReactNode;
 };
+
+export type IAcademicCalendar = {
+  uuid: string;
+  description: string;
+  page_name: string;
+  file: string;
+  created_at: Date;
+  updated_at: Date;
+  created_by: string;
+  remarks: string;
+};
