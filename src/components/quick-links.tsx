@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { buttonVariants } from './ui/button';
-import { Calendar, UserRoundCheck } from 'lucide-react';
+
 import { cn } from '@/lib/utils';
 
 const QuickLinks: React.FC<{ className?: string }> = ({ className }) => {
@@ -15,7 +15,7 @@ const QuickLinks: React.FC<{ className?: string }> = ({ className }) => {
       >
         View All Notices
       </Link>
-      <Link
+      {/* <Link
         href={'/schedule-events'}
         className={buttonVariants({
           className: 'w-full',
@@ -23,9 +23,9 @@ const QuickLinks: React.FC<{ className?: string }> = ({ className }) => {
       >
         <Calendar className='!size-4' />
         Schedule Events
-      </Link>
+      </Link> */}
 
-      <Link
+      {/* <Link
         href={'/degree-verification'}
         className={buttonVariants({
           variant: 'outline',
@@ -34,19 +34,20 @@ const QuickLinks: React.FC<{ className?: string }> = ({ className }) => {
       >
         <UserRoundCheck className='!size-4' />
         Degree Verification
-      </Link>
+      </Link> */}
 
       <Link
-        href={'/apply-online'}
+        href={'/online-admission'}
         className={buttonVariants({
+          variant: 'outline',
           className: 'w-full',
         })}
       >
-        EUB Admissions : <span className='font-semibold'>Apply Online</span>
+        Apply Online
       </Link>
 
       <Link
-        href={'/career-opportunity'}
+        href={'/career'}
         className={buttonVariants({
           className: 'w-full font-bold',
         })}

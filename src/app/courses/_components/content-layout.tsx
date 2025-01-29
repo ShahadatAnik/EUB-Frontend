@@ -25,7 +25,8 @@ const ContentLayout: React.FC<{
     src: string;
     alt: string;
   };
-}> = ({ accordions, bannerImage }) => {
+  showQuickLinks?: boolean;
+}> = ({ accordions, bannerImage, showQuickLinks = true }) => {
   const pathName = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -107,23 +108,25 @@ const ContentLayout: React.FC<{
 
   return (
     <div className='space-y-10'>
-      <div className='grid lg:grid-cols-3 gap-4 lg:gap-10'>
-        <div className='lg:col-span-2'>
-          <div className='w-full aspect-video lg:aspect-auto lg:h-full  relative'>
-            <Image
-              fill
-              className='object-cover object-top'
-              src={bannerImage.src}
-              alt={bannerImage.alt}
-            />
+      {showQuickLinks && (
+        <div className='grid lg:grid-cols-3 gap-4 lg:gap-10'>
+          <div className='lg:col-span-2'>
+            <div className='w-full aspect-video lg:aspect-auto lg:h-full lg:min-h-[360px]  relative'>
+              <Image
+                fill
+                className='object-cover object-top'
+                src={bannerImage.src}
+                alt={bannerImage.alt}
+              />
+            </div>
+          </div>
+          <div>
+            <h6 className='text-lg'>Quick Links</h6>
+            <Separator className='mt-2 mb-4' />
+            <QuickLinks />
           </div>
         </div>
-        <div>
-          <h6 className='text-lg'>Quick Links</h6>
-          <Separator className='mt-2 mb-4' />
-          <QuickLinks />
-        </div>
-      </div>
+      )}
 
       <div className='grid lg:grid-cols-5 gap-10'>
         <div>

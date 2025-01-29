@@ -4,8 +4,8 @@ import CoreFacultyMembers from '../_components/core-faculty-members';
 import LaboratoriesResources from '../_components/laboratories-resources';
 import AboutUs from '../_components/overview/about-us';
 import Chairman from '../_components/overview/chairman';
-import PhotoGallery from '../_components/photo-gallery';
 import StudentServiceDesk from '../_components/student-service-desk';
+import NewsEvents from '../_components/news-events';
 
 // Regular Program
 import RProgramDetails from '../_components/regular-program/program-details';
@@ -119,8 +119,8 @@ const accordions: IAcademicAccordion[] = [
     href: '/financial-information',
   },
   {
-    title: 'Photo Gallery',
-    content: <PhotoGallery />,
+    title: 'News & Events',
+    content: <NewsEvents />,
   },
   {
     title: 'Student Service Desk',
