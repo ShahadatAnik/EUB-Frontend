@@ -14,18 +14,20 @@ import {
 
 import { generateMetaData } from '@/lib/utils';
 import PageContainer from '@/components/page-container';
+import { getNotices } from '@/server/getNotices';
 
 export const metadata = generateMetaData({
   title: 'Notices',
   description: 'The notices of the European University of Bangladesh',
 });
 
-const Page = () => {
+export default async function Page() {
+  const data = await getNotices();
   return (
     <>
       <PageHeader title='Notices' />
       <PageContainer>
-        <Content />
+        <Content data={data} />
         <Pagination>
           <PaginationContent>
             <PaginationItem>
@@ -45,6 +47,4 @@ const Page = () => {
       </PageContainer>
     </>
   );
-};
-
-export default Page;
+}

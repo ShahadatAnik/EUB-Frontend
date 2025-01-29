@@ -9,6 +9,10 @@ import { getAcademicCalender } from '@/server/getAcademicCalender';
 export default async function Page() {
   const data = await getAcademicCalender();
 
+  console.log({
+    data,
+  });
+
   return (
     <>
       <PageHeader title='Academic Calendar' />

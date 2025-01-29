@@ -7,19 +7,18 @@ import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
 
-import { IAcademicCalendar } from '@/types';
+import { IDataTable } from '@/types';
 
-const columns: SystemTableColumn<IAcademicCalendar>[] = [
+const columns: SystemTableColumn<IDataTable>[] = [
   {
     accessorKey: 'description',
-    cell: (value, row) => (
-      <Link
-        className='underline text-primary font-medium'
-        href={row.file || ''}
-      >
-        {value}
-      </Link>
-    ),
+    cell: (value, row) => {
+      return (
+        <Link className='underline text-primary font-medium' href={row.file}>
+          {value}
+        </Link>
+      );
+    },
   },
   {
     accessorKey: 'updated_at',
@@ -27,7 +26,7 @@ const columns: SystemTableColumn<IAcademicCalendar>[] = [
   },
 ];
 
-const Content: React.FC<{ data: IAcademicCalendar[] }> = ({ data }) => {
+const Content: React.FC<{ data: IDataTable[] }> = ({ data }) => {
   return <SystemTable data={data} columns={columns} />;
 };
 

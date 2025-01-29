@@ -1,8 +1,9 @@
 import React from 'react';
-import data from '../_const/notices.json';
-import NoticeCard from './notice-card';
 
-const Content = () => {
+import NoticeCard from './notice-card';
+import { IDataTable } from '@/types';
+
+const Content: React.FC<{ data: IDataTable[] }> = ({ data }) => {
   return (
     <div>
       {data.map((item, index) => (
