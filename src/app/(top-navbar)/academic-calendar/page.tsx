@@ -1,25 +1,19 @@
-import PageHeader from '@/components/page-header';
 import React from 'react';
+
+import PageHeader from '@/components/page-header';
 import PageContainer from '@/components/page-container';
 import Content from './_components/content';
 
-import { secret } from '@/config/secret';
+import { getAcademicCalender } from '@/server/getAcademicCalender';
 
 export default async function Page() {
-  const data = await fetch(`${secret.apiBaseUrl}/v1/portfolio/info
-`);
-  const res = await data.json();
-
-  console.log({
-    res,
-  });
+  const data = await getAcademicCalender();
 
   return (
     <>
       <PageHeader title='Academic Calendar' />
-
       <PageContainer>
-        <Content />
+        <Content data={data} />
       </PageContainer>
     </>
   );

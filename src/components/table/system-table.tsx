@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 
 import {
@@ -11,27 +12,22 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/utils';
 
-export type SystemTableColumn = {
+export type SystemTableColumn<T> = {
   accessorKey: string;
   header?: string;
   headerClassName?: string;
-  cell?: (value: string) => string | React.ReactNode;
+  cell?: (value: string, row: T) => string | React.ReactNode;
   cellClassName?: string;
 };
 
-interface IProps {
-  columns: SystemTableColumn[];
-  data: Record<string, string | React.ReactNode>[];
+interface IProps<T> {
+  columns: SystemTableColumn<T>[];
+  data: Record<string, string | React.ReactNode>[] | T[];
   caption?: string;
   className?: string;
 }
 
-const SystemTable: React.FC<IProps> = ({
-  columns,
-  data,
-  caption,
-  className,
-}) => {
+function SystemTable<T>({ columns, data, caption, className }: IProps<T>) {
   const headers = columns.map((column) => column.header || column.accessorKey);
   return (
     <Table className={cn('border', className)}>
@@ -53,7 +49,7 @@ const SystemTable: React.FC<IProps> = ({
         </TableRow>
       </TableHeader>
       <TableBody>
-        {data.map((item, index) => (
+        {data.map((item: any, index: number) => (
           <TableRow key={index}>
             {columns.map((column, index) => (
               <TableCell
@@ -64,7 +60,7 @@ const SystemTable: React.FC<IProps> = ({
                 )}
               >
                 {column.cell
-                  ? column.cell(item[column.accessorKey] as string)
+                  ? column.cell(item[column.accessorKey] as string, data as T)
                   : item[column.accessorKey]}
               </TableCell>
             ))}
@@ -73,6 +69,6 @@ const SystemTable: React.FC<IProps> = ({
       </TableBody>
     </Table>
   );
-};
+}
 
 export default SystemTable;
