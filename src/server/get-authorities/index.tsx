@@ -8,6 +8,7 @@ import {
 	IAuthoritiesRegistrar,
 	IAuthoritiesTreasurer,
 	IAuthoritiesVC,
+	IMemberData,
 } from "@/types/authorities";
 export const getAuthoritiesChancellor = async (): Promise<
 	IAuthoritiesChancellor[]
@@ -71,6 +72,19 @@ export const getAuthoritiesRegistrar = async (): Promise<
 > => {
 	const res = await fetch(
 		`${secret.apiBaseUrl}/v1/portfolio/authorities?category=registrar`
+	);
+	return await res.json();
+};
+
+export const getAuthoritiesSyndicate = async (): Promise<IMemberData> => {
+	const res = await fetch(
+		`${secret.apiBaseUrl}/v1/portfolio/bot?category=syndicate`
+	);
+	return await res.json();
+};
+export const getAuthoritiesAcademicCouncil = async (): Promise<IMemberData> => {
+	const res = await fetch(
+		`${secret.apiBaseUrl}/v1/portfolio/bot?category=academic_council`
 	);
 	return await res.json();
 };

@@ -102,3 +102,13 @@ export type IAuthoritiesVC = {
 	};
 	biography: string;
 };
+export type Member = {
+	id: number;
+	name: string;
+	designation: string;
+};
+
+export type IMemberData = {
+	chairperson: Member;
+	member: Member[];
+};
