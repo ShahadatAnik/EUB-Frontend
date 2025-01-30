@@ -1,10 +1,13 @@
-export const jobsOpening = [
+import { ICareer } from '@/types';
+
+export const jobsOpening: ICareer[] = [
   {
     title: 'Assistant Professor of Computer Science',
     faculty: 'Faculty of Engineering and Technology',
     category: 'Academic',
     location: 'Boston, MA',
     deadline: '2025-02-15',
+    pdf: '/pdf/test.pdf',
   },
   {
     title: 'Lecturer in Mathematics',
@@ -12,6 +15,7 @@ export const jobsOpening = [
     category: 'Academic',
     location: 'San Francisco, CA',
     deadline: '2025-03-01',
+    pdf: '/pdf/test.pdf',
   },
   {
     title: 'Research Associate in Environmental Science',
@@ -19,6 +23,7 @@ export const jobsOpening = [
     category: 'Research',
     location: 'Seattle, WA',
     deadline: '2025-02-28',
+    pdf: '/pdf/test.pdf',
   },
   {
     title: 'Administrative Officer',
@@ -26,6 +31,7 @@ export const jobsOpening = [
     category: 'Administrative',
     location: 'New York, NY',
     deadline: '2025-02-10',
+    pdf: '/pdf/test.pdf',
   },
   {
     title: 'Director of Student Affairs',
@@ -33,6 +39,7 @@ export const jobsOpening = [
     category: 'Management',
     location: 'Chicago, IL',
     deadline: '2025-03-05',
+    pdf: '/pdf/test.pdf',
   },
   {
     title: 'Postdoctoral Fellow in Physics',
@@ -40,6 +47,7 @@ export const jobsOpening = [
     category: 'Research',
     location: 'Cambridge, UK',
     deadline: '2025-02-20',
+    pdf: '/pdf/test.pdf',
   },
   {
     title: 'Senior Lecturer in Law',
@@ -47,6 +55,7 @@ export const jobsOpening = [
     category: 'Academic',
     location: 'Toronto, Canada',
     deadline: '2025-03-12',
+    pdf: '/pdf/test.pdf',
   },
   {
     title: 'Head of Marketing and Communications',
@@ -54,6 +63,7 @@ export const jobsOpening = [
     category: 'Management',
     location: 'Los Angeles, CA',
     deadline: '2025-02-25',
+    pdf: '/pdf/test.pdf',
   },
   {
     title: 'Library Technician',
@@ -61,6 +71,7 @@ export const jobsOpening = [
     category: 'Support Staff',
     location: 'Vancouver, Canada',
     deadline: '2025-03-18',
+    pdf: '/pdf/test.pdf',
   },
   {
     title: 'IT Systems Administrator',
@@ -68,5 +79,6 @@ export const jobsOpening = [
     category: 'Technical',
     location: 'Austin, TX',
     deadline: '2025-03-08',
+    pdf: '/pdf/test.pdf',
   },
 ];

@@ -12,44 +12,36 @@ import {
 
 import { Input } from '@/components/ui/input';
 
-import { jobsOpening } from '../_const/data';
+import { data } from '../_const/data';
 
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
-import { ICareer } from '@/types';
+import { IPolicy } from '@/types';
 import PdfDownloadButton from '@/components/pdf-download-btn';
 
-const columns: SystemTableColumn<ICareer>[] = [
+const columns: SystemTableColumn<IPolicy>[] = [
   {
-    accessorKey: 'title',
-    header: 'Job Title',
+    accessorKey: 'name',
+    header: 'Policy Name',
   },
-
   {
-    accessorKey: 'faculty',
-    header: 'Faculty',
+    accessorKey: 'department',
+    header: 'Department',
   },
-
   {
-    accessorKey: 'category',
-    header: 'Category',
-  },
-
-  {
-    accessorKey: 'location',
-    header: 'Location',
-  },
-
-  {
-    accessorKey: 'deadline',
-    header: 'Deadline',
+    accessorKey: 'published_date',
+    header: 'Published Date',
+    headerClassName: 'w-[120px]',
   },
 
   {
     accessorKey: 'pdf',
     header: 'Action',
-    cell: (pdf) => <PdfDownloadButton pdf={pdf} />,
+    cell: (value) => {
+      return <PdfDownloadButton pdf={value} />;
+    },
+    headerClassName: 'w-[100px]',
   },
 ];
 
@@ -64,7 +56,7 @@ const Content = () => {
         />
       </div>
 
-      <SystemTable data={jobsOpening} columns={columns} />
+      <SystemTable data={data} columns={columns} />
 
       <div className='flex justify-center'>
         <Pagination>

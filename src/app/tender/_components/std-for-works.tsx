@@ -12,59 +12,68 @@ import {
 
 import { Input } from '@/components/ui/input';
 
-import { jobsOpening } from '../_const/data';
-
+import { data } from '../_const/data';
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
-import { ICareer } from '@/types';
+import { ITender } from '@/types';
 import PdfDownloadButton from '@/components/pdf-download-btn';
 
-const columns: SystemTableColumn<ICareer>[] = [
+const columns: SystemTableColumn<ITender>[] = [
+  {
+    header: 'Serial No',
+    cell: (_, row, index) => index + 1,
+    headerClassName: 'w-[80px]',
+  },
+
+  {
+    accessorKey: 'code',
+    header: 'Code',
+    headerClassName: 'w-[100px]',
+  },
+
+  {
+    accessorKey: 'type',
+    header: 'Type',
+    headerClassName: 'w-[200px]',
+  },
+
   {
     accessorKey: 'title',
-    header: 'Job Title',
+    header: 'Title',
   },
 
   {
-    accessorKey: 'faculty',
-    header: 'Faculty',
-  },
-
-  {
-    accessorKey: 'category',
-    header: 'Category',
-  },
-
-  {
-    accessorKey: 'location',
-    header: 'Location',
-  },
-
-  {
-    accessorKey: 'deadline',
-    header: 'Deadline',
+    accessorKey: 'published_date',
+    header: 'Published Date',
+    headerClassName: 'w-[120px]',
   },
 
   {
     accessorKey: 'pdf',
     header: 'Action',
-    cell: (pdf) => <PdfDownloadButton pdf={pdf} />,
+    cell: (value) => {
+      return <PdfDownloadButton pdf={value} />;
+    },
+    headerClassName: 'w-[100px]',
   },
 ];
 
-const Content = () => {
+const StdForWorks = () => {
   return (
-    <div className='space-y-8'>
-      <div className='flex justify-center'>
+    <div id='std-for-works' className='space-y-8'>
+      <div className='flex justify-between items-center'>
+        <h2 className='text-2xl font-semibold text-primary'>
+          Standard Tender Documents (STD) for Works
+        </h2>
         <Input
           type='search'
-          placeholder='Search for job title, faculty, category, location'
+          placeholder='e.g. Code, Type, Title'
           className='w-[400px]'
         />
       </div>
 
-      <SystemTable data={jobsOpening} columns={columns} />
+      <SystemTable data={data} columns={columns} />
 
       <div className='flex justify-center'>
         <Pagination>
@@ -96,4 +105,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default StdForWorks;

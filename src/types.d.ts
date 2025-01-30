@@ -43,13 +43,6 @@ export type IAdmissionRequirement = {
   content: string | React.ReactNode;
 };
 
-export type IOffice = {
-  title: string;
-  href: string;
-  image: string;
-  content: string | React.ReactNode;
-};
-
 export type IAuthority = {
   title: string;
   href: string;
@@ -165,4 +158,37 @@ export type IProgram = {
   remarks: null;
   updated_at: null;
   uuid: string;
+};
+
+export type IOffice = {
+  id: string;
+  uuid: string;
+  category: string;
+  created_at: Date;
+  created_by: string;
+  remarks: null;
+  updated_at: null;
+};
+
+export type ITender = {
+  code: string;
+  type: string;
+  title: string;
+  published_date: string;
+  pdf: string;
+};
+export type IPolicy = {
+  name: string;
+  department: string;
+  published_date: string;
+  pdf: string;
+};
+
+export type ICareer = {
+  title: string;
+  faculty: string;
+  category: string;
+  location: string;
+  deadline: string;
+  pdf: string;
 };

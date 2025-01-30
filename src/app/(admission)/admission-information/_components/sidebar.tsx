@@ -1,5 +1,6 @@
 'use client';
 
+import StickySidebar from '@/components/sticky-sidebar';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -31,19 +32,22 @@ const data = [
 
 const Sidebar = () => {
   const pathName = usePathname();
+
   return (
-    <div className='space-y-2'>
-      {data.map((item, index) => (
-        <Link className='block' key={index} href={`${pathName}#${item.id}`}>
-          <Button
-            variant={'default'}
-            className='w-full  justify-start rounded-none'
-          >
-            {item.title}
-          </Button>
-        </Link>
-      ))}
-    </div>
+    <StickySidebar>
+      <div className='space-y-2'>
+        {data.map((item, index) => (
+          <Link className='block' key={index} href={`${pathName}#${item.id}`}>
+            <Button
+              variant={'default'}
+              className='w-full  justify-start rounded-none'
+            >
+              {item.title}
+            </Button>
+          </Link>
+        ))}
+      </div>
+    </StickySidebar>
   );
 };
 
