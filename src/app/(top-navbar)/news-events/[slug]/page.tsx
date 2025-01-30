@@ -1,11 +1,12 @@
+import { formatDate } from 'date-fns';
+
 import LatestPosts from '@/components/latest-posts';
 import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
 import { Separator } from '@/components/ui/separator';
 import AlbumSlider from '@/components/album-slider';
 import PdfViewer from '@/components/pdf-viewer';
-import { INewsPortal } from '@/types';
-import { formatDate } from 'date-fns';
+import { getNewsById } from '@/server/getNewsEvents';
 
 export default async function Page({
   params,
@@ -13,11 +14,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
-
-  const res = await fetch(
-    `http://103.147.163.46:4030/news/news-portal/${slug}`
-  );
-  const data = (await res.json()).data as INewsPortal;
+  const data = await getNewsById(slug);
 
   return (
     <div>

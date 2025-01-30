@@ -10,7 +10,7 @@ const ListOfOffices = () => {
   const pathName = usePathname();
 
   return (
-    <aside>
+    <aside className='min-w-[300px]'>
       <div className='border-l-4 border-primary pl-5 py-3 bg-primary/10'>
         <h4 className='text-2xl font-semibold text-primary'>List of Offices</h4>
       </div>

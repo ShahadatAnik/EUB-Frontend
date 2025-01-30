@@ -3,9 +3,18 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import Undergraduate from './undergraduate';
-import Graduate from './graduate';
+import { ICertificateFee, ITuitionFee } from '@/types';
+import TuitionFeesTable from './tuition-fees-table';
 
-const Content = () => {
+interface Props {
+  initialData: {
+    undergraduateTuitionFees: ITuitionFee[];
+    graduateTuitionFees: ITuitionFee[];
+    certificateTuitionFees: ICertificateFee[];
+  };
+}
+
+const Content: React.FC<Props> = ({ initialData }) => {
   return (
     <div className='space-y-12'>
       <Tabs defaultValue='undergraduate' className='w-full '>
@@ -14,10 +23,13 @@ const Content = () => {
           <TabsTrigger value='graduate'>Graduate</TabsTrigger>
         </TabsList>
         <TabsContent className='mt-8' value='undergraduate'>
-          <Undergraduate />
+          <Undergraduate
+            undergraduateFeesData={initialData.undergraduateTuitionFees}
+            certificateFeesData={initialData.certificateTuitionFees}
+          />
         </TabsContent>
         <TabsContent className='mt-8' value='graduate'>
-          <Graduate />
+          <TuitionFeesTable isGraduate data={initialData.graduateTuitionFees} />
         </TabsContent>
       </Tabs>
     </div>

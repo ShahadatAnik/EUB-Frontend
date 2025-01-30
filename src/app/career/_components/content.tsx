@@ -12,8 +12,6 @@ import {
 
 import { Input } from '@/components/ui/input';
 
-import { jobsOpening } from '../_const/data';
-
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
@@ -44,6 +42,7 @@ const columns: SystemTableColumn<ICareer>[] = [
   {
     accessorKey: 'deadline',
     header: 'Deadline',
+    type: 'date',
   },
 
   {
@@ -53,7 +52,7 @@ const columns: SystemTableColumn<ICareer>[] = [
   },
 ];
 
-const Content = () => {
+const Content: React.FC<{ initialData: ICareer[] }> = ({ initialData }) => {
   return (
     <div className='space-y-8'>
       <div className='flex justify-center'>
@@ -64,7 +63,7 @@ const Content = () => {
         />
       </div>
 
-      <SystemTable data={jobsOpening} columns={columns} />
+      <SystemTable data={initialData} columns={columns} />
 
       <div className='flex justify-center'>
         <Pagination>
