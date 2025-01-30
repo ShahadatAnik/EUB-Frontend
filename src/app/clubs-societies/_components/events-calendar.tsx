@@ -6,9 +6,11 @@ import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
 import Link from 'next/link';
+import { IDataTable } from '@/types';
+import { formatDate } from '@/lib/utils';
 
 const EventsCalendar = () => {
-  const columns: SystemTableColumn[] = [
+  const columns: SystemTableColumn<IDataTable>[] = [
     {
       accessorKey: 'description',
       cell: (value) => (
@@ -19,7 +21,7 @@ const EventsCalendar = () => {
     },
     {
       accessorKey: 'updated_at',
-      cell: (value) => value,
+      cell: (value, row) => formatDate(value || row.created_at),
     },
   ];
 

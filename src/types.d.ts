@@ -145,7 +145,7 @@ export type IPublication = {
   content: string | React.ReactNode;
 };
 
-export type IAcademicCalendar = {
+export type IDataTable = {
   uuid: string;
   description: string;
   page_name: string;
@@ -154,4 +154,15 @@ export type IAcademicCalendar = {
   updated_at: Date;
   created_by: string;
   remarks: string;
+};
+
+export type IProgram = {
+  category: string;
+  created_at: Date;
+  created_by: string;
+  id: string;
+  name: string;
+  remarks: null;
+  updated_at: null;
+  uuid: string;
 };

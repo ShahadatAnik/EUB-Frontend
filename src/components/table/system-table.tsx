@@ -60,7 +60,7 @@ function SystemTable<T>({ columns, data, caption, className }: IProps<T>) {
                 )}
               >
                 {column.cell
-                  ? column.cell(item[column.accessorKey] as string, data as T)
+                  ? column.cell(item[column.accessorKey] as string, item as T)
                   : item[column.accessorKey]}
               </TableCell>
             ))}
