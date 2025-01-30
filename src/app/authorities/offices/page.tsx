@@ -12,6 +12,11 @@ export const metadata = generateMetaData({
 
 export default async function Page() {
   const data = await getOffices();
+
+  console.log({
+    data,
+  });
+
   return (
     <>
       <PageHeader title='Offices' />

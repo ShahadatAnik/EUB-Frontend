@@ -1,78 +1,62 @@
 import React from 'react';
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 import { ITuitionFee } from '@/types';
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/system-table';
 
 const TuitionFeesTable: React.FC<{
   data: ITuitionFee[];
   isGraduate?: boolean;
 }> = ({ data, isGraduate }) => {
-  return (
-    <Table className='border'>
-      <TableHeader>
-        <TableRow className='bg-primary hover:bg-primary'>
-          <TableHead className='text-white py-4 border-r'>
-            Program/Degree{' '}
-          </TableHead>
-          <TableHead className='text-white py-4 border-r'>
-            Admission Fee{' '}
-          </TableHead>
-          <TableHead className='text-white py-4 border-r'>
-            Tuition Fee Per Credit
-          </TableHead>
-          <TableHead className='text-white py-4 border-r'>
-            Student Activities Fee/Semester{' '}
-          </TableHead>
-          <TableHead className='text-white py-4 border-r'>
-            Library Fee /Semester
-          </TableHead>
-          <TableHead className='text-white py-4 border-r'>
-            Computer Lab Fee/Semester
-          </TableHead>
-          {!isGraduate && (
-            <>
-              <TableHead className='text-white py-4 border-r'>
-                Science Lab Fee/Semester
-              </TableHead>
-              <TableHead className='text-white py-4 '>Studio Lab Fee</TableHead>
-            </>
-          )}
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {data.map((item, index) => (
-          <TableRow key={index}>
-            <TableCell className='border-r'>{item.program}</TableCell>
-            <TableCell className='border-r'>{item.admission_fee}</TableCell>
-            <TableCell className='border-r'>
-              {item.tuition_fee_per_credit}
-            </TableCell>
-            <TableCell className='border-r'>
-              {item.student_activities_fee}
-            </TableCell>
-            <TableCell className='border-r'>{item.library_fee}</TableCell>
-            <TableCell className='border-r'>{item.computer_lab_fee}</TableCell>
+  const columns: SystemTableColumn<ITuitionFee>[] = [
+    {
+      accessorKey: 'program_name',
+      header: 'Program / Degree',
+    },
+    {
+      accessorKey: 'admission_fee',
+      header: 'Admission Fee',
+      type: 'currency',
+    },
+    {
+      accessorKey: 'tuition_fee_per_credit',
+      header: 'Tuition Fee per credit',
+      type: 'currency',
+    },
+    {
+      accessorKey: 'student_activity_fee',
+      header: 'Student Activity Fee / Semester',
+      type: 'currency',
+    },
+    {
+      accessorKey: 'library_fee_per_semester',
+      header: 'Library Fee / Semester',
+      type: 'currency',
+    },
+    {
+      accessorKey: 'computer_lab_fee_per_semester',
+      header: 'Computer Lab Fee / Semester',
+      type: 'currency',
+    },
+  ];
 
-            {!isGraduate && (
-              <>
-                <TableCell className='border-r'>
-                  {item.science_lab_fee}
-                </TableCell>
-                <TableCell>{item.studio_lab_fee}</TableCell>
-              </>
-            )}
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-  );
+  if (!isGraduate) {
+    columns.push(
+      {
+        accessorKey: 'science_lab_fee_per_semester',
+        header: 'Science Lab Fee / Semester',
+        type: 'currency',
+      },
+      {
+        accessorKey: 'studio_lab_fee',
+        header: 'Studio Lab Fee / Semester',
+        type: 'currency',
+      }
+    );
+  }
+
+  return <SystemTable data={data} columns={columns} />;
 };
 
 export default TuitionFeesTable;

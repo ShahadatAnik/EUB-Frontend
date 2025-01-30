@@ -20,7 +20,7 @@ import { formatDate } from 'date-fns';
 const NewsCard: React.FC<{ item: INewsPortal }> = ({ item }) => {
   return (
     <Card className=' overflow-hidden '>
-      <CardHeader className='p-0 h-[200px]  relative'>
+      <CardHeader className='p-0 h-[200px] relative'>
         <Image
           className='w-full h-[200px] object-cover'
           src={item?.cover_image || '/images/news-portal/1.jpg'}

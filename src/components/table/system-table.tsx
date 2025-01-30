@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 
+import { NumericFormat } from 'react-number-format';
+
 import {
   Table,
   TableCaption,
@@ -11,6 +13,9 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { cn } from '@/lib/utils';
+import { format } from 'date-fns';
+
+type CellType = 'string' | 'number' | 'date' | 'currency' | 'default';
 
 export type SystemTableColumn<T> = {
   accessorKey?: keyof T;
@@ -22,6 +27,7 @@ export type SystemTableColumn<T> = {
     index: number
   ) => string | number | React.ReactNode;
   cellClassName?: string;
+  type?: CellType;
 };
 
 interface IProps<T> {
@@ -42,8 +48,7 @@ function SystemTable<T>({ columns, data, caption, className }: IProps<T>) {
             <TableHead
               key={index}
               className={cn(
-                'text-white capitalize font-medium',
-                index !== data.length && 'border-r',
+                'text-white capitalize font-medium min-h-10 py-3 border-r last:border-r-0',
                 columns[index].headerClassName
               )}
             >
@@ -60,13 +65,18 @@ function SystemTable<T>({ columns, data, caption, className }: IProps<T>) {
                 key={index}
                 className={cn('border-r last:border-r-0', column.cellClassName)}
               >
-                {column.cell
-                  ? column.cell(
-                      item[column.accessorKey] as string,
-                      item as T as any,
-                      rowIndex
-                    )
-                  : item[column.accessorKey]}
+                {column.cell ? (
+                  column.cell(
+                    item[column.accessorKey] as string,
+                    item as T as any,
+                    rowIndex
+                  )
+                ) : (
+                  <RenderCell
+                    value={item[column.accessorKey]}
+                    type={column.type}
+                  />
+                )}
               </TableCell>
             ))}
           </TableRow>
@@ -77,3 +87,34 @@ function SystemTable<T>({ columns, data, caption, className }: IProps<T>) {
 }
 
 export default SystemTable;
+
+const RenderCell = ({
+  value,
+  type = 'default',
+}: {
+  value: string | number | Date | React.ReactNode;
+  type?: CellType;
+}) => {
+  switch (type) {
+    case 'string':
+      return <>{value?.toString()}</>;
+    case 'number':
+      return <>{Number(value).toFixed(2)}</>;
+    case 'date':
+      return <>{format(new Date(value as string), 'dd/MM/yy')}</>;
+    case 'currency':
+      return (
+        <NumericFormat
+          readOnly
+          disabled
+          decimalScale={2}
+          className='bg-transparent block w-full'
+          value={value as number}
+          allowLeadingZeros
+          thousandSeparator=','
+        />
+      );
+    default:
+      return <>{value as React.ReactNode}</>;
+  }
+};

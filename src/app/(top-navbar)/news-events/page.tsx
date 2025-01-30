@@ -14,10 +14,10 @@ import PageContainer from '@/components/page-container';
 
 import { INewsPortal } from '@/types';
 import NewsCard from '@/app/(top-navbar)/news-events/_components/news-card';
+import { getNewsEvents } from '@/server/getNewsEvents';
 
 export default async function Page() {
-  const res = await fetch('http://103.147.163.46:4030/news/news-portal');
-  const data = (await res.json()).data as INewsPortal[];
+  const data = await getNewsEvents();
 
   return (
     <div>

@@ -2,8 +2,11 @@ import PageHeader from '@/components/page-header';
 import React from 'react';
 import PageContainer from '@/components/page-container';
 import Content from './_components/content';
+import { getJobCirculars } from '@/server/getJobCirculars';
 
-const Page = () => {
+export default async function Page() {
+  const data = await getJobCirculars();
+
   return (
     <>
       <PageHeader
@@ -12,10 +15,8 @@ const Page = () => {
       />
 
       <PageContainer>
-        <Content />
+        <Content initialData={data} />
       </PageContainer>
     </>
   );
-};
-
-export default Page;
+}

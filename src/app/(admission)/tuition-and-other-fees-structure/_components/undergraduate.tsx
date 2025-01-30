@@ -1,6 +1,6 @@
 import React from 'react';
 import TuitionFeesTable from './tuition-fees-table';
-import { courses, undergraduateFeesData, accordions } from '../_const/data';
+import { accordions } from '../_const/data';
 
 import {
   Accordion,
@@ -9,16 +9,14 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
+import { ICertificateFee, ITuitionFee } from '@/types';
 
-const Undergraduate = () => {
+import CertificateFeesTable from './certificate-fees-table';
+
+const Undergraduate: React.FC<{
+  undergraduateFeesData: ITuitionFee[];
+  certificateFeesData: ICertificateFee[];
+}> = ({ undergraduateFeesData, certificateFeesData }) => {
   return (
     <div>
       <TuitionFeesTable data={undergraduateFeesData} />
@@ -33,28 +31,7 @@ const Undergraduate = () => {
         <br />
         <p>Fees for other certificate courses:</p>
 
-        <Table className='mt-2 border'>
-          <TableHeader>
-            <TableRow className='bg-primary hover:bg-primary'>
-              <TableHead className='text-white border-r'>Sl No</TableHead>
-              <TableHead className='text-white border-r'>
-                Name of the Courses
-              </TableHead>
-              <TableHead className='text-white '>
-                Fees Per Course (in BDT)
-              </TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {courses.map((course, index) => (
-              <TableRow key={index}>
-                <TableCell className='border-r'>{index + 1}</TableCell>
-                <TableCell className='border-r'>{course.name}</TableCell>
-                <TableCell>{course.fees}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+        <CertificateFeesTable data={certificateFeesData} />
 
         <br />
 
