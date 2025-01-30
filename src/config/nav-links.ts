@@ -293,6 +293,14 @@ export const navLinks: INavLink[] = [
         title: 'Career',
         href: '/career',
       },
+      {
+        title: 'Tender',
+        href: '/tender',
+      },
+      {
+        title: 'Policy Hub',
+        href: '/policy-hub',
+      },
     ],
   },
 ];

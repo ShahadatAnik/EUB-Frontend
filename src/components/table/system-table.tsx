@@ -13,10 +13,14 @@ import {
 import { cn } from '@/lib/utils';
 
 export type SystemTableColumn<T> = {
-  accessorKey: string;
+  accessorKey?: keyof T;
   header?: string;
   headerClassName?: string;
-  cell?: (value: string, row: T) => string | React.ReactNode;
+  cell?: (
+    value: string,
+    row: T,
+    index: number
+  ) => string | number | React.ReactNode;
   cellClassName?: string;
 };
 
@@ -43,24 +47,25 @@ function SystemTable<T>({ columns, data, caption, className }: IProps<T>) {
                 columns[index].headerClassName
               )}
             >
-              {header.replace(/_/g, ' ')}
+              {String(header).replace(/_/g, ' ')}
             </TableHead>
           ))}
         </TableRow>
       </TableHeader>
       <TableBody>
-        {data.map((item: any, index: number) => (
-          <TableRow key={index}>
+        {data.map((item: any, rowIndex: number) => (
+          <TableRow key={rowIndex}>
             {columns.map((column, index) => (
               <TableCell
                 key={index}
-                className={cn(
-                  index !== data.length && 'border-r',
-                  column.cellClassName
-                )}
+                className={cn('border-r last:border-r-0', column.cellClassName)}
               >
                 {column.cell
-                  ? column.cell(item[column.accessorKey] as string, item as T)
+                  ? column.cell(
+                      item[column.accessorKey] as string,
+                      item as T as any,
+                      rowIndex
+                    )
                   : item[column.accessorKey]}
               </TableCell>
             ))}

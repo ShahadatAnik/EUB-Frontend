@@ -1,9 +1,15 @@
+'use client';
+
 import React from 'react';
-import data from '../_const/offices-data';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Content = () => {
+import { IOffice } from '@/types';
+import { useOffices } from '../_const/query';
+
+const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
+  const { data } = useOffices({ initialData });
+
   return (
     <div className='py-6 lg:py-12'>
       <div className='container'>
@@ -34,9 +40,9 @@ const Content = () => {
               <div className=' flex-1 px-6 py-4 border-t flex items-center  '>
                 <Link
                   className=' text-lg text-primary font-medium hover:underline'
-                  href={item.href}
+                  href={`/authorities/offices/${item.category}`}
                 >
-                  {item.title}
+                  {item.category}
                 </Link>
               </div>
             </div>
