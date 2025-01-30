@@ -1,74 +1,76 @@
-import React from 'react';
-import Image from 'next/image';
+import { IAuthoritiesChancellor } from "@/types/authorities";
+import Image from "next/image";
+import React from "react";
 
-const Content = () => {
-  return (
-    <>
-      <div className='flex'>
-        <div className='h-[400px] aspect-square relative'>
-          <Image fill src='/placeholder.svg' alt='placeholder' />
-        </div>
+const Content: React.FC<{ data: IAuthoritiesChancellor }> = ({ data }) => {
 
-        <div className='flex-1 p-8 '>
-          <h4 className='text-2xl font-semibold'>Director</h4>
-          <p className='mt-2 text-muted-foreground'>
-            Prof. Dr. Md. Arifur Rahman
-          </p>
+	return (
+		<div className="space-y-8">
+			<div className="flex">
+				<div className="h-[400px] aspect-square relative">
+					<Image
+						fill
+						src={data.personal_info.profile_image}
+						alt={`${data.personal_info.name}'s profile picture`}
+					/>
+				</div>
 
-          <p className='mt-2 text-muted-foreground'>
-            Master of Arts in Diplomacy and Administration of International
-            Organizations, University of Paris, France (1994)
-          </p>
-          <p className='mt-2 text-muted-foreground'>
-            MBBS, Rajshahi Medical College, Rajshahi, Bangladesh (1985)
-          </p>
+				<div className="flex-1 p-8">
+					<h4 className="text-2xl font-semibold">
+						{data.personal_info.title}
+					</h4>
+					<p className="mt-2 text-muted-foreground">
+						{data.personal_info.name}
+					</p>
 
-          <ul className='mt-4 space-y-1'>
-            <li>
-              <span className='font-semibold'>Email :</span>{' '}
-              <span className='text-muted-foreground'>arifur.rahman@eub.</span>
-            </li>
-            <li>
-              <span className='font-semibold'>Phone :</span>{' '}
-              <span className='text-muted-foreground'>+880 2 555 5555</span>
-            </li>
+					{data.education.map((degree, index) => (
+						<p key={index} className="mt-2 text-muted-foreground">
+							{degree}
+						</p>
+					))}
 
-            <li>
-              <span className='font-semibold'>Office :</span>{' '}
-              <span className='text-muted-foreground'>
-                2/4 Gabtoli, Mirpur, Dhaka-1216, Bangladesh
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
+					<ul className="mt-4 space-y-1">
+						<li>
+							<span className="font-semibold">Email :</span>{" "}
+							<span className="text-muted-foreground">
+								{data.contact.email}
+							</span>
+						</li>
+						<li>
+							<span className="font-semibold">Phone :</span>{" "}
+							<span className="text-muted-foreground">
+								{data.contact.phone}
+							</span>
+						</li>
+						<li>
+							<span className="font-semibold">Office :</span>{" "}
+							<span className="text-muted-foreground">
+								2/4 Gabtoli, Mirpur, Dhaka-1216, Bangladesh
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-      <div>
-        <h4 className='text-2xl font-semibold'>Short Biography</h4>
-        <p className='mt-1'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint unde rem
-          libero a quibusdam veritatis eveniet minus optio. Officiis voluptates,
-          dolores sunt est dolorem dolore nemo quas nobis impedit enim ipsa rem
-          quia. Cupiditate magni voluptatem ratione repudiandae corporis,
-          mollitia iusto tenetur quia. Aspernatur, consequuntur repudiandae! Est
-          sequi alias vel! Consectetur accusantium, delectus temporibus facilis
-          dolorem laboriosam,
-        </p>
-      </div>
-      <div>
-        <h4 className='text-2xl font-semibold'>Office Contact</h4>
-        <p className='mt-1'>
-          <span>European University of Bangladesh</span>
-          <br />
-          <span>2/4 Gabtoli, Mirpur, Dhaka-1216, Bangladesh</span>\
-          <br />
-          <span>Phone: +88 09604-848-848</span>
-          <br />
-          <span>su@uiu.ac.bd</span>
-        </p>
-      </div>
-    </>
-  );
+			<div>
+				<h4 className="text-2xl font-semibold">Short Biography</h4>
+				<p className="mt-1">{data.biography}</p>
+			</div>
+
+			<div>
+				<h4 className="text-2xl font-semibold">Office Contact</h4>
+				<p className="mt-1">
+					<span>European University of Bangladesh</span>
+					<br />
+					<span>2/4 Gabtoli, Mirpur, Dhaka-1216, Bangladesh</span>
+					<br />
+					<span>Phone: +88 09604-848-848</span>
+					<br />
+					<span>su@uiu.ac.bd</span>
+				</p>
+			</div>
+		</div>
+	);
 };
 
 export default Content;

@@ -1,15 +1,16 @@
-import React from 'react';
-import Content from './_components/content';
+import React from "react";
+import Content from "./_components/content";
 
-import { generateMetaData } from '@/lib/utils';
-
+import { generateMetaData } from "@/lib/utils";
+import { getAuthoritiesTreasurer } from "@/server/get-authorities";
 export const metadata = generateMetaData({
-  title: 'Treasurer',
-  description: 'The treasurer of the European University of Bangladesh',
+	title: "Dean",
+	description: "The dean of the European University of Bangladesh",
 });
 
-const Page = () => {
-  return <Content />;
+const Page = async () => {
+	const data = await getAuthoritiesTreasurer();
+	return <Content data={data[0]} />;
 };
 
 export default Page;
