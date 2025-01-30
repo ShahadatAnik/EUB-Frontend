@@ -7,33 +7,30 @@ import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
 
-const columns: SystemTableColumn[] = [
+import { IDataTable } from '@/types';
+import { formatDate } from '@/lib/utils';
+import { useExaminationGuidelines } from '../_const/query';
+
+const columns: SystemTableColumn<IDataTable>[] = [
   {
     accessorKey: 'description',
-    cell: (value) => (
-      <Link className='underline text-primary font-medium' href={value}>
-        Test Pdf
-      </Link>
-    ),
+    cell: (value, row) => {
+      return (
+        <Link className='underline text-primary font-medium' href={row.file}>
+          {value}
+        </Link>
+      );
+    },
   },
   {
     accessorKey: 'updated_at',
-    cell: (value) => value,
+    cell: (value, row) => formatDate(value || row.created_at),
   },
 ];
 
-const data = [
-  {
-    description: '/pdf/test.pdf',
-    updated_at: '2021-09-01',
-  },
-  {
-    description: '/pdf/test.pdf',
-    updated_at: '2021-09-01',
-  },
-];
+const Content: React.FC<{ initialData: IDataTable[] }> = ({ initialData }) => {
+  const { data } = useExaminationGuidelines({ initialData });
 
-const Content = () => {
   return <SystemTable data={data} columns={columns} />;
 };
 

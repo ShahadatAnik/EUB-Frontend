@@ -10,7 +10,10 @@ import data from '../_const/offices-data';
 
 const Page = () => {
   const pathName = usePathname();
-  const title = data.find((item) => item.href === pathName)?.title;
+  const title = data.find(
+    (item) => `/authorities/offices/${item.category}` === pathName
+  )?.title;
+
   return (
     <>
       <PageHeader title={title || 'Office Details'} />

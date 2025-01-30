@@ -13,7 +13,7 @@ export default async function Page() {
     <>
       <PageHeader title='Academic Calendar' />
       <PageContainer>
-        <Content data={data} />
+        <Content initialData={data} />
       </PageContainer>
     </>
   );

@@ -1,18 +1,19 @@
-import PageHeader from '@/components/page-header';
 import React from 'react';
+
+import { getInformationProvisionalCertificates } from '@/server/getInformationProvisionalCertificates';
+
+import PageHeader from '@/components/page-header';
 import PageContainer from '@/components/page-container';
 import Content from './_components/content';
 
-const Page = () => {
+export default async function Page() {
+  const data = await getInformationProvisionalCertificates();
   return (
     <>
       <PageHeader title='Information about Provisional Certificates' />
-
       <PageContainer>
-        <Content />
+        <Content data={data} />
       </PageContainer>
     </>
   );
-};
-
-export default Page;
+}

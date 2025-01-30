@@ -13,12 +13,14 @@ import {
 import { Input } from '@/components/ui/input';
 
 import { jobsOpening } from '../_const/data';
-import { Button } from '@/components/ui/button';
+
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
+import { ICareer } from '@/types';
+import PdfDownloadButton from '@/components/pdf-download-btn';
 
-const columns: SystemTableColumn[] = [
+const columns: SystemTableColumn<ICareer>[] = [
   {
     accessorKey: 'title',
     header: 'Job Title',
@@ -45,11 +47,9 @@ const columns: SystemTableColumn[] = [
   },
 
   {
-    accessorKey: 'action',
+    accessorKey: 'pdf',
     header: 'Action',
-    cell: () => {
-      return <Button size={'sm'}>View Details</Button>;
-    },
+    cell: (pdf) => <PdfDownloadButton pdf={pdf} />,
   },
 ];
 

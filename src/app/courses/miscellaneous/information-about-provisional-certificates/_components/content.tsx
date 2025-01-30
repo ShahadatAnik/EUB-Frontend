@@ -6,34 +6,25 @@ import Link from 'next/link';
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
+import { IDataTable } from '@/types';
+import { formatDate } from '@/lib/utils';
 
-const columns: SystemTableColumn[] = [
+const columns: SystemTableColumn<IDataTable>[] = [
   {
     accessorKey: 'description',
-    cell: (value) => (
-      <Link className='underline text-primary font-medium' href={value}>
-        Test Pdf
+    cell: (value, row) => (
+      <Link className='underline text-primary font-medium' href={row.file}>
+        {value}
       </Link>
     ),
   },
   {
     accessorKey: 'updated_at',
-    cell: (value) => value,
+    cell: (value, row) => formatDate(value || row.created_at),
   },
 ];
 
-const data = [
-  {
-    description: '/pdf/test.pdf',
-    updated_at: '2021-09-01',
-  },
-  {
-    description: '/pdf/test.pdf',
-    updated_at: '2021-09-01',
-  },
-];
-
-const Content = () => {
+const Content: React.FC<{ data: IDataTable[] }> = ({ data }) => {
   return <SystemTable data={data} columns={columns} />;
 };
 
