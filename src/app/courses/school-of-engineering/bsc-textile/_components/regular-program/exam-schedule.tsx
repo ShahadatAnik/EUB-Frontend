@@ -13,7 +13,7 @@ const data = [
   },
 ];
 
-const columns: SystemTableColumn[] = [
+const columns: SystemTableColumn<any>[] = [
   {
     accessorKey: 'description',
     header: 'Description',

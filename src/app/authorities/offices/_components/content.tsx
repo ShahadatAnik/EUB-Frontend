@@ -10,12 +10,6 @@ import { useOffices } from '../_const/query';
 const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
   const { data } = useOffices({ initialData });
 
-  console.log({
-    data,
-  });
-
-  return <>Hello</>;
-
   return (
     <div className='py-6 lg:py-12'>
       <div className='container'>
@@ -46,7 +40,7 @@ const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
               <div className=' flex-1 px-6 py-4 border-t flex items-center  '>
                 <Link
                   className=' text-lg text-primary font-medium hover:underline'
-                  href={item.href}
+                  href={`/authorities/offices/${item.category}`}
                 >
                   {item.category}
                 </Link>

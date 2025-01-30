@@ -20,11 +20,12 @@ const ListOfOffices = () => {
             <Link
               className={cn(
                 'hover:underline text-lg',
-                pathName === item.href && 'text-primary underline font-medium'
+                pathName === item.category &&
+                  'text-primary underline font-medium'
               )}
-              href={item.href}
+              href={`/authorities/offices/${item.category}`}
             >
-              {item.title}
+              {item.category}
             </Link>
           </li>
         ))}

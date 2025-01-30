@@ -163,7 +163,9 @@ export type IProgram = {
 export type IOffice = {
   id: string;
   uuid: string;
+  title: string;
   category: string;
+  image: string;
   created_at: Date;
   created_by: string;
   remarks: null;

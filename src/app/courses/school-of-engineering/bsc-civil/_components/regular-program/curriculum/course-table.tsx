@@ -8,7 +8,7 @@ const CourseTable: React.FC<{
   data: { code: string; title: string; credit: string }[];
   title: string;
 }> = ({ data, title }) => {
-  const columns: SystemTableColumn[] = [
+  const columns: SystemTableColumn<any>[] = [
     {
       accessorKey: 'code',
       header: 'Course Code',
