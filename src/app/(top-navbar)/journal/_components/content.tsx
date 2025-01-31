@@ -40,7 +40,7 @@ const Content = () => {
   return (
     <div className='space-y-8'>
       <div>
-        <Title title='EUB Business Review' className='text-2xl' />
+        <Title title='EUB Journal' className='text-2xl' />
         <div className='pl-4 text-base   flex flex-col space-y-2'>
           <Link href={'#'} className='underline text-primary'>
             Copy Right Agreement

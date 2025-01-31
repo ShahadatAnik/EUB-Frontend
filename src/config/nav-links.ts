@@ -196,8 +196,16 @@ export const navLinks: INavLink[] = [
         href: '/authorities/academic-council',
       },
       {
+        title: 'Academic Council (Demo)',
+        href: '/authorities/academic-council-demo',
+      },
+      {
         title: 'Vice Chancellor',
         href: '/authorities/vice-chancellor',
+      },
+      {
+        title: 'Vice Chancellor (Demo)',
+        href: '/authorities/vice-chancellor-demo',
       },
       {
         title: 'Pro Vice Chancellor',

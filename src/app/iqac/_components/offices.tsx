@@ -1,12 +1,12 @@
 import React from 'react';
-import data from '../_const/faculty-members-data';
+import data from '../_const/office-members';
 import Image from 'next/image';
 import { Mail, Phone } from 'lucide-react';
 import ContentWrapper from './content-wrapper';
 
-const CoreFacultyMembers = () => {
+const Offices = () => {
   return (
-    <ContentWrapper title='Core Faculty Members & Staff ' className='space-y-4'>
+    <ContentWrapper title='Office of the IQAC' className='space-y-4'>
       <div className='flex border rounded-md overflow-hidden'>
         <div className=''>
           <Image
@@ -74,4 +74,4 @@ const CoreFacultyMembers = () => {
   );
 };
 
-export default CoreFacultyMembers;
+export default Offices;

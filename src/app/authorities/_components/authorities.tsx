@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 import { navLinks } from '@/config/nav-links';
+import StickySidebar from '@/components/sticky-sidebar';
 
 const Authorities = () => {
   const pathName = usePathname();
@@ -14,7 +15,7 @@ const Authorities = () => {
   const links = navLinks.find((item) => item.title === 'Authorities');
 
   return (
-    <aside className='w-[300px]'>
+    <StickySidebar containerClassName='lg:pt-0'>
       <div className='border-l-4 border-primary pl-5 py-3 bg-primary/10'>
         <h4 className='text-2xl font-semibold text-primary'>Authorities</h4>
       </div>
@@ -37,7 +38,7 @@ const Authorities = () => {
           ))}
         </ul>
       )}
-    </aside>
+    </StickySidebar>
   );
 };
 
