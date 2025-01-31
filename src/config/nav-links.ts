@@ -223,6 +223,10 @@ export const navLinks: INavLink[] = [
         title: 'Offices',
         href: '/authorities/offices',
       },
+      {
+        title: 'Offices (Demo)',
+        href: '/authorities/offices-demo',
+      },
     ],
   },
 

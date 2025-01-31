@@ -195,6 +195,12 @@ export type IOffice = {
   remarks: null;
   updated_at: null;
 };
+export type IOfficeDummy = {
+  title: string;
+  href: string;
+  image: string;
+  content: string | React.ReactNode;
+};
 
 export type ITender = {
   code: string;
