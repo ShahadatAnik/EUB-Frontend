@@ -40,16 +40,19 @@ const Content = () => {
   return (
     <div className='space-y-8'>
       <div>
-        <Title title='NSBR' className='text-2xl' />
+        <Title title='EUB Business Review' className='text-2xl' />
         <div className='pl-4 text-base   flex flex-col space-y-2'>
           <Link href={'#'} className='underline text-primary'>
-            NSBR Copy Right Agreement
+            Copy Right Agreement
           </Link>
           <Link href={'#'} className='underline text-primary'>
-            NSBR Administration, Policy, and Guideline
+            Administration, Policy, and Guideline
           </Link>
           <Link href={'#'} className='underline text-primary'>
-            NSBR Publication Ethics and Malpractices Statement for NSBR
+            Publication Ethics and Malpractices Statement
+          </Link>
+          <Link href={'#'} className='underline text-primary'>
+            Templates
           </Link>
         </div>
       </div>

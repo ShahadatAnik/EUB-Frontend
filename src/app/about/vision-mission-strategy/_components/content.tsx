@@ -8,86 +8,133 @@ const Content = () => {
         <div>
           <Title title='Vision' />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi
-            quaerat ad commodi velit perferendis maiores amet magnam quibusdam
-            ea facilis quo nostrum, pariatur excepturi rerum dolore accusamus
-            odio distinctio earum corporis sed eius a doloribus similique?
-            Nesciunt sit perspiciatis qui sint sequi excepturi, tenetur
-            reprehenderit aliquam maiores asperiores fuga temporibus illo
-            aliquid numquam ea earum! Cupiditate quibusdam numquam soluta quasi
-            magnam aperiam voluptas necessitatibus iusto delectus et quis itaque
-            iste vero ea sapiente, tempora temporibus ipsam blanditiis ipsum
-            labore dolores accusantium. Ut illo recusandae necessitatibus
-            repellat est quis, vitae autem voluptatibus sapiente sed voluptas
-            nisi corporis suscipit tempora quae.
+            To become a transformative center of excellence that nurtures
+            innovation, equity, and global relevance, empowering students to
+            drive sustainable development, address local challenges, and
+            contribute meaningfully to the global knowledge economy. We envision
+            fostering a community where access to world-class education is
+            inclusive and affordable, bridging the gap between traditional
+            learning and the demands of a rapidly evolving world.
+            <br />
+            Through cutting-edge research, interdisciplinary collaboration, and
+            a deep commitment to social responsibility, we aim to produce
+            ethically grounded, globally competent leaders and innovators who
+            uplift their communities. By integrating technology,
+            entrepreneurship, and cultural heritage, the university will serve
+            as a catalyst for economic growth, environmental stewardship, and
+            social progress in Bangladesh and beyond.
           </p>
         </div>
         <div>
           <Title title='Mission' />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi
-            quaerat ad commodi velit perferendis maiores amet magnam quibusdam
-            ea facilis quo nostrum, pariatur excepturi rerum dolore accusamus
-            odio distinctio earum corporis sed eius a doloribus similique?
-            Nesciunt sit perspiciatis qui sint sequi excepturi, tenetur
-            reprehenderit aliquam maiores asperiores fuga temporibus illo
-            aliquid numquam ea earum! Cupiditate quibusdam numquam soluta quasi
-            magnam aperiam voluptas necessitatibus iusto delectus et quis itaque
-            iste vero ea sapiente, tempora temporibus ipsam blanditiis ipsum
-            labore dolores accusantium. Ut illo recusandae necessitatibus
-            repellat est quis, vitae autem voluptatibus sapiente sed voluptas
-            nisi corporis suscipit tempora quae.
+            To provide inclusive, affordable, and high-quality education that
+            empowers students to achieve their fullest potential while
+            addressing the unique challenges of a developing nation. We are
+            committed to:
           </p>
-        </div>
-        <div>
-          <Title title='Our students will be:' />
-          <ul className='list-decimal list-inside space-y-0.5'>
-            <li>Life-long learners with good leadership skills</li>
+          <ul className=' mt-2 list-decimal list-inside space-y-1'>
             <li>
-              More proficient in oral, written and electronic communication
+              Delivering a dynamic curriculum that blends global knowledge with
+              local relevance, equipping graduates with the skills and mindset
+              needed for sustainable development.
             </li>
-            <li>Critical thinkers with well-developed analytical skills</li>
-            <li>Ethical and socially responsible</li>
-            <li>Champions of diversity and tolerance</li>
             <li>
-              Globally aware with commitment to social justice and
-              sustainability
+              Fostering a culture of innovation, research, and entrepreneurship
+              to drive economic progress, technological advancement, and
+              societal transformation.
+            </li>
+            <li>
+              Ensuring equitable access to education for students from diverse
+              socio-economic backgrounds, particularly those from underserved
+              communities.
+            </li>
+            <li>
+              Promoting ethical leadership, critical thinking, and community
+              engagement to create socially responsible citizens.
+            </li>
+            <li>
+              Embracing technology and interdisciplinary collaboration to solve
+              pressing local and global challenges, while preserving and
+              celebrating the cultural heritage of Bangladesh.
+            </li>
+            <li>
+              Through these efforts, we aim to become a beacon of hope and
+              progress, producing graduates who are agents of change in their
+              communities and the world.
             </li>
           </ul>
         </div>
-
-        <div>
-          <Title title='The university aims at:' />
-          <ul className='list-decimal list-inside space-y-0.5'>
-            <li>
-              Offering socially relevant academic programs consisting of a
-              substantial general education component in all undergraduate
-              programs
-            </li>
-            <li>
-              Recruiting and retaining good students, well-trained faculty with
-              graduate degrees from overseas and qualified staff
-            </li>
-            <li>Promoting effective teaching, quality research, and service</li>
-            <li>
-              Providing appropriate physical facilities including classroom,
-              labs and library with state of the art educational technology;
-            </li>
-            <li>Supporting co-curricular and extra-curricular activities</li>
-            <li>
-              Practicing good governance and administration that encourage
-              academic freedom and faculty-staff participation and
-            </li>
-            <li>Purposeful engagement of our alumni and community leaders.</li>
-          </ul>
-        </div>
-
-        <div>
-          <small>
-            {' '}
-            - Approved by the Board of Trustees on{' '}
-            <span className='font-semibold'>September 30, 2014</span>
-          </small>
+        <div className='space-y-4'>
+          <Title title='Strategy' />
+          <div>
+            <h4 className='text-lg font-semibold'>
+              Core Values Instilled in EUB Graduates
+            </h4>
+            <ul className=' mt-1 list-decimal list-inside space-y-1'>
+              <li>
+                Treating all individuals equally and without discrimination,
+                while fostering respect, tolerance, and non-violent conflict
+                resolution.
+              </li>
+              <li>
+                Upholding transparency, accountability, and ethical behavior in
+                all personal, social, and professional actions.
+              </li>
+              <li>
+                Striving for truth, excellence, and innovation while valuing and
+                celebrating the success of others.
+              </li>
+              <li>
+                Acting responsibly with material, energy, and human resources,
+                considering environmental impacts and sustainable development.
+              </li>
+              <li>
+                Valuing traditional cultures and knowledge as integral parts of
+                society and national identity. e
+              </li>
+              <li>
+                Recognizing that material gains should align with ethical,
+                legal, and societal responsibilities.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className='text-lg font-semibold'>
+              Skills, Knowledge, and Competencies of EUB Graduates
+            </h4>
+            <ul className=' mt-1 list-decimal list-inside space-y-1'>
+              <li>
+                Proficient in listening, speaking, reading, writing, and
+                non-verbal communication to share and receive complex ideas
+                effectively.
+              </li>
+              <li>
+                Skills to analyze information, use logical reasoning, and
+                develop holistic solutions to complex problems.
+              </li>
+              <li>
+                Competence in utilizing modern technology for communication,
+                research, and analysis, with the ability to gather and interpret
+                diverse information sources.
+              </li>
+              <li>
+                Equipped with specific skills for national workforce needs,
+                ethical workplace behavior, and adaptability to evolving
+                careers.
+              </li>
+              <li>
+                Appreciation for diversity, gender equity, and cultural
+                heritage, with the ability to function effectively in
+                multicultural and global environments.
+              </li>
+              <li>
+                Knowledge of leadership, conflict resolution, and management
+                principles to work collaboratively and lead initiatives
+                successfully.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

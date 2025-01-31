@@ -16,19 +16,39 @@ const StudentServiceDesk = () => {
       <div>
         <h4 className='text-lg font-medium'>Additional Information :</h4>
         <Separator className='mt-1 mb-2' />
-        <p className='text-muted-foreground'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-          optio fugit quia ex quas corrupti aliquid provident beatae natus
-          similique reprehenderit quo, qui dolore in excepturi quae. Asperiores
-          error, voluptatem libero amet ab eaque suscipit beatae rerum placeat
-          magnam incidunt temporibus aspernatur fuga iusto, nulla fugit totam
-          consectetur veritatis voluptatibus esse dignissimos rem. Minus
-          expedita voluptatibus nemo porro nesciunt maxime odio dolore pariatur
-          vel assumenda quibusdam sit hic corporis accusamus facilis quisquam
-          itaque error labore molestiae rerum optio veniam, ipsam quo et! Est
-          possimus, magnam, atque repudiandae sapiente voluptatibus odit rem
-          enim aliquid commodi harum voluptas quas praesentium dolorem sint?
-        </p>
+        <div className='space-y-4'>
+          <div>
+            <h6 className='text-lg font-medium'>Academic</h6>
+            <ul className='mt-1 list-disc pl-6 space-y-2'>
+              <li>
+                Discussion and consultation about course curriculum and course
+                mapping.
+              </li>
+              <li>Discussion regarding trimester-based course breakdown.</li>
+              <li>Guidance of course path.</li>
+              <li>Probation information and guidelines.</li>
+            </ul>
+          </div>
+          <div>
+            <h6 className='text-lg font-medium'>Administrative</h6>
+            <ul className='mt-1 list-disc pl-6 space-y-2'>
+              <li>All program-related queries.</li>
+              <li>Information on faculty members.</li>
+              <li>Trimester drop (medical or other compelling reasons).</li>
+              <li>Course exclusion and inclusion.</li>
+              <li>Queries related to degree analysis.</li>
+              <li>Credit transfer.</li>
+              <li>Department change.</li>
+              <li>Course advising.</li>
+            </ul>
+          </div>
+          <div>
+            <h6 className='text-lg font-medium'>Others</h6>
+            <ul className='mt-1 list-disc pl-6 space-y-2'>
+              <li>Appointment with parents/guardians and follow-up.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </ContentWrapper>
   );

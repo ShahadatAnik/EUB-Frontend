@@ -5,57 +5,32 @@ import ContentWrapper from '../content-wrapper';
 const AboutUs = () => {
   return (
     <ContentWrapper title='About Us'>
-      <div className='text-center'>
-        <h3 className='text-xl font-semibold text-primary'>
-          Bachelor of Science in Computer Science and Engineering (CSE){' '}
-        </h3>
-
-        <p className='text-sm  text-muted-foreground mt-1'>
-          Department of Computer Science and Engineering (CSE), Science and
-          Engineering
-        </p>
-      </div>
-
-      <div className='mt-4'>
-        <h6 className='text-lg font-semibold'>Objectives and Goals</h6>
-        <p className='mt-1'>
-          The increasing needs for computer science and engineers in worldwide
-          job markets need not to be overemphasized. To keep pace with the
-          advancement in computer science and engineering and provide emphasis
-          in fulfilling the needs, it is essential that efforts to be made both
-          in the public and private sectors to develop human resources in this
-          particular field in Bangladesh
-        </p>
-
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>
-            The prime objective in establishing the Computer Science and
-            Engineering Department at the European University of Bangladesh is
-            to make a concerted effort towards achieving the goal to provide
-            quality education of 4 years duration at the undergraduate level.
-          </li>
-          <li>
-            To give students of undergraduate programs a rigorous and
-            comprehensive academic training on both the fundamental and advanced
-            aspects of Computer Science and Engineering (CSE).
-          </li>
-          <li>
-            To make provisions for research and development and dissemination of
-            knowledge in the field of Computer Science and Engineering.
-          </li>
-        </ul>
-
-        <p className='mt-2'>
-          A student in CSE must not only have a sound basis in the fundamental
-          of Engineering but also should be aware of socio-economic problems of
-          the country. Therefore, courses in science, humanities, economics and
-          management are also included in the curricula. The last two semesters
-          will offer the students a number of alternatives to choose from and to
-          specialize in a particular field. Theory and Sessional work shall be
-          supplemented by Project/Thesis work, seminars and visits to relevant
-          research and industrial organization.
-        </p>
-      </div>
+      <p>
+        Law plays a crucial role in shaping modern society, influencing various
+        aspects of personal and professional life. A Bachelor of Laws (LL.B.
+        Hons.) degree provides a strong foundation in legal principles,
+        preparing students for careers in the legal profession as well as in a
+        wide range of other fields requiring legal expertise.
+        <br />
+        <br />
+        The LL.B. (Hons.) program at the European University of Bangladesh (EUB)
+        is designed to produce qualified and skilled legal professionals who can
+        contribute effectively to the justice system, corporate sector, and
+        public administration. The curriculum covers core areas of law,
+        including constitutional law, criminal law, civil law, corporate law,
+        international law, and human rights law, ensuring students gain both
+        theoretical knowledge and practical skills.
+        <br />
+        <br />
+        In addition to traditional legal careers such as lawyers, judges, and
+        legal consultants, graduates will find opportunities in government
+        agencies, NGOs, multinational corporations, and international
+        organizations. The program also equips students with analytical,
+        research, and advocacy skills, making them highly competitive in both
+        domestic and international legal fields. With expert faculty and a
+        dynamic learning environment, the LL.B. (Hons.) at EUB ensures graduates
+        are well-prepared for a successful career in law.
+      </p>
     </ContentWrapper>
   );
 };

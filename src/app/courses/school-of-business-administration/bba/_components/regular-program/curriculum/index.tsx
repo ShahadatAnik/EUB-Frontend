@@ -20,9 +20,8 @@ const Curriculum = () => {
   return (
     <ContentWrapper title='Curriculum' className='py-4 space-y-6'>
       <p>
-        The undergraduate students of different years of the Department of
-        Computer Science and Engineering have to follow the course schedule
-        given below.
+        The undergraduate students of different years have to follow the course
+        schedule given below.
       </p>
       <div>
         <h6 className='text-lg font-semibold'>Course Types</h6>
@@ -140,8 +139,7 @@ const Curriculum = () => {
       <div>
         <h6 className='text-lg font-semibold'>Course Structure</h6>
         <p className='mt-1'>
-          The B.Sc in Computer Science and Engineering Program consists of the
-          following categories of courses:
+          The BBA Program consists of the following categories of courses:
         </p>
 
         <div className='my-4'>

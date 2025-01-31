@@ -18,6 +18,7 @@ import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import slugify from 'slugify';
 import { IAcademicAccordion } from '@/types';
+import StickySidebar from '@/components/sticky-sidebar';
 
 const ContentLayout: React.FC<{
   accordions: IAcademicAccordion[];
@@ -129,7 +130,7 @@ const ContentLayout: React.FC<{
       )}
 
       <div className='grid lg:grid-cols-5 gap-10'>
-        <div>
+        <StickySidebar className='lg:w-full' containerClassName='lg:pt-0'>
           <Accordion
             value={activeAccordion}
             onValueChange={setActiveAccordion}
@@ -199,7 +200,7 @@ const ContentLayout: React.FC<{
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
+        </StickySidebar>
         <div className='lg:col-span-4'>{content}</div>
       </div>
     </div>

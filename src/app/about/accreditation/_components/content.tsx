@@ -17,11 +17,11 @@ const Content = () => {
           fugiat inventore?
         </p>
 
-        <div className='border p-10'>
-          <div className='grid grid-cols-3  gap-10'>
-            {Array.from({ length: 3 }).map((_, index) => (
+        <div className='border p-4 '>
+          <div className='max-w-[200px] mx-auto'>
+            {['/images/ugc_logo.svg'].map((src, index) => (
               <div key={index} className='relative aspect-square w-full'>
-                <Image fill src='/placeholder.svg' alt='placeholder' />
+                <Image fill src={src} alt={'Logo'} />
               </div>
             ))}
           </div>

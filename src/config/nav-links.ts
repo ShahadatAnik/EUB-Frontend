@@ -6,8 +6,8 @@ export const topNavLinks: ITopNavLink[] = [
     href: '/publications',
   },
   {
-    title: 'Journals',
-    href: '/journals',
+    title: 'Journal',
+    href: '/journal',
   },
   {
     title: 'Academic Calendar',

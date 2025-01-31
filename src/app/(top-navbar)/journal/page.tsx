@@ -6,7 +6,7 @@ import Content from './_components/content';
 const Page = () => {
   return (
     <>
-      <PageHeader title='Journals' />
+      <PageHeader title='Journal' />
 
       <PageContainer>
         <Content />
