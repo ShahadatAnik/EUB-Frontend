@@ -1,41 +1,48 @@
-import React from 'react';
-import Link from 'next/link';
+import Link from "next/link";
+import React from "react";
 
-import ContentWrapper from '../content-wrapper';
 import SystemTable, {
-  SystemTableColumn,
-} from '@/components/table/system-table';
+	SystemTableColumn,
+} from "@/components/table/system-table";
 
-const data = [
-  {
-    description: 'Class Routine',
-    updatedAt: '2022-01-01',
-  },
-];
+import { getRegularClassRoutine } from "@/server/get-courses";
 
-const columns: SystemTableColumn<any>[] = [
-  {
-    accessorKey: 'description',
-    header: 'Description',
-    cell: (value) => (
-      <Link href={value} className='underline text-primary font-medium'>
-        {' '}
-        Test Pdf
-      </Link>
-    ),
-  },
-  {
-    accessorKey: 'updatedAt',
-    header: 'Updated At',
-  },
+import { formatDate } from "@/lib/utils";
+import { IDataTable } from "@/types";
+import ContentWrapper from "../content-wrapper";
+
+const data = await getRegularClassRoutine("CE");
+
+const columns: SystemTableColumn<IDataTable>[] = [
+	{
+		accessorKey: "description",
+		cell: (value, row) => {
+			return (
+				<Link
+					className="underline text-primary font-medium"
+					href={row.file}
+				>
+					{value}
+				</Link>
+			);
+		},
+	},
+	{
+		accessorKey: "updated_at",
+		cell: (value, row) => formatDate(value || row.created_at),
+	},
 ];
 
 const ClassRoutine = () => {
-  return (
-    <ContentWrapper title='Class Routine'>
-      <SystemTable caption='Class Routine' data={data} columns={columns} />
-    </ContentWrapper>
-  );
+	return (
+		<ContentWrapper title="Class Routine">
+			<SystemTable
+				caption="Class Routine"
+				data={data}
+				columns={columns}
+			/>
+		</ContentWrapper>
+	);
 };
 
 export default ClassRoutine;
