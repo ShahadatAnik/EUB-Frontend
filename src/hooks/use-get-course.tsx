@@ -1,12 +1,13 @@
 import { SystemTableColumn } from "@/components/table/system-table";
 import { formatDate } from "@/lib/utils";
 import {
+  getDepartmentTeachers,
   getEveningClassRoutine,
   getEveningExamSchedule,
   getRegularClassRoutine,
   getRegularExamSchedule,
 } from "@/server/get-courses";
-import { IDataTable } from "@/types";
+import { IDataTable, IDepartmentTeacher } from "@/types";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -101,4 +102,23 @@ export const useGetRegularExamSchedule = (department: string) => {
   }, []);
 
   return { data, columns };
+};
+
+export const useGetDepartmentTeachers = (department: string) => {
+  const [data, setData] = useState<IDepartmentTeacher[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await getDepartmentTeachers(department);
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching class routine:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return { data };
 };
