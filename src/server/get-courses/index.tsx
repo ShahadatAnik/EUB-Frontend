@@ -7,7 +7,7 @@ export const getRegularClassRoutine = async (
 	department: string
 ): Promise<IDataTable[]> => {
 	const res = await fetch(
-		`${secret.apiBaseUrl}/v1/portfolio/info?department=${department}`
+		`${secret.apiBaseUrl}/v1/portfolio/routine?department=${department}&program=regular&type=class`
 	);
 	return await res.json();
 };
@@ -15,7 +15,7 @@ export const getRegularExamSchedule = async (
 	department: string
 ): Promise<IDataTable[]> => {
 	const res = await fetch(
-		`${secret.apiBaseUrl}/v1/portfolio/info?department=${department}`
+		`${secret.apiBaseUrl}/v1/portfolio/routine?department=${department}&program=regular&type=exam`
 	);
 	return await res.json();
 };
@@ -24,7 +24,7 @@ export const getEveningClassRoutine = async (
 	department: string
 ): Promise<IDataTable[]> => {
 	const res = await fetch(
-		`${secret.apiBaseUrl}/v1/portfolio/info?department=${department}`
+		`${secret.apiBaseUrl}/v1/portfolio/routine?department=${department}&program=evening&type=class`
 	);
 	return await res.json();
 };
@@ -32,7 +32,7 @@ export const getEveningExamSchedule = async (
 	department: string
 ): Promise<IDataTable[]> => {
 	const res = await fetch(
-		`${secret.apiBaseUrl}/v1/portfolio/info?department=${department}`
+		`${secret.apiBaseUrl}/v1/portfolio/routine?department=${department}&program=evening&type=exam`
 	);
 	return await res.json();
 };
