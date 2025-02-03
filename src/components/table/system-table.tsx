@@ -35,9 +35,16 @@ interface IProps<T> {
   data: Record<string, string | React.ReactNode>[] | T[];
   caption?: string;
   className?: string;
+  children?: React.ReactNode;
 }
 
-function SystemTable<T>({ columns, data, caption, className }: IProps<T>) {
+function SystemTable<T>({
+  columns,
+  data,
+  caption,
+  className,
+  children,
+}: IProps<T>) {
   const headers = columns.map((column) => column.header || column.accessorKey);
   return (
     <Table className={cn('border', className)}>
@@ -82,6 +89,8 @@ function SystemTable<T>({ columns, data, caption, className }: IProps<T>) {
           </TableRow>
         ))}
       </TableBody>
+
+      {children && <>{children}</>}
     </Table>
   );
 }

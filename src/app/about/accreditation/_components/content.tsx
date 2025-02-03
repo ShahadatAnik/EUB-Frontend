@@ -6,22 +6,28 @@ const Content = () => {
     <div className='py-6 lg:py-12'>
       <div className='container space-y-8'>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-          quisquam possimus omnis alias, temporibus, minima esse qui dolores
-          porro, aliquid voluptatem cupiditate sit consectetur iure aut adipisci
-          dolorum? Officia vero ullam aspernatur doloribus placeat facilis ut
-          maiores, est cumque temporibus voluptates animi porro accusantium
-          recusandae quia omnis totam voluptatum atque. Tempore doloribus,
-          exercitationem eius quae itaque suscipit aspernatur voluptatum
-          veritatis numquam magni molestias facilis officia, sequi soluta minus
-          fugiat inventore?
+          Accreditation is crucial for private universities as it ensures
+          academic quality, enhances global recognition, boosts student and
+          employer confidence, and facilitates credit transfer and higher
+          education opportunities.
+          <br />
+          <br />
+          The European University of Bangladesh (EUB) is fully accredited by the
+          University Grants Commission (UGC), the sole national accreditation
+          authority in Bangladesh. The university is actively pursuing
+          institutional and professional accreditation from the UK to further
+          enhance its academic standards. Additionally, EUB is preparing a
+          self-study report for ABET accreditation for its Engineering and
+          Computer Science programs. Meanwhile, the School of Business is
+          working towards accreditation from the Accreditation Council for
+          Business Schools and Programs (ACBSP).
         </p>
 
-        <div className='border p-10'>
-          <div className='grid grid-cols-3  gap-10'>
-            {Array.from({ length: 3 }).map((_, index) => (
+        <div className='border p-4'>
+          <div className='max-w-[200px] mx-auto'>
+            {['/images/ugc_logo.svg'].map((src, index) => (
               <div key={index} className='relative aspect-square w-full'>
-                <Image fill src='/placeholder.svg' alt='placeholder' />
+                <Image fill src={src} alt={'Logo'} />
               </div>
             ))}
           </div>

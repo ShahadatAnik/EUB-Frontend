@@ -5,57 +5,38 @@ import ContentWrapper from '../content-wrapper';
 const AboutUs = () => {
   return (
     <ContentWrapper title='About Us'>
-      <div className='text-center'>
-        <h3 className='text-xl font-semibold text-primary'>
-          Bachelor of Science in Computer Science and Engineering (CSE){' '}
-        </h3>
-
-        <p className='text-sm  text-muted-foreground mt-1'>
-          Department of Computer Science and Engineering (CSE), Science and
-          Engineering
-        </p>
-      </div>
-
-      <div className='mt-4'>
-        <h6 className='text-lg font-semibold'>Objectives and Goals</h6>
-        <p className='mt-1'>
-          The increasing needs for computer science and engineers in worldwide
-          job markets need not to be overemphasized. To keep pace with the
-          advancement in computer science and engineering and provide emphasis
-          in fulfilling the needs, it is essential that efforts to be made both
-          in the public and private sectors to develop human resources in this
-          particular field in Bangladesh
-        </p>
-
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>
-            The prime objective in establishing the Computer Science and
-            Engineering Department at the European University of Bangladesh is
-            to make a concerted effort towards achieving the goal to provide
-            quality education of 4 years duration at the undergraduate level.
-          </li>
-          <li>
-            To give students of undergraduate programs a rigorous and
-            comprehensive academic training on both the fundamental and advanced
-            aspects of Computer Science and Engineering (CSE).
-          </li>
-          <li>
-            To make provisions for research and development and dissemination of
-            knowledge in the field of Computer Science and Engineering.
-          </li>
-        </ul>
-
-        <p className='mt-2'>
-          A student in CSE must not only have a sound basis in the fundamental
-          of Engineering but also should be aware of socio-economic problems of
-          the country. Therefore, courses in science, humanities, economics and
-          management are also included in the curricula. The last two semesters
-          will offer the students a number of alternatives to choose from and to
-          specialize in a particular field. Theory and Sessional work shall be
-          supplemented by Project/Thesis work, seminars and visits to relevant
-          research and industrial organization.
-        </p>
-      </div>
+      <p>
+        Business plays a vital role in shaping the modern world, influencing
+        societal structure and functionality. Rapid technological advancements,
+        shifting resource allocation, changing consumer preferences, global
+        competition, and evolving employment trends highlight the importance of
+        understanding the role of business in today’s dynamic environment.
+        <br />
+        <br />
+        The Bachelor of Business Administration (BBA) program offers a
+        well-rounded education emphasizing global business operations, emerging
+        markets, and technology-driven organizations. Students gain expertise in
+        their chosen business concentration while developing critical
+        managerial, problem-solving, and communication skills essential for
+        success.
+        <br />
+        <br />
+        At the European University of Bangladesh (EUB), the BBA program enhances
+        intellectual ability, executive presence, and managerial skills through
+        a balanced curriculum that integrates business and general education. It
+        equips students to achieve organizational objectives in diverse and
+        rapidly changing environments. The program aims to provide up-to-date
+        knowledge and skills, enabling students to become effective executives
+        in business and other organizations. It also prepares students for
+        advanced studies locally and internationally.
+        <br />
+        <br />
+        The BBA degree, often regarded as the &quot;golden passport,&quot;
+        offers a competitive edge by unlocking opportunities for higher
+        earnings, greater responsibilities, and personal growth. In an era
+        driven by business and administration, the program prepares graduates to
+        excel as leaders in a globalized world.
+      </p>
     </ContentWrapper>
   );
 };

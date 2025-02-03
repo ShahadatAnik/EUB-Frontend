@@ -5,57 +5,46 @@ import ContentWrapper from '../content-wrapper';
 const AboutUs = () => {
   return (
     <ContentWrapper title='About Us'>
-      <div className='text-center'>
-        <h3 className='text-xl font-semibold text-primary'>
-          Bachelor of Science in Computer Science and Engineering (CSE){' '}
-        </h3>
-
-        <p className='text-sm  text-muted-foreground mt-1'>
-          Department of Computer Science and Engineering (CSE), Science and
-          Engineering
-        </p>
-      </div>
-
-      <div className='mt-4'>
-        <h6 className='text-lg font-semibold'>Objectives and Goals</h6>
-        <p className='mt-1'>
-          The increasing needs for computer science and engineers in worldwide
-          job markets need not to be overemphasized. To keep pace with the
-          advancement in computer science and engineering and provide emphasis
-          in fulfilling the needs, it is essential that efforts to be made both
-          in the public and private sectors to develop human resources in this
-          particular field in Bangladesh
-        </p>
-
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>
-            The prime objective in establishing the Computer Science and
-            Engineering Department at the European University of Bangladesh is
-            to make a concerted effort towards achieving the goal to provide
-            quality education of 4 years duration at the undergraduate level.
-          </li>
-          <li>
-            To give students of undergraduate programs a rigorous and
-            comprehensive academic training on both the fundamental and advanced
-            aspects of Computer Science and Engineering (CSE).
-          </li>
-          <li>
-            To make provisions for research and development and dissemination of
-            knowledge in the field of Computer Science and Engineering.
-          </li>
-        </ul>
-
-        <p className='mt-2'>
-          A student in CSE must not only have a sound basis in the fundamental
-          of Engineering but also should be aware of socio-economic problems of
-          the country. Therefore, courses in science, humanities, economics and
-          management are also included in the curricula. The last two semesters
-          will offer the students a number of alternatives to choose from and to
-          specialize in a particular field. Theory and Sessional work shall be
-          supplemented by Project/Thesis work, seminars and visits to relevant
-          research and industrial organization.
-        </p>
-      </div>
+      <p>
+        Recognizing the need to develop highly skilled and qualified managers
+        and professionals for private, public, and non-profit organizations, the
+        European University of Bangladesh (EUB) has designed its Master of
+        Business Administration (MBA) program specifically for students who have
+        successfully completed a Bachelor of Business Administration (BBA) from
+        EUB. This program provides BBA graduates with a unique opportunity to
+        further their studies, enhancing their knowledge, skills, and analytical
+        abilities in their chosen specialization. As a multidisciplinary
+        professional graduate program, the MBA equips students for managerial
+        roles at all levels in both local and multinational organizations.
+        <br />
+        <br />
+        The Master of Business Administration (MBA) program is designed to
+        prepare individuals for managerial positions in today’s dynamic and
+        complex business environment. It emphasizes the practical application of
+        business theory to real-world challenges, recognizing the demands of a
+        competitive, multicultural economy shaped by technological advancements
+        and growing expectations for quality in products and services.
+        <br />
+        <br />
+        The structured curriculum begins with a core set of courses that focus
+        on executive functions and the broader business environment. Students
+        then have the flexibility to specialize in fields like finance,
+        marketing, or economics, allowing them to tailor their education to
+        their career goals. The program equips students with tools for effective
+        decision-making, data analysis, and financial management. Through case
+        studies, students enhance their marketing skills and learn to address
+        real-world business challenges.
+        <br />
+        <br />
+        The MBA program also develops strategic thinking, leadership, and
+        emotional intelligence, enabling students to lead teams and
+        organizations effectively. A global perspective is instilled to prepare
+        graduates for a competitive international market. Critical thinking,
+        innovation, and effective communication are emphasized throughout the
+        program, ensuring students can solve problems and drive change. With a
+        focus on ethical practices and productivity, the program cultivates
+        leaders ready to thrive in the fast-paced global business landscape.
+      </p>
     </ContentWrapper>
   );
 };

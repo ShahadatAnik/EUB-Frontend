@@ -1,100 +1,79 @@
 import React from 'react';
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-  TableFooter,
-  TableCaption,
-} from '@/components/ui/table';
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/system-table';
+import { TableCell, TableFooter, TableRow } from '@/components/ui/table';
 
-const courseStructure = [
+interface ICourseStructure {
+  course_category: string;
+  number_of_courses: number;
+  credit_per_course: number | string;
+  total_credits: number;
+}
+
+const data: ICourseStructure[] = [
   {
-    category: 'General Education',
-    no_of_theory_courses: '5',
-    sessional_courses: '-',
-    total_credit: '14.00',
+    course_category: 'General Education (GE)',
+    number_of_courses: 6,
+    credit_per_course: 3,
+    total_credits: 18,
   },
   {
-    category: 'Foundation Courses',
-    no_of_theory_courses: '7',
-    sessional_courses: '1',
-    total_credit: '22.50',
+    course_category: 'Core',
+    number_of_courses: 10,
+    credit_per_course: 3,
+    total_credits: 30,
   },
   {
-    category: 'Inter disciplinary Engineering',
-    no_of_theory_courses: '3',
-    sessional_courses: '4',
-    total_credit: '15.00',
+    course_category: 'Major',
+    number_of_courses: 4,
+    credit_per_course: 3,
+    total_credits: 12,
   },
   {
-    category: 'CSE Core',
-    no_of_theory_courses: '22',
-    sessional_courses: '17',
-    total_credit: '91.50',
+    course_category: 'Project',
+    number_of_courses: 1,
+    credit_per_course: 3,
+    total_credits: 3,
+  },
+];
+
+const columns: SystemTableColumn<ICourseStructure>[] = [
+  {
+    accessorKey: 'course_category',
+    header: 'Course Category',
   },
   {
-    category: 'Elective (Option I)',
-    no_of_theory_courses: '2',
-    sessional_courses: '2',
-    total_credit: '9.00',
+    accessorKey: 'number_of_courses',
+    header: 'Number of Courses',
   },
   {
-    category: 'Elective (Option II)',
-    no_of_theory_courses: '2',
-    sessional_courses: '-',
-    total_credit: '6.00',
+    accessorKey: 'credit_per_course',
+    header: 'Credit Per Course',
   },
   {
-    category: 'Project and Thesis',
-    no_of_theory_courses: '',
-    sessional_courses: '',
-    total_credit: '3.00',
-  },
-  {
-    category: 'Industrial Training',
-    no_of_theory_courses: '',
-    sessional_courses: '',
-    total_credit: '-',
+    accessorKey: 'total_credits',
+    header: 'Total Credits',
   },
 ];
 
 const CourseStructureTable = () => {
   return (
-    <Table>
-      <TableCaption>Course Structure</TableCaption>
-      <TableHeader>
-        <TableRow className='bg-primary hover:bg-primary'>
-          <TableHead className='text-white'>Category</TableHead>
-          <TableHead className='text-white'>No. of Theory Courses</TableHead>
-          <TableHead className='text-white'>
-            Sessional Courses (Minimum){' '}
-          </TableHead>
-          <TableHead className='text-white'>Total Credit</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {courseStructure.map((row, index) => (
-          <TableRow key={index}>
-            <TableCell className='font-medium'>{row.category}</TableCell>
-            <TableCell className=''>{row.no_of_theory_courses}</TableCell>
-            <TableCell className=''>{row.sessional_courses}</TableCell>
-            <TableCell className=''>{row.total_credit}</TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
+    <SystemTable caption='Course Structure' data={data} columns={columns}>
       <TableFooter>
         <TableRow>
-          <TableCell>Minimum Requirement</TableCell>
-          <TableCell>41</TableCell>
-          <TableCell>24</TableCell>
-          <TableCell>160.50</TableCell>
+          <TableCell className='border-r'>Total</TableCell>
+          <TableCell className='border-r'>
+            {data.reduce((acc, curr) => acc + curr.number_of_courses, 0)}
+          </TableCell>
+          <TableCell className='border-r'>3</TableCell>
+          <TableCell>
+            {data.reduce((acc, curr) => acc + curr.total_credits, 0)}
+          </TableCell>
         </TableRow>
       </TableFooter>
-    </Table>
+    </SystemTable>
   );
 };
 

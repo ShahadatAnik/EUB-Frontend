@@ -5,43 +5,54 @@ const Content = () => {
     <div className='py-6 lg:py-12'>
       <div className='container space-y-8'>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore velit
-          rerum neque amet eius quae rem non, harum expedita laborum aliquid
-          ipsam inventore nam dolores eos modi dolore earum molestias.
-          Voluptatem vero impedit nesciunt minus cumque dolore iure, in repellat
-          error perferendis officiis aperiam ea voluptas quidem, quod aspernatur
-          obcaecati molestias blanditiis tempora pariatur aut eligendi
-          repudiandae porro ad! Dolorem tempora nihil facilis ducimus earum
-          velit eius, magnam dolorum incidunt!
+          EUB prides itself on its faculty excellence, featuring a dedicated
+          team of full-time faculty members with exceptional academic
+          credentials and extensive teaching and research experience. The
+          faculty is further enriched by part-time instructors with
+          distinguished qualifications from prestigious institutions like BUET,
+          IBA, JU, BTU, and prominent corporate bodies, ensuring a dynamic and
+          diverse learning environment.
           <br />
           <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deserunt
-          a molestias excepturi consequatur mollitia, at perspiciatis ut
-          assumenda. Id nulla ab error exercitationem reprehenderit itaque
-          incidunt fuga quod at?
+          The university&apos;s degree programs are globally recognized,
+          offering graduates opportunities for higher studies and job placements
+          around the world. To support academic pursuits, EUB provides
+          state-of-the-art facilities, including modern laboratories equipped
+          with advanced scientific and engineering instruments. Additionally,
+          computer labs with internet access are available for both students and
+          faculty, while multimedia-equipped classrooms enhance the overall
+          teaching and learning experience. The university’s library boasts an
+          extensive collection of reference materials, journals, and
+          periodicals, as well as online resources for comprehensive research
+          and learning.
           <br />
           <br />
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
-          consectetur sequi tempora mollitia rem voluptates quis voluptatum unde
-          corrupti molestias. Reiciendis corrupti numquam placeat atque
-          perferendis rem ab repellendus tenetur dolore, aspernatur facilis unde
-          enim possimus vero deleniti, sequi delectus.
+          EUB emphasizes student support and flexibility by offering credit
+          transfer options to both local and international universities. Its
+          affordable tuition fees, with easy installment plans and financial
+          assistance for deserving students, make higher education accessible to
+          all. Flexible class schedules, including day, evening, and weekend
+          programs, cater to the needs of working professionals, such as those
+          enrolled in Executive MBA and LL.M programs.
           <br />
           <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-          itaque hic iure vel natus nisi possimus minima animi, laborum unde,
-          alias fugiat inventore cumque obcaecati illum. Velit iusto rerum iure
-          nisi ipsa, sunt quasi voluptate impedit at consequatur cumque fugiat.
+          The university is committed to fostering career development through
+          its dedicated Career Guidance and Placement Office, which offers
+          invaluable support for internships and job placements. Beyond
+          academics, EUB creates a holistic environment by promoting English
+          language proficiency as a medium of instruction and providing students
+          with recreational facilities, such as sports and indoor games,
+          alongside open spaces for relaxation. Regular seminars on contemporary
+          topics and extracurricular activities enrich campus life, while the
+          fully air-conditioned classrooms contribute to a comfortable and
+          vibrant learning atmosphere.
           <br />
           <br />
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus a
-          hic iusto explicabo, dolores ipsa voluptates consectetur expedita
-          cumque eaque harum omnis temporibus repellendus quaerat quidem sequi
-          odit, eius aliquid nemo aperiam. Debitis eius a maiores error, neque
-          maxime omnis quo vitae quae magnam consectetur voluptatum odit
-          obcaecati cumque velit natus consequuntur rerum impedit deserunt
-          excepturi blanditiis ex odio? Esse veniam tempora culpa recusandae
-          quidem laborum! Omnis accusamus veniam deserunt?
+          Finally, EUB maintains global collaboration by forming partnerships
+          with renowned universities worldwide, enabling students to gain a
+          competitive edge in a globalized world. With a focus on academic
+          rigor, accessibility, and an engaging campus environment, EUB ensures
+          a well-rounded experience for all its students.
         </p>
       </div>
     </div>

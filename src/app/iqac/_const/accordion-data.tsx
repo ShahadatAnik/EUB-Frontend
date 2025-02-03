@@ -12,6 +12,7 @@ import Symposium from '../_components/symposium';
 import Archives from '../_components/archives';
 import NewsEvents from '../_components/news-events';
 import StudentServiceDesk from '../_components/student-service-desk';
+import Offices from '../_components/offices';
 
 const accordions: IAcademicAccordion[] = [
   {
@@ -36,7 +37,7 @@ const accordions: IAcademicAccordion[] = [
   },
   {
     title: 'Office of the IQAC',
-    href: '/authorities/offices/iqac',
+    content: <Offices />,
   },
   {
     title: 'News and Events',
