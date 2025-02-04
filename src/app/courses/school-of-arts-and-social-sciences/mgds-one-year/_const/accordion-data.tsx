@@ -15,13 +15,6 @@ import RDegreeRequirements from '../_components/regular-program/degree-requireme
 import RClassRoutine from '../_components/regular-program/class-routine';
 import RExamSchedule from '../_components/regular-program/exam-schedule';
 
-// Evening Program
-import EProgramDetails from '../_components/evening-program/program-details';
-import ECurriculum from '../_components/evening-program/curriculum';
-import ECoursePath from '../_components/evening-program/course-path';
-import EDegreeRequirements from '../_components/evening-program/degree-requirements';
-import EClassRoutine from '../_components/evening-program/class-routine';
-import EExamSchedule from '../_components/evening-program/exam-schedule';
 
 const accordions: IAcademicAccordion[] = [
   {
@@ -66,35 +59,6 @@ const accordions: IAcademicAccordion[] = [
       {
         title: 'Exam Schedule',
         content: <RExamSchedule />,
-      },
-    ],
-  },
-  {
-    title: 'Evening Program',
-    children: [
-      {
-        title: 'Program Details',
-        content: <EProgramDetails />,
-      },
-      {
-        title: 'Curriculum',
-        content: <ECurriculum />,
-      },
-      {
-        title: 'Course Map and Path',
-        content: <ECoursePath />,
-      },
-      {
-        title: 'Degree Requirements',
-        content: <EDegreeRequirements />,
-      },
-      {
-        title: 'Class Routine',
-        content: <EClassRoutine />,
-      },
-      {
-        title: 'Exam Schedule',
-        content: <EExamSchedule />,
       },
     ],
   },
