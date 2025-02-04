@@ -1,48 +1,15 @@
-import Link from "next/link";
 import React from "react";
-
-import SystemTable, {
-	SystemTableColumn,
-} from "@/components/table/system-table";
-
-import { getRegularClassRoutine } from "@/server/get-courses";
-
-import { formatDate } from "@/lib/utils";
-import { IDataTable } from "@/types";
+import SystemTable from "@/components/table/system-table";
 import ContentWrapper from "../content-wrapper";
-
-const data = await getRegularClassRoutine("CE");
-
-const columns: SystemTableColumn<IDataTable>[] = [
-	{
-		accessorKey: "description",
-		cell: (value, row) => {
-			return (
-				<Link
-					className="underline text-primary font-medium"
-					href={row.file}
-				>
-					{value}
-				</Link>
-			);
-		},
-	},
-	{
-		accessorKey: "updated_at",
-		cell: (value, row) => formatDate(value || row.created_at),
-	},
-];
+import { useGetRegularClassRoutine } from "@/hooks/use-get-course";
 
 const ClassRoutine = () => {
-	return (
-		<ContentWrapper title="Class Routine">
-			<SystemTable
-				caption="Class Routine"
-				data={data}
-				columns={columns}
-			/>
-		</ContentWrapper>
-	);
+  const { data, columns } = useGetRegularClassRoutine("BSC-CSE");
+  return (
+    <ContentWrapper title="Class Routine">
+      <SystemTable caption="Class Routine" data={data} columns={columns} />
+    </ContentWrapper>
+  );
 };
 
 export default ClassRoutine;
