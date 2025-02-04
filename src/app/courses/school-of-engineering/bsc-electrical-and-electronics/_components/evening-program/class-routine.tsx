@@ -1,31 +1,12 @@
-import Link from "next/link";
 import React from "react";
-
-import SystemTable, {
-	SystemTableColumn,
-} from "@/components/table/system-table";
-import { getEveningClassRoutine } from "@/server/get-courses";
+import SystemTable from "@/components/table/system-table";
 import ContentWrapper from "../content-wrapper";
+import { useGetEveningClassRoutine } from "@/hooks/use-get-course";
 
-const data = await getEveningClassRoutine("CSE");
-const columns: SystemTableColumn<any>[] = [
-	{
-		accessorKey: "description",
-		header: "Description",
-		cell: (value) => (
-			<Link href={value} className="underline text-primary font-medium">
-				{" "}
-				Test Pdf
-			</Link>
-		),
-	},
-	{
-		accessorKey: "updated_at",
-		header: "Updated At",
-	},
-];
+
 
 const ClassRoutine = () => {
+	const { data, columns } = useGetEveningClassRoutine("BSC-EEE");
 	return (
 		<ContentWrapper title="Class Routine">
 			<SystemTable

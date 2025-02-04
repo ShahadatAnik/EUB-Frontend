@@ -173,6 +173,19 @@ export type IDataTable = {
   remarks: string;
 };
 
+export type IDepartmentTeacher = {
+  uuid: string;
+  department_uuid: string;
+  department_name: string;
+  teacher_uuid: string;
+  teacher_name: string;
+  teacher_designation: string;
+  department_head: boolean;
+  teacher_email: string;
+  teacher_phone: string;
+  teacher_image: string;
+};
+
 export type IProgram = {
   category: string;
   created_at: Date;

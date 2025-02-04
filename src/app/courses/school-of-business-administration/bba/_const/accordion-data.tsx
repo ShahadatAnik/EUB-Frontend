@@ -61,7 +61,6 @@ const accordions: IAcademicAccordion[] = [
       },
     ],
   },
-
   {
     title: 'Laboratories & Resources',
     content: <LaboratoriesResources />,
