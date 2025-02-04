@@ -14,8 +14,10 @@ const ProgramDetails = () => {
         them with essential skills for academic and professional growth.
         <br />
         <br />
-        The program consists of 12 courses totaling 36 credit hours. Each
-        3-credit course includes two classes per week.
+        <strong>
+          The program consists of 12 courses totaling 36 credit hours. Each
+          3-credit course includes two classes per week.
+        </strong>
       </p>
     </ContentWrapper>
   );

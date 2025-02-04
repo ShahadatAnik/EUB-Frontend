@@ -15,7 +15,6 @@ import RDegreeRequirements from '../_components/regular-program/degree-requireme
 import RClassRoutine from '../_components/regular-program/class-routine';
 import RExamSchedule from '../_components/regular-program/exam-schedule';
 
-
 const accordions: IAcademicAccordion[] = [
   {
     title: 'Overview',

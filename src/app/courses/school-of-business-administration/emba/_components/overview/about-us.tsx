@@ -6,12 +6,6 @@ const AboutUs = () => {
   return (
     <ContentWrapper title='About Us'>
       <p>
-        <strong>
-          For EMBA, classes are scheduled on Thursday evenings, Fridays and
-          Saturdays only so that the professionals can join the program.
-        </strong>
-        <br />
-        <br />
         The Master of Business Administration (MBA) program is designed to
         prepare individuals for managerial positions in today’s dynamic and
         complex business environment. It emphasizes the practical application of
@@ -38,6 +32,12 @@ const AboutUs = () => {
         program, ensuring students can solve problems and drive change. With a
         focus on ethical practices and productivity, the program cultivates
         leaders ready to thrive in the fast-paced global business landscape.
+        <br />
+        <br />
+        <strong>
+          For EMBA, classes are scheduled on Thursday evenings, Fridays and
+          Saturdays only so that the professionals can join the program.
+        </strong>
       </p>
     </ContentWrapper>
   );
