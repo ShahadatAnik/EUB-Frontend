@@ -20,12 +20,6 @@ export default async function Page() {
     getCertificateTuitionFees(),
   ]);
 
-  console.log({
-    undergraduateTuitionFees,
-    graduateTuitionFees,
-    certificateTuitionFees,
-  });
-
   return (
     <>
       <PageHeader title='Tuition and Other Fees Structure' />
