@@ -32,6 +32,12 @@ const AboutUs = () => {
         program, ensuring students can solve problems and drive change. With a
         focus on ethical practices and productivity, the program cultivates
         leaders ready to thrive in the fast-paced global business landscape.
+        <br />
+        <br />
+        <strong>
+          For MBA, classes are scheduled on Fridays and Saturdays only so that
+          the professionals can join the program.
+        </strong>
       </p>
     </ContentWrapper>
   );

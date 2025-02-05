@@ -5,57 +5,29 @@ import ContentWrapper from '../content-wrapper';
 const AboutUs = () => {
   return (
     <ContentWrapper title='About Us'>
-      <div className='text-center'>
-        <h3 className='text-xl font-semibold text-primary'>
-          Bachelor of Science in Computer Science and Engineering (CSE){' '}
-        </h3>
-
-        <p className='text-sm  text-muted-foreground mt-1'>
-          Department of Computer Science and Engineering (CSE), Science and
-          Engineering
-        </p>
-      </div>
-
-      <div className='mt-4'>
-        <h6 className='text-lg font-semibold'>Objectives and Goals</h6>
-        <p className='mt-1'>
-          The increasing needs for computer science and engineers in worldwide
-          job markets need not to be overemphasized. To keep pace with the
-          advancement in computer science and engineering and provide emphasis
-          in fulfilling the needs, it is essential that efforts to be made both
-          in the public and private sectors to develop human resources in this
-          particular field in Bangladesh
-        </p>
-
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>
-            The prime objective in establishing the Computer Science and
-            Engineering Department at the European University of Bangladesh is
-            to make a concerted effort towards achieving the goal to provide
-            quality education of 4 years duration at the undergraduate level.
-          </li>
-          <li>
-            To give students of undergraduate programs a rigorous and
-            comprehensive academic training on both the fundamental and advanced
-            aspects of Computer Science and Engineering (CSE).
-          </li>
-          <li>
-            To make provisions for research and development and dissemination of
-            knowledge in the field of Computer Science and Engineering.
-          </li>
-        </ul>
-
-        <p className='mt-2'>
-          A student in CSE must not only have a sound basis in the fundamental
-          of Engineering but also should be aware of socio-economic problems of
-          the country. Therefore, courses in science, humanities, economics and
-          management are also included in the curricula. The last two semesters
-          will offer the students a number of alternatives to choose from and to
-          specialize in a particular field. Theory and Sessional work shall be
-          supplemented by Project/Thesis work, seminars and visits to relevant
-          research and industrial organization.
-        </p>
-      </div>
+      <p>
+        The Department of Civil Engineering at the European University of
+        Bangladesh (EUB) is dedicated to shaping future engineers with the
+        skills and expertise to build sustainable infrastructure. Our
+        industry-focused curriculum integrates theoretical foundations with
+        hands-on learning in areas such as structural, geotechnical,
+        environmental, transportation, and water resource engineering. With
+        state-of-the-art laboratories and modern research facilities, we ensure
+        that students gain practical experience to meet real-world engineering
+        challenges.
+        <br />
+        <br />
+        EUB fosters a learning environment driven by innovation and
+        problem-solving, encouraging students to engage in research,
+        internships, and industry collaborations. Our highly qualified faculty
+        bring extensive academic and professional experience, guiding students
+        through cutting-edge technologies and sustainable engineering practices.
+        We emphasize professional ethics, leadership, and teamwork, preparing
+        graduates for success in both local and global engineering sectors. At
+        EUB, we are committed to developing engineers who contribute to society
+        through safe, efficient, and environmentally responsible infrastructure
+        solutions.
+      </p>
     </ContentWrapper>
   );
 };

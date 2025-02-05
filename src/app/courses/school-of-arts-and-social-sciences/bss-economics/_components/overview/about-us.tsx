@@ -5,57 +5,35 @@ import ContentWrapper from '../content-wrapper';
 const AboutUs = () => {
   return (
     <ContentWrapper title='About Us'>
-      <div className='text-center'>
-        <h3 className='text-xl font-semibold text-primary'>
-          Bachelor of Science in Computer Science and Engineering (CSE){' '}
-        </h3>
-
-        <p className='text-sm  text-muted-foreground mt-1'>
-          Department of Computer Science and Engineering (CSE), Science and
-          Engineering
-        </p>
-      </div>
-
-      <div className='mt-4'>
-        <h6 className='text-lg font-semibold'>Objectives and Goals</h6>
-        <p className='mt-1'>
-          The increasing needs for computer science and engineers in worldwide
-          job markets need not to be overemphasized. To keep pace with the
-          advancement in computer science and engineering and provide emphasis
-          in fulfilling the needs, it is essential that efforts to be made both
-          in the public and private sectors to develop human resources in this
-          particular field in Bangladesh
-        </p>
-
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>
-            The prime objective in establishing the Computer Science and
-            Engineering Department at the European University of Bangladesh is
-            to make a concerted effort towards achieving the goal to provide
-            quality education of 4 years duration at the undergraduate level.
-          </li>
-          <li>
-            To give students of undergraduate programs a rigorous and
-            comprehensive academic training on both the fundamental and advanced
-            aspects of Computer Science and Engineering (CSE).
-          </li>
-          <li>
-            To make provisions for research and development and dissemination of
-            knowledge in the field of Computer Science and Engineering.
-          </li>
-        </ul>
-
-        <p className='mt-2'>
-          A student in CSE must not only have a sound basis in the fundamental
-          of Engineering but also should be aware of socio-economic problems of
-          the country. Therefore, courses in science, humanities, economics and
-          management are also included in the curricula. The last two semesters
-          will offer the students a number of alternatives to choose from and to
-          specialize in a particular field. Theory and Sessional work shall be
-          supplemented by Project/Thesis work, seminars and visits to relevant
-          research and industrial organization.
-        </p>
-      </div>
+      <p>
+        Welcome to the Department of Economics at the European University of
+        Bangladesh (EUB). Our Bachelor of Social Sciences (BSS) in Economics
+        program is designed to provide students with a strong foundation in
+        economic theories, policies, and practical applications. Through
+        rigorous coursework and hands-on learning, we equip students with
+        analytical and quantitative skills essential for careers in economics,
+        finance, policymaking, and research.
+        <br />
+        <br />
+        Our experienced educators and researchers ensure students receive
+        up-to-date insights into global economic trends. The program covers
+        microeconomics, macroeconomics, econometrics, international trade,
+        development economics, and more. Graduates excel in banking, finance,
+        research institutions, government agencies, and international
+        organizations. Many pursue higher studies at prestigious global
+        universities. Students engage in economic modeling, policy analysis, and
+        statistical training using software like Stata, SPSS, and R. The
+        Economics Club organizes seminars, workshops, and competitions to
+        enhance learning beyond the classroom. EUB provides state-of-the-art
+        classrooms, a well-equipped library, and high-speed internet access to
+        support student success.
+        <br />
+        <br />
+        At EUB, we are committed to shaping future economists who can contribute
+        to sustainable development and economic policymaking. If you are eager
+        to explore the world of economics and build a strong foundation for your
+        career, this program is the right choice for you!
+      </p>
     </ContentWrapper>
   );
 };
