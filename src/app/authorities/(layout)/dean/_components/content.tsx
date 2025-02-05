@@ -1,9 +1,9 @@
+"use-client";
 import { IAuthoritiesDean } from "@/types/authorities";
 import Image from "next/image";
 import React from "react";
 
 const Content: React.FC<{ data: IAuthoritiesDean }> = ({ data }) => {
-	
 	if (!data) return <div>No data</div>;
 	return (
 		<div className="space-y-8">

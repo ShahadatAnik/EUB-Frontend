@@ -1,3 +1,4 @@
+"use-client";
 import { IAuthoritiesRegistrar } from "@/types/authorities";
 import Image from "next/image";
 import React from "react";

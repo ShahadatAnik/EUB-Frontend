@@ -1,3 +1,4 @@
+"use-client";
 import Title from "@/components/title";
 import { IMemberData } from "@/types/authorities";
 import React from "react";

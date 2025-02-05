@@ -1,3 +1,4 @@
+"use-client";
 import { IAuthoritiesDirectorCoordination } from "@/types/authorities";
 import Image from "next/image";
 import React from "react";

@@ -1,3 +1,4 @@
+"use-client";
 import { IAuthoritiesVC } from "@/types/authorities";
 import Image from "next/image";
 import React from "react";
