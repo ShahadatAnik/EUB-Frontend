@@ -2,8 +2,9 @@ import { IAuthoritiesDirectorCoordination } from "@/types/authorities";
 import Image from "next/image";
 import React from "react";
 
-const Content: React.FC<{ data: IAuthoritiesDirectorCoordination }> = ({ data }) => {
-	
+const Content: React.FC<{ data: IAuthoritiesDirectorCoordination }> = ({
+	data,
+}) => {
 	return (
 		<div className="space-y-8">
 			<div className="flex">
@@ -23,11 +24,9 @@ const Content: React.FC<{ data: IAuthoritiesDirectorCoordination }> = ({ data })
 						{data.personal_info.name}
 					</p>
 
-					{data.education.map((degree, index) => (
-						<p key={index} className="mt-2 text-muted-foreground">
-							{degree}
-						</p>
-					))}
+					<p className="mt-2 text-muted-foreground">
+						{data.education}
+					</p>
 
 					<ul className="mt-4 space-y-1">
 						<li>
@@ -54,7 +53,7 @@ const Content: React.FC<{ data: IAuthoritiesDirectorCoordination }> = ({ data })
 
 			<div>
 				<h4 className="text-2xl font-semibold">Short Biography</h4>
-				<p className="mt-1">{data.biography}</p>
+				<p className="mt-1">{data.short_biography}</p>
 			</div>
 
 			<div>
