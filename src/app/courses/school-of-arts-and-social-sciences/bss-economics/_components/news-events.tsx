@@ -1,14 +1,8 @@
-import React from 'react';
-
-import ContentWrapper from './content-wrapper';
-import NewsCards from '@/app/(top-navbar)/news-events/_components/news-cards';
+import React from "react";
+import NewsAndEvents from "@/app/courses/_components/news-and-events";
 
 const NewsEvents = () => {
-  return (
-    <ContentWrapper title='News & Events'>
-      <NewsCards length={6} />
-    </ContentWrapper>
-  );
+  return <NewsAndEvents department="BSS-ECONOMICS" />;
 };
 
 export default NewsEvents;

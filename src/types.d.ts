@@ -1,16 +1,27 @@
 export type INewsPortal = {
   id: number;
   uuid: string;
+  department_uuid: string;
+  department_name: string;
   title: string;
   subtitle: string;
   description: string | null;
   content: string;
   cover_image: string;
+  carousel: Array<{
+    value: string;
+    label: string;
+  }>;
   published_date: string;
   created_at: string;
   updated_at: string;
   created_by: string;
   remarks: string | null;
+};
+
+export type INewsPortalCarousel = {
+  value: string;
+  label: string;
 };
 
 export type ITopNavLink = {

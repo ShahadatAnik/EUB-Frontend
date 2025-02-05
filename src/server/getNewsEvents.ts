@@ -1,7 +1,7 @@
-'use server';
+"use server";
 
-import { secret } from '@/config/secret';
-import { INewsPortal } from '@/types';
+import { secret } from "@/config/secret";
+import { INewsPortal } from "@/types";
 
 export const getNewsEvents = async (): Promise<INewsPortal[]> => {
   const res = await fetch(`${secret.apiBaseUrl}/v1/portfolio/news`);

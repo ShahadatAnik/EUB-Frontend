@@ -17,7 +17,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
           <Image
             src={
               departmentHead?.teacher_image
-                ? departmentHead?.teacher_image
+                ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${departmentHead?.teacher_image}`
                 : "/person-placeholder.jpg"
             }
             alt={"teacher_image"}
@@ -63,7 +63,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
                 <Image
                   src={
                     faculty.teacher_image
-                      ? faculty.teacher_image
+                      ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${faculty?.teacher_image}`
                       : "/person-placeholder.jpg"
                   }
                   alt={"teacher_image"}
