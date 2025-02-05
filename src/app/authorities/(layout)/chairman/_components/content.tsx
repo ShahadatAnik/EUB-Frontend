@@ -3,13 +3,14 @@ import Image from "next/image";
 import React from "react";
 
 const Content: React.FC<{ data: IAuthoritiesChairman }> = ({ data }) => {
+	if (!data) return <div>No data</div>;
 	return (
 		<div className="space-y-8">
 			<div className="flex">
 				<div className="h-[400px] aspect-square relative">
 					<Image
 						fill
-						src={data.personal_info.profile_image}
+						src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${data?.personal_info.profile_image}`}
 						alt={`${data.personal_info.name}'s profile picture`}
 					/>
 				</div>

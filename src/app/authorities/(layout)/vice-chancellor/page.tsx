@@ -10,7 +10,7 @@ export const metadata = generateMetaData({
 
 const Page = async () => {
 	const data = await getAuthoritiesVC();
-	return <Content data={data[0]} />;
+	return <Content data={data} />;
 };
 
 export default Page;

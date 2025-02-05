@@ -10,7 +10,8 @@ export const metadata = generateMetaData({
 
 const Page = async () => {
 	const data = await getAuthoritiesDean();
-	return <Content data={data[0]} />;
+
+	return <Content data={data} />;
 };
 
 export default Page;
