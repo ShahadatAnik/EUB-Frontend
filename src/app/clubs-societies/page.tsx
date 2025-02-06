@@ -42,8 +42,7 @@ const Page = async () => {
 					key={club.president_name}
 					name={club.president_name}
 					image={
-						`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${club.president_image}` ||
-						"/person-placeholder.jpg"
+						`${club.president_image}` || "/person-placeholder.jpg"
 					}
 					designation={club.president_designation}
 					phone={club.president_phone}

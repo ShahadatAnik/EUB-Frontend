@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import ClientImage from "@/components/client-image";
 import { IOffice } from "@/types";
 import { useOffices } from "../_const/query";
 
@@ -21,10 +22,10 @@ const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
 						>
 							<div className="aspect-video relative">
 								{item.image ? (
-									<Image
+									<ClientImage
 										className="object-cover object-center"
 										fill
-										src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${item.image}`}
+										src={`${item.image}`}
 										alt={item.title}
 									/>
 								) : (
