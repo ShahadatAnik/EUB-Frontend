@@ -1,10 +1,20 @@
-'use server';
+"use server";
 
-import { secret } from '@/config/secret';
-import { INewsPortal } from '@/types';
+import { secret } from "@/config/secret";
+import { INewsPortal, IPagination } from "@/types";
 
-export const getNewsEvents = async (): Promise<INewsPortal[]> => {
-  const res = await fetch(`${secret.apiBaseUrl}/v1/portfolio/news`);
+type getAllNewsEventsProps = {
+  data: INewsPortal[];
+  pagination: IPagination;
+};
+
+export const getNewsEvents = async (
+  limit: number = 10,
+  page: number = 1
+): Promise<getAllNewsEventsProps> => {
+  const res = await fetch(
+    `${secret.apiBaseUrl}/v1/portfolio/news?limit=${limit}&page=${page}`
+  );
   return await res.json();
 };
 
