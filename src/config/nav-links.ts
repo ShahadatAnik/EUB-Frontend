@@ -119,31 +119,31 @@ export const navLinks: INavLink[] = [
 
       {
         title: 'School of Science and Engineering',
-        href: '/programs/school-of-engineering',
+        href: '/programs/school-of-science-engineering',
         children: [
           {
             title: 'BSc in Civil',
-            href: '/programs/school-of-engineering/bsc-civil',
+            href: '/programs/school-of-science-engineering/bsc-civil',
           },
           {
             title: 'BSc in Computer Science',
-            href: '/programs/school-of-engineering/bsc-computer-science',
+            href: '/programs/school-of-science-engineering/bsc-computer-science',
           },
           {
             title: 'BSc in Electrical and Electronics',
-            href: '/programs/school-of-engineering/bsc-electrical-and-electronics',
+            href: '/programs/school-of-science-engineering/bsc-electrical-and-electronics',
           },
           {
             title: 'BSc in Textile',
-            href: '/programs/school-of-engineering/bsc-textile',
+            href: '/programs/school-of-science-engineering/bsc-textile',
           },
           {
             title: 'BSc in Industrial & Production',
-            href: '/programs/school-of-engineering/bsc-industrial-and-production',
+            href: '/programs/school-of-science-engineering/bsc-industrial-and-production',
           },
           {
             title: 'BSc in Mechanical',
-            href: '/programs/school-of-engineering/bsc-mechanical',
+            href: '/programs/school-of-science-engineering/bsc-mechanical',
           },
         ],
       },

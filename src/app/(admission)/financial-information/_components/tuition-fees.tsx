@@ -19,7 +19,7 @@ const TuitionFees = () => {
       <div className='text-center'>
         <h6 className='text-lg'>
           <span className='font-semibold'>Admission Office : </span>{' '}
-          01968774931, 01968774933, 01968774927 (Director).
+          01968774930-31, 01968774933, 01968774927 (Admission Director).
         </h6>
         <h6 className='text-lg'>
           <span className='font-semibold'>Email : </span>
