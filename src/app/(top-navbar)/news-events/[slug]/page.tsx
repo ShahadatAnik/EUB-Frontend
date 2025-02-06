@@ -5,7 +5,6 @@ import PageContainer from "@/components/page-container";
 import PageHeader from "@/components/page-header";
 import { Separator } from "@/components/ui/separator";
 import AlbumSlider from "@/components/album-slider";
-import PdfViewer from "@/components/pdf-viewer";
 import { getNewsById } from "@/server/getNewsEvents";
 
 export default async function Page({
@@ -21,11 +20,7 @@ export default async function Page({
     <div>
       <PageHeader
         title={"Details"}
-        image={
-          data?.cover_image
-            ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${data?.cover_image}`
-            : "/images/bg-2.jpg"
-        }
+        image={data?.cover_image ? `/${data?.cover_image}` : "/images/bg-2.jpg"}
       />
       <PageContainer className="pb-40">
         <div className="flex flex-col lg:flex-row gap-8 ">
@@ -46,7 +41,6 @@ export default async function Page({
                   original: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${item.label}`,
                 }))}
               />
-              {/* <PdfViewer /> */}
               <p className="mt-4">{data?.description}</p>
             </div>
           </div>

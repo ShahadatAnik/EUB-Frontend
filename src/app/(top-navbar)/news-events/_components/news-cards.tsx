@@ -4,8 +4,7 @@ import dummyData from "../_const/data.json";
 import NewsCard from "./news-card";
 import { INewsPortal } from "@/types";
 
-const NewsCards: React.FC<{ length?: number; data?: INewsPortal[] }> = ({
-  length = 12,
+const NewsCards: React.FC<{ data?: INewsPortal[] }> = ({
   data = dummyData,
 }) => {
   return (

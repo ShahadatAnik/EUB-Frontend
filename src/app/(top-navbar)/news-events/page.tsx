@@ -1,14 +1,4 @@
 import React from "react";
-
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
 import PageHeader from "@/components/page-header";
 import PageContainer from "@/components/page-container";
 

@@ -9,7 +9,7 @@ const NewsAndEvents = ({ department }: { department: string }) => {
 
   return (
     <ContentWrapper title="News & Events">
-      <NewsCards length={data.length} data={data} />
+      <NewsCards data={data} />
     </ContentWrapper>
   );
 };

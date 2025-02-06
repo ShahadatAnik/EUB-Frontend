@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-import data from "@/lib/data.json";
-
 import { ScrollArea } from "./ui/scroll-area";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
@@ -27,7 +24,7 @@ const LatestPosts = async ({ department }: { department?: string }) => {
                     fill
                     src={
                       item.cover_image
-                        ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${item.cover_image}`
+                        ? `/${item.cover_image}`
                         : "/images/news-portal/1.jpg"
                     }
                     alt={item.title}
