@@ -20,10 +20,10 @@ export default async function Page({ searchParams }: searchParamsProps) {
   const page = Number(params?.page ? params?.page : 1);
 
   const data = await getNewsEvents(limit, page);
-
+  console.log(data);
   return (
     <div>
-      <PageHeader title="News & Events" image="/images/bg-2.jpg" />
+      {/* <PageHeader title="News & Events" image="/images/bg-2.jpg" />
       <PageContainer>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {data.data.map((item: INewsPortal, index: number) => (
@@ -32,7 +32,7 @@ export default async function Page({ searchParams }: searchParamsProps) {
         </div>
 
         <PagePagination pagination={data.pagination} />
-      </PageContainer>
+      </PageContainer> */}
     </div>
   );
 }
