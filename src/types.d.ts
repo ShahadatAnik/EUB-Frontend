@@ -262,3 +262,22 @@ export type IPrograms = {
 	remarks: null;
 	updated_at: null;
 };
+
+export type IClub = {
+	uuid: string;
+	name: string;
+	president_name: string;
+	president_image: string;
+	president_designation: string;
+	president_phone: string;
+	president_email: string;
+	message: string;
+	created_at: Date;
+	created_by: string;
+	remarks: null;
+	updated_at: null;
+};
+export type IClubs = {
+	title: string;
+	content: IClub;
+};
