@@ -54,7 +54,7 @@ export const navLinks: INavLink[] = [
     ],
   },
   {
-    title: 'Courses',
+    title: 'Programs',
     children: [
       {
         title: 'School of Business Administration',
@@ -118,7 +118,7 @@ export const navLinks: INavLink[] = [
       },
 
       {
-        title: 'School of Engineering',
+        title: 'School of Science and Engineering',
         href: '/courses/school-of-engineering',
         children: [
           {
