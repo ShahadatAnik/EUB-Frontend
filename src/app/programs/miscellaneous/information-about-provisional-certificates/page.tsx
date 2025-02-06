@@ -8,6 +8,7 @@ import Content from './_components/content';
 
 export default async function Page() {
   const data = await getInformationProvisionalCertificates();
+
   return (
     <>
       <PageHeader title='Information about Provisional Certificates' />

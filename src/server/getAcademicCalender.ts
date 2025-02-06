@@ -9,5 +9,3 @@ export const getAcademicCalender = async (): Promise<IDataTable[]> => {
   );
   return await res.json();
 };
-
-
