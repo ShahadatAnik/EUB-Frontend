@@ -9,7 +9,7 @@ export type IAuthoritiesChairman = {
 		email: string;
 		phone: string;
 	};
-	biography: string;
+	short_biography: string;
 };
 export type IAuthoritiesChancellor = {
 	personal_info: {
@@ -22,7 +22,7 @@ export type IAuthoritiesChancellor = {
 		email: string;
 		phone: string;
 	};
-	biography: string;
+	short_biography: string;
 };
 export type IAuthoritiesDean = {
 	personal_info: {
@@ -35,7 +35,7 @@ export type IAuthoritiesDean = {
 		email: string;
 		phone: string;
 	};
-	biography: string;
+	short_biography: string;
 };
 export type IAuthoritiesDirectorCoordination = {
 	personal_info: {
@@ -48,7 +48,7 @@ export type IAuthoritiesDirectorCoordination = {
 		email: string;
 		phone: string;
 	};
-	biography: string;
+	short_biography: string;
 };
 export type IAuthoritiesProVC = {
 	personal_info: {
@@ -61,7 +61,7 @@ export type IAuthoritiesProVC = {
 		email: string;
 		phone: string;
 	};
-	biography: string;
+	short_biography: string;
 };
 export type IAuthoritiesRegistrar = {
 	personal_info: {
@@ -74,7 +74,7 @@ export type IAuthoritiesRegistrar = {
 		email: string;
 		phone: string;
 	};
-	biography: string;
+	short_biography: string;
 };
 export type IAuthoritiesTreasurer = {
 	personal_info: {
@@ -87,7 +87,7 @@ export type IAuthoritiesTreasurer = {
 		email: string;
 		phone: string;
 	};
-	biography: string;
+	short_biography: string;
 };
 export type IAuthoritiesVC = {
 	personal_info: {
@@ -100,7 +100,7 @@ export type IAuthoritiesVC = {
 		email: string;
 		phone: string;
 	};
-	biography: string;
+	short_biography: string;
 };
 export type Member = {
 	id: number;

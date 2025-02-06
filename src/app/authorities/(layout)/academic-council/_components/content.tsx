@@ -1,3 +1,4 @@
+"use-client";
 import React from "react";
 
 import Title from "@/components/title";
@@ -5,6 +6,8 @@ import { IMemberData } from "@/types/authorities";
 import MemberCard from "./member-card";
 
 const Content: React.FC<{ data: IMemberData }> = ({ data }) => {
+	if (!data || (data?.member.length === 0 && !data?.chairperson))
+		return <div>No data</div>;
 	return (
 		<div className="space-y-8">
 			<div>

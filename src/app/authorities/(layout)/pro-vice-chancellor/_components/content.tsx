@@ -1,16 +1,17 @@
+"use-client";
 import { IAuthoritiesProVC } from "@/types/authorities";
 import Image from "next/image";
 import React from "react";
 
 const Content: React.FC<{ data: IAuthoritiesProVC }> = ({ data }) => {
-	
+	if (!data) return <div>No data</div>;
 	return (
 		<div className="space-y-8">
 			<div className="flex">
 				<div className="h-[400px] aspect-square relative">
 					<Image
 						fill
-						src={data.personal_info.profile_image}
+						src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${data?.personal_info.profile_image}`}
 						alt={`${data.personal_info.name}'s profile picture`}
 					/>
 				</div>
@@ -23,11 +24,9 @@ const Content: React.FC<{ data: IAuthoritiesProVC }> = ({ data }) => {
 						{data.personal_info.name}
 					</p>
 
-					{data.education.map((degree, index) => (
-						<p key={index} className="mt-2 text-muted-foreground">
-							{degree}
-						</p>
-					))}
+					<p className="mt-2 text-muted-foreground">
+						{data.education}
+					</p>
 
 					<ul className="mt-4 space-y-1">
 						<li>
@@ -54,7 +53,7 @@ const Content: React.FC<{ data: IAuthoritiesProVC }> = ({ data }) => {
 
 			<div>
 				<h4 className="text-2xl font-semibold">Short Biography</h4>
-				<p className="mt-1">{data.biography}</p>
+				<p className="mt-1">{data.short_biography}</p>
 			</div>
 
 			<div>

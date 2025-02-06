@@ -1,25 +1,32 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
+import React from "react";
 
-import PageHeader from '@/components/page-header';
-import Content from './_components/content';
-
-import data from '../_const/offices-data';
+import PageHeader from "@/components/page-header";
+import { useOfficeEntry, useOfficesWitOutInitialData } from "../_const/query";
+import Content from "./_components/content";
 
 const Page = () => {
-  const pathName = usePathname();
-  const title = data.find(
-    (item) => `/authorities/offices/${item.category}` === pathName
-  )?.title;
+	const pathName = usePathname();
+	const category = pathName.split("/")[3];
 
-  return (
-    <>
-      <PageHeader title={title || 'Office Details'} />
-      <Content />
-    </>
-  );
+	const { data: listOfOffices } = useOfficesWitOutInitialData();
+	const { data } = useOfficeEntry(category as string);
+
+	const title = listOfOffices?.find(
+		(item) => `/authorities/offices/${item.category}` === pathName
+	)?.title;
+	return (
+		<>
+			<PageHeader title={title || "Office Details"} />
+			<Content
+				data={data || []}
+				listOfOffices={listOfOffices || []}
+				category={title || ""}
+			/>
+		</>
+	);
 };
 
 export default Page;
