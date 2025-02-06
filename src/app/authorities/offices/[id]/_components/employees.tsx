@@ -1,8 +1,8 @@
 import { Mail, Phone } from "lucide-react";
 import React from "react";
 
+import ClientImage from "@/components/client-image";
 import { IOfficeEntry } from "@/types";
-import Image from "next/image";
 
 const Employees: React.FC<{ data: IOfficeEntry[] }> = ({ data }) => {
 	return (
@@ -10,8 +10,8 @@ const Employees: React.FC<{ data: IOfficeEntry[] }> = ({ data }) => {
 			{data?.map((item, index) => (
 				<div key={index} className="py-3 border rounded-lg">
 					<div className="px-3  flex  gap-4">
-						<Image
-							src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${item?.image}`}
+						<ClientImage
+							src={`${item?.image}`}
 							alt={item.user_name}
 							height={120}
 							width={120}

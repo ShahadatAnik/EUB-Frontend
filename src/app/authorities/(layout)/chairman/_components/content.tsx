@@ -1,6 +1,7 @@
-'use-client';
+"use-client";
+import ClientImage from "@/components/client-image";
 import { IAuthoritiesChairman } from "@/types/authorities";
-import Image from "next/image";
+
 import React from "react";
 
 const Content: React.FC<{ data: IAuthoritiesChairman }> = ({ data }) => {
@@ -9,9 +10,9 @@ const Content: React.FC<{ data: IAuthoritiesChairman }> = ({ data }) => {
 		<div className="space-y-8">
 			<div className="flex">
 				<div className="h-[400px] aspect-square relative">
-					<Image
+					<ClientImage
 						fill
-						src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${data?.personal_info.profile_image}`}
+						src={`${data?.personal_info.profile_image}`}
 						alt={`${data.personal_info.name}'s profile picture`}
 					/>
 				</div>

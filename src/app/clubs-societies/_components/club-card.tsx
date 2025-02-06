@@ -1,5 +1,6 @@
 "use client";
-import Image from "next/image";
+import ClientImage from "@/components/client-image";
+
 import React from "react";
 
 const ClubCard: React.FC<{
@@ -13,7 +14,12 @@ const ClubCard: React.FC<{
 	return (
 		<div className="flex gap-4">
 			<div className="flex flex-col">
-				<Image src={image} alt="Person" width={200} height={200} />
+				<ClientImage
+					src={image}
+					alt="Person"
+					width={200}
+					height={200}
+				/>
 				<p className="mt-3 text-xl font-semibold">{designation}</p>
 				<div className="mt-2 space-y-2 text-muted-foreground">
 					<p>Name : {name}</p>
