@@ -1,3 +1,4 @@
+"use client";
 import { getOfficeEntry, getOffices } from "@/server/getOffices";
 import { IOffice } from "@/types";
 import { useQuery } from "@tanstack/react-query";
