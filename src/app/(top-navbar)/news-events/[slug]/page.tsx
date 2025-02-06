@@ -16,6 +16,7 @@ export default async function Page({
   const slug = (await params).slug;
   const data = await getNewsById(slug);
 
+  console.log(data);
   return (
     <div>
       <PageHeader

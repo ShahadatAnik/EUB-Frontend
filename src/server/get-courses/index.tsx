@@ -1,7 +1,18 @@
 "use server";
 
 import { secret } from "@/config/secret";
-import { IDataTable, IDepartmentTeacher, INewsPortal } from "@/types";
+import {
+  IDataTable,
+  IDepartmentTeacher,
+  INewsPortal,
+  IPagination,
+} from "@/types";
+
+type getAllNewsEventsProps = {
+  data: INewsPortal[];
+  pagination: IPagination;
+};
+
 //* Regular
 export const getRegularClassRoutine = async (
   department: string
@@ -49,7 +60,7 @@ export const getDepartmentTeachers = async (
 export const getDepartmentNews = async (
   department?: string,
   latest: boolean = false
-): Promise<INewsPortal[]> => {
+): Promise<getAllNewsEventsProps> => {
   const res = await fetch(
     department
       ? `${secret.apiBaseUrl}/v1/portfolio/news?department_name=${department}&latest=${latest}`

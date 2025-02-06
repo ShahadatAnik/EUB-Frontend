@@ -19,6 +19,14 @@ export type INewsPortal = {
   remarks: string | null;
 };
 
+export type IPagination = {
+  total_record: number;
+  current_page: number;
+  total_page: number;
+  next_page: number;
+  prev_page: number;
+};
+
 export type INewsPortalCarousel = {
   value: string;
   label: string;

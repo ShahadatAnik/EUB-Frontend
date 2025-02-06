@@ -131,7 +131,7 @@ export const useGetDepartmentNews = (department: string) => {
     const fetchData = async () => {
       try {
         const result = await getDepartmentNews(department);
-        setData(result);
+        setData(result.data);
       } catch (error) {
         console.error("Error fetching class routine:", error);
       }

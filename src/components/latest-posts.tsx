@@ -18,7 +18,7 @@ const LatestPosts = async ({ department }: { department?: string }) => {
       <Separator className="mt-2 mb-2" />
       <ScrollArea className="h-full lg:h-[500px]">
         <ul className="space-y-4 mt-4">
-          {data.map((item, index) => (
+          {data.data.map((item, index) => (
             <li key={index}>
               <div className="flex gap-2">
                 <div className="aspect-video h-[70px] relative">
