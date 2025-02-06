@@ -15,12 +15,12 @@ export default async function Page({
   const slug = (await params).slug;
   const data = await getNewsById(slug);
 
-  console.log(data);
+  console.log(`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${data?.cover_image}`);
   return (
     <div>
       <PageHeader
         title={'Details'}
-        image={data?.cover_image ? `/${data?.cover_image}` : '/images/bg-2.jpg'}
+        image={data?.cover_image ? `${data?.cover_image}` : '/images/bg-2.jpg'}
       />
       <PageContainer className='pb-40'>
         <div className='flex flex-col lg:flex-row gap-8 '>
@@ -38,7 +38,7 @@ export default async function Page({
             <div>
               <AlbumSlider
                 images={data?.carousel.map((item) => ({
-                  original: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${item.label}`,
+                  original: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${item.label}`,
                 }))}
               />
               <p className='mt-4'>{data?.description}</p>
