@@ -9,22 +9,22 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 import { INewsPortal } from "@/types";
 import { formatDate } from "date-fns";
+import ClientImage from "@/components/client-image";
 
 const NewsCard: React.FC<{ item: INewsPortal }> = ({ item }) => {
   return (
     <Card className=" overflow-hidden ">
       <CardHeader className="p-0 h-[200px] relative">
-        <Image
+        <ClientImage
           className="w-full h-[200px] object-cover"
           src={
             item?.cover_image
-              ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${item?.cover_image}`
+              ? `/${item?.cover_image}`
               : "/images/news-portal/1.jpg"
           }
           fill
