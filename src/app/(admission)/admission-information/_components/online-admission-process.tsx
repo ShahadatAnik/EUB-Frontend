@@ -22,19 +22,12 @@ const OnlineAdmissionProcess = () => {
             .
           </li>
           <li>
-            Complete your registration with a valid email and phone number.
+            Complete your application form with valid information from Online
+            Admission.
           </li>
-          <li>Verify your email and then log in again.</li>
-        </ul>
-      </SectionContent>
-
-      <SectionContent title='Step 2 - Complete your application form'>
-        <ul className='list-decimal list-inside space-y-3'>
-          <li>After registration, you will get an Application form.</li>
-          <li>Complete your application form with valid information.</li>
           <li>
-            You may check your application form carefully before the final
-            Submission
+            Please check your application form carefully before the final
+            Submission.
           </li>
           <li>
             Once it is submitted you are not able to edit your application form.
@@ -42,23 +35,13 @@ const OnlineAdmissionProcess = () => {
         </ul>
       </SectionContent>
 
-      <SectionContent title='Step 3 - Payment options for application Fee'>
+      <SectionContent title='Step 2 - Payment options for Application Fee'>
         <ul className='list-decimal list-inside space-y-3'>
-          <li>Payment with Bkash: 1523/-</li>
-          <li>Payment with Bank: 1500/-</li>
+          <li>You have to send: Tk. 10,200.00 (For Admission Fee)</li>
           <li>
-            For details go to the{' '}
-            <Link className='text-primary underline' href='#payment-process'>
-              Payment Process
-            </Link>{' '}
-            tab
+            Send the admission fee on this bKash Account number:{' '}
+            <strong>01628-747-488</strong>
           </li>
-        </ul>
-      </SectionContent>
-
-      <SectionContent title='Step 4 - Print your admit card'>
-        <ul className='list-decimal list-inside space-y-3'>
-          <li>Print your admit card to sit for the exam.</li>
         </ul>
       </SectionContent>
     </SectionLayout>

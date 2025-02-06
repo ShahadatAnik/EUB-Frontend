@@ -58,92 +58,92 @@ export const navLinks: INavLink[] = [
     children: [
       {
         title: 'School of Business Administration',
-        href: '/programs/school-of-business-administration',
+        href: '/courses/school-of-business-administration',
         children: [
           {
             title: 'BBA',
-            href: '/programs/school-of-business-administration/bba',
+            href: '/courses/school-of-business-administration/bba',
           },
           {
             title: 'MBA',
-            href: '/programs/school-of-business-administration/mba',
+            href: '/courses/school-of-business-administration/mba',
           },
           {
             title: 'Executive MBA',
-            href: '/programs/school-of-business-administration/emba',
+            href: '/courses/school-of-business-administration/emba',
           },
           {
             title: 'MBA (1 Year)',
-            href: '/programs/school-of-business-administration/mba-one-year',
+            href: '/courses/school-of-business-administration/mba-one-year',
           },
           {
             title: 'THM',
-            href: '/programs/school-of-business-administration/thm',
+            href: '/courses/school-of-business-administration/thm',
           },
         ],
       },
       {
         title: 'School of Arts and Social Sciences',
-        href: '/programs/school-of-arts-and-social-sciences',
+        href: '/courses/school-of-arts-and-social-sciences',
         children: [
           {
             title: 'BA in English',
-            href: '/programs/school-of-arts-and-social-sciences/ba-english',
+            href: '/courses/school-of-arts-and-social-sciences/ba-english',
           },
           {
             title: 'MA in English',
-            href: '/programs/school-of-arts-and-social-sciences/ma-english',
+            href: '/courses/school-of-arts-and-social-sciences/ma-english',
           },
           {
             title: 'BSS in Economics',
-            href: '/programs/school-of-arts-and-social-sciences/bss-economics',
+            href: '/courses/school-of-arts-and-social-sciences/bss-economics',
           },
           {
             title: 'MSS in Economics',
-            href: '/programs/school-of-arts-and-social-sciences/mss-economics',
+            href: '/courses/school-of-arts-and-social-sciences/mss-economics',
           },
           {
             title: 'MGDS (1 Year)',
-            href: '/programs/school-of-arts-and-social-sciences/mgds-one-year',
+            href: '/courses/school-of-arts-and-social-sciences/mgds-one-year',
           },
           {
             title: 'LLB',
-            href: '/programs/school-of-arts-and-social-sciences/llb',
+            href: '/courses/school-of-arts-and-social-sciences/llb',
           },
           {
             title: 'LLM',
-            href: '/programs/school-of-arts-and-social-sciences/llm',
+            href: '/courses/school-of-arts-and-social-sciences/llm',
           },
         ],
       },
 
       {
-        title: 'School of Science & Engineering',
-        href: '/programs/school-of-science-engineering',
+        title: 'School of Science and Engineering',
+        href: '/courses/school-of-engineering',
         children: [
           {
             title: 'BSc in Civil',
-            href: '/programs/school-of-science-engineering/bsc-civil',
+            href: '/courses/school-of-engineering/bsc-civil',
           },
           {
             title: 'BSc in Computer Science',
-            href: '/programs/school-of-science-engineering/bsc-computer-science',
+            href: '/courses/school-of-engineering/bsc-computer-science',
           },
           {
             title: 'BSc in Electrical and Electronics',
-            href: '/programs/school-of-science-engineering/bsc-electrical-and-electronics',
+            href: '/courses/school-of-engineering/bsc-electrical-and-electronics',
           },
           {
             title: 'BSc in Textile',
-            href: '/programs/school-of-science-engineering/bsc-textile',
+            href: '/courses/school-of-engineering/bsc-textile',
           },
           {
             title: 'BSc in Industrial & Production',
-            href: '/programs/school-of-science-engineering/bsc-industrial-and-production',
+            href: '/courses/school-of-engineering/bsc-industrial-and-production',
           },
           {
             title: 'BSc in Mechanical',
-            href: '/programs/school-of-science-engineering/bsc-mechanical',
+            href: '/courses/school-of-engineering/bsc-mechanical',
           },
         ],
       },
@@ -153,23 +153,23 @@ export const navLinks: INavLink[] = [
         children: [
           {
             title: 'Academic Information & Policies',
-            href: '/programs/miscellaneous/academic-information-policies',
+            href: '/courses/miscellaneous/academic-information-policies',
           },
           {
             title: 'Grading Policy',
-            href: '/programs/miscellaneous/grading-policy',
+            href: '/courses/miscellaneous/grading-policy',
           },
           {
             title: 'Examination Guidelines',
-            href: '/programs/miscellaneous/examination-guidelines',
+            href: '/courses/miscellaneous/examination-guidelines',
           },
           {
             title: 'Student Records',
-            href: '/programs/miscellaneous/student-records',
+            href: '/courses/miscellaneous/student-records',
           },
           {
             title: 'Information about Provisional Certificates',
-            href: '/programs/miscellaneous/information-about-provisional-certificates',
+            href: '/courses/miscellaneous/information-about-provisional-certificates',
           },
         ],
       },
