@@ -1,10 +1,10 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ScrollArea } from "./ui/scroll-area";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 import { getDepartmentNews } from "@/server/get-courses";
+import ClientImage from "./client-image";
 
 const LatestPosts = async ({ department }: { department?: string }) => {
   const data = await getDepartmentNews(department, true);
@@ -19,12 +19,12 @@ const LatestPosts = async ({ department }: { department?: string }) => {
             <li key={index}>
               <div className="flex gap-2">
                 <div className="aspect-video h-[70px] relative">
-                  <Image
+                  <ClientImage
                     className="object-cover"
                     fill
                     src={
                       item.cover_image
-                        ? `/${item.cover_image}`
+                        ? `${item.cover_image}`
                         : "/images/news-portal/1.jpg"
                     }
                     alt={item.title}
