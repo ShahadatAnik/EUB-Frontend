@@ -9,10 +9,7 @@ export default async function Page({
 	params,
 }: {
 	params: Promise<{
-		type: string;
-		program: string;
 		id: string;
-		category: string;
 	}>;
 }) {
 	const { id } = await params;
