@@ -1,42 +1,39 @@
-'use client';
+"use client";
 
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
 import SystemTable, {
   SystemTableColumn,
-} from '@/components/table/system-table';
-import Link from 'next/link';
-import { IDataTable } from '@/types';
-import { formatDate } from '@/lib/utils';
+} from "@/components/table/system-table";
 
-const EventsCalendar = () => {
-  const columns: SystemTableColumn<IDataTable>[] = [
-    {
-      accessorKey: 'description',
-      cell: (value) => (
-        <Link className='underline text-primary font-medium' href={value}>
-          Test Pdf
-        </Link>
-      ),
-    },
-    {
-      accessorKey: 'updated_at',
-      cell: (value, row) => formatDate(value || row.created_at),
-    },
-  ];
+import { useEventCalendar } from "@/app/clubs-societies/_const/query";
+import { formatDate } from "@/lib/utils";
+import { IDataTable } from "@/types";
 
-  const data = [
-    {
-      description: '/pdf/test.pdf',
-      updated_at: '2021-09-01',
-    },
-    {
-      description: '/pdf/test.pdf',
-      updated_at: '2021-09-01',
-    },
-  ];
+const columns: SystemTableColumn<IDataTable>[] = [
+	{
+		accessorKey: "description",
+		cell: (value, row) => {
+			return (
+				<Link
+					className="underline text-primary font-medium"
+					href={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${row.file}`}
+				>
+					{value}
+				</Link>
+			);
+		},
+	},
+	{
+		accessorKey: "updated_at",
+		cell: (value, row) => formatDate(value || row.created_at),
+	},
+];
 
-  return <SystemTable data={data} columns={columns} />;
+const Content: React.FC<{ initialData: IDataTable[] }> = ({ initialData }) => {
+	const { data } = useEventCalendar({ initialData });
+	return <SystemTable data={data} columns={columns} />;
 };
 
-export default EventsCalendar;
+export default Content;
