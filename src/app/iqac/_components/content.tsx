@@ -1,6 +1,6 @@
 "use client";
 
-import ContentLayout from "@/app/courses/miscellaneous/_components/content-layout";
+import ContentLayout from "@/app/courses/_components/content-layout";
 import { Suspense } from "react";
 import accordions from "../_const/accordion-data";
 
