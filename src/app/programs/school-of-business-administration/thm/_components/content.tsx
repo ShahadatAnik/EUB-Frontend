@@ -8,7 +8,6 @@ const Content = () => {
   return (
     <Suspense>
       <ContentLayout
-        showQuickLinks={false}
         accordions={accordions}
         bannerImage={{
           src: '/images/cse.jpg',
