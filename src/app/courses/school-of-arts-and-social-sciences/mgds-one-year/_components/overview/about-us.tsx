@@ -5,57 +5,35 @@ import ContentWrapper from '../content-wrapper';
 const AboutUs = () => {
   return (
     <ContentWrapper title='About Us'>
-      <div className='text-center'>
-        <h3 className='text-xl font-semibold text-primary'>
-          Bachelor of Science in Computer Science and Engineering (CSE){' '}
-        </h3>
-
-        <p className='text-sm  text-muted-foreground mt-1'>
-          Department of Computer Science and Engineering (CSE), Science and
-          Engineering
-        </p>
-      </div>
-
-      <div className='mt-4'>
-        <h6 className='text-lg font-semibold'>Objectives and Goals</h6>
-        <p className='mt-1'>
-          The increasing needs for computer science and engineers in worldwide
-          job markets need not to be overemphasized. To keep pace with the
-          advancement in computer science and engineering and provide emphasis
-          in fulfilling the needs, it is essential that efforts to be made both
-          in the public and private sectors to develop human resources in this
-          particular field in Bangladesh
-        </p>
-
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>
-            The prime objective in establishing the Computer Science and
-            Engineering Department at the European University of Bangladesh is
-            to make a concerted effort towards achieving the goal to provide
-            quality education of 4 years duration at the undergraduate level.
-          </li>
-          <li>
-            To give students of undergraduate programs a rigorous and
-            comprehensive academic training on both the fundamental and advanced
-            aspects of Computer Science and Engineering (CSE).
-          </li>
-          <li>
-            To make provisions for research and development and dissemination of
-            knowledge in the field of Computer Science and Engineering.
-          </li>
-        </ul>
-
-        <p className='mt-2'>
-          A student in CSE must not only have a sound basis in the fundamental
-          of Engineering but also should be aware of socio-economic problems of
-          the country. Therefore, courses in science, humanities, economics and
-          management are also included in the curricula. The last two semesters
-          will offer the students a number of alternatives to choose from and to
-          specialize in a particular field. Theory and Sessional work shall be
-          supplemented by Project/Thesis work, seminars and visits to relevant
-          research and industrial organization.
-        </p>
-      </div>
+      <p>
+        The Master of Governance and Development Studies (MGDS) at the European
+        University of Bangladesh (EUB) offers an innovative and challenging
+        curriculum focused on development studies, an increasingly vital field
+        that addresses the economic, social, and political challenges faced by
+        developing countries, with a special emphasis on Bangladesh. The program
+        is designed to foster high-quality research on key development issues,
+        aiming to contribute to poverty alleviation and the broader development
+        goals of the country.
+        <br />
+        <br />
+        The MGDS program attracts students and scholars who are committed to
+        interdisciplinary approaches, combining both theoretical and
+        methodological perspectives on social and economic change. The
+        Department promotes independent analysis of development challenges and
+        works to advance public understanding of these issues, equipping
+        students with the knowledge and skills needed to effectively address
+        complex problems related to governance and development.
+        <br />
+        <br />
+        In addition, the program creates a dynamic and multicultural
+        environment, encouraging open dialogue and the exchange of experiences
+        among students and faculty members. The diverse backgrounds and
+        perspectives of students enrich the learning experience, promoting
+        collaborative learning and professional competence in tackling
+        development challenges. By fostering such an environment, the program
+        prepares students to become leaders in the field of governance and
+        development.
+      </p>
     </ContentWrapper>
   );
 };

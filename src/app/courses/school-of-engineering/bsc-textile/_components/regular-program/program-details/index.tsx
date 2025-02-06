@@ -1,92 +1,82 @@
 import React from 'react';
 
 import ContentWrapper from '../../content-wrapper';
-import TuitionFeesTable from './tuition-fees-table';
-import PerformanceCriteriaTable from './performance-criteria-table';
 
 const ProgramDetails = () => {
   return (
     <ContentWrapper className='space-y-8' title='Program Details'>
-      <div>
-        <h6 className='text-lg font-semibold'>Semesters</h6>
-        <p className='mt-1'>
-          There will be three semesters in an academic year, which are namely:
-        </p>
+      <p>
+        The B.Sc. in Textile Engineering program at the European University of
+        Bangladesh (EUB) is an established field of study designed to meet the
+        growing demands of Bangladesh’s thriving textile industry. This
+        four-year, 12-semester program is open to students who have completed
+        HSC (Science) or a Diploma in Textile or Chemical Engineering.
+        <br />
+        <br />
+        With Bangladesh’s textile sector expanding rapidly to support both
+        domestic needs and the flourishing export market, this program aims to
+        produce skilled professionals equipped to enhance production efficiency
+        and product quality. The curriculum is designed to develop
+        students&apos; technical expertise, boost their confidence, and prepare
+        them for careers as textile technologists and industry leaders, both
+        nationally and internationally.
+        <br />
+        <br />
+        The program follows a four-year academic structure, with each year
+        divided into three semesters of 15 weeks each, and the medium of
+        instruction is English. The academic session for all undergraduate
+        programs spans four years, with each academic year divided into three
+        semesters. Each semester lasts 15 weeks, including 13 weeks of classroom
+        instruction, a one-week preparatory break for examinations, and one week
+        for exams.
+      </p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>Spring Semester; (Duration: January to April)</li>
-          <li>Summer Semester; (Duration: May to August)</li>
-          <li>Fall Semester; (Duration: September to December)</li>
-        </ul>
-
-        <p className='mt-2'>
-          Each semester will be of 15 weeks duration with 13 weeks for class
-          teaching, one-week break for examination preparation and one week for
-          examinations.
-        </p>
-      </div>
-      <div>
-        <h6 className='text-lg font-semibold'>Duration of the Program</h6>
-        <p className='mt-1'>
-          The duration for B.Sc. in Computer Science and Engineering program
-          will be four years divided into 12 semesters and Diploma Holders will
-          be 10 semesters.
-        </p>
-      </div>
-      <div>
-        <h6 className='text-lg font-semibold'>Credit Hour</h6>
-        <p className='mt-1'>
-          Three credit hours are assigned to a theory course i.e. there are
-          three hours lecture in a week. A class period for theory courses will
-          have a minimum duration of 50 minutes.
-          <br />
-          One credit of lab course will have a minimum of 24 -hours of actual
-          lab works per semester and each lab class will have a minimum duration
-          of 1.5 -hours.
-        </p>
-      </div>
       <div>
         <h6 className='text-lg font-semibold'>
-          Course load / Conditions applicable for enrolling students of CSE
-          Program
+          The academic year consists of three semesters:
+        </h6>
+        <ul className='mt-2 list-disc pl-6 space-y-2'>
+          <li>Spring Semester (January – April)</li>
+          <li>Summer Semester (May – August) Summer Semester (May – August)</li>
+          <li>Fall Semester (September – December)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 className='text-lg font-semibold'>
+          Each semester spans 17 weeks, which includes:
+        </h6>
+        <ul className='mt-2 list-disc pl-6 space-y-2'>
+          <li>12 weeks of class lectures</li>
+          <li>1 week for examination preparation</li>
+          <li>3 weeks for examinations</li>
+          <li>1 week for government and other holidays</li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 className='text-lg font-semibold'>
+          The B.Sc. in Civil Engineering program is four years long, divided
+          into 12 semesters, with the following credit hour distribution:
         </h6>
         <ul className='mt-2 list-disc pl-6 space-y-2'>
           <li>
-            A full time student can register in a semester for a maximum of 15
-            credits.
+            Theory Courses: Each credit hour consists of a 50-minute lecture per
+            week.
           </li>
           <li>
-            Part-time student can register in a semester for a maximum of 9
-            credits.
+            Sessional/Laboratory Courses: A 1.5-credit course requires three
+            hours of lab work or demonstrations per week.
           </li>
         </ul>
       </div>
-      <PerformanceCriteriaTable />
 
-      <div>
-        <h6 className='text-lg font-semibold'>Tuition Fee Structure</h6>
-        <p className='mt-1'>
-          Total cost of the program ranges from Taka 9,25,000 to Taka 10,25,000,
-          depending on the standing of the student at the time of admission. All
-          fees are subject to change. Please check with the BBA Program Office
-          for the most recent fee structure.
-        </p>
-
-        <div className='mt-4'>
-          <TuitionFeesTable />
-        </div>
-
-        <ul className='mt-4 list-disc pl-6 space-y-2'>
-          <li>
-            Please note that all students must pay a non-refundable, one time
-            only admission fee Admission Fee 25,000/-
-          </li>
-          <li>
-            Each student has to pay 10,000/-as Caution money (Refundable) during
-            the time of admission
-          </li>
-        </ul>
-      </div>
+      <p>
+        Through this structured and dynamic program, the Department of Civil
+        Engineering at EUB ensures that graduates are technically proficient,
+        innovative, and well-prepared to contribute to the ever-evolving field
+        of civil engineering.
+      </p>
     </ContentWrapper>
   );
 };

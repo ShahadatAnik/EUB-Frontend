@@ -7,12 +7,6 @@ import nanoid from '@/lib/nanoid';
 import getDateTime from '@/lib/getDateTime';
 
 export async function createAdmissionForm(data: IAdmissionForm) {
-  console.log({
-    ...data,
-    date_of_birth: format(data.date_of_birth, 'yyyy-MM-dd'),
-    created_at: getDateTime(),
-    uuid: nanoid(),
-  });
   const res = await fetch(
     `${secret.apiBaseUrl}/v1/portfolio/online-admission`,
     {
