@@ -1,22 +1,25 @@
-"use client";
 
-import { usePathname } from "next/navigation";
 import React from "react";
 
 import PageHeader from "@/components/page-header";
-import { useOfficeEntry, useOfficesWitOutInitialData } from "../_const/query";
+import { getOfficeEntry, getOffices } from "@/server/getOffices";
 import Content from "./_components/content";
 
-const Page = () => {
-	const pathName = usePathname();
-	const category = pathName.split("/")[3];
+export default async function Page({
+	params,
+}: {
+	params: Promise<{
+		type: string;
+		program: string;
+		id: string;
+		category: string;
+	}>;
+}) {
+	const { id } = await params;
+	const data = await getOfficeEntry(id);
+	const listOfOffices = await getOffices();
+	const title = listOfOffices?.find((item) => item.category === id)?.title;
 
-	const { data: listOfOffices } = useOfficesWitOutInitialData();
-	const { data } = useOfficeEntry(category as string);
-
-	const title = listOfOffices?.find(
-		(item) => `/authorities/offices/${item.category}` === pathName
-	)?.title;
 	return (
 		<>
 			<PageHeader title={title || "Office Details"} />
@@ -27,6 +30,4 @@ const Page = () => {
 			/>
 		</>
 	);
-};
-
-export default Page;
+}
