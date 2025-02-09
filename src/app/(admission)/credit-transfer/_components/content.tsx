@@ -21,7 +21,7 @@ const Content = () => {
             transcripts from previously attended colleges and universities must
             be furnished with the application for admission. Failure to provide
             either will disqualify the applicant. To be official, transcripts
-            must be sent directly from each college attended to the NSU
+            must be sent directly from each college attended to the EUB
             Registrar&apos;s Office. Hand carried transcripts and transcripts
             sent by students are unofficial, even though they may carry the
             college seal or signatures that are placed on official records.
@@ -31,16 +31,12 @@ const Content = () => {
       <SectionContent title='Credit Transfer'>
         <ul className='list-disc list-inside'>
           <li>
-            Candidate must sit for the admission test (if local candidate) or
-            admission waived (International or waiver policy).
-          </li>
-          <li>
             Transcripts with Courses Outline from all previously attended
             institutions must be submitted to the department.
           </li>
           <li>
             Only credits on which a student has earned a grade of C or above
-            will be transferable to NSU.
+            will be transferable to EUB.
           </li>
           <li>
             For purposes of transferring credits, Directors of programs and
@@ -49,13 +45,13 @@ const Content = () => {
           </li>
           <li>
             Transferred credits and grades are not included in calculating the
-            GPA at NSU.
+            GPA at EUB.
           </li>
         </ul>
 
         <small className='text-destructive block font-medium mt-6'>
           Note: A student may transfer a maximum of 60 credits earned at
-          previously attended colleges and universities toward NSU degrees.
+          previously attended colleges and universities toward EUB degrees.
         </small>
       </SectionContent>
     </div>

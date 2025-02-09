@@ -300,148 +300,94 @@ const faqData: IFAQ[] = [
     ),
   },
   {
-    question:
-      "I've submitted the application form. Now I want to change the program. What will be the procedure?",
-    answer: (
-      <>
-        Candidates must email{' '}
-        <a href='mailto:admissions@northsouth.edu'>admissions@northsouth.edu</a>{' '}
-        with their name, confirmation code, and details about the new program
-        they wish to select.
-      </>
-    ),
-  },
-  {
-    question: 'Which program should I choose at NSU?',
-    answer: (
-      <>
-        It completely depends on the student’s interests. NSU prioritizes all
-        programs equally. All faculty members have completed their master&apos;s
-        from esteemed foreign institutions.
-      </>
-    ),
-  },
-  {
     question: 'When will my original certificates be verified?',
     answer: (
-      <>
+      <p>
         During the verification process, candidates must provide the original
         copies of SSC & HSC or &apos;O&apos; & &apos;A&apos; level results for
         verification.
-      </>
+      </p>
     ),
   },
   {
     question:
-      'What will be my career path after completing an undergraduate program at North South University?',
+      'What will be my career path after completing an undergraduate program at European University of Bangladesh?',
     answer: (
-      <>
-        Graduates from NSU are academically qualified to face challenges in
+      <p>
+        Graduates from EUB are academically qualified to face challenges in
         their professional lives.
-      </>
+      </p>
     ),
   },
   {
-    question: 'How can I get admission information about NSU?',
+    question: 'How can I get admission information about EUB?',
     answer: (
-      <>
-        Admission information is available on the NSU admission website:{' '}
-        <a href='http://admissions.northsouth.edu'>admissions.northsouth.edu</a>
-        . Alternatively, you can call 880-2-55668200 ext. 4001 or email{' '}
-        <a href='mailto:admissions@northsouth.edu'>admissions@northsouth.edu</a>
-        .
-      </>
-    ),
-  },
-  {
-    question:
-      'How many times does the admission test take place in a year at NSU?',
-    answer: (
-      <>The admission test is held twice a year, once for each semester.</>
-    ),
-  },
-  {
-    question:
-      'I just finished my A-Levels exam, and my result will be published after the admission test takes place. Can I sit for the test?',
-    answer: (
-      <>
-        A-Levels (appeared) candidates may sit for the admission test based on
-        an undertaking that they will only be admitted after passing the A-Level
-        exam and presenting the required minimum GPA.
-      </>
-    ),
-  },
-  {
-    question: 'What is the procedure to waive the admission test?',
-    answer: (
-      <>
-        Admission test waivers are available for eligible candidates with:
-        <ul>
-          <li>SAT score of 1150 (1600 scale) or 1700 (2400 scale)</li>
-          <li>IELTS score of 7.0</li>
-          <li>
-            TOEFL scores: Paper-Based Test (PBT) 563, Computer-Based Test (CBT)
-            223, or Internet-Based Test (IBT) 85
-          </li>
-        </ul>
-        Note: Candidates who waive the admission test with IELTS or TOEFL scores
-        cannot apply for BS Economics, BPharm, or engineering programs (B.Arch.,
-        CSE, EEE, CEE).
-      </>
-    ),
-  },
-  {
-    question: 'Where can I get the admission form?',
-    answer: (
-      <>
-        Candidates can access the admission form online at{' '}
-        <a href='http://admissions.northsouth.edu'>admissions.northsouth.edu</a>
-        .
-      </>
+      <p>
+        Admission information is available on the EUB admission website:{' '}
+        <Link
+          target='_blank'
+          className='text-primary underline'
+          href={'/admission-information'}
+        >
+          Admission Information.
+        </Link>
+        <br />
+        <br />
+        Candidate has to fill up the application form online. It is advisable
+        for the candidate to have a signature and picture scanned copy before
+        applying. For online application click{'   '}
+        <Link
+          target='_blank'
+          className='text-primary underline'
+          href={'/online-admission'}
+        >
+          Online Admission
+        </Link>
+      </p>
     ),
   },
   {
     question:
-      'What should I do if I face problems with the admission form submission?',
+      'What should I do if I face problems with the application submission?',
     answer: (
-      <>
-        Candidates can call the NSU Office of Admissions at 880-2-55668200 ext.
-        4001 or email{' '}
-        <a href='mailto:admissions@northsouth.edu'>admissions@northsouth.edu</a>{' '}
-        for assistance.
-      </>
+      <p>
+        Admission information is available on the EUB admission website:{' '}
+        <Link
+          target='_blank'
+          className='text-primary underline'
+          href={'/admission-information'}
+        >
+          Admission Information.
+        </Link>
+      </p>
     ),
   },
   {
     question: 'How to pay the admission form fee after applying?',
     answer: (
-      <>
-        Admission form fees can be paid through:
-        <ul>
-          <li>bKash, DBBL mobile banking (Rocket), VISA, MasterCard</li>
-          <li>
-            Payment at any branch of the following banks:
-            <ul>
-              <li>Southeast Bank</li>
-              <li>One Bank</li>
-              <li>Mutual Trust Bank</li>
-              <li>UCBL</li>
-            </ul>
-          </li>
-        </ul>
-        Candidates must carry their application code while paying.
-      </>
+      <p>
+        Admission information is available on the EUB admission website:{' '}
+        <Link
+          target='_blank'
+          className='text-primary underline'
+          href={'/admission-information'}
+        >
+          Admission Information.
+        </Link>
+        <br />
+        <br />
+        Admission fees can be paid through bKash on this number: 01628-747-488.
+      </p>
     ),
   },
   {
     question:
       'I made a mistake while filling out the admission form. What should I do?',
     answer: (
-      <>
-        Candidates should call 880-2-55668200 ext. 4001 or email{' '}
-        <a href='mailto:admissions@northsouth.edu'>admissions@northsouth.edu</a>{' '}
-        with details of the issue to get assistance.
-      </>
+      <p>
+        Candidates must email the Admissions Office of EUB with their name and
+        details to get assistance.
+      </p>
     ),
   },
   {
@@ -450,7 +396,7 @@ const faqData: IFAQ[] = [
       <>
         Candidates must bring the following original documents along with
         photocopies:
-        <ul>
+        <ul className='mt-1 pl-8 list-disc  space-y-1'>
           <li>
             SSC & HSC or &apos;O&apos; & &apos;A&apos; level result documents
             (certificates and mark sheets)
@@ -467,54 +413,27 @@ const faqData: IFAQ[] = [
     ),
   },
   {
-    question:
-      'Can diploma students apply for the undergraduate admission test?',
+    question: 'How many years of study gap does EUB accept?',
     answer: (
-      <>
-        Diploma students should contact the admissions office at 880-2-55668200
-        ext. 5002, 5004, or 4001 for eligibility details.
-      </>
-    ),
-  },
-  {
-    question: 'How many years of study gap does NSU accept?',
-    answer: (
-      <>
-        <ul>
-          <li>
-            General programs: Study gaps exceeding 5 years are not accepted.
-          </li>
-          <li>
-            Pharmacy program: Study gaps exceeding 2 years are not accepted.
-          </li>
-        </ul>
-      </>
+      <ul className='mt-1 pl-8 list-disc  space-y-1'>
+        <li>
+          <strong>General programs:</strong> Study gaps exceeding 5 years are
+          not accepted.
+        </li>
+        <li>
+          <strong>Pharmacy program:</strong> Study gaps exceeding 2 years are
+          not accepted.
+        </li>
+      </ul>
     ),
   },
   {
     question: 'What should a fresher bring for advising (course registration)?',
     answer: (
-      <>
+      <p>
         Freshers must bring their offer letter and bank slip for advising
         (course registration).
-      </>
-    ),
-  },
-  {
-    question: 'What are the Pharmacy professional requirements?',
-    answer: (
-      <>
-        For BPharm, candidates must have:
-        <ul>
-          <li>
-            Physics, Chemistry, and Biology with a minimum ‘A’ grade in
-            SSC/Equivalent and HSC/Equivalent
-          </li>
-          <li>
-            Physics, Chemistry, and Biology with a minimum ‘B’ grade in A-Levels
-          </li>
-        </ul>
-      </>
+      </p>
     ),
   },
 ];
