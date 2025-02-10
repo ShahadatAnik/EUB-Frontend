@@ -1,12 +1,12 @@
-"use server";
+'use server';
 
-import { secret } from "@/config/secret";
+import { secret } from '@/config/secret';
 import {
   IDataTable,
   IDepartmentTeacher,
   INewsPortal,
   IPagination,
-} from "@/types";
+} from '@/types';
 
 type getAllNewsEventsProps = {
   data: INewsPortal[];
@@ -18,7 +18,7 @@ export const getRegularClassRoutine = async (
   department: string
 ): Promise<IDataTable[]> => {
   const res = await fetch(
-    `${secret.apiBaseUrl}/v1/portfolio/routine?portfolio_department=${department}&program=regular&type=class_routine `
+    `${secret.apiBaseUrl}/portfolio/routine?portfolio_department=${department}&program=regular&type=class_routine `
   );
   return await res.json();
 };
@@ -26,7 +26,7 @@ export const getRegularExamSchedule = async (
   department: string
 ): Promise<IDataTable[]> => {
   const res = await fetch(
-    `${secret.apiBaseUrl}/v1/portfolio/routine?portfolio_department=${department}&program=regular&type=exam_schedule`
+    `${secret.apiBaseUrl}/portfolio/routine?portfolio_department=${department}&program=regular&type=exam_schedule`
   );
   return await res.json();
 };
@@ -35,7 +35,7 @@ export const getEveningClassRoutine = async (
   department: string
 ): Promise<IDataTable[]> => {
   const res = await fetch(
-    `${secret.apiBaseUrl}/v1/portfolio/routine?portfolio_department=${department}&program=evening&type=class_routine `
+    `${secret.apiBaseUrl}/portfolio/routine?portfolio_department=${department}&program=evening&type=class_routine `
   );
   return await res.json();
 };
@@ -43,7 +43,7 @@ export const getEveningExamSchedule = async (
   department: string
 ): Promise<IDataTable[]> => {
   const res = await fetch(
-    `${secret.apiBaseUrl}/v1/portfolio/routine?portfolio_department=${department}&program=evening&type=exam_schedule`
+    `${secret.apiBaseUrl}/portfolio/routine?portfolio_department=${department}&program=evening&type=exam_schedule`
   );
   return await res.json();
 };
@@ -52,7 +52,7 @@ export const getDepartmentTeachers = async (
   department: string
 ): Promise<IDepartmentTeacher[]> => {
   const res = await fetch(
-    `${secret.apiBaseUrl}/v1/portfolio/department-teachers?portfolio_department=${department}`
+    `${secret.apiBaseUrl}/portfolio/department-teachers?portfolio_department=${department}`
   );
   return await res.json();
 };
@@ -63,8 +63,8 @@ export const getDepartmentNews = async (
 ): Promise<getAllNewsEventsProps> => {
   const res = await fetch(
     department
-      ? `${secret.apiBaseUrl}/v1/portfolio/news?department_name=${department}&latest=${latest}`
-      : `${secret.apiBaseUrl}/v1/portfolio/news?latest=${latest}`
+      ? `${secret.apiBaseUrl}/portfolio/news?department_name=${department}&latest=${latest}`
+      : `${secret.apiBaseUrl}/portfolio/news?latest=${latest}`
   );
   return await res.json();
 };

@@ -1,5 +1,6 @@
-import { SystemTableColumn } from "@/components/table/system-table";
-import { formatDate } from "@/lib/utils";
+import CellLink from '@/components/table/_components/cell-link';
+import { SystemTableColumn } from '@/components/table/system-table';
+import { formatDate } from '@/lib/utils';
 import {
   getDepartmentNews,
   getDepartmentTeachers,
@@ -7,24 +8,20 @@ import {
   getEveningExamSchedule,
   getRegularClassRoutine,
   getRegularExamSchedule,
-} from "@/server/get-courses";
-import { IDataTable, IDepartmentTeacher, INewsPortal } from "@/types";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+} from '@/server/get-courses';
+import { IDataTable, IDepartmentTeacher, INewsPortal } from '@/types';
+
+import { useEffect, useState } from 'react';
 
 const columns: SystemTableColumn<any>[] = [
   {
-    accessorKey: "description",
-    header: "Description",
-    cell: (value, row) => (
-      <Link href={row.file} className="underline text-primary font-medium">
-        {value}
-      </Link>
-    ),
+    accessorKey: 'description',
+    header: 'Description',
+    cell: (value, row) => <CellLink text={value} href={row.file} />,
   },
   {
-    accessorKey: "updatedAt",
-    header: "Updated At",
+    accessorKey: 'updatedAt',
+    header: 'Updated At',
     cell: (value, row) => formatDate(value || row.created_at),
   },
 ];
@@ -38,7 +35,7 @@ export const useGetEveningClassRoutine = (department: string) => {
         const result = await getEveningClassRoutine(department);
         setData(result);
       } catch (error) {
-        console.error("Error fetching class routine:", error);
+        console.error('Error fetching class routine:', error);
       }
     };
 
@@ -57,7 +54,7 @@ export const useGetEveningExamSchedule = (department: string) => {
         const result = await getEveningExamSchedule(department);
         setData(result);
       } catch (error) {
-        console.error("Error fetching class routine:", error);
+        console.error('Error fetching class routine:', error);
       }
     };
 
@@ -76,7 +73,7 @@ export const useGetRegularClassRoutine = (department: string) => {
         const result = await getRegularClassRoutine(department);
         setData(result);
       } catch (error) {
-        console.error("Error fetching class routine:", error);
+        console.error('Error fetching class routine:', error);
       }
     };
 
@@ -95,7 +92,7 @@ export const useGetRegularExamSchedule = (department: string) => {
         const result = await getRegularExamSchedule(department);
         setData(result);
       } catch (error) {
-        console.error("Error fetching class routine:", error);
+        console.error('Error fetching class routine:', error);
       }
     };
 
@@ -114,7 +111,7 @@ export const useGetDepartmentTeachers = (department: string) => {
         const result = await getDepartmentTeachers(department);
         setData(result);
       } catch (error) {
-        console.error("Error fetching class routine:", error);
+        console.error('Error fetching class routine:', error);
       }
     };
 
@@ -133,7 +130,7 @@ export const useGetDepartmentNews = (department: string) => {
         const result = await getDepartmentNews(department);
         setData(result.data);
       } catch (error) {
-        console.error("Error fetching class routine:", error);
+        console.error('Error fetching class routine:', error);
       }
     };
 
