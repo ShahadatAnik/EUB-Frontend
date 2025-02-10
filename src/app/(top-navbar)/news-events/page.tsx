@@ -20,7 +20,7 @@ export default async function Page({ searchParams }: searchParamsProps) {
   const page = Number(params?.page ? params?.page : 1);
 
   const data = await getNewsEvents(limit, page);
-  console.log(data);
+
   return (
     <div>
       <PageHeader title="News & Events" image="/images/bg-2.jpg" />

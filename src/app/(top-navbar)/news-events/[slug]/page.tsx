@@ -15,7 +15,6 @@ export default async function Page({
   const slug = (await params).slug;
   const data = await getNewsById(slug);
 
-  console.log(`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${data?.cover_image}`);
   return (
     <div>
       <PageHeader
