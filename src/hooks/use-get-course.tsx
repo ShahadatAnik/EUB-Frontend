@@ -1,4 +1,4 @@
-import CellLink from '@/components/table/_components/cell-link';
+import ClientPdfLink from '@/components/client-pdf';
 import { SystemTableColumn } from '@/components/table/system-table';
 import { formatDate } from '@/lib/utils';
 import {
@@ -17,7 +17,7 @@ const columns: SystemTableColumn<any>[] = [
   {
     accessorKey: 'description',
     header: 'Description',
-    cell: (value, row) => <CellLink text={value} href={row.file} />,
+    cell: (value, row) => <ClientPdfLink text={value} href={row.file} />,
   },
   {
     accessorKey: 'updatedAt',

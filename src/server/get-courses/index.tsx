@@ -18,7 +18,7 @@ export const getRegularClassRoutine = async (
   department: string
 ): Promise<IDataTable[]> => {
   const res = await fetch(
-    `${secret.apiBaseUrl}/portfolio/routine?portfolio_department=${department}&program=regular&type=class_routine `
+    `${secret.apiBaseUrl}/portfolio/routine?portfolio_department=${department}&program=regular&type=class_routine`
   );
   return await res.json();
 };

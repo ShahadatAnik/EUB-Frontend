@@ -9,7 +9,8 @@ const NoticeCard: React.FC<{ data: IDataTable }> = ({ data }) => {
   return (
     <div className='py-3 border-b space-y-1'>
       <Link
-        href={data.file}
+        target='_blank'
+        href={process.env.NEXT_PUBLIC_IMAGE_BASE_URL + data.file}
         className='text-lg text-primary font-semibold hover:underline'
       >
         {data.description}
