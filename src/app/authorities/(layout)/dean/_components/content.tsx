@@ -18,10 +18,10 @@ const Content: React.FC<{ data: IAuthoritiesDean }> = ({ data }) => {
 
 				<div className="flex-1 p-8">
 					<h4 className="text-2xl font-semibold">
-						{data.personal_info.title}
+						{data.personal_info.name}
 					</h4>
 					<p className="mt-2 text-muted-foreground">
-						{data.personal_info.name}
+						{data.personal_info.title}
 					</p>
 
 					<p className="mt-2 text-muted-foreground">

@@ -13,17 +13,17 @@ const Content: React.FC<{ data: IAuthoritiesDirectorCoordination }> = ({
 				<div className="h-[400px] aspect-square relative">
 					<ClientImage
 						fill
-						src={`{data?.personal_info.profile_image}`}
+						src={`${data?.personal_info.profile_image}`}
 						alt={`${data.personal_info.name}'s profile picture`}
 					/>
 				</div>
 
 				<div className="flex-1 p-8">
 					<h4 className="text-2xl font-semibold">
-						{data.personal_info.title}
+						{data.personal_info.name}
 					</h4>
 					<p className="mt-2 text-muted-foreground">
-						{data.personal_info.name}
+						{data.personal_info.title}
 					</p>
 
 					<p className="mt-2 text-muted-foreground">
