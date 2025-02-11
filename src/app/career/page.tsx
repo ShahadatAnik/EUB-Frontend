@@ -4,11 +4,22 @@ import PageContainer from '@/components/page-container';
 import Content from './_components/content';
 import { getJobCirculars } from '@/server/getJobCirculars';
 
-export default async function Page() {
+export default async function Page(props: {
+  searchParams?: Promise<{
+    q?: string;
+    page?: string;
+    limit?: string;
+  }>;
+}) {
+  const searchParams = await props.searchParams;
+  const q = searchParams?.q || '';
+  const page = Number(searchParams?.page) || 1;
+  const limit = Number(searchParams?.limit) || 10;
+
   const data = await getJobCirculars({
-    page: 1,
-    limit: 10,
-    q: '',
+    page,
+    limit,
+    q,
   });
 
   return (

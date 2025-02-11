@@ -14,7 +14,10 @@ export const getJobCirculars = async ({
   q = '',
 }): Promise<IJobCircularResponse> => {
   const res = await fetch(
-    `${secret.apiBaseUrl}/portfolio/job-circular?page=${page}&limit=${limit}&q=${q}`
+    `${secret.apiBaseUrl}/portfolio/job-circular?page=${page}&limit=${limit}&q=${q}`,
+    {
+      cache: 'no-store',
+    }
   );
   return await res.json();
 };
