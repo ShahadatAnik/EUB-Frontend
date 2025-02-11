@@ -17,12 +17,8 @@ import SystemTable, {
 } from '@/components/table/system-table';
 import { ICareer } from '@/types';
 import PdfDownloadButton from '@/components/pdf-download-btn';
-import {
-  getJobCirculars,
-  IJobCircularResponse,
-} from '@/server/getJobCirculars';
-import { useQuery } from '@tanstack/react-query';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { IJobCircularResponse } from '@/server/getJobCirculars';
+import { Suspense } from 'react';
 
 const columns: SystemTableColumn<ICareer>[] = [
   {
@@ -59,61 +55,61 @@ const columns: SystemTableColumn<ICareer>[] = [
 ];
 
 const Content: React.FC<IJobCircularResponse> = (res) => {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  // const router = useRouter();
+  // const searchParams = useSearchParams();
 
-  const { data, isLoading } = useQuery({
-    queryKey: ['job-circulars'],
-    queryFn: async () =>
-      await getJobCirculars({
-        limit: searchParams.get('limit')
-          ? Number(searchParams.get('limit'))
-          : 10,
-        page: searchParams.get('page') ? Number(searchParams.get('page')) : 1,
-        q: searchParams.get('q') || '',
-      }),
-  });
+  // const { data } = useQuery({
+  //   queryKey: ['job-circulars'],
+  //   queryFn: async () =>
+  //     await getJobCirculars({
+  //       limit: searchParams.get('limit')
+  //         ? Number(searchParams.get('limit'))
+  //         : 10,
+  //       page: searchParams.get('page') ? Number(searchParams.get('page')) : 1,
+  //       q: searchParams.get('q') || '',
+  //     }),
+  // });
 
-  console.log({ data });
-
-  if (isLoading) return <div>Loading...</div>;
+  // console.log({ data });
 
   return (
-    <div className='space-y-8'>
-      <div className='flex justify-center'>
-        <Input
-          type='search'
-          placeholder='Search for job title, faculty, category, location'
-          className='w-[400px]'
-          onChange={(e) => {
-            router.replace(`/career?q=${e.target.value}`, { scroll: false });
-          }}
-        />
-      </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className='space-y-8'>
+        <div className='flex justify-center'>
+          <Input
+            type='search'
+            placeholder='Search for job title, faculty, category, location'
+            className='w-[400px]'
+            // onChange={(e) => {
+            //   router.replace(`/career?q=${e.target.value}`, { scroll: false });
+            // }}
+          />
+        </div>
 
-      <SystemTable data={data?.data || []} columns={columns} />
+        <SystemTable data={res.data} columns={columns} />
 
-      <div className='flex justify-center'>
-        <Pagination>
-          <PaginationContent>
-            <PaginationItem>
-              <PaginationPrevious href='#' />
-            </PaginationItem>
-            {Array.from({ length: res.pagination.total_page }, (_, i) => (
-              <PaginationLink key={i} href={`career?page=${i + 1}`}>
-                {i + 1}
-              </PaginationLink>
-            ))}
-            <PaginationItem>
-              <PaginationEllipsis />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationNext href='#' />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
+        <div className='flex justify-center'>
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious href='#' />
+              </PaginationItem>
+              {Array.from({ length: res.pagination.total_page }, (_, i) => (
+                <PaginationLink key={i} href={`career?page=${i + 1}`}>
+                  {i + 1}
+                </PaginationLink>
+              ))}
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext href='#' />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 };
 
