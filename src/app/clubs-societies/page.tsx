@@ -12,7 +12,6 @@ import EventsCalendar from "./_components/events-calendar";
 const Page = async () => {
 	const data = await getEventCalender();
 	const faculties: IClubAndSociety[] = await getFaculties();
-	console.log(data);
 	faculties.push({
 		label: "Documents and Forms",
 		value: "Events Calendar",
@@ -22,7 +21,6 @@ const Page = async () => {
 	for (const faculty of faculties) {
 		if (faculty.value === "events-calendar") continue;
 		const clubs: IClub[] = await getClubs(faculty.label);
-		console.log(clubs);
 
 		faculty.clubs = clubs?.map((club) => ({
 			title: club.name,
