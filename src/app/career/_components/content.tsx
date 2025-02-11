@@ -10,13 +10,15 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 
-import { Input } from '@/components/ui/input';
-
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
 import { ICareer } from '@/types';
 import PdfDownloadButton from '@/components/pdf-download-btn';
+import { IJobCircularResponse } from '@/server/getJobCirculars';
+
+import { useSearchParams } from 'next/navigation';
+import Search from '@/components/search';
 
 const columns: SystemTableColumn<ICareer>[] = [
   {
@@ -52,18 +54,17 @@ const columns: SystemTableColumn<ICareer>[] = [
   },
 ];
 
-const Content: React.FC<{ initialData: ICareer[] }> = ({ initialData }) => {
+const Content: React.FC<IJobCircularResponse> = (res) => {
+  const searchParams = useSearchParams();
+  const q = searchParams.get('q');
+
   return (
     <div className='space-y-8'>
       <div className='flex justify-center'>
-        <Input
-          type='search'
-          placeholder='Search for job title, faculty, category, location'
-          className='w-[400px]'
-        />
+        <Search placeholder='Search for job title, faculty, category, location' />
       </div>
 
-      <SystemTable data={initialData} columns={columns} />
+      <SystemTable data={res.data} columns={columns} />
 
       <div className='flex justify-center'>
         <Pagination>
@@ -71,17 +72,16 @@ const Content: React.FC<{ initialData: ICareer[] }> = ({ initialData }) => {
             <PaginationItem>
               <PaginationPrevious href='#' />
             </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href='#'>1</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href='#' isActive>
-                2
+            {Array.from({ length: res.pagination.total_page }, (_, i) => (
+              <PaginationLink
+                key={i}
+                href={
+                  q ? `career?page=${i + 1}&q=${q}` : `career?page=${i + 1}`
+                }
+              >
+                {i + 1}
               </PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href='#'>3</PaginationLink>
-            </PaginationItem>
+            ))}
             <PaginationItem>
               <PaginationEllipsis />
             </PaginationItem>

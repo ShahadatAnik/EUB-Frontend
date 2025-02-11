@@ -4,8 +4,23 @@ import PageContainer from '@/components/page-container';
 import Content from './_components/content';
 import { getJobCirculars } from '@/server/getJobCirculars';
 
-export default async function Page() {
-  const data = await getJobCirculars();
+export default async function Page(props: {
+  searchParams?: Promise<{
+    q?: string;
+    page?: string;
+    limit?: string;
+  }>;
+}) {
+  const searchParams = await props.searchParams;
+  const q = searchParams?.q || '';
+  const page = Number(searchParams?.page) || 1;
+  const limit = Number(searchParams?.limit) || 10;
+
+  const data = await getJobCirculars({
+    page,
+    limit,
+    q,
+  });
 
   return (
     <>
@@ -15,7 +30,7 @@ export default async function Page() {
       />
 
       <PageContainer>
-        <Content initialData={data} />
+        <Content {...data} />
       </PageContainer>
     </>
   );

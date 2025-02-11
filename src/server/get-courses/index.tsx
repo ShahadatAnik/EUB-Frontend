@@ -68,3 +68,14 @@ export const getDepartmentNews = async (
   );
   return await res.json();
 };
+
+export const getDepartmentLatestNews = async (
+  department?: string
+): Promise<INewsPortal[]> => {
+  const res = await fetch(
+    department
+      ? `${secret.apiBaseUrl}/portfolio/news-latest?department_name=${department}`
+      : `${secret.apiBaseUrl}/portfolio/news-latest`
+  );
+  return await res.json();
+};
