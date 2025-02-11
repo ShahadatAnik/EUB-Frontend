@@ -338,3 +338,11 @@ export type IFinancialFaculty = {
 export type IFinancial = {
   [key: string]: IFinancialFaculty[];
 };
+
+export type IPagination = {
+  total_record: number | null;
+  current_page: number | null;
+  total_page: number | null;
+  next_page: number | null;
+  prev_page: number | null;
+};

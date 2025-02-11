@@ -1,9 +1,20 @@
 'use server';
 
 import { secret } from '@/config/secret';
-import { ICareer } from '@/types';
+import { ICareer, IPagination } from '@/types';
 
-export const getJobCirculars = async (): Promise<ICareer[]> => {
-  const res = await fetch(`${secret.apiBaseUrl}/portfolio/job-circular`);
+export interface IJobCircularResponse {
+  data: ICareer[];
+  pagination: IPagination;
+}
+
+export const getJobCirculars = async ({
+  page = 1,
+  limit = 10,
+  q = '',
+}): Promise<IJobCircularResponse> => {
+  const res = await fetch(
+    `${secret.apiBaseUrl}/portfolio/job-circular?page=${page}&limit=${limit}&q=${q}`
+  );
   return await res.json();
 };

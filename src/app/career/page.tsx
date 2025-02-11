@@ -5,7 +5,11 @@ import Content from './_components/content';
 import { getJobCirculars } from '@/server/getJobCirculars';
 
 export default async function Page() {
-  const data = await getJobCirculars();
+  const data = await getJobCirculars({
+    page: 1,
+    limit: 10,
+    q: '',
+  });
 
   return (
     <>
@@ -15,7 +19,7 @@ export default async function Page() {
       />
 
       <PageContainer>
-        <Content initialData={data} />
+        <Content {...data} />
       </PageContainer>
     </>
   );

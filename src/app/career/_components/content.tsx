@@ -17,6 +17,12 @@ import SystemTable, {
 } from '@/components/table/system-table';
 import { ICareer } from '@/types';
 import PdfDownloadButton from '@/components/pdf-download-btn';
+import {
+  getJobCirculars,
+  IJobCircularResponse,
+} from '@/server/getJobCirculars';
+import { useQuery } from '@tanstack/react-query';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const columns: SystemTableColumn<ICareer>[] = [
   {
@@ -52,7 +58,26 @@ const columns: SystemTableColumn<ICareer>[] = [
   },
 ];
 
-const Content: React.FC<{ initialData: ICareer[] }> = ({ initialData }) => {
+const Content: React.FC<IJobCircularResponse> = (res) => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const { data, isLoading } = useQuery({
+    queryKey: ['job-circulars'],
+    queryFn: async () =>
+      await getJobCirculars({
+        limit: searchParams.get('limit')
+          ? Number(searchParams.get('limit'))
+          : 10,
+        page: searchParams.get('page') ? Number(searchParams.get('page')) : 1,
+        q: searchParams.get('q') || '',
+      }),
+  });
+
+  console.log({ data });
+
+  if (isLoading) return <div>Loading...</div>;
+
   return (
     <div className='space-y-8'>
       <div className='flex justify-center'>
@@ -60,10 +85,13 @@ const Content: React.FC<{ initialData: ICareer[] }> = ({ initialData }) => {
           type='search'
           placeholder='Search for job title, faculty, category, location'
           className='w-[400px]'
+          onChange={(e) => {
+            router.replace(`/career?q=${e.target.value}`, { scroll: false });
+          }}
         />
       </div>
 
-      <SystemTable data={initialData} columns={columns} />
+      <SystemTable data={data?.data || []} columns={columns} />
 
       <div className='flex justify-center'>
         <Pagination>
@@ -71,17 +99,11 @@ const Content: React.FC<{ initialData: ICareer[] }> = ({ initialData }) => {
             <PaginationItem>
               <PaginationPrevious href='#' />
             </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href='#'>1</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href='#' isActive>
-                2
+            {Array.from({ length: res.pagination.total_page }, (_, i) => (
+              <PaginationLink key={i} href={`career?page=${i + 1}`}>
+                {i + 1}
               </PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href='#'>3</PaginationLink>
-            </PaginationItem>
+            ))}
             <PaginationItem>
               <PaginationEllipsis />
             </PaginationItem>
