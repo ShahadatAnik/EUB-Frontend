@@ -8,7 +8,7 @@ export const getUndergraduateFinancialInformation =
     const res = await fetch(
       `${secret.apiBaseUrl}/portfolio/financial-info/category/undergraduate`,
       {
-        cache: 'no-cache',
+        cache: 'no-store',
       }
     );
 
@@ -20,7 +20,7 @@ export const getGraduateFinancialInformation =
     const res = await fetch(
       `${secret.apiBaseUrl}/portfolio/financial-info/category/graduate`,
       {
-        cache: 'no-cache',
+        cache: 'no-store',
       }
     );
 
