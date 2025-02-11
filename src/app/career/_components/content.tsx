@@ -25,7 +25,7 @@ const columns: SystemTableColumn<ICareer>[] = [
   },
 
   {
-    accessorKey: 'faculty',
+    accessorKey: 'faculty_name',
     header: 'Faculty',
   },
 
@@ -46,7 +46,7 @@ const columns: SystemTableColumn<ICareer>[] = [
   },
 
   {
-    accessorKey: 'pdf',
+    accessorKey: 'file',
     header: 'Action',
     cell: (pdf) => <PdfDownloadButton pdf={pdf} />,
   },

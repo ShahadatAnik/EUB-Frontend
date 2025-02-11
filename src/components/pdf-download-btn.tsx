@@ -5,7 +5,7 @@ import { Download } from 'lucide-react';
 
 const PdfDownloadButton: React.FC<{ pdf: string }> = ({ pdf }) => {
   return pdf ? (
-    <Link href={pdf}>
+    <Link target='_blank' href={process.env.NEXT_PUBLIC_IMAGE_BASE_URL + pdf}>
       <Button variant={'outline'} size={'icon'} className='w-full'>
         <Download />
       </Button>

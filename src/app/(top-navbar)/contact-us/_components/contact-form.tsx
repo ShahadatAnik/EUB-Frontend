@@ -18,31 +18,38 @@ import {
 
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-
-const formSchema = z.object({
-  fullname: z.string().min(1, { message: 'Full name is required' }),
-  email: z.string().email(),
-  query: z.string().min(1, { message: 'Query is required' }),
-  description: z.string().min(1, { message: 'Description is required' }),
-});
+import {
+  defaultContactForm,
+  IContactForm,
+  formSchema,
+} from '../_const/contact-form-schema';
+import { useMutation } from '@tanstack/react-query';
+import { createContactForm } from '@/server/create-contact-form';
+import { toast } from 'sonner';
 
 const ContactForm = () => {
-  // 1. Define your form.
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      fullname: '',
-      email: '',
-      query: '',
-      description: '',
-    },
+  const mutation = useMutation({
+    mutationKey: ['contact-form'],
+    mutationFn: createContactForm,
   });
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: defaultContactForm,
+  });
+
+  async function onSubmit(values: IContactForm) {
+    try {
+      const res = await mutation.mutateAsync(values);
+      console.log({
+        res,
+      });
+      form.reset(defaultContactForm);
+      toast.success('Form submitted successfully');
+    } catch (error) {
+      console.log(error);
+      toast.error('Something went wrong');
+    }
   }
 
   return (
@@ -54,7 +61,7 @@ const ContactForm = () => {
         <div className='space-y-4'>
           <FormField
             control={form.control}
-            name='fullname'
+            name='full_name'
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Full Name</FormLabel>
@@ -80,7 +87,7 @@ const ContactForm = () => {
           />
           <FormField
             control={form.control}
-            name='query'
+            name='question'
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Query / Question</FormLabel>

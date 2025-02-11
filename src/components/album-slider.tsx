@@ -1,26 +1,22 @@
-"use client";
+'use client';
 
-import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
+import Image from 'next/image';
+import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
 
-import "react-image-gallery/styles/css/image-gallery.css";
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 const AlbumSlider = ({ images }: { images: ReactImageGalleryItem[] }) => {
-  // const images: ReactImageGalleryItem[] = [
-  //   {
-  //     original: 'https://picsum.photos/id/1018/1000/600/',
-  //     thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  //   },
-  //   {
-  //     original: 'https://picsum.photos/id/1015/1000/600/',
-  //     thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  //   },
-  //   {
-  //     original: 'https://picsum.photos/id/1019/1000/600/',
-  //     thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  //   },
-  // ];
-
-  return <ImageGallery items={images} />;
+  return (
+    <ImageGallery
+      items={images}
+      showThumbnails
+      renderItem={({ original }) => (
+        <div className='w-full aspect-video relative'>
+          <Image className='object-cover' src={original} alt={original} fill />
+        </div>
+      )}
+    />
+  );
 };
 
 export default AlbumSlider;

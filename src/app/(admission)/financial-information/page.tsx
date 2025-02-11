@@ -2,8 +2,18 @@ import PageHeader from '@/components/page-header';
 import React from 'react';
 import PageContainer from '@/components/page-container';
 import Content from './_components/content';
+import {
+  getUndergraduateFinancialInformation,
+  getGraduateFinancialInformation,
+} from '@/server/financial-information';
 
-const Page = () => {
+export default async function Page() {
+  const [undergraduateFinancialInformation, graduateFinancialInformation] =
+    await Promise.all([
+      getUndergraduateFinancialInformation(),
+      getGraduateFinancialInformation(),
+    ]);
+
   return (
     <>
       <PageHeader
@@ -12,10 +22,11 @@ const Page = () => {
       />
 
       <PageContainer>
-        <Content />
+        <Content
+          graduateInformation={graduateFinancialInformation}
+          undergraduateInformation={undergraduateFinancialInformation}
+        />
       </PageContainer>
     </>
   );
-};
-
-export default Page;
+}

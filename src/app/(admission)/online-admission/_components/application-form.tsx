@@ -68,10 +68,6 @@ const ApplicationForm = () => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    // console.log({
-    //   values,
-    // });
-    // return;
     try {
       const res = await mutation.mutateAsync(values);
       console.log({

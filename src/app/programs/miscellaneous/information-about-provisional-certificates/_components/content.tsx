@@ -1,22 +1,18 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
 import { IDataTable } from '@/types';
 import { formatDate } from '@/lib/utils';
+import ClientPdfLink from '@/components/client-pdf';
 
 const columns: SystemTableColumn<IDataTable>[] = [
   {
     accessorKey: 'description',
-    cell: (value, row) => (
-      <Link className='underline text-primary font-medium' href={row.file}>
-        {value}
-      </Link>
-    ),
+    cell: (value, row) => <ClientPdfLink text={value} href={row.file} />,
   },
   {
     accessorKey: 'updated_at',

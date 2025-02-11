@@ -259,12 +259,16 @@ export type IPolicy = {
 };
 
 export type ICareer = {
+  id: number;
+  uuid: string;
   title: string;
-  faculty: string;
+  faculty_uuid: string;
+  faculty_name: string;
   category: string;
   location: string;
-  deadline: string;
-  pdf: string;
+  file: string;
+  deadline: Date;
+  remarks: string;
 };
 
 export type IPrograms = {
@@ -295,4 +299,42 @@ export type IClub = {
 export type IClubs = {
   title: string;
   content: IClub;
+};
+
+export type ISelectOption = {
+  label: string;
+  value: string;
+};
+
+export type IFinancialFaculty = {
+  id: number;
+  uuid: string;
+  department_uuid: string;
+  department_name: string;
+  faculty_uuid: string;
+  faculty_name: string;
+  category: string;
+  total_credit: number;
+  total_cost: number;
+  admission_fee: number;
+  waiver_50: number;
+  waiver_55: number;
+  waiver_60: number;
+  waiver_65: number;
+  waiver_70: number;
+  waiver_75: number;
+  waiver_80: number;
+  waiver_85: number;
+  waiver_90: number;
+  waiver_95: number;
+  waiver_100: number;
+  created_by: string;
+  created_by_name: string;
+  created_at: string;
+  updated_at: string;
+  remarks: string | null;
+};
+
+export type IFinancial = {
+  [key: string]: IFinancialFaculty[];
 };
