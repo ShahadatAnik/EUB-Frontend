@@ -29,9 +29,13 @@ const Undergraduate: React.FC<{
           during the time of admission.
         </p>
         <br />
-        <p>Fees for other certificate courses:</p>
 
-        <CertificateFeesTable data={certificateFeesData} />
+        <section id='other-certificate-courses'>
+          <h4 className='text-lg font-medium mb-1'>
+            Fees for other certificate courses:
+          </h4>
+          <CertificateFeesTable data={certificateFeesData} />
+        </section>
 
         <br />
 
