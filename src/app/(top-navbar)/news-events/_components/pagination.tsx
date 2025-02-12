@@ -21,7 +21,11 @@ export default function PagePagination({
         <PaginationItem>
           <PaginationPrevious
             // onClick={() => createPageURL(currentPage - 1)}
-            href={`news-events?page=${pagination.prev_page}`}
+            href={
+              pagination.prev_page
+                ? `news-events?page=${pagination.prev_page}`
+                : "#"
+            }
             isActive={pagination.prev_page ? true : false}
           />
         </PaginationItem>
@@ -39,7 +43,11 @@ export default function PagePagination({
         <PaginationItem>
           <PaginationNext
             // onClick={() => createPageURL(currentPage + 1)}
-            href={`news-events?page=${pagination.next_page}`}
+            href={
+              pagination.next_page
+                ? `news-events?page=${pagination.next_page}`
+                : "#"
+            }
             isActive={pagination.next_page ? true : false}
           />
         </PaginationItem>
