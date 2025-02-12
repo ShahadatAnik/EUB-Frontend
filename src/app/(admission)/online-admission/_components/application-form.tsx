@@ -33,14 +33,6 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 
-import {
-  bloodGroups,
-  educationBoards,
-  grades,
-  secondaryEducationTypes,
-  higherEducationTypes,
-} from '../_const/data';
-
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
@@ -51,6 +43,20 @@ import { formSchema, defaultAdmissionForm } from '../_const/schema';
 import { useMutation } from '@tanstack/react-query';
 import { createAdmissionForm } from '@/server/post';
 import { toast } from 'sonner';
+
+import {
+  EnumSemester,
+  EnumBloodGroup,
+  EnumGender,
+  EnumMartialStatus,
+  EnumHscBoard,
+  EnumHscGrade,
+  EnumHscGroup,
+  EnumSscBoard,
+  EnumSscGrade,
+  EnumSscGroup,
+} from '@/types/enum';
+import enumToOptions from '@/utils/enumToOptions';
 
 const ApplicationForm = () => {
   const mutation = useMutation({
@@ -70,11 +76,13 @@ const ApplicationForm = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       const res = await mutation.mutateAsync(values);
-      console.log({
-        res,
-      });
-      form.reset(defaultAdmissionForm);
-      toast.success('Form submitted successfully');
+
+      if (res.toastType === 'create') {
+        toast.success('Form submitted successfully');
+        // form.reset(defaultAdmissionForm);
+      } else {
+        toast.error('Failed to submit form');
+      }
     } catch (error) {
       console.log(error);
       toast.error('Something went wrong');
@@ -97,24 +105,19 @@ const ApplicationForm = () => {
                     defaultValue={field.value}
                     className='flex gap-x-4'
                   >
-                    <FormItem className='flex items-center space-x-2 space-y-0'>
-                      <FormControl>
-                        <RadioGroupItem value='spring' />
-                      </FormControl>
-                      <FormLabel className='font-normal'>Spring</FormLabel>
-                    </FormItem>
-                    <FormItem className='flex items-center space-x-2 space-y-0'>
-                      <FormControl>
-                        <RadioGroupItem value='summer' />
-                      </FormControl>
-                      <FormLabel className='font-normal'>Summer</FormLabel>
-                    </FormItem>
-                    <FormItem className='flex items-center space-x-2 space-y-0'>
-                      <FormControl>
-                        <RadioGroupItem value='fall' />
-                      </FormControl>
-                      <FormLabel className='font-normal'>Fall</FormLabel>
-                    </FormItem>
+                    {enumToOptions(EnumSemester).map((option, index) => (
+                      <FormItem
+                        key={index}
+                        className='flex items-center space-x-2 space-y-0'
+                      >
+                        <FormControl>
+                          <RadioGroupItem value={option.value} />
+                        </FormControl>
+                        <FormLabel className='font-normal'>
+                          {option.label}
+                        </FormLabel>
+                      </FormItem>
+                    ))}
                   </RadioGroup>
                 </FormControl>
                 <FormMessage />
@@ -287,7 +290,7 @@ const ApplicationForm = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {bloodGroups.map((blood) => (
+                          {enumToOptions(EnumBloodGroup).map((blood) => (
                             <SelectItem key={blood.value} value={blood.value}>
                               {blood.label}
                             </SelectItem>
@@ -351,24 +354,19 @@ const ApplicationForm = () => {
                         defaultValue={field.value}
                         className='flex space-x-2'
                       >
-                        <FormItem className='flex items-center space-x-2 space-y-0'>
-                          <FormControl>
-                            <RadioGroupItem value='Male' />
-                          </FormControl>
-                          <FormLabel className='font-normal'>Male</FormLabel>
-                        </FormItem>
-                        <FormItem className='flex items-center space-x-2 space-y-0'>
-                          <FormControl>
-                            <RadioGroupItem value='Female' />
-                          </FormControl>
-                          <FormLabel className='font-normal'>Female</FormLabel>
-                        </FormItem>
-                        <FormItem className='flex items-center space-x-2 space-y-0'>
-                          <FormControl>
-                            <RadioGroupItem value='Other' />
-                          </FormControl>
-                          <FormLabel className='font-normal'>Other</FormLabel>
-                        </FormItem>
+                        {enumToOptions(EnumGender).map((gender) => (
+                          <FormItem
+                            key={gender.value}
+                            className='flex items-center space-x-2 space-y-0'
+                          >
+                            <FormControl>
+                              <RadioGroupItem value={gender.value} />
+                            </FormControl>
+                            <FormLabel className='font-normal'>
+                              {gender.label}
+                            </FormLabel>
+                          </FormItem>
+                        ))}
                       </RadioGroup>
                     </FormControl>
                     <FormMessage />
@@ -387,32 +385,19 @@ const ApplicationForm = () => {
                         defaultValue={field.value}
                         className='flex space-x-2'
                       >
-                        <FormItem className='flex items-center space-x-2 space-y-0'>
-                          <FormControl>
-                            <RadioGroupItem value='Single' />
-                          </FormControl>
-                          <FormLabel className='font-normal'>Single</FormLabel>
-                        </FormItem>
-                        <FormItem className='flex items-center space-x-2 space-y-0'>
-                          <FormControl>
-                            <RadioGroupItem value='Married' />
-                          </FormControl>
-                          <FormLabel className='font-normal'>Married</FormLabel>
-                        </FormItem>
-                        <FormItem className='flex items-center space-x-2 space-y-0'>
-                          <FormControl>
-                            <RadioGroupItem value='Divorced' />
-                          </FormControl>
-                          <FormLabel className='font-normal'>
-                            Divorced
-                          </FormLabel>
-                        </FormItem>
-                        <FormItem className='flex items-center space-x-2 space-y-0'>
-                          <FormControl>
-                            <RadioGroupItem value='Widowed' />
-                          </FormControl>
-                          <FormLabel className='font-normal'>Widowed</FormLabel>
-                        </FormItem>
+                        {enumToOptions(EnumMartialStatus).map((item) => (
+                          <FormItem
+                            key={item.value}
+                            className='flex items-center space-x-2 space-y-0'
+                          >
+                            <FormControl>
+                              <RadioGroupItem value={item.value} />
+                            </FormControl>
+                            <FormLabel className='font-normal'>
+                              {item.label}
+                            </FormLabel>
+                          </FormItem>
+                        ))}
                       </RadioGroup>
                     </FormControl>
                     <FormMessage />
@@ -528,7 +513,7 @@ const ApplicationForm = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {secondaryEducationTypes.map((program) => (
+                          {enumToOptions(EnumSscGroup).map((program) => (
                             <SelectItem
                               key={program.value}
                               value={program.value}
@@ -558,7 +543,7 @@ const ApplicationForm = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {grades.map((grade) => (
+                          {enumToOptions(EnumSscGrade).map((grade) => (
                             <SelectItem key={grade.value} value={grade.value}>
                               {grade.label}
                             </SelectItem>
@@ -601,7 +586,7 @@ const ApplicationForm = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {educationBoards.map((board) => (
+                          {enumToOptions(EnumSscBoard).map((board) => (
                             <SelectItem key={board.value} value={board.value}>
                               {board.label}
                             </SelectItem>
@@ -673,7 +658,7 @@ const ApplicationForm = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {higherEducationTypes.map((program) => (
+                          {enumToOptions(EnumHscGroup).map((program) => (
                             <SelectItem
                               key={program.value}
                               value={program.value}
@@ -703,7 +688,7 @@ const ApplicationForm = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {grades.map((grade) => (
+                          {enumToOptions(EnumHscGrade).map((grade) => (
                             <SelectItem key={grade.value} value={grade.value}>
                               {grade.label}
                             </SelectItem>
@@ -748,7 +733,7 @@ const ApplicationForm = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {educationBoards.map((board) => (
+                          {enumToOptions(EnumHscBoard).map((board) => (
                             <SelectItem key={board.value} value={board.value}>
                               {board.label}
                             </SelectItem>

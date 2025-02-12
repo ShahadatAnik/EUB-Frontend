@@ -1,14 +1,33 @@
+import {
+  EnumGender,
+  EnumMartialStatus,
+  EnumBloodGroup,
+  EnumHscBoard,
+  EnumHscGrade,
+  EnumHscGroup,
+  EnumSemester,
+  EnumSscBoard,
+  EnumSscGrade,
+  EnumSscGroup,
+} from '@/types/enum';
+
 import { z } from 'zod';
 
 export const formSchema = z.object({
-  semester: z.string().min(1, { message: 'Semester is required' }),
+  semester: z.nativeEnum(EnumSemester, {
+    message: 'Select a semester',
+  }),
   program_uuid: z.string().min(1, { message: 'Program is required' }),
   applicant_name: z.string().min(5, { message: 'Applicant name is required' }),
   father_name: z.string().min(5, { message: 'Fathers name is required' }),
   mother_name: z.string().min(5, { message: 'Mothers name is required' }),
   local_guardian: z.string().min(5, { message: 'Local guardian is required' }),
-  gender: z.string().min(1, { message: 'Gender is required' }),
-  marital_status: z.string().min(1, { message: 'Marital status is required' }),
+  gender: z.nativeEnum(EnumGender, {
+    message: 'Select a gender',
+  }),
+  marital_status: z.nativeEnum(EnumMartialStatus, {
+    message: 'Select a marital status',
+  }),
   date_of_birth: z.date({
     message: 'Date of birth is required',
   }),
@@ -21,19 +40,33 @@ export const formSchema = z.object({
   phone_number: z.string().min(11, { message: 'Phone number is required' }),
   email: z.string().min(1, { message: 'Email is required' }),
   bkash: z.string().min(1, { message: 'Bkash number is required' }),
-  blood_group: z.string().min(1, { message: 'Blood group is required' }),
+  blood_group: z.nativeEnum(EnumBloodGroup, {
+    message: 'Select a blood group',
+  }),
 
-  ssc_group: z.string().min(1, { message: 'Type is required' }),
-  ssc_grade: z.string().min(1, { message: 'Grade is required' }),
+  ssc_group: z.nativeEnum(EnumSscGroup, {
+    message: 'Select a group',
+  }),
+  ssc_grade: z.nativeEnum(EnumSscGrade, {
+    message: 'Select a grade',
+  }),
   ssc_gpa: z.string().min(1, { message: 'GPA is required' }),
-  ssc_board: z.string().min(1, { message: 'Board is required' }),
+  ssc_board: z.nativeEnum(EnumSscBoard, {
+    message: 'Select a board',
+  }),
   ssc_passing_year: z.number().min(4, { message: 'Passing year is required' }),
   ssc_institute: z.string().min(1, { message: 'Institution is required' }),
 
-  hsc_group: z.string().min(1, { message: 'Type is required' }),
-  hsc_grade: z.string().min(1, { message: 'Grade is required' }),
+  hsc_group: z.nativeEnum(EnumHscGroup, {
+    message: 'Select a group',
+  }),
+  hsc_grade: z.nativeEnum(EnumHscGrade, {
+    message: 'Select a grade',
+  }),
   hsc_gpa: z.string().min(1, { message: 'GPA is required' }),
-  hsc_board: z.string().min(1, { message: 'Board is required' }),
+  hsc_board: z.nativeEnum(EnumHscBoard, {
+    message: 'Select a board',
+  }),
   hsc_passing_year: z.number().min(4, { message: 'Passing year is required' }),
   hsc_institute: z.string().min(1, { message: 'Institution is required' }),
 
@@ -45,15 +78,12 @@ export const formSchema = z.object({
 
 export type IAdmissionForm = z.infer<typeof formSchema>;
 
-export const defaultAdmissionForm: IAdmissionForm = {
-  semester: '',
+export const defaultAdmissionForm: Partial<IAdmissionForm> = {
   program_uuid: '',
   applicant_name: '',
   father_name: '',
   mother_name: '',
   local_guardian: '',
-  gender: '',
-  marital_status: '',
   date_of_birth: new Date(),
   present_address: '',
   village: '',
@@ -64,24 +94,12 @@ export const defaultAdmissionForm: IAdmissionForm = {
   phone_number: '',
   email: '',
   bkash: '',
-  blood_group: '',
 
-  ssc_group: '',
-  ssc_grade: '',
   ssc_gpa: '',
-  ssc_board: '',
   ssc_passing_year: 0,
   ssc_institute: '',
 
-  hsc_group: '',
-  hsc_grade: '',
   hsc_gpa: '',
-  hsc_board: '',
   hsc_passing_year: 0,
   hsc_institute: '',
-
-  bsc_name: '',
-  bsc_cgpa: '',
-  bsc_passing_year: 0,
-  bsc_institution_name: '',
 };
