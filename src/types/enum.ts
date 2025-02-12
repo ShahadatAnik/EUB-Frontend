@@ -1,0 +1,102 @@
+export enum EnumMartialStatus {
+  Single = 'Single',
+  Married = 'Married',
+  Divorced = 'Divorced',
+  Widowed = 'Widowed',
+}
+
+export enum EnumGender {
+  Male = 'Male',
+  Female = 'Female',
+  Other = 'Other',
+}
+
+export enum EnumBloodGroup {
+  'A+' = 'A+',
+  'A-' = 'A-',
+  'B+' = 'B+',
+  'B-' = 'B-',
+  'AB+' = 'AB+',
+  'AB-' = 'AB-',
+  'O+' = 'O+',
+  'O-' = 'O-',
+}
+
+export enum EnumSemester {
+  Spring = 'spring',
+  Summer = 'summer',
+  Fall = 'fall',
+}
+
+export enum EnumSscGroup {
+  Science = 'Science',
+  Business_Group = 'Business Group',
+  Humanities = 'Humanities',
+  Vocational = 'Vocational',
+}
+
+export enum EnumSscGrade {
+  'Golden A+' = 'Golden A+',
+  'A+' = 'A+',
+  'A' = 'A',
+  'A-' = 'A-',
+  'B+' = 'B+',
+  'B' = 'B',
+  'B-' = 'B-',
+  'C+' = 'C+',
+  'C' = 'C',
+  'C-' = 'C-',
+  'D+' = 'D+',
+  'D' = 'D',
+  'F' = 'F',
+}
+
+export enum EnumSscBoard {
+  Dhaka = 'Dhaka',
+  Chittagong = 'Chittagong',
+  Jessore = 'Jessore',
+  Dinajpur = 'Dinajpur',
+  Khulna = 'Khulna',
+  Sylhet = 'Sylhet',
+  Rajshahi = 'Rajshahi',
+  Bangladesh_Madrasa_Board = 'Bangladesh Madrasa Board',
+  Bangladesh_Technical_Education_Board = 'Bangladesh Technical Education Board',
+}
+
+export enum EnumHscGroup {
+  Science = 'Science',
+  Business_Group = 'Business Group',
+  Humanities = 'Humanities',
+  BM = 'BM',
+  CSE = 'CSE',
+  EEE = 'EEE',
+  CIVIL = 'CIVIL',
+}
+
+export enum EnumHscGrade {
+  'Golden A+' = 'Golden A+',
+  'A+' = 'A+',
+  'A' = 'A',
+  'A-' = 'A-',
+  'B+' = 'B+',
+  'B' = 'B',
+  'B-' = 'B-',
+  'C+' = 'C+',
+  'C' = 'C',
+  'C-' = 'C-',
+  'D+' = 'D+',
+  'D' = 'D',
+  'F' = 'F',
+}
+
+export enum EnumHscBoard {
+  Dhaka = 'Dhaka',
+  Chittagong = 'Chittagong',
+  Jessore = 'Jessore',
+  Dinajpur = 'Dinajpur',
+  Khulna = 'Khulna',
+  Sylhet = 'Sylhet',
+  Rajshahi = 'Rajshahi',
+  Bangladesh_Madrasa_Board = 'Bangladesh Madrasa Board',
+  Bangladesh_Technical_Education_Board = 'Bangladesh Technical Education Board',
+}
