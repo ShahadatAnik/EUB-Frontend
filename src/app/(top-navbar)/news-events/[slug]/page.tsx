@@ -5,7 +5,7 @@ import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
 import { Separator } from '@/components/ui/separator';
 import AlbumSlider from '@/components/album-slider';
-import { getNewsById } from '@/server/getNewsEvents';
+import { getNewsById } from '@/server/get';
 
 export default async function Page({
   params,

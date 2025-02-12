@@ -1,4 +1,4 @@
-import { getExaminationGuidelines } from '@/server/getExaminationGuidelines';
+import { getExaminationGuidelines } from '@/server/get';
 import { IDataTable } from '@/types';
 import { useQuery } from '@tanstack/react-query';
 

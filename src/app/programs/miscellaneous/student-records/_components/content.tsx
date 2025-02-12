@@ -7,7 +7,7 @@ const Content = () => {
       <div className='container space-y-8'>
         <SectionContent
           title={`University Policy`}
-          content={`North South University (NSU) maintains various student records to document academic progress and to record interactions with the University staff and officials. To protect each student's right to privacy the University has an established policy for handling student records. Interpretation of this policy is based on experience with educational records, and the policy itself may subsequently be modified in light of this experience.`}
+          content={`European University (EUB) maintains various student records to document academic progress and to record interactions with the University staff and officials. To protect each student's right to privacy the University has an established policy for handling student records. Interpretation of this policy is based on experience with educational records, and the policy itself may subsequently be modified in light of this experience.`}
         />
         <SectionContent
           title={`Directory Information`}
@@ -17,7 +17,7 @@ const Content = () => {
               inquiry. This public information is called directory information
               and includes a student&apos;s name, local address, and telephone
               number, mailing address, major, classification, date and place of
-              birth, dates of attendance at NSU, awards and academic honors,
+              birth, dates of attendance at EUB, awards and academic honors,
               degrees and dates awarded, previously attended educational
               institutions, participation in officially recognized University
               activities and sports, and the height and weight of members of
@@ -68,15 +68,15 @@ const Content = () => {
           content={`A student can apply for a provisional certificate only when s/he meets all the requirements of the degree. A student’s degree application must be approved by the respective department, Finance & Accounts Office, and the Office of the Controller of Examinations before s/he applies for her/his provisional certificate. Application for provisional certificate and the required fee must be submitted through RDS.`}
         />
         <SectionContent
-          title={`Sending Educational Documents (Certificate/ Transcript) from NSU to other Institution/ Organization`}
-          content={`NSU does not have any provision to send any document (certificate, transcript) directly to any person/ institution/ organization. A student has to collect verified photocopy of his/her educational documents (transcript/ certificate) in a sealed envelope from the Office of the Controller of Examinations and send to the respective person/ institution/ organization. Students/ graduates may ask them to communicate with the Office of the Controller of Examinations if they need to verify the documents or if they want the Office of the Controller of Examinations to send documents directly to them.`}
+          title={`Sending Educational Documents (Certificate/ Transcript) from EUB to other Institution/ Organization`}
+          content={`EUB does not have any provision to send any document (certificate, transcript) directly to any person/ institution/ organization. A student has to collect verified photocopy of his/her educational documents (transcript/ certificate) in a sealed envelope from the Office of the Controller of Examinations and send to the respective person/ institution/ organization. Students/ graduates may ask them to communicate with the Office of the Controller of Examinations if they need to verify the documents or if they want the Office of the Controller of Examinations to send documents directly to them.`}
         />
         <SectionContent
           title={`Undergraduate Degree Requirements`}
           content={
             <div>
               <p>
-                As NSU is based on the US University system, most undergraduate
+                As EUB is based on the US University system, most undergraduate
                 degrees are of four-year duration. For each degree, at least 120
                 credits are required. If an undergraduate student takes 15-16
                 credits per semester, it will take approximately eight semesters
@@ -98,7 +98,7 @@ const Content = () => {
                 <li>
                   <span className='italic'>
                     A minimum of 120 credits for a bachelor&apos;s degree of
-                    which at least 60 must have been earned at NSU as a student
+                    which at least 60 must have been earned at EUB as a student
                     admitted into a degree program.
                   </span>
                 </li>
@@ -145,7 +145,7 @@ const Content = () => {
                   </span>
                   <p className=' mt-0.5 '>
                     A minimum of 120 credits for a bachelor&apos;s degree of
-                    which at least 60 must have been earned at NSU as a student
+                    which at least 60 must have been earned at EUB as a student
                     admitted into a degree program.
                   </p>
                 </li>
@@ -204,7 +204,7 @@ const Content = () => {
 
         <SectionContent
           title={`Internship`}
-          content={`An internship is a program whereby a student, usually after completing all courses, undertakes an affiliation with an organization, under faculty supervision, for the purpose of applying knowledge gained from their NSU studies and to gain experience in the business world. The Career Placement Centre provides assistance to students in arranging internships. Such experiences are approved in advance by the faculty advisor and can last from 8-10 weeks after which the student is assigned credits and grades based on an evaluation by the faculty supervisor, by a staff where the internship is performed, and a written report prepared by the intern. Credits assigned may vary for internships. Special projects or research work of high standard may be substituted for an internship when formally authorized in advance by the Academic Council. Internships can also be used as electives or to replace a required course if approved in advance by the Academic Council.`}
+          content={`An internship is a program whereby a student, usually after completing all courses, undertakes an affiliation with an organization, under faculty supervision, for the purpose of applying knowledge gained from their EUB studies and to gain experience in the business world. The Career Placement Centre provides assistance to students in arranging internships. Such experiences are approved in advance by the faculty advisor and can last from 8-10 weeks after which the student is assigned credits and grades based on an evaluation by the faculty supervisor, by a staff where the internship is performed, and a written report prepared by the intern. Credits assigned may vary for internships. Special projects or research work of high standard may be substituted for an internship when formally authorized in advance by the Academic Council. Internships can also be used as electives or to replace a required course if approved in advance by the Academic Council.`}
         />
         <SectionContent
           title={`Conditions of Internship`}

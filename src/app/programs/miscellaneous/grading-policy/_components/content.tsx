@@ -27,8 +27,8 @@ const Content = () => {
           title={`GPA - Class Equivalence`}
           content={
             <p>
-              NSU students are graded on GPA. Comparison of the GPA earned by
-              NSU students to the Classes earned by students in other
+              EUB students are graded on GPA. Comparison of the GPA earned by
+              EUB students to the Classes earned by students in other
               universities in the country is as follows:
               <br />
               GPA 3.00 and above = First Class
@@ -76,7 +76,7 @@ const Content = () => {
         />
         <SectionContent
           title={`Retaking Courses`}
-          content={`A student may repeat a course in which the grade is 'B' or lower. When a student retakes a course, the actual grade will be recorded. In case of a retake course, only the best grade will be used to calculate the CGPA. An "F" grade earned in any credit course will be used to calculate CGPA until the course is retaken/ replaced by taking another appropriate course, and a better grade is obtained. The retake policy in case of courses with "F" grades applies to all students of NSU irrespective of their date of enrollment. A student who wishes to retake a course must register for the course again and will be assessed for tuition and applicable fees.`}
+          content={`A student may repeat a course in which the grade is 'B' or lower. When a student retakes a course, the actual grade will be recorded. In case of a retake course, only the best grade will be used to calculate the CGPA. An "F" grade earned in any credit course will be used to calculate CGPA until the course is retaken/ replaced by taking another appropriate course, and a better grade is obtained. The retake policy in case of courses with "F" grades applies to all students of EUB irrespective of their date of enrollment. A student who wishes to retake a course must register for the course again and will be assessed for tuition and applicable fees.`}
         />
         <SectionContent
           title={`Abandoning Course`}

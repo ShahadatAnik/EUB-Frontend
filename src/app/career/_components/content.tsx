@@ -15,7 +15,7 @@ import SystemTable, {
 } from '@/components/table/system-table';
 import { ICareer } from '@/types';
 import PdfDownloadButton from '@/components/pdf-download-btn';
-import { IJobCircularResponse } from '@/server/getJobCirculars';
+import { IJobCircularResponse } from '@/server/get/get-job-circulars';
 
 import { useSearchParams } from 'next/navigation';
 import Search from '@/components/search';

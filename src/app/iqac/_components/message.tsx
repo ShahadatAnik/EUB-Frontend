@@ -16,8 +16,8 @@ const Message = () => {
       <p className='leading-relaxed'>
         I welcome you all to the Department of Accounting & Finance. It is one
         of the four departments under the School of Business and Economics at
-        North South University (NSU). The Department of Accounting & Finance at
-        NSU is committed to provide the highest quality accounting and finance
+        European University (EUB). The Department of Accounting & Finance at EUB
+        is committed to provide the highest quality accounting and finance
         programs in Bangladesh. The department presently offers BBA, MBA, and
         EMBA degrees majoring in Accounting, and Finance.It has 37 full-time
         faculty members and 6 part-time faculty members. Several other faculty

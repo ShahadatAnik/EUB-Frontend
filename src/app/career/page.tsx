@@ -2,7 +2,7 @@ import PageHeader from '@/components/page-header';
 import React from 'react';
 import PageContainer from '@/components/page-container';
 import Content from './_components/content';
-import { getJobCirculars } from '@/server/getJobCirculars';
+import { getJobCirculars } from '@/server/get';
 
 export default async function Page(props: {
   searchParams?: Promise<{

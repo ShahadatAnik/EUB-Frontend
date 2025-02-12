@@ -35,7 +35,7 @@ const Undergraduate: React.FC<{
 
         <br />
 
-        <strong>*Tuition waiver may be available as per NSU policy.</strong>
+        <strong>*Tuition waiver may be available as per EUB policy.</strong>
 
         <Accordion type='multiple' className='mt-2 w-full space-y-2'>
           {accordions.map((accordion, index) => (

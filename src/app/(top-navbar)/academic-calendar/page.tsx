@@ -4,7 +4,7 @@ import PageHeader from '@/components/page-header';
 import PageContainer from '@/components/page-container';
 import Content from './_components/content';
 
-import { getAcademicCalender } from '@/server/getAcademicCalender';
+import { getAcademicCalender } from '@/server/get';
 
 export default async function Page() {
   const data = await getAcademicCalender();
