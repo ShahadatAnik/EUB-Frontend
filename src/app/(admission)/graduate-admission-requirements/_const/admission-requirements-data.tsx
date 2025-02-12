@@ -17,7 +17,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
         </li>
 
         <li>
-          Qualifying in NSU admission test or minimum score of 550 (CBT 213) in
+          Qualifying in EUB admission test or minimum score of 550 (CBT 213) in
           both TOEFL & GMAT
         </li>
       </ul>
@@ -106,7 +106,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
           an accredited public or private university in Bangladesh or abroad
           with a grade point average of at least 2.75 (in the 4.0 scale) may be
           admitted on condition that at least 15 credits of foundation courses
-          from the undergraduate curriculum must be completed at NSU in order to
+          from the undergraduate curriculum must be completed at EUB in order to
           be a regular student in the MS in Computer Science & Engineering
           program.
         </li>
@@ -114,7 +114,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
         <li>Minimum grade point average of 2.75 (in the 4.0 scale)</li>
         <li>
           A score of 1100 in the Quantitative and Verbal part of GRE General
-          Test is acceptable to waive NSU admission test.
+          Test is acceptable to waive EUB admission test.
         </li>
         <li>
           Two letters of recommendation, at least one must from the faculty
@@ -140,7 +140,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
 
         <li>
           A score of 1100 in the Quantitative and Verbal part of GRE General
-          Test is acceptable to waive NSU admission test
+          Test is acceptable to waive EUB admission test
         </li>
         <li>
           Two letters of recommendation, at least one must from the faculty
@@ -229,7 +229,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
           (45% or above) in all exams
         </li>
         <li>
-          Qualifying in NSU admission test or minimum score of 500 (paper based)
+          Qualifying in EUB admission test or minimum score of 500 (paper based)
           in both TOEFL and GRE
         </li>
       </ul>

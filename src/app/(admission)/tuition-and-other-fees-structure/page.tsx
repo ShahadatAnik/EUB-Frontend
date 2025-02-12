@@ -7,7 +7,7 @@ import {
   getUndergraduateTuitionFees,
   getGraduateTuitionFees,
   getCertificateTuitionFees,
-} from '@/server/getTuitionFees';
+} from '@/server/get';
 
 export default async function Page() {
   const [

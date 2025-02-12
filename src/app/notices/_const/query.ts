@@ -1,4 +1,4 @@
-import { getNotices } from '@/server/getNotices';
+import { getNotices } from '@/server/get';
 import { IDataTable } from '@/types';
 import { useQuery } from '@tanstack/react-query';
 

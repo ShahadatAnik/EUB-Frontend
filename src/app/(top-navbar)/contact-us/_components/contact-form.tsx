@@ -24,7 +24,7 @@ import {
   formSchema,
 } from '../_const/contact-form-schema';
 import { useMutation } from '@tanstack/react-query';
-import { createContactForm } from '@/server/create-contact-form';
+import { createContactForm } from '@/server/post';
 import { toast } from 'sonner';
 
 const ContactForm = () => {

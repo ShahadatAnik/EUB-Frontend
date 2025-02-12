@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getInformationProvisionalCertificates } from '@/server/getInformationProvisionalCertificates';
+import { getInformationProvisionalCertificates } from '@/server/get';
 
 import PageHeader from '@/components/page-header';
 import PageContainer from '@/components/page-container';

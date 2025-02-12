@@ -8,7 +8,7 @@ import {
   getEveningExamSchedule,
   getRegularClassRoutine,
   getRegularExamSchedule,
-} from '@/server/get-courses';
+} from '@/server/get';
 import { IDataTable, IDepartmentTeacher, INewsPortal } from '@/types';
 
 import { useEffect, useState } from 'react';

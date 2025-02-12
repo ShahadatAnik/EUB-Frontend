@@ -5,7 +5,7 @@ import Content from './_components/content';
 import {
   getUndergraduateFinancialInformation,
   getGraduateFinancialInformation,
-} from '@/server/financial-information';
+} from '@/server/get';
 
 export default async function Page() {
   const [undergraduateFinancialInformation, graduateFinancialInformation] =

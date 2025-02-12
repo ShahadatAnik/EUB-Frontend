@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getExaminationGuidelines } from '@/server/getExaminationGuidelines';
+import { getExaminationGuidelines } from '@/server/get';
 
 import PageHeader from '@/components/page-header';
 import PageContainer from '@/components/page-container';

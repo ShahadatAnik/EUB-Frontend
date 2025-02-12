@@ -1,4 +1,4 @@
-import { getAcademicCalender } from '@/server/getAcademicCalender';
+import { getAcademicCalender } from '@/server/get';
 import { IDataTable } from '@/types';
 import { useQuery } from '@tanstack/react-query';
 

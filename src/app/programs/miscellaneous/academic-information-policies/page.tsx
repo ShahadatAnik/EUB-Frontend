@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getAcademicInformationPolicies } from '@/server/getAcademicInformationPolicies';
+import { getAcademicInformationPolicies } from '@/server/get';
 
 import PageHeader from '@/components/page-header';
 import PageContainer from '@/components/page-container';

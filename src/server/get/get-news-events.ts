@@ -13,12 +13,17 @@ export const getNewsEvents = async (
   page: number = 1
 ): Promise<getAllNewsEventsProps> => {
   const res = await fetch(
-    `${secret.apiBaseUrl}/portfolio/news?limit=${limit}&page=${page}`
+    `${secret.apiBaseUrl}/portfolio/news?limit=${limit}&page=${page}`,
+    {
+      cache: 'no-store',
+    }
   );
   return await res.json();
 };
 
 export const getNewsById = async (id: string): Promise<INewsPortal> => {
-  const res = await fetch(`${secret.apiBaseUrl}/portfolio/news/${id}`);
+  const res = await fetch(`${secret.apiBaseUrl}/portfolio/news/${id}`, {
+    cache: 'no-store',
+  });
   return await res.json();
 };

@@ -49,7 +49,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { usePrograms } from '../_const/query';
 import { formSchema, defaultAdmissionForm } from '../_const/schema';
 import { useMutation } from '@tanstack/react-query';
-import { createAdmissionForm } from '@/server/create-admission-form';
+import { createAdmissionForm } from '@/server/post';
 import { toast } from 'sonner';
 
 const ApplicationForm = () => {

@@ -14,7 +14,7 @@ import {
 
 import { generateMetaData } from '@/lib/utils';
 import PageContainer from '@/components/page-container';
-import { getNotices } from '@/server/getNotices';
+import { getNotices } from '@/server/get';
 
 export const metadata = generateMetaData({
   title: 'Notices',

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ScrollArea } from './ui/scroll-area';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
-import { getDepartmentLatestNews } from '@/server/get-courses';
+import { getDepartmentLatestNews } from '@/server/get';
 import ClientImage from './client-image';
 
 const LatestPosts = async ({ department }: { department?: string }) => {

@@ -1,4 +1,4 @@
-import { getPrograms } from '@/server/getPrograms';
+import { getPrograms } from '@/server/get';
 import { useQuery } from '@tanstack/react-query';
 
 export function usePrograms() {

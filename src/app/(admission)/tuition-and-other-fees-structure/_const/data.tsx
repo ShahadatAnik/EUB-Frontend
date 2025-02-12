@@ -7,7 +7,7 @@ export const accordions = [
   {
     title: 'Admission Fee',
     content:
-      "The non-refundable admission fee is assessed for admitted applicants following an admission test and before registration begins. An applicant forfeits the right of admission if the Admission Fee is not paid by the due date. Applicants are notified of such due dates by notice posted at NSU Registrar's Office.",
+      "The non-refundable admission fee is assessed for admitted applicants following an admission test and before registration begins. An applicant forfeits the right of admission if the Admission Fee is not paid by the due date. Applicants are notified of such due dates by notice posted at EUB Registrar's Office.",
   },
   {
     title: 'Student Activity Fee',
@@ -17,7 +17,7 @@ export const accordions = [
   {
     title: 'Non-degree Students',
     content:
-      'The admission fee and other charges are assessed for non-degree students when they change status to degree candidates or when credits earned as a non-degree student are applied towards a degree from NSU.',
+      'The admission fee and other charges are assessed for non-degree students when they change status to degree candidates or when credits earned as a non-degree student are applied towards a degree from EUB.',
   },
   {
     title: 'Tuition',
@@ -72,7 +72,7 @@ export const accordions = [
     content: (
       <>
         <p>
-          NSU has selected some banks to collect students&apos; fees. NSU
+          EUB has selected some banks to collect students&apos; fees. EUB
           Students may deposit their fees to any of the following banks:
         </p>
         <h4 className='mt-2 mb-1 font-medium'>Online Banks:</h4>
