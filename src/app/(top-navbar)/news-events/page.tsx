@@ -14,7 +14,7 @@ type searchParamsProps = {
 };
 
 export default async function Page({ searchParams }: searchParamsProps) {
-  const limit = 1;
+  const limit = 12;
 
   const params = await searchParams;
   const page = Number(params?.page ? params?.page : 1);
