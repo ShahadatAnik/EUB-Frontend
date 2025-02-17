@@ -7,7 +7,7 @@ import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
 
-const BBA: React.FC<{
+const Arts: React.FC<{
   data: IFinancialFaculty[];
 }> = ({ data }) => {
   const columns: SystemTableColumn<IFinancialFaculty>[] = [
@@ -126,7 +126,7 @@ const BBA: React.FC<{
   return (
     <div>
       <h4 className='text-2xl text-center font-medium'>
-        Business Administration
+        Arts & Social Sciences
       </h4>
       <div className='mt-4 space-y-4'>
         <SystemTable
@@ -144,4 +144,4 @@ const BBA: React.FC<{
   );
 };
 
-export default BBA;
+export default Arts;

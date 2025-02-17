@@ -19,8 +19,6 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 
-import { Input } from '@/components/ui/input';
-
 import {
   Select,
   SelectContent,
@@ -29,74 +27,78 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
-import data from '../_const/data';
+import { IPublicationResponse } from '@/server/get/get-publications';
+import Search from '@/components/search';
+import { useSearchParams } from 'next/navigation';
+import RichTextViewer from '@/components/rich-text-viewer';
+import { IClubAndSociety } from '@/types';
 
-const Content = () => {
+const Content: React.FC<
+  IPublicationResponse & { faculties: IClubAndSociety[] }
+> = (res) => {
+  const searchParams = useSearchParams();
+  const q = searchParams.get('q');
+
   return (
     <div className='space-y-8'>
       <div className='flex justify-between gap-8'>
-        <Input
-          placeholder='Search for job title, faculty, category, location'
-          className='w-[400px]'
-        />
-
-        <Select>
+        <Search placeholder='Search for name, faculty' />
+        <Select onValueChange={(res) => console.log(res)}>
           <SelectTrigger className='w-[180px]'>
             <SelectValue placeholder='Select a faculty' />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value='faculty-of-business-administration'>
-              Faculty of Business Administration
-            </SelectItem>
-            <SelectItem value='faculty-of-arts-social-sciences'>
-              Faculty of Arts & Social Sciences
-            </SelectItem>
-            <SelectItem value='faculty-of-engineering'>
-              Faculty of Engineering
-            </SelectItem>
+            {res.faculties.map((faculty, index) => (
+              <SelectItem key={index} value={faculty.value}>
+                {faculty.label}
+              </SelectItem>
+            ))}
           </SelectContent>
         </Select>
       </div>
       <Accordion type='single' collapsible className='w-full '>
-        {data.map((item, index) => (
+        {res.data.map((item, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
             <AccordionTrigger
               iconClassName='text-primary'
               className='bg-accent border-b text-primary text-lg px-6 py-3'
             >
-              {item.title}
+              {item.label}
             </AccordionTrigger>
             <AccordionContent className='px-6 py-4  text-base bg-background'>
-              {item.content}
+              <RichTextViewer content={item.value} />
             </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
 
-      <Pagination>
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious href='#' />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href='#'>1</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href='#' isActive>
-              2
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href='#'>3</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href='#' />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
+      <div className='flex justify-center'>
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious href='#' />
+            </PaginationItem>
+            {Array.from({ length: res.pagination.total_page }, (_, i) => (
+              <PaginationLink
+                key={i}
+                href={
+                  q
+                    ? `publications?page=${i + 1}&q=${q}`
+                    : `publications?page=${i + 1}`
+                }
+              >
+                {i + 1}
+              </PaginationLink>
+            ))}
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext href='#' />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+      </div>
     </div>
   );
 };
