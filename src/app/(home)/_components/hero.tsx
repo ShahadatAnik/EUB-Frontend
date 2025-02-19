@@ -7,9 +7,12 @@ import 'swiper/css/navigation';
 import React from 'react';
 
 import Slider, { ISlide } from '../../../components/slider';
-import Link from 'next/link';
+import Offers from './offers';
+import { IOffer } from '@/types';
 
-const Hero = () => {
+const Hero: React.FC<{
+  offers: IOffer[];
+}> = ({ offers }) => {
   const sliders: ISlide[] = [
     {
       img: '/images/news-portal/1.jpg',
@@ -54,15 +57,7 @@ const Hero = () => {
   return (
     <div className='h-screen w-full relative'>
       <Slider sliders={sliders} />
-
-      <div
-        className='absolute bottom-0 left-0 right-0 py-4 px-10 text-center
-       z-10 bg-primary'
-      >
-        <Link href='#notice' className='text-white text-lg'>
-          Center of excellence in higher education
-        </Link>
-      </div>
+      <Offers data={offers} />
     </div>
   );
 };
