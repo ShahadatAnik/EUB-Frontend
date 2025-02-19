@@ -401,3 +401,18 @@ export type IPagination = {
   next_page: number | null;
   prev_page: number | null;
 };
+
+export type IOffer = {
+  id: number;
+  uuid: string;
+  serial: number;
+  title: string;
+  subtitle: string;
+  file: any;
+  deadline: string;
+  created_at: string;
+  updated_at: any;
+  created_by: string;
+  created_by_name: string;
+  remarks: string;
+};
