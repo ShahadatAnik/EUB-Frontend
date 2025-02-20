@@ -5,7 +5,7 @@ import PageContainer from '@/components/page-container';
 import { INewsPortal } from '@/types';
 import NewsCard from '@/app/(top-navbar)/news-events/_components/news-card';
 import { getNewsEvents } from '@/server/get';
-import PagePagination from '@/app/(top-navbar)/news-events/_components/pagination';
+import ServerPagination from '@/components/server-pagination';
 
 type searchParamsProps = {
   searchParams?: Promise<{
@@ -31,7 +31,7 @@ export default async function Page({ searchParams }: searchParamsProps) {
           ))}
         </div>
 
-        <PagePagination pagination={data.pagination} />
+        <ServerPagination pagination={data.pagination} />
       </PageContainer>
     </div>
   );
