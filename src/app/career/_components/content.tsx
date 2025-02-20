@@ -1,15 +1,5 @@
 'use client';
 
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
-
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
@@ -17,8 +7,8 @@ import { ICareer } from '@/types';
 import PdfDownloadButton from '@/components/pdf-download-btn';
 import { IJobCircularResponse } from '@/server/get/get-job-circulars';
 
-import { useSearchParams } from 'next/navigation';
 import Search from '@/components/search';
+import ServerPagination from '@/components/server-pagination';
 
 const columns: SystemTableColumn<ICareer>[] = [
   {
@@ -55,9 +45,6 @@ const columns: SystemTableColumn<ICareer>[] = [
 ];
 
 const Content: React.FC<IJobCircularResponse> = (res) => {
-  const searchParams = useSearchParams();
-  const q = searchParams.get('q');
-
   return (
     <div className='space-y-8'>
       <div className='flex justify-center'>
@@ -67,29 +54,7 @@ const Content: React.FC<IJobCircularResponse> = (res) => {
       <SystemTable data={res.data} columns={columns} />
 
       <div className='flex justify-center'>
-        <Pagination>
-          <PaginationContent>
-            <PaginationItem>
-              <PaginationPrevious href='#' />
-            </PaginationItem>
-            {Array.from({ length: res.pagination.total_page }, (_, i) => (
-              <PaginationLink
-                key={i}
-                href={
-                  q ? `career?page=${i + 1}&q=${q}` : `career?page=${i + 1}`
-                }
-              >
-                {i + 1}
-              </PaginationLink>
-            ))}
-            <PaginationItem>
-              <PaginationEllipsis />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationNext href='#' />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
+        <ServerPagination pagination={res.pagination} />
       </div>
     </div>
   );
