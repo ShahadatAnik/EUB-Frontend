@@ -80,8 +80,8 @@ function SystemTable<T>({
                   )
                 ) : (
                   <RenderCell
-                    value={item[column.accessorKey]}
                     type={column.type}
+                    value={item[column.accessorKey]}
                   />
                 )}
               </TableCell>
@@ -108,7 +108,7 @@ const RenderCell = ({
     case 'string':
       return <>{value?.toString()}</>;
     case 'number':
-      return <>{Number(value).toFixed(2)}</>;
+      return <>{Number(value) === 0 ? '-' : Number(value).toFixed(2)}</>;
     case 'date':
       return <>{format(new Date(value as string), 'dd/MM/yy')}</>;
     case 'currency':
@@ -117,8 +117,11 @@ const RenderCell = ({
           readOnly
           disabled
           decimalScale={2}
-          className='bg-transparent block w-full'
-          value={value as number}
+          className={cn(
+            'bg-transparent block w-full',
+            value === 0 ? 'text-center' : ''
+          )}
+          value={(value as number) === 0 ? '-' : (value as number)}
           allowLeadingZeros
           thousandSeparator=','
         />
