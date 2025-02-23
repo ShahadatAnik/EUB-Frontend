@@ -2,23 +2,33 @@
 
 import { Separator } from '@/components/ui/separator';
 import Sidebar from './sidebar';
-import StdForGoods from './std-for-goods';
-import StdForWorks from './std-for-works';
-import StdForEnlistment from './std-for-enlistment';
-import StdForEvaluation from './std-for-evaluation';
+
+import Tender from './tender';
 
 const Content = () => {
   return (
     <div className='flex gap-12'>
       <Sidebar />
       <div className='flex-1 space-y-16'>
-        <StdForGoods />
+        <Tender
+          title='Standard Tender Documents (STD) for Goods'
+          type='std_for_goods'
+        />
         <Separator />
-        <StdForWorks />
+        <Tender
+          title='Standard Tender Documents (STD) for Works'
+          type='std_for_works'
+        />
         <Separator />
-        <StdForEnlistment />
+        <Tender
+          title='Standard Application Form for Enlistment (SAFE)'
+          type='safe'
+        />
         <Separator />
-        <StdForEvaluation />
+        <Tender
+          title='Standard Format and Guideline for Evaluation (Evaluation)'
+          type='evaluation'
+        />
       </div>
     </div>
   );

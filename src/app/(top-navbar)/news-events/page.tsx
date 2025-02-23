@@ -6,6 +6,7 @@ import { INewsPortal } from '@/types';
 import NewsCard from '@/app/(top-navbar)/news-events/_components/news-card';
 import { getNewsEvents } from '@/server/get';
 import ServerPagination from '@/components/server-pagination';
+import NoDataFound from '@/components/no-data-found';
 
 type searchParamsProps = {
   searchParams?: Promise<{
@@ -20,6 +21,8 @@ export default async function Page({ searchParams }: searchParamsProps) {
   const page = Number(params?.page ? params?.page : 1);
 
   const data = await getNewsEvents(limit, page);
+
+  if (!data || !data.data || !data.data.length) return <NoDataFound />;
 
   return (
     <div>

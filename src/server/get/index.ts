@@ -45,6 +45,8 @@ import { getAcademicInformationPolicies } from './get-academic-information-polic
 import { getAcademicCalender } from './get-academic-calendar';
 import { getPublications } from './get-publications';
 import { getOffers } from './get-offers';
+import { getPolicy } from './get-policy';
+import { getTenders } from './get-tenders';
 
 export {
   getCertificateTuitionFees,
@@ -86,4 +88,6 @@ export {
   getAcademicCalender,
   getPublications,
   getOffers,
+  getPolicy,
+  getTenders,
 };
