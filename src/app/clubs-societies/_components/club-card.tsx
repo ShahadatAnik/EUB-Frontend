@@ -10,7 +10,7 @@ const ClubCard: React.FC<{
 	email: string;
 	phone: string;
 	description: string;
-}> = ({ image, designation, name, email, phone, description }) => {
+}> = ({ image, name, email, phone, description }) => {
 	return (
 		<div className="flex gap-4">
 			<div className="flex flex-col">
@@ -20,7 +20,7 @@ const ClubCard: React.FC<{
 					width={200}
 					height={200}
 				/>
-				<p className="mt-3 text-xl font-semibold">{designation}</p>
+				<p className="mt-3 text-xl font-semibold">President</p>
 				<div className="mt-2 space-y-2 text-muted-foreground">
 					<p>Name : {name}</p>
 					<p>Email : {email}</p>
