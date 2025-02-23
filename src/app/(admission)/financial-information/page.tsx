@@ -2,17 +2,10 @@ import PageHeader from '@/components/page-header';
 import React from 'react';
 import PageContainer from '@/components/page-container';
 import Content from './_components/content';
-import {
-  getUndergraduateFinancialInformation,
-  getGraduateFinancialInformation,
-} from '@/server/get';
+import { getFinancialInformation } from '@/server/get';
 
 export default async function Page() {
-  const [undergraduateFinancialInformation, graduateFinancialInformation] =
-    await Promise.all([
-      getUndergraduateFinancialInformation(),
-      getGraduateFinancialInformation(),
-    ]);
+  const financialInformation = await getFinancialInformation();
 
   return (
     <>
@@ -22,10 +15,7 @@ export default async function Page() {
       />
 
       <PageContainer>
-        <Content
-          graduateInformation={graduateFinancialInformation}
-          undergraduateInformation={undergraduateFinancialInformation}
-        />
+        <Content data={financialInformation} />
       </PageContainer>
     </>
   );

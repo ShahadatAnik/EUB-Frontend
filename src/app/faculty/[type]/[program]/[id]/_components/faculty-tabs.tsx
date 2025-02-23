@@ -13,18 +13,13 @@ export const facultyTabs: IFacultyTab[] = [
   },
   {
     label: 'Publications',
-    value: 'publications',
+    value: 'publication',
     content: 'Publications',
   },
   {
     label: 'Awards & Honors',
     value: 'awards',
     content: 'Awards & Honors',
-  },
-  {
-    label: 'Educational Qualifications',
-    value: 'qualifications',
-    content: 'Educational Qualifications',
   },
   {
     label: 'Academic Experience',
@@ -40,11 +35,6 @@ export const facultyTabs: IFacultyTab[] = [
     label: 'Courses',
     value: 'courses',
     content: 'Courses',
-  },
-  {
-    label: 'Membership & Professional Activities',
-    value: 'membership',
-    content: 'Membership & Professional Activities',
   },
   {
     label: 'Research Interests',

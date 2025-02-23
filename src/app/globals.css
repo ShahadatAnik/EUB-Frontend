@@ -62,6 +62,10 @@ body {
   }
 }
 
+.ql-bubble .ql-editor a {
+  color: blue !important;
+}
+
 @layer base {
   * {
     @apply border-border;

@@ -1,3 +1,5 @@
+import { FINANCIAL_INFO_TABLE_TYPE } from './types/enum';
+
 export type INewsPortal = {
   id: number;
   uuid: string;
@@ -172,6 +174,57 @@ export type IClubAndSociety = {
   }[];
 };
 
+// {
+//   "id": 10,
+//   "uuid": "QiLR7K6iXM5vsAQhCdWDF",
+//   "department_uuid": "A8axDNMx9bISIVoIO6ldf",
+//   "department_name": "BSC-CSE",
+//   "teacher_uuid": "S1eeFJHLtSdH1RsJcnKfw",
+//   "teacher_name": "Alif Bin Hossain",
+//   "teacher_designation": "Admin",
+//   "teacher_phone": "01660141086",
+//   "teacher_email": "alifahmed47@gmail.com",
+//   "office": "Home",
+//   "teacher_image": "/uploads/public/users/rxEdaKPGQjIug4CQhMWTP.jpg",
+//   "department_head": false,
+//   "education": "wow",
+//   "publication": "jklj",
+//   "journal": "klk",
+//   "appointment_date": "2025-02-06 00:00:00",
+//   "resign_date": null,
+//   "about": "dfgfdg",
+//   "created_at": "2025-02-16 17:01:07",
+//   "updated_at": "2025-02-16 17:15:00",
+//   "created_by": "A8axDNMx9bISIVoIO6l6e",
+//   "created_by_name": "Admin",
+//   "remarks": null
+// }
+export type IFacultyDetails = {
+  id: number;
+  uuid: string;
+  department_uuid: string;
+  department_name: string;
+  teacher_uuid: string;
+  teacher_name: string;
+  teacher_designation: string;
+  teacher_phone: string;
+  teacher_email: string;
+  office: string;
+  teacher_image: string;
+  department_head: boolean;
+  education: string;
+  publication: string;
+  journal: string;
+  appointment_date: string;
+  resign_date: string | null;
+  about: string;
+  created_at: string;
+  updated_at: string | null;
+  created_by: string;
+  created_by_name: string;
+  remarks: string | null;
+};
+
 export type IPublication = {
   title: string;
   content: string | React.ReactNode;
@@ -311,12 +364,14 @@ export type IFinancialFaculty = {
   uuid: string;
   department_uuid: string;
   department_name: string;
+  category: 'undergraduate' | 'graduate';
+  table_name: FINANCIAL_INFO_TABLE_TYPE;
   faculty_uuid: string;
   faculty_name: string;
   category: string;
   total_credit: number;
   total_cost: number;
-  admission_fee: number;
+  total_waiver_amount: number;
   waiver_50: number;
   waiver_55: number;
   waiver_60: number;
@@ -345,4 +400,19 @@ export type IPagination = {
   total_page: number | null;
   next_page: number | null;
   prev_page: number | null;
+};
+
+export type IOffer = {
+  id: number;
+  uuid: string;
+  serial: number;
+  title: string;
+  subtitle: string;
+  file: any;
+  deadline: string;
+  created_at: string;
+  updated_at: any;
+  created_by: string;
+  created_by_name: string;
+  remarks: string;
 };

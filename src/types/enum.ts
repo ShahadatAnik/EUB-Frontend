@@ -100,3 +100,11 @@ export enum EnumHscBoard {
   Bangladesh_Madrasa_Board = 'Bangladesh Madrasa Board',
   Bangladesh_Technical_Education_Board = 'Bangladesh Technical Education Board',
 }
+
+// TABLE TYPE ENUM
+export enum FINANCIAL_INFO_TABLE_TYPE {
+  ENGINEERING_HSC = 'engineering_hsc',
+  ENGINEERING_DIPLOMA = 'engineering_diploma',
+  BBA = 'bba',
+  ARTS = 'arts',
+}

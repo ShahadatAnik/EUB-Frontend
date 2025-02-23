@@ -58,7 +58,7 @@ export function NavMenu() {
                 <NavigationMenuContent>
                   <ul
                     className={cn(
-                      'gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[400px] xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-3',
+                      'gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[860px]  2xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-3',
                       item.className
                     )}
                   >

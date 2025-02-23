@@ -13,6 +13,7 @@ import { getInformationProvisionalCertificates } from './get-information-provisi
 import {
   getGraduateFinancialInformation,
   getUndergraduateFinancialInformation,
+  getFinancialInformation,
 } from './get-financial-information';
 import { getFaculties } from './get-faculties';
 import { getExaminationGuidelines } from './get-examination-guidelines';
@@ -42,6 +43,8 @@ import {
 
 import { getAcademicInformationPolicies } from './get-academic-information-policies';
 import { getAcademicCalender } from './get-academic-calendar';
+import { getPublications } from './get-publications';
+import { getOffers } from './get-offers';
 
 export {
   getCertificateTuitionFees,
@@ -57,6 +60,7 @@ export {
   getInformationProvisionalCertificates,
   getGraduateFinancialInformation,
   getUndergraduateFinancialInformation,
+  getFinancialInformation,
   getFaculties,
   getExaminationGuidelines,
   getEventCalender,
@@ -80,4 +84,6 @@ export {
   getAuthoritiesVC,
   getAcademicInformationPolicies,
   getAcademicCalender,
+  getPublications,
+  getOffers,
 };
