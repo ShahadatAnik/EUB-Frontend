@@ -3,17 +3,23 @@
 import React from 'react';
 
 import NoticeCard from './notice-card';
-import { IDataTable } from '@/types';
-import { useNotices } from '../_const/query';
+import { IDataTable, IPaginationResponse } from '@/types';
 
-const Content: React.FC<{ initialData: IDataTable[] }> = ({ initialData }) => {
-  const { data } = useNotices({ initialData });
+import NoDataFound from '@/components/no-data-found';
+import ServerPagination from '@/components/server-pagination';
+
+const Content: React.FC<IPaginationResponse<IDataTable>> = (props) => {
+  if (!props.data || props.data.length === 0) return <NoDataFound />;
 
   return (
     <div>
-      {data.map((item, index) => (
+      {props.data.map((item, index) => (
         <NoticeCard key={index} data={item} />
       ))}
+
+      <div className='flex justify-center'>
+        <ServerPagination pagination={props.pagination} />
+      </div>
     </div>
   );
 };

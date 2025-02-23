@@ -1,49 +1,33 @@
 import PageHeader from '@/components/page-header';
 import React from 'react';
-import Content from './_components/content';
-
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
-
-import { generateMetaData } from '@/lib/utils';
 import PageContainer from '@/components/page-container';
+import Content from './_components/content';
 import { getNotices } from '@/server/get';
 
-export const metadata = generateMetaData({
-  title: 'Notices',
-  description: 'The notices of the European University of Bangladesh',
-});
+export default async function Page(props: {
+  searchParams?: Promise<{
+    q?: string;
+    page?: string;
+    limit?: string;
+  }>;
+}) {
+  const searchParams = await props.searchParams;
+  const q = searchParams?.q || '';
+  const page = Number(searchParams?.page) || 1;
+  const limit = Number(searchParams?.limit) || 10;
 
-export default async function Page() {
-  const data = await getNotices();
+  const data = await getNotices({
+    page,
+    limit,
+    q,
+  });
+
   return (
     <>
-      <PageHeader title='Notices' />
+      <PageHeader image='/images/accounting-and-finance.jpg' title='Notices' />
+
       <PageContainer>
-        <Content initialData={data} />
-        <Pagination>
-          <PaginationContent>
-            <PaginationItem>
-              <PaginationPrevious href='#' />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href='#'>1</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationEllipsis />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationNext href='#' />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
+        <Content {...data} />
       </PageContainer>
     </>
   );

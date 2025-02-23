@@ -297,20 +297,6 @@ export type IOfficeDummy = {
   content: string | React.ReactNode;
 };
 
-export type ITender = {
-  code: string;
-  type: string;
-  title: string;
-  published_date: string;
-  pdf: string;
-};
-export type IPolicy = {
-  name: string;
-  department: string;
-  published_date: string;
-  pdf: string;
-};
-
 export type ICareer = {
   id: number;
   uuid: string;
@@ -322,6 +308,15 @@ export type ICareer = {
   file: string;
   deadline: Date;
   remarks: string;
+};
+
+export type IPolicy = {
+  id: number;
+  uuid: string;
+  name: string;
+  department: string;
+  file: string;
+  published_date: Date;
 };
 
 export type IPrograms = {
@@ -415,4 +410,24 @@ export type IOffer = {
   created_by: string;
   created_by_name: string;
   remarks: string;
+};
+
+export interface IPaginationResponse<T> {
+  data: T[];
+  pagination: IPagination;
+}
+
+export type ITender = {
+  code: string;
+  created_at: string;
+  created_by: string;
+  created_by_name: string;
+  file: string;
+  published_date: string;
+  remarks: string | null;
+  table_name: string;
+  title: string;
+  type: string;
+  updated_at: string | null;
+  uuid: string;
 };

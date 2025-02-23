@@ -11,6 +11,7 @@ import Arts from './arts';
 const Content: React.FC<{ data: IFinancialFaculty[] }> = ({ data }) => {
   const { engineering_hsc, engineering_diploma, bba, arts } =
     getFinancialInfoByGroup(data);
+
   return (
     <div className='space-y-12'>
       <EngineeringHsc data={engineering_hsc} />

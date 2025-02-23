@@ -14,6 +14,8 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
+import NoDataFound from '../no-data-found';
+import { Skeleton } from '../ui/skeleton';
 
 type CellType = 'string' | 'number' | 'date' | 'currency' | 'default';
 
@@ -36,6 +38,7 @@ interface IProps<T> {
   caption?: string;
   className?: string;
   children?: React.ReactNode;
+  isLoading?: boolean;
 }
 
 function SystemTable<T>({
@@ -44,8 +47,10 @@ function SystemTable<T>({
   caption,
   className,
   children,
+  isLoading,
 }: IProps<T>) {
   const headers = columns.map((column) => column.header || column.accessorKey);
+
   return (
     <Table className={cn('border', className)}>
       {caption && <TableCaption>{caption}</TableCaption>}
@@ -65,29 +70,52 @@ function SystemTable<T>({
         </TableRow>
       </TableHeader>
       <TableBody>
-        {data.map((item: any, rowIndex: number) => (
-          <TableRow key={rowIndex}>
-            {columns.map((column, index) => (
-              <TableCell
-                key={index}
-                className={cn('border-r last:border-r-0', column.cellClassName)}
-              >
-                {column.cell ? (
-                  column.cell(
-                    item[column.accessorKey] as string,
-                    item as T as any,
-                    rowIndex
-                  )
-                ) : (
-                  <RenderCell
-                    type={column.type}
-                    value={item[column.accessorKey]}
-                  />
-                )}
+        {isLoading && (
+          <TableRow>
+            {headers.map((header, index) => (
+              <TableCell key={index} className='border-r last:border-r-0'>
+                <Skeleton className='h-8 w-full' />
               </TableCell>
             ))}
           </TableRow>
-        ))}
+        )}
+
+        {(!data || !data.length) && !isLoading && (
+          <TableRow>
+            <TableCell colSpan={headers.length} className='text-center'>
+              <NoDataFound />
+            </TableCell>
+          </TableRow>
+        )}
+
+        {!isLoading &&
+          data &&
+          data.map((item: any, rowIndex: number) => (
+            <TableRow key={rowIndex}>
+              {columns.map((column, index) => (
+                <TableCell
+                  key={index}
+                  className={cn(
+                    'border-r last:border-r-0',
+                    column.cellClassName
+                  )}
+                >
+                  {column.cell ? (
+                    column.cell(
+                      item[column.accessorKey] as string,
+                      item as T as any,
+                      rowIndex
+                    )
+                  ) : (
+                    <RenderCell
+                      type={column.type}
+                      value={item[column.accessorKey]}
+                    />
+                  )}
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
       </TableBody>
 
       {children && <>{children}</>}

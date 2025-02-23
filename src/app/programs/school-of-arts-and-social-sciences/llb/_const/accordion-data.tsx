@@ -14,6 +14,7 @@ import RCoursePath from '../_components/regular-program/course-path';
 import RDegreeRequirements from '../_components/regular-program/degree-requirements';
 import RClassRoutine from '../_components/regular-program/class-routine';
 import RExamSchedule from '../_components/regular-program/exam-schedule';
+import Notices from '@/app/programs/_components/notices';
 
 const accordions: IAcademicAccordion[] = [
   {
@@ -80,6 +81,10 @@ const accordions: IAcademicAccordion[] = [
   {
     title: 'Financial Information',
     href: '/financial-information',
+  },
+  {
+    title: 'Notices',
+    content: <Notices department='LLB' />,
   },
   {
     title: 'News & Events',

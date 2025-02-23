@@ -22,6 +22,7 @@ import EDegreeRequirements from '../_components/evening-program/degree-requireme
 import EClassRoutine from '../_components/evening-program/class-routine';
 import EExamSchedule from '../_components/evening-program/exam-schedule';
 import NewsEvents from '../_components/news-events';
+import Notices from '@/app/programs/_components/notices';
 
 const accordions: IAcademicAccordion[] = [
   {
@@ -117,6 +118,10 @@ const accordions: IAcademicAccordion[] = [
   {
     title: 'Financial Information',
     href: '/financial-information',
+  },
+  {
+    title: 'Notices',
+    content: <Notices department='BSC-CIVIL' />,
   },
   {
     title: 'News & Events',

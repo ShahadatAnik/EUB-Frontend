@@ -1,18 +1,13 @@
 'use server';
 
 import { secret } from '@/config/secret';
-import { IPagination, ISelectOption } from '@/types';
-
-export interface IPublicationResponse {
-  data: ISelectOption[];
-  pagination: IPagination;
-}
+import { IPaginationResponse, ISelectOption } from '@/types';
 
 export const getPublications = async ({
   page = 1,
   limit = 10,
   q = '',
-}): Promise<IPublicationResponse> => {
+}): Promise<IPaginationResponse<ISelectOption>> => {
   const res = await fetch(
     `${secret.apiBaseUrl}/other/portfolio/department-teachers-publication/value/label
 ?page=${page}&limit=${limit}&q=${q}`,
