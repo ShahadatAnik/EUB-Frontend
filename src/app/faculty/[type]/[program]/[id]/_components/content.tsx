@@ -60,7 +60,7 @@ const Content = ({ faculty }: { faculty: IFacultyDetails }) => {
           defaultValue={activeTab}
           className='w-full '
         >
-          <TabsList className='w-fit flex overflow-auto'>
+          <TabsList className='size-fit  flex justify-start gap-2 flex-wrap'>
             {facultyTabs.map((tab) => (
               <TabsTrigger key={tab.value} value={tab.value}>
                 {tab.label}
