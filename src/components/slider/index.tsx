@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 // Import Swiper React components
@@ -25,32 +25,27 @@ interface ISliderProps {
 }
 
 const Slider: React.FC<ISliderProps> = ({ sliders }) => {
-  const [isEnd, setIsEnd] = useState(false);
-  const [isBeginning, setIsBeginning] = useState(false);
-
   return (
     <Swiper
       className='h-full w-full'
       spaceBetween={0}
       slidesPerView={1}
-      onSlideChange={(swiper) => {
-        setIsEnd(swiper.isEnd);
-        setIsBeginning(swiper.isBeginning);
-      }}
+      onSlideChange={() => {}}
       modules={[Autoplay]}
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
       }}
+      loop
     >
       {sliders.map((slide, index) => (
         <SwiperSlide key={index} className='relative'>
           <div className='absolute inset-0 bg-black/20 z-[1] flex justify-between gap-4'>
-            <SlidePrevious isBeginning={isBeginning} />
+            <SlidePrevious />
             <div className='flex-1 flex items-center justify-center'>
               {slide.content}
             </div>
-            <SlideNext isEnd={isEnd} />
+            <SlideNext />
           </div>
           <Image
             fill
