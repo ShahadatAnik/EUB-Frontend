@@ -1,6 +1,5 @@
 'use client';
 
-import { DevTool } from '@hookform/devtools';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -855,7 +854,7 @@ const ApplicationForm = () => {
         </form>
       </Form>
 
-      <DevTool control={form.control} />
+      {/* <DevTool control={form.control} /> */}
     </>
   );
 };

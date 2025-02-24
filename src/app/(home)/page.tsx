@@ -1,7 +1,10 @@
 import Hero from '@/app/(home)/_components/hero';
-import Notice from '@/app/(home)/_components/notice';
 import { generateMetaData } from '@/lib/utils';
-import { getOffers } from '@/server/get';
+import { getNewsEvents, getOffers } from '@/server/get';
+import WhyEUB from './_components/why-eub';
+import Courses from './_components/courses';
+import NewsEvents from './_components/news-events';
+import Gallery from './_components/gallery';
 
 export const metadata = generateMetaData({
   title: 'European University of Bangladesh',
@@ -10,11 +13,16 @@ export const metadata = generateMetaData({
 
 export default async function Page() {
   const offers = await getOffers();
+  const news_events = await getNewsEvents(6, 1);
 
   return (
     <>
       <Hero offers={offers} />
-      <Notice />
+      <WhyEUB />
+      <Courses />
+      <NewsEvents {...news_events} />
+      <Gallery />
+      {/* <Notice /> */}
     </>
   );
 }
