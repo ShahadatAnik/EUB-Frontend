@@ -1,3 +1,4 @@
+import ClientPdfLink from '@/components/client-pdf';
 import { IOffer } from '@/types';
 import React from 'react';
 
@@ -8,12 +9,15 @@ const Offers: React.FC<{ data: IOffer[] }> = ({ data }) => {
 
   return (
     <div className='absolute bottom-0 left-0 right-0    z-10 bg-primary'>
-      <Marquee className='h-14' autoFill>
+      <Marquee className='h-14' autoFill pauseOnHover>
         <div>
           {data.map((item, index) => (
-            <p key={index} className='text-lg inline-block pr-10  text-white'>
-              {item.title}
-            </p>
+            <ClientPdfLink
+              className='no-underline hover:underline inline-block text-white px-5 border-r'
+              key={index}
+              href={item.file}
+              text={item.title}
+            />
           ))}
         </div>
       </Marquee>

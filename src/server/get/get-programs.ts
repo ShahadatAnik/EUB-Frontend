@@ -1,11 +1,7 @@
 'use server';
 
-import { secret } from '@/config/secret';
 import { IProgram } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
-export const getPrograms = async (): Promise<IProgram[]> => {
-  const res = await fetch(`${secret.apiBaseUrl}/portfolio/program`, {
-    cache: 'no-store',
-  });
-  return await res.json();
-};
+export const getPrograms = async (): Promise<IProgram[]> =>
+  fetchApi(`/portfolio/program`);

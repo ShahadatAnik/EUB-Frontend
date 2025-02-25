@@ -1,11 +1,7 @@
 'use server';
 
-import { secret } from '@/config/secret';
 import { IOffer } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
-export const getOffers = async (): Promise<IOffer[]> => {
-  const res = await fetch(`${secret.apiBaseUrl}/portfolio/offer`, {
-    cache: 'no-store',
-  });
-  return await res.json();
-};
+export const getOffers = async (): Promise<IOffer[]> =>
+  fetchApi(`/portfolio/offer`);

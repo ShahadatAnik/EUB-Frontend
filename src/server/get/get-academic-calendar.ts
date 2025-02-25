@@ -1,14 +1,7 @@
 'use server';
 
-import { secret } from '@/config/secret';
 import { IDataTable } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
-export const getAcademicCalender = async (): Promise<IDataTable[]> => {
-  const res = await fetch(
-    `${secret.apiBaseUrl}/portfolio/info?page_name=academic_calendar`,
-    {
-      cache: 'no-store',
-    }
-  );
-  return await res.json();
-};
+export const getAcademicCalender = async (): Promise<IDataTable[]> =>
+  fetchApi(`/portfolio/info?page_name=academic_calendar`);
