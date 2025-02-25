@@ -1,6 +1,7 @@
 'use client'; // Error boundaries must be Client Components
 
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import { useEffect } from 'react';
 
 export default function Error({
@@ -16,19 +17,21 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className='bg-destructive/5 h-screen '>
-      <div className='container flex flex-col items-center px-6 pt-40 gap-8'>
+    <div className='h-screen'>
+      <div className='h-full container flex flex-col items-center px-6 justify-center gap-8'>
+        <Image
+          width={400}
+          height={400}
+          src={'/server-error-2.svg'}
+          alt='Server Error Illustration'
+        />
         <div className='text-center w-full'>
-          <h2 className='text-2xl lg:text-4xl font-light text-destructive mb-2 lg:mb-4 font-poppins'>
-            Something went wrong!
+          <h2 className='text-2xl lg:text-4xl text-primary mb-2 lg:mb-4 font-poppins'>
+            Internal Server Error
           </h2>
-          <code className='block break-all text-destructive'>
-            {error.message}
-          </code>
+          <code className='block break-all text-primary'>{error.message}</code>
         </div>
-        <Button variant='destructive' onClick={() => reset()}>
-          Try again
-        </Button>
+        <Button onClick={() => reset()}>Try again</Button>
       </div>
     </div>
   );
