@@ -1,6 +1,6 @@
 'use server';
 
-import { secret } from '@/config/secret';
+import fetchApi from '@/utils/fetchApi';
 import { ICareer, IPagination } from '@/types';
 
 export interface IJobCircularResponse {
@@ -12,12 +12,5 @@ export const getJobCirculars = async ({
   page = 1,
   limit = 10,
   q = '',
-}): Promise<IJobCircularResponse> => {
-  const res = await fetch(
-    `${secret.apiBaseUrl}/portfolio/job-circular?page=${page}&limit=${limit}&q=${q}`,
-    {
-      cache: 'no-store',
-    }
-  );
-  return await res.json();
-};
+}): Promise<IJobCircularResponse> =>
+  fetchApi(`/portfolio/job-circular?page=${page}&limit=${limit}&q=${q}`);

@@ -18,7 +18,7 @@ import ClientImage from '@/components/client-image';
 
 const NewsCard: React.FC<{ item: INewsPortal }> = ({ item }) => {
   return (
-    <Card className=' overflow-hidden '>
+    <Card className=' overflow-hidden border-primary/10 '>
       <CardHeader className='p-0 h-[200px] relative'>
         <ClientImage
           className='w-full h-[200px] object-cover'

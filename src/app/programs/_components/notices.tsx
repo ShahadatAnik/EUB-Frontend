@@ -3,11 +3,12 @@
 import React, { useState } from 'react';
 import ContentWrapper from './content-wrapper';
 import { useQuery } from '@tanstack/react-query';
-import { getNotices } from '@/server/get';
 import NoticeCard from '@/app/notices/_components/notice-card';
 import { Input } from '@/components/ui/input';
 import { useDebounceValue } from 'usehooks-ts';
 import ClientPagination from '@/components/client-pagination';
+import { getNoticesByDepartment } from '@/server/get/get-notices';
+import NoDataFound from '@/components/no-data-found';
 
 const Notices: React.FC<{ department: string }> = ({ department }) => {
   const limit = 10;
@@ -16,17 +17,18 @@ const Notices: React.FC<{ department: string }> = ({ department }) => {
   const [debouncedValue, setValue] = useDebounceValue('', 500);
 
   const { data: notices, isLoading } = useQuery({
-    queryKey: ['notices', page, limit, debouncedValue, department],
+    queryKey: ['notices', department, page, limit, debouncedValue],
     queryFn: async () =>
-      await getNotices({
+      await getNoticesByDepartment({
         page,
         limit,
         q: debouncedValue,
+        department,
       }),
   });
 
   return (
-    <ContentWrapper title='Notices'>
+    <ContentWrapper title='Notices' className='space-y-8'>
       <div className='flex justify-end '>
         <Input
           onChange={(e) => setValue(e.target.value)}
@@ -37,9 +39,13 @@ const Notices: React.FC<{ department: string }> = ({ department }) => {
       </div>
 
       <div className='mb-8'>
-        {notices?.data.map((item, index) => (
-          <NoticeCard key={index} data={item} />
-        ))}
+        {notices?.data && notices.data.length > 0 ? (
+          notices?.data.map((item, index) => (
+            <NoticeCard key={index} data={item} />
+          ))
+        ) : (
+          <NoDataFound />
+        )}
       </div>
 
       {!isLoading && notices && notices?.pagination && (

@@ -1,38 +1,14 @@
 'use server';
 
-import { secret } from '@/config/secret';
 import { IFinancial, IFinancialFaculty } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
 export const getUndergraduateFinancialInformation =
-  async (): Promise<IFinancial> => {
-    const res = await fetch(
-      `${secret.apiBaseUrl}/portfolio/financial-info/category/undergraduate`,
-      {
-        cache: 'no-store',
-      }
-    );
+  async (): Promise<IFinancial> =>
+    fetchApi(`/portfolio/financial-info/category/undergraduate`);
 
-    return await res.json();
-  };
+export const getGraduateFinancialInformation = async (): Promise<IFinancial> =>
+  fetchApi(`/portfolio/financial-info/category/graduate`);
 
-export const getGraduateFinancialInformation =
-  async (): Promise<IFinancial> => {
-    const res = await fetch(
-      `${secret.apiBaseUrl}/portfolio/financial-info/category/graduate`,
-      {
-        cache: 'no-store',
-      }
-    );
-
-    return await res.json();
-  };
-
-export const getFinancialInformation = async (): Promise<
-  IFinancialFaculty[]
-> => {
-  const res = await fetch(`${secret.apiBaseUrl}/portfolio/financial-info`, {
-    cache: 'no-store',
-  });
-
-  return await res.json();
-};
+export const getFinancialInformation = async (): Promise<IFinancialFaculty[]> =>
+  fetchApi(`/portfolio/financial-info`);

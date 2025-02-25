@@ -304,3 +304,9 @@ export const navLinks: INavLink[] = [
     ],
   },
 ];
+
+export const allPrograms = navLinks
+  ?.find((navLink) => navLink.title === 'Programs')
+  ?.children?.filter((program) => program.title !== 'Miscellaneous')
+  .map((program) => program.children)
+  .flat();

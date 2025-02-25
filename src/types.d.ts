@@ -403,7 +403,7 @@ export type IOffer = {
   serial: number;
   title: string;
   subtitle: string;
-  file: any;
+  file: string;
   deadline: string;
   created_at: string;
   updated_at: any;

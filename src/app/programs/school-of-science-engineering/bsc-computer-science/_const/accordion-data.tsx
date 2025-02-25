@@ -123,7 +123,7 @@ const accordions: IAcademicAccordion[] = [
 
   {
     title: 'Notices',
-    content: <Notices department='CSE' />,
+    content: <Notices department='BSC-CSE' />,
   },
   {
     title: 'News & Events',
