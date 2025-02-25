@@ -2,20 +2,13 @@
 
 import React from 'react';
 
-import { navLinks } from '@/config/nav-links';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ArrowRight, Bookmark } from 'lucide-react';
+import { allPrograms } from '@/config/nav-links';
 
 const Courses = () => {
-  const programs = navLinks.find((navLink) => navLink.title === 'Programs');
-
-  const allPrograms = programs?.children
-    ?.filter((program) => program.title !== 'Miscellaneous')
-    .map((program) => program.children)
-    .flat();
-
   return (
     <section className='py-12 lg:py-16 2xl:py-20'>
       <div className='container'>
