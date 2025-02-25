@@ -20,9 +20,8 @@ export default async function Page() {
       <Hero offers={offers} />
       <WhyEUB />
       <Courses />
-      <NewsEvents {...news_events} />
       <Gallery />
-      {/* <Notice /> */}
+      <NewsEvents {...news_events} />
     </>
   );
 }

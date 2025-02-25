@@ -4,9 +4,9 @@ import React from 'react';
 
 const Gallery = () => {
   return (
-    <section className='py-12 lg:py-16 2xl:py-20 bg-white'>
+    <section className='py-12 lg:py-16 2xl:py-20 '>
       <div className='container space-y-4 lg:space-y-8'>
-        <div className='flex flex-col md:flex-row gap-4 lg:gap-8 p-4 lg:p-8  rounded-md border border-gray-100'>
+        <div className='flex flex-col md:flex-row gap-4 lg:gap-8 p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
           <div>
             <Image
               width={400}
@@ -51,7 +51,7 @@ const Gallery = () => {
         <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8'>
           <div className='lg:col-span-2 space-y-4  lg:space-y-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-4  lg:gap-8'>
-              <div className='p-4 lg:p-8  rounded-md border border-gray-100'>
+              <div className='p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
                 <h2 className='text-xl lg:text-2xl font-semibold'>
                   Lorem ipsum dolor sit amet.
                 </h2>
@@ -66,7 +66,7 @@ const Gallery = () => {
                 </p>
               </div>
 
-              <div className='p-4 lg:p-8  rounded-md border border-gray-100'>
+              <div className='p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
                 <h2 className='text-xl lg:text-2xl font-semibold'>
                   Lorem ipsum dolor sit amet.
                 </h2>
@@ -82,7 +82,7 @@ const Gallery = () => {
               </div>
             </div>
 
-            <div className='flex flex-col md:flex-row gap-4 lg:gap-8 p-4 lg:p-8  rounded-md border border-gray-100'>
+            <div className='flex flex-col md:flex-row gap-4 lg:gap-8 p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
               <div>
                 <Image
                   width={200}
