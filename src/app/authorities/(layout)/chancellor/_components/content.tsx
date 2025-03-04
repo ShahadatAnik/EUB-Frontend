@@ -24,30 +24,6 @@ const Content: React.FC<{ data: IAuthoritiesChancellor }> = ({ data }) => {
 						{data.personal_info.title}
 					</p>
 
-					<p className="mt-2 text-muted-foreground">
-						{data.education}
-					</p>
-
-					<ul className="mt-4 space-y-1">
-						<li>
-							<span className="font-semibold">Email :</span>{" "}
-							<span className="text-muted-foreground">
-								{data.contact.email}
-							</span>
-						</li>
-						<li>
-							<span className="font-semibold">Phone :</span>{" "}
-							<span className="text-muted-foreground">
-								{data.contact.phone}
-							</span>
-						</li>
-						<li>
-							<span className="font-semibold">Office :</span>{" "}
-							<span className="text-muted-foreground">
-								2/4 Gabtoli, Mirpur, Dhaka-1216, Bangladesh
-							</span>
-						</li>
-					</ul>
 				</div>
 			</div>
 
