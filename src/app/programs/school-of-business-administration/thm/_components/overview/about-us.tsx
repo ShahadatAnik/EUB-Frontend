@@ -17,6 +17,8 @@ const AboutUs = () => {
         and enhance economic growth throughout the 21st century. Beyond its
         economic impact, tourism fosters cultural exchange, promotes global
         understanding, and drives innovation in sustainability and technology.
+        <br />
+        <br />
         The Bachelor’s program in Tourism and Hospitality Management at the
         European University of Bangladesh (EUB) is designed to prepare competent
         professionals to meet the growing global demand in the tourism and
@@ -29,7 +31,10 @@ const AboutUs = () => {
         real-world skills. The program is guided by a team of experienced
         faculty members and industry professionals who provide academic
         expertise and valuable insights to help students thrive in their future
-        careers. Graduates of this program are recognized worldwide as skilled
+        careers.
+        <br />
+        <br />
+        Graduates of this program are recognized worldwide as skilled
         professionals in tourism and hospitality. Career opportunities include
         roles in tourism management, hotel operations, travel agencies,
         airlines, and event planning. Additionally, graduates can pursue careers

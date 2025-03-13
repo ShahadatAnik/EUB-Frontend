@@ -23,6 +23,8 @@ const Chairman = () => {
         theoretical knowledge and hands-on experience, preparing students for a
         wide range of career opportunities in hotel management, event planning,
         travel services, aviation industry, and destination development.
+        <br />
+        <br />
         Bangladesh, with its rich heritage and natural beauty, holds immense
         tourism potential. At the THM department, we strive to prepare students
         to harness these opportunities through a curriculum emphasizing

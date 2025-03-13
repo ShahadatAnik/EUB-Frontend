@@ -4,24 +4,23 @@ import Image from 'next/image';
 
 const AlumniIndustry = () => {
   return (
-    <ContentWrapper title='Alumni and Industry' className='space-y-12'>
-      <div>
-        <div className='w-full relative h-[400px]'>
-          <Image
-            className='object-contain'
-            fill
-            src={'/images/programs/thm/alumni/1. Abir.jpg'}
-            alt='Abir Hasan'
-          />
-        </div>
+    <ContentWrapper title='Alumni and Industry' className='space-y-12 lg:p-8'>
+      <div className='flex flex-col lg:flex-row items-center gap-8'>
+        <Image
+          height={300}
+          width={300}
+          className='object-contain'
+          src={'/images/programs/thm/alumni/1. Abir.jpg'}
+          alt='Abir Hasan'
+        />
 
-        <div className='text-center py-4'>
+        <div>
           <h4 className='text-2xl font-semibold'>Abir Hasan</h4>
           <h6 className='mt-1 text-muted-foreground'>
             Sr. Executive Sales & Marketing (Corporates), Grand Palace Hotel &
             Resorts
           </h6>
-          <p className='mt-2 text-justify'>
+          <p className='mt-2 text-justify italic'>
             Abir Hasan, a proud graduate of the Tourism and Hospitality
             Management Department at the European University of Bangladesh, is
             making remarkable strides in the hospitality industry. He is
@@ -33,22 +32,13 @@ const AlumniIndustry = () => {
         </div>
       </div>
 
-      <div>
-        <div className='w-full relative h-[400px]'>
-          <Image
-            className='object-contain'
-            fill
-            src={'/images/programs/thm/alumni/2. Shaheed.jpg'}
-            alt='Sahed Al Zubaer'
-          />
-        </div>
-
-        <div className='text-center py-4'>
+      <div className='flex flex-col-reverse lg:flex-row items-center gap-8'>
+        <div className='py-4'>
           <h4 className='text-2xl font-semibold'>Sahed Al Zubaer</h4>
           <h6 className='mt-1 text-muted-foreground'>
             DCDP, Golden Tulip - The Grandmark Dhaka
           </h6>
-          <p className='mt-2 text-justify'>
+          <p className='mt-2 text-justify italic'>
             Sahed Al Zubaer is a passionate hospitality professional with a
             degree in Tourism and Hospitality Management from the European
             University of Bangladesh. Currently serving as a Demi Chef de Partie
@@ -57,6 +47,13 @@ const AlumniIndustry = () => {
             dining experiences.
           </p>
         </div>
+        <Image
+          height={300}
+          width={300}
+          className='object-contain'
+          src={'/images/programs/thm/alumni/2. Shaheed.jpg'}
+          alt='Sahed Al Zubaer'
+        />
       </div>
     </ContentWrapper>
   );
