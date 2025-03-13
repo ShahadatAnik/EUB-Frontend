@@ -10,8 +10,8 @@ const Content = () => {
       <ContentLayout
         accordions={accordions}
         bannerImage={{
-          src: '/images/cse.jpg',
-          alt: 'CSE',
+          src: '/images/programs/thm/lab/Culinary.jpg',
+          alt: 'Tourism & Hospitality Management',
         }}
       />
     </Suspense>
