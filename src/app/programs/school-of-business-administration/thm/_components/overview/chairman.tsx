@@ -7,36 +7,42 @@ const Chairman = () => {
     <ContentWrapper title='Message from the Chairman' className='py-4'>
       <div className='flex justify-center mb-4'>
         <Image
-          src={'/person-placeholder.jpg'}
-          alt='Chairman'
+          src={'/images/chairmans/thm.jpg'}
+          alt='Shakina Sultana Pomi'
           width={200}
           height={200}
         />
       </div>
       <p className='leading-relaxed'>
-        I welcome you all to the Department of Accounting & Finance. It is one
-        of the four departments under the School of Business and Economics at
-        European University (EUB). The Department of Accounting & Finance at EUB
-        is committed to provide the highest quality accounting and finance
-        programs in Bangladesh. The department presently offers BBA, MBA, and
-        EMBA degrees majoring in Accounting, and Finance.It has 37 full-time
-        faculty members and 6 part-time faculty members. Several other faculty
-        members are on study leave. Our faculty members are highly qualified,
-        and possess doctoral and/or master’s degree from USA, UK, Canada, and
-        Australia. The Department of Accounting & Finance is located in the 7th
-        floor of North Academic Building at our beautiful campus. Our programs
-        are ACBSP (Accreditation Council for Business Schools and Programs)
-        accredited. Our graduates are well placed in the banks, NBFIs,
-        accounting firms, and leading MNCs. Departmental student organization is
-        working towards bridging the gap between academic knowledge and industry
-        experience.
+        Welcome to the Department of Tourism and Hospitality Management (THM) at
+        the European University of Bangladesh (EUB). It is an honor to lead a
+        department dedicated to shaping the next generation of leaders in the
+        global tourism and hospitality sectors. Tourism and hospitality is a
+        dynamic industry driving cultural exchange, economic growth, and
+        sustainability. Our program is designed to provide a balance of
+        theoretical knowledge and hands-on experience, preparing students for a
+        wide range of career opportunities in hotel management, event planning,
+        travel services, aviation industry, and destination development.
+        Bangladesh, with its rich heritage and natural beauty, holds immense
+        tourism potential. At the THM department, we strive to prepare students
+        to harness these opportunities through a curriculum emphasizing
+        innovation, sustainability, and service excellence. Our faculty members
+        bring extensive academic as well as industry experience and provide
+        students with internships, research opportunities, and real-world
+        exposure. Advanced learning environments further enhance the practical
+        skills of our students I invite you to explore our Tourism and
+        Hospitality Management program and shape your future in this dynamic
+        industry. Together, we can make a meaningful impact.
         <br />
         <br />
-        Thank you for your interest in our department and programs.
+        Warm regards,
         <br />
+        Shakina Sultana Pomi
         <br />
+        Associate Professor and Chairman Department of Tourism and Hospitality
+        Management
         <br />
-        FJ Mohaimen, Assistant Professor & Chair
+        European University of Bangladesh
       </p>
     </ContentWrapper>
   );
