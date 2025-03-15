@@ -13,8 +13,8 @@ const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
 
   return (
     <div className='py-6 lg:py-12'>
-      <div className='container'>
-        <div className='grid grid-cols-3 gap-8'>
+      <div className='container max-w-[1200px]'>
+        <div className='grid grid-cols-3 gap-4'>
           {data.map((item, index) => (
             <div
               key={index}
@@ -23,7 +23,7 @@ const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
               <div className='aspect-video relative'>
                 {item.image ? (
                   <ClientImage
-                    className='object-cover object-center'
+                    className='object-contain object-center p-10'
                     fill
                     src={`${item.image}`}
                     alt={item.title}
