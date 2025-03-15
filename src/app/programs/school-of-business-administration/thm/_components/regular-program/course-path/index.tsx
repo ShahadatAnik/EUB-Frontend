@@ -20,6 +20,13 @@ import SemesterCourseTable from './semester-course-table';
 
 const CoursePath = () => {
   return (
+    <ContentWrapper title='Course Map and Path' className='py-4 text-center'>
+      <h2 className='text-lg font-semibold'> Under development!</h2>
+      <p className='mt-2'>Exciting updates are on the way. Stay with us!</p>
+    </ContentWrapper>
+  );
+
+  return (
     <ContentWrapper title='Course Map and Path' className='py-4 space-y-4'>
       <p>
         The B.Sc in Computer Science and Engineering Program consists of the

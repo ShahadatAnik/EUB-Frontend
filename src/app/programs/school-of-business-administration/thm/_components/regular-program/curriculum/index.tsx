@@ -18,6 +18,12 @@ import CourseTable from './course-table';
 
 const Curriculum = () => {
   return (
+    <ContentWrapper title='Curriculum' className='py-4 text-center'>
+      <h2 className='text-lg font-semibold'> Under development!</h2>
+      <p className='mt-2'>Exciting updates are on the way. Stay with us!</p>
+    </ContentWrapper>
+  );
+  return (
     <ContentWrapper title='Curriculum' className='py-4 space-y-6'>
       <p>
         The undergraduate students of different years of the Department of
