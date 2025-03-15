@@ -18,6 +18,16 @@ export const topNavLinks: ITopNavLink[] = [
     href: '/news-events',
   },
   {
+    title: 'Degree Verification',
+    href: 'https://iems.eub.edu.bd/ResultVerification',
+    newTab: true,
+  },
+  {
+    title: 'Apply for Certificate',
+    href: 'https://iems.eub.edu.bd/EubApplyCertificate/?step=1',
+    newTab: true,
+  },
+  {
     title: 'Student Portal',
     href: 'https://iems.eub.edu.bd/',
     newTab: true,
