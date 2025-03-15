@@ -40,13 +40,15 @@ const Slider: React.FC<ISliderProps> = ({ sliders }) => {
     >
       {sliders.map((slide, index) => (
         <SwiperSlide key={index} className='relative'>
-          <div className='absolute inset-0 bg-black/20 z-[1] flex justify-between gap-4'>
+          <div className='absolute inset-0 bg-black/20 z-[10] flex justify-between gap-4'>
             <SlidePrevious />
             <div className='flex-1 flex items-center justify-center'>
               {slide.content}
             </div>
             <SlideNext />
           </div>
+
+          <div className='absolute inset-0 z-[1] bg-primary/30'></div>
           <Image
             fill
             src={slide.img}
