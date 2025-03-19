@@ -65,95 +65,115 @@ export const navLinks: INavLink[] = [
   },
   {
     title: 'Programs',
+    className: 'xl:grid-cols-2 2xl:w-[1200px] 2xl:grid-cols-4',
     children: [
       {
-        title: 'School of Business Administration',
-        href: '/programs/school-of-business-administration',
+        title: 'School of Business Administration and Economics',
+        href: '/programs/bba',
         children: [
           {
             title: 'BBA',
-            href: '/programs/school-of-business-administration/bba',
+            href: '/programs/bba',
           },
           {
             title: 'MBA',
-            href: '/programs/school-of-business-administration/mba',
+            href: '/programs/mba',
           },
           {
             title: 'Executive MBA',
-            href: '/programs/school-of-business-administration/emba',
+            href: '/programs/emba',
           },
           {
             title: 'MBA (1 Year)',
-            href: '/programs/school-of-business-administration/mba-one-year',
+            href: '/programs/mba-one-year',
           },
           {
             title: 'THM',
-            href: '/programs/school-of-business-administration/thm',
+            href: '/programs/thm',
+          },
+          {
+            title: 'BSS in Economics',
+            href: '/programs/bss-economics',
+          },
+          {
+            title: 'MSS in Economics',
+            href: '/programs/mss-economics',
           },
         ],
       },
       {
         title: 'School of Arts and Social Sciences',
-        href: '/programs/school-of-arts-and-social-sciences',
+        href: '/programs/ba-english',
         children: [
           {
             title: 'BA in English',
-            href: '/programs/school-of-arts-and-social-sciences/ba-english',
+            href: '/programs/ba-english',
           },
           {
             title: 'MA in English',
-            href: '/programs/school-of-arts-and-social-sciences/ma-english',
+            href: '/programs/ma-english',
           },
-          {
-            title: 'BSS in Economics',
-            href: '/programs/school-of-arts-and-social-sciences/bss-economics',
-          },
-          {
-            title: 'MSS in Economics',
-            href: '/programs/school-of-arts-and-social-sciences/mss-economics',
-          },
+
           {
             title: 'MGDS (1 Year)',
-            href: '/programs/school-of-arts-and-social-sciences/mgds-one-year',
+            href: '/programs/mgds-one-year',
           },
           {
             title: 'LLB',
-            href: '/programs/school-of-arts-and-social-sciences/llb',
+            href: '/programs/llb',
           },
           {
             title: 'LLM',
-            href: '/programs/school-of-arts-and-social-sciences/llm',
+            href: '/programs/llm',
           },
         ],
       },
 
       {
-        title: 'School of Science and Engineering',
-        href: '/programs/school-of-science-engineering',
+        title: 'School of Engineering',
+        href: '/programs/bsc-civil',
         children: [
           {
             title: 'BSc in Civil',
-            href: '/programs/school-of-science-engineering/bsc-civil',
+            href: '/programs/bsc-civil',
           },
           {
             title: 'BSc in Computer Science',
-            href: '/programs/school-of-science-engineering/bsc-computer-science',
+            href: '/programs/bsc-computer-science',
           },
           {
             title: 'BSc in Electrical and Electronics',
-            href: '/programs/school-of-science-engineering/bsc-electrical-and-electronics',
+            href: '/programs/bsc-electrical-and-electronics',
           },
           {
             title: 'BSc in Textile',
-            href: '/programs/school-of-science-engineering/bsc-textile',
+            href: '/programs/bsc-textile',
           },
           {
             title: 'BSc in Industrial & Production',
-            href: '/programs/school-of-science-engineering/bsc-industrial-and-production',
+            href: '/programs/bsc-industrial-and-production',
           },
           {
             title: 'BSc in Mechanical',
-            href: '/programs/school-of-science-engineering/bsc-mechanical',
+            href: '/programs/bsc-mechanical',
+          },
+        ],
+      },
+      {
+        title: 'School of Science',
+        href: '/programs/physics',
+        children: [
+          {
+            title: 'Physics',
+            href: '/programs/physics',
+          },
+          {
+            title: 'Chemistry',
+            href: '/programs/chemistry',
+          },
+          {
+            title: 'Mathematics',
+            href: '/programs/mathematics',
           },
         ],
       },
