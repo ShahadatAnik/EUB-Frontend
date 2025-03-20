@@ -34,11 +34,28 @@ const FooterMenu = () => {
               </Link>
             </li>
           ))}
+
+          <li>
+            <Link
+              className={pathName === '/contact-us' ? 'underline' : ''}
+              href='/contact-us'
+            >
+              Contact Us
+            </Link>
+          </li>
         </ul>
       </div>
       <div className=''>
         <h4 className='text-lg font-semibold mb-2'>Admission</h4>
         <ul className='space-y-2'>
+          <li>
+            <Link
+              className={pathName === '/online-admission' ? 'underline' : ''}
+              href='/online-admission'
+            >
+              Apply Now
+            </Link>
+          </li>
           {admissionLinks?.map((link, index) => (
             <li key={index}>
               <Link

@@ -17,33 +17,10 @@ const Gallery = () => {
           </div>
           <div className='flex-1'>
             <h2 className='text-xl lg:text-3xl font-semibold'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Under development!
             </h2>
             <p className='mt-2 lg:mt-4'>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-              saepe omnis culpa cumque sed? Reprehenderit ullam rem provident
-              aspernatur laudantium quaerat velit odit pariatur quisquam ex?
-              Minima nobis voluptas id harum, rerum tempore tempora ex amet ut
-              quibusdam dignissimos vero fugiat quia libero quos quod odit
-              asperiores modi fuga! Pariatur necessitatibus sed inventore
-              tempore dolores dolor itaque totam dolore quia aperiam nesciunt
-              voluptatibus expedita, modi eveniet illum. At enim, non, officia
-              veniam reprehenderit veritatis animi aliquid odit officiis atque
-              explicabo nemo quibusdam magni saepe corrupti suscipit omnis
-              repellat eum natus praesentium ipsam. Quis quos perspiciatis illo
-              tempora adipisci molestiae cum architecto ab quisquam iusto at,
-              reiciendis quibusdam nobis cumque eaque voluptatem ipsa
-              exercitationem harum! Consequatur voluptates quisquam excepturi,
-              aliquid quo veniam ex a. Delectus sunt expedita libero sed
-              provident fuga veritatis magnam consequuntur asperiores deleniti
-              voluptas recusandae velit ipsa eius molestiae ab, assumenda
-              voluptates dolore quibusdam accusantium nisi! Obcaecati soluta non
-              placeat, quam officiis, est id sapiente laboriosam dolorem
-              laudantium cupiditate illum quas earum? Nihil similique vitae
-              dolores velit quisquam! Provident dolorem laboriosam iusto eaque
-              earum ab non! Minima distinctio iure cupiditate accusantium unde
-              sed saepe autem cum eligendi magni. Sunt eveniet tempore qui
-              veritatis blanditiis porro a numquam facilis?
+              Exciting updates are on the way. Stay with us!
             </p>
           </div>
         </div>
@@ -53,31 +30,19 @@ const Gallery = () => {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-4  lg:gap-8'>
               <div className='p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
                 <h2 className='text-xl lg:text-2xl font-semibold'>
-                  Lorem ipsum dolor sit amet.
+                  Under development!
                 </h2>
                 <p className='mt-1 lg:mt-2'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia dolore quam voluptatibus dolor, nobis harum delectus
-                  iusto reiciendis consectetur deserunt perferendis sunt
-                  cupiditate. Ducimus porro iste tempora! Repellendus,
-                  recusandae. Doloremque animi sapiente sunt modi corrupti
-                  possimus est, assumenda ea velit. Similique sapiente tenetur
-                  nisi laborum ad quo illum asperiores autem!
+                  Exciting updates are on the way. Stay with us!
                 </p>
               </div>
 
               <div className='p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
                 <h2 className='text-xl lg:text-2xl font-semibold'>
-                  Lorem ipsum dolor sit amet.
+                  Under development!
                 </h2>
                 <p className='mt-1 lg:mt-2'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia dolore quam voluptatibus dolor, nobis harum delectus
-                  iusto reiciendis consectetur deserunt perferendis sunt
-                  cupiditate. Ducimus porro iste tempora! Repellendus,
-                  recusandae. Doloremque animi sapiente sunt modi corrupti
-                  possimus est, assumenda ea velit. Similique sapiente tenetur
-                  nisi laborum ad quo illum asperiores autem!
+                  Exciting updates are on the way. Stay with us!
                 </p>
               </div>
             </div>
@@ -92,17 +57,9 @@ const Gallery = () => {
                 />
               </div>
               <div className='flex-1'>
-                <h2 className='text-2xl font-semibold'>
-                  Lorem ipsum dolor sit amet.
-                </h2>
+                <h2 className='text-2xl font-semibold'>Under development!</h2>
                 <p className='mt-2'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia dolore quam voluptatibus dolor, nobis harum delectus
-                  iusto reiciendis consectetur deserunt perferendis sunt
-                  cupiditate. Ducimus porro iste tempora! Repellendus,
-                  recusandae. Doloremque animi sapiente sunt modi corrupti
-                  possimus est, assumenda ea velit. Similique sapiente tenetur
-                  nisi laborum ad quo illum asperiores autem!
+                  Exciting updates are on the way. Stay with us!
                 </p>
               </div>
             </div>

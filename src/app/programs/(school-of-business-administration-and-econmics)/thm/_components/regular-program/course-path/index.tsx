@@ -1,0 +1,90 @@
+import React from 'react';
+import ContentWrapper from '../../content-wrapper';
+
+import {
+  firstYearFirstSemester,
+  firstYearSecondSemester,
+  firstYearThirdSemester,
+  secondYearFirstSemester,
+  secondYearSecondSemester,
+  secondYearThirdSemester,
+  thirdYearFirstSemester,
+  thirdYearSecondSemester,
+  thirdYearThirdSemester,
+  fourthYearFirstSemester,
+  fourthYearSecondSemester,
+  fourthYearThirdSemester,
+} from '../../../_const/semester-wise-courses';
+
+import SemesterCourseTable from './semester-course-table';
+
+const CoursePath = () => {
+  return (
+    <ContentWrapper title='Course Map and Path' className='py-4 text-center'>
+      <h2 className='text-lg font-semibold'> Under development!</h2>
+      <p className='mt-2'>Exciting updates are on the way. Stay with us!</p>
+    </ContentWrapper>
+  );
+
+  return (
+    <ContentWrapper title='Course Map and Path' className='py-4 space-y-4'>
+      <p>
+        The B.Sc in Computer Science and Engineering Program consists of the
+        following categories of courses:
+      </p>
+      <div className='space-y-16'>
+        <SemesterCourseTable
+          title='First Year - First Semester'
+          data={firstYearFirstSemester}
+        />
+        <SemesterCourseTable
+          title='First Year - Second Semester'
+          data={firstYearSecondSemester}
+        />
+        <SemesterCourseTable
+          title='First Year - Third Semester'
+          data={firstYearThirdSemester}
+        />
+        <SemesterCourseTable
+          title='Second Year - First Semester'
+          data={secondYearFirstSemester}
+        />
+        <SemesterCourseTable
+          title='Second Year - Second Semester'
+          data={secondYearSecondSemester}
+        />
+        <SemesterCourseTable
+          title='Second Year - Third Semester'
+          data={secondYearThirdSemester}
+        />
+        <SemesterCourseTable
+          title='Third Year - First Semester'
+          data={thirdYearFirstSemester}
+        />
+        <SemesterCourseTable
+          title='Third Year - Second Semester'
+          data={thirdYearSecondSemester}
+        />
+        <SemesterCourseTable
+          title='Third Year - Third Semester'
+          data={thirdYearThirdSemester}
+        />
+
+        <SemesterCourseTable
+          title='Fourth Year - First Semester'
+          data={fourthYearFirstSemester}
+        />
+        <SemesterCourseTable
+          title='Fourth Year - Second Semester'
+          data={fourthYearSecondSemester}
+        />
+        <SemesterCourseTable
+          title='Fourth Year - Third Semester'
+          data={fourthYearThirdSemester}
+        />
+      </div>
+    </ContentWrapper>
+  );
+};
+
+export default CoursePath;

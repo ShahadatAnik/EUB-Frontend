@@ -15,7 +15,6 @@ import {
 } from '@/components/ui/navigation-menu';
 import { navLinks } from '@/config/nav-links';
 import { ChevronsRight } from 'lucide-react';
-
 export function NavMenu() {
   return (
     <NavigationMenu>
@@ -58,7 +57,7 @@ export function NavMenu() {
                 <NavigationMenuContent>
                   <ul
                     className={cn(
-                      'gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[860px]  2xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-3',
+                      'max-h-[70vh] overflow-auto gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[760px] 2xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-3',
                       item.className
                     )}
                   >
@@ -71,11 +70,11 @@ export function NavMenu() {
                                 asChild
                                 className={cn(
                                   navigationMenuTriggerStyle(),
-                                  'w-full',
+                                  'w-full h-fit',
                                   child.className
                                 )}
                               >
-                                <p className='text-sm font-bold text-primary'>
+                                <p className='text-sm font-bold text-primary w-full'>
                                   {child.title}
                                 </p>
                               </NavigationMenuLink>
@@ -85,10 +84,10 @@ export function NavMenu() {
                               asChild
                               className={cn(
                                 navigationMenuTriggerStyle(),
-                                'w-full'
+                                'w-full h-fit'
                               )}
                             >
-                              <p className='text-sm font-bold text-primary w-full '>
+                              <p className='text-sm font-bold text-primary '>
                                 {child.title}
                               </p>
                             </NavigationMenuLink>
@@ -108,13 +107,12 @@ export function NavMenu() {
                                       <NavigationMenuLink
                                         className={cn(
                                           navigationMenuTriggerStyle(),
+                                          'h-fit',
                                           item.className
                                         )}
                                       >
                                         <ChevronsRight className='mr-1 size-3' />
-                                        <p className='w-full text-wrap'>
-                                          {item.title}
-                                        </p>
+                                        <p className='w-full'>{item.title}</p>
                                       </NavigationMenuLink>
                                     </Link>
                                   ) : (
@@ -126,6 +124,7 @@ export function NavMenu() {
                                       <NavigationMenuLink
                                         className={cn(
                                           navigationMenuTriggerStyle(),
+                                          'h-fit w-full',
                                           item.className
                                         )}
                                       >

@@ -1,23 +1,24 @@
 import React from 'react';
 
-import { Factory, Globe, GraduationCap, Rocket } from 'lucide-react';
+import { Factory, GraduationCap, History, MapPin } from 'lucide-react';
 
 const data = [
   {
-    description: 'Real industry connections. Real world experiences.',
-    icon: Factory,
-  },
-  {
-    description: 'Industry-class facilities, world-class learning.',
-    icon: Rocket,
-  },
-  {
-    description: 'Connecting people and technology for a better world.',
-    icon: Globe,
-  },
-  {
-    description: 'Proudly creative, constantly innovative.',
+    description: 'World-Class Education at an Affordable Cost',
+
     icon: GraduationCap,
+  },
+  {
+    description: 'Flexible Learning for Working Professionals',
+    icon: History,
+  },
+  {
+    description: 'Prime Location for Easy Access',
+    icon: MapPin,
+  },
+  {
+    description: 'Real Industry Exposure & Career Opportunities',
+    icon: Factory,
   },
 ];
 
@@ -34,7 +35,7 @@ const WhyEUB = () => {
               key={index}
               className='flex flex-col items-center space-y-4 text-center'
             >
-              <item.icon className='size-16 lg:size-20 text-primary' />
+              <item.icon className='stroke-[0.75] size-16 lg:size-20 text-primary' />
               <p>{item.description}</p>
             </div>
           ))}
