@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import FacultyAndStaff from "@/app/programs/_components/faculty-and-staff";
+import FacultyAndStaff from '@/app/programs/_components/faculty-and-staff';
 
 const CoreFacultyMembers = () => {
-	return <FacultyAndStaff department="bsc-mechanical" />;
+  return <FacultyAndStaff department='BSC-MECHANICAL' />;
 };
 
 export default CoreFacultyMembers;

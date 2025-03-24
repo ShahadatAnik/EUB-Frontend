@@ -1,18 +1,10 @@
 import React from 'react';
-import ContentWrapper from '../content-wrapper';
-import Image from 'next/image';
+
+import MessageFromChairman from '@/app/programs/_components/message-from-chairman';
 
 const Chairman = () => {
   return (
-    <ContentWrapper title='Message from the Chairman' className='py-4'>
-      <div className='flex justify-center mb-4'>
-        <Image
-          src={'/person-placeholder.jpg'}
-          alt='Chairman'
-          width={200}
-          height={200}
-        />
-      </div>
+    <MessageFromChairman departmentName='BSS-ECONOMICS'>
       <p className='leading-relaxed'>
         I welcome you all to the Department of Accounting & Finance. It is one
         of the four departments under the School of Business and Economics at
@@ -33,12 +25,8 @@ const Chairman = () => {
         <br />
         <br />
         Thank you for your interest in our department and programs.
-        <br />
-        <br />
-        <br />
-        FJ Mohaimen, Assistant Professor & Chair
       </p>
-    </ContentWrapper>
+    </MessageFromChairman>
   );
 };
 
