@@ -24,8 +24,8 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
 
   return (
     <ContentWrapper title='Core Faculty Members & Staff ' className='space-y-4'>
-      <div className='flex border rounded-md overflow-hidden '>
-        <div className='relative w-40 aspect-square'>
+      <div className='flex flex-col lg:flex-row border rounded-md overflow-hidden '>
+        <div className='relative lg:w-40 aspect-square'>
           <ClientImage
             className='object-cover'
             src={departmentHead?.teacher_image || ''}
@@ -42,23 +42,23 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
           </Link>
           <div>
             <Link className='hover:underline' href={redirectUrlForHead}>
-              <h3 className='text-xl font-semibold'>
+              <h3 className='text-lg lg:text-xl font-semibold'>
                 {departmentHead?.teacher_name}
               </h3>
             </Link>
-            <p className='mt-1 text-muted-foreground'>
+            <p className='mt-1 text-sm lg:text-base text-muted-foreground'>
               {departmentHead?.teacher_designation}
             </p>
           </div>
           <div className='mt-2 text-muted-foreground'>
             {departmentHead?.teacher_email && (
-              <p className='flex items-center gap-2'>
+              <p className='flex text-sm lg:text-base items-center gap-2'>
                 <Mail className='size-4' />
                 {departmentHead?.teacher_email}
               </p>
             )}
             {departmentHead?.teacher_phone && (
-              <p className='flex items-center gap-2'>
+              <p className='flex text-sm lg:text-base items-center gap-2'>
                 <Phone className='size-4' />
                 {departmentHead?.teacher_phone}
               </p>
@@ -75,7 +75,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
               key={index}
               className='flex  border rounded-md overflow-hidden'
             >
-              <div className='relative w-40 aspect-square'>
+              <div className='relative w-24 lg:w-40 aspect-square'>
                 <div className='absolute inset-0 bg-muted'></div>
                 <ClientImage
                   className='object-cover'
@@ -85,7 +85,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
                 />
               </div>
 
-              <div className=' flex-1 px-6 py-3 flex flex-col gap-0 relative'>
+              <div className='flex-1 px-3 py-2 lg:px-6 lg:py-3 flex flex-col gap-0 relative'>
                 <Link
                   href={`/faculty/${type}/${program}/${faculty.uuid}`}
                   className='hover:text-primary'
@@ -99,23 +99,23 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
                     className='hover:underline'
                     href={`/faculty/${type}/${program}/${faculty.uuid}`}
                   >
-                    <h3 className='text-xl font-semibold'>
+                    <h3 className='text-base lg:text-xl font-semibold'>
                       {faculty?.teacher_name}
                     </h3>
                   </Link>
-                  <p className='mt-1 text-muted-foreground'>
+                  <p className='mt-1 text-sm lg:text-base text-muted-foreground'>
                     {faculty.teacher_designation}
                   </p>
                 </div>
                 <div className='mt-2 text-muted-foreground'>
                   {faculty.teacher_email && (
-                    <p className='flex items-center gap-2'>
+                    <p className=' text-sm lg:text-base flex items-center gap-2'>
                       <Mail className='size-4' />
                       {faculty.teacher_email}
                     </p>
                   )}
                   {faculty.teacher_phone && (
-                    <p className='flex items-center gap-2'>
+                    <p className=' text-sm lg:text-base flex items-center gap-2'>
                       <Phone className='size-4' />
                       {faculty.teacher_phone}
                     </p>
