@@ -1,8 +1,11 @@
+'use client';
+
 import React from 'react';
 import Image, { ImageProps } from 'next/image';
 
 export default function ClientImage({ src, alt, ...props }: ImageProps) {
-  const imageBaseUrl = 'http://103.147.163.46:4040';
+  const imageBaseUrl =
+    process.env.NEXT_PUBLIC_IMAGE_BASE_URL || 'http://103.147.163.46:4040';
 
   return (
     <Image
