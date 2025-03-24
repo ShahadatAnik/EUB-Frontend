@@ -1,5 +1,8 @@
-import { useGetDepartmentTeachers } from '@/hooks/use-get-course';
+'use client';
+
 import React from 'react';
+
+import { useGetDepartmentTeachers } from '@/hooks/use-get-course';
 import ContentWrapper from './content-wrapper';
 import ClientImage from '@/components/client-image';
 
@@ -7,8 +10,10 @@ const MessageFromChairman: React.FC<{
   departmentName: string;
   children: React.ReactNode;
 }> = ({ departmentName, children }) => {
-  const { data } = useGetDepartmentTeachers(departmentName);
+  const { data, isLoading } = useGetDepartmentTeachers(departmentName);
   const chairman = data?.find((teacher) => teacher.department_head === true);
+
+  if (isLoading) return <>loading...</>;
 
   return (
     <ContentWrapper title='Message from the Chairman' className='py-4'>
