@@ -92,6 +92,10 @@ export const navLinks: INavLink[] = [
             href: '/programs/thm',
           },
           {
+            title: 'MGDS (1 Year)',
+            href: '/programs/mgds-one-year',
+          },
+          {
             title: 'BSS in Economics',
             href: '/programs/bss-economics',
           },
@@ -112,11 +116,6 @@ export const navLinks: INavLink[] = [
           {
             title: 'MA in English',
             href: '/programs/ma-english',
-          },
-
-          {
-            title: 'MGDS (1 Year)',
-            href: '/programs/mgds-one-year',
           },
           {
             title: 'LLB',
