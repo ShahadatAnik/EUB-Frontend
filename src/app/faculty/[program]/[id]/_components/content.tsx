@@ -28,7 +28,9 @@ const Content = ({ faculty }: { faculty: IFacultyDetails }) => {
         <div className='lg:col-span-4 '>
           <h4 className='text-2xl font-semibold'>{faculty.teacher_name}</h4>
           <p className='text-muted-foreground'>{faculty.teacher_designation}</p>
-          <ul className='mt-2 text-muted-foreground'>{faculty.education}</ul>
+          <div className='mt-2 !text-muted-foreground'>
+            <RichTextViewer content={faculty.education} />
+          </div>
 
           <ul className='mt-4'>
             <li>
@@ -68,24 +70,13 @@ const Content = ({ faculty }: { faculty: IFacultyDetails }) => {
             ))}
           </TabsList>
           {facultyTabs.map((tab) => {
-            console.log({
-              tab,
-            });
-
-            if (tab.value === 'publication') {
-              return (
-                <TabsContent key={tab.value} value={tab.value} className='p-4'>
-                  {(faculty as any)[tab.value] ? (
-                    <RichTextViewer content={(faculty as any)[tab.value]} />
-                  ) : (
-                    'No data'
-                  )}
-                </TabsContent>
-              );
-            }
             return (
               <TabsContent key={tab.value} value={tab.value} className='p-4'>
-                {(faculty as any)[tab.value] ?? 'No data'}
+                {(faculty as any)[tab.value] ? (
+                  <RichTextViewer content={(faculty as any)[tab.value]} />
+                ) : (
+                  'No data'
+                )}
               </TabsContent>
             );
           })}

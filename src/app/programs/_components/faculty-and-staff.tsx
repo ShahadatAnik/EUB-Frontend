@@ -15,10 +15,9 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
   );
 
   const pathName = usePathname();
-  const type = pathName.split('/')[2];
-  const program = pathName.split('/')[3];
+  const program = pathName.split('/')[2];
 
-  const redirectUrlForHead = `/faculty/${type}/${program}/${departmentHead?.uuid}`;
+  const redirectUrlForHead = `/faculty/${program}/${departmentHead?.uuid}`;
 
   if (isLoading) return <div>Loading...</div>;
 
@@ -87,7 +86,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
 
               <div className='flex-1 px-3 py-2 lg:px-6 lg:py-3 flex flex-col gap-0 relative'>
                 <Link
-                  href={`/faculty/${type}/${program}/${faculty.uuid}`}
+                  href={`/faculty/${program}/${faculty.uuid}`}
                   className='hover:text-primary'
                 >
                   <div className='size-5 absolute top-3  right-4'>
@@ -97,7 +96,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
                 <div>
                   <Link
                     className='hover:underline'
-                    href={`/faculty/${type}/${program}/${faculty.uuid}`}
+                    href={`/faculty/${program}/${faculty.uuid}`}
                   >
                     <h3 className='text-base lg:text-xl font-semibold'>
                       {faculty?.teacher_name}

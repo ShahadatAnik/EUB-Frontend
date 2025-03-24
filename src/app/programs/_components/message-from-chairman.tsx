@@ -5,15 +5,16 @@ import React from 'react';
 import { useGetDepartmentTeachers } from '@/hooks/use-get-course';
 import ContentWrapper from './content-wrapper';
 import ClientImage from '@/components/client-image';
+import RichTextViewer from '@/components/rich-text-viewer';
 
 const MessageFromChairman: React.FC<{
   departmentName: string;
-  children: React.ReactNode;
-}> = ({ departmentName, children }) => {
+}> = ({ departmentName }) => {
   const { data, isLoading } = useGetDepartmentTeachers(departmentName);
   const chairman = data?.find((teacher) => teacher.department_head === true);
 
   if (isLoading) return <>loading...</>;
+  if (!chairman) return <>No Chairman Found</>;
 
   return (
     <ContentWrapper title='Message from the Chairman' className='py-4'>
@@ -25,7 +26,10 @@ const MessageFromChairman: React.FC<{
           height={200}
         />
       </div>
-      {children}
+
+      {chairman.department_head_message && (
+        <RichTextViewer content={chairman.department_head_message} />
+      )}
       <br />
 
       {chairman && chairman.teacher_name && (

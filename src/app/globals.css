@@ -62,8 +62,14 @@ body {
   }
 }
 
+.ql-bubble .ql-editor {
+  padding: 0px !important;
+}
 .ql-bubble .ql-editor a {
   color: blue !important;
+}
+.ql-bubble .ql-editor p {
+  @apply text-base font-sans;
 }
 
 @layer base {
@@ -94,8 +100,6 @@ body {
     @apply border border-blue-500;
   }
 }
-
-
 
 @layer base {
   * {
