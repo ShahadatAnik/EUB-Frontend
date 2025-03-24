@@ -76,6 +76,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
               className='flex  border rounded-md overflow-hidden'
             >
               <div className='relative w-40 aspect-square'>
+                <div className='absolute inset-0 bg-muted'></div>
                 <ClientImage
                   className='object-cover'
                   src={faculty.teacher_image || ''}

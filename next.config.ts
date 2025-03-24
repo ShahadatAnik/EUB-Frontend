@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'http',
         hostname: '103.147.163.46',
+        port: '4040',
       },
       {
         protocol: 'https',
