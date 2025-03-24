@@ -9,11 +9,10 @@ import {
   getRegularClassRoutine,
   getRegularExamSchedule,
 } from '@/server/get';
-import { IDataTable, IDepartmentTeacher, INewsPortal } from '@/types';
 
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 
-const columns: SystemTableColumn<any>[] = [
+export const columns: SystemTableColumn<any>[] = [
   {
     accessorKey: 'description',
     header: 'Description',
@@ -26,116 +25,38 @@ const columns: SystemTableColumn<any>[] = [
   },
 ];
 
-export const useGetEveningClassRoutine = (department: string) => {
-  const [data, setData] = useState<IDataTable[]>([]);
+export const useGetEveningClassRoutine = (department: string) =>
+  useQuery({
+    queryKey: ['eveningClassRoutine', department],
+    queryFn: () => getEveningClassRoutine(department),
+  });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getEveningClassRoutine(department);
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching class routine:', error);
-      }
-    };
+export const useGetEveningExamSchedule = (department: string) =>
+  useQuery({
+    queryKey: ['eveningExamSchedule', department],
+    queryFn: () => getEveningExamSchedule(department),
+  });
 
-    fetchData();
-  }, []);
+export const useGetRegularClassRoutine = (department: string) =>
+  useQuery({
+    queryKey: ['regularClassRoutine', department],
+    queryFn: () => getRegularClassRoutine(department),
+  });
 
-  return { data, columns };
-};
+export const useGetRegularExamSchedule = (department: string) =>
+  useQuery({
+    queryKey: ['regularExamSchedule', department],
+    queryFn: () => getRegularExamSchedule(department),
+  });
 
-export const useGetEveningExamSchedule = (department: string) => {
-  const [data, setData] = useState<IDataTable[]>([]);
+export const useGetDepartmentTeachers = (department: string) =>
+  useQuery({
+    queryKey: ['departmentTeachers', department],
+    queryFn: () => getDepartmentTeachers(department),
+  });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getEveningExamSchedule(department);
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching class routine:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return { data, columns };
-};
-
-export const useGetRegularClassRoutine = (department: string) => {
-  const [data, setData] = useState<IDataTable[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getRegularClassRoutine(department);
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching class routine:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return { data, columns };
-};
-
-export const useGetRegularExamSchedule = (department: string) => {
-  const [data, setData] = useState<IDataTable[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getRegularExamSchedule(department);
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching class routine:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return { data, columns };
-};
-
-export const useGetDepartmentTeachers = (department: string) => {
-  const [data, setData] = useState<IDepartmentTeacher[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getDepartmentTeachers(department);
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching class routine:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return { data };
-};
-
-export const useGetDepartmentNews = (department: string) => {
-  const [data, setData] = useState<INewsPortal[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getDepartmentNews(department);
-        setData(result.data);
-      } catch (error) {
-        console.error('Error fetching class routine:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return { data };
-};
+export const useGetDepartmentNews = (department: string) =>
+  useQuery({
+    queryKey: ['departmentNews', department],
+    queryFn: () => getDepartmentNews(department),
+  });
