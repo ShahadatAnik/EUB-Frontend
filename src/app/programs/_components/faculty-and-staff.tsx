@@ -20,6 +20,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
 
   const redirectUrlForHead = `/faculty/${type}/${program}/${departmentHead?.uuid}`;
 
+  console.log({ teachers });
   if (isLoading) return <div>Loading...</div>;
 
   return (
