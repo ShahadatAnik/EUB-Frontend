@@ -1,7 +1,6 @@
 import { IAcademicAccordion } from '@/types';
 import AlumniIndustry from '../_components/alumni-industry';
 import CoreFacultyMembers from '../_components/core-faculty-members';
-import LaboratoriesResources from '../_components/laboratories-resources';
 import AboutUs from '../_components/overview/about-us';
 import Chairman from '../_components/overview/chairman';
 import NewsEvents from '../_components/news-events';
@@ -61,10 +60,6 @@ const accordions: IAcademicAccordion[] = [
         content: <RExamSchedule />,
       },
     ],
-  },
-  {
-    title: 'Laboratories & Resources',
-    content: <LaboratoriesResources />,
   },
   {
     title: 'Alumni & Industry',
