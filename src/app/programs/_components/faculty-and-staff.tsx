@@ -21,50 +21,54 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
 
   if (isLoading) return <div>Loading...</div>;
 
+  if (teachers?.length === 0) return <div>No Faculty Found</div>;
+
   return (
     <ContentWrapper title='Core Faculty Members & Staff ' className='space-y-4'>
-      <div className='flex flex-col lg:flex-row border rounded-md overflow-hidden '>
-        <div className='relative lg:w-40 aspect-square'>
-          <ClientImage
-            className='object-cover'
-            src={departmentHead?.teacher_image || ''}
-            alt={departmentHead?.teacher_name || 'Teacher'}
-            fill
-          />
-        </div>
+      {departmentHead && (
+        <div className='flex flex-col lg:flex-row border rounded-md overflow-hidden '>
+          <div className='relative lg:w-40 aspect-square'>
+            <ClientImage
+              className='object-cover'
+              src={departmentHead.teacher_image}
+              alt={departmentHead.teacher_name}
+              fill
+            />
+          </div>
 
-        <div className='flex-1 px-6 py-3 flex flex-col gap-0 relative'>
-          <Link href={redirectUrlForHead} className='hover:text-primary'>
-            <div className='size-5 absolute top-3  right-4'>
-              <SquareArrowOutUpRight className='size-5' />
-            </div>
-          </Link>
-          <div>
-            <Link className='hover:underline' href={redirectUrlForHead}>
-              <h3 className='text-lg lg:text-xl font-semibold'>
-                {departmentHead?.teacher_name}
-              </h3>
+          <div className='flex-1 px-6 py-3 flex flex-col gap-0 relative'>
+            <Link href={redirectUrlForHead} className='hover:text-primary'>
+              <div className='size-5 absolute top-3  right-4'>
+                <SquareArrowOutUpRight className='size-5' />
+              </div>
             </Link>
-            <p className='mt-1 text-sm lg:text-base text-muted-foreground'>
-              {departmentHead?.teacher_designation}
-            </p>
-          </div>
-          <div className='mt-2 text-muted-foreground'>
-            {departmentHead?.teacher_email && (
-              <p className='flex text-sm lg:text-base items-center gap-2'>
-                <Mail className='size-4' />
-                {departmentHead?.teacher_email}
+            <div>
+              <Link className='hover:underline' href={redirectUrlForHead}>
+                <h3 className='text-lg lg:text-xl font-semibold'>
+                  {departmentHead?.teacher_name}
+                </h3>
+              </Link>
+              <p className='mt-1 text-sm lg:text-base text-muted-foreground'>
+                {departmentHead?.teacher_designation}
               </p>
-            )}
-            {departmentHead?.teacher_phone && (
-              <p className='flex text-sm lg:text-base items-center gap-2'>
-                <Phone className='size-4' />
-                {departmentHead?.teacher_phone}
-              </p>
-            )}
+            </div>
+            <div className='mt-2 text-muted-foreground'>
+              {departmentHead?.teacher_email && (
+                <p className='flex text-sm lg:text-base items-center gap-2'>
+                  <Mail className='size-4' />
+                  {departmentHead?.teacher_email}
+                </p>
+              )}
+              {departmentHead?.teacher_phone && (
+                <p className='flex text-sm lg:text-base items-center gap-2'>
+                  <Phone className='size-4' />
+                  {departmentHead?.teacher_phone}
+                </p>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div className='grid lg:grid-cols-2 gap-4 '>
         {teachers
@@ -78,7 +82,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
                 <div className='absolute inset-0 bg-muted'></div>
                 <ClientImage
                   className='object-cover'
-                  src={faculty.teacher_image || ''}
+                  src={faculty.teacher_image}
                   alt={faculty.teacher_name || 'Teacher'}
                   fill
                 />

@@ -24,8 +24,8 @@ const MessageFromChairman: React.FC<{
     <ContentWrapper title='Message from the Chairman' className='py-4'>
       <div className='flex justify-center mb-4'>
         <ClientImage
-          src={chairman?.teacher_image || ''}
-          alt={chairman?.teacher_name || ''}
+          src={chairman.teacher_image}
+          alt={chairman.teacher_name}
           width={200}
           height={200}
         />
