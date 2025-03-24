@@ -1,12 +1,13 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
 import { Mail, Phone, SquareArrowOutUpRight } from 'lucide-react';
 import ContentWrapper from './content-wrapper';
 import { useGetDepartmentTeachers } from '@/hooks/use-get-course';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import ClientImage from '@/components/client-image';
 
 const FacultyAndStaff = ({ department }: { department: string }) => {
   const { data: teachers, isLoading } = useGetDepartmentTeachers(department);
@@ -28,9 +29,14 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
       {departmentHead && (
         <div className='flex flex-col lg:flex-row border rounded-md overflow-hidden '>
           <div className='relative lg:w-40 aspect-square'>
-            <ClientImage
+            <Image
               className='object-cover'
-              src={departmentHead.teacher_image}
+              src={
+                departmentHead?.teacher_image
+                  ? process.env.NEXT_PUBLIC_IMAGE_BASE_URL +
+                    departmentHead.teacher_image
+                  : '/person-placeholder.jpg'
+              }
               alt={departmentHead.teacher_name}
               fill
             />
@@ -80,9 +86,14 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
             >
               <div className='relative w-24 lg:w-40 aspect-square'>
                 <div className='absolute inset-0 bg-muted'></div>
-                <ClientImage
+                <Image
                   className='object-cover'
-                  src={faculty.teacher_image}
+                  src={
+                    faculty.teacher_image
+                      ? process.env.NEXT_PUBLIC_IMAGE_BASE_URL +
+                        faculty.teacher_image
+                      : '/person-placeholder.jpg'
+                  }
                   alt={faculty.teacher_name || 'Teacher'}
                   fill
                 />

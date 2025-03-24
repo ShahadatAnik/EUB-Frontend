@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
 import { useGetDepartmentTeachers } from '@/hooks/use-get-course';
 import ContentWrapper from './content-wrapper';
-import ClientImage from '@/components/client-image';
 
 const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
   ssr: false,
@@ -23,8 +23,12 @@ const MessageFromChairman: React.FC<{
   return (
     <ContentWrapper title='Message from the Chairman' className='py-4'>
       <div className='flex justify-center mb-4'>
-        <ClientImage
-          src={chairman.teacher_image}
+        <Image
+          src={
+            chairman.teacher_image
+              ? process.env.NEXT_PUBLIC_IMAGE_BASE_URL + chairman.teacher_image
+              : '/person-placeholder.jpg'
+          }
           alt={chairman.teacher_name}
           width={200}
           height={200}

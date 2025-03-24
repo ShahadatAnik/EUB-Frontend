@@ -1,8 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 
-import ClientImage from '@/components/client-image';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { IFacultyDetails } from '@/types';
 import { facultyTabs } from './faculty-tabs';
@@ -14,11 +14,11 @@ const Content = ({ faculty }: { faculty: IFacultyDetails }) => {
     <div className='space-y-8'>
       <div className='grid lg:grid-cols-5 gap-10'>
         <div className='relative aspect-square w-full'>
-          <ClientImage
+          <Image
             className='object-cover'
             src={
               faculty.teacher_image
-                ? `${faculty?.teacher_image}`
+                ? process.env.NEXT_PUBLIC_IMAGE_BASE_URL + faculty.teacher_image
                 : '/person-placeholder.jpg'
             }
             alt={'teacher_image'}
