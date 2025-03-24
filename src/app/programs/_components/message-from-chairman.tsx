@@ -1,11 +1,15 @@
 'use client';
 
 import React from 'react';
+import dynamic from 'next/dynamic';
 
 import { useGetDepartmentTeachers } from '@/hooks/use-get-course';
 import ContentWrapper from './content-wrapper';
 import ClientImage from '@/components/client-image';
-import RichTextViewer from '@/components/rich-text-viewer';
+
+const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
+  ssr: false,
+});
 
 const MessageFromChairman: React.FC<{
   departmentName: string;
@@ -30,6 +34,7 @@ const MessageFromChairman: React.FC<{
       {chairman.department_head_message && (
         <RichTextViewer content={chairman.department_head_message} />
       )}
+
       <br />
 
       {chairman && chairman.teacher_name && (
