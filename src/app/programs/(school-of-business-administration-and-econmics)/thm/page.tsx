@@ -8,7 +8,7 @@ const Page = () => {
     <>
       <PageHeader
         image='/images/cse-2.jpg'
-        title=' Tourism & Hospitality Management'
+        title='Bachelor of Tourism and Hospitality Management (BTHM)'
       />
       <PageContainer>
         <Content />

@@ -6,7 +6,10 @@ import PageContainer from '@/components/page-container';
 const Page = () => {
   return (
     <>
-      <PageHeader image='/images/cse-2.jpg' title='MSS in Economics' />
+      <PageHeader
+        image='/images/cse-2.jpg'
+        title='Master of Social Sciences (MSS) in Economics'
+      />
       <PageContainer>
         <Content />
       </PageContainer>

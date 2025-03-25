@@ -58,7 +58,9 @@ export function NavMenu() {
                   <ul
                     className={cn(
                       'max-h-[70vh] overflow-auto gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[760px] 2xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-3',
-                      item.className
+                      item.className,
+                      item.title === 'Programs' &&
+                        'xl:grid-cols-2 2xl:w-[1200px] 2xl:grid-cols-4'
                     )}
                   >
                     {item.children &&

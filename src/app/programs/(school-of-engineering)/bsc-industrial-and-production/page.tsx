@@ -8,7 +8,7 @@ const Page = () => {
     <>
       <PageHeader
         image='/images/cse-2.jpg'
-        title='BSc in Industrial and Production'
+        title='BSc in Industrial and Production Engineering'
       />
       <PageContainer>
         <Content />

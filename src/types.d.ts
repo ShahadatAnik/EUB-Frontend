@@ -252,6 +252,7 @@ export type IDepartmentTeacher = {
   teacher_email: string;
   teacher_phone: string;
   teacher_image: string;
+  department_head_message?: string;
 };
 
 export type IProgram = {
