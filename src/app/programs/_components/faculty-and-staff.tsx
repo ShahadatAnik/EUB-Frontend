@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { Mail, Phone, SquareArrowOutUpRight } from 'lucide-react';
 import ContentWrapper from './content-wrapper';
 import { useGetDepartmentTeachers } from '@/hooks/use-get-course';
+import Loader from '@/components/loader';
 
 const FacultyAndStaff = ({ department }: { department: string }) => {
   const { data: teachers, isLoading } = useGetDepartmentTeachers(department);
@@ -20,7 +21,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
 
   const redirectUrlForHead = `/faculty/${program}/${departmentHead?.uuid}`;
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader className='h-[200px]' />;
 
   if (teachers?.length === 0) return <div>No Faculty Found</div>;
 

@@ -68,7 +68,7 @@ export const navLinks: INavLink[] = [
     className: 'xl:grid-cols-2 2xl:w-[1200px] 2xl:grid-cols-4',
     children: [
       {
-        title: 'School of Business Administration and Economics',
+        title: 'Faculty of Business Administration and Economics',
         href: '/programs/bba',
         children: [
           {
@@ -106,7 +106,7 @@ export const navLinks: INavLink[] = [
         ],
       },
       {
-        title: 'School of Arts and Social Sciences',
+        title: 'Faculty of Arts and Social Sciences',
         href: '/programs/ba-english',
         children: [
           {
@@ -129,7 +129,7 @@ export const navLinks: INavLink[] = [
       },
 
       {
-        title: 'School of Engineering',
+        title: 'Faculty of Engineering',
         href: '/programs/bsc-civil',
         children: [
           {
@@ -159,7 +159,7 @@ export const navLinks: INavLink[] = [
         ],
       },
       {
-        title: 'School of Science',
+        title: 'Faculty of Sciences',
         href: '/programs/physics',
         children: [
           {
