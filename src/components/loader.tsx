@@ -1,12 +1,13 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import React from 'react';
 
 import { RotatingLines } from 'react-loader-spinner';
 
-const Loader = () => {
+const Loader: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className='h-screen flex items-center justify-center'>
+    <div className={cn('h-screen flex items-center justify-center', className)}>
       <RotatingLines
         strokeColor='#303188'
         visible={true}

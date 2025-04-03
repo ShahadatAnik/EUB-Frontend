@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 
 import { useGetDepartmentTeachers } from '@/hooks/use-get-course';
 import ContentWrapper from './content-wrapper';
+import Loader from '@/components/loader';
 
 const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
   ssr: false,
@@ -17,7 +18,8 @@ const MessageFromChairman: React.FC<{
   const { data, isLoading } = useGetDepartmentTeachers(departmentName);
   const chairman = data?.find((teacher) => teacher.department_head === true);
 
-  if (isLoading) return <>loading...</>;
+  if (isLoading) return <Loader className='h-[200px]' />;
+
   if (!chairman) return <>No Chairman Found</>;
 
   return (
