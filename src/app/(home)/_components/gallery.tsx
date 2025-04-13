@@ -52,10 +52,10 @@ const Gallery = async () => {
 									<div className="p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm">
 										<>
 											<h2 className="text-xl lg:text-2xl font-semibold">
-												{data[1]?.title}
+												{data[2]?.title}
 											</h2>
 											<p className="mt-1 lg:mt-2">
-												{data[1]?.description}
+												{data[2]?.description}
 											</p>
 										</>
 									</div>
@@ -63,7 +63,7 @@ const Gallery = async () => {
 							</div>
 						)}
 
-						{data[2]?.is_active && (
+						{data[3]?.is_active && (
 							<div className="flex flex-col md:flex-row gap-4 lg:gap-8 p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm">
 								<div>
 									<ClientImage
