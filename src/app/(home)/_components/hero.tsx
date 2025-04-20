@@ -50,7 +50,7 @@ const Hero: React.FC<{
       //   </div>
       // ),
     },
-    { img: '/images/hero/slide-2.jpeg', alt: 'Dummy Cover Image' },
+    { img: '/images/hero/slide-2.jpg', alt: 'Dummy Cover Image' },
     { img: '/images/hero/slide-3.jpg', alt: 'Dummy Cover Image' },
     { img: '/images/hero/slide-4.jpg', alt: 'Dummy Cover Image' },
   ];

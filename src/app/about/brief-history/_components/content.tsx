@@ -43,7 +43,7 @@ const Content = () => {
             <Image
               className='object-cover'
               fill
-              src='/brief-history-2.png'
+              src='/brief-history-2.jpg'
               alt='Dummy Cover Image'
             />
           </div>
