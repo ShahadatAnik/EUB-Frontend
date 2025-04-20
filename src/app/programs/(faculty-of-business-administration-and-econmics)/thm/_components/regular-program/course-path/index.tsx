@@ -17,12 +17,12 @@ import {
 } from '../../../_const/semester-wise-courses';
 
 import SemesterCourseTable from './semester-course-table';
+import UnderDevelopment from '@/components/under-development';
 
 const CoursePath = () => {
   return (
-    <ContentWrapper title='Course Map and Path' className='py-4 text-center'>
-      <h2 className='text-lg font-semibold'> Under development!</h2>
-      <p className='mt-2'>Exciting updates are on the way. Stay with us!</p>
+    <ContentWrapper title='Course Map and Path'>
+      <UnderDevelopment />
     </ContentWrapper>
   );
 

@@ -111,7 +111,7 @@ const faqData: IFAQ[] = [
               Engineering & Physical Sciences, candidates
               <ul className='list-decimal pl-8'>
                 <li>
-                  must pass SSC and HSC in Science with at least a 2nd division
+                  Must pass SSC and HSC in Science with at least a 2nd division
                   in both, OR
                 </li>
                 <li>
@@ -323,6 +323,14 @@ const faqData: IFAQ[] = [
     question: 'How can I get admission information about EUB?',
     answer: (
       <p>
+        <strong>
+          Admission Office : 01968774931, 01968774933, 01968774972 (Director){' '}
+          <br />
+          <br />
+          Email : admission@eub.edu.bd
+        </strong>
+        <br />
+        <br />
         Admission information is available on the EUB admission website:{' '}
         <Link
           target='_blank'
@@ -351,6 +359,14 @@ const faqData: IFAQ[] = [
       'What should I do if I face problems with the application submission?',
     answer: (
       <p>
+        <strong>
+          Admission Office : 01968774931, 01968774933, 01968774972 (Director){' '}
+          <br />
+          <br />
+          Email : admission@eub.edu.bd
+        </strong>
+        <br />
+        <br />
         Admission information is available on the EUB admission website:{' '}
         <Link
           target='_blank'

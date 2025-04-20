@@ -6,27 +6,54 @@ const AboutUs = () => {
   return (
     <ContentWrapper title='About Us'>
       <p>
-        The Department of Civil Engineering at the European University of
-        Bangladesh (EUB) is dedicated to shaping future engineers with the
-        skills and expertise to build sustainable infrastructure. Our
-        industry-focused curriculum integrates theoretical foundations with
-        hands-on learning in areas such as structural, geotechnical,
-        environmental, transportation, and water resource engineering. With
-        state-of-the-art laboratories and modern research facilities, we ensure
-        that students gain practical experience to meet real-world engineering
+        <strong>
+          Welcome to the Department of Chemistry at the European University of
+          Bangladesh (EUB)
+        </strong>
+        <br />
+        <br />
+        The Department of Chemistry at EUB offers an exemplary environment for
+        advancing chemical education and research. Known for its active
+        contribution to the university’s academic landscape, the department is
+        home to faculty members who are internationally recognized for their
+        excellence in both teaching and research.
+        <br />
+        <br />
+        Currently, the department comprises five dedicated faculty members who
+        are actively engaged in undergraduate instruction and lead vibrant
+        research programs. Our curriculum is designed to support undergraduate
+        engineering students, providing a strong foundation in core areas of
+        chemistry, including inorganic, organic, analytical, and physical
+        chemistry.
+        <br />
+        <br />
+        Beyond the fundamentals, our program also introduces students to
+        advanced and specialized topics such as environmental chemistry, surface
+        and materials chemistry, nanoscience, polymer chemistry, and
+        organometallic chemistry. These areas reflect the evolving nature of the
+        discipline and prepare students to contribute to emerging scientific
         challenges.
         <br />
         <br />
-        EUB fosters a learning environment driven by innovation and
-        problem-solving, encouraging students to engage in research,
-        internships, and industry collaborations. Our highly qualified faculty
-        bring extensive academic and professional experience, guiding students
-        through cutting-edge technologies and sustainable engineering practices.
-        We emphasize professional ethics, leadership, and teamwork, preparing
-        graduates for success in both local and global engineering sectors. At
-        EUB, we are committed to developing engineers who contribute to society
-        through safe, efficient, and environmentally responsible infrastructure
-        solutions.
+        The department encourages interdisciplinary collaboration through
+        research partnerships with other academic units, including Physics,
+        Civil Engineering, Textile Engineering, Industrial Production
+        Engineering, and Electrical and Electronic Engineering. These alliances
+        promote innovation and enable the development of solutions to complex,
+        real-world problems.
+        <br />
+        <br />
+        The Department of Chemistry at EUB is committed to becoming one of the
+        leading chemistry departments in Bangladesh. We cultivate a
+        collaborative academic environment enriched by passionate faculty,
+        dedicated colleagues, motivated students, and skilled staff. Our mission
+        is to prepare future engineers and global citizens with the knowledge
+        and skills needed to address the environmental and technological
+        challenges of tomorrow.
+        <br />
+        <br />
+        Thank you for visiting the Department of Chemistry at EUB. We invite you
+        to explore our programs, research, and academic opportunities.
       </p>
     </ContentWrapper>
   );

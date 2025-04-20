@@ -17,8 +17,14 @@ import {
 } from '../../../_const/semester-wise-courses';
 
 import SemesterCourseTable from './semester-course-table';
+import UnderDevelopment from '@/components/under-development';
 
 const CoursePath = () => {
+  return (
+    <ContentWrapper title='Course Map and Path'>
+      <UnderDevelopment />
+    </ContentWrapper>
+  );
   return (
     <ContentWrapper title='Course Map and Path' className='py-4 space-y-4'>
       <p>

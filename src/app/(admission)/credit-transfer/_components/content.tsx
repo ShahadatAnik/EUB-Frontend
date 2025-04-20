@@ -11,8 +11,9 @@ const Content = () => {
           <Image
             width={200}
             height={200}
-            src={'/placeholder.svg'}
+            src={'/credit-transfer.jpg'}
             alt={'placeholder'}
+            className='object-cover'
           />
           <p className='max-w-[800px]'>
             Transfer students (those with previous college credits) are expected
