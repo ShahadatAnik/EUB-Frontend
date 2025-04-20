@@ -1,42 +1,66 @@
 import React from 'react';
 
 import ContentWrapper from '../../content-wrapper';
+import Title from '@/components/title';
+
+import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
 
 const ProgramDetails = () => {
   return (
-    <ContentWrapper title='Program Details'>
-      <p>
-        The Bachelor&apos;s program in Tourism & Hospitality Management at EUB
-        is a four-year professional degree designed to equip students with
-        comprehensive knowledge of the tourism and hospitality industry. The
-        curriculum covers hotel operations, travel management, tourism
-        marketing, and sustainable tourism practices, integrating both
-        theoretical learning and practical training, including internships. With
-        experienced faculty and industry collaborations, the program prepares
-        graduates for diverse career opportunities in hotels, airlines, travel
-        agencies, and tourism enterprises worldwide.
-        <br />
-        <br />
-        <strong>Vision</strong>
-        <br />
-        The vision of the Tourism and Hospitality Management program is to
-        cultivate future leaders who embody professionalism, possess deep
-        expertise, and master the skills needed to excel in the industry. These
-        individuals will be capable of navigating the dynamic landscape of the
-        tourism and hospitality sector while maintaining a competitive edge at
-        both national and international levels.
-        <br />
-        <br />
-        <strong>Mission</strong>
-        <br />
-        Our mission is to provide a dynamic and well-rounded education in
-        Tourism and Hospitality Management, blending theory with real-world
-        experience. We aim to develop skilled, ethical, and globally-minded
-        graduates who can adapt to change and solve challenges creatively.
-        Through a focus on research, sustainability, and innovation, we prepare
-        students for successful and meaningful careers in tourism and
-        hospitality.
-      </p>
+    <ContentWrapper title='Program Details' className='space-y-8'>
+      <div>
+        <Title variant={'title'} title='Semesters' />
+        <p>
+          The program consists of 12 semesters (trimesters), each lasting four
+          months. The first 11 trimesters focus on coursework, while the final
+          trimester is designated for an internship. The academic year is
+          divided into three semesters:
+        </p>
+
+        <ul className='mt-2 list-disc pl-6 space-y-1.5'>
+          <li className='space-x-1'>
+            <strong>Spring semester:</strong> <span>January to April</span>
+          </li>
+          <li className='space-x-1'>
+            <strong>Summer semester:</strong> <span>May to August</span>
+          </li>
+          <li className='space-x-1'>
+            <strong>Fall semester:</strong> <span>September to December</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <Title variant={'title'} title='Duration' />
+        <p> The duration of the program is 4 years (12 Semesters).</p>
+      </div>
+      <div>
+        <Title variant={'title'} title='Credit Hour' />
+        <p>
+          The program consists of 132 credits, which include a 3-credit
+          internship.
+        </p>
+      </div>
+      <div>
+        <Title variant={'title'} title='Course Load' />
+        <p>Total 16 Weeks Class in a Semester</p>
+      </div>
+      <div>
+        <Title variant={'title'} title='Performance Evaluation Criterion' />
+        <p className='mb-4'>
+          The final grade for each course will be determined based on
+          students&apos; performance in class attendance, continuous assessment
+          (including class tests, assignments, presentations, etc.), midterm
+          examination, and final examination as outlined below.
+        </p>
+
+        <PerformanceCriteriaTable />
+      </div>
+
+      <div>
+        <Title variant={'title'} title='Tuition Fee Structure' />
+        <p>(Refer to the Admission Office, EUB)</p>
+      </div>
     </ContentWrapper>
   );
 };

@@ -1,61 +1,31 @@
 import React from 'react';
 import ContentWrapper from './content-wrapper';
-import Image from 'next/image';
+
+import { IAlumni } from '@/types';
+import AlumniGallery from '@/app/programs/_components/alumni-gallery';
 
 const AlumniIndustry = () => {
-  return (
-    <ContentWrapper title='Alumni and Industry'>
-      <div className='w-full relative h-[400px]'>
-        <Image
-          className='object-contain'
-          fill
-          src={'/person-placeholder.jpg'}
-          alt='Alumni'
-        />
-      </div>
+  const data: IAlumni[] = [
+    {
+      name: 'Md. Shahadat Hossain Miah (30th Batch)',
+      image:
+        '/images/programs/emba/alumni/Md. Shahadat Hossain Miah (EMBA 30th).png',
+      designation:
+        'Chief Financial Officer (CFO), Aftab Automobile Limited, Navana Group',
+      description: `Md. Shahadat Hossain Miah, a distinguished EMBA graduate from EUB’s 30th batch, serves as the Chief Financial Officer at Aftab Automobile Limited, a concern of Navana Group. With extensive experience in financial leadership, his role is pivotal in driving strategic growth. His professional journey highlights the impact of EUB’s executive programs in shaping top-tier industry leaders in Bangladesh’s corporate sector.`,
+    },
+    {
+      name: 'Mohammad Abdul Qayum (32nd Batch)',
+      image:
+        '/images/programs/emba/alumni/Mohammad Abdul Qayum (EMBA 32nd).jpg',
+      designation: 'Assistant Vice President (AVP), EXIM Bank PLC.',
+      description: `Mohammad Abdul Qayum, an EMBA graduate from EUB’s 32nd batch, is currently serving as an Assistant Vice President at EXIM Bank PLC. With a solid background in banking and finance, he has consistently demonstrated excellence in leadership and strategic execution. His rise in the banking industry reflects the value of EUB’s executive education in preparing professionals for impactful roles in the financial sector.`,
+    },
+  ];
 
-      <div className='text-center py-4'>
-        <h4 className='text-2xl font-semibold'>Name</h4>
-        <h6 className='mt-1 text-muted-foreground'>
-          Designation, Company Name
-        </h6>
-        <p className='mt-2 text-justify'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum itaque
-          tempore aliquid cupiditate vitae error sapiente amet magni qui
-          similique ad nisi expedita non repellendus molestias delectus labore
-          minus illum aliquam, sequi laborum. Dolorum consectetur corrupti nulla
-          eius magni, iure hic vel in illum reiciendis, unde fugiat. Temporibus,
-          magni quaerat sit, inventore fugit dolor ipsum harum soluta corrupti
-          nisi vitae adipisci. Veniam veritatis maxime, itaque laudantium odit
-          nam autem saepe atque, impedit aut ad excepturi ipsam nulla, provident
-          modi iusto reiciendis velit praesentium. Cumque esse saepe, iste
-          laudantium temporibus nam alias repellendus eius voluptatum id
-          eveniet, corrupti possimus error amet ipsum exercitationem rerum
-          fugiat sit dolorum deserunt maiores quo a voluptatem expedita.
-          Perspiciatis est incidunt repudiandae excepturi dicta dignissimos,
-          pariatur eaque explicabo necessitatibus dolorum doloribus ducimus
-          facilis architecto officia minus, itaque iusto similique tempore nulla
-          rem, possimus et exercitationem fugit. In autem voluptas animi,
-          consequatur modi esse iure laboriosam? Tempore nihil sed saepe ut cum
-          magni accusantium incidunt! Sit quos nostrum aliquam, deserunt id
-          sapiente praesentium dolore in qui quisquam sunt ex corporis atque
-          voluptatibus provident quis officia. Officiis, pariatur inventore.
-          Voluptatibus dolores vitae est. Veniam qui, quas ab exercitationem
-          enim magnam culpa porro ipsum, minus delectus, officia obcaecati optio
-          sequi veritatis atque adipisci numquam cumque! Optio, deserunt fuga
-          aperiam dolor minus debitis ipsum asperiores voluptatem odit dolorem
-          explicabo cum ad quos. Fugiat adipisci voluptates quos atque
-          accusantium est a, aspernatur hic fugit ipsum autem impedit
-          perspiciatis quia sit mollitia odio, doloribus molestias quisquam
-          similique blanditiis magnam tempore necessitatibus? Doloribus, totam
-          repellendus accusamus sed blanditiis vero exercitationem facilis
-          aperiam in accusantium quia doloremque ullam nisi cumque mollitia
-          laborum culpa quasi dolorum beatae quos. Dolorem eius repudiandae
-          adipisci nulla nemo ipsam? Pariatur cumque ut adipisci officiis quidem
-          dolore praesentium sequi quia maiores. Nam facere quam ex animi
-          possimus dolore laudantium corrupti?
-        </p>
-      </div>
+  return (
+    <ContentWrapper title='Alumni and Industry' className='lg:p-8'>
+      <AlumniGallery data={data} />
     </ContentWrapper>
   );
 };

@@ -15,12 +15,12 @@ import {
   industrialTraining,
 } from '../../../_const/list-of-courses';
 import CourseTable from './course-table';
+import UnderDevelopment from '@/components/under-development';
 
 const Curriculum = () => {
   return (
-    <ContentWrapper title='Curriculum' className='py-4 text-center'>
-      <h2 className='text-lg font-semibold'> Under development!</h2>
-      <p className='mt-2'>Exciting updates are on the way. Stay with us!</p>
+    <ContentWrapper title='Curriculum'>
+      <UnderDevelopment />
     </ContentWrapper>
   );
   return (

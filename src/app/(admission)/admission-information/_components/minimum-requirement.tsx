@@ -54,7 +54,7 @@ const MinimumRequirement = () => {
             Engineering & Physical Sciences, candidates
             <ul className='mt-1 list-disc list-inside pl-8'>
               <li>
-                must pass SSC and HSC in Science with at least a 2nd division in
+                Must pass SSC and HSC in Science with at least a 2nd division in
                 both, OR
               </li>
               <li>

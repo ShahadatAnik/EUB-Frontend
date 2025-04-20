@@ -1,7 +1,6 @@
 import { IAcademicAccordion } from '@/types';
 
 import CoreFacultyMembers from '../_components/core-faculty-members';
-import LaboratoriesResources from '../_components/laboratories-resources';
 import AboutUs from '../_components/overview/about-us';
 import Chairman from '../_components/overview/chairman';
 import StudentServiceDesk from '../_components/student-service-desk';
@@ -25,10 +24,6 @@ const accordions: IAcademicAccordion[] = [
     ],
   },
 
-  {
-    title: 'Laboratories & Resources',
-    content: <LaboratoriesResources />,
-  },
   {
     title: 'Core Faculty Members & Staff',
     content: <CoreFacultyMembers />,

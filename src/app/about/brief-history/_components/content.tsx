@@ -6,13 +6,14 @@ const Content = () => {
     <div className='py-6 lg:py-12'>
       <div className='container space-y-8'>
         <div>
-          <Image
-            width={400}
-            height={100}
-            src='/images/news-portal/1.jpg'
-            alt='Dummy Cover Image'
-            className='lg:float-left mb-4 lg:mb-0 lg:mr-8'
-          />
+          <div className='relative  aspect-video h-[300px] lg:float-left mb-4 lg:mb-0 lg:mr-8'>
+            <Image
+              className='object-contain'
+              fill
+              src='/brief-history-1.png'
+              alt='Dummy Cover Image'
+            />
+          </div>
           <p className='text-justify'>
             The European University of Bangladesh (EUB) is a third-generation
             private university committed to delivering education of European
@@ -38,13 +39,14 @@ const Content = () => {
         </div>
 
         <div>
-          <Image
-            width={400}
-            height={100}
-            src='/images/news-portal/1.jpg'
-            alt='Dummy Cover Image'
-            className='mb-4 lg:mb-0 lg:float-right lg:ml-8'
-          />
+          <div className='relative  aspect-video h-[300px] mb-4 lg:mb-0 lg:float-right lg:ml-8'>
+            <Image
+              className='object-cover'
+              fill
+              src='/brief-history-2.jpg'
+              alt='Dummy Cover Image'
+            />
+          </div>
           <p className='text-justify '>
             The university’s expansive permanent campus, spanning 550,000 square
             feet, is strategically located in the heart of Dhaka City, within

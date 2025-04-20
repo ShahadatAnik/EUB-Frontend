@@ -11,7 +11,7 @@ const Content = () => {
         showQuickLinks={false}
         accordions={accordions}
         bannerImage={{
-          src: '/images/cse.jpg',
+          src: '/banner.jpg',
           alt: 'CSE',
         }}
       />
