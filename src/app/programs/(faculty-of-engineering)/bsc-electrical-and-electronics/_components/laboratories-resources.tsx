@@ -9,11 +9,11 @@ const LaboratoriesResources = () => {
         <h4 className='text-xl font-semibold'>Electrical Circuits Lab</h4>
         <div className='mt-2'>
           <Image
-            className='float-right ml-6'
-            width={300}
-            height={300}
-            src={'/placeholder.svg'}
-            alt='placeholder'
+            className='float-right ml-6 aspect-video object-cover'
+            width={400}
+            height={400}
+            src={'/images/programs/eee/lab/Electrical Circuits Lab.jpg'}
+            alt='Electrical Circuits Lab'
           />
 
           <p className='text-justify '>
@@ -50,11 +50,11 @@ const LaboratoriesResources = () => {
         <h4 className='text-xl font-semibold'>Electronics Lab</h4>
         <div className='mt-2'>
           <Image
-            className='float-left mr-6'
-            width={300}
-            height={300}
-            src={'/placeholder.svg'}
-            alt='placeholder'
+            className='float-left mr-6 aspect-video object-cover'
+            width={400}
+            height={400}
+            src={'/images/programs/eee/lab/Electronics Lab.jpg'}
+            alt='Electronics Lab'
           />
 
           <p className='text-justify '>
