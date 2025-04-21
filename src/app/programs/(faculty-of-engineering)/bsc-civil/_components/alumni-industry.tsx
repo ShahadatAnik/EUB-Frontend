@@ -1,61 +1,29 @@
 import React from 'react';
 import ContentWrapper from './content-wrapper';
-import Image from 'next/image';
+
+import { IAlumni } from '@/types';
+import AlumniGallery from '@/app/programs/_components/alumni-gallery';
 
 const AlumniIndustry = () => {
-  return (
-    <ContentWrapper title='Alumni and Industry'>
-      <div className='w-full relative h-[400px]'>
-        <Image
-          className='object-contain'
-          fill
-          src={'/person-placeholder.jpg'}
-          alt='Alumni'
-        />
-      </div>
+  const data: IAlumni[] = [
+    {
+      name: 'Syed Muntasir Hafiz',
+      image: '/images/programs/civil/alumni/Syed Muntasir Hafiz.jpg',
+      designation: 'Assistant Engineer, Roads and Highways Department',
+      description: `The European University of Bangladesh (EUB) stands out as a remarkable institution among those approved by the University Grants Commission, committed to developing a skilled and capable nation. Here, students are provided with extensive opportunities for both personal and academic development. The university is equipped with modern educational facilities, supported by a dedicated team of experienced faculty members and an efficient administrative staff, whose combined efforts have significantly enhanced the institution’s reputation. EUB offers well-furnished classrooms, a rich library, and an open, supportive learning environment that fosters academic excellence. Within a short span of time, EUB has earned recognition as a prestigious academic institution. The university hosts various departmental clubs, including Civil, EEE, Textile, and Mechanical clubs, along with cultural clubs and a strong alumni network that keeps former students connected. All these achievements have been made possible due to the visionary leadership and honest management of the governing body. Best wishes to the university for its continued progress and its contribution to building a self-sufficient Bangladesh.`,
+    },
+    {
+      name: 'Mollah Mohammad Tamal',
+      image: '/images/programs/civil/alumni/Mollah Mohammad Tamal.png',
+      designation:
+        'Master’s Student & Research Assistant, Technical University of Darmstadt, Germany',
+      description: `A Heartfelt Thank You to EUB. I am proud to be a graduate of the Department of Civil Engineering, European University of Bangladesh (EUB), 12th Batch. Currently, I am pursuing my Master’s in Tropical Hydrogeology and Environmental Engineering at Technical University of Darmstadt, Germany, and working as a Research Assistant at TU Darmstadt. EUB has been a strong foundation in my academic journey. The quality education, dedicated faculty, and supportive learning environment have helped me achieve my goals. It has served as a bridge, enabling me to pursue higher education at a globally recognized institution. I believe EUB students have the potential to excel worldwide. With determination and the right guidance, they can achieve remarkable success. I am deeply grateful to EUB, my respected teachers, and mentors for their continuous support. Thank you, EUB, for shaping my future!`,
+    },
+  ];
 
-      <div className='text-center py-4'>
-        <h4 className='text-2xl font-semibold'>Name</h4>
-        <h6 className='mt-1 text-muted-foreground'>
-          Designation, Company Name
-        </h6>
-        <p className='mt-2 text-justify'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum itaque
-          tempore aliquid cupiditate vitae error sapiente amet magni qui
-          similique ad nisi expedita non repellendus molestias delectus labore
-          minus illum aliquam, sequi laborum. Dolorum consectetur corrupti nulla
-          eius magni, iure hic vel in illum reiciendis, unde fugiat. Temporibus,
-          magni quaerat sit, inventore fugit dolor ipsum harum soluta corrupti
-          nisi vitae adipisci. Veniam veritatis maxime, itaque laudantium odit
-          nam autem saepe atque, impedit aut ad excepturi ipsam nulla, provident
-          modi iusto reiciendis velit praesentium. Cumque esse saepe, iste
-          laudantium temporibus nam alias repellendus eius voluptatum id
-          eveniet, corrupti possimus error amet ipsum exercitationem rerum
-          fugiat sit dolorum deserunt maiores quo a voluptatem expedita.
-          Perspiciatis est incidunt repudiandae excepturi dicta dignissimos,
-          pariatur eaque explicabo necessitatibus dolorum doloribus ducimus
-          facilis architecto officia minus, itaque iusto similique tempore nulla
-          rem, possimus et exercitationem fugit. In autem voluptas animi,
-          consequatur modi esse iure laboriosam? Tempore nihil sed saepe ut cum
-          magni accusantium incidunt! Sit quos nostrum aliquam, deserunt id
-          sapiente praesentium dolore in qui quisquam sunt ex corporis atque
-          voluptatibus provident quis officia. Officiis, pariatur inventore.
-          Voluptatibus dolores vitae est. Veniam qui, quas ab exercitationem
-          enim magnam culpa porro ipsum, minus delectus, officia obcaecati optio
-          sequi veritatis atque adipisci numquam cumque! Optio, deserunt fuga
-          aperiam dolor minus debitis ipsum asperiores voluptatem odit dolorem
-          explicabo cum ad quos. Fugiat adipisci voluptates quos atque
-          accusantium est a, aspernatur hic fugit ipsum autem impedit
-          perspiciatis quia sit mollitia odio, doloribus molestias quisquam
-          similique blanditiis magnam tempore necessitatibus? Doloribus, totam
-          repellendus accusamus sed blanditiis vero exercitationem facilis
-          aperiam in accusantium quia doloremque ullam nisi cumque mollitia
-          laborum culpa quasi dolorum beatae quos. Dolorem eius repudiandae
-          adipisci nulla nemo ipsam? Pariatur cumque ut adipisci officiis quidem
-          dolore praesentium sequi quia maiores. Nam facere quam ex animi
-          possimus dolore laudantium corrupti?
-        </p>
-      </div>
+  return (
+    <ContentWrapper title='Alumni and Industry' className='lg:p-8'>
+      <AlumniGallery data={data} />
     </ContentWrapper>
   );
 };
