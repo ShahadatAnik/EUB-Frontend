@@ -1,82 +1,65 @@
 import React from 'react';
 
 import ContentWrapper from '../../content-wrapper';
+import Title from '@/components/title';
+
+import PerformanceCriteriaTable from './performance-criteria-table';
 
 const ProgramDetails = () => {
   return (
-    <ContentWrapper className='space-y-8' title='Program Details'>
+    <ContentWrapper title='Program Details' className='space-y-8'>
       <p>
-        The B.Sc. in Textile Engineering program at the European University of
-        Bangladesh (EUB) is an established field of study designed to meet the
-        growing demands of Bangladesh’s thriving textile industry. This
-        four-year, 12-semester program is open to students who have completed
-        HSC (Science) or a Diploma in Textile or Chemical Engineering.
-        <br />
-        <br />
-        With Bangladesh’s textile sector expanding rapidly to support both
-        domestic needs and the flourishing export market, this program aims to
-        produce skilled professionals equipped to enhance production efficiency
-        and product quality. The curriculum is designed to develop
-        students&apos; technical expertise, boost their confidence, and prepare
-        them for careers as textile technologists and industry leaders, both
-        nationally and internationally.
-        <br />
-        <br />
-        The program follows a four-year academic structure, with each year
-        divided into three semesters of 15 weeks each, and the medium of
-        instruction is English. The academic session for all undergraduate
-        programs spans four years, with each academic year divided into three
-        semesters. Each semester lasts 15 weeks, including 13 weeks of classroom
-        instruction, a one-week preparatory break for examinations, and one week
-        for exams.
+        The Bachelor of Science in Textile Engineering at the European
+        University of Bangladesh is designed to equip students with in-depth
+        knowledge and practical skills in textile science, manufacturing, and
+        production. The program emphasizes hands-on learning, integrating
+        laboratory work, field activities, and real-world projects to prepare
+        graduates for the dynamic demands of the global textile industry.
+        EUB&apos;s experienced faculty ensures that students receive both
+        academic guidance and professional mentorship, helping them excel in
+        both local and international textile sectors.
       </p>
 
       <div>
         <h6 className='text-lg font-semibold'>
-          The academic year consists of three semesters:
+          The academic year is divided into three semesters:
         </h6>
         <ul className='mt-2 list-disc pl-6 space-y-2'>
+          {' '}
           <li>Spring Semester (January – April)</li>
-          <li>Summer Semester (May – August) Summer Semester (May – August)</li>
+          <li>Summer Semester (May – August)</li>
           <li>Fall Semester (September – December)</li>
         </ul>
       </div>
 
       <div>
-        <h6 className='text-lg font-semibold'>
-          Each semester spans 17 weeks, which includes:
-        </h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>12 weeks of class lectures</li>
-          <li>1 week for examination preparation</li>
-          <li>3 weeks for examinations</li>
-          <li>1 week for government and other holidays</li>
-        </ul>
+        <Title variant={'title'} title='Duration' />
+        <p>The program duration is 4 years, consisting of 12 semesters.</p>
       </div>
-
       <div>
-        <h6 className='text-lg font-semibold'>
-          The B.Sc. in Civil Engineering program is four years long, divided
-          into 12 semesters, with the following credit hour distribution:
-        </h6>
+        <Title variant={'title'} title='Credit Hour' />
+        <p>The total program requires completion of 165 credits.</p>
+      </div>
+      <div>
+        <Title variant={'title'} title='Course Load' />
+        <p>Each semester spans 16 weeks, broken down as follows:</p>
+
         <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>
-            Theory Courses: Each credit hour consists of a 50-minute lecture per
-            week.
-          </li>
-          <li>
-            Sessional/Laboratory Courses: A 1.5-credit course requires three
-            hours of lab work or demonstrations per week.
-          </li>
+          <li>12 Weeks of Classes</li> <li>2 Weeks for Examinations</li>
+          <li>2 Weeks for Result Processing</li>
         </ul>
       </div>
+      <div>
+        <Title variant={'title'} title='Performance Evaluation Criterion' />
+        <p className='mb-4'>
+          The final grade for each course will be determined based on
+          students&apos; performance in class attendance, continuous assessment
+          (including class tests, assignments, presentations, etc.), midterm
+          examination, and final examination as outlined below.
+        </p>
 
-      <p>
-        Through this structured and dynamic program, the Department of Civil
-        Engineering at EUB ensures that graduates are technically proficient,
-        innovative, and well-prepared to contribute to the ever-evolving field
-        of civil engineering.
-      </p>
+        <PerformanceCriteriaTable />
+      </div>
     </ContentWrapper>
   );
 };
