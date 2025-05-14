@@ -11,7 +11,7 @@ import { Mail, Phone, SquareArrowOutUpRight } from "lucide-react";
 import ContentWrapper from "./content-wrapper";
 
 const FacultyAndStaff = ({ department }: { department: string }) => {
-	const { data: teachers,isLoading } = useGetDepartmentTeachers(department);
+	const { data: teachers, isLoading } = useGetDepartmentTeachers(department);
 	const departmentHead = teachers?.find(
 		(teacher) => teacher.department_head === true
 	);
@@ -112,7 +112,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
 
 							<div className="flex-1 px-3 py-2 lg:px-6 lg:py-3 flex flex-col gap-0 relative">
 								<Link
-									href={`/faculty/${program}/${faculty.uuid}`}
+									href={`/faculty/${program}/${faculty.teachers_uuid}`}
 									className="hover:text-primary"
 								>
 									<div className="size-5 absolute top-3  right-4">
@@ -122,7 +122,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
 								<div>
 									<Link
 										className="hover:underline"
-										href={`/faculty/${program}/${faculty.uuid}`}
+										href={`/faculty/${program}/${faculty.teachers_uuid}`}
 									>
 										<h3 className="text-base lg:text-xl font-semibold">
 											{faculty?.teacher_name}
