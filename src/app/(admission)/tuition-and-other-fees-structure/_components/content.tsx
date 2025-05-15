@@ -17,8 +17,8 @@ interface Props {
 const Content: React.FC<Props> = ({ initialData }) => {
   return (
     <div className='space-y-12'>
-      <Tabs defaultValue='undergraduate' className='w-full '>
-        <TabsList className='grid  grid-cols-2 bg-gray-200 w-[400px] mx-auto'>
+      <Tabs defaultValue='undergraduate' className='w-full'>
+        <TabsList className='grid  grid-cols-2 bg-gray-200 w-full lg:w-[400px] mx-auto'>
           <TabsTrigger value='undergraduate'>Undergraduate</TabsTrigger>
           <TabsTrigger value='graduate'>Graduate</TabsTrigger>
         </TabsList>

@@ -22,7 +22,7 @@ const Layout: React.FC<{
     <>
       <PageHeader title={title || 'Authorities'} />
       <div className='py-6 lg:py-12'>
-        <div className='container flex gap-8'>
+        <div className='container flex flex-col lg:flex-row gap-8'>
           <Authorities />
           <div className='flex-1 space-y-10'>{children}</div>
         </div>

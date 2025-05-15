@@ -14,7 +14,7 @@ const SectionContent: React.FC<{
         title={title}
         className={cn('font-sans font-semibold', titleClassName)}
       />
-      <div className={cn('pl-4 mt-4', className)}>{children}</div>
+      <div className={cn('pl-0 lg:pl-4 lg:mt-4', className)}>{children}</div>
     </div>
   );
 };

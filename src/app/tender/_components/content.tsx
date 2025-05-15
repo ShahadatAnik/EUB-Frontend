@@ -7,9 +7,9 @@ import Tender from './tender';
 
 const Content = () => {
   return (
-    <div className='flex gap-12'>
+    <div className='flex flex-col lg:flex-row gap-8 lg:gap-12'>
       <Sidebar />
-      <div className='flex-1 space-y-16'>
+      <div className='flex-1 space-y-8 lg:space-y-16'>
         <Tender
           title='Standard Tender Documents (STD) for Goods'
           type='std_for_goods'

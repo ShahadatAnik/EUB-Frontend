@@ -14,7 +14,7 @@ const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
   return (
     <div className='py-6 lg:py-12'>
       <div className='container max-w-[1200px]'>
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           {data.map((item, index) => (
             <div
               key={index}

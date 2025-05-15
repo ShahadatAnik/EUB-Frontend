@@ -91,7 +91,10 @@ const ApplicationForm = () => {
   return (
     <>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className='space-y-4 lg:space-y-6'
+        >
           <FormField
             control={form.control}
             name='semester'
@@ -171,12 +174,12 @@ const ApplicationForm = () => {
           />
 
           <div className='border rounded-md overflow-hidden'>
-            <h6 className='text-lg font-semibold border-b px-6 py-3 bg-primary text-white'>
+            <h6 className='text-base lg:text-lg font-semibold border-b px-3 lg:px-6 py-2 lg:py-3 bg-primary text-white'>
               Personal Information
             </h6>
 
-            <div className='space-y-6 p-6'>
-              <div className='grid grid-cols-3 gap-4'>
+            <div className='space-y-6 py-2.5 px-3 lg:p-6'>
+              <div className='grid grid-cols-1 lg:grid-cols-3 gap-2.5 lg:gap-4'>
                 <FormField
                   control={form.control}
                   name='father_name'
@@ -382,7 +385,7 @@ const ApplicationForm = () => {
                       <RadioGroup
                         onValueChange={field.onChange}
                         defaultValue={field.value}
-                        className='flex space-x-2'
+                        className='flex flex-wrap gap-2'
                       >
                         {enumToOptions(EnumMartialStatus).map((item) => (
                           <FormItem
@@ -407,11 +410,11 @@ const ApplicationForm = () => {
           </div>
 
           <div className='border rounded-md overflow-hidden'>
-            <h6 className='text-lg font-semibold border-b px-6 py-3 bg-primary text-white'>
+            <h6 className='text-base lg:text-lg font-semibold border-b px-3 lg:px-6 py-2 lg:py-3 bg-primary text-white'>
               Address
             </h6>
 
-            <div className='space-y-4 p-6'>
+            <div className='space-y-2 lg:space-y-6 py-2.5 px-3 lg:p-6'>
               <FormField
                 control={form.control}
                 name='present_address'
@@ -431,7 +434,7 @@ const ApplicationForm = () => {
                 )}
               />
 
-              <div className='grid grid-cols-2 gap-4'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4'>
                 <FormField
                   control={form.control}
                   name='village'
@@ -490,12 +493,12 @@ const ApplicationForm = () => {
 
           {/* SECONDARY EDUCATION BACKGROUND */}
           <div className='border rounded-md overflow-hidden'>
-            <h6 className='text-lg font-semibold border-b px-6 py-3 bg-primary text-white'>
+            <h6 className='text-base lg:text-lg font-semibold border-b px-3 lg:px-6 py-2 lg:py-3 bg-primary text-white'>
               Secondary Education Background
             </h6>
 
-            <div className='space-y-4 p-6'>
-              <div className='grid grid-cols-3 gap-4'>
+            <div className='space-y-2 lg:space-y-6 py-2.5 px-3 lg:p-6'>
+              <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4'>
                 <FormField
                   control={form.control}
                   name='ssc_group'
@@ -568,7 +571,7 @@ const ApplicationForm = () => {
                   )}
                 />
               </div>
-              <div className='grid grid-cols-3 gap-4'>
+              <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4'>
                 <FormField
                   control={form.control}
                   name='ssc_board'
@@ -635,12 +638,12 @@ const ApplicationForm = () => {
 
           {/* HIGHER EDUCATION */}
           <div className='border rounded-md overflow-hidden'>
-            <h6 className='text-lg font-semibold border-b px-6 py-3 bg-primary text-white'>
+            <h6 className='text-base lg:text-lg font-semibold border-b px-3 lg:px-6 py-2 lg:py-3 bg-primary text-white'>
               Higher Secondary Education Background
             </h6>
 
-            <div className='space-y-4 p-6'>
-              <div className='grid grid-cols-3 gap-4'>
+            <div className='space-y-2 lg:space-y-6 py-2.5 px-3 lg:p-6'>
+              <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4'>
                 <FormField
                   control={form.control}
                   name='hsc_group'
@@ -715,7 +718,7 @@ const ApplicationForm = () => {
                   )}
                 />
               </div>
-              <div className='grid grid-cols-3 gap-4'>
+              <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4'>
                 <FormField
                   control={form.control}
                   name='hsc_board'
@@ -782,12 +785,12 @@ const ApplicationForm = () => {
 
           {/* BACHELOR DEGREE */}
           <div className='border rounded-md overflow-hidden'>
-            <h6 className='text-lg font-semibold border-b px-6 py-3 bg-primary text-white'>
+            <h6 className='text-base lg:text-lg font-semibold border-b px-3 lg:px-6 py-2 lg:py-3 bg-primary text-white'>
               Bachelor Degree (Graduation)
             </h6>
 
-            <div className='space-y-4 p-6'>
-              <div className='grid grid-cols-2 gap-4'>
+            <div className='space-y-2 lg:space-y-6 py-2.5 px-3 lg:p-6'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4'>
                 <FormField
                   control={form.control}
                   name='bsc_name'
