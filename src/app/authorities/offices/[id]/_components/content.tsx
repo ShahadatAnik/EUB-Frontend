@@ -11,7 +11,7 @@ const Content: React.FC<{
 }> = ({ data, listOfOffices, category }) => {
   return (
     <div className='py-6 lg:py-12'>
-      <div className='container flex gap-8'>
+      <div className='container flex flex-col lg:flex-row gap-8'>
         <ListOfOffices data={listOfOffices} />
         <div className='flex-1 space-y-4'>
           <p className='text-lg'>

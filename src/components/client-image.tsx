@@ -8,7 +8,7 @@ export default function ClientImage({ src, alt, ...props }: ImageProps) {
     <Image
       alt={alt ? alt : 'Image'}
       src={
-        src !== null && src
+        src !== null && src !== undefined && src !== 'null' && src
           ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${src}`
           : '/person-placeholder.jpg'
       }
