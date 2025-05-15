@@ -228,10 +228,10 @@ export const navLinks: INavLink[] = [
         title: 'Vice Chancellor',
         href: '/authorities/vice-chancellor',
       },
-      {
-        title: 'Pro Vice Chancellor',
-        href: '/authorities/pro-vice-chancellor',
-      },
+      // {
+      //   title: 'Pro Vice Chancellor',
+      //   href: '/authorities/pro-vice-chancellor',
+      // },
       {
         title: 'Dean',
         href: '/authorities/dean',
@@ -240,10 +240,10 @@ export const navLinks: INavLink[] = [
         title: 'Treasurer',
         href: '/authorities/treasurer',
       },
-      {
-        title: 'Director (Coordination)',
-        href: '/authorities/director-coordination',
-      },
+      // {
+      //   title: 'Director (Coordination)',
+      //   href: '/authorities/director-coordination',
+      // },
       {
         title: 'Registrar',
         href: '/authorities/registrar',
