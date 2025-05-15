@@ -23,7 +23,7 @@ export default async function Page(props: {
   });
 
   const faculties = await getFaculties();
-console.log(data);
+
   return (
     <>
       <PageHeader

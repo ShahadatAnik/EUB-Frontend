@@ -9,5 +9,5 @@ export const getPublications = async ({
   q = '',
 }): Promise<IPaginationResponse<ISelectOption>> =>
   fetchApi(
-    `/other/portfolio/department-teachers-publication/value/label?page=${page}&limit=${limit}&q=${q}`
+    `/other/portfolio/teachers-publication/value/label?page=${page}&limit=${limit}&q=${q}`
   );
