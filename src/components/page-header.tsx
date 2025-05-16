@@ -16,7 +16,7 @@ const PageHeader: React.FC<IPageHeaderProps> = ({
       style={{
         backgroundImage: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}url(${image})`,
       }}
-      className='py-16 bg-default relative flex items-center'
+      className=' py-12 lg:py-16 bg-default relative flex items-center'
     >
       <div className='absolute inset-0 bg-black/70'></div>
       <div className='container relative z-10 text-center'>

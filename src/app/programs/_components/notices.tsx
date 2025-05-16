@@ -34,7 +34,7 @@ const Notices: React.FC<{ department: string }> = ({ department }) => {
           onChange={(e) => setValue(e.target.value)}
           type='search'
           placeholder='Search Notices'
-          className='w-[400px]'
+          className='max-w-[300px] lg:w-[400px]'
         />
       </div>
 

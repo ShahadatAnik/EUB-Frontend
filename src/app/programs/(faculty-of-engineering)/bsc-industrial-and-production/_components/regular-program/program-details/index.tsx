@@ -1,76 +1,94 @@
 import React from 'react';
 
 import ContentWrapper from '../../content-wrapper';
+import Title from '@/components/title';
+
+import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
+import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
 
 const ProgramDetails = () => {
   return (
-    <ContentWrapper className='space-y-8' title='Program Details'>
+    <ContentWrapper title='Program Details' className='space-y-8'>
       <p>
-        The growing demand for Industrial Production Engineers in global job
-        markets highlights the need for skilled professionals in this field. To
-        keep pace with advancements in Industrial Production Engineering (IPE)
-        and meet industry demands, both the public and private sectors in
-        Bangladesh must invest in human resource development.
-        <br />
-        <br />
-        The Department of Industrial Production Engineering at the European
-        University of Bangladesh (EUB) was established to provide high-quality
-        education through a 3-year, 4-month undergraduate program. The
-        curriculum offers rigorous academic training in both fundamental and
-        advanced aspects of IPE, with a strong emphasis on research,
-        development, and knowledge dissemination.
-        <br />
-        <br />
-        Beyond technical expertise, students are exposed to science, humanities,
-        economics, and management to ensure a well-rounded education. In the
-        final semesters, students can specialize in a chosen field, complemented
-        by projects, thesis work, seminars, and industry visits.
+        The B.Sc. in Industrial and Production Engineering (IPE) program at the
+        European University of Bangladesh (EUB) is designed to prepare students
+        for careers in industrial operations, production systems, manufacturing
+        engineering, and quality management. Through a balanced curriculum of
+        theory and lab courses, the program aims to equip graduates with the
+        skills necessary to improve productivity, reduce waste, and manage
+        technological processes across various industries.
       </p>
 
       <div>
-        <h6 className='text-lg font-semibold'>
-          The B.Sc. in Industrial Production Engineering program spans four
-          years, divided into 10 semesters, with three semesters per academic
-          year:
-        </h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>Spring Semester (January – April)</li>
-          <li>Summer Semester (May – August)</li>
-          <li>Fall Semester (September – December)</li>
-        </ul>
+        <Title variant={'title'} title='Semesters' />
+        <p>There are three semesters in an academic year:</p>
 
-        <small className='block mt-4'>
-          Each semester lasts 15 weeks, with 13 weeks of classes, one week for
-          exam preparation, and one week for examinations.
-        </small>
-      </div>
-      <div>
-        <h6 className='text-lg font-semibold'>Credit System:</h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>
-            Theory Courses: Each course carries three credit hours, with three
-            hours of lectures per week (minimum 50 minutes per class).
+        <ul className='mt-2 list-disc pl-6 space-y-1.5'>
+          <li className='space-x-1'>
+            <strong>Spring semester:</strong> <span>January to April</span>
           </li>
-          <li>
-            Laboratory Courses: One credit requires 24 hours of lab work per
-            semester, with each session lasting at least two hours.
+          <li className='space-x-1'>
+            <strong>Summer semester:</strong> <span>May to August</span>
           </li>
-          <li>Project Work: Credits assigned vary by discipline.</li>
-        </ul>
-      </div>
-      <div>
-        <h6 className='text-lg font-semibold'>Course Load:</h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>Full-time students: Maximum 15 credits per semester.</li>
-          <li>Part-time students: Maximum 9 credits per semester.</li>
+          <li className='space-x-1'>
+            <strong>Fall semester:</strong> <span>September to December</span>
+          </li>
         </ul>
       </div>
 
-      <p>
-        The total credit hours required for the B.Sc. in Industrial Production
-        Engineering degree is 161.75 hours, ensuring graduates are well-prepared
-        to meet industry standards and challenges.
-      </p>
+      <div>
+        <Title variant={'title'} title='Duration' />
+        <p>Each semester is 17 weeks long, comprising:</p>
+
+        <ul className='mt-2 list-disc pl-6 space-y-1.5'>
+          <li>12 weeks for class teaching</li>
+          <li>1 week for examination preparation</li>
+          <li>3 weeks for examinations</li>
+          <li>1 week for government and other holidays</li>
+        </ul>
+      </div>
+      <div>
+        <Title variant={'title'} title='Credit Hour' />
+        <ul className='list-disc pl-6 space-y-1.5'>
+          <li>
+            Theory Course: 3 credits = 3 lecture hours/week (50 minutes/class)
+          </li>
+          <li>
+            Lab Course: 1 credit = 24 hours/semester, minimum 2-hour sessions
+          </li>
+        </ul>
+      </div>
+      <div>
+        <Title variant={'title'} title='Course Load' />
+        <ul className='list-disc pl-6 space-y-1.5'>
+          <li>Full-time Students: Maximum of 15 credits per semester</li>
+          <li>Part-time Students: Maximum of 9 credits per semester</li>
+        </ul>
+      </div>
+      <div>
+        <Title variant={'title'} title='Performance Evaluation Criterion' />
+        <p className='mb-4'>Evaluation Criteria for each course:</p>
+        <PerformanceCriteriaTable />
+
+        <div className='mt-8'>
+          <p className='mb-4'>
+            The university will comply with the uniform grading system suggested
+            by UGC as follows.
+          </p>
+          <UgcGradingTable />
+          <p className='mt-4'>
+            Incomplete (I) Grade: An Incomplete (I) grade is used in special
+            circumstances. An ‘I’ grade may be given only at the end of a
+            semester to a student who has completed all other requirements
+            except the final examination.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <Title variant={'title'} title='Tuition Fee Structure' />
+        <p>(Refer to the Admission Office, EUB)</p>
+      </div>
     </ContentWrapper>
   );
 };
