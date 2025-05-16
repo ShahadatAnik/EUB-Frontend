@@ -27,7 +27,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 const Content: React.FC<
 	IPaginationResponse<ISelectOption> & { faculties: IClubAndSociety[] }
 > = (res) => {
-	console.log(res);
+	
 	const pathname = usePathname();
 	const { replace } = useRouter();
 	const searchParams = useSearchParams();
