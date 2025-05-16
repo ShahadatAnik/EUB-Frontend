@@ -43,35 +43,41 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
 					let end = 5;
 
 					if (total_page <= 5) {
-						
 						start = 1;
 						end = total_page;
 					} else if (current_page <= 3) {
-					
 						start = 1;
 						end = 5;
 					} else if (current_page + 2 >= total_page) {
-					
 						start = total_page - 4;
 						end = total_page;
 					} else {
-						
 						start = current_page - 2;
 						end = current_page + 2;
 					}
 
-					return Array.from({ length: end - start + 1 }, (_, i) => (
-						<PaginationLink
-							key={start + i}
-							href={
-								q
-									? `${pathName}?page=${start + i}&q=${q}`
-									: `${pathName}?page=${start + i}`
-							}
-						>
-							{start + i}
-						</PaginationLink>
-					));
+					return Array.from({ length: end - start + 1 }, (_, i) => {
+						const page = start + i;
+						const isSelected = page === current_page;
+						return (
+							<PaginationLink
+								key={page}
+								href={
+									q
+										? `${pathName}?page=${page}&q=${q}`
+										: `${pathName}?page=${page}`
+								}
+								className={
+									isSelected
+										? "shadow-lg border-2 border-primary rounded "
+										: ""
+								}
+								// If your PaginationLink doesn't accept className, wrap it in a <div> or <span> with the class
+							>
+								{page}
+							</PaginationLink>
+						);
+					});
 				})()}
 
 				{total_page > 5 && (
