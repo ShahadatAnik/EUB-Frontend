@@ -20,6 +20,12 @@ export const getRegularClassRoutine = async (
 	fetchApi(
 		`/portfolio/routine?portfolio_department=${department}&program=regular&type=class_routine`
 	);
+export const getRegularCourseOffer = async (
+	department: string
+): Promise<IDataTable[]> =>
+	fetchApi(
+		`/portfolio/routine?portfolio_department=${department}&program=regular&type=course_offer`
+	);
 
 export const getRegularExamSchedule = async (
 	department: string
@@ -34,6 +40,12 @@ export const getEveningClassRoutine = async (
 ): Promise<IDataTable[]> =>
 	fetchApi(
 		`/portfolio/routine?portfolio_department=${department}&program=evening&type=class_routine`
+	);
+export const getEveningCourseOffer = async (
+	department: string
+): Promise<IDataTable[]> =>
+	fetchApi(
+		`/portfolio/routine?portfolio_department=${department}&program=evening&type=course_offer`
 	);
 
 export const getEveningExamSchedule = async (
