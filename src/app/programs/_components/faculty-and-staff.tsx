@@ -19,7 +19,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
 	const pathName = usePathname();
 	const program = pathName.split("/")[2];
 
-	const redirectUrlForHead = `/faculty/${program}/${departmentHead?.uuid}`;
+	const redirectUrlForHead = `/faculty/${program}/${departmentHead?.teachers_uuid}`;
 
 	if (isLoading) return <Loader className="h-[200px]" />;
 
