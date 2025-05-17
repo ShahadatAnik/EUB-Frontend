@@ -12,7 +12,11 @@ const Content: React.FC<{ data: IAuthoritiesDean }> = ({ data }) => {
 					<ClientImage
 						className="object-cover object-top"
 						fill
-						src={`${data?.personal_info.profile_image}`}
+						src={`${
+							data?.personal_info.profile_image
+								? data?.personal_info.profile_image
+								: ""
+						}`}
 						alt={`${data.personal_info.name}'s profile picture`}
 					/>
 				</div>
