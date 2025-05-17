@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 const Content = () => {
   return (
-    <div className='space-y-12'>
+    <div className='space-y-8 lg:space-y-12'>
       <SectionContent title='Transfer Students'>
-        <div className='flex gap-8'>
+        <div className='flex flex-col lg:flex-row gap-4 lg:gap-8'>
           <Image
             width={200}
             height={200}

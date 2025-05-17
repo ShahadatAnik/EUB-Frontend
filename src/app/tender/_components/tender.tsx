@@ -75,13 +75,15 @@ const Tender: React.FC<ITenderProps> = ({ title, type }) => {
 
   return (
     <div id={type} className='space-y-8'>
-      <div className='flex justify-between items-center'>
-        <h2 className='text-2xl font-semibold text-primary'>{title}</h2>
+      <div className='flex flex-col gap-2 lg:flex-row justify-between lg:items-center'>
+        <h2 className='text-lg lg:text-2xl font-semibold text-primary'>
+          {title}
+        </h2>
         <Input
           onChange={(e) => setValue(e.target.value)}
           type='search'
           placeholder='e.g. Code, Type, Title'
-          className='w-[400px]'
+          className='lg:w-[400px]'
         />
       </div>
 

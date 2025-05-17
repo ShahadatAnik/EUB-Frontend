@@ -1,61 +1,33 @@
 import React from 'react';
 import ContentWrapper from './content-wrapper';
-import Image from 'next/image';
+
+import { IAlumni } from '@/types';
+import AlumniGallery from '@/app/programs/_components/alumni-gallery';
 
 const AlumniIndustry = () => {
-  return (
-    <ContentWrapper title='Alumni and Industry'>
-      <div className='w-full relative h-[400px]'>
-        <Image
-          className='object-contain'
-          fill
-          src={'/person-placeholder.jpg'}
-          alt='Alumni'
-        />
-      </div>
+  const data: IAlumni[] = [
+    {
+      name: 'Humayun Kabir',
+      image: '/images/programs/eee/alumni/Humayun Kabir.jpeg',
+      designation: 'Sr. DGM, Maintenance, Nasir Glass Industries Limited',
+      description: `Humayun Kabir is a distinguished alumnus of the European University of Bangladesh (EUB), where he earned his degree as a graduate in Electrical and Electronic Engineering. His academic foundation at EUB played a significant role in his journey to becoming the Senior Deputy General Manager (Maintenance), a position he proudly holds today.
+  However, reaching this stage was far from easy. He faced numerous struggles along the way. It required hard work, dedication, continuous learning, and confidence to achieve success. There were many moments when he felt exhausted, yet he never gave up. He remained focused and overcame every challenge. Success did not come quickly; it demanded patience, effort, and one powerful tool—his academic certificate—which enabled him to earn a degree as a graduate Electrical and Electronic Engineer from the European University of Bangladesh.
+  Reflecting on his journey, he acknowledges that every struggle made him stronger. The experience has taught him valuable lessons, and today, he is ready to apply his skills to contribute to building a better future in any industry.`,
+    },
+    {
+      name: 'Razu Ahmed',
+      image: '/images/programs/eee/alumni/Razu Ahmed.jpg',
+      designation: 'Assistant General Manager, Credence Housing Limited',
+      description: `Razu Ahmed takes pride in being an alumnus of the European University of Bangladesh (EUB), where he successfully completed his BSc in Electrical and Electronic Engineering (EEE). He holds great pride in his university, his respected teachers, and his classmates.
+  Previously, he completed Section-A of AMIE and started his first job during that time, which prevented him from continuing his studies. Currently, he has been working in the real estate sector for 20 years. Throughout his service period, he realized the immense importance of higher education—not only for professional growth but also for personal and social development.
+  With this understanding, he resumed his education at EUB and successfully completed his course. He expresses gratitude to EUB for providing this opportunity. At present, he is serving as the Assistant General Manager of the Electro-Mechanical Department at Credence Housing Limited.
+  He extends heartfelt thanks to all his teachers and classmates for their support and guidance on his new educational path.`,
+    },
+  ];
 
-      <div className='text-center py-4'>
-        <h4 className='text-2xl font-semibold'>Name</h4>
-        <h6 className='mt-1 text-muted-foreground'>
-          Designation, Company Name
-        </h6>
-        <p className='mt-2 text-justify'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum itaque
-          tempore aliquid cupiditate vitae error sapiente amet magni qui
-          similique ad nisi expedita non repellendus molestias delectus labore
-          minus illum aliquam, sequi laborum. Dolorum consectetur corrupti nulla
-          eius magni, iure hic vel in illum reiciendis, unde fugiat. Temporibus,
-          magni quaerat sit, inventore fugit dolor ipsum harum soluta corrupti
-          nisi vitae adipisci. Veniam veritatis maxime, itaque laudantium odit
-          nam autem saepe atque, impedit aut ad excepturi ipsam nulla, provident
-          modi iusto reiciendis velit praesentium. Cumque esse saepe, iste
-          laudantium temporibus nam alias repellendus eius voluptatum id
-          eveniet, corrupti possimus error amet ipsum exercitationem rerum
-          fugiat sit dolorum deserunt maiores quo a voluptatem expedita.
-          Perspiciatis est incidunt repudiandae excepturi dicta dignissimos,
-          pariatur eaque explicabo necessitatibus dolorum doloribus ducimus
-          facilis architecto officia minus, itaque iusto similique tempore nulla
-          rem, possimus et exercitationem fugit. In autem voluptas animi,
-          consequatur modi esse iure laboriosam? Tempore nihil sed saepe ut cum
-          magni accusantium incidunt! Sit quos nostrum aliquam, deserunt id
-          sapiente praesentium dolore in qui quisquam sunt ex corporis atque
-          voluptatibus provident quis officia. Officiis, pariatur inventore.
-          Voluptatibus dolores vitae est. Veniam qui, quas ab exercitationem
-          enim magnam culpa porro ipsum, minus delectus, officia obcaecati optio
-          sequi veritatis atque adipisci numquam cumque! Optio, deserunt fuga
-          aperiam dolor minus debitis ipsum asperiores voluptatem odit dolorem
-          explicabo cum ad quos. Fugiat adipisci voluptates quos atque
-          accusantium est a, aspernatur hic fugit ipsum autem impedit
-          perspiciatis quia sit mollitia odio, doloribus molestias quisquam
-          similique blanditiis magnam tempore necessitatibus? Doloribus, totam
-          repellendus accusamus sed blanditiis vero exercitationem facilis
-          aperiam in accusantium quia doloremque ullam nisi cumque mollitia
-          laborum culpa quasi dolorum beatae quos. Dolorem eius repudiandae
-          adipisci nulla nemo ipsam? Pariatur cumque ut adipisci officiis quidem
-          dolore praesentium sequi quia maiores. Nam facere quam ex animi
-          possimus dolore laudantium corrupti?
-        </p>
-      </div>
+  return (
+    <ContentWrapper title='Alumni and Industry' className='lg:p-8'>
+      <AlumniGallery data={data} />
     </ContentWrapper>
   );
 };

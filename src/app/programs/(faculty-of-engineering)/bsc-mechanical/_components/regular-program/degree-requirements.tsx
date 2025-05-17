@@ -1,42 +1,74 @@
 import React from 'react';
 import ContentWrapper from '../content-wrapper';
+import Title from '@/components/title';
 
 const DegreeRequirements = () => {
   return (
-    <ContentWrapper title='Degree Requirements' className='py-4'>
-      <div>
-        <p>
-          A student must complete 120 credits with a minimum CGPA of 2.00/4.00
-          to earn the BBA degree. To continue in the program a student must be
-          in good standing (i.e. maintain a minimum CGPA of 2.00/4.00 at all
-          levels of academic advancement). If in any semester the CGPA drops
-          below 2.00 the student is put on academic probation. A student will be
-          dismissed after being on probation for three consecutive semesters.
-        </p>
+    <ContentWrapper title='Degree Requirements' className='space-y-6'>
+      <p>
+        To successfully complete the B.Sc. in Mechanical Engineering program:
+      </p>
 
+      <div>
+        <Title variant={'title'} title='Minimum GPA to pass program' />
+        <p>
+          Students must maintain a minimum CGPA of 2.50 and pass all required
+          courses.
+        </p>
+      </div>
+      <div>
+        <Title variant={'title'} title='Supplementary rules & cost' />
+        <ul className='list-disc pl-6 space-y-2'>
+          <li>
+            <p>
+              <strong>Rule:</strong>Students receiving an &apos;I&apos; grade
+              may take the next final supplementary examination without
+              re-registering.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Cost:</strong>As per university policy.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <Title variant={'title'} title='Total Credits of Course' />
+        <ul className='list-disc pl-6 space-y-2'>
+          <li>
+            <strong>Regular Students:</strong> 161.0 credit hours
+          </li>
+          <li>
+            <strong>Diploma Holders:</strong> 142.0 credit hours
+          </li>
+        </ul>
+      </div>
+      <div>
+        <Title variant={'title'} title='Waivers' />
+        <p>
+          Applicable to diploma holders in Electrical, Electronics, Computer,
+          Power, Mechanical, or Telecommunication.
+        </p>
         <ul className='mt-2 list-disc pl-6 space-y-2'>
           <li>
-            ENG 102 & BUS 112 is not compulsory for those who received a waiver
-            in these courses in based on Admission Test. Others must have to
-            complete these courses for Degree completion.
+            Waivers apply only to General Educational Development (GED) courses.
           </li>
           <li>
-            To qualify for degree, a student must maintain a minimum CGPA of
-            2.00 out of 4.00 in both School Core Courses & BBA Core Courses.
+            Basic sciences, Mathematics, and core engineering courses are not
+            eligible for waivers.
           </li>
+          <li>Maximum waiver: 13.5 credits</li>
+        </ul>
+      </div>
+      <div>
+        <Title variant={'title'} title='Mandatory completions' />
+        <ul className='list-disc pl-6 space-y-2'>
           <li>
-            Minimum GPA 2.50 is required in order to declare the Major or at
-            least 2.00 is required to be eligible for the BBA degree.
+            ME 370: Industrial Training (4 weeks; non-credit; graded as
+            &apos;S&apos; or &apos;U&apos;)
           </li>
-          <li>
-            For single major students required to complete 126 credits including
-            ENG 102 & BUS 112.
-          </li>
-          <li>
-            For dual major students required to complete 135 credits including
-            ENG 102 & BUS 112.
-          </li>
-          <li>Internship ( BUS 498) is mandatory non-credit course.</li>
+          <li>Industrial Tour (3 weeks; co-curricular activity)</li>
         </ul>
       </div>
     </ContentWrapper>

@@ -6,7 +6,7 @@ const Content = () => {
     <div className='py-6 lg:py-12'>
       <div className='container space-y-8'>
         <div>
-          <div className='relative  aspect-video h-[300px] lg:float-left mb-4 lg:mb-0 lg:mr-8'>
+          <div className='relative  aspect-video lg:h-[300px] lg:float-left mb-4 lg:mb-0 lg:mr-8'>
             <Image
               className='object-contain'
               fill
@@ -39,7 +39,7 @@ const Content = () => {
         </div>
 
         <div>
-          <div className='relative  aspect-video h-[300px] mb-4 lg:mb-0 lg:float-right lg:ml-8'>
+          <div className='relative  aspect-video lg:h-[300px] mb-4 lg:mb-0 lg:float-right lg:ml-8'>
             <Image
               className='object-cover'
               fill

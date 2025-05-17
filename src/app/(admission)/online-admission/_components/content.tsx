@@ -5,7 +5,7 @@ import ApplicationForm from './application-form';
 
 const Content = () => {
   return (
-    <div className='space-y-12'>
+    <div className='space-y-8 lg:space-y-12'>
       <SectionContent title='Payment Process'>
         <ul className='space-y-2 list-inside list-disc'>
           <li>You have to send: Tk. 10,200.00 (For Admission Fee)</li>
