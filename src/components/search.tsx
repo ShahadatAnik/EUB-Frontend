@@ -28,7 +28,7 @@ const Search: React.FC<React.ComponentProps<'input'>> = ({
     <Input
       type='search'
       placeholder={placeholder}
-      className={cn('w-[400px]', className)}
+      className={cn('w-full lg:w-[400px]', className)}
       defaultValue={searchParams.get('q')?.toString()}
       onChange={(e) => {
         handleSearch(e.target.value);
