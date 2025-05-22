@@ -16,12 +16,12 @@ const Content = () => {
           <AccordionItem value={`item-${index + 1}`} key={index}>
             <AccordionTrigger
               iconClassName='text-primary'
-              className='px-6 py-3 bg-accent border-b text-lg'
+              className='px-4 lg:px-6 py-2 lg:py-3 bg-accent border-b text-base lg:text-lg'
             >
               {index + 1 + '. '}
               {item.question}
             </AccordionTrigger>
-            <AccordionContent className='py-4 px-8 text-base'>
+            <AccordionContent className='py-3 lg:py-4 pl-2 lg:px-8 text-base lg:text-base'>
               {item.answer}
             </AccordionContent>
           </AccordionItem>

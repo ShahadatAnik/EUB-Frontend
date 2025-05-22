@@ -54,7 +54,7 @@ const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <h4 className='text-2xl font-semibold mb-2 '>
+      <h4 className='text-lg lg:text-2xl font-semibold mb-2 '>
         Please use the following form to contact the department/person.
       </h4>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>

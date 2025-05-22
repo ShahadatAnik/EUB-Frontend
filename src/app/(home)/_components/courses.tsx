@@ -10,7 +10,7 @@ import { allPrograms } from '@/config/nav-links';
 
 const Courses = () => {
   return (
-    <section className='py-12 lg:py-16 2xl:py-20'>
+    <section className='pt-8 lg:py-16 2xl:py-20'>
       <div className='container'>
         <h2 className='text-xl lg:text-2xl font-medium text-primary mb-6 font-poppins'>
           Browse courses by study area
