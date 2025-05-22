@@ -28,7 +28,7 @@ const MobileNavbar = () => {
   return (
     <nav className='block lg:hidden bg-[#FFFBF5]/80 backdrop-blur-sm py-4'>
       <div className='container flex justify-between items-center'>
-        <BrandLogo />
+        <BrandLogo className='w-40' />
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Button size={'icon'} variant='outline'>

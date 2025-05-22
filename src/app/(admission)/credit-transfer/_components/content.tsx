@@ -13,7 +13,7 @@ const Content = () => {
             height={200}
             src={'/credit-transfer.jpg'}
             alt={'placeholder'}
-            className='object-cover'
+            className='object-cover w-full lg:w-[200px]'
           />
           <p className='max-w-[800px]'>
             Transfer students (those with previous college credits) are expected
