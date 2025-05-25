@@ -20,7 +20,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { ChevronsRight, Menu } from 'lucide-react';
 import BrandLogo from '@/components/brand-logo';
-import { navLinks } from '@/config/nav-links';
+import { navLinks, topNavLinks } from '@/config/nav-links';
 import Link from 'next/link';
 
 const MobileNavbar = () => {
@@ -28,7 +28,7 @@ const MobileNavbar = () => {
   return (
     <nav className='block lg:hidden bg-[#FFFBF5]/80 backdrop-blur-sm py-4'>
       <div className='container flex justify-between items-center'>
-        <BrandLogo />
+        <BrandLogo className='w-40' />
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Button size={'icon'} variant='outline'>
@@ -51,7 +51,7 @@ const MobileNavbar = () => {
                       <AccordionTrigger className='bg-primary px-4 py-3 text-white'>
                         {item.title}
                       </AccordionTrigger>
-                      <AccordionContent className='pt-1 pb-2 pl-2'>
+                      <AccordionContent className='pt-2.5 pb-2 pl-2'>
                         <ul className='space-y-3'>
                           {item.children.map((child, index) => (
                             <li key={index}>
@@ -111,6 +111,35 @@ const MobileNavbar = () => {
                   </Link>
                 );
               })}
+
+              <AccordionItem key={'quick-links'} value='Quick Links'>
+                <AccordionTrigger className='bg-primary px-4 py-3 text-white'>
+                  Quick Links
+                </AccordionTrigger>
+                <AccordionContent className='pt-2.5 pb-2 pl-2'>
+                  <ul className='space-y-3'>
+                    {topNavLinks.map((child, index) => (
+                      <li key={index}>
+                        <div>
+                          {child.href ? (
+                            <Link
+                              onClick={() => setIsOpen(false)}
+                              className='text-sm font-semibold text-primary hover:underline'
+                              href={child.href!}
+                            >
+                              {child.title}
+                            </Link>
+                          ) : (
+                            <h6 className='text-sm font-semibold text-primary'>
+                              {child.title}
+                            </h6>
+                          )}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
             </Accordion>
           </SheetContent>
         </Sheet>

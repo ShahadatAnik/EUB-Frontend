@@ -6,7 +6,7 @@ const titleVariants = cva('font-medium font-poppins ', {
   variants: {
     variant: {
       header:
-        'mb-4 px-6 py-3 border-l-4 bg-accent border-primary text-xl text-primary',
+        'mb-3 lg:mb-4 px-4 lg:px-6 py-1.5 lg:py-3 border-l-4 bg-accent border-primary text-lg lg:text-xl text-primary',
       title: 'mb-2 text-lg text-foreground',
     },
   },

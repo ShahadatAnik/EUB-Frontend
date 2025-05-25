@@ -9,11 +9,11 @@ const Offers: React.FC<{ data: IOffer[] }> = ({ data }) => {
 
   return (
     <div className='absolute bottom-0 left-0 right-0    z-10 bg-primary'>
-      <Marquee className='h-14' autoFill pauseOnHover>
+      <Marquee className='h-10 lg:h-14' autoFill pauseOnHover>
         <div>
           {data.map((item, index) => (
             <ClientPdfLink
-              className='no-underline hover:underline inline-block text-white px-5 border-r'
+              className='no-underline hover:underline inline-block text-white text-sm lg:text-base px-5 border-r'
               key={index}
               href={item.file}
               text={item.title}

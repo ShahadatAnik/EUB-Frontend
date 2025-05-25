@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "eub-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "git pull && next build"
+    "deploy": "git pull && next build && pm2 restart eub-frontend --update-env"
   },
   "dependencies": {
     "@bprogress/next": "^3.0.8",

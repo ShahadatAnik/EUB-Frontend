@@ -56,7 +56,7 @@ const Hero: React.FC<{
   ];
 
   return (
-    <div className='h-screen w-full relative'>
+    <div className='h-[100svh] w-full relative'>
       <Slider sliders={sliders} />
       <Offers data={offers} />
     </div>
