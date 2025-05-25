@@ -1,65 +1,66 @@
-import { formatDate } from "date-fns";
+import { formatDate } from 'date-fns';
 
-import AlbumSlider from "@/components/album-slider";
-import LatestPosts from "@/components/latest-posts";
-import PageContainer from "@/components/page-container";
-import PageHeader from "@/components/page-header";
-import { Separator } from "@/components/ui/separator";
-import { getNewsById } from "@/server/get";
+import AlbumSlider from '@/components/album-slider';
+import LatestPosts from '@/components/latest-posts';
+import PageContainer from '@/components/page-container';
+import PageHeader from '@/components/page-header';
+import { Separator } from '@/components/ui/separator';
+import { getNewsById } from '@/server/get';
+import RichTextViewer from '@/components/rich-text-viewer';
 
 export default async function Page({
-	params,
+  params,
 }: {
-	params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-	const slug = (await params).slug;
-	const data = await getNewsById(slug);
+  const slug = (await params).slug;
+  const data = await getNewsById(slug);
 
-	return (
-		<div>
-			<PageHeader
-				title={"Details"}
-				image={
-					data?.cover_image
-						? `${data?.cover_image}`
-						: "/images/bg-2.jpg"
-				}
-			/>
-			<PageContainer className="pb-40">
-				<div className="flex flex-col lg:flex-row gap-8 ">
-					<div className="flex-1">
-						<h2 className="text-xl lg:text-3xl font-medium font-poppins">
-							{data?.title}
-						</h2>
-						<h3>{data?.subtitle}</h3>
-						<div className="mt-4">
-							<p>
-								{formatDate(
-									new Date(data?.published_date),
-									"dd MMM, yyyy"
-								)}
-							</p>
-						</div>
-						<Separator className="mt-3 mb-6" />
+  return (
+    <div>
+      <PageHeader
+        title={'Details'}
+        image={data?.cover_image ? `${data?.cover_image}` : '/images/bg-2.jpg'}
+      />
+      <PageContainer className='pb-40'>
+        <div className='flex flex-col lg:flex-row gap-8 '>
+          <div className='flex-1'>
+            <h2 className='text-xl lg:text-3xl font-medium font-poppins'>
+              {data?.title}
+            </h2>
+            <h3>{data?.subtitle}</h3>
+            <div className='mt-4'>
+              <p>
+                {formatDate(new Date(data?.published_date), 'dd MMM, yyyy')}
+              </p>
+            </div>
+            <Separator className='mt-3 mb-6' />
 
-						<div>
-							<AlbumSlider
-								images={data?.carousel.map((item) => ({
-									original: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${item.label}`,
-								}))}
-							/>
-							<p className="mt-4 text-justify">
-								{data?.description}
-							</p>
-							<p className="mt-4 text-justify">{data?.content}</p>
-						</div>
-					</div>
+            <div>
+              <AlbumSlider
+                images={data?.carousel.map((item) => ({
+                  original: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${item.label}`,
+                }))}
+              />
 
-					<div className="lg:border-l lg:pl-8 flex-[0_0_340px] h-fit">
-						<LatestPosts department={data?.department_name} />
-					</div>
-				</div>
-			</PageContainer>
-		</div>
-	);
+              {data?.description && (
+                <div className='mt-4'>
+                  <RichTextViewer content={data?.description} />
+                </div>
+              )}
+              {data?.content && (
+                <div className='mt-4'>
+                  <RichTextViewer content={data?.content} />
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className='lg:border-l lg:pl-8 flex-[0_0_340px] h-fit'>
+            <LatestPosts department={data?.department_name} />
+          </div>
+        </div>
+      </PageContainer>
+    </div>
+  );
 }

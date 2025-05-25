@@ -15,13 +15,14 @@ import { Badge } from '@/components/ui/badge';
 import { INewsPortal } from '@/types';
 import { formatDate } from 'date-fns';
 import ClientImage from '@/components/client-image';
+import RichTextViewer from '@/components/rich-text-viewer';
 
 const NewsCard: React.FC<{ item: INewsPortal }> = ({ item }) => {
   return (
     <Card className=' overflow-hidden border-primary/10 '>
-      <CardHeader className='p-0 h-[200px] relative'>
+      <CardHeader className='p-0 w-full aspect-[3/2] relative bg-background border-b border-primary/10'>
         <ClientImage
-          className='w-full h-[200px] object-cover'
+          className='size-full object-contain'
           src={
             item?.cover_image
               ? `${item?.cover_image}`
@@ -44,9 +45,11 @@ const NewsCard: React.FC<{ item: INewsPortal }> = ({ item }) => {
             {item.title}
           </CardTitle>
         </Link>
-        <CardDescription className='mt-1 line-clamp-3'>
-          {item.description}
-        </CardDescription>
+        {item.description && (
+          <CardDescription className='mt-1 line-clamp-3'>
+            <RichTextViewer content={item.description.slice(0, 90) + '...'} />
+          </CardDescription>
+        )}
       </CardContent>
       <CardFooter className='flex justify-between'>
         <Link href={`/news-events/${item.uuid}`}>

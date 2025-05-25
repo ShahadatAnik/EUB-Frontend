@@ -11,8 +11,13 @@ const AlbumSlider = ({ images }: { images: ReactImageGalleryItem[] }) => {
       items={images}
       showThumbnails
       renderItem={({ original }) => (
-        <div className='w-full aspect-video relative'>
-          <Image className='object-cover' src={original} alt={original} fill />
+        <div className='w-full aspect-[3/2] relative border border-primary/10 rounded-md'>
+          <Image
+            className='object-contain'
+            src={original}
+            alt={original}
+            fill
+          />
         </div>
       )}
     />
