@@ -6,7 +6,11 @@ import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { IFacultyDetails } from '@/types';
 import { facultyTabs } from './faculty-tabs';
-import RichTextViewer from '@/components/rich-text-viewer';
+import dynamic from 'next/dynamic';
+
+const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
+  ssr: false,
+});
 
 const Content = ({ faculty }: { faculty: IFacultyDetails }) => {
   const [activeTab, setActiveTab] = useState(facultyTabs[0].value);

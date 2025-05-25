@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import ContentWrapper from './content-wrapper';
@@ -8,7 +10,7 @@ import Loader from '@/components/loader';
 const NewsAndEvents = ({ department }: { department: string }) => {
   const { data, isLoading } = useGetDepartmentNews(department);
 
-  if (isLoading) return <Loader />;
+  if (isLoading) return <Loader className='h-[200px]' />;
 
   return (
     <ContentWrapper title='News & Events'>
