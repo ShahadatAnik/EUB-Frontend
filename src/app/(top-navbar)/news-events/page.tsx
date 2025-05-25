@@ -33,7 +33,6 @@ export default async function Page({ searchParams }: searchParamsProps) {
             <NewsCard key={index} item={item} />
           ))}
         </div>
-
         <ServerPagination pagination={data.pagination} />
       </PageContainer>
     </div>
