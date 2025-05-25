@@ -20,8 +20,8 @@ const Layout: React.FC<ILayoutProps> = ({ children, navbarClassName }) => {
     <div className='relative'>
       <div
         className={cn(
-          ' top-0 left-0 right-0 z-50',
-          isHome ? 'absolute' : 'relative',
+          'top-0 left-0 right-0 z-50 shadow-md border-b-2 border-primary',
+          isHome ? 'fixed' : 'sticky',
           navbarClassName
         )}
       >

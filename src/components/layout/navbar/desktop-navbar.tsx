@@ -5,7 +5,7 @@ import ApplyNow from '@/components/apply-now';
 
 const DesktopNavbar = () => {
   return (
-    <nav className='py-6 bg-[#FFFBF5]/80 backdrop-blur-sm hidden lg:block '>
+    <nav className='py-6 bg-background/90 backdrop-blur-lg hidden lg:block '>
       <div className='container  flex items-center  justify-between'>
         <BrandLogo />
         <NavMenu />
