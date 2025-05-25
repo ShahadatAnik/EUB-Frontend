@@ -18,11 +18,15 @@ import {
 } from '@/components/ui/select';
 
 import NoDataFound from '@/components/no-data-found';
-import RichTextViewer from '@/components/rich-text-viewer';
 import Search from '@/components/search';
 import ServerPagination from '@/components/server-pagination';
 import { IClubAndSociety, IPaginationResponse, ISelectOption } from '@/types';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import dynamic from 'next/dynamic';
+
+const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
+  ssr: false,
+});
 
 const Content: React.FC<
   IPaginationResponse<ISelectOption> & { faculties: IClubAndSociety[] }

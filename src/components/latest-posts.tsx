@@ -5,7 +5,12 @@ import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { getDepartmentLatestNews } from '@/server/get';
 import ClientImage from './client-image';
-import RichTextViewer from './rich-text-viewer';
+
+import dynamic from 'next/dynamic';
+
+const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
+  ssr: false,
+});
 
 const LatestPosts = async ({ department }: { department?: string }) => {
   const data = await getDepartmentLatestNews(department);

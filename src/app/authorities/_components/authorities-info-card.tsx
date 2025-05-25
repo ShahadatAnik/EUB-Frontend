@@ -1,8 +1,14 @@
+'use client';
+
 import React from 'react';
 
 import ClientImage from '@/components/client-image';
 import { IAuthorityInfo } from '@/types/authorities';
-import RichTextViewer from '@/components/rich-text-viewer';
+import dynamic from 'next/dynamic';
+
+const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
+  ssr: false,
+});
 
 const AuthoritiesInfoCard: React.FC<{ data: IAuthorityInfo }> = ({ data }) => {
   return (

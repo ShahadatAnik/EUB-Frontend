@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import {
@@ -15,7 +17,11 @@ import { Badge } from '@/components/ui/badge';
 import { INewsPortal } from '@/types';
 import { formatDate } from 'date-fns';
 import ClientImage from '@/components/client-image';
-import RichTextViewer from '@/components/rich-text-viewer';
+import dynamic from 'next/dynamic';
+
+const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
+  ssr: false,
+});
 
 const NewsCard: React.FC<{ item: INewsPortal }> = ({ item }) => {
   return (
