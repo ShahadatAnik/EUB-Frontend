@@ -1,19 +1,42 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { ScrollArea } from './ui/scroll-area';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
-import { getDepartmentLatestNews } from '@/server/get';
+
 import ClientImage from './client-image';
 
 import dynamic from 'next/dynamic';
+import { useGetDepartmentLatestNews } from '@/hooks/use-get-course';
+import { Skeleton } from './ui/skeleton';
 
 const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
   ssr: false,
 });
 
-const LatestPosts = async ({ department }: { department?: string }) => {
-  const data = await getDepartmentLatestNews(department);
+const LatestPosts = ({ department }: { department: string }) => {
+  const { data, isLoading } = useGetDepartmentLatestNews(department);
+
+  if (isLoading) {
+    return (
+      <div>
+        <Skeleton className='w-full h-8' />
+        <Separator className='mt-2 mb-2' />
+        <Skeleton className='w-full h-20' />
+        <Skeleton className='mt-4 flex w-full h-8' />
+      </div>
+    );
+  }
+
+  if (!data || data.length === 0) {
+    return (
+      <div className='text-center text-gray-500'>
+        No latest posts available.
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -23,8 +46,8 @@ const LatestPosts = async ({ department }: { department?: string }) => {
         <ul className='space-y-4 mt-4'>
           {data.map((item, index) => (
             <li key={index}>
-              <div className='flex gap-4 justify-between'>
-                <div className='h-[70px] aspect-[3/2]  relative'>
+              <div className='flex gap-4'>
+                <div className='h-[70px] aspect-[3/2]  relative border border-primary/10 rounded-sm'>
                   <ClientImage
                     className='object-contain size-full'
                     fill
