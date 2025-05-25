@@ -10,6 +10,7 @@ import {
   getRegularExamSchedule,
 } from '@/server/get';
 import {
+  getDepartmentLatestNews,
   getEveningCourseOffer,
   getRegularCourseOffer,
 } from '@/server/get/get-courses';
@@ -73,4 +74,10 @@ export const useGetDepartmentNews = (department: string) =>
   useQuery({
     queryKey: ['departmentNews', department],
     queryFn: () => getDepartmentNews(department),
+  });
+
+export const useGetDepartmentLatestNews = (department: string) =>
+  useQuery({
+    queryKey: ['departmentLatestNews', department],
+    queryFn: () => getDepartmentLatestNews(department),
   });
