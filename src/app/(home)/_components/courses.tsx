@@ -13,7 +13,7 @@ const Courses = () => {
     <section className='pt-8 lg:py-16 2xl:py-20'>
       <div className='container'>
         <h2 className='text-xl lg:text-2xl font-medium text-primary mb-6 font-poppins'>
-          Browse courses by study area
+          Browse programs by study area
         </h2>
 
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-x-4 lg:grid-flow-col lg:grid-rows-6'>

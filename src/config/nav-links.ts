@@ -262,10 +262,10 @@ export const navLinks: INavLink[] = [
         title: 'Admission Information',
         href: '/admission-information',
       },
-      {
-        title: 'Financial Information',
-        href: '/financial-information',
-      },
+      // {
+      //   title: 'Financial Information',
+      //   href: '/financial-information',
+      // },
       {
         title: 'Tuition & Other Fees Structure',
         href: '/tuition-and-other-fees-structure',
@@ -336,6 +336,10 @@ export const navLinks: INavLink[] = [
 
 export const allPrograms = navLinks
   ?.find((navLink) => navLink.title === 'Programs')
-  ?.children?.filter((program) => program.title !== 'Miscellaneous')
+  ?.children?.filter(
+    (program) =>
+      program.title !== 'Miscellaneous' &&
+      program.title !== 'Faculty of Sciences'
+  )
   .map((program) => program.children)
   .flat();
