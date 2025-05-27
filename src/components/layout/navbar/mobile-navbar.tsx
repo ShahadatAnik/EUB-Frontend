@@ -112,34 +112,20 @@ const MobileNavbar = () => {
                 );
               })}
 
-              <AccordionItem key={'quick-links'} value='Quick Links'>
-                <AccordionTrigger className='bg-primary px-4 py-3 text-white'>
-                  Quick Links
-                </AccordionTrigger>
-                <AccordionContent className='pt-2.5 pb-2 pl-2'>
-                  <ul className='space-y-3'>
-                    {topNavLinks.map((child, index) => (
-                      <li key={index}>
-                        <div>
-                          {child.href ? (
-                            <Link
-                              onClick={() => setIsOpen(false)}
-                              className='text-sm font-semibold text-primary hover:underline'
-                              href={child.href!}
-                            >
-                              {child.title}
-                            </Link>
-                          ) : (
-                            <h6 className='text-sm font-semibold text-primary'>
-                              {child.title}
-                            </h6>
-                          )}
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
+              <ul className='space-y-1'>
+                {topNavLinks.map((item, index) => (
+                  <li key={index}>
+                    <Link className='block' key={index} href={item.href!}>
+                      <Button
+                        onClick={() => setIsOpen(false)}
+                        className='w-full rounded-none justify-start'
+                      >
+                        {item.title}
+                      </Button>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </Accordion>
           </SheetContent>
         </Sheet>
