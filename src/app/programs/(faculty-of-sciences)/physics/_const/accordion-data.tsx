@@ -30,7 +30,7 @@ const accordions: IAcademicAccordion[] = [
     content: <LaboratoriesResources />,
   },
   {
-    title: 'Core Faculty Members & Staff',
+    title: 'Faculty Members & Staff',
     content: <CoreFacultyMembers />,
   },
   {
