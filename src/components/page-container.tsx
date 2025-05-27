@@ -10,7 +10,7 @@ const PageContainer: React.FC<IPageContainerProps> = ({
   className,
 }) => {
   return (
-    <div className={cn('container py-8 lg:py-12 space-y-8', className)}>
+    <div className={cn('container py-4 lg:py-12 space-y-8', className)}>
       {children}
     </div>
   );

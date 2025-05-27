@@ -16,20 +16,19 @@ const Content = ({ faculty }: { faculty: IFacultyDetails }) => {
   const [activeTab, setActiveTab] = useState(facultyTabs[0].value);
   return (
     <div className='space-y-8'>
-      <div className='grid lg:grid-cols-5 gap-10'>
-        <div className='relative aspect-square w-full'>
-          <Image
-            className='object-cover'
-            src={
-              faculty.teacher_image
-                ? process.env.NEXT_PUBLIC_IMAGE_BASE_URL + faculty.teacher_image
-                : '/person-placeholder.jpg'
-            }
-            alt={'teacher_image'}
-            fill
-          />
-        </div>
-        <div className='lg:col-span-4 '>
+      <div className='grid lg:grid-cols-5 gap-4 lg:gap-6'>
+        <Image
+          width={300}
+          height={300}
+          className='w-full object-cover object-top aspect-square'
+          src={
+            faculty.teacher_image
+              ? process.env.NEXT_PUBLIC_IMAGE_BASE_URL + faculty.teacher_image
+              : '/person-placeholder.jpg'
+          }
+          alt={'teacher_image'}
+        />
+        <div className='lg:col-span-4'>
           <h4 className='text-2xl font-semibold'>{faculty.teacher_name}</h4>
           <p className='text-muted-foreground'>{faculty.teacher_designation}</p>
           <div className='mt-2 !text-muted-foreground'>

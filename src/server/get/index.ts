@@ -91,3 +91,5 @@ export {
   getPolicy,
   getTenders,
 };
+
+export * from './get-hero';

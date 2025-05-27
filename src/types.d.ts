@@ -174,31 +174,6 @@ export type IClubAndSociety = {
   }[];
 };
 
-// {
-//   "id": 10,
-//   "uuid": "QiLR7K6iXM5vsAQhCdWDF",
-//   "department_uuid": "A8axDNMx9bISIVoIO6ldf",
-//   "department_name": "BSC-CSE",
-//   "teacher_uuid": "S1eeFJHLtSdH1RsJcnKfw",
-//   "teacher_name": "Alif Bin Hossain",
-//   "teacher_designation": "Admin",
-//   "teacher_phone": "01660141086",
-//   "teacher_email": "alifahmed47@gmail.com",
-//   "office": "Home",
-//   "teacher_image": "/uploads/public/users/rxEdaKPGQjIug4CQhMWTP.jpg",
-//   "department_head": false,
-//   "education": "wow",
-//   "publication": "jklj",
-//   "journal": "klk",
-//   "appointment_date": "2025-02-06 00:00:00",
-//   "resign_date": null,
-//   "about": "dfgfdg",
-//   "created_at": "2025-02-16 17:01:07",
-//   "updated_at": "2025-02-16 17:15:00",
-//   "created_by": "A8axDNMx9bISIVoIO6l6e",
-//   "created_by_name": "Admin",
-//   "remarks": null
-// }
 export type IFacultyDetails = {
   id: number;
   uuid: string;
@@ -223,6 +198,11 @@ export type IFacultyDetails = {
   created_by: string;
   created_by_name: string;
   remarks: string | null;
+  interests: string | null;
+  awards: string | null;
+  experience: string | null;
+  courses: string | null;
+  corporate: string | null;
 };
 
 export type IPublication = {
@@ -407,6 +387,21 @@ export type IOffer = {
   subtitle: string;
   file: string;
   deadline: string;
+  created_at: string;
+  updated_at: any;
+  created_by: string;
+  created_by_name: string;
+  remarks: string;
+};
+
+export type IHero = {
+  uuid: string;
+  index: number;
+  title: string;
+  description: string;
+  file: string;
+  type: string;
+  is_active: boolean;
   created_at: string;
   updated_at: any;
   created_by: string;
