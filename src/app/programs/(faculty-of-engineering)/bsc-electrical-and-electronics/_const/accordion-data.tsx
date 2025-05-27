@@ -22,8 +22,10 @@ import ECurriculum from '../_components/evening-program/curriculum';
 import EDegreeRequirements from '../_components/evening-program/degree-requirements';
 import EProgramDetails from '../_components/evening-program/program-details';
 
-import ClassRoutine from '@/app/programs/_components/class-routine';
-import ExamSchedule from '@/app/programs/_components/exam-schedule';
+import EClassRoutine from "../_components/evening-program/class-routine";
+import ClassRoutine from "../_components/regular-program/class-routine";
+import ExamSchedule from "../_components/regular-program/exam-schedule";
+import EExamSchedule from "../_components/evening-program/exam-schedule";
 
 const accordions: IAcademicAccordion[] = [
   {
@@ -67,11 +69,11 @@ const accordions: IAcademicAccordion[] = [
       },
       {
         title: 'Class Routine',
-        content: <ClassRoutine department='BSC-EEE' />,
+        content: <ClassRoutine/>,
       },
       {
         title: 'Exam Schedule',
-        content: <ExamSchedule department='BSC-EEE' />,
+        content: <ExamSchedule/>,
       },
     ],
   },
@@ -100,11 +102,11 @@ const accordions: IAcademicAccordion[] = [
       },
       {
         title: 'Class Routine',
-        content: <ClassRoutine department='BSC-EEE' />,
+        content: <EClassRoutine/>,
       },
       {
         title: 'Exam Schedule',
-        content: <ExamSchedule department='BSC-EEE' />,
+        content: <EExamSchedule/>,
       },
     ],
   },

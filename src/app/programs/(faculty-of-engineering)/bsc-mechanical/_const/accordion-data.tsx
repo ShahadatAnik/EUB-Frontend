@@ -22,124 +22,125 @@ import ECurriculum from '../_components/evening-program/curriculum';
 import EDegreeRequirements from '../_components/evening-program/degree-requirements';
 import EProgramDetails from '../_components/evening-program/program-details';
 
-import ClassRoutine from '@/app/programs/_components/class-routine';
+import EClassRoutine from "../_components/evening-program/class-routine";
+import ClassRoutine from "../_components/regular-program/class-routine";
 import ExamSchedule from '@/app/programs/_components/exam-schedule';
 
 const accordions: IAcademicAccordion[] = [
-  {
-    title: 'Overview',
+	{
+		title: "Overview",
 
-    children: [
-      {
-        title: 'About Us',
-        content: <AboutUs />,
-      },
-      {
-        title: 'Message from the Chairman',
-        content: <Chairman />,
-      },
-    ],
-  },
+		children: [
+			{
+				title: "About Us",
+				content: <AboutUs />,
+			},
+			{
+				title: "Message from the Chairman",
+				content: <Chairman />,
+			},
+		],
+	},
 
-  {
-    title: 'Regular Program',
+	{
+		title: "Regular Program",
 
-    children: [
-      {
-        title: 'Program Details',
-        content: <RProgramDetails />,
-      },
-      {
-        title: 'Curriculum',
-        content: <RCurriculum />,
-      },
-      {
-        title: 'Course Map and Path',
-        content: <RCoursePath />,
-      },
-      {
-        title: 'Degree Requirements',
-        content: <RDegreeRequirements />,
-      },
-      {
-        title: 'Course Offer',
-        content: <RCourseOffer />,
-      },
-      {
-        title: 'Class Routine',
-        content: <ClassRoutine department='BSC-MECHANICAL' />,
-      },
-      {
-        title: 'Exam Schedule',
-        content: <ExamSchedule department='BSC-MECHANICAL' />,
-      },
-    ],
-  },
-  {
-    title: 'Evening Program',
-    children: [
-      {
-        title: 'Program Details',
-        content: <EProgramDetails />,
-      },
-      {
-        title: 'Curriculum',
-        content: <ECurriculum />,
-      },
-      {
-        title: 'Course Map and Path',
-        content: <ECoursePath />,
-      },
-      {
-        title: 'Degree Requirements',
-        content: <EDegreeRequirements />,
-      },
-      {
-        title: 'Course Offer',
-        content: <ECourseOffer />,
-      },
-      {
-        title: 'Class Routine',
-        content: <ClassRoutine department='BSC-MECHANICAL' />,
-      },
-      {
-        title: 'Exam Schedule',
-        content: <ExamSchedule department='BSC-MECHANICAL' />,
-      },
-    ],
-  },
-  {
-    title: 'Laboratories & Resources',
-    content: <LaboratoriesResources />,
-  },
-  {
-    title: 'Alumni & Industry',
-    content: <AlumniIndustry />,
-  },
-  {
-    title: 'Faculty Members & Staff',
-    content: <CoreFacultyMembers />,
-  },
-  {
-    title: 'Admission Information',
-    href: '/admission-information',
-  },
-  {
-    title: 'Financial Information',
-    href: '/financial-information',
-  },
-  {
-    title: 'Notices',
-    content: <Notices department='BSC-MECHANICAL' />,
-  },
-  {
-    title: 'News & Events',
-    content: <NewsEvents />,
-  },
-  {
-    title: 'Student Service Desk',
-    content: <StudentServiceDesk />,
-  },
+		children: [
+			{
+				title: "Program Details",
+				content: <RProgramDetails />,
+			},
+			{
+				title: "Curriculum",
+				content: <RCurriculum />,
+			},
+			{
+				title: "Course Map and Path",
+				content: <RCoursePath />,
+			},
+			{
+				title: "Degree Requirements",
+				content: <RDegreeRequirements />,
+			},
+			{
+				title: "Course Offer",
+				content: <RCourseOffer />,
+			},
+			{
+				title: "Class Routine",
+				content: <ClassRoutine/>,
+			},
+			{
+				title: "Exam Schedule",
+				content: <ExamSchedule department="BSC-MECHANICAL" />,
+			},
+		],
+	},
+	{
+		title: "Evening Program",
+		children: [
+			{
+				title: "Program Details",
+				content: <EProgramDetails />,
+			},
+			{
+				title: "Curriculum",
+				content: <ECurriculum />,
+			},
+			{
+				title: "Course Map and Path",
+				content: <ECoursePath />,
+			},
+			{
+				title: "Degree Requirements",
+				content: <EDegreeRequirements />,
+			},
+			{
+				title: "Course Offer",
+				content: <ECourseOffer />,
+			},
+			{
+				title: "Class Routine",
+				content: <EClassRoutine/>,
+			},
+			{
+				title: "Exam Schedule",
+				content: <ExamSchedule department="BSC-MECHANICAL" />,
+			},
+		],
+	},
+	{
+		title: "Laboratories & Resources",
+		content: <LaboratoriesResources />,
+	},
+	{
+		title: "Alumni & Industry",
+		content: <AlumniIndustry />,
+	},
+	{
+		title: "Faculty Members & Staff",
+		content: <CoreFacultyMembers />,
+	},
+	{
+		title: "Admission Information",
+		href: "/admission-information",
+	},
+	{
+		title: "Financial Information",
+		href: "/financial-information",
+	},
+	{
+		title: "Notices",
+		content: <Notices department="BSC-MECHANICAL" />,
+	},
+	{
+		title: "News & Events",
+		content: <NewsEvents />,
+	},
+	{
+		title: "Student Service Desk",
+		content: <StudentServiceDesk />,
+	},
 ];
 
 export default accordions;
