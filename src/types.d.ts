@@ -414,6 +414,21 @@ export type IOffer = {
   remarks: string;
 };
 
+export type IHero = {
+  uuid: string;
+  index: number;
+  title: string;
+  description: string;
+  file: string;
+  type: string;
+  is_active: boolean;
+  created_at: string;
+  updated_at: any;
+  created_by: string;
+  created_by_name: string;
+  remarks: string;
+};
+
 export interface IPaginationResponse<T> {
   data: T[];
   pagination: IPagination;
