@@ -16,7 +16,7 @@ interface IAuthorityInfo {
     title: string;
     profile_image: string;
   };
-  education: string[];
+  education: string;
   contact: {
     email: string;
     phone: string;

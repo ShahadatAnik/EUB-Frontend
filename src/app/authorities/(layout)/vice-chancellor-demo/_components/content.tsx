@@ -63,8 +63,6 @@ const Content = () => {
           <span>2/4 Gabtoli, Mirpur, Dhaka-1216, Bangladesh</span>\
           <br />
           <span>Phone: +88 09604-848-848</span>
-          <br />
-          <span>su@uiu.ac.bd</span>
         </p>
       </div>
     </>
