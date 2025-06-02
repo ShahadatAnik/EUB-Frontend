@@ -16,10 +16,10 @@ const columns: SystemTableColumn<ICareer>[] = [
     header: 'Job Title',
   },
 
-  {
-    accessorKey: 'faculty_name',
-    header: 'Faculty',
-  },
+  // {
+  //   accessorKey: 'faculty_name',
+  //   header: 'Faculty',
+  // },
 
   {
     accessorKey: 'category',
