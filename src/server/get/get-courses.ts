@@ -1,12 +1,12 @@
-"use server";
+'use server';
 
 import {
 	IDataTable,
 	IDepartmentTeacher,
 	INewsPortal,
 	IPagination,
-} from "@/types";
-import fetchApi from "@/utils/fetchApi";
+} from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
 type getAllNewsEventsProps = {
 	data: INewsPortal[];
