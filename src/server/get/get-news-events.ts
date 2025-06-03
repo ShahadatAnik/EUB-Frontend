@@ -1,7 +1,7 @@
-"use server";
+'use server';
 
-import { INewsPortal, IPaginationResponse } from "@/types";
-import fetchApi from "@/utils/fetchApi";
+import { INewsPortal, IPaginationResponse } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
 export const getNewsEvents = async (
 	limit: number = 10,

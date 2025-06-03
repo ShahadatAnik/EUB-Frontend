@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import NewsCards from "@/app/(top-navbar)/news-events/_components/news-cards";
-import ContentWrapper from "./content-wrapper";
+import NewsCards from '@/app/(top-navbar)/news-events/_components/news-cards';
+import ContentWrapper from './content-wrapper';
 
 const NewsEvents = () => {
   return (
