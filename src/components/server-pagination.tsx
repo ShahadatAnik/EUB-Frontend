@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 import {
   Pagination,
@@ -10,34 +10,39 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from '@/components/ui/pagination';
-import { IPagination } from '@/types';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { Button } from './ui/button';
+} from "@/components/ui/pagination";
+import { IPagination } from "@/types";
+import { usePathname, useSearchParams } from "next/navigation";
+import { Button } from "./ui/button";
+
+const createPageUrl = (
+  pathName: string,
+  page: number,
+  searchParams: URLSearchParams
+) => {
+  const params = new URLSearchParams(searchParams.toString()); // clone to avoid mutating original
+  params.set("page", page.toString());
+  return `${pathName}?${params.toString()}`;
+};
 
 const ServerPagination: React.FC<{ pagination: IPagination }> = ({
   pagination: { current_page, total_page },
 }) => {
   const pathName = usePathname();
   const searchParams = useSearchParams();
-  const q = searchParams.get('q');
 
   return (
     <Pagination>
-      <PaginationContent className='w-full md:max-w-fit'>
+      <PaginationContent className="w-full md:max-w-fit">
         <PaginationItem>
-          <Button variant={'ghost'} disabled={current_page === 1}>
+          <Button variant={"ghost"} disabled={current_page === 1}>
             <PaginationPrevious
-              href={
-                q
-                  ? `${pathName}?page=${current_page - 1}&q=${q}`
-                  : `${pathName}?page=${current_page - 1}`
-              }
+              href={createPageUrl(pathName, current_page - 1, searchParams)}
             />
           </Button>
         </PaginationItem>
 
-        <div className='flex-1  overflow-x-auto flex items-center gap-2'>
+        <div className="flex-1  overflow-x-auto flex items-center gap-2">
           {(() => {
             let start = 1;
             let end = 5;
@@ -62,15 +67,11 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
               return (
                 <PaginationLink
                   key={page}
-                  href={
-                    q
-                      ? `${pathName}?page=${page}&q=${q}`
-                      : `${pathName}?page=${page}`
-                  }
+                  href={createPageUrl(pathName, page, searchParams)}
                   className={
                     isSelected
-                      ? 'shadow-lg border-2 border-primary rounded '
-                      : ''
+                      ? "shadow-lg border-2 border-primary rounded "
+                      : ""
                   }
                   // If your PaginationLink doesn't accept className, wrap it in a <div> or <span> with the class
                 >
@@ -82,19 +83,18 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
         </div>
 
         {total_page > 5 && (
-          <PaginationItem className='hidden md:inline-flex'>
+          <PaginationItem className="hidden md:inline-flex">
             <PaginationEllipsis />
           </PaginationItem>
         )}
 
         <PaginationItem>
-          <Button variant={'ghost'} disabled={current_page === total_page}>
+          <Button
+            variant={"ghost"}
+            disabled={total_page === 0 || current_page === total_page}
+          >
             <PaginationNext
-              href={
-                q
-                  ? `${pathName}?page=${current_page + 1}&q=${q}`
-                  : `${pathName}?page=${current_page + 1}`
-              }
+              href={createPageUrl(pathName, current_page + 1, searchParams)}
             />
           </Button>
         </PaginationItem>

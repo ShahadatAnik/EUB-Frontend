@@ -9,10 +9,12 @@ export default async function Page(props: {
 		q?: string;
 		page?: string;
 		limit?: string;
+		filter?: string;
 	}>;
 }) {
 	const searchParams = await props.searchParams;
 	const q = searchParams?.q || '';
+	const filter = searchParams?.filter || '';
 	const page = Number(searchParams?.page) || 1;
 	const limit = Number(searchParams?.limit) || 10;
 
@@ -20,6 +22,7 @@ export default async function Page(props: {
 		page,
 		limit,
 		q,
+		filter
 	});
 
 	const faculties = await getFaculties();
