@@ -293,10 +293,10 @@ export const navLinks: INavLink[] = [
 			// },
 		],
 	},
-	{
-		title: 'IQAC',
-		href: '/iqac',
-	},
+	// {
+	// 	title: 'IQAC',
+	// 	href: '/iqac',
+	// },
 	{
 		title: 'Useful Links',
 		className: 'gap-0 d:grid-cols-1 xl:grid-cols-1',
