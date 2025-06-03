@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
-import { z } from 'zod';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -14,22 +14,22 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
+} from "@/components/ui/form";
 
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   defaultContactForm,
   IContactForm,
   formSchema,
-} from '../_const/contact-form-schema';
-import { useMutation } from '@tanstack/react-query';
-import { createContactForm } from '@/server/post';
-import { toast } from 'sonner';
+} from "../_const/contact-form-schema";
+import { useMutation } from "@tanstack/react-query";
+import { createContactForm } from "@/server/post";
+import { toast } from "sonner";
 
 const ContactForm = () => {
   const mutation = useMutation({
-    mutationKey: ['contact-form'],
+    mutationKey: ["contact-form"],
     mutationFn: createContactForm,
   });
 
@@ -45,28 +45,28 @@ const ContactForm = () => {
         res,
       });
       form.reset(defaultContactForm);
-      toast.success('Form submitted successfully');
+      toast.success("Form submitted successfully");
     } catch (error) {
       console.log(error);
-      toast.error('Something went wrong');
+      toast.error("Something went wrong");
     }
   }
 
   return (
     <Form {...form}>
-      <h4 className='text-lg lg:text-2xl font-semibold mb-2 '>
+      <h4 className="text-lg lg:text-2xl font-semibold mb-2 ">
         Please use the following form to contact the department/person.
       </h4>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
-        <div className='space-y-4'>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <div className="space-y-4">
           <FormField
             control={form.control}
-            name='full_name'
+            name="full_name"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Full Name</FormLabel>
                 <FormControl>
-                  <Input placeholder='John Doe' {...field} />
+                  <Input placeholder="John Doe" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -74,12 +74,12 @@ const ContactForm = () => {
           />
           <FormField
             control={form.control}
-            name='email'
+            name="email"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder='john.doe@example.com' {...field} />
+                  <Input placeholder="john.doe@example.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -87,12 +87,25 @@ const ContactForm = () => {
           />
           <FormField
             control={form.control}
-            name='question'
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone</FormLabel>
+                <FormControl>
+                  <Input placeholder="01XXX..." {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="question"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Query / Question</FormLabel>
                 <FormControl>
-                  <Input placeholder='Mention your query here..' {...field} />
+                  <Input placeholder="Mention your query here.." {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -100,7 +113,7 @@ const ContactForm = () => {
           />
           <FormField
             control={form.control}
-            name='description'
+            name="description"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Brief description of your question</FormLabel>
@@ -112,7 +125,7 @@ const ContactForm = () => {
             )}
           />
         </div>
-        <Button className='w-full' type='submit'>
+        <Button className="w-full" type="submit">
           Send Message
         </Button>
       </form>
