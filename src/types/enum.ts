@@ -108,3 +108,11 @@ export enum FINANCIAL_INFO_TABLE_TYPE {
   BBA = 'bba',
   ARTS = 'arts',
 }
+// Religion
+export enum EnumReligion {
+	Islam = "islam",
+  Hindu = "hindu",
+  Buddhist = "buddhist",
+	Christian = "christian",
+	Other = "other",
+}
