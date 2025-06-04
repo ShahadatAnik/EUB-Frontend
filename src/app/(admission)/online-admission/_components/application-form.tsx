@@ -104,12 +104,16 @@ const ApplicationForm = () => {
 							<FormItem>
 								<FormLabel>Year*</FormLabel>
 								<FormControl>
-									<Input type="number" placeholder="Year" {...field}onChange={(e) => {
-														field.onChange(
-															e.target
-																.valueAsNumber
-														);
-													}} />
+									<Input
+										type="number"
+										placeholder="Year"
+										{...field}
+										onChange={(e) => {
+											field.onChange(
+												e.target.valueAsNumber
+											);
+										}}
+									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -1133,7 +1137,7 @@ const ApplicationForm = () => {
 								/>
 								<FormField
 									control={form.control}
-									name="bsc_institution_name"
+									name="bsc_institute"
 									render={({ field }) => (
 										<FormItem>
 											<FormLabel>
