@@ -13,7 +13,6 @@ import {
 
 import { z } from "zod";
 
-//! need to update the schema
 export const formSchema = z
 	.object({
 		year: z.number().min(1, { message: "Year is required" }),
