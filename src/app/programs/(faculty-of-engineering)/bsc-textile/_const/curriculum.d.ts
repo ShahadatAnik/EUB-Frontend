@@ -25,6 +25,7 @@ export interface Semester {
   title: string;
   courses: SemesterCourse[];
   total: number;
+  isWaived?: boolean;
 }
 
 export interface CoursePrefix {
@@ -45,3 +46,18 @@ export interface PerformanceEvaluation {
     percentage: string;
   }>;
 }
+
+export interface ProgramDetails {
+  duration: {
+    years: number | string;
+    semesters: number | string;
+  };
+  creditHours: number | string;
+  courseLoad: string;
+  courseLoadDetails: string;
+  minimumGPA: number;
+  backgroundStudents?: string;
+  waiverInfo?: string;
+}
+
+export type ProgramType = 'regular' | 'evening';

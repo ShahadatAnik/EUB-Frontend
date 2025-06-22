@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import type { ElectiveCourse } from '../../_config/types';
+import type { ElectiveCourse } from '../regular-program/_config/types';
 
 interface ElectiveCourseTableProps {
   courses: ElectiveCourse[];

@@ -1,52 +1,62 @@
 'use client';
 
 import React, { useMemo } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CourseTable } from '../ui/course-table';
 import { ElectiveCourseTable } from '../ui/elective-course-table';
 import { PrefixTable } from '../ui/prefix-table';
 import { SummaryTable } from '../ui/summary-table';
-import {
-  textileEngineeringCourses,
-  nonDepartmentalCourses,
-  electiveCourses,
-  projectCourses,
-  coursePrefixes,
-  curriculumSummary,
-} from '../../_config/data';
+import type {
+  Course,
+  ElectiveCourse,
+  CoursePrefix,
+  CurriculumSummary,
+} from '../../_const/curriculum';
 
-export const CurriculumSection = React.memo(() => {
-  const textileTotal = useMemo(
-    () =>
-      textileEngineeringCourses.reduce(
-        (sum, course) => sum + course.credits,
-        0
-      ),
-    []
-  );
+interface CurriculumSectionProps {
+  textileEngineeringCourses: Course[];
+  nonDepartmentalCourses: Course[];
+  electiveCourses: ElectiveCourse[];
+  projectCourses: Course[];
+  coursePrefixes: CoursePrefix[];
+  curriculumSummary: CurriculumSummary[];
+}
 
-  const nonDeptTotal = useMemo(
-    () =>
-      nonDepartmentalCourses.reduce((sum, course) => sum + course.credits, 0),
-    []
-  );
+export const CurriculumSection = React.memo<CurriculumSectionProps>(
+  ({
+    textileEngineeringCourses,
+    nonDepartmentalCourses,
+    electiveCourses,
+    projectCourses,
+    coursePrefixes,
+    curriculumSummary,
+  }) => {
+    const textileTotal = useMemo(
+      () =>
+        textileEngineeringCourses.reduce(
+          (sum, course) => sum + course.credits,
+          0
+        ),
+      [textileEngineeringCourses]
+    );
 
-  const electiveTotal = useMemo(
-    () => electiveCourses.reduce((sum, course) => sum + course.credits, 0),
-    []
-  );
+    const nonDeptTotal = useMemo(
+      () =>
+        nonDepartmentalCourses.reduce((sum, course) => sum + course.credits, 0),
+      [nonDepartmentalCourses]
+    );
 
-  const projectTotal = useMemo(
-    () => projectCourses.reduce((sum, course) => sum + course.credits, 0),
-    []
-  );
+    const electiveTotal = useMemo(
+      () => electiveCourses.reduce((sum, course) => sum + course.credits, 0),
+      [electiveCourses]
+    );
 
-  return (
-    <Card className='mb-6 p-0 border-0 shadow-none'>
-      <CardHeader className='px-0'>
-        <CardTitle className='text-xl'>2.2. Curriculum</CardTitle>
-      </CardHeader>
-      <CardContent className='p-0'>
+    const projectTotal = useMemo(
+      () => projectCourses.reduce((sum, course) => sum + course.credits, 0),
+      [projectCourses]
+    );
+
+    return (
+      <div>
         <h3 className='text-lg font-semibold mb-4'>2.2.1. List of Courses</h3>
 
         {/* Textile Engineering Core Courses */}
@@ -55,8 +65,7 @@ export const CurriculumSection = React.memo(() => {
             a. Textile Engineering Core Courses & Lab:
           </h4>
           <p className='mb-4 text-sm text-gray-600'>
-            24 Theory Courses & 13 Lab Courses with Project/Thesis (Total: 78
-            Credits)
+            23 Theory Courses & 12 Lab Courses (Total: {textileTotal} Credits)
           </p>
           <CourseTable
             courses={textileEngineeringCourses}
@@ -75,7 +84,7 @@ export const CurriculumSection = React.memo(() => {
             Compulsory Courses, Social Science & Humanities:
           </p>
           <p className='mb-4 text-sm text-gray-600'>
-            25 Theory Courses & 8 Lab (Total: 68 Credits)
+            24 Theory Courses & 7 Lab (Total: {nonDeptTotal} Credits)
           </p>
           <CourseTable
             courses={nonDepartmentalCourses}
@@ -89,7 +98,7 @@ export const CurriculumSection = React.memo(() => {
             c. Elective Courses (Textile Engineering Advanced Courses):
           </h4>
           <p className='mb-4 text-sm text-gray-600'>
-            3 Theory Courses & 2 Labs (Total: 10 Credits)
+            3 Theory Courses & 2 Labs (Total: {electiveTotal} Credits)
           </p>
           <ElectiveCourseTable
             courses={electiveCourses}
@@ -103,7 +112,7 @@ export const CurriculumSection = React.memo(() => {
             d. Project work, Industrial Attachment & Comprehensive Viva:
           </h4>
           <p className='mb-4 text-sm text-gray-600'>
-            3 Courses (Total: 9 Credits)
+            3 Courses (Total: {projectTotal} Credits)
           </p>
           <CourseTable courses={projectCourses} totalCredits={projectTotal} />
         </div>
@@ -122,9 +131,9 @@ export const CurriculumSection = React.memo(() => {
           </h4>
           <SummaryTable summaryData={curriculumSummary} />
         </div>
-      </CardContent>
-    </Card>
-  );
-});
+      </div>
+    );
+  }
+);
 
 CurriculumSection.displayName = 'CurriculumSection';

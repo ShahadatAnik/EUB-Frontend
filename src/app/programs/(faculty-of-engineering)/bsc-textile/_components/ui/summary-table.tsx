@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import type { CurriculumSummary } from '../../_config/types';
+import type { CurriculumSummary } from '../regular-program/_config/types';
 
 interface SummaryTableProps {
   summaryData: CurriculumSummary[];
