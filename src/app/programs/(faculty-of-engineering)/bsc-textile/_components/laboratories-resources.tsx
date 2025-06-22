@@ -28,8 +28,8 @@ const LaboratoriesResources = () => {
             Engineering Lab-1 and Textile Engineering Lab-2, both of which are
             located in the basement of the Academic Building. These labs offer
             vital resources and facilities for research and hands-on work in
-            textile engineering. In response to the industry's evolving demands,
-            plans are underway to establish a Dyeing Lab. All of our
+            textile engineering. In response to the industry&apos;s evolving
+            demands, plans are underway to establish a Dyeing Lab. All of our
             laboratories are comprehensively equipped and meticulously organized
             to support student learning across various technologies. This
             infrastructure enables students to effectively engage with these
@@ -64,12 +64,12 @@ const LaboratoriesResources = () => {
             </CardContent>
           </Card>
           <p className='text-sm text-justify leading-relaxed'>
-            A carding machine, often referred to as the "Heart of Spinning," is
-            a textile device used to disentangle, clean, and align fibers such
-            as cotton or wool. It achieves this by passing the fibers through
-            rotating rollers embedded with fine wire teeth, which comb the
-            fibers to create a continuous web or sliver. This web or sliver is
-            then prepared for subsequent processing into yarn.
+            A carding machine, often referred to as the &quot;Heart of
+            Spinning,&quot; is a textile device used to disentangle, clean, and
+            align fibers such as cotton or wool. It achieves this by passing the
+            fibers through rotating rollers embedded with fine wire teeth, which
+            comb the fibers to create a continuous web or sliver. This web or
+            sliver is then prepared for subsequent processing into yarn.
           </p>
         </div>
 
@@ -143,11 +143,11 @@ const LaboratoriesResources = () => {
             </CardContent>
           </Card>
           <p className='text-sm text-justify leading-relaxed'>
-            A "conventional count tester" in textiles is a device used to
-            measure the yarn count, which represents the linear density of the
-            yarn. It determines the weight of a specific length of yarn, with
-            the measurement typically expressed in units such as "tex" or
-            "denier."
+            A &quot;conventional count tester&quot; in textiles is a device used
+            to measure the yarn count, which represents the linear density of
+            the yarn. It determines the weight of a specific length of yarn,
+            with the measurement typically expressed in units such as
+            &quot;tex&quot; or &quot;denier.&quot;
           </p>
         </div>
 
@@ -190,7 +190,8 @@ const LaboratoriesResources = () => {
             A machine used to weave fabric from threads is called a loom.
             Weaving is carried out on looms, which can be either hand-operated
             or power-operated. Hand-operated looms are referred to as
-            "handlooms," while power-operated looms are known as "power looms."
+            &quot;handlooms,&quot; while power-operated looms are known as
+            &quot;power looms.&quot;
           </p>
         </div>
 

@@ -1,6 +1,6 @@
-"use-client";
-import React from "react";
-import { Member } from "../_const/data";
+'use-client';
+import React from 'react';
+import { Member } from '../_const/data';
 
 const MemberCard: React.FC<{ data: Member,index:number }> = ({ data ,index}) => {
 	return (

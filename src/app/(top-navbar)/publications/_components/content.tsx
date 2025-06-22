@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from '@/components/ui/accordion';
 
 import {
   Select,
@@ -15,16 +15,16 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from '@/components/ui/select';
 
-import NoDataFound from "@/components/no-data-found";
-import Search from "@/components/search";
-import ServerPagination from "@/components/server-pagination";
-import { IClubAndSociety, IPaginationResponse, ISelectOption } from "@/types";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import dynamic from "next/dynamic";
+import NoDataFound from '@/components/no-data-found';
+import Search from '@/components/search';
+import ServerPagination from '@/components/server-pagination';
+import { IClubAndSociety, IPaginationResponse, ISelectOption } from '@/types';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import dynamic from 'next/dynamic';
 
-const RichTextViewer = dynamic(() => import("@/components/rich-text-viewer"), {
+const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
   ssr: false,
 });
 
@@ -38,12 +38,12 @@ const Content: React.FC<
   function handleSelect(faculty: string) {
     const params = new URLSearchParams(searchParams);
     if (faculty) {
-      params.set("filter", faculty);
+      params.set('filter', faculty);
     } else {
-      params.delete("filter");
+      params.delete('filter');
     }
 
-    params.set("page", "1");
+    params.set('page', '1');
 
     replace(`${pathname}?${params.toString()}`);
   }

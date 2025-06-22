@@ -1,5 +1,5 @@
-import React from "react";
-import { Member } from "../_const/data";
+import React from 'react';
+import { Member } from '../_const/data';
 
 const MemberCard: React.FC<{ data: Member }> = ({ data }) => {
 	return (

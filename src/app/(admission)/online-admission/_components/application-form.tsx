@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
 	Form,
 	FormControl,
@@ -12,9 +12,9 @@ import {
 	FormItem,
 	FormLabel,
 	FormMessage,
-} from "@/components/ui/form";
+} from '@/components/ui/form';
 
-import { Input } from "@/components/ui/input";
+import { Input } from '@/components/ui/input';
 
 import {
 	Select,
@@ -22,26 +22,26 @@ import {
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/components/ui/select";
+} from '@/components/ui/select';
 
-import { Calendar } from "@/components/ui/calendar";
+import { Calendar } from '@/components/ui/calendar';
 
 import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
-} from "@/components/ui/popover";
+} from '@/components/ui/popover';
 
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Textarea } from "@/components/ui/textarea";
-import { cn } from "@/lib/utils";
-import { createAdmissionForm } from "@/server/post";
-import { useMutation } from "@tanstack/react-query";
-import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
-import { toast } from "sonner";
-import { usePrograms } from "../_const/query";
-import { defaultAdmissionForm, formSchema } from "../_const/schema";
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Textarea } from '@/components/ui/textarea';
+import { cn } from '@/lib/utils';
+import { createAdmissionForm } from '@/server/post';
+import { useMutation } from '@tanstack/react-query';
+import { format } from 'date-fns';
+import { CalendarIcon } from 'lucide-react';
+import { toast } from 'sonner';
+import { usePrograms } from '../_const/query';
+import { defaultAdmissionForm, formSchema } from '../_const/schema';
 
 import {
 	EnumBloodGroup,
@@ -55,12 +55,12 @@ import {
 	EnumSscBoard,
 	EnumSscGrade,
 	EnumSscGroup,
-} from "@/types/enum";
-import enumToOptions from "@/utils/enumToOptions";
+} from '@/types/enum';
+import enumToOptions from '@/utils/enumToOptions';
 
 const ApplicationForm = () => {
 	const mutation = useMutation({
-		mutationKey: ["admission-form"],
+		mutationKey: ['admission-form'],
 		mutationFn: createAdmissionForm,
 	});
 
@@ -77,15 +77,15 @@ const ApplicationForm = () => {
 		try {
 			const res = await mutation.mutateAsync(values);
 
-			if (res.toastType === "create") {
-				toast.success("Form submitted successfully");
+			if (res.toastType === 'create') {
+				toast.success('Form submitted successfully');
 				// form.reset(defaultAdmissionForm);
 			} else {
-				toast.error("Failed to submit form");
+				toast.error('Failed to submit form');
 			}
 		} catch (error) {
 			console.log(error);
-			toast.error("Something went wrong");
+			toast.error('Something went wrong');
 		}
 	}
 
@@ -96,7 +96,7 @@ const ApplicationForm = () => {
 					onSubmit={form.handleSubmit(onSubmit)}
 					className="space-y-4 lg:space-y-6"
 				>
-					{" "}
+					{' '}
 					<FormField
 						control={form.control}
 						name="year"
@@ -275,17 +275,17 @@ const ApplicationForm = () => {
 												<PopoverTrigger asChild>
 													<FormControl>
 														<Button
-															variant={"outline"}
+															variant={'outline'}
 															className={cn(
-																"w-full pl-3 text-left font-normal ",
+																'w-full pl-3 text-left font-normal ',
 																!field.value &&
-																	"text-muted-foreground"
+																	'text-muted-foreground'
 															)}
 														>
 															{field.value ? (
 																format(
 																	field.value,
-																	"PPP"
+																	'PPP'
 																)
 															) : (
 																<span>
@@ -310,7 +310,7 @@ const ApplicationForm = () => {
 															date > new Date() ||
 															date <
 																new Date(
-																	"1900-01-01"
+																	'1900-01-01'
 																)
 														}
 														initialFocus
@@ -376,7 +376,7 @@ const ApplicationForm = () => {
 											<FormLabel>Phone Number*</FormLabel>
 											<FormControl>
 												<Input
-													type={"tel"}
+													type={'tel'}
 													{...field}
 												/>
 											</FormControl>
@@ -394,7 +394,7 @@ const ApplicationForm = () => {
 											</FormLabel>
 											<FormControl>
 												<Input
-													type={"tel"}
+													type={'tel'}
 													{...field}
 												/>
 											</FormControl>
@@ -412,7 +412,7 @@ const ApplicationForm = () => {
 											</FormLabel>
 											<FormControl>
 												<Input
-													type={"tel"}
+													type={'tel'}
 													{...field}
 												/>
 											</FormControl>
@@ -430,7 +430,7 @@ const ApplicationForm = () => {
 											</FormLabel>
 											<FormControl>
 												<Input
-													type={"email"}
+													type={'email'}
 													{...field}
 												/>
 											</FormControl>

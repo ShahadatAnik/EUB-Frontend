@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from 'zod';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -14,22 +14,22 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from '@/components/ui/form';
 
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import {
   defaultContactForm,
   IContactForm,
   formSchema,
-} from "../_const/contact-form-schema";
-import { useMutation } from "@tanstack/react-query";
-import { createContactForm } from "@/server/post";
-import { toast } from "sonner";
+} from '../_const/contact-form-schema';
+import { useMutation } from '@tanstack/react-query';
+import { createContactForm } from '@/server/post';
+import { toast } from 'sonner';
 
 const ContactForm = () => {
   const mutation = useMutation({
-    mutationKey: ["contact-form"],
+    mutationKey: ['contact-form'],
     mutationFn: createContactForm,
   });
 
@@ -45,10 +45,10 @@ const ContactForm = () => {
         res,
       });
       form.reset(defaultContactForm);
-      toast.success("Form submitted successfully");
+      toast.success('Form submitted successfully');
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong");
+      toast.error('Something went wrong');
     }
   }
 

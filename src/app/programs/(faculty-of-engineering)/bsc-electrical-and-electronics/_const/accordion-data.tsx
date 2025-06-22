@@ -22,10 +22,10 @@ import ECurriculum from '../_components/evening-program/curriculum';
 import EDegreeRequirements from '../_components/evening-program/degree-requirements';
 import EProgramDetails from '../_components/evening-program/program-details';
 
-import EClassRoutine from "../_components/evening-program/class-routine";
-import ClassRoutine from "../_components/regular-program/class-routine";
-import ExamSchedule from "../_components/regular-program/exam-schedule";
-import EExamSchedule from "../_components/evening-program/exam-schedule";
+import EClassRoutine from '../_components/evening-program/class-routine';
+import ClassRoutine from '../_components/regular-program/class-routine';
+import ExamSchedule from '../_components/regular-program/exam-schedule';
+import EExamSchedule from '../_components/evening-program/exam-schedule';
 
 const accordions: IAcademicAccordion[] = [
   {

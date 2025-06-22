@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import StickySidebar from "@/components/sticky-sidebar";
-import { navLinks } from "@/config/nav-links";
+import StickySidebar from '@/components/sticky-sidebar';
+import { navLinks } from '@/config/nav-links';
 
 const Authorities = () => {
 	const pathName = usePathname();
 
-	const links = navLinks.find((item) => item.title === "Authorities");
+	const links = navLinks.find((item) => item.title === 'Authorities');
 	return (
 		<StickySidebar containerClassName="lg:pt-0">
 			<div className="border-l-4 border-primary pl-5 py-3 bg-primary/10">
@@ -27,9 +27,9 @@ const Authorities = () => {
 						<li key={index}>
 							<Link
 								className={cn(
-									"hover:underline text-lg",
+									'hover:underline text-lg',
 									pathName === child.href &&
-										"text-primary underline font-medium"
+										'text-primary underline font-medium'
 								)}
 								href={child.href!}
 							>

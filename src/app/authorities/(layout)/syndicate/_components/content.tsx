@@ -1,8 +1,8 @@
-"use-client";
-import Title from "@/components/title";
-import { IMemberData } from "@/types/authorities";
-import React from "react";
-import MemberCard from "./member-card";
+'use-client';
+import Title from '@/components/title';
+import { IMemberData } from '@/types/authorities';
+import React from 'react';
+import MemberCard from './member-card';
 
 const Content: React.FC<{ data: IMemberData }> = ({ data }) => {
 	if (!data || (data?.member.length === 0 && !data?.chairperson))

@@ -1,10 +1,10 @@
-import SystemTable from "@/components/table/system-table";
-import { columns, useGetRegularCourseOffer } from "@/hooks/use-get-course";
-import React from "react";
-import ContentWrapper from "../content-wrapper";
+import SystemTable from '@/components/table/system-table';
+import { columns, useGetRegularCourseOffer } from '@/hooks/use-get-course';
+import React from 'react';
+import ContentWrapper from '../content-wrapper';
 
 const ClassRoutine = () => {
-	const { data } = useGetRegularCourseOffer("BSS-ECONOMICS");
+	const { data } = useGetRegularCourseOffer('BSS-ECONOMICS');
 	return (
 		<ContentWrapper title="Course Offer">
 			<SystemTable
