@@ -1,12 +1,12 @@
-'use server';
+"use server";
 
 import {
 	IDataTable,
 	IDepartmentTeacher,
 	INewsPortal,
 	IPagination,
-} from '@/types';
-import fetchApi from '@/utils/fetchApi';
+} from "@/types";
+import fetchApi from "@/utils/fetchApi";
 
 type getAllNewsEventsProps = {
 	data: INewsPortal[];
@@ -79,4 +79,9 @@ export const getDepartmentLatestNews = async (
 		department
 			? `/portfolio/news-latest?department_name=${department}`
 			: `/portfolio/news-latest`
+	);
+
+export const getAboutUs = async (department: string): Promise<IDataTable[]> =>
+	fetchApi(
+		`/portfolio/routine?type=about_us&portfolio_department=${department}`
 	);
