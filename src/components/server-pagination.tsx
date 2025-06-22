@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 
 import {
   Pagination,
@@ -10,10 +10,10 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
-import { IPagination } from "@/types";
-import { usePathname, useSearchParams } from "next/navigation";
-import { Button } from "./ui/button";
+} from '@/components/ui/pagination';
+import { IPagination } from '@/types';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { Button } from './ui/button';
 
 const createPageUrl = (
   pathName: string,
@@ -21,7 +21,7 @@ const createPageUrl = (
   searchParams: URLSearchParams
 ) => {
   const params = new URLSearchParams(searchParams.toString()); // clone to avoid mutating original
-  params.set("page", page.toString());
+  params.set('page', page.toString());
   return `${pathName}?${params.toString()}`;
 };
 
@@ -35,7 +35,7 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
     <Pagination>
       <PaginationContent className="w-full md:max-w-fit">
         <PaginationItem>
-          <Button variant={"ghost"} disabled={current_page === 1}>
+          <Button variant={'ghost'} disabled={current_page === 1}>
             <PaginationPrevious
               href={createPageUrl(pathName, current_page - 1, searchParams)}
             />
@@ -70,8 +70,8 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
                   href={createPageUrl(pathName, page, searchParams)}
                   className={
                     isSelected
-                      ? "shadow-lg border-2 border-primary rounded "
-                      : ""
+                      ? 'shadow-lg border-2 border-primary rounded '
+                      : ''
                   }
                   // If your PaginationLink doesn't accept className, wrap it in a <div> or <span> with the class
                 >
@@ -90,7 +90,7 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
 
         <PaginationItem>
           <Button
-            variant={"ghost"}
+            variant={'ghost'}
             disabled={total_page === 0 || current_page === total_page}
           >
             <PaginationNext

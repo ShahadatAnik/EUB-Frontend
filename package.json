@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 4000",
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "build": "next lint && next build",
     "deploy": "git pull && next build && pm2 restart eub-frontend --update-env"
   },
   "dependencies": {

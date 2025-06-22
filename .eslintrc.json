@@ -1,19 +1,19 @@
 {
-	"extends": ["next/core-web-vitals", "next/typescript"],
-	"rules": {
-		"@typescript-eslint/no-explicit-any": "off",
-		// "quotes": [
-		// 	2,
-		// 	"single",
-		// 	{ "avoidEscape": true, "allowTemplateLiterals": true }
-		// ]
-		// "@typescript-eslint/quotes": [
-		// 	"warn",
-		// 	"single",
-		// 	{
-		// 		"avoidEscape": true,
-		// 		"allowTemplateLiterals": true
-		// 	}
-		// ]
-	}
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "quotes": [
+      2,
+      "single",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ]
+    // "@typescript-eslint/quotes": [
+    // 	"warn",
+    // 	"single",
+    // 	{
+    // 		"avoidEscape": true,
+    // 		"allowTemplateLiterals": true
+    // 	}
+    // ]
+  }
 }
