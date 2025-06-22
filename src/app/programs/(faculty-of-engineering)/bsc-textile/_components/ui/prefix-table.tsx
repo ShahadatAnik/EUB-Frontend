@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import type { CoursePrefix } from '../../_config/types';
+import type { CoursePrefix } from '../regular-program/_config/types';
 
 interface PrefixTableProps {
   prefixes: CoursePrefix[];

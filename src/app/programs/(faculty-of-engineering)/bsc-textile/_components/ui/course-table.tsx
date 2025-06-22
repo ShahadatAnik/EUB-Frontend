@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import type { Course } from '../../_config/types';
+import type { Course } from '../regular-program/_config/types';
 
 interface CourseTableProps {
   courses: Course[];

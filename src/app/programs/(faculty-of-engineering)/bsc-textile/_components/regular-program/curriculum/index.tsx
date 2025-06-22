@@ -1,16 +1,19 @@
 import ContentWrapper from '@/app/programs/_components/content-wrapper';
-import { CourseMapSection } from './_components/sections/course-map-section';
-import { CurriculumSection } from './_components/sections/curriculum-section';
-import { DegreeRequirementsSection } from './_components/sections/degree-reuirements-section';
-import { ProgramDetailsSection } from './_components/sections/program-details-section';
+import { CurriculumSection } from '../../sections/curriculum-section';
+import { getCurriculumData } from '../../../_const/get-curriculum-data';
 
 export default function ProgramCurriculum() {
+  const data = getCurriculumData('regular');
   return (
     <ContentWrapper title='Program Curriculum (Regular)'>
-      <ProgramDetailsSection />
-      <CurriculumSection />
-      <CourseMapSection />
-      <DegreeRequirementsSection />
+      <CurriculumSection
+        textileEngineeringCourses={data.textileEngineeringCourses}
+        nonDepartmentalCourses={data.nonDepartmentalCourses}
+        electiveCourses={data.electiveCourses}
+        projectCourses={data.projectCourses}
+        coursePrefixes={data.coursePrefixes}
+        curriculumSummary={data.curriculumSummary}
+      />
     </ContentWrapper>
   );
 }

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { programDetails } from '../../_config/data';
+import type { ProgramDetails } from '../../_const/curriculum';
 
-export const DegreeRequirementsSection = React.memo(() => {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className='text-xl'>2.4. Degree Requirement</CardTitle>
-      </CardHeader>
-      <CardContent className='space-y-6'>
+interface DegreeRequirementsSectionProps {
+  programDetails: ProgramDetails;
+}
+
+export const DegreeRequirementsSection =
+  React.memo<DegreeRequirementsSectionProps>(({ programDetails }) => {
+    return (
+      <div className='space-y-6'>
         <div>
           <h4 className='font-semibold mb-2'>
             2.4.1. Minimum GPA to pass program: {programDetails.minimumGPA}
@@ -106,12 +106,18 @@ export const DegreeRequirementsSection = React.memo(() => {
           <p>
             A student will be awarded Bachelor of Science (B. Sc.) in Textile
             Engineering degree after completion of a minimum{' '}
-            {programDetails.creditHours} credits.
+            {programDetails.creditHours}.
           </p>
         </div>
-      </CardContent>
-    </Card>
-  );
-});
+
+        {programDetails.waiverInfo && (
+          <div>
+            <h4 className='font-semibold mb-2'>2.4.4. Waivers (if any):</h4>
+            <p>{programDetails.waiverInfo}</p>
+          </div>
+        )}
+      </div>
+    );
+  });
 
 DegreeRequirementsSection.displayName = 'DegreeRequirementsSection';
