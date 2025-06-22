@@ -7,6 +7,8 @@ import Footer from './footer';
 import { cn } from '@/lib/utils';
 import Navbar from './navbar';
 import { usePathname } from 'next/navigation';
+import { useScrollToTop } from '@/hooks/use-scroll-to-top';
+import { ScrollToTopButton } from '../scroll-to-top';
 
 interface ILayoutProps {
   children: React.ReactNode;
@@ -16,6 +18,8 @@ interface ILayoutProps {
 const Layout: React.FC<ILayoutProps> = ({ children, navbarClassName }) => {
   const pathName = usePathname();
   const isHome = pathName === '/';
+
+  const { isVisible, scrollToTop } = useScrollToTop({ threshold: 300 });
   return (
     <div className='relative'>
       <div
@@ -30,6 +34,7 @@ const Layout: React.FC<ILayoutProps> = ({ children, navbarClassName }) => {
       </div>
       <div className='lg:min-h-screen'>{children}</div>
       <Footer />
+      {isVisible && <ScrollToTopButton onClick={scrollToTop} />}
     </div>
   );
 };
