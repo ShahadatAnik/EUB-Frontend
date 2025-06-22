@@ -110,9 +110,9 @@ export enum FINANCIAL_INFO_TABLE_TYPE {
 }
 // Religion
 export enum EnumReligion {
-	Islam = 'islam',
+  Islam = 'islam',
   Hindu = 'hindu',
   Buddhist = 'buddhist',
-	Christian = 'christian',
-	Other = 'other',
+  Christian = 'christian',
+  Other = 'other',
 }

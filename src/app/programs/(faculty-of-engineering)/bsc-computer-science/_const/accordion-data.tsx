@@ -27,121 +27,121 @@ import EClassRoutine from '../_components/evening-program/class-routine';
 import ClassRoutine from '../_components/regular-program/class-routine';
 
 const accordions: IAcademicAccordion[] = [
-	{
-		title: 'Overview',
+  {
+    title: 'Overview',
 
-		children: [
-			{
-				title: 'About Us',
-				content: <AboutUs />,
-			},
-			{
-				title: 'Message from the Chairman',
-				content: <Chairman />,
-			},
-		],
-	},
+    children: [
+      {
+        title: 'About Us',
+        content: <AboutUs />,
+      },
+      {
+        title: 'Message from the Chairman',
+        content: <Chairman />,
+      },
+    ],
+  },
 
-	{
-		title: 'Regular Program',
+  {
+    title: 'Regular Program',
 
-		children: [
-			{
-				title: 'Program Details',
-				content: <RProgramDetails />,
-			},
-			{
-				title: 'Curriculum',
-				content: <RCurriculum />,
-			},
-			{
-				title: 'Course Map and Path',
-				content: <RCoursePath />,
-			},
-			{
-				title: 'Degree Requirements',
-				content: <RDegreeRequirements />,
-			},
-			{
-				title: 'Course Offer',
-				content: <RCourseOffer />,
-			},
-			{
-				title: 'Class Routine',
-				content: <ClassRoutine />,
-			},
-			{
-				title: 'Exam Schedule',
-				content: <ExamSchedule/>,
-			},
-		],
-	},
-	{
-		title: 'Evening Program',
-		children: [
-			{
-				title: 'Program Details',
-				content: <EProgramDetails />,
-			},
-			{
-				title: 'Curriculum',
-				content: <ECurriculum />,
-			},
-			{
-				title: 'Course Map and Path',
-				content: <ECoursePath />,
-			},
-			{
-				title: 'Degree Requirements',
-				content: <EDegreeRequirements />,
-			},
-			{
-				title: 'Course Offer',
-				content: <ECourseOffer />,
-			},
-			{
-				title: 'Class Routine',
-				content: <EClassRoutine />,
-			},
-			{
-				title: 'Exam Schedule',
-				content: <EExamSchedule/>,
-			},
-		],
-	},
-	{
-		title: 'Laboratories & Resources',
-		content: <LaboratoriesResources />,
-	},
-	{
-		title: 'Alumni & Industry',
-		content: <AlumniIndustry />,
-	},
-	{
-		title: 'Faculty Members & Staff',
-		content: <CoreFacultyMembers />,
-	},
-	{
-		title: 'Admission Information',
-		href: '/admission-information',
-	},
-	{
-		title: 'Financial Information',
-		href: '/financial-information',
-	},
+    children: [
+      {
+        title: 'Program Details',
+        content: <RProgramDetails />,
+      },
+      {
+        title: 'Curriculum',
+        content: <RCurriculum />,
+      },
+      {
+        title: 'Course Map and Path',
+        content: <RCoursePath />,
+      },
+      {
+        title: 'Degree Requirements',
+        content: <RDegreeRequirements />,
+      },
+      {
+        title: 'Course Offer',
+        content: <RCourseOffer />,
+      },
+      {
+        title: 'Class Routine',
+        content: <ClassRoutine />,
+      },
+      {
+        title: 'Exam Schedule',
+        content: <ExamSchedule />,
+      },
+    ],
+  },
+  {
+    title: 'Evening Program',
+    children: [
+      {
+        title: 'Program Details',
+        content: <EProgramDetails />,
+      },
+      {
+        title: 'Curriculum',
+        content: <ECurriculum />,
+      },
+      {
+        title: 'Course Map and Path',
+        content: <ECoursePath />,
+      },
+      {
+        title: 'Degree Requirements',
+        content: <EDegreeRequirements />,
+      },
+      {
+        title: 'Course Offer',
+        content: <ECourseOffer />,
+      },
+      {
+        title: 'Class Routine',
+        content: <EClassRoutine />,
+      },
+      {
+        title: 'Exam Schedule',
+        content: <EExamSchedule />,
+      },
+    ],
+  },
+  {
+    title: 'Laboratories & Resources',
+    content: <LaboratoriesResources />,
+  },
+  {
+    title: 'Alumni & Industry',
+    content: <AlumniIndustry />,
+  },
+  {
+    title: 'Faculty Members & Staff',
+    content: <CoreFacultyMembers />,
+  },
+  {
+    title: 'Admission Information',
+    href: '/admission-information',
+  },
+  {
+    title: 'Financial Information',
+    href: '/financial-information',
+  },
 
-	{
-		title: 'Notices',
-		content: <Notices department="BSC-CSE" />,
-	},
-	{
-		title: 'News & Events',
-		content: <NewsEvents />,
-	},
-	{
-		title: 'Student Service Desk',
-		content: <StudentServiceDesk />,
-	},
+  {
+    title: 'Notices',
+    content: <Notices department='BSC-CSE' />,
+  },
+  {
+    title: 'News & Events',
+    content: <NewsEvents />,
+  },
+  {
+    title: 'Student Service Desk',
+    content: <StudentServiceDesk />,
+  },
 ];
 
 export default accordions;

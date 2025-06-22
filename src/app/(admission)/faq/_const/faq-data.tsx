@@ -63,7 +63,9 @@ const faqData: IFAQ[] = [
 					<ul className="mt-1 pl-8 list-disc  space-y-1">
 						<li>
 							Combined GPA of 6.0 in both SSC and HSC with a
-							minimum GPA of 2.5 in each OR
+							minimum GPA of 2.5 in each OR GPA of at least 2.00
+							either in the SSC or HSC examination, but the total
+							GPA in both the examination must be at least 6.00
 						</li>
 						<li>
 							O-Levels and A-Levels: A minimum of five O-Level
