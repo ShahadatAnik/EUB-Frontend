@@ -9,53 +9,69 @@ import ContentWrapper from './content-wrapper';
 import Loader from '@/components/loader';
 
 const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
-  ssr: false,
+	ssr: false,
 });
 
+const getDepartmentName = (department: string) => {
+	switch (department) {
+		case 'MBA 1 Year':
+		case 'EMBA':
+		case 'BBA':
+			return 'Department of Business Administration';
+		case 'Civil':
+			return 'Department of Civil Engineering';
+		default:
+			return department;
+	}
+};
+
 const MessageFromChairman: React.FC<{
-  departmentName: string;
+	departmentName: string;
 }> = ({ departmentName }) => {
-  const { data, isLoading } = useGetDepartmentTeachers(departmentName);
-  const chairman = data?.find((teacher) => teacher.department_head === true);
+	const { data, isLoading } = useGetDepartmentTeachers(departmentName);
+	const chairman = data?.find((teacher) => teacher.department_head === true);
 
-  if (isLoading) return <Loader className='h-[200px]' />;
+	if (isLoading) return <Loader className="h-[200px]" />;
 
-  if (!chairman) return <>No Chairman Found</>;
+	if (!chairman) return <>No Chairman Found</>;
 
-  return (
-    <ContentWrapper title='Message from the Chairman' className='py-4'>
-      <div className='flex justify-center mb-4'>
-        <Image
-          src={
-            chairman.teacher_image
-              ? process.env.NEXT_PUBLIC_IMAGE_BASE_URL + chairman.teacher_image
-              : '/person-placeholder.jpg'
-          }
-          alt={chairman.teacher_name}
-          width={200}
-          height={200}
-        />
-      </div>
+	return (
+		<ContentWrapper title="Message from the Chairman" className="py-4">
+			<div className="flex justify-center mb-4">
+				<Image
+					src={
+						chairman.teacher_image
+							? process.env.NEXT_PUBLIC_IMAGE_BASE_URL +
+							  chairman.teacher_image
+							: '/person-placeholder.jpg'
+					}
+					alt={chairman.teacher_name}
+					width={200}
+					height={200}
+				/>
+			</div>
 
-      {chairman.department_head_message && (
-        <RichTextViewer content={chairman.department_head_message} />
-      )}
+			{chairman.department_head_message && (
+				<RichTextViewer content={chairman.department_head_message} />
+			)}
 
-      <br />
+			<br />
 
-      {chairman && chairman.teacher_name && (
-        <p>
-          <strong>Warm Regards,</strong>
-          <br />
-          {chairman?.teacher_name}
-          <br />
-          {chairman?.teacher_designation} of {chairman.department_name}
-          <br />
-          European University of Bangladesh
-        </p>
-      )}
-    </ContentWrapper>
-  );
+			{chairman && chairman.teacher_name && (
+				<p>
+					<strong>Warm Regards,</strong>
+					<br />
+					{chairman?.teacher_name}
+					<br />
+					{chairman?.teacher_designation}
+					{', '}
+					{getDepartmentName(chairman.department_name)}
+					<br />
+					European University of Bangladesh
+				</p>
+			)}
+		</ContentWrapper>
+	);
 };
 
 export default MessageFromChairman;
