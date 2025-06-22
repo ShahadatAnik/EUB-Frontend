@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import ContentWrapper from "../content-wrapper";
-import { useGetAboutUs } from "@/hooks/use-get-course";
-import RichTextViewer from "@/components/rich-text-viewer";
+import ContentWrapper from '../content-wrapper';
+import { useGetAboutUs } from '@/hooks/use-get-course';
+import RichTextViewer from '@/components/rich-text-viewer';
 
 const AboutUs = () => {
-	const { data } = useGetAboutUs("bsc-cse");
+	const { data } = useGetAboutUs('bsc-cse');
 
 	return (
 		<ContentWrapper title="About Us">
@@ -13,7 +13,7 @@ const AboutUs = () => {
 				content={
 					data && data.length > 0
 						? data[0].description
-						: "No description available"
+						: 'No description available'
 				}
 			/>
 		</ContentWrapper>
