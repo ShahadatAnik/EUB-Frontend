@@ -342,9 +342,7 @@ export const navLinks: INavLink[] = [
 export const allPrograms = navLinks
 	?.find((navLink) => navLink.title === 'Programs')
 	?.children?.filter(
-		(program) =>
-			program.title !== 'Miscellaneous' &&
-			program.title !== 'Faculty of Sciences'
+		(program) => program.title !== 'Miscellaneous' && program.title !== 'Faculty of Sciences'
 	)
 	.map((program) => program.children)
 	.flat();

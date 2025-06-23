@@ -1,12 +1,15 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 import { useGetDepartmentTeachers } from '@/hooks/use-get-course';
-import ContentWrapper from './content-wrapper';
+
 import Loader from '@/components/loader';
+
+import ContentWrapper from './content-wrapper';
 
 const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
 	ssr: false,
@@ -31,18 +34,17 @@ const MessageFromChairman: React.FC<{
 	const { data, isLoading } = useGetDepartmentTeachers(departmentName);
 	const chairman = data?.find((teacher) => teacher.department_head === true);
 
-	if (isLoading) return <Loader className="h-[200px]" />;
+	if (isLoading) return <Loader className='h-[200px]' />;
 
 	if (!chairman) return <>No Chairman Found</>;
 
 	return (
-		<ContentWrapper title="Message from the Chairman" className="py-4">
-			<div className="flex justify-center mb-4">
+		<ContentWrapper title='Message from the Chairman' className='py-4'>
+			<div className='mb-4 flex justify-center'>
 				<Image
 					src={
 						chairman.teacher_image
-							? process.env.NEXT_PUBLIC_IMAGE_BASE_URL +
-							  chairman.teacher_image
+							? process.env.NEXT_PUBLIC_IMAGE_BASE_URL + chairman.teacher_image
 							: '/person-placeholder.jpg'
 					}
 					alt={chairman.teacher_name}

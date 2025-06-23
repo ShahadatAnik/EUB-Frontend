@@ -1,57 +1,56 @@
 // Regular program data
 import {
-  semesterInfo as regularSemesterInfo,
-  programDetails as regularProgramDetails,
-  performanceEvaluation as regularPerformanceEvaluation,
-  textileEngineeringCourses as regularTextileEngineeringCourses,
-  nonDepartmentalCourses as regularNonDepartmentalCourses,
-  electiveCourses as regularElectiveCourses,
-  projectCourses as regularProjectCourses,
-  coursePrefixes as regularCoursePrefixes,
-  curriculumSummary as regularCurriculumSummary,
-  semesterData as regularSemesterData,
+	coursePrefixes as regularCoursePrefixes,
+	curriculumSummary as regularCurriculumSummary,
+	electiveCourses as regularElectiveCourses,
+	nonDepartmentalCourses as regularNonDepartmentalCourses,
+	performanceEvaluation as regularPerformanceEvaluation,
+	programDetails as regularProgramDetails,
+	projectCourses as regularProjectCourses,
+	semesterData as regularSemesterData,
+	semesterInfo as regularSemesterInfo,
+	textileEngineeringCourses as regularTextileEngineeringCourses,
 } from './curriculum-data';
-
 // Evening program data
 import {
-  eveningSemesterInfo,
-  eveningProgramDetails,
-  eveningPerformanceEvaluation,
-  eveningTextileEngineeringCourses,
-  eveningNonDepartmentalCourses,
-  eveningElectiveCourses,
-  eveningProjectCourses,
-  eveningCoursePrefixes,
-  eveningCurriculumSummary,
-  eveningSemesterData,
+	eveningCoursePrefixes,
+	eveningCurriculumSummary,
+	eveningElectiveCourses,
+	eveningNonDepartmentalCourses,
+	eveningPerformanceEvaluation,
+	eveningProgramDetails,
+	eveningProjectCourses,
+	eveningSemesterData,
+	eveningSemesterInfo,
+	eveningTextileEngineeringCourses,
 } from './evening-curriculum-data';
 
 export const getCurriculumData = (type: 'regular' | 'evening') => {
-  if (type === 'evening') {
-    return {
-      semesterInfo: eveningSemesterInfo,
-      programDetails: eveningProgramDetails,
-      performanceEvaluation: eveningPerformanceEvaluation,
-      textileEngineeringCourses: eveningTextileEngineeringCourses,
-      nonDepartmentalCourses: eveningNonDepartmentalCourses,
-      electiveCourses: eveningElectiveCourses,
-      projectCourses: eveningProjectCourses,
-      coursePrefixes: eveningCoursePrefixes,
-      curriculumSummary: eveningCurriculumSummary,
-      semesterData: eveningSemesterData,
-    };
-  }
+	if (type === 'evening') {
+		return {
+			semesterInfo: eveningSemesterInfo,
+			programDetails: eveningProgramDetails,
+			performanceEvaluation: eveningPerformanceEvaluation,
+			textileEngineeringCourses: eveningTextileEngineeringCourses,
+			nonDepartmentalCourses: eveningNonDepartmentalCourses,
+			electiveCourses: eveningElectiveCourses,
+			projectCourses: eveningProjectCourses,
+			coursePrefixes: eveningCoursePrefixes,
+			curriculumSummary: eveningCurriculumSummary,
+			semesterData: eveningSemesterData,
+		};
+	}
 
-  return {
-    semesterInfo: regularSemesterInfo,
-    programDetails: regularProgramDetails,
-    performanceEvaluation: regularPerformanceEvaluation,
-    textileEngineeringCourses: regularTextileEngineeringCourses,
-    nonDepartmentalCourses: regularNonDepartmentalCourses,
-    electiveCourses: regularElectiveCourses,
-    projectCourses: regularProjectCourses,
-    coursePrefixes: regularCoursePrefixes,
-    curriculumSummary: regularCurriculumSummary,
-    semesterData: regularSemesterData,
-  };
+	return {
+		semesterInfo: regularSemesterInfo,
+		programDetails: regularProgramDetails,
+		performanceEvaluation: regularPerformanceEvaluation,
+		textileEngineeringCourses: regularTextileEngineeringCourses,
+		nonDepartmentalCourses: regularNonDepartmentalCourses,
+		electiveCourses: regularElectiveCourses,
+		projectCourses: regularProjectCourses,
+		coursePrefixes: regularCoursePrefixes,
+		curriculumSummary: regularCurriculumSummary,
+		semesterData: regularSemesterData,
+	};
 };

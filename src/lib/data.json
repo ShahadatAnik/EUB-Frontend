@@ -1,102 +1,102 @@
 [
-  {
-    "uuid": "1a2b3c4d-5678-1234-abcd-98765efghijk",
-    "title": "University Hosts Annual Science Fair",
-    "subtitle": "A showcase of innovation and creativity",
-    "description": "The annual science fair brought together students from various disciplines to present their groundbreaking research.",
-    "content": "The University Science Fair, held on campus this week, featured over 200 projects from students in physics, biology, and engineering. Highlights included renewable energy prototypes and AI-driven medical solutions. Professors applauded the enthusiasm and creativity of participants.",
-    "cover_image": "/images/news-portal/5.jpg",
-    "published_date": "2024-12-01",
-    "documents": []
-  },
-  {
-    "uuid": "2a3b4c5d-6789-2345-bcde-12345fghijlk",
-    "title": "Scholarship Opportunities Announced",
-    "subtitle": "Applications open for 2025 intake",
-    "description": "The university has announced new scholarships for undergraduate and postgraduate students.",
-    "content": "Students are encouraged to apply for the range of scholarships designed to support academic excellence and financial needs. Application deadlines are set for March 15, 2025, and further details can be found on the university's website.",
-    "cover_image": "/images/news-portal/6.jpg",
-    "published_date": "2024-12-01",
-    "documents": []
-  },
-  {
-    "uuid": "3c4d5e6f-7890-3456-cdef-23456ghijkl",
-    "title": "New Library Wing Inaugurated",
-    "subtitle": "State-of-the-art facilities for students",
-    "description": "The new wing of the university library was inaugurated to enhance research and learning.",
-    "content": "The library expansion includes additional reading spaces, digital archives, and collaborative workrooms. Students expressed excitement about the modern design and upgraded resources.",
-    "cover_image": "/images/news-portal/7.jpg",
-    "published_date": "2024-11-29",
-    "documents": []
-  },
-  {
-    "uuid": "4d5e6f7g-8901-4567-defg-34567hijklm",
-    "title": "Annual Cultural Festival Begins",
-    "subtitle": "A celebration of diversity and heritage",
-    "description": "The university’s cultural festival kicked off with music, dance, and art performances.",
-    "content": "The week-long cultural festival celebrates the diverse heritage of students and staff. This year's highlights include international food stalls, a fashion show, and live concerts.",
-    "cover_image": "/images/news-portal/8.jpg",
-    "published_date": "2024-11-27",
-    "documents": []
-  },
-  {
-    "uuid": "5e6f7g8h-9012-5678-efgh-45678ijklmn",
-    "title": "Research Collaboration with Industry Leaders",
-    "subtitle": "Bridging academia and industry",
-    "description": "The university signed MOUs with three major companies to collaborate on research projects.",
-    "content": "The partnerships aim to provide students with real-world exposure and resources for groundbreaking research. Key areas of focus include AI, sustainability, and healthcare.",
-    "cover_image": "/images/news-portal/9.jpg",
-    "published_date": "2024-11-25",
-    "documents": []
-  },
-  {
-    "uuid": "6f7g8h9i-0123-6789-fghi-56789jklmno",
-    "title": "Alumni Network Gathers for Reunion",
-    "subtitle": "A walk down memory lane",
-    "description": "The alumni reunion brought together graduates from various batches to relive their college memories.",
-    "content": "Over 500 alumni attended the event, which included a gala dinner, networking sessions, and a nostalgic campus tour. Attendees shared success stories and participated in mentoring sessions for current students.",
-    "cover_image": "/images/news-portal/10.jpg",
-    "published_date": "2024-11-20",
-    "documents": []
-  },
-  {
-    "uuid": "7g8h9i0j-1234-7890-ghij-67890klmnop",
-    "title": "Sports Day: Record-breaking Performances",
-    "subtitle": "Athletes shine on the track and field",
-    "description": "The annual sports day saw numerous records shattered across various disciplines.",
-    "content": "The university's sports day included track and field events, basketball tournaments, and a marathon. Students and staff cheered as athletes showcased their skills and determination.",
-    "cover_image": "/images/news-portal/11.jpg",
-    "published_date": "2024-11-18",
-    "documents": []
-  },
-  {
-    "uuid": "8h9i0j1k-2345-8901-hijk-78901mnopqrst",
-    "title": "New Dean Appointed for Engineering Faculty",
-    "subtitle": "A visionary leader takes charge",
-    "description": "The university welcomed Dr. Emily Carter as the new dean of the engineering faculty.",
-    "content": "Dr. Carter, a renowned researcher in renewable energy, aims to enhance curriculum and industry collaboration. She outlined her vision for fostering innovation and inclusivity in the engineering department.",
-    "cover_image": "/images/news-portal/12.jpg",
-    "published_date": "2024-11-15",
-    "documents": []
-  },
-  {
-    "uuid": "9i0j1k2l-3456-9012-ijkl-89012nopqrst",
-    "title": "Student Council Elections Conclude",
-    "subtitle": "New leaders for the upcoming year",
-    "description": "The student council elections saw high voter turnout and spirited campaigns.",
-    "content": "Newly elected representatives pledged to improve student welfare, enhance campus facilities, and foster a sense of community. The election results were announced at a public event attended by students and faculty.",
-    "cover_image": "/images/news-portal/13.jpg",
-    "published_date": "2024-11-10",
-    "documents": []
-  },
-  {
-    "uuid": "0j1k2l3m-4567-0123-jklm-90123opqrstu",
-    "title": "Seminar on Climate Change Awareness",
-    "subtitle": "Experts discuss global challenges",
-    "description": "The university hosted a seminar addressing climate change and sustainability.",
-    "content": "Eminent speakers highlighted the urgency of climate action and the role of education in driving change. Students actively participated in workshops on green technologies and sustainable practices.",
-    "cover_image": "/images/news-portal/14.jpg",
-    "published_date": "2024-11-05",
-    "documents": []
-  }
+	{
+		"uuid": "1a2b3c4d-5678-1234-abcd-98765efghijk",
+		"title": "University Hosts Annual Science Fair",
+		"subtitle": "A showcase of innovation and creativity",
+		"description": "The annual science fair brought together students from various disciplines to present their groundbreaking research.",
+		"content": "The University Science Fair, held on campus this week, featured over 200 projects from students in physics, biology, and engineering. Highlights included renewable energy prototypes and AI-driven medical solutions. Professors applauded the enthusiasm and creativity of participants.",
+		"cover_image": "/images/news-portal/5.jpg",
+		"published_date": "2024-12-01",
+		"documents": []
+	},
+	{
+		"uuid": "2a3b4c5d-6789-2345-bcde-12345fghijlk",
+		"title": "Scholarship Opportunities Announced",
+		"subtitle": "Applications open for 2025 intake",
+		"description": "The university has announced new scholarships for undergraduate and postgraduate students.",
+		"content": "Students are encouraged to apply for the range of scholarships designed to support academic excellence and financial needs. Application deadlines are set for March 15, 2025, and further details can be found on the university's website.",
+		"cover_image": "/images/news-portal/6.jpg",
+		"published_date": "2024-12-01",
+		"documents": []
+	},
+	{
+		"uuid": "3c4d5e6f-7890-3456-cdef-23456ghijkl",
+		"title": "New Library Wing Inaugurated",
+		"subtitle": "State-of-the-art facilities for students",
+		"description": "The new wing of the university library was inaugurated to enhance research and learning.",
+		"content": "The library expansion includes additional reading spaces, digital archives, and collaborative workrooms. Students expressed excitement about the modern design and upgraded resources.",
+		"cover_image": "/images/news-portal/7.jpg",
+		"published_date": "2024-11-29",
+		"documents": []
+	},
+	{
+		"uuid": "4d5e6f7g-8901-4567-defg-34567hijklm",
+		"title": "Annual Cultural Festival Begins",
+		"subtitle": "A celebration of diversity and heritage",
+		"description": "The university’s cultural festival kicked off with music, dance, and art performances.",
+		"content": "The week-long cultural festival celebrates the diverse heritage of students and staff. This year's highlights include international food stalls, a fashion show, and live concerts.",
+		"cover_image": "/images/news-portal/8.jpg",
+		"published_date": "2024-11-27",
+		"documents": []
+	},
+	{
+		"uuid": "5e6f7g8h-9012-5678-efgh-45678ijklmn",
+		"title": "Research Collaboration with Industry Leaders",
+		"subtitle": "Bridging academia and industry",
+		"description": "The university signed MOUs with three major companies to collaborate on research projects.",
+		"content": "The partnerships aim to provide students with real-world exposure and resources for groundbreaking research. Key areas of focus include AI, sustainability, and healthcare.",
+		"cover_image": "/images/news-portal/9.jpg",
+		"published_date": "2024-11-25",
+		"documents": []
+	},
+	{
+		"uuid": "6f7g8h9i-0123-6789-fghi-56789jklmno",
+		"title": "Alumni Network Gathers for Reunion",
+		"subtitle": "A walk down memory lane",
+		"description": "The alumni reunion brought together graduates from various batches to relive their college memories.",
+		"content": "Over 500 alumni attended the event, which included a gala dinner, networking sessions, and a nostalgic campus tour. Attendees shared success stories and participated in mentoring sessions for current students.",
+		"cover_image": "/images/news-portal/10.jpg",
+		"published_date": "2024-11-20",
+		"documents": []
+	},
+	{
+		"uuid": "7g8h9i0j-1234-7890-ghij-67890klmnop",
+		"title": "Sports Day: Record-breaking Performances",
+		"subtitle": "Athletes shine on the track and field",
+		"description": "The annual sports day saw numerous records shattered across various disciplines.",
+		"content": "The university's sports day included track and field events, basketball tournaments, and a marathon. Students and staff cheered as athletes showcased their skills and determination.",
+		"cover_image": "/images/news-portal/11.jpg",
+		"published_date": "2024-11-18",
+		"documents": []
+	},
+	{
+		"uuid": "8h9i0j1k-2345-8901-hijk-78901mnopqrst",
+		"title": "New Dean Appointed for Engineering Faculty",
+		"subtitle": "A visionary leader takes charge",
+		"description": "The university welcomed Dr. Emily Carter as the new dean of the engineering faculty.",
+		"content": "Dr. Carter, a renowned researcher in renewable energy, aims to enhance curriculum and industry collaboration. She outlined her vision for fostering innovation and inclusivity in the engineering department.",
+		"cover_image": "/images/news-portal/12.jpg",
+		"published_date": "2024-11-15",
+		"documents": []
+	},
+	{
+		"uuid": "9i0j1k2l-3456-9012-ijkl-89012nopqrst",
+		"title": "Student Council Elections Conclude",
+		"subtitle": "New leaders for the upcoming year",
+		"description": "The student council elections saw high voter turnout and spirited campaigns.",
+		"content": "Newly elected representatives pledged to improve student welfare, enhance campus facilities, and foster a sense of community. The election results were announced at a public event attended by students and faculty.",
+		"cover_image": "/images/news-portal/13.jpg",
+		"published_date": "2024-11-10",
+		"documents": []
+	},
+	{
+		"uuid": "0j1k2l3m-4567-0123-jklm-90123opqrstu",
+		"title": "Seminar on Climate Change Awareness",
+		"subtitle": "Experts discuss global challenges",
+		"description": "The university hosted a seminar addressing climate change and sustainability.",
+		"content": "Eminent speakers highlighted the urgency of climate action and the role of education in driving change. Students actively participated in workshops on green technologies and sustainable practices.",
+		"cover_image": "/images/news-portal/14.jpg",
+		"published_date": "2024-11-05",
+		"documents": []
+	}
 ]

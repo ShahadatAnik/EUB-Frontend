@@ -1,201 +1,159 @@
 [
-  {
-    "name": "Dr. Sarah Turner",
-    "designation": "Professor",
-    "image": "sarah_turner.jpg",
-    "education": [
-      "PhD in Finance - Harvard University",
-      "MBA - University of Chicago",
-      "BBA - University of Michigan"
-    ],
-    "achievements": [
-      "Published 30+ research papers",
-      "Recipient of Best Finance Educator Award 2020"
-    ],
-    "experiences": [
-      "20+ years of teaching experience",
-      "Consultant for Fortune 500 companies"
-    ]
-  },
-  {
-    "name": "Mr. John Parker",
-    "designation": "Senior Lecturer",
-    "image": "john_parker.jpg",
-    "education": [
-      "MSc in Accounting - London School of Economics",
-      "BCom - University of Sydney"
-    ],
-    "achievements": [
-      "Published in top-tier accounting journals",
-      "Developed advanced accounting software tools"
-    ],
-    "experiences": [
-      "12 years of teaching experience",
-      "Worked as an auditor for KPMG"
-    ]
-  },
-  {
-    "name": "Dr. Emma Collins",
-    "designation": "Associate Professor",
-    "image": "emma_collins.jpg",
-    "education": [
-      "PhD in Accounting - Stanford University",
-      "MBA - University of Oxford"
-    ],
-    "achievements": [
-      "Awarded Young Researcher in Accounting 2019",
-      "Published 15+ papers on forensic accounting"
-    ],
-    "experiences": [
-      "10+ years of research experience",
-      "Served as a financial analyst for Deloitte"
-    ]
-  },
-  {
-    "name": "Prof. Michael Johnson",
-    "designation": "Professor",
-    "image": "michael_johnson.jpg",
-    "education": [
-      "PhD in Corporate Finance - Wharton School",
-      "MBA - University of Pennsylvania"
-    ],
-    "achievements": [
-      "Recipient of Lifetime Achievement Award in Finance",
-      "Authored 3 bestselling finance textbooks"
-    ],
-    "experiences": [
-      "25+ years of teaching",
-      "Former CFO of a multinational corporation"
-    ]
-  },
-  {
-    "name": "Ms. Olivia Smith",
-    "designation": "Lecturer",
-    "image": "olivia_smith.jpg",
-    "education": [
-      "MSc in Finance - University of Cambridge",
-      "BCom - University of Melbourne"
-    ],
-    "achievements": [
-      "Recognized for innovative teaching methods",
-      "Certified Financial Risk Manager (FRM)"
-    ],
-    "experiences": [
-      "6 years of teaching experience",
-      "Corporate finance trainer for startups"
-    ]
-  },
-  {
-    "name": "Dr. Liam Davis",
-    "designation": "Associate Professor",
-    "image": "liam_davis.jpg",
-    "education": [
-      "PhD in Financial Econometrics - Columbia University",
-      "MSc in Statistics - Imperial College London"
-    ],
-    "achievements": [
-      "Published 20+ papers on risk analysis",
-      "Keynote speaker at international finance conferences"
-    ],
-    "experiences": ["10+ years in academia", "Consultant for hedge funds"]
-  },
-  {
-    "name": "Prof. Sophia Brown",
-    "designation": "Professor",
-    "image": "sophia_brown.jpg",
-    "education": [
-      "PhD in Public Finance - Yale University",
-      "MBA - Northwestern University"
-    ],
-    "achievements": [
-      "Chairperson of National Finance Council",
-      "Developed a national-level budgeting framework"
-    ],
-    "experiences": [
-      "30+ years of teaching",
-      "Policy advisor to government bodies"
-    ]
-  },
-  {
-    "name": "Dr. Ethan Wilson",
-    "designation": "Assistant Professor",
-    "image": "ethan_wilson.jpg",
-    "education": [
-      "PhD in Behavioral Finance - University of California, Berkeley",
-      "BBA - University of Toronto"
-    ],
-    "achievements": [
-      "Published 10 papers on market psychology",
-      "Recipient of Emerging Scholar Award 2021"
-    ],
-    "experiences": [
-      "5 years of teaching experience",
-      "Worked as a stock market strategist"
-    ]
-  },
-  {
-    "name": "Ms. Isabella Moore",
-    "designation": "Senior Lecturer",
-    "image": "isabella_moore.jpg",
-    "education": [
-      "MSc in Financial Management - University of Warwick",
-      "BCom - University of Queensland"
-    ],
-    "achievements": [
-      "Developed online courses on financial modeling",
-      "Recipient of Innovative Educator Award 2022"
-    ],
-    "experiences": [
-      "8 years of academic teaching",
-      "Corporate trainer for investment firms"
-    ]
-  },
-  {
-    "name": "Dr. Noah Martinez",
-    "designation": "Assistant Professor",
-    "image": "noah_martinez.jpg",
-    "education": [
-      "PhD in Accounting Information Systems - NYU Stern",
-      "MBA - University of California, Los Angeles"
-    ],
-    "achievements": [
-      "Published pioneering work on blockchain accounting",
-      "Speaker at global tech-finance events"
-    ],
-    "experiences": [
-      "7 years in academia",
-      "Worked as an IT consultant for financial institutions"
-    ]
-  },
-  {
-    "name": "Ms. Mia Thompson",
-    "designation": "Lecturer",
-    "image": "mia_thompson.jpg",
-    "education": [
-      "MSc in International Finance - INSEAD",
-      "BBA - National University of Singapore"
-    ],
-    "achievements": [
-      "Awarded Excellence in Teaching Award 2023",
-      "Author of 'Finance for Millennials'"
-    ],
-    "experiences": ["5 years of teaching", "Financial advisor for SMEs"]
-  },
-  {
-    "name": "Dr. William Evans",
-    "designation": "Associate Professor",
-    "image": "william_evans.jpg",
-    "education": [
-      "PhD in Investment Management - University of Texas at Austin",
-      "MBA - University of Michigan"
-    ],
-    "achievements": [
-      "Published 25+ papers on portfolio optimization",
-      "Recipient of the Research Excellence Award"
-    ],
-    "experiences": [
-      "15 years in academia",
-      "Former investment banker at Goldman Sachs"
-    ]
-  }
+	{
+		"name": "Dr. Sarah Turner",
+		"designation": "Professor",
+		"image": "sarah_turner.jpg",
+		"education": [
+			"PhD in Finance - Harvard University",
+			"MBA - University of Chicago",
+			"BBA - University of Michigan"
+		],
+		"achievements": [
+			"Published 30+ research papers",
+			"Recipient of Best Finance Educator Award 2020"
+		],
+		"experiences": ["20+ years of teaching experience", "Consultant for Fortune 500 companies"]
+	},
+	{
+		"name": "Mr. John Parker",
+		"designation": "Senior Lecturer",
+		"image": "john_parker.jpg",
+		"education": ["MSc in Accounting - London School of Economics", "BCom - University of Sydney"],
+		"achievements": [
+			"Published in top-tier accounting journals",
+			"Developed advanced accounting software tools"
+		],
+		"experiences": ["12 years of teaching experience", "Worked as an auditor for KPMG"]
+	},
+	{
+		"name": "Dr. Emma Collins",
+		"designation": "Associate Professor",
+		"image": "emma_collins.jpg",
+		"education": ["PhD in Accounting - Stanford University", "MBA - University of Oxford"],
+		"achievements": [
+			"Awarded Young Researcher in Accounting 2019",
+			"Published 15+ papers on forensic accounting"
+		],
+		"experiences": [
+			"10+ years of research experience",
+			"Served as a financial analyst for Deloitte"
+		]
+	},
+	{
+		"name": "Prof. Michael Johnson",
+		"designation": "Professor",
+		"image": "michael_johnson.jpg",
+		"education": ["PhD in Corporate Finance - Wharton School", "MBA - University of Pennsylvania"],
+		"achievements": [
+			"Recipient of Lifetime Achievement Award in Finance",
+			"Authored 3 bestselling finance textbooks"
+		],
+		"experiences": ["25+ years of teaching", "Former CFO of a multinational corporation"]
+	},
+	{
+		"name": "Ms. Olivia Smith",
+		"designation": "Lecturer",
+		"image": "olivia_smith.jpg",
+		"education": ["MSc in Finance - University of Cambridge", "BCom - University of Melbourne"],
+		"achievements": [
+			"Recognized for innovative teaching methods",
+			"Certified Financial Risk Manager (FRM)"
+		],
+		"experiences": ["6 years of teaching experience", "Corporate finance trainer for startups"]
+	},
+	{
+		"name": "Dr. Liam Davis",
+		"designation": "Associate Professor",
+		"image": "liam_davis.jpg",
+		"education": [
+			"PhD in Financial Econometrics - Columbia University",
+			"MSc in Statistics - Imperial College London"
+		],
+		"achievements": [
+			"Published 20+ papers on risk analysis",
+			"Keynote speaker at international finance conferences"
+		],
+		"experiences": ["10+ years in academia", "Consultant for hedge funds"]
+	},
+	{
+		"name": "Prof. Sophia Brown",
+		"designation": "Professor",
+		"image": "sophia_brown.jpg",
+		"education": ["PhD in Public Finance - Yale University", "MBA - Northwestern University"],
+		"achievements": [
+			"Chairperson of National Finance Council",
+			"Developed a national-level budgeting framework"
+		],
+		"experiences": ["30+ years of teaching", "Policy advisor to government bodies"]
+	},
+	{
+		"name": "Dr. Ethan Wilson",
+		"designation": "Assistant Professor",
+		"image": "ethan_wilson.jpg",
+		"education": [
+			"PhD in Behavioral Finance - University of California, Berkeley",
+			"BBA - University of Toronto"
+		],
+		"achievements": [
+			"Published 10 papers on market psychology",
+			"Recipient of Emerging Scholar Award 2021"
+		],
+		"experiences": ["5 years of teaching experience", "Worked as a stock market strategist"]
+	},
+	{
+		"name": "Ms. Isabella Moore",
+		"designation": "Senior Lecturer",
+		"image": "isabella_moore.jpg",
+		"education": [
+			"MSc in Financial Management - University of Warwick",
+			"BCom - University of Queensland"
+		],
+		"achievements": [
+			"Developed online courses on financial modeling",
+			"Recipient of Innovative Educator Award 2022"
+		],
+		"experiences": ["8 years of academic teaching", "Corporate trainer for investment firms"]
+	},
+	{
+		"name": "Dr. Noah Martinez",
+		"designation": "Assistant Professor",
+		"image": "noah_martinez.jpg",
+		"education": [
+			"PhD in Accounting Information Systems - NYU Stern",
+			"MBA - University of California, Los Angeles"
+		],
+		"achievements": [
+			"Published pioneering work on blockchain accounting",
+			"Speaker at global tech-finance events"
+		],
+		"experiences": ["7 years in academia", "Worked as an IT consultant for financial institutions"]
+	},
+	{
+		"name": "Ms. Mia Thompson",
+		"designation": "Lecturer",
+		"image": "mia_thompson.jpg",
+		"education": [
+			"MSc in International Finance - INSEAD",
+			"BBA - National University of Singapore"
+		],
+		"achievements": [
+			"Awarded Excellence in Teaching Award 2023",
+			"Author of 'Finance for Millennials'"
+		],
+		"experiences": ["5 years of teaching", "Financial advisor for SMEs"]
+	},
+	{
+		"name": "Dr. William Evans",
+		"designation": "Associate Professor",
+		"image": "william_evans.jpg",
+		"education": [
+			"PhD in Investment Management - University of Texas at Austin",
+			"MBA - University of Michigan"
+		],
+		"achievements": [
+			"Published 25+ papers on portfolio optimization",
+			"Recipient of the Research Excellence Award"
+		],
+		"experiences": ["15 years in academia", "Former investment banker at Goldman Sachs"]
+	}
 ]

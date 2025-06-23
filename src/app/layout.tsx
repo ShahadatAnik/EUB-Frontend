@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
-
 import { Inter, Poppins } from 'next/font/google';
+
+import { Toaster } from 'sonner';
 
 import Layout from '@/components/layout';
 import Providers from '@/components/providers';
+
 import { cn } from '@/lib/utils';
-import { Toaster } from 'sonner';
+
 import './globals.css';
 
 const fontSans = Inter({
@@ -30,14 +32,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang='en' suppressHydrationWarning>
 			<body
 				suppressHydrationWarning
-				className={cn(
-					'font-sans antialiased',
-					fontSans.variable,
-					fontPoppins.variable
-				)}
+				className={cn('font-sans antialiased', fontSans.variable, fontPoppins.variable)}
 			>
 				<Providers>
 					<Layout>{children}</Layout>

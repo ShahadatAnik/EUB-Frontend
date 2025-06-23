@@ -2,11 +2,12 @@
 
 import React from 'react';
 
-import NoticeCard from './notice-card';
 import { IDataTable, IPaginationResponse } from '@/types';
 
 import NoDataFound from '@/components/no-data-found';
 import ServerPagination from '@/components/server-pagination';
+
+import NoticeCard from './notice-card';
 
 const Content: React.FC<IPaginationResponse<IDataTable>> = (props) => {
 	if (!props.data || props.data.length === 0) return <NoDataFound />;
@@ -17,7 +18,7 @@ const Content: React.FC<IPaginationResponse<IDataTable>> = (props) => {
 				<NoticeCard key={index} data={item} />
 			))}
 
-			<div className="flex justify-center mt-2">
+			<div className='mt-2 flex justify-center'>
 				<ServerPagination pagination={props.pagination} />
 			</div>
 		</div>

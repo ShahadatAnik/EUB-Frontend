@@ -1,16 +1,19 @@
 import React from 'react';
-import ContentWrapper from '../content-wrapper';
-import SystemTable from '@/components/table/system-table';
+
 import { columns, useGetRegularClassRoutine } from '@/hooks/use-get-course';
 
-const ClassRoutine = () => {
-  const { data } = useGetRegularClassRoutine('BBA');
+import SystemTable from '@/components/table/system-table';
 
-  return (
-    <ContentWrapper title='Class Routine'>
-      <SystemTable caption='Class Routine' data={data!} columns={columns} />
-    </ContentWrapper>
-  );
+import ContentWrapper from '../content-wrapper';
+
+const ClassRoutine = () => {
+	const { data } = useGetRegularClassRoutine('BBA');
+
+	return (
+		<ContentWrapper title='Class Routine'>
+			<SystemTable caption='Class Routine' data={data!} columns={columns} />
+		</ContentWrapper>
+	);
 };
 
 export default ClassRoutine;

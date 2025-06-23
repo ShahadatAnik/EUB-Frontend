@@ -1,9 +1,5 @@
-import {
-	getCertificateTuitionFees,
-	getGraduateTuitionFees,
-	getUndergraduateTuitionFees,
-} from './get-tuition-fees';
-
+import { getAcademicCalender } from './get-academic-calendar';
+import { getAcademicInformationPolicies } from './get-academic-information-policies';
 import {
 	getAuthoritiesAcademicCouncil,
 	getAuthoritiesChairman,
@@ -26,6 +22,7 @@ import {
 	getRegularClassRoutine,
 	getRegularExamSchedule,
 } from './get-courses';
+import { getAboutUs } from './get-courses';
 import { getEventCalender } from './get-event-calender';
 import { getExaminationGuidelines } from './get-examination-guidelines';
 import { getFaculties } from './get-faculties';
@@ -38,16 +35,17 @@ import { getInformationProvisionalCertificates } from './get-information-provisi
 import { getJobCirculars } from './get-job-circulars';
 import { getNewsById, getNewsEvents } from './get-news-events';
 import { getNotices } from './get-notices';
-import { getOfficeEntry, getOffices } from './get-offices';
-import { getPrograms } from './get-programs';
-
-import { getAcademicCalender } from './get-academic-calendar';
-import { getAcademicInformationPolicies } from './get-academic-information-policies';
-import { getAboutUs } from './get-courses';
 import { getOffers } from './get-offers';
+import { getOfficeEntry, getOffices } from './get-offices';
 import { getPolicy } from './get-policy';
+import { getPrograms } from './get-programs';
 import { getPublications } from './get-publications';
 import { getTenders } from './get-tenders';
+import {
+	getCertificateTuitionFees,
+	getGraduateTuitionFees,
+	getUndergraduateTuitionFees,
+} from './get-tuition-fees';
 
 export {
 	getAboutUs,

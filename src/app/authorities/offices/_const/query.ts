@@ -1,16 +1,18 @@
 'use client';
-import { getOffices } from '@/server/get';
+
 import { IOffice } from '@/types';
 import { useQuery } from '@tanstack/react-query';
 
+import { getOffices } from '@/server/get';
+
 interface IProps {
-  initialData: IOffice[];
+	initialData: IOffice[];
 }
 
 export function useOffices({ initialData }: IProps) {
-  return useQuery({
-    queryKey: ['offices'],
-    queryFn: getOffices,
-    initialData,
-  });
+	return useQuery({
+		queryKey: ['offices'],
+		queryFn: getOffices,
+		initialData,
+	});
 }

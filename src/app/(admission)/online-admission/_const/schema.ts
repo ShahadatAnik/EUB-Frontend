@@ -10,7 +10,6 @@ import {
 	EnumSscGrade,
 	EnumSscGroup,
 } from '@/types/enum';
-
 import { z } from 'zod';
 
 export const formSchema = z
@@ -21,14 +20,10 @@ export const formSchema = z
 		}),
 		program_uuid: z.string().min(1, { message: 'Program is required' }),
 		religion: z.string().min(1, { message: 'Religion is required' }),
-		applicant_name: z
-			.string()
-			.min(5, { message: 'Applicant name is required' }),
+		applicant_name: z.string().min(5, { message: 'Applicant name is required' }),
 		father_name: z.string().min(5, { message: 'Fathers name is required' }),
 		mother_name: z.string().min(5, { message: 'Mothers name is required' }),
-		local_guardian: z
-			.string()
-			.min(5, { message: 'Local guardian is required' }),
+		local_guardian: z.string().min(5, { message: 'Local guardian is required' }),
 		gender: z.nativeEnum(EnumGender, {
 			message: 'Select a gender',
 		}),
@@ -47,32 +42,20 @@ export const formSchema = z
 		phone_number: z
 			.string()
 			.min(1, { message: 'Phone number is required' })
-			.regex(
-				/^(\+8801|01|\+880-1)[0-9\-+]{6,15}$/,
-				'Invalid Phone Number'
-			),
+			.regex(/^(\+8801|01|\+880-1)[0-9\-+]{6,15}$/, 'Invalid Phone Number'),
 		parents_phone: z
 			.string()
 			.min(1, { message: 'Parents Phone number is required' })
-			.regex(
-				/^(\+8801|01|\+880-1)[0-9\-+]{6,15}$/,
-				'Invalid Phone Number'
-			),
+			.regex(/^(\+8801|01|\+880-1)[0-9\-+]{6,15}$/, 'Invalid Phone Number'),
 		local_guardian_phone: z
 			.string()
 			.min(1, { message: 'Parents Phone number is required' })
-			.regex(
-				/^(\+8801|01|\+880-1)[0-9\-+]{6,15}$/,
-				'Invalid Phone Number'
-			),
+			.regex(/^(\+8801|01|\+880-1)[0-9\-+]{6,15}$/, 'Invalid Phone Number'),
 		email: z.string().min(1, { message: 'Email is required' }),
 		bkash: z
 			.string()
 			.min(11, { message: 'Bkash number is required' })
-			.regex(
-				/^(\+8801|01|\+880-1)[0-9\-+]{6,15}$/,
-				'Invalid Bkash Number'
-			),
+			.regex(/^(\+8801|01|\+880-1)[0-9\-+]{6,15}$/, 'Invalid Bkash Number'),
 		blood_group: z.nativeEnum(EnumBloodGroup, {
 			message: 'Select a blood group',
 		}),
@@ -85,20 +68,13 @@ export const formSchema = z
 		}),
 		ssc_gpa: z.preprocess(
 			(val) => Number(val),
-			z
-				.number()
-				.min(1, { message: 'Required' })
-				.max(5, { message: 'GPA cannot be more than 5.00' })
+			z.number().min(1, { message: 'Required' }).max(5, { message: 'GPA cannot be more than 5.00' })
 		),
 		ssc_board: z.nativeEnum(EnumSscBoard, {
 			message: 'Select a board',
 		}),
-		ssc_passing_year: z
-			.number()
-			.min(4, { message: 'Passing year is required' }),
-		ssc_institute: z
-			.string()
-			.min(1, { message: 'Institution is required' }),
+		ssc_passing_year: z.number().min(4, { message: 'Passing year is required' }),
+		ssc_institute: z.string().min(1, { message: 'Institution is required' }),
 		ssc_roll_number: z
 			.string()
 			.min(1, { message: 'SSC roll Number is required' })
@@ -118,21 +94,14 @@ export const formSchema = z
 		}),
 		hsc_gpa: z.preprocess(
 			(val) => Number(val),
-			z
-				.number()
-				.min(1, { message: 'Required' })
-				.max(5, { message: 'GPA cannot be more than 5.00' })
+			z.number().min(1, { message: 'Required' }).max(5, { message: 'GPA cannot be more than 5.00' })
 		),
 
 		hsc_board: z.nativeEnum(EnumHscBoard, {
 			message: 'Select a board',
 		}),
-		hsc_passing_year: z
-			.number()
-			.min(4, { message: 'Passing year is required' }),
-		hsc_institute: z
-			.string()
-			.min(1, { message: 'Institution is required' }),
+		hsc_passing_year: z.number().min(4, { message: 'Passing year is required' }),
+		hsc_institute: z.string().min(1, { message: 'Institution is required' }),
 		hsc_roll_number: z
 			.string()
 			.min(1, { message: 'HSC roll Number is required' })
@@ -147,10 +116,7 @@ export const formSchema = z
 		bsc_name: z.string().optional(),
 		bsc_cgpa: z.preprocess(
 			(val) => Number(val),
-			z
-				.number()
-				.min(1, { message: 'Required' })
-				.max(5, { message: 'GPA cannot be more than 5.00' })
+			z.number().min(1, { message: 'Required' }).max(5, { message: 'GPA cannot be more than 5.00' })
 		),
 		bsc_passing_year: z.number().optional(),
 		bsc_institute: z.string().optional(),
@@ -173,8 +139,7 @@ export const formSchema = z
 		if (!data?.nid_number && !data?.birth_certificate_number) {
 			ctx.addIssue({
 				code: 'custom',
-				message:
-					'Either NID Number or Birth Certificate Number is required',
+				message: 'Either NID Number or Birth Certificate Number is required',
 			});
 		}
 	});

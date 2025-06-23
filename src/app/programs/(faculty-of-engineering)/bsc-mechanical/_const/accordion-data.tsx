@@ -1,30 +1,29 @@
 import { IAcademicAccordion } from '@/types';
+
+import ExamSchedule from '@/app/programs/_components/exam-schedule';
+// Evening Program
+import Notices from '@/app/programs/_components/notices';
+
 import AlumniIndustry from '../_components/alumni-industry';
 import CoreFacultyMembers from '../_components/core-faculty-members';
+import EClassRoutine from '../_components/evening-program/class-routine';
+import ECourseOffer from '../_components/evening-program/course-offer';
+import ECoursePath from '../_components/evening-program/course-path';
+import ECurriculum from '../_components/evening-program/curriculum';
+import EDegreeRequirements from '../_components/evening-program/degree-requirements';
+import EProgramDetails from '../_components/evening-program/program-details';
 import LaboratoriesResources from '../_components/laboratories-resources';
 import NewsEvents from '../_components/news-events';
 import AboutUs from '../_components/overview/about-us';
 import Chairman from '../_components/overview/chairman';
-import StudentServiceDesk from '../_components/student-service-desk';
-
+import ClassRoutine from '../_components/regular-program/class-routine';
 // Regular Program
 import RCourseOffer from '../_components/regular-program/course-offer';
 import RCoursePath from '../_components/regular-program/course-path';
 import RCurriculum from '../_components/regular-program/curriculum';
 import RDegreeRequirements from '../_components/regular-program/degree-requirements';
 import RProgramDetails from '../_components/regular-program/program-details';
-
-// Evening Program
-import Notices from '@/app/programs/_components/notices';
-import ECourseOffer from '../_components/evening-program/course-offer';
-import ECoursePath from '../_components/evening-program/course-path';
-import ECurriculum from '../_components/evening-program/curriculum';
-import EDegreeRequirements from '../_components/evening-program/degree-requirements';
-import EProgramDetails from '../_components/evening-program/program-details';
-
-import EClassRoutine from '../_components/evening-program/class-routine';
-import ClassRoutine from '../_components/regular-program/class-routine';
-import ExamSchedule from '@/app/programs/_components/exam-schedule';
+import StudentServiceDesk from '../_components/student-service-desk';
 
 const accordions: IAcademicAccordion[] = [
 	{
@@ -72,7 +71,7 @@ const accordions: IAcademicAccordion[] = [
 			},
 			{
 				title: 'Exam Schedule',
-				content: <ExamSchedule department="BSC-MECHANICAL" />,
+				content: <ExamSchedule department='BSC-MECHANICAL' />,
 			},
 		],
 	},
@@ -105,7 +104,7 @@ const accordions: IAcademicAccordion[] = [
 			},
 			{
 				title: 'Exam Schedule',
-				content: <ExamSchedule department="BSC-MECHANICAL" />,
+				content: <ExamSchedule department='BSC-MECHANICAL' />,
 			},
 		],
 	},
@@ -131,7 +130,7 @@ const accordions: IAcademicAccordion[] = [
 	},
 	{
 		title: 'Notices',
-		content: <Notices department="BSC-MECHANICAL" />,
+		content: <Notices department='BSC-MECHANICAL' />,
 	},
 	{
 		title: 'News & Events',

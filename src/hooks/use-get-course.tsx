@@ -1,6 +1,6 @@
-import ClientPdfLink from '@/components/client-pdf';
-import { SystemTableColumn } from '@/components/table/system-table';
-import { formatDate } from '@/lib/utils';
+import { IDataTable } from '@/types';
+import { useQuery } from '@tanstack/react-query';
+
 import {
 	getDepartmentNews,
 	getDepartmentTeachers,
@@ -16,16 +16,19 @@ import {
 	getRegularCourseOffer,
 } from '@/server/get/get-courses';
 
-import { useQuery } from '@tanstack/react-query';
+import ClientPdfLink from '@/components/client-pdf';
+import { SystemTableColumn } from '@/components/table/system-table';
 
-export const columns: SystemTableColumn<any>[] = [
+import { formatDate } from '@/lib/utils';
+
+export const columns: SystemTableColumn<IDataTable>[] = [
 	{
 		accessorKey: 'description',
 		header: 'Description',
 		cell: (value, row) => <ClientPdfLink text={value} href={row.file} />,
 	},
 	{
-		accessorKey: 'updatedAt',
+		accessorKey: 'updated_at',
 		header: 'Updated At',
 		cell: (value, row) => formatDate(value || row.created_at),
 	},

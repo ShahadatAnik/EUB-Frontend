@@ -1,8 +1,11 @@
-import PageHeader from '@/components/page-header';
 import React from 'react';
-import PageContainer from '@/components/page-container';
-import Content from './_components/content';
+
 import { getFaculties, getPublications } from '@/server/get';
+
+import PageContainer from '@/components/page-container';
+import PageHeader from '@/components/page-header';
+
+import Content from './_components/content';
 
 export default async function Page(props: {
 	searchParams?: Promise<{
@@ -22,17 +25,14 @@ export default async function Page(props: {
 		page,
 		limit,
 		q,
-		filter
+		filter,
 	});
 
 	const faculties = await getFaculties();
 
 	return (
 		<>
-			<PageHeader
-				image="/images/accounting-and-finance.jpg"
-				title="Publications"
-			/>
+			<PageHeader image='/images/accounting-and-finance.jpg' title='Publications' />
 
 			<PageContainer>
 				<Content faculties={faculties} {...data} />

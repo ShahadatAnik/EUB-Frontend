@@ -1,38 +1,40 @@
-import { topNavLinks } from '@/config/nav-links';
-import Link from 'next/link';
 import React from 'react';
 
-const TopNavbar = () => {
-  return (
-    <div className='bg-primary w-full py-2 hidden lg:block'>
-      <div className='container flex justify-center gap-4 items-center divide-x divide-border'>
-        {topNavLinks.map((link) => {
-          if (link.newTab) {
-            return (
-              <Link
-                target='_blank'
-                key={link.title}
-                href={link.href}
-                className='text-white hover:underline text-sm pl-4'
-              >
-                {link.title}
-              </Link>
-            );
-          }
+import Link from 'next/link';
 
-          return (
-            <Link
-              key={link.title}
-              href={link.href}
-              className='text-white hover:underline text-sm pl-4'
-            >
-              {link.title}
-            </Link>
-          );
-        })}
-      </div>
-    </div>
-  );
+import { topNavLinks } from '@/config/nav-links';
+
+const TopNavbar = () => {
+	return (
+		<div className='hidden w-full bg-primary py-2 lg:block'>
+			<div className='container flex items-center justify-center gap-4 divide-x divide-border'>
+				{topNavLinks.map((link) => {
+					if (link.newTab) {
+						return (
+							<Link
+								target='_blank'
+								key={link.title}
+								href={link.href}
+								className='pl-4 text-sm text-white hover:underline'
+							>
+								{link.title}
+							</Link>
+						);
+					}
+
+					return (
+						<Link
+							key={link.title}
+							href={link.href}
+							className='pl-4 text-sm text-white hover:underline'
+						>
+							{link.title}
+						</Link>
+					);
+				})}
+			</div>
+		</div>
+	);
 };
 
 export default TopNavbar;

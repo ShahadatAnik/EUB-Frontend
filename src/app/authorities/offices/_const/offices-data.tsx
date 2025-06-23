@@ -1,4 +1,3 @@
-
 import { IOffice } from '@/types';
 
 export const officesData: IOffice[] = [
@@ -14,4 +13,3 @@ export const officesData: IOffice[] = [
 		updated_at: null,
 	},
 ];
-

@@ -1,102 +1,102 @@
 [
-  {
-    "title": "Call for Entries: Photography Contest",
-    "description": "Auditions for the upcoming cultural fest will begin on Monday. Show your talent and win exciting prizes.",
-    "date": "2025-01-07"
-  },
-  {
-    "title": "Career Counseling Sessions Available",
-    "description": "The semester exam schedule is now available on the university website. Students are advised to check and prepare accordingly.",
-    "date": "2024-12-18"
-  },
-  {
-    "title": "Blood Donation Camp Organized by NSS",
-    "description": "The deadline for research paper submission is fast approaching. Submit your work by the 20th of this month.",
-    "date": "2024-12-08"
-  },
-  {
-    "title": "Semester Exam Schedule Released",
-    "description": "The semester exam schedule is now available on the university website. Students are advised to check and prepare accordingly.",
-    "date": "2024-12-26"
-  },
-  {
-    "title": "Scholarship Application Deadline Extended",
-    "description": "Relieve stress with yoga sessions conducted by trained instructors. Every evening at 5 PM in the sports hall.",
-    "date": "2024-12-23"
-  },
-  {
-    "title": "Orientation Program for Freshers",
-    "description": "Join the campus cleanliness drive this Saturday. Let’s work together for a cleaner environment.",
-    "date": "2024-12-19"
-  },
-  {
-    "title": "Guidelines for Online Examination Process",
-    "description": "A free health checkup camp is being organized for all students. Don’t miss this opportunity to stay healthy.",
-    "date": "2025-01-07"
-  },
-  {
-    "title": "Semester Exam Schedule Released",
-    "description": "Join the campus cleanliness drive this Saturday. Let’s work together for a cleaner environment.",
-    "date": "2024-12-16"
-  },
-  {
-    "title": "Cleanliness Drive in Campus - Volunteers Needed",
-    "description": "The semester exam schedule is now available on the university website. Students are advised to check and prepare accordingly.",
-    "date": "2024-12-18"
-  },
-  {
-    "title": "New Arrivals in the University Library",
-    "description": "The deadline for research paper submission is fast approaching. Submit your work by the 20th of this month.",
-    "date": "2024-12-13"
-  },
-  {
-    "title": "Semester Exam Schedule Released",
-    "description": "A free health checkup camp is being organized for all students. Don’t miss this opportunity to stay healthy.",
-    "date": "2025-01-06"
-  },
-  {
-    "title": "Internship Opportunities in Leading Firms",
-    "description": "Participate in the annual sports meet and showcase your athletic skills. Registration is open till the end of the month.",
-    "date": "2025-01-03"
-  },
-  {
-    "title": "Free Health Checkup Camp for Students",
-    "description": "Auditions for the upcoming cultural fest will begin on Monday. Show your talent and win exciting prizes.",
-    "date": "2025-01-01"
-  },
-  {
-    "title": "Cleanliness Drive in Campus - Volunteers Needed",
-    "description": "Leading firms are offering internship opportunities. Check the notice board for details and application deadlines.",
-    "date": "2024-12-30"
-  },
-  {
-    "title": "Workshop on Cybersecurity Basics",
-    "description": "Leading firms are offering internship opportunities. Check the notice board for details and application deadlines.",
-    "date": "2024-12-15"
-  },
-  {
-    "title": "Workshop on Cybersecurity Basics",
-    "description": "The university will remain closed on account of the upcoming national festival. Happy celebrations!",
-    "date": "2024-12-10"
-  },
-  {
-    "title": "Research Paper Submission Deadline Nearing",
-    "description": "The inter-department debate competition is scheduled for next Wednesday. Participate and win accolades for your department.",
-    "date": "2024-12-25"
-  },
-  {
-    "title": "Blood Donation Camp Organized by NSS",
-    "description": "Showcase your photography skills in the university contest. Submit your entries before the 25th.",
-    "date": "2024-12-20"
-  },
-  {
-    "title": "Orientation Program for Freshers",
-    "description": "Participate in the annual sports meet and showcase your athletic skills. Registration is open till the end of the month.",
-    "date": "2024-12-11"
-  },
-  {
-    "title": "Holiday Announcement for National Festival",
-    "description": "The university will remain closed on account of the upcoming national festival. Happy celebrations!",
-    "date": "2024-12-19"
-  }
+	{
+		"title": "Call for Entries: Photography Contest",
+		"description": "Auditions for the upcoming cultural fest will begin on Monday. Show your talent and win exciting prizes.",
+		"date": "2025-01-07"
+	},
+	{
+		"title": "Career Counseling Sessions Available",
+		"description": "The semester exam schedule is now available on the university website. Students are advised to check and prepare accordingly.",
+		"date": "2024-12-18"
+	},
+	{
+		"title": "Blood Donation Camp Organized by NSS",
+		"description": "The deadline for research paper submission is fast approaching. Submit your work by the 20th of this month.",
+		"date": "2024-12-08"
+	},
+	{
+		"title": "Semester Exam Schedule Released",
+		"description": "The semester exam schedule is now available on the university website. Students are advised to check and prepare accordingly.",
+		"date": "2024-12-26"
+	},
+	{
+		"title": "Scholarship Application Deadline Extended",
+		"description": "Relieve stress with yoga sessions conducted by trained instructors. Every evening at 5 PM in the sports hall.",
+		"date": "2024-12-23"
+	},
+	{
+		"title": "Orientation Program for Freshers",
+		"description": "Join the campus cleanliness drive this Saturday. Let’s work together for a cleaner environment.",
+		"date": "2024-12-19"
+	},
+	{
+		"title": "Guidelines for Online Examination Process",
+		"description": "A free health checkup camp is being organized for all students. Don’t miss this opportunity to stay healthy.",
+		"date": "2025-01-07"
+	},
+	{
+		"title": "Semester Exam Schedule Released",
+		"description": "Join the campus cleanliness drive this Saturday. Let’s work together for a cleaner environment.",
+		"date": "2024-12-16"
+	},
+	{
+		"title": "Cleanliness Drive in Campus - Volunteers Needed",
+		"description": "The semester exam schedule is now available on the university website. Students are advised to check and prepare accordingly.",
+		"date": "2024-12-18"
+	},
+	{
+		"title": "New Arrivals in the University Library",
+		"description": "The deadline for research paper submission is fast approaching. Submit your work by the 20th of this month.",
+		"date": "2024-12-13"
+	},
+	{
+		"title": "Semester Exam Schedule Released",
+		"description": "A free health checkup camp is being organized for all students. Don’t miss this opportunity to stay healthy.",
+		"date": "2025-01-06"
+	},
+	{
+		"title": "Internship Opportunities in Leading Firms",
+		"description": "Participate in the annual sports meet and showcase your athletic skills. Registration is open till the end of the month.",
+		"date": "2025-01-03"
+	},
+	{
+		"title": "Free Health Checkup Camp for Students",
+		"description": "Auditions for the upcoming cultural fest will begin on Monday. Show your talent and win exciting prizes.",
+		"date": "2025-01-01"
+	},
+	{
+		"title": "Cleanliness Drive in Campus - Volunteers Needed",
+		"description": "Leading firms are offering internship opportunities. Check the notice board for details and application deadlines.",
+		"date": "2024-12-30"
+	},
+	{
+		"title": "Workshop on Cybersecurity Basics",
+		"description": "Leading firms are offering internship opportunities. Check the notice board for details and application deadlines.",
+		"date": "2024-12-15"
+	},
+	{
+		"title": "Workshop on Cybersecurity Basics",
+		"description": "The university will remain closed on account of the upcoming national festival. Happy celebrations!",
+		"date": "2024-12-10"
+	},
+	{
+		"title": "Research Paper Submission Deadline Nearing",
+		"description": "The inter-department debate competition is scheduled for next Wednesday. Participate and win accolades for your department.",
+		"date": "2024-12-25"
+	},
+	{
+		"title": "Blood Donation Camp Organized by NSS",
+		"description": "Showcase your photography skills in the university contest. Submit your entries before the 25th.",
+		"date": "2024-12-20"
+	},
+	{
+		"title": "Orientation Program for Freshers",
+		"description": "Participate in the annual sports meet and showcase your athletic skills. Registration is open till the end of the month.",
+		"date": "2024-12-11"
+	},
+	{
+		"title": "Holiday Announcement for National Festival",
+		"description": "The university will remain closed on account of the upcoming national festival. Happy celebrations!",
+		"date": "2024-12-19"
+	}
 ]
