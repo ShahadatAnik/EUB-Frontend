@@ -80,3 +80,8 @@ export const getDepartmentLatestNews = async (
 			? `/portfolio/news-latest?department_name=${department}`
 			: `/portfolio/news-latest`
 	);
+
+export const getAboutUs = async (department: string): Promise<IDataTable[]> =>
+	fetchApi(
+		`/portfolio/routine?type=about_us&portfolio_department=${department}`
+	);
