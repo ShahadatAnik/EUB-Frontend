@@ -1,88 +1,62 @@
 import React from 'react';
 import ContentWrapper from '../../content-wrapper';
 
-import {
-  firstYearFirstSemester,
-  firstYearSecondSemester,
-  firstYearThirdSemester,
-  secondYearFirstSemester,
-  secondYearSecondSemester,
-  secondYearThirdSemester,
-  thirdYearFirstSemester,
-  thirdYearSecondSemester,
-  thirdYearThirdSemester,
-  fourthYearFirstSemester,
-  fourthYearSecondSemester,
-  fourthYearThirdSemester,
-} from '../../../_const/semester-wise-courses';
-
-import SemesterCourseTable from './semester-course-table';
-import UnderDevelopment from '@/components/under-development';
+import CourseTable from './course-table';
+import { accountingMajor, coreCourses, financeMajor, generalCourses, hrmMajor, internship, marketingMajor } from '../curriculum/list-of-courses';
+// import UnderDevelopment from '@/components/under-development';
 
 const CoursePath = () => {
+  // return (
+  //   <ContentWrapper title='Course Map and Path'>
+  //     <UnderDevelopment />
+  //   </ContentWrapper>
+  // );
   return (
-    <ContentWrapper title='Course Map and Path'>
-      <UnderDevelopment />
-    </ContentWrapper>
-  );
-  return (
-    <ContentWrapper title='Course Map and Path' className='py-4 space-y-4'>
-      <p>
-        The B.Sc in Computer Science and Engineering Program consists of the
-        following categories of courses:
-      </p>
-      <div className='space-y-16'>
-        <SemesterCourseTable
-          title='First Year - First Semester'
-          data={firstYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='First Year - Second Semester'
-          data={firstYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='First Year - Third Semester'
-          data={firstYearThirdSemester}
-        />
-        <SemesterCourseTable
-          title='Second Year - First Semester'
-          data={secondYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='Second Year - Second Semester'
-          data={secondYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='Second Year - Third Semester'
-          data={secondYearThirdSemester}
-        />
-        <SemesterCourseTable
-          title='Third Year - First Semester'
-          data={thirdYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='Third Year - Second Semester'
-          data={thirdYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='Third Year - Third Semester'
-          data={thirdYearThirdSemester}
-        />
+		<ContentWrapper title="Curriculum" className="py-4 space-y-6">
+			<div>
+				<h6 className="text-lg font-semibold">
+					Course Path <br />
+					BBA Program – 136 Credits <br />
+					Department of Business Administration <br />
+					European University of Bangladesh
+				</h6>
 
-        <SemesterCourseTable
-          title='Fourth Year - First Semester'
-          data={fourthYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='Fourth Year - Second Semester'
-          data={fourthYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='Fourth Year - Third Semester'
-          data={fourthYearThirdSemester}
-        />
-      </div>
-    </ContentWrapper>
+				<div className="mt-6 space-y-12">
+					<CourseTable
+						title="General Education (30 Credits)"
+						data={generalCourses}
+					/>
+					<CourseTable
+						title="Core Courses (79 Credits)"
+						data={coreCourses}
+					/>
+					<p className="mt-1">
+						Major/Minor Courses (Major: 15 Credits, Minor: 9
+						Credits)
+					</p>
+					<CourseTable
+						title="Finance Major/Minor Courses"
+						data={financeMajor}
+					/>
+					<CourseTable
+						title="Accounting Major/Minor Courses"
+						data={accountingMajor}
+					/>
+					<CourseTable
+						title="Human Resource Management Major/Minor Courses"
+						data={hrmMajor}
+					/>
+					<CourseTable
+						title="Marketing Major/Minor Courses"
+						data={marketingMajor}
+					/>
+					<CourseTable
+						title="Internship/Project (3 Credits)"
+						data={internship}
+					/>
+				</div>
+			</div>
+		</ContentWrapper>
   );
 };
 
