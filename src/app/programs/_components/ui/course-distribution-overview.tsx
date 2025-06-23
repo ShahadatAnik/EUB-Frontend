@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { semesterData } from '../regular-program/_config/data';
+import { semesterData } from '../../_config/curriculum-data';
 
 export const CourseDistributionOverview = React.memo(() => {
   const yearSummary = semesterData.reduce((acc, semester) => {

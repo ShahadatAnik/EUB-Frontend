@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
+import type React from 'react';
 
 import { NumericFormat } from 'react-number-format';
 
@@ -14,7 +14,6 @@ import {
 } from '@/components/ui/table';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
-import NoDataFound from '../no-data-found';
 import { Skeleton } from '../ui/skeleton';
 
 type CellType = 'string' | 'number' | 'date' | 'currency' | 'default';
@@ -30,6 +29,8 @@ export type SystemTableColumn<T> = {
   ) => string | number | React.ReactNode;
   cellClassName?: string;
   type?: CellType;
+  rowSpan?: (row: T, index: number) => number;
+  skipRender?: (row: T, index: number) => boolean;
 };
 
 interface IProps<T> {
@@ -39,7 +40,17 @@ interface IProps<T> {
   className?: string;
   children?: React.ReactNode;
   isLoading?: boolean;
+  groupedRows?: boolean;
+  rowClassName?: (row: T, index: number) => string;
 }
+
+// Simple NoDataFound component since it's not provided
+const NoDataFound = () => (
+  <div className='flex flex-col items-center justify-center py-8 text-gray-500'>
+    <div className='text-lg font-medium'>No Data Found</div>
+    <div className='text-sm'>There are no records to display</div>
+  </div>
+);
 
 function SystemTable<T>({
   columns,
@@ -48,6 +59,7 @@ function SystemTable<T>({
   className,
   children,
   isLoading,
+  rowClassName,
 }: IProps<T>) {
   const headers = columns.map((column) => column.header || column.accessorKey);
 
@@ -91,29 +103,43 @@ function SystemTable<T>({
         {!isLoading &&
           data &&
           data.map((item: any, rowIndex: number) => (
-            <TableRow key={rowIndex}>
-              {columns.map((column, index) => (
-                <TableCell
-                  key={index}
-                  className={cn(
-                    'border-r last:border-r-0',
-                    column.cellClassName
-                  )}
-                >
-                  {column.cell ? (
-                    column.cell(
-                      item[column.accessorKey] as string,
-                      item as T as any,
-                      rowIndex
-                    )
-                  ) : (
-                    <RenderCell
-                      type={column.type}
-                      value={item[column.accessorKey]}
-                    />
-                  )}
-                </TableCell>
-              ))}
+            <TableRow
+              key={rowIndex}
+              className={
+                rowClassName ? rowClassName(item as T, rowIndex) : undefined
+              }
+            >
+              {columns.map((column, colIndex) => {
+                // Skip rendering if skipRender function returns true
+                if (
+                  column.skipRender &&
+                  column.skipRender(item as T, rowIndex)
+                ) {
+                  return null;
+                }
+
+                const rowSpan = column.rowSpan
+                  ? column.rowSpan(item as T, rowIndex)
+                  : 1;
+                const cellValue = item[column.accessorKey as string];
+
+                return (
+                  <TableCell
+                    key={colIndex}
+                    className={cn(
+                      'border-r last:border-r-0',
+                      column.cellClassName
+                    )}
+                    rowSpan={rowSpan > 1 ? rowSpan : undefined}
+                  >
+                    {column.cell ? (
+                      column.cell(cellValue as string, item as T, rowIndex)
+                    ) : (
+                      <RenderCell type={column.type} value={cellValue} />
+                    )}
+                  </TableCell>
+                );
+              })}
             </TableRow>
           ))}
       </TableBody>

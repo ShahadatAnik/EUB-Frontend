@@ -24,7 +24,7 @@ import {
   eveningCoursePrefixes,
   eveningCurriculumSummary,
   eveningSemesterData,
-} from './evening-curriculum';
+} from './evening-curriculum-data';
 
 export const getCurriculumData = (type: 'regular' | 'evening') => {
   if (type === 'evening') {

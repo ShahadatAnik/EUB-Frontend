@@ -17,6 +17,7 @@ export interface SemesterCourse {
   courseCode: string;
   courseTitle: string;
   credit: number;
+  contactHours?: number;
 }
 
 export interface Semester {
@@ -25,7 +26,9 @@ export interface Semester {
   title: string;
   courses: SemesterCourse[];
   total: number;
+  contactHours?: number;
   isWaived?: boolean;
+  isExempted?: boolean;
 }
 
 export interface CoursePrefix {
@@ -36,7 +39,7 @@ export interface CoursePrefix {
 export interface CurriculumSummary {
   category: string;
   credits: number;
-  percentage: string;
+  percentage?: string;
 }
 
 export interface PerformanceEvaluation {
@@ -54,10 +57,13 @@ export interface ProgramDetails {
   };
   creditHours: number | string;
   courseLoad: string;
-  courseLoadDetails: string;
+  courseLoadDetails?: string;
   minimumGPA: number;
   backgroundStudents?: string;
   waiverInfo?: string;
+  additionalInfo?: string;
 }
 
 export type ProgramType = 'regular' | 'evening';
+export type DepartmentType = 'textile' | 'eee';
+export type StudentBackground = 'hsc' | 'diploma';

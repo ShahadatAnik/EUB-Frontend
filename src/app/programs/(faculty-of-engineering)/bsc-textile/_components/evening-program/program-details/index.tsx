@@ -1,8 +1,7 @@
 import React from 'react';
 
 import ContentWrapper from '../../content-wrapper';
-
-import { ProgramDetailsSection } from '../../sections/program-details-section';
+import { ProgramDetailsSection } from '@/app/programs/_components/sections/program-details';
 import { getCurriculumData } from '../../../_const/get-curriculum-data';
 
 const ProgramDetails = () => {

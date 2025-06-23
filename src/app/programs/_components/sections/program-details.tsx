@@ -3,7 +3,7 @@ import { PerformanceEvaluationSection } from '../ui/performance-evaluation';
 import type {
   ProgramDetails,
   PerformanceEvaluation,
-} from '../../_const/curriculum';
+} from '../../_config/curriculum';
 
 interface ProgramDetailsSectionProps {
   semesterInfo: {

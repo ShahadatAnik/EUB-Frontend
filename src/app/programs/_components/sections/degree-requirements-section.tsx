@@ -1,5 +1,5 @@
 import React from 'react';
-import type { ProgramDetails } from '../../_const/curriculum';
+import type { ProgramDetails } from '../../_config/curriculum';
 
 interface DegreeRequirementsSectionProps {
   programDetails: ProgramDetails;

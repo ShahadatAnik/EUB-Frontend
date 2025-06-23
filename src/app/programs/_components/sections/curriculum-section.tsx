@@ -10,7 +10,7 @@ import type {
   ElectiveCourse,
   CoursePrefix,
   CurriculumSummary,
-} from '../../_const/curriculum';
+} from '../../_config/curriculum';
 
 interface CurriculumSectionProps {
   textileEngineeringCourses: Course[];

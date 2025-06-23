@@ -1,6 +1,6 @@
 import ContentWrapper from '@/app/programs/_components/content-wrapper';
-import { CurriculumSection } from '../../sections/curriculum-section';
 import { getCurriculumData } from '../../../_const/get-curriculum-data';
+import { CurriculumSection } from '@/app/programs/_components/sections/curriculum-section';
 
 export default function ProgramCurriculum() {
   const data = getCurriculumData('regular');

@@ -6,7 +6,7 @@ import type {
   CurriculumSummary,
   PerformanceEvaluation,
   ProgramDetails,
-} from './curriculum';
+} from '@/app/programs/_config/curriculum';
 
 export const eveningSemesterInfo = {
   spring: 'January-April',

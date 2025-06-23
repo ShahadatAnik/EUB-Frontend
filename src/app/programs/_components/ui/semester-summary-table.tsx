@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import type { Semester } from '../regular-program/_config/types';
+import type { Semester } from '../../_config/curriculum';
 
 interface SemesterSummaryTableProps {
   semesters: Semester[];
