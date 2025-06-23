@@ -23,30 +23,44 @@ export const SummaryTable = React.memo<SummaryTableProps>(
       {
         category: 'Total',
         credits: totalCredits,
-        percentage: '100%',
       },
     ];
 
     const columns: SystemTableColumn<CurriculumSummary>[] = [
       {
         accessorKey: 'category',
-        header: 'Curriculum Summary',
+        header: 'Category',
+        cellClassName: 'w-80',
         cell: (value) => (
           <div className='whitespace-pre-line text-sm'>{value}</div>
         ),
+      },
+      {
+        accessorKey: 'theory_courses',
+        header: 'Theory Courses',
+        headerClassName: 'w-24 text-center',
+        cellClassName: 'text-center font-medium',
+        isHidden: tableData.every((row) => row.theory_courses === undefined),
+      },
+      {
+        accessorKey: 'sessional_courses',
+        header: 'Sessional Courses',
+        headerClassName: 'w-24 text-center',
+        cellClassName: 'text-center font-medium',
+        isHidden: tableData.every((row) => row.sessional_courses === undefined),
       },
       {
         accessorKey: 'credits',
         header: 'Credit',
         headerClassName: 'w-24 text-center',
         cellClassName: 'text-center font-medium',
-        cell: (value) => Number(value).toFixed(2),
       },
       {
         accessorKey: 'percentage',
         header: 'Credit Proportions (Percentage)',
         headerClassName: 'w-32 text-center',
         cellClassName: 'text-center font-medium',
+        isHidden: tableData.every((row) => row.percentage === undefined),
       },
     ];
 

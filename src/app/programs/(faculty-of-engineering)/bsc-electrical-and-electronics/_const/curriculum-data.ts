@@ -15,6 +15,8 @@ export const eeeSemesterInfo = {
 };
 
 export const eeeRegularProgramDetails: ProgramDetails = {
+  degreeName:
+    'Bachelor of Science in Electrical and Electronic Engineering (B.Sc. in EEE)',
   duration: {
     years: 4,
     semesters: 12,
@@ -28,6 +30,8 @@ export const eeeRegularProgramDetails: ProgramDetails = {
 };
 
 export const eeeEveningProgramDetails: ProgramDetails = {
+  degreeName:
+    'Bachelor of Science in Electrical and Electronic Engineering (B.Sc. in EEE)',
   duration: {
     years: '3 years, 4 months',
     semesters: 10,

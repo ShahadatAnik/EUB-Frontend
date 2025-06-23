@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useMemo } from 'react';
-import { CourseTable } from '../ui/course-table';
-import { ElectiveCourseTable } from '../ui/elective-course-table';
-import { PrefixTable } from '../ui/prefix-table';
-import { SummaryTable } from '../ui/summary-table';
-import type {
+import { CourseTable } from '@/app/programs/_components/ui/course-table';
+import { ElectiveCourseTable } from '@/app/programs/_components/ui/elective-course-table';
+import { PrefixTable } from '@/app/programs/_components/ui/prefix-table';
+import { SummaryTable } from '@/app/programs/_components/ui/summary-table';
+import {
   Course,
-  ElectiveCourse,
   CoursePrefix,
+  ElectiveCourse,
   CurriculumSummary,
-} from '../../_config/curriculum';
+} from '@/app/programs/_config/curriculum';
+import React, { useMemo } from 'react';
 
 interface CurriculumSectionProps {
   textileEngineeringCourses: Course[];

@@ -9,45 +9,44 @@ const ProgramDetails = () => {
   return (
     <ContentWrapper title='Program Details' className='space-y-8'>
       <p>
-        The Bachelor of Science in Textile Engineering at the European
-        University of Bangladesh is designed to equip students with in-depth
-        knowledge and practical skills in textile science, manufacturing, and
-        production. The program emphasizes hands-on learning, integrating
-        laboratory work, field activities, and real-world projects to prepare
-        graduates for the dynamic demands of the global textile industry.
-        EUB&apos;s experienced faculty ensures that students receive both
-        academic guidance and professional mentorship, helping them excel in
-        both local and international textile sectors.
+        The Bachelor of Science in Civil Engineering at the European University
+        of Bangladesh (EUB) equips students with the knowledge and practical
+        skills necessary for designing, constructing, and maintaining
+        infrastructure projects that shape the modern world. From bridges and
+        roads to buildings and water supply systems, the Civil Engineering
+        program empowers future engineers to innovate and contribute
+        meaningfully to sustainable development. The program is supported by
+        dedicated faculty members and modern lab facilities, ensuring that
+        students receive both theoretical understanding and hands-on experience.
       </p>
 
       <div>
         <h6 className='text-lg font-semibold'>
-          The academic year is divided into three semesters:
+          The program comprises 12 semesters, with each semester lasting four
+          months. These are distributed across the academic year as follows:
         </h6>
         <ul className='mt-2 list-disc pl-6 space-y-2'>
-          {' '}
-          <li>Spring Semester (January – April)</li>
-          <li>Summer Semester (May – August)</li>
-          <li>Fall Semester (September – December)</li>
+          <li>Spring Semester (January - April)</li>
+          <li>Summer Semester (May - August)</li>
+          <li>Fall Semester (September - December)</li>
         </ul>
       </div>
 
       <div>
         <Title variant={'title'} title='Duration' />
-        <p>The program duration is 4 years, consisting of 12 semesters.</p>
+        <p>The duration of the program is 4 years (12 semesters).</p>
       </div>
       <div>
         <Title variant={'title'} title='Credit Hour' />
-        <p>The total program requires completion of 165 credits.</p>
+        <p>The program consists of 165 credits.</p>
       </div>
       <div>
         <Title variant={'title'} title='Course Load' />
-        <p>Each semester spans 16 weeks, broken down as follows:</p>
-
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
-          <li>12 Weeks of Classes</li> <li>2 Weeks for Examinations</li>
-          <li>2 Weeks for Result Processing</li>
-        </ul>
+        <p>
+          Each semester includes 16 weeks of classes, covering theory and
+          practical courses, as well as project and thesis work in the later
+          stages of the program.
+        </p>
       </div>
       <div>
         <Title variant={'title'} title='Performance Evaluation Criterion' />

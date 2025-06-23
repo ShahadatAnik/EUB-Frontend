@@ -2,10 +2,10 @@ import React from 'react';
 import SystemTable, {
   type SystemTableColumn,
 } from '@/components/table/system-table';
-import type { ElectiveCourse } from '../../_config/curriculum';
+import type { ElectiveCourseGroup } from '../../_config/curriculum';
 
 interface ElectiveCourseTableProps {
-  courses: ElectiveCourse[];
+  electiveCourses: ElectiveCourseGroup[];
   totalCredits: number;
   caption?: string;
 }
@@ -17,22 +17,24 @@ interface FlattenedElectiveCourse {
   credits: string;
   isFirstRow?: boolean;
   rowSpan?: number;
+  groupName?: string;
 }
 
-export const ElectiveCourseTable = React.memo<ElectiveCourseTableProps>(
-  ({ courses, totalCredits, caption }) => {
+export const ElectiveCourseGroupTable = React.memo<ElectiveCourseTableProps>(
+  ({ electiveCourses, totalCredits, caption }) => {
     // Flatten the elective courses data
     const flattenedData: FlattenedElectiveCourse[] = [];
 
-    courses.forEach((course) => {
-      course.codes.forEach((code, index) => {
+    electiveCourses.forEach((group) => {
+      group.courses.forEach((course, index) => {
         flattenedData.push({
-          sl: index === 0 ? `${course.sl}\n(Any one)` : '',
-          code: code,
-          title: course.titles[index],
-          credits: index === 0 ? course.credits.toString() : '',
+          sl: `${course.sl}`,
+          code: course.code,
+          title: course.title,
+          credits: course.credits.toString(),
           isFirstRow: index === 0,
-          rowSpan: course.codes.length,
+          rowSpan: group.courses.length,
+          groupName: group.title,
         });
       });
     });
@@ -47,10 +49,11 @@ export const ElectiveCourseTable = React.memo<ElectiveCourseTableProps>(
 
     const columns: SystemTableColumn<FlattenedElectiveCourse>[] = [
       {
-        accessorKey: 'sl',
-        header: 'Sl.',
-        headerClassName: 'w-16 text-center',
-        cellClassName: 'text-center font-medium border-b',
+        accessorKey: 'groupName',
+        header: 'Group',
+        headerClassName: 'w-40 text-center',
+        cellClassName:
+          'text-center font-medium border-b bg-secondary/50 text-sm',
         cell: (value) => (
           <div className='whitespace-pre-line text-center'>{value}</div>
         ),
@@ -71,9 +74,7 @@ export const ElectiveCourseTable = React.memo<ElectiveCourseTableProps>(
         accessorKey: 'credits',
         header: 'Credits',
         headerClassName: 'w-20 text-center',
-        cellClassName: 'text-center font-medium border-l',
-        skipRender: (row) => !row.isFirstRow,
-        rowSpan: (row) => (row.isFirstRow ? row.rowSpan ?? 0 : 0),
+        cellClassName: 'text-center font-medium border-b',
       },
     ];
 
@@ -88,4 +89,4 @@ export const ElectiveCourseTable = React.memo<ElectiveCourseTableProps>(
   }
 );
 
-ElectiveCourseTable.displayName = 'ElectiveCourseTable';
+ElectiveCourseGroupTable.displayName = 'ElectiveCourseTable';

@@ -5,6 +5,7 @@ import type {
   CoursePrefix,
   CurriculumSummary,
   PerformanceEvaluation,
+  ProgramDetails,
 } from '@/app/programs/_config/curriculum';
 
 export const semesterInfo = {
@@ -13,7 +14,8 @@ export const semesterInfo = {
   fall: 'September-December',
 };
 
-export const programDetails = {
+export const programDetails: ProgramDetails = {
+  degreeName: 'Bachelor of Science in Textile Engineering',
   duration: {
     years: 4,
     semesters: 12,

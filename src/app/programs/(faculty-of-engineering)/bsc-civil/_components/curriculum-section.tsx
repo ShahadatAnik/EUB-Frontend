@@ -1,36 +1,34 @@
 'use client';
 
-import React, { useMemo } from 'react';
-import { CourseTable } from '../ui/course-table';
-import { ElectiveCourseTable } from '../ui/elective-course-table';
-import { PrefixTable } from '../ui/prefix-table';
-import { SummaryTable } from '../ui/summary-table';
-import type {
+import { CourseTable } from '@/app/programs/_components/ui/course-table';
+import { ElectiveCourseGroupTable } from '@/app/programs/_components/ui/elective-course-group-table';
+import { PrefixTable } from '@/app/programs/_components/ui/prefix-table';
+import { SummaryTable } from '@/app/programs/_components/ui/summary-table';
+import {
   Course,
-  ElectiveCourse,
   CoursePrefix,
   CurriculumSummary,
-} from '../../_config/curriculum';
+  ElectiveCourseGroup,
+} from '@/app/programs/_config/curriculum';
+import React, { useMemo } from 'react';
 
-interface EEECurriculumSectionProps {
+interface CurriculumSectionProps {
   coreCoursesData: Course[];
   generalEducationCourses: Course[];
   basicScienceCourses: Course[];
   interDisciplinaryCourses: Course[];
-  electiveCourses: ElectiveCourse[];
-  projectCourses: Course[];
+  electiveCourses: ElectiveCourseGroup[];
   coursePrefixes: CoursePrefix[];
   curriculumSummary: CurriculumSummary[];
 }
 
-export const EEECurriculumSection = React.memo<EEECurriculumSectionProps>(
+export const CurriculumSection = React.memo<CurriculumSectionProps>(
   ({
     coreCoursesData,
     generalEducationCourses,
     basicScienceCourses,
     interDisciplinaryCourses,
     electiveCourses,
-    projectCourses,
     coursePrefixes,
     curriculumSummary,
   }) => {
@@ -64,13 +62,16 @@ export const EEECurriculumSection = React.memo<EEECurriculumSectionProps>(
     );
 
     const electiveTotal = useMemo(
-      () => electiveCourses.reduce((sum, course) => sum + course.credits, 0),
+      () =>
+        electiveCourses.reduce(
+          (sum, group) =>
+            sum +
+            (group.courses
+              ? group.courses.reduce((gSum, course) => gSum + course.credits, 0)
+              : 0),
+          0
+        ),
       [electiveCourses]
-    );
-
-    const projectTotal = useMemo(
-      () => projectCourses.reduce((sum, course) => sum + course.credits, 0),
-      [projectCourses]
     );
 
     return (
@@ -81,8 +82,8 @@ export const EEECurriculumSection = React.memo<EEECurriculumSectionProps>(
         <div className='mb-8'>
           <h4 className='font-semibold mb-4'>a. List of Core Courses</h4>
           <p className='mb-4 text-sm text-gray-600'>
-            23 Theory Courses, 18 Laboratory (Lab) Courses (Total: {coreTotal}{' '}
-            Credits)
+            List of Core Courses: 28 Theory Courses & 19 Lab Courses with
+            Project/ Thesis <br /> (Total: {coreTotal} Credits)
           </p>
           <CourseTable courses={coreCoursesData} totalCredits={coreTotal} />
         </div>
@@ -90,17 +91,14 @@ export const EEECurriculumSection = React.memo<EEECurriculumSectionProps>(
         {/* Prerequisite Courses */}
         <div className='mb-8'>
           <h4 className='font-semibold mb-4'>
-            b. List of Prerequisite Courses
+            b. List of Non-Departmental Courses
           </h4>
 
           {/* General Education */}
           <div className='mb-6'>
-            <h5 className='font-medium mb-2'>
-              (I) General Education Courses: English & Others
-            </h5>
+            <h5 className='font-medium mb-2'>(I) General Education Courses:</h5>
             <p className='mb-4 text-sm text-gray-600'>
-              Any Five including GED-101 (Compulsory) (Total: {generalTotal}{' '}
-              Credits)
+              5 Theory Courses & 1 Lab (Total: {generalTotal} Credits)
             </p>
             <CourseTable
               courses={generalEducationCourses}
@@ -114,7 +112,7 @@ export const EEECurriculumSection = React.memo<EEECurriculumSectionProps>(
               (II) Basic Science and Mathematics Courses:
             </h5>
             <p className='mb-4 text-sm text-gray-600'>
-              9 Theory Courses and 3 Laboratory Courses (Total:{' '}
+              7 Theory Courses and 2 Laboratory Courses (Total:{' '}
               {basicScienceTotal} Credits)
             </p>
             <CourseTable
@@ -126,11 +124,10 @@ export const EEECurriculumSection = React.memo<EEECurriculumSectionProps>(
           {/* Inter-Disciplinary Engineering */}
           <div className='mb-6'>
             <h5 className='font-medium mb-2'>
-              (III) Inter-Disciplinary Engineering Courses
+              (III) Other Engineering Discipline Courses:
             </h5>
             <p className='mb-4 text-sm text-gray-600'>
-              2 Theory Courses, 1 Laboratory (Lab) Course (Total:{' '}
-              {interDisciplinaryTotal} Credits)
+              1 Theory Course (Total: {interDisciplinaryTotal} Credits)
             </p>
             <CourseTable
               courses={interDisciplinaryCourses}
@@ -150,16 +147,10 @@ export const EEECurriculumSection = React.memo<EEECurriculumSectionProps>(
           <p className='mb-4 text-sm text-gray-600'>
             5 Theory Courses (Total: {electiveTotal} Credits)
           </p>
-          <ElectiveCourseTable
-            courses={electiveCourses}
+          <ElectiveCourseGroupTable
+            electiveCourses={electiveCourses}
             totalCredits={electiveTotal}
           />
-        </div>
-
-        {/* Project/Thesis */}
-        <div className='mb-8'>
-          <h4 className='font-semibold mb-4'>Project/Thesis</h4>
-          <CourseTable courses={projectCourses} totalCredits={projectTotal} />
         </div>
 
         {/* Course Prefix Table */}
@@ -177,10 +168,8 @@ export const EEECurriculumSection = React.memo<EEECurriculumSectionProps>(
         <div className='mb-8'>
           <h4 className='font-semibold mb-4'>2.2.3. Course Structure</h4>
           <p className='mb-4 text-sm text-gray-600'>
-            The first digit in the number indicates the year/level for which the
-            course is intended, the second digit in the number indicates for the
-            Department and the last digit, if odd, indicates a theory course and
-            if even, indicates a laboratory course.
+            The B.Sc in Civil Engineering Program consists of the following
+            categories of courses:
           </p>
           <SummaryTable summaryData={curriculumSummary} />
         </div>
@@ -189,4 +178,4 @@ export const EEECurriculumSection = React.memo<EEECurriculumSectionProps>(
   }
 );
 
-EEECurriculumSection.displayName = 'EEECurriculumSection';
+CurriculumSection.displayName = 'EEECurriculumSection';

@@ -3,6 +3,7 @@ export interface Course {
   code: string;
   title: string;
   credits: number;
+  contactHours?: number;
 }
 
 export interface ElectiveCourse {
@@ -10,6 +11,11 @@ export interface ElectiveCourse {
   codes: string[];
   titles: string[];
   credits: number;
+}
+
+export interface ElectiveCourseGroup {
+  title: string;
+  courses: Course[];
 }
 
 export interface SemesterCourse {
@@ -39,6 +45,8 @@ export interface CoursePrefix {
 export interface CurriculumSummary {
   category: string;
   credits: number;
+  sessional_courses?: number;
+  theory_courses?: number;
   percentage?: string;
 }
 
@@ -51,6 +59,7 @@ export interface PerformanceEvaluation {
 }
 
 export interface ProgramDetails {
+  degreeName: string;
   duration: {
     years: number | string;
     semesters: number | string;

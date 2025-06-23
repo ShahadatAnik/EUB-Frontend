@@ -31,6 +31,7 @@ export type SystemTableColumn<T> = {
   type?: CellType;
   rowSpan?: (row: T, index: number) => number;
   skipRender?: (row: T, index: number) => boolean;
+  isHidden?: boolean;
 };
 
 interface IProps<T> {
@@ -61,7 +62,9 @@ function SystemTable<T>({
   isLoading,
   rowClassName,
 }: IProps<T>) {
-  const headers = columns.map((column) => column.header || column.accessorKey);
+  const headers = columns
+    .filter((column) => column.isHidden !== true)
+    .map((column) => column.header || column.accessorKey);
 
   return (
     <Table className={cn('border', className)}>
@@ -109,37 +112,39 @@ function SystemTable<T>({
                 rowClassName ? rowClassName(item as T, rowIndex) : undefined
               }
             >
-              {columns.map((column, colIndex) => {
-                // Skip rendering if skipRender function returns true
-                if (
-                  column.skipRender &&
-                  column.skipRender(item as T, rowIndex)
-                ) {
-                  return null;
-                }
+              {columns
+                .filter((column) => column.isHidden !== true)
+                .map((column, colIndex) => {
+                  // Skip rendering if skipRender function returns true
+                  if (
+                    column.skipRender &&
+                    column.skipRender(item as T, rowIndex)
+                  ) {
+                    return null;
+                  }
 
-                const rowSpan = column.rowSpan
-                  ? column.rowSpan(item as T, rowIndex)
-                  : 1;
-                const cellValue = item[column.accessorKey as string];
+                  const rowSpan = column.rowSpan
+                    ? column.rowSpan(item as T, rowIndex)
+                    : 1;
+                  const cellValue = item[column.accessorKey as string];
 
-                return (
-                  <TableCell
-                    key={colIndex}
-                    className={cn(
-                      'border-r last:border-r-0',
-                      column.cellClassName
-                    )}
-                    rowSpan={rowSpan > 1 ? rowSpan : undefined}
-                  >
-                    {column.cell ? (
-                      column.cell(cellValue as string, item as T, rowIndex)
-                    ) : (
-                      <RenderCell type={column.type} value={cellValue} />
-                    )}
-                  </TableCell>
-                );
-              })}
+                  return (
+                    <TableCell
+                      key={colIndex}
+                      className={cn(
+                        'border-r last:border-r-0',
+                        column.cellClassName
+                      )}
+                      rowSpan={rowSpan > 1 ? rowSpan : undefined}
+                    >
+                      {column.cell ? (
+                        column.cell(cellValue as string, item as T, rowIndex)
+                      ) : (
+                        <RenderCell type={column.type} value={cellValue} />
+                      )}
+                    </TableCell>
+                  );
+                })}
             </TableRow>
           ))}
       </TableBody>

@@ -104,9 +104,8 @@ export const DegreeRequirementsSection =
             2.4.3. Total Credits of Course:
           </h4>
           <p>
-            A student will be awarded Bachelor of Science (B. Sc.) in Textile
-            Engineering degree after completion of a minimum{' '}
-            {programDetails.creditHours}.
+            A student will be awarded {programDetails.degreeName} degree after
+            completion of a minimum {programDetails.creditHours}.
           </p>
         </div>
 
