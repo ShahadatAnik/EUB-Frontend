@@ -4,7 +4,7 @@ import ContentWrapper from '../content-wrapper';
 import { columns, useGetRegularClassRoutine } from '@/hooks/use-get-course';
 
 const ClassRoutine = () => {
-  const { data } = useGetRegularClassRoutine('BSC-CIVIL');
+  const { data } = useGetRegularClassRoutine('BSC-EEE');
   return (
     <ContentWrapper title='Class Routine'>
       <SystemTable caption='Class Routine' data={data!} columns={columns} />

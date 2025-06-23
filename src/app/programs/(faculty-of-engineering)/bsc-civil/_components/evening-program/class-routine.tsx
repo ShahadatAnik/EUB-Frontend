@@ -5,7 +5,6 @@ import { columns, useGetEveningClassRoutine } from '@/hooks/use-get-course';
 
 const ClassRoutine = () => {
   const { data } = useGetEveningClassRoutine('BSC-CIVIL');
-
   return (
     <ContentWrapper title='Class Routine'>
       <SystemTable caption='Class Routine' data={data!} columns={columns} />

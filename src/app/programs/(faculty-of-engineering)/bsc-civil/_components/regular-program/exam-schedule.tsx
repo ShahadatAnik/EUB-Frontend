@@ -4,7 +4,7 @@ import ContentWrapper from '../content-wrapper';
 import { columns, useGetRegularExamSchedule } from '@/hooks/use-get-course';
 
 const ExamSchedule = () => {
-  const { data } = useGetRegularExamSchedule('BSC-CIVIL');
+  const { data } = useGetRegularExamSchedule('BSC-EEE');
   return (
     <ContentWrapper title='Exam Schedule'>
       <SystemTable caption='Exam Schedule' data={data!} columns={columns} />
