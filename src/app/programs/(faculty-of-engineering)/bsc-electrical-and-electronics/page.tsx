@@ -6,17 +6,17 @@ import PageHeader from '@/components/page-header';
 import Content from './_components/content';
 
 const Page = () => {
-	return (
-		<>
-			<PageHeader
-				image='/images/cse-2.jpg'
-				title='B. Sc. in Electrical and Electronic Engineering (EEE)'
-			/>
-			<PageContainer>
-				<Content />
-			</PageContainer>
-		</>
-	);
+  return (
+    <>
+      <PageHeader
+        image='/images/cse-2.jpg'
+        title='B. Sc. in Electrical and Electronic Engineering (EEE)'
+      />
+      <PageContainer>
+        <Content />
+      </PageContainer>
+    </>
+  );
 };
 
 export default Page;

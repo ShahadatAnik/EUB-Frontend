@@ -7,12 +7,12 @@ import SystemTable from '@/components/table/system-table';
 import ContentWrapper from '../content-wrapper';
 
 const ClassRoutine = () => {
-	const { data } = useGetRegularClassRoutine('BSC-TEXTILE');
-	return (
-		<ContentWrapper title='Class Routine'>
-			<SystemTable caption='Class Routine' data={data!} columns={columns} />
-		</ContentWrapper>
-	);
+  const { data } = useGetRegularClassRoutine('BSC-TEXTILE');
+  return (
+    <ContentWrapper title='Class Routine'>
+      <SystemTable caption='Class Routine' data={data!} columns={columns} />
+    </ContentWrapper>
+  );
 };
 
 export default ClassRoutine;

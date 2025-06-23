@@ -3,7 +3,7 @@ import React from 'react';
 import MessageFromChairman from '@/app/programs/_components/message-from-chairman';
 
 const Chairman = () => {
-	return <MessageFromChairman departmentName='BSC-CSE' />;
+  return <MessageFromChairman departmentName='BSC-CSE' />;
 };
 
 export default Chairman;

@@ -7,12 +7,12 @@ import SystemTable from '@/components/table/system-table';
 import ContentWrapper from '../content-wrapper';
 
 const ExamSchedule = () => {
-	const { data } = useGetEveningExamSchedule('BSC-CSE');
-	return (
-		<ContentWrapper title='Exam Schedule'>
-			<SystemTable caption='Exam Schedule' data={data!} columns={columns} />
-		</ContentWrapper>
-	);
+  const { data } = useGetEveningExamSchedule('BSC-CSE');
+  return (
+    <ContentWrapper title='Exam Schedule'>
+      <SystemTable caption='Exam Schedule' data={data!} columns={columns} />
+    </ContentWrapper>
+  );
 };
 
 export default ExamSchedule;

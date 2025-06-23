@@ -10,93 +10,106 @@ import { getTenders } from '@/server/get';
 
 import ClientPagination from '@/components/client-pagination';
 import PdfDownloadButton from '@/components/pdf-download-btn';
-import SystemTable, { SystemTableColumn } from '@/components/table/system-table';
+import SystemTable, {
+  SystemTableColumn,
+} from '@/components/table/system-table';
 import { Input } from '@/components/ui/input';
 
 const columns: SystemTableColumn<ITender>[] = [
-	{
-		header: 'Serial No',
-		cell: (_, row, index) => index + 1,
-		headerClassName: 'w-[80px]',
-	},
+  {
+    header: 'Serial No',
+    cell: (_, row, index) => index + 1,
+    headerClassName: 'w-[80px]',
+  },
 
-	{
-		accessorKey: 'code',
-		header: 'Code',
-		headerClassName: 'w-[100px]',
-	},
+  {
+    accessorKey: 'code',
+    header: 'Code',
+    headerClassName: 'w-[100px]',
+  },
 
-	{
-		accessorKey: 'type',
-		header: 'Type',
-		headerClassName: 'w-[200px]',
-	},
+  {
+    accessorKey: 'type',
+    header: 'Type',
+    headerClassName: 'w-[200px]',
+  },
 
-	{
-		accessorKey: 'title',
-		header: 'Title',
-	},
+  {
+    accessorKey: 'title',
+    header: 'Title',
+  },
 
-	{
-		accessorKey: 'published_date',
-		header: 'Published Date',
-		headerClassName: 'w-[120px]',
-		type: 'date',
-	},
+  {
+    accessorKey: 'published_date',
+    header: 'Published Date',
+    headerClassName: 'w-[120px]',
+    type: 'date',
+  },
 
-	{
-		accessorKey: 'file',
-		header: 'Action',
-		cell: (value) => {
-			return <PdfDownloadButton pdf={value} />;
-		},
-		headerClassName: 'w-[100px]',
-	},
+  {
+    accessorKey: 'file',
+    header: 'Action',
+    cell: (value) => {
+      return <PdfDownloadButton pdf={value} />;
+    },
+    headerClassName: 'w-[100px]',
+  },
 ];
 
 interface ITenderProps {
-	title: string;
-	type: 'std_for_goods' | 'std_for_works' | 'safe' | 'evaluation';
+  title: string;
+  type: 'std_for_goods' | 'std_for_works' | 'safe' | 'evaluation';
 }
 
 const Tender: React.FC<ITenderProps> = ({ title, type }) => {
-	const [debouncedValue, setValue] = useDebounceValue('', 500);
+  const [debouncedValue, setValue] = useDebounceValue('', 500);
 
-	const [page, setPage] = useState(1);
-	const limit = 10;
+  const [page, setPage] = useState(1);
+  const limit = 10;
 
-	const { data, isLoading } = useQuery({
-		queryKey: ['tenders', type, page, limit, debouncedValue],
-		queryFn: async () =>
-			await getTenders({
-				page,
-				limit,
-				q: debouncedValue,
-				table_name: type,
-			}),
-	});
+  const { data, isLoading } = useQuery({
+    queryKey: ['tenders', type, page, limit, debouncedValue],
+    queryFn: async () =>
+      await getTenders({
+        page,
+        limit,
+        q: debouncedValue,
+        table_name: type,
+      }),
+  });
 
-	return (
-		<div id={type} className='space-y-8'>
-			<div className='flex flex-col justify-between gap-2 lg:flex-row lg:items-center'>
-				<h2 className='text-lg font-semibold text-primary lg:text-2xl'>{title}</h2>
-				<Input
-					onChange={(e) => setValue(e.target.value)}
-					type='search'
-					placeholder='e.g. Code, Type, Title'
-					className='lg:w-[400px]'
-				/>
-			</div>
+  return (
+    <div id={type} className='space-y-8'>
+      <div className='flex flex-col justify-between gap-2 lg:flex-row lg:items-center'>
+        <h2 className='text-lg font-semibold text-primary lg:text-2xl'>
+          {title}
+        </h2>
+        <Input
+          onChange={(e) => setValue(e.target.value)}
+          type='search'
+          placeholder='e.g. Code, Type, Title'
+          className='lg:w-[400px]'
+        />
+      </div>
 
-			<SystemTable isLoading={isLoading} data={data?.data || []} columns={columns} />
+      <SystemTable
+        isLoading={isLoading}
+        data={data?.data || []}
+        columns={columns}
+      />
 
-			<div className='flex justify-center'>
-				{isLoading
-					? null
-					: data && <ClientPagination pagination={data?.pagination} setPage={setPage} />}
-			</div>
-		</div>
-	);
+      <div className='flex justify-center'>
+        {isLoading
+          ? null
+          : data && (
+              <ClientPagination
+                pagination={data?.pagination}
+                setPage={setPage}
+              />
+            )}
+      </div>
+    </div>
+  );
 };
 
 export default Tender;

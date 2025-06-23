@@ -7,13 +7,13 @@ import { generateMetaData } from '@/lib/utils';
 import Content from './_components/content';
 
 export const metadata = generateMetaData({
-	title: 'Dean',
-	description: 'The dean of the European University of Bangladesh',
+  title: 'Dean',
+  description: 'The dean of the European University of Bangladesh',
 });
 
 const Page = async () => {
-	const data = await getAuthoritiesTreasurer();
-	return <Content data={data} />;
+  const data = await getAuthoritiesTreasurer();
+  return <Content data={data} />;
 };
 
 export default Page;

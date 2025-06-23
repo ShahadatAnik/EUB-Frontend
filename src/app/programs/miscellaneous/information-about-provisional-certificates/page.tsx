@@ -8,14 +8,14 @@ import PageHeader from '@/components/page-header';
 import Content from './_components/content';
 
 export default async function Page() {
-	const data = await getInformationProvisionalCertificates();
+  const data = await getInformationProvisionalCertificates();
 
-	return (
-		<>
-			<PageHeader title='Information about Provisional Certificates' />
-			<PageContainer>
-				<Content data={data} />
-			</PageContainer>
-		</>
-	);
+  return (
+    <>
+      <PageHeader title='Information about Provisional Certificates' />
+      <PageContainer>
+        <Content data={data} />
+      </PageContainer>
+    </>
+  );
 }

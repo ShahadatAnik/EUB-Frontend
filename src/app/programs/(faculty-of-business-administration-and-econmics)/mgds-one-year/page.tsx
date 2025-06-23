@@ -6,17 +6,17 @@ import PageHeader from '@/components/page-header';
 import Content from './_components/content';
 
 const Page = () => {
-	return (
-		<>
-			<PageHeader
-				image='/images/cse-2.jpg'
-				title='Master of Governance and Development Studies (MGDS)'
-			/>
-			<PageContainer>
-				<Content />
-			</PageContainer>
-		</>
-	);
+  return (
+    <>
+      <PageHeader
+        image='/images/cse-2.jpg'
+        title='Master of Governance and Development Studies (MGDS)'
+      />
+      <PageContainer>
+        <Content />
+      </PageContainer>
+    </>
+  );
 };
 
 export default Page;

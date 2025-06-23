@@ -7,17 +7,17 @@ import { cn } from '@/lib/utils';
 import { buttonVariants } from './ui/button';
 
 const QuickLinks: React.FC<{ className?: string }> = ({ className }) => {
-	return (
-		<div className={cn('space-y-6', className)}>
-			<Link
-				href={'/notices'}
-				className={buttonVariants({
-					className: 'w-full',
-				})}
-			>
-				View All Notices
-			</Link>
-			{/* <Link
+  return (
+    <div className={cn('space-y-6', className)}>
+      <Link
+        href={'/notices'}
+        className={buttonVariants({
+          className: 'w-full',
+        })}
+      >
+        View All Notices
+      </Link>
+      {/* <Link
         href={'/schedule-events'}
         className={buttonVariants({
           className: 'w-full',
@@ -27,7 +27,7 @@ const QuickLinks: React.FC<{ className?: string }> = ({ className }) => {
         Schedule Events
       </Link> */}
 
-			{/* <Link
+      {/* <Link
         href={'/degree-verification'}
         className={buttonVariants({
           variant: 'outline',
@@ -38,26 +38,26 @@ const QuickLinks: React.FC<{ className?: string }> = ({ className }) => {
         Degree Verification
       </Link> */}
 
-			<Link
-				href={'/online-admission'}
-				className={buttonVariants({
-					variant: 'outline',
-					className: 'w-full',
-				})}
-			>
-				Apply Online
-			</Link>
+      <Link
+        href={'/online-admission'}
+        className={buttonVariants({
+          variant: 'outline',
+          className: 'w-full',
+        })}
+      >
+        Apply Online
+      </Link>
 
-			<Link
-				href={'/career'}
-				className={buttonVariants({
-					className: 'w-full font-bold',
-				})}
-			>
-				Career Opportunity
-			</Link>
-		</div>
-	);
+      <Link
+        href={'/career'}
+        className={buttonVariants({
+          className: 'w-full font-bold',
+        })}
+      >
+        Career Opportunity
+      </Link>
+    </div>
+  );
 };
 
 export default QuickLinks;

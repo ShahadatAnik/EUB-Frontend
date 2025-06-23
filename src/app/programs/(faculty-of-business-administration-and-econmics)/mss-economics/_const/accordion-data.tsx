@@ -18,83 +18,83 @@ import RProgramDetails from '../_components/regular-program/program-details';
 import StudentServiceDesk from '../_components/student-service-desk';
 
 const accordions: IAcademicAccordion[] = [
-	{
-		title: 'Overview',
+  {
+    title: 'Overview',
 
-		children: [
-			{
-				title: 'About Us',
-				content: <AboutUs />,
-			},
-			{
-				title: 'Message from the Chairman',
-				content: <Chairman />,
-			},
-		],
-	},
+    children: [
+      {
+        title: 'About Us',
+        content: <AboutUs />,
+      },
+      {
+        title: 'Message from the Chairman',
+        content: <Chairman />,
+      },
+    ],
+  },
 
-	{
-		title: 'Regular Program',
+  {
+    title: 'Regular Program',
 
-		children: [
-			{
-				title: 'Program Details',
-				content: <RProgramDetails />,
-			},
-			{
-				title: 'Curriculum',
-				content: <RCurriculum />,
-			},
-			{
-				title: 'Course Map and Path',
-				content: <RCoursePath />,
-			},
-			{
-				title: 'Degree Requirements',
-				content: <RDegreeRequirements />,
-			},
-			{
-				title: 'Course Offer',
-				content: <RCourseOffer />,
-			},
-			{
-				title: 'Class Routine',
-				content: <ClassRoutine department='MSS-ECONOMICS' />,
-			},
-			{
-				title: 'Exam Schedule',
-				content: <ExamSchedule department='MSS-ECONOMICS' />,
-			},
-		],
-	},
-	{
-		title: 'Alumni & Industry',
-		content: <AlumniIndustry />,
-	},
-	{
-		title: 'Faculty Members & Staff',
-		content: <CoreFacultyMembers />,
-	},
-	{
-		title: 'Admission Information',
-		href: '/admission-information',
-	},
-	{
-		title: 'Financial Information',
-		href: '/financial-information',
-	},
-	{
-		title: 'Notices',
-		content: <Notices department='MSS-ECONOMICS' />,
-	},
-	{
-		title: 'News & Events',
-		content: <NewsEvents />,
-	},
-	{
-		title: 'Student Service Desk',
-		content: <StudentServiceDesk />,
-	},
+    children: [
+      {
+        title: 'Program Details',
+        content: <RProgramDetails />,
+      },
+      {
+        title: 'Curriculum',
+        content: <RCurriculum />,
+      },
+      {
+        title: 'Course Map and Path',
+        content: <RCoursePath />,
+      },
+      {
+        title: 'Degree Requirements',
+        content: <RDegreeRequirements />,
+      },
+      {
+        title: 'Course Offer',
+        content: <RCourseOffer />,
+      },
+      {
+        title: 'Class Routine',
+        content: <ClassRoutine department='MSS-ECONOMICS' />,
+      },
+      {
+        title: 'Exam Schedule',
+        content: <ExamSchedule department='MSS-ECONOMICS' />,
+      },
+    ],
+  },
+  {
+    title: 'Alumni & Industry',
+    content: <AlumniIndustry />,
+  },
+  {
+    title: 'Faculty Members & Staff',
+    content: <CoreFacultyMembers />,
+  },
+  {
+    title: 'Admission Information',
+    href: '/admission-information',
+  },
+  {
+    title: 'Financial Information',
+    href: '/financial-information',
+  },
+  {
+    title: 'Notices',
+    content: <Notices department='MSS-ECONOMICS' />,
+  },
+  {
+    title: 'News & Events',
+    content: <NewsEvents />,
+  },
+  {
+    title: 'Student Service Desk',
+    content: <StudentServiceDesk />,
+  },
 ];
 
 export default accordions;

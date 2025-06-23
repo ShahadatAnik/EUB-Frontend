@@ -10,15 +10,15 @@ import data from '../_const/offices-data';
 import Content from './_components/content';
 
 const Page = () => {
-	const pathName = usePathname();
-	const title = data.find((item) => item.href === pathName)?.title;
+  const pathName = usePathname();
+  const title = data.find((item) => item.href === pathName)?.title;
 
-	return (
-		<>
-			<PageHeader title={title || 'Office Details'} />
-			<Content />
-		</>
-	);
+  return (
+    <>
+      <PageHeader title={title || 'Office Details'} />
+      <Content />
+    </>
+  );
 };
 
 export default Page;

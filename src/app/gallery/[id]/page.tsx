@@ -7,17 +7,17 @@ import { generateMetaData } from '@/lib/utils';
 import Content from './_components/content';
 
 export const metadata = generateMetaData({
-	title: 'Gallery Details',
-	description: 'The gallery details of the European University of Bangladesh',
+  title: 'Gallery Details',
+  description: 'The gallery details of the European University of Bangladesh',
 });
 
 const Page = () => {
-	return (
-		<>
-			<PageHeader title='Gallery Details' />
-			<Content />
-		</>
-	);
+  return (
+    <>
+      <PageHeader title='Gallery Details' />
+      <Content />
+    </>
+  );
 };
 
 export default Page;

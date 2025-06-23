@@ -8,14 +8,14 @@ import PageHeader from '@/components/page-header';
 import Content from './_components/content';
 
 export default async function Page() {
-	const data = await getAcademicCalender();
+  const data = await getAcademicCalender();
 
-	return (
-		<>
-			<PageHeader title='Academic Calendar' />
-			<PageContainer>
-				<Content initialData={data} />
-			</PageContainer>
-		</>
-	);
+  return (
+    <>
+      <PageHeader title='Academic Calendar' />
+      <PageContainer>
+        <Content initialData={data} />
+      </PageContainer>
+    </>
+  );
 }

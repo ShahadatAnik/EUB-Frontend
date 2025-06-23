@@ -1,122 +1,122 @@
 [
-	{
-		"uuid": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-		"title": "Annual Science Fair 2023",
-		"subtitle": "Exploring Innovations in Technology",
-		"description": "Join us for the most anticipated science fair of the year, showcasing groundbreaking projects from our brightest students.",
-		"content": "The Annual Science Fair will take place on November 15th, 2023, at the University Main Hall. This event will feature over 50 projects ranging from renewable energy solutions to advanced robotics.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-10-01",
-		"documents": []
-	},
-	{
-		"uuid": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
-		"title": "New Scholarship Program Announced",
-		"subtitle": "Supporting Future Leaders",
-		"description": "The university has launched a new scholarship program aimed at supporting students from underrepresented communities.",
-		"content": "Starting from the 2024 academic year, the Future Leaders Scholarship will provide full tuition coverage and a living stipend to 20 selected students annually.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-10-05",
-		"documents": []
-	},
-	{
-		"uuid": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
-		"title": "Campus Expansion Project",
-		"subtitle": "Building the Future",
-		"description": "The university has announced a major expansion project to accommodate the growing student population.",
-		"content": "The expansion will include a new library, two additional dormitories, and a state-of-the-art research center. Construction is set to begin in early 2024.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-10-10",
-		"documents": []
-	},
-	{
-		"uuid": "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
-		"title": "Guest Lecture Series: AI and Ethics",
-		"subtitle": "Navigating the Future of Artificial Intelligence",
-		"description": "Esteemed AI researcher Dr. Jane Smith will be delivering a series of lectures on the ethical implications of artificial intelligence.",
-		"content": "The lecture series will run from November 1st to November 3rd, 2023, in the University Auditorium. Topics will include AI in healthcare, autonomous vehicles, and data privacy.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-10-15",
-		"documents": []
-	},
-	{
-		"uuid": "5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t",
-		"title": "University Wins Research Grant",
-		"subtitle": "Advancing Renewable Energy Solutions",
-		"description": "The university has been awarded a $5 million grant to fund research in renewable energy technologies.",
-		"content": "The grant will support a five-year research project focused on developing more efficient solar panels and energy storage systems.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-10-20",
-		"documents": []
-	},
-	{
-		"uuid": "6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u",
-		"title": "Homecoming Weekend 2023",
-		"subtitle": "Celebrating Our Alumni",
-		"description": "Join us for a weekend of festivities as we welcome back our alumni for Homecoming 2023.",
-		"content": "Events will include a parade, football game, alumni awards ceremony, and a gala dinner. The weekend will conclude with a fireworks display.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-10-25",
-		"documents": []
-	},
-	{
-		"uuid": "7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v",
-		"title": "New Art Exhibition Opens",
-		"subtitle": "Exploring Modern Art",
-		"description": "The university's art gallery is proud to present a new exhibition featuring works by contemporary artists.",
-		"content": "The exhibition, titled 'Modern Perspectives,' will run from November 10th to December 10th, 2023. It includes paintings, sculptures, and digital art installations.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-10-30",
-		"documents": []
-	},
-	{
-		"uuid": "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
-		"title": "University Launches Online Courses",
-		"subtitle": "Expanding Access to Education",
-		"description": "The university has introduced a range of online courses to make education more accessible to students worldwide.",
-		"content": "Starting in January 2024, students can enroll in online courses in various disciplines, including business, computer science, and humanities.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-11-01",
-		"documents": []
-	},
-	{
-		"uuid": "9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x",
-		"title": "Research Symposium 2023",
-		"subtitle": "Showcasing Student Research",
-		"description": "The annual Research Symposium will highlight the innovative research conducted by our students.",
-		"content": "The symposium will take place on November 20th, 2023, and will feature presentations, poster sessions, and panel discussions.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-11-05",
-		"documents": []
-	},
-	{
-		"uuid": "0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y",
-		"title": "University Partners with Tech Giant",
-		"subtitle": "Collaborating on AI Research",
-		"description": "The university has entered into a partnership with a leading tech company to advance AI research.",
-		"content": "The collaboration will focus on developing AI applications for healthcare, with a particular emphasis on diagnostic tools and personalized medicine.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-11-10",
-		"documents": []
-	},
-	{
-		"uuid": "1k2l3m4n-5o6p-7q8r-9s0t-1u2v3w4x5y6z",
-		"title": "Winter Graduation Ceremony",
-		"subtitle": "Celebrating Our Graduates",
-		"description": "Join us as we celebrate the achievements of our winter graduates.",
-		"content": "The graduation ceremony will be held on December 15th, 2023, at the University Stadium. Family and friends are welcome to attend.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-11-15",
-		"documents": []
-	},
-	{
-		"uuid": "2l3m4n5o-6p7q-8r9s-0t1u-2v3w4x5y6z7a",
-		"title": "New Sports Complex Opens",
-		"subtitle": "Enhancing Student Life",
-		"description": "The university has unveiled a new sports complex, offering state-of-the-art facilities for students and staff.",
-		"content": "The complex includes a swimming pool, basketball courts, a fitness center, and a climbing wall. It is open to all university members starting December 1st, 2023.",
-		"cover_image": "/placeholder.svg",
-		"published_date": "2023-11-20",
-		"documents": []
-	}
+  {
+    "uuid": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+    "title": "Annual Science Fair 2023",
+    "subtitle": "Exploring Innovations in Technology",
+    "description": "Join us for the most anticipated science fair of the year, showcasing groundbreaking projects from our brightest students.",
+    "content": "The Annual Science Fair will take place on November 15th, 2023, at the University Main Hall. This event will feature over 50 projects ranging from renewable energy solutions to advanced robotics.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-10-01",
+    "documents": []
+  },
+  {
+    "uuid": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+    "title": "New Scholarship Program Announced",
+    "subtitle": "Supporting Future Leaders",
+    "description": "The university has launched a new scholarship program aimed at supporting students from underrepresented communities.",
+    "content": "Starting from the 2024 academic year, the Future Leaders Scholarship will provide full tuition coverage and a living stipend to 20 selected students annually.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-10-05",
+    "documents": []
+  },
+  {
+    "uuid": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+    "title": "Campus Expansion Project",
+    "subtitle": "Building the Future",
+    "description": "The university has announced a major expansion project to accommodate the growing student population.",
+    "content": "The expansion will include a new library, two additional dormitories, and a state-of-the-art research center. Construction is set to begin in early 2024.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-10-10",
+    "documents": []
+  },
+  {
+    "uuid": "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
+    "title": "Guest Lecture Series: AI and Ethics",
+    "subtitle": "Navigating the Future of Artificial Intelligence",
+    "description": "Esteemed AI researcher Dr. Jane Smith will be delivering a series of lectures on the ethical implications of artificial intelligence.",
+    "content": "The lecture series will run from November 1st to November 3rd, 2023, in the University Auditorium. Topics will include AI in healthcare, autonomous vehicles, and data privacy.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-10-15",
+    "documents": []
+  },
+  {
+    "uuid": "5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t",
+    "title": "University Wins Research Grant",
+    "subtitle": "Advancing Renewable Energy Solutions",
+    "description": "The university has been awarded a $5 million grant to fund research in renewable energy technologies.",
+    "content": "The grant will support a five-year research project focused on developing more efficient solar panels and energy storage systems.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-10-20",
+    "documents": []
+  },
+  {
+    "uuid": "6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u",
+    "title": "Homecoming Weekend 2023",
+    "subtitle": "Celebrating Our Alumni",
+    "description": "Join us for a weekend of festivities as we welcome back our alumni for Homecoming 2023.",
+    "content": "Events will include a parade, football game, alumni awards ceremony, and a gala dinner. The weekend will conclude with a fireworks display.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-10-25",
+    "documents": []
+  },
+  {
+    "uuid": "7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v",
+    "title": "New Art Exhibition Opens",
+    "subtitle": "Exploring Modern Art",
+    "description": "The university's art gallery is proud to present a new exhibition featuring works by contemporary artists.",
+    "content": "The exhibition, titled 'Modern Perspectives,' will run from November 10th to December 10th, 2023. It includes paintings, sculptures, and digital art installations.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-10-30",
+    "documents": []
+  },
+  {
+    "uuid": "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
+    "title": "University Launches Online Courses",
+    "subtitle": "Expanding Access to Education",
+    "description": "The university has introduced a range of online courses to make education more accessible to students worldwide.",
+    "content": "Starting in January 2024, students can enroll in online courses in various disciplines, including business, computer science, and humanities.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-11-01",
+    "documents": []
+  },
+  {
+    "uuid": "9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x",
+    "title": "Research Symposium 2023",
+    "subtitle": "Showcasing Student Research",
+    "description": "The annual Research Symposium will highlight the innovative research conducted by our students.",
+    "content": "The symposium will take place on November 20th, 2023, and will feature presentations, poster sessions, and panel discussions.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-11-05",
+    "documents": []
+  },
+  {
+    "uuid": "0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y",
+    "title": "University Partners with Tech Giant",
+    "subtitle": "Collaborating on AI Research",
+    "description": "The university has entered into a partnership with a leading tech company to advance AI research.",
+    "content": "The collaboration will focus on developing AI applications for healthcare, with a particular emphasis on diagnostic tools and personalized medicine.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-11-10",
+    "documents": []
+  },
+  {
+    "uuid": "1k2l3m4n-5o6p-7q8r-9s0t-1u2v3w4x5y6z",
+    "title": "Winter Graduation Ceremony",
+    "subtitle": "Celebrating Our Graduates",
+    "description": "Join us as we celebrate the achievements of our winter graduates.",
+    "content": "The graduation ceremony will be held on December 15th, 2023, at the University Stadium. Family and friends are welcome to attend.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-11-15",
+    "documents": []
+  },
+  {
+    "uuid": "2l3m4n5o-6p7q-8r9s-0t1u-2v3w4x5y6z7a",
+    "title": "New Sports Complex Opens",
+    "subtitle": "Enhancing Student Life",
+    "description": "The university has unveiled a new sports complex, offering state-of-the-art facilities for students and staff.",
+    "content": "The complex includes a swimming pool, basketball courts, a fitness center, and a climbing wall. It is open to all university members starting December 1st, 2023.",
+    "cover_image": "/placeholder.svg",
+    "published_date": "2023-11-20",
+    "documents": []
+  }
 ]

@@ -6,15 +6,15 @@ import PageHeader from '@/components/page-header';
 import Content from './_components/content';
 
 const Page = () => {
-	return (
-		<>
-			<PageHeader title='Journal' />
+  return (
+    <>
+      <PageHeader title='Journal' />
 
-			<PageContainer>
-				<Content />
-			</PageContainer>
-		</>
-	);
+      <PageContainer>
+        <Content />
+      </PageContainer>
+    </>
+  );
 };
 
 export default Page;

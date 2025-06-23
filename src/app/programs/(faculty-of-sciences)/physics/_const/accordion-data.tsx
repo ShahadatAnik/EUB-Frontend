@@ -10,49 +10,49 @@ import Chairman from '../_components/overview/chairman';
 import StudentServiceDesk from '../_components/student-service-desk';
 
 const accordions: IAcademicAccordion[] = [
-	{
-		title: 'Overview',
+  {
+    title: 'Overview',
 
-		children: [
-			{
-				title: 'About Us',
-				content: <AboutUs />,
-			},
-			{
-				title: 'Message from the Chairman',
-				content: <Chairman />,
-			},
-		],
-	},
+    children: [
+      {
+        title: 'About Us',
+        content: <AboutUs />,
+      },
+      {
+        title: 'Message from the Chairman',
+        content: <Chairman />,
+      },
+    ],
+  },
 
-	{
-		title: 'Laboratories & Resources',
-		content: <LaboratoriesResources />,
-	},
-	{
-		title: 'Faculty Members & Staff',
-		content: <CoreFacultyMembers />,
-	},
-	{
-		title: 'Admission Information',
-		href: '/admission-information',
-	},
-	{
-		title: 'Financial Information',
-		href: '/financial-information',
-	},
-	{
-		title: 'Notices',
-		content: <Notices department='Physics' />,
-	},
-	{
-		title: 'News & Events',
-		content: <NewsEvents />,
-	},
-	{
-		title: 'Student Service Desk',
-		content: <StudentServiceDesk />,
-	},
+  {
+    title: 'Laboratories & Resources',
+    content: <LaboratoriesResources />,
+  },
+  {
+    title: 'Faculty Members & Staff',
+    content: <CoreFacultyMembers />,
+  },
+  {
+    title: 'Admission Information',
+    href: '/admission-information',
+  },
+  {
+    title: 'Financial Information',
+    href: '/financial-information',
+  },
+  {
+    title: 'Notices',
+    content: <Notices department='Physics' />,
+  },
+  {
+    title: 'News & Events',
+    content: <NewsEvents />,
+  },
+  {
+    title: 'Student Service Desk',
+    content: <StudentServiceDesk />,
+  },
 ];
 
 export default accordions;

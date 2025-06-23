@@ -11,20 +11,20 @@ import Slider, { ISlide } from '../../../components/slider';
 import Offers from './offers';
 
 const Hero: React.FC<{
-	offers: IOffer[];
-	hero: IHero[];
+  offers: IOffer[];
+  hero: IHero[];
 }> = ({ offers, hero }) => {
-	const sliders: ISlide[] = hero.map((item) => ({
-		img: process.env.NEXT_PUBLIC_IMAGE_BASE_URL + item.file,
-		alt: item.title,
-	}));
+  const sliders: ISlide[] = hero.map((item) => ({
+    img: process.env.NEXT_PUBLIC_IMAGE_BASE_URL + item.file,
+    alt: item.title,
+  }));
 
-	return (
-		<div className='relative h-[100svh] w-full'>
-			<Slider sliders={sliders} />
-			<Offers data={offers} />
-		</div>
-	);
+  return (
+    <div className='relative h-[100svh] w-full'>
+      <Slider sliders={sliders} />
+      <Offers data={offers} />
+    </div>
+  );
 };
 
 export default Hero;

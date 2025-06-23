@@ -4,10 +4,10 @@ import { CourseMapSection } from '@/app/programs/_components/sections/course-map
 import { getCurriculumData } from '../../../_const/get-curriculum-data';
 
 export default function CoursePath() {
-	const data = getCurriculumData('regular');
-	return (
-		<ContentWrapper title='Course Map and Path'>
-			<CourseMapSection semesterData={data.semesterData} />
-		</ContentWrapper>
-	);
+  const data = getCurriculumData('regular');
+  return (
+    <ContentWrapper title='Course Map and Path'>
+      <CourseMapSection semesterData={data.semesterData} />
+    </ContentWrapper>
+  );
 }

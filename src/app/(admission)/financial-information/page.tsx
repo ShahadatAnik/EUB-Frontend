@@ -8,15 +8,18 @@ import PageHeader from '@/components/page-header';
 import Content from './_components/content';
 
 export default async function Page() {
-	const financialInformation = await getFinancialInformation();
+  const financialInformation = await getFinancialInformation();
 
-	return (
-		<>
-			<PageHeader image='/images/accounting-and-finance.jpg' title='Financial Information' />
+  return (
+    <>
+      <PageHeader
+        image='/images/accounting-and-finance.jpg'
+        title='Financial Information'
+      />
 
-			<PageContainer>
-				<Content data={financialInformation} />
-			</PageContainer>
-		</>
-	);
+      <PageContainer>
+        <Content data={financialInformation} />
+      </PageContainer>
+    </>
+  );
 }

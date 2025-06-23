@@ -6,11 +6,13 @@ import { getCurriculumData } from '../../_const/get-curriculum-data';
 import ContentWrapper from '../content-wrapper';
 
 const DegreeRequirements = () => {
-	return (
-		<ContentWrapper title='Degree Requirements'>
-			<DegreeRequirementsSection programDetails={getCurriculumData('evening').programDetails} />
-		</ContentWrapper>
-	);
+  return (
+    <ContentWrapper title='Degree Requirements'>
+      <DegreeRequirementsSection
+        programDetails={getCurriculumData('evening').programDetails}
+      />
+    </ContentWrapper>
+  );
 };
 
 export default DegreeRequirements;

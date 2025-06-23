@@ -10,22 +10,22 @@ import NewsEvents from './_components/news-events';
 import WhyEUB from './_components/why-eub';
 
 export const metadata = generateMetaData({
-	title: 'European University of Bangladesh',
-	description: 'The home page of the European University of Bangladesh',
+  title: 'European University of Bangladesh',
+  description: 'The home page of the European University of Bangladesh',
 });
 
 export default async function Page() {
-	const offers = await getOffers();
-	const news_events = await getNewsEvents(6, 1);
-	const hero = await getHero();
+  const offers = await getOffers();
+  const news_events = await getNewsEvents(6, 1);
+  const hero = await getHero();
 
-	return (
-		<>
-			<Hero hero={hero} offers={offers} />
-			<WhyEUB />
-			<Courses />
-			<Gallery />
-			<NewsEvents {...news_events} />
-		</>
-	);
+  return (
+    <>
+      <Hero hero={hero} offers={offers} />
+      <WhyEUB />
+      <Courses />
+      <Gallery />
+      <NewsEvents {...news_events} />
+    </>
+  );
 }

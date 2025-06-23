@@ -8,14 +8,14 @@ import PageHeader from '@/components/page-header';
 import Content from './_components/content';
 
 export default async function Page() {
-	const data = await getAcademicInformationPolicies();
+  const data = await getAcademicInformationPolicies();
 
-	return (
-		<>
-			<PageHeader title='Academic Information and Policies' />
-			<PageContainer>
-				<Content initialData={data} />
-			</PageContainer>
-		</>
-	);
+  return (
+    <>
+      <PageHeader title='Academic Information and Policies' />
+      <PageContainer>
+        <Content initialData={data} />
+      </PageContainer>
+    </>
+  );
 }
