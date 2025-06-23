@@ -2,89 +2,65 @@ import React from 'react';
 import ContentWrapper from '../../content-wrapper';
 
 import {
-  firstYearFirstSemester,
-  firstYearSecondSemester,
-  firstYearThirdSemester,
-  secondYearFirstSemester,
-  secondYearSecondSemester,
-  secondYearThirdSemester,
-  thirdYearFirstSemester,
-  thirdYearSecondSemester,
-  thirdYearThirdSemester,
-  fourthYearFirstSemester,
-  fourthYearSecondSemester,
-  fourthYearThirdSemester,
-} from '../../../_const/semester-wise-courses';
+	accountingMajor,
+	coreCourses,
+	financeMajor,
+	hrmMajor,
+	internship,
+	marketingMajor,
+} from '../curriculum/list-of-courses';
+import CourseTable from './course-table';
 
-import SemesterCourseTable from './semester-course-table';
-import UnderDevelopment from '@/components/under-development';
+// import UnderDevelopment from '@/components/under-development';
 
 const CoursePath = () => {
-  return (
-    <ContentWrapper title='Course Map and Path'>
-      <UnderDevelopment />
-    </ContentWrapper>
-  );
+	// return (
+	//   <ContentWrapper title='Course Map and Path'>
+	//     <UnderDevelopment />
+	//   </ContentWrapper>
+	// );
 
-  return (
-    <ContentWrapper title='Course Map and Path' className='py-4 space-y-4'>
-      <p>
-        The B.Sc in Computer Science and Engineering Program consists of the
-        following categories of courses:
-      </p>
-      <div className='space-y-16'>
-        <SemesterCourseTable
-          title='First Year - First Semester'
-          data={firstYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='First Year - Second Semester'
-          data={firstYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='First Year - Third Semester'
-          data={firstYearThirdSemester}
-        />
-        <SemesterCourseTable
-          title='Second Year - First Semester'
-          data={secondYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='Second Year - Second Semester'
-          data={secondYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='Second Year - Third Semester'
-          data={secondYearThirdSemester}
-        />
-        <SemesterCourseTable
-          title='Third Year - First Semester'
-          data={thirdYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='Third Year - Second Semester'
-          data={thirdYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='Third Year - Third Semester'
-          data={thirdYearThirdSemester}
-        />
+	return (
+		<ContentWrapper title="Curriculum" className="py-4 space-y-6">
+			<div>
+				<h6 className="text-lg font-semibold">
+					Course Path <br />
+					MBA (1-Year) Program – 36 Credits <br />
+					Department of Business Administration <br />
+					European University of Bangladesh
+				</h6>
+				<p className="mt-1"></p>
 
-        <SemesterCourseTable
-          title='Fourth Year - First Semester'
-          data={fourthYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='Fourth Year - Second Semester'
-          data={fourthYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='Fourth Year - Third Semester'
-          data={fourthYearThirdSemester}
-        />
-      </div>
-    </ContentWrapper>
-  );
+				<div className="mt-6 space-y-12">
+					<CourseTable
+						title="Core Courses (18 Credits)"
+						data={coreCourses}
+					/>
+					<p className="mt-1">Major Courses (15 Credits)</p>
+					<CourseTable
+						title="Finance Major Courses"
+						data={financeMajor}
+					/>
+					<CourseTable
+						title="Accounting Major Courses"
+						data={accountingMajor}
+					/>
+					<CourseTable
+						title="Human Resource Management Major Courses"
+						data={hrmMajor}
+					/>
+					<CourseTable
+						title="Marketing Major Courses"
+						data={marketingMajor}
+					/>
+					<CourseTable
+						title="Internship/Project (3 Credits)"
+						data={internship}
+					/>
+				</div>
+			</div>
+		</ContentWrapper>
+	);
 };
 
 export default CoursePath;
