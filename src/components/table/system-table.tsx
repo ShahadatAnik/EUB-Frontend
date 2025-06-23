@@ -27,9 +27,27 @@ export type SystemTableColumn<T> = {
     row: T,
     index: number
   ) => string | number | React.ReactNode;
-  cellClassName?: string;
+  cellClassName?:
+    | string
+    | ((
+        row: T,
+        index: number,
+        isFirstRow: boolean,
+        isLastRow: boolean
+      ) => string);
   type?: CellType;
-  rowSpan?: (row: T, index: number) => number;
+  rowSpan?: (
+    row: T,
+    index: number,
+    isFirstRow: boolean,
+    isLastRow: boolean
+  ) => number;
+  colSpan?: (
+    row: T,
+    index: number,
+    isFirstRow: boolean,
+    isLastRow: boolean
+  ) => number;
   skipRender?: (row: T, index: number) => boolean;
   isHidden?: boolean;
 };
@@ -124,7 +142,12 @@ function SystemTable<T>({
                   }
 
                   const rowSpan = column.rowSpan
-                    ? column.rowSpan(item as T, rowIndex)
+                    ? column.rowSpan(
+                        item as T,
+                        rowIndex,
+                        rowIndex === 0,
+                        rowIndex === data.length - 1
+                      )
                     : 1;
                   const cellValue = item[column.accessorKey as string];
 
@@ -133,9 +156,26 @@ function SystemTable<T>({
                       key={colIndex}
                       className={cn(
                         'border-r last:border-r-0',
-                        column.cellClassName
+                        typeof column.cellClassName === 'function'
+                          ? column.cellClassName(
+                              item as T,
+                              rowIndex,
+                              rowIndex === 0,
+                              rowIndex === data.length - 1
+                            )
+                          : column.cellClassName
                       )}
                       rowSpan={rowSpan > 1 ? rowSpan : undefined}
+                      colSpan={
+                        column.colSpan
+                          ? column.colSpan(
+                              item as T,
+                              rowIndex,
+                              rowIndex === 0,
+                              rowIndex === data.length - 1
+                            )
+                          : 1
+                      }
                     >
                       {column.cell ? (
                         column.cell(cellValue as string, item as T, rowIndex)

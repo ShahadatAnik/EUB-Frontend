@@ -61,18 +61,19 @@ export const ElectiveCourseTable = React.memo<ElectiveCourseTableProps>(
         accessorKey: 'code',
         header: 'Course Code',
         headerClassName: 'w-32',
-        cellClassName: 'font-mono text-sm',
+        cellClassName: 'font-mono text-sm ',
       },
       {
         accessorKey: 'title',
         header: 'Course Title',
+        colSpan: (row, index, isFirstRow, isLastRow) => (isLastRow ? 2 : 1),
       },
       {
         accessorKey: 'credits',
         header: 'Credits',
         headerClassName: 'w-20 text-center',
         cellClassName: 'text-center font-medium border-l',
-        skipRender: (row) => !row.isFirstRow,
+        skipRender: (row) => row.isFirstRow === false,
         rowSpan: (row) => (row.isFirstRow ? row.rowSpan ?? 0 : 0),
       },
     ];

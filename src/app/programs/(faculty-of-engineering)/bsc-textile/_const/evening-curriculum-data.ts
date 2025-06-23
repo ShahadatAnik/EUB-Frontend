@@ -15,6 +15,7 @@ export const eveningSemesterInfo = {
 };
 
 export const eveningProgramDetails: ProgramDetails = {
+  degreeName: 'Bachelor of Science in Textile Engineering (B.Sc. in Textile)',
   duration: {
     years: '3 Years 4 Months (2 Semester Waived)',
     semesters: '10 (2 Semester Waived)',

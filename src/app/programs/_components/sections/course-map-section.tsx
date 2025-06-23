@@ -121,18 +121,18 @@ export const CourseMapSection = React.memo<CourseMapSectionProps>(
                                       className='border-r font-medium text-center align-top'
                                     >
                                       <div
-                                        className={
-                                          semester.isWaived
-                                            ? 'text-red-600'
-                                            : ''
-                                        }
+                                      // className={
+                                      //   semester.isWaived
+                                      //     ? 'text-red-600'
+                                      //     : ''
+                                      // }
                                       >
                                         {semester.title}
-                                        {semester.isWaived && (
+                                        {/* {semester.isWaived && (
                                           <div className='text-xs text-red-600 mt-1 font-semibold'>
                                             WAIVED
                                           </div>
-                                        )}
+                                        )} */}
                                       </div>
                                     </TableCell>
                                   )}
@@ -161,7 +161,7 @@ export const CourseMapSection = React.memo<CourseMapSectionProps>(
                                 <TableCell className='border-r'></TableCell>
                                 {/* Total label in Course Title */}
                                 <TableCell className='border-r text-right'>
-                                  Total {semester.isWaived ? '(Waived)' : ''}
+                                  Total
                                 </TableCell>
                                 {/* Total value in Credit */}
                                 <TableCell className='text-center font-bold'>

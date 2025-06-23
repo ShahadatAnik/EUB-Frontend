@@ -23,6 +23,9 @@ export const SummaryTable = React.memo<SummaryTableProps>(
       {
         category: 'Total',
         credits: totalCredits,
+        percentage: summaryData.some((item) => item.percentage)
+          ? `100%`
+          : undefined,
       },
     ];
 
