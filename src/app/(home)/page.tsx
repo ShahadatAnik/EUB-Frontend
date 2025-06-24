@@ -10,8 +10,24 @@ import NewsEvents from './_components/news-events';
 import WhyEUB from './_components/why-eub';
 
 export const metadata = generateMetaData({
-  title: 'European University of Bangladesh',
-  description: 'The home page of the European University of Bangladesh',
+  title: 'European University of Bangladesh | Quality & Affordable Education',
+  description:
+    'A leading private university in Dhaka with UGC-approved degrees. Explore programs in Engineering, Business & Arts. Admissions are open for Fall 2025!',
+  keywords: [
+    'European University of Bangladesh',
+    'EUB',
+    'Best private university in Bangladesh',
+    'Top private university in Dhaka',
+    'UGC approved university',
+    'EUB admission 2025',
+    'Affordable university in Bangladesh',
+    'Engineering university Dhaka',
+    'BBA admission Bangladesh',
+    'CSE private university',
+    'LLB admission',
+    'European standard education',
+  ],
+  pageUrl: 'https://eub.edu.bd',
 });
 
 export default async function Page() {

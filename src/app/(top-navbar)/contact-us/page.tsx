@@ -7,8 +7,23 @@ import { generateMetaData } from '@/lib/utils';
 import Content from './_components/content';
 
 export const metadata = generateMetaData({
-  title: 'Contact Us',
-  description: 'The contact us of the European University of Bangladesh',
+  title: 'Contact Us | European University of Bangladesh (EUB)',
+  description: `Find our campus address in Gabtoli, Dhaka, phone numbers for admissions and information, and email contacts. Get in touch with EUB today.Get in touch with the European University of Bangladesh. Find our campus address at Gabtoli, Dhaka, phone numbers for admission and information, and email addresses for all inquiries.`,
+  keywords: [
+    'Contact EUB',
+    'European University of Bangladesh address',
+    'EUB phone number',
+    'EUB campus location',
+    'EUB admissions contact',
+    'European University Dhaka contact',
+    'How to get to EUB campus',
+    'Gabtoli university contact',
+    'EUB email address',
+    'EUB information desk',
+  ],
+
+  // The URL of the page
+  pageUrl: 'https://eub.edu.bd/contact-us',
 });
 
 const Page = () => {

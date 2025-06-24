@@ -9,6 +9,8 @@ import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
 import ServerPagination from '@/components/server-pagination';
 
+import { generateMetaData } from '@/lib/utils';
+
 import NewsCard from '@/app/(top-navbar)/news-events/_components/news-card';
 
 type searchParamsProps = {
@@ -16,6 +18,27 @@ type searchParamsProps = {
     page?: string;
   }>;
 };
+
+export const metadata = generateMetaData({
+  title: 'Latest News & Events | European University of Bangladesh (EUB)',
+  description:
+    'Stay updated with the latest news, events, workshops, and announcements from the EUB campus. See our student achievements and admission circulars.',
+  keywords: [
+    'EUB news',
+    'European University of Bangladesh events',
+    'EUB latest news',
+    'EUB admission circular',
+    'Dhaka university news',
+    'EUB campus life',
+    'University workshops Dhaka',
+    'EUB Tech Fest',
+    'Academic news Bangladesh',
+    'EUB announcements',
+    'University events calendar',
+    'Student achievements EUB',
+  ],
+  pageUrl: 'https://eub.edu.bd/news-events',
+});
 
 export default async function Page({ searchParams }: searchParamsProps) {
   const limit = 12;

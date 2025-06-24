@@ -7,7 +7,26 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const generateMetaData = (metaData: Metadata) => metaData;
+interface IProps extends Metadata {
+  title: string;
+  description: string;
+  keywords?: string[];
+  pageUrl?: string;
+}
+
+export const generateMetaData = (props: IProps): Metadata => ({
+  publisher: 'European University of Bangladesh',
+  authors: [{ name: 'European University of Bangladesh' }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: props.pageUrl,
+  },
+
+  ...props,
+});
 
 export const getAllUniqueKeys = (array: Record<string, unknown>[]) => {
   const allKeys: string[] = [];

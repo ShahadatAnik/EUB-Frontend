@@ -7,9 +7,23 @@ import { generateMetaData } from '@/lib/utils';
 import Content from './_components/content';
 
 export const metadata = generateMetaData({
-  title: 'Vision, Mission, Strategy',
+  title: 'Vision, Mission & Strategy | European University of Bangladesh (EUB)',
   description:
-    'The vision, mission, and strategy of the European University of Bangladesh',
+    'Discover the vision, mission, and strategy of EUB. Learn about our commitment to providing inclusive, affordable, and high-quality education to foster innovation, ethical leadership, and sustainable development in Bangladesh and beyond.',
+  keywords: [
+    'EUB vision and mission',
+    'University mission statement',
+    'Educational strategy Bangladesh',
+    'Inclusive education',
+    'Affordable quality education',
+    'Sustainable development in education',
+    'Globally competent leaders',
+    'Ethical leadership development',
+    'Innovation in university',
+    'Social responsibility in education',
+    'EUB core values',
+  ],
+  pageUrl: 'https://eub.edu.bd/about/vision-mission-strategy',
 });
 
 const Page = () => {
