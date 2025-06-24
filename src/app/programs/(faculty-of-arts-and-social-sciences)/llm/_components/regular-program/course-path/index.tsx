@@ -1,23 +1,23 @@
 import React from 'react';
-import ContentWrapper from '../../content-wrapper';
+
+import UnderDevelopment from '@/components/under-development';
 
 import {
   firstYearFirstSemester,
   firstYearSecondSemester,
   firstYearThirdSemester,
+  fourthYearFirstSemester,
+  fourthYearSecondSemester,
+  fourthYearThirdSemester,
   secondYearFirstSemester,
   secondYearSecondSemester,
   secondYearThirdSemester,
   thirdYearFirstSemester,
   thirdYearSecondSemester,
   thirdYearThirdSemester,
-  fourthYearFirstSemester,
-  fourthYearSecondSemester,
-  fourthYearThirdSemester,
 } from '../../../_const/semester-wise-courses';
-
+import ContentWrapper from '../../content-wrapper';
 import SemesterCourseTable from './semester-course-table';
-import UnderDevelopment from '@/components/under-development';
 
 const CoursePath = () => {
   return (
@@ -26,7 +26,7 @@ const CoursePath = () => {
     </ContentWrapper>
   );
   return (
-    <ContentWrapper title='Course Map and Path' className='py-4 space-y-4'>
+    <ContentWrapper title='Course Map and Path' className='space-y-4 py-4'>
       <p>
         The B.Sc in Computer Science and Engineering Program consists of the
         following categories of courses:

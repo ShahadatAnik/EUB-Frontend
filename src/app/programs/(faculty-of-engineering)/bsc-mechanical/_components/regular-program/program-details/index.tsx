@@ -1,9 +1,11 @@
 import React from 'react';
 
-import ContentWrapper from '../../content-wrapper';
 import Title from '@/components/title';
+
 import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
 import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
+
+import ContentWrapper from '../../content-wrapper';
 
 const ProgramDetails = () => {
   return (
@@ -24,12 +26,12 @@ const ProgramDetails = () => {
         <h6 className='text-lg font-semibold'>
           There are two semesters in an academic year:
         </h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>Spring Semester: January to June</li>
           <li>Summer Semester: July to December</li>
         </ul>
         <p className='mt-2'>Each semester spans 26 weeks, with:</p>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>22 weeks of class teaching</li>
           <li>2 weeks for examination preparation</li>
           <li>2 weeks for examinations</li>
@@ -46,7 +48,7 @@ const ProgramDetails = () => {
       </div>
       <div>
         <Title variant={'title'} title='Credit Hour' />
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             Theory Courses: 3 credit hours = 3 hours of lecture per week
             (minimum 50 minutes per class)
@@ -59,7 +61,7 @@ const ProgramDetails = () => {
       </div>
       <div>
         <Title variant={'title'} title='Course Load' />
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             Regular Students: Up to 20.125 credits per semester (Total: 161.0
             credits over 8 semesters)

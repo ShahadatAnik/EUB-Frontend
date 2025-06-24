@@ -1,11 +1,13 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
+
 import Image from 'next/image';
+
+import ContentWrapper from './content-wrapper';
 
 const AlumniIndustry = () => {
   return (
     <ContentWrapper title='Alumni and Industry'>
-      <div className='w-full relative h-[400px]'>
+      <div className='relative h-[400px] w-full'>
         <Image
           className='object-contain'
           fill
@@ -14,7 +16,7 @@ const AlumniIndustry = () => {
         />
       </div>
 
-      <div className='text-center py-4'>
+      <div className='py-4 text-center'>
         <h4 className='text-2xl font-semibold'>Name</h4>
         <h6 className='mt-1 text-muted-foreground'>
           Designation, Company Name

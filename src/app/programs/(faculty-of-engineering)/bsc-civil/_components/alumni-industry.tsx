@@ -1,8 +1,10 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
 
 import { IAlumni } from '@/types';
+
 import AlumniGallery from '@/app/programs/_components/alumni-gallery';
+
+import ContentWrapper from './content-wrapper';
 
 const AlumniIndustry = () => {
   const data: IAlumni[] = [

@@ -1,4 +1,5 @@
 'use-client';
+
 import React from 'react';
 
 import { IAuthorityInfo } from '@/types/authorities';
@@ -9,7 +10,6 @@ const Content: React.FC<{ data: IAuthorityInfo }> = ({ data }) => {
   if (!data) return <div>No data</div>;
 
   return <AuthoritiesInfoCard data={data} />;
-
 };
 
 export default Content;

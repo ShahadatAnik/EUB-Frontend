@@ -1,6 +1,8 @@
-import Title from '@/components/title';
-import { cn } from '@/lib/utils';
 import React from 'react';
+
+import Title from '@/components/title';
+
+import { cn } from '@/lib/utils';
 
 const SectionContent: React.FC<{
   title: string;
@@ -14,7 +16,7 @@ const SectionContent: React.FC<{
         title={title}
         className={cn('font-sans font-semibold', titleClassName)}
       />
-      <div className={cn('pl-0 lg:pl-4 lg:mt-4', className)}>{children}</div>
+      <div className={cn('pl-0 lg:mt-4 lg:pl-4', className)}>{children}</div>
     </div>
   );
 };

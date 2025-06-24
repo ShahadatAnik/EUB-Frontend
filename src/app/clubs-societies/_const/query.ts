@@ -1,7 +1,9 @@
 'use client';
-import { getEventCalender } from '@/server/get';
+
 import { IDataTable } from '@/types';
 import { useQuery } from '@tanstack/react-query';
+
+import { getEventCalender } from '@/server/get';
 
 interface IProps {
   initialData: IDataTable[];

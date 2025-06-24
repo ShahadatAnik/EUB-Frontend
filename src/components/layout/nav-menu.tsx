@@ -1,9 +1,12 @@
 'use client';
 
 import * as React from 'react';
+
 import Link from 'next/link';
 
-import { cn } from '@/lib/utils';
+import { navLinks } from '@/config/nav-links';
+import { ChevronsRight } from 'lucide-react';
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,8 +16,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import { navLinks } from '@/config/nav-links';
-import { ChevronsRight } from 'lucide-react';
+
+import { cn } from '@/lib/utils';
+
 export function NavMenu() {
   return (
     <NavigationMenu>
@@ -27,7 +31,7 @@ export function NavMenu() {
                   target={item.newTab ? '_blank' : '_self'}
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    'bg-transparent  focus:bg-transparent'
+                    'bg-transparent focus:bg-transparent'
                   )}
                   href={item.href}
                   key={index}
@@ -42,7 +46,7 @@ export function NavMenu() {
                   asChild
                   className={cn(navigationMenuTriggerStyle(), 'w-full')}
                 >
-                  <p className='text-sm font-bold text-primary w-full '>
+                  <p className='w-full text-sm font-bold text-primary'>
                     {item.title}
                   </p>
                 </NavigationMenuLink>
@@ -57,7 +61,7 @@ export function NavMenu() {
                 <NavigationMenuContent>
                   <ul
                     className={cn(
-                      'max-h-[70vh] overflow-auto gap-4 p-2 lg:p-6 md:w-[400px] lg:w-[760px] 2xl:w-[1000px] grid md:grid-cols-2 xl:grid-cols-3',
+                      'grid max-h-[70vh] gap-4 overflow-auto p-2 md:w-[400px] md:grid-cols-2 lg:w-[760px] lg:p-6 xl:grid-cols-3 2xl:w-[1000px]',
                       item.className,
                       item.title === 'Programs' &&
                         'xl:grid-cols-2 2xl:w-[1200px] 2xl:grid-cols-4'
@@ -72,11 +76,11 @@ export function NavMenu() {
                                 asChild
                                 className={cn(
                                   navigationMenuTriggerStyle(),
-                                  'w-full h-fit',
+                                  'h-fit w-full',
                                   child.className
                                 )}
                               >
-                                <p className='text-sm font-bold text-primary w-full'>
+                                <p className='w-full text-sm font-bold text-primary'>
                                   {child.title}
                                 </p>
                               </NavigationMenuLink>
@@ -86,10 +90,10 @@ export function NavMenu() {
                               asChild
                               className={cn(
                                 navigationMenuTriggerStyle(),
-                                'w-full h-fit'
+                                'h-fit w-full'
                               )}
                             >
-                              <p className='text-sm font-bold text-primary '>
+                              <p className='text-sm font-bold text-primary'>
                                 {child.title}
                               </p>
                             </NavigationMenuLink>

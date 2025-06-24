@@ -1,15 +1,16 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { ScrollArea } from './ui/scroll-area';
-import { Button } from './ui/button';
-import { Separator } from './ui/separator';
-
-import ClientImage from './client-image';
 
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
+
 import { useGetDepartmentLatestNews } from '@/hooks/use-get-course';
+
+import ClientImage from './client-image';
+import { Button } from './ui/button';
+import { ScrollArea } from './ui/scroll-area';
+import { Separator } from './ui/separator';
 import { Skeleton } from './ui/skeleton';
 
 const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
@@ -22,10 +23,10 @@ const LatestPosts = ({ department }: { department: string }) => {
   if (isLoading) {
     return (
       <div>
-        <Skeleton className='w-full h-8' />
-        <Separator className='mt-2 mb-2' />
-        <Skeleton className='w-full h-20' />
-        <Skeleton className='mt-4 flex w-full h-8' />
+        <Skeleton className='h-8 w-full' />
+        <Separator className='mb-2 mt-2' />
+        <Skeleton className='h-20 w-full' />
+        <Skeleton className='mt-4 flex h-8 w-full' />
       </div>
     );
   }
@@ -41,15 +42,15 @@ const LatestPosts = ({ department }: { department: string }) => {
   return (
     <div>
       <h4 className='text-lg font-semibold'>Latest Posts</h4>
-      <Separator className='mt-2 mb-2' />
+      <Separator className='mb-2 mt-2' />
       <ScrollArea className='h-full lg:max-h-[500px]'>
-        <ul className='space-y-4 mt-4'>
+        <ul className='mt-4 space-y-4'>
           {data.map((item, index) => (
             <li key={index}>
               <div className='flex gap-4'>
-                <div className='h-[70px] aspect-[3/2]  relative border border-primary/10 rounded-sm'>
+                <div className='relative aspect-[3/2] h-[70px] rounded-sm border border-primary/10'>
                   <ClientImage
-                    className='object-contain size-full'
+                    className='size-full object-contain'
                     fill
                     src={
                       item.cover_image
@@ -81,7 +82,7 @@ const LatestPosts = ({ department }: { department: string }) => {
         </ul>
       </ScrollArea>
 
-      <div className='mt-8 flex w-full '>
+      <div className='mt-8 flex w-full'>
         <Link className='w-full' href={`/news-events`}>
           <Button className='w-full'>View all</Button>
         </Link>

@@ -1,30 +1,29 @@
 // Regular program data
 import {
-  semesterInfo as regularSemesterInfo,
-  programDetails as regularProgramDetails,
-  performanceEvaluation as regularPerformanceEvaluation,
-  textileEngineeringCourses as regularTextileEngineeringCourses,
-  nonDepartmentalCourses as regularNonDepartmentalCourses,
-  electiveCourses as regularElectiveCourses,
-  projectCourses as regularProjectCourses,
   coursePrefixes as regularCoursePrefixes,
   curriculumSummary as regularCurriculumSummary,
+  electiveCourses as regularElectiveCourses,
+  nonDepartmentalCourses as regularNonDepartmentalCourses,
+  performanceEvaluation as regularPerformanceEvaluation,
+  programDetails as regularProgramDetails,
+  projectCourses as regularProjectCourses,
   semesterData as regularSemesterData,
+  semesterInfo as regularSemesterInfo,
+  textileEngineeringCourses as regularTextileEngineeringCourses,
 } from './curriculum-data';
-
 // Evening program data
 import {
-  eveningSemesterInfo,
-  eveningProgramDetails,
-  eveningPerformanceEvaluation,
-  eveningTextileEngineeringCourses,
-  eveningNonDepartmentalCourses,
-  eveningElectiveCourses,
-  eveningProjectCourses,
   eveningCoursePrefixes,
   eveningCurriculumSummary,
+  eveningElectiveCourses,
+  eveningNonDepartmentalCourses,
+  eveningPerformanceEvaluation,
+  eveningProgramDetails,
+  eveningProjectCourses,
   eveningSemesterData,
-} from './evening-curriculum';
+  eveningSemesterInfo,
+  eveningTextileEngineeringCourses,
+} from './evening-curriculum-data';
 
 export const getCurriculumData = (type: 'regular' | 'evening') => {
   if (type === 'evening') {

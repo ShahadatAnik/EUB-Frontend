@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ContentWrapper from '../../content-wrapper';
 import Title from '@/components/title';
 
+import ContentWrapper from '../../content-wrapper';
 import PerformanceCriteriaTable from './performance-criteria-table';
 
 const ProgramDetails = () => {
@@ -24,7 +24,7 @@ const ProgramDetails = () => {
         <h6 className='text-lg font-semibold'>
           The academic year is divided into three semesters:
         </h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           {' '}
           <li>Spring Semester (January – April)</li>
           <li>Summer Semester (May – August)</li>
@@ -44,7 +44,7 @@ const ProgramDetails = () => {
         <Title variant={'title'} title='Course Load' />
         <p>Each semester spans 16 weeks, broken down as follows:</p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>12 Weeks of Classes</li> <li>2 Weeks for Examinations</li>
           <li>2 Weeks for Result Processing</li>
         </ul>

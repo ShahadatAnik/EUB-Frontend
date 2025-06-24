@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
+
 import Image from 'next/image';
+
+import ContentWrapper from './content-wrapper';
 
 const LaboratoriesResources = () => {
   return (
@@ -16,7 +18,7 @@ const LaboratoriesResources = () => {
             alt='placeholder'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Electrical Circuits Laboratory is one of the introductory labs
             in our university that comprises of DC Circuit Laboratory and AC
             Circuit Laboratory. For DC Circuit Lab, we familiarize the students
@@ -46,7 +48,7 @@ const LaboratoriesResources = () => {
             alt='placeholder'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Electronics-I lab is designed to give the students with a
             practical experience working with applications of operational
             amplifier, diodes and transistors (BJT, FETs and MOSFETs). The
@@ -90,7 +92,7 @@ const LaboratoriesResources = () => {
           Electrical Machines Laboratory
         </h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             This laboratory is furnished with most advanced Electrical Machine
             equipment incorporating mobile workstation from Lab Volt Technology
             to introduce students with the modern cutting edge technology. The
@@ -115,7 +117,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Power Electronics Laboratory</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             We have one of the advanced Power Electronics equipment from Lab
             Volt Technology which incorporates the State of the Art teaching &
             research facilities. This lab has Power Converters i.e. DC-DC
@@ -141,7 +143,7 @@ const LaboratoriesResources = () => {
           Electrical Transmission and Distribution Systems Laboratory
         </h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             This laboratory, enriched with Lab-Volt machineries and equipment is
             devoted to developing a practical understanding of the transmission
             line link a subject which is usually taught in a strictly
@@ -165,7 +167,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Control Systems Laboratory</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The purpose of the control laboratory is to provide students an
             opportunity for practical implementation of the concepts that they
             learn in their control theory class. Using MATLAB and Simulink, open
@@ -182,7 +184,7 @@ const LaboratoriesResources = () => {
           Signals, Systems and Communication Laboratory{' '}
         </h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             Signals and Systems laboratory is designed to teach fundamentals of
             signal properties and system level implementations. Students are
             required to use MATLAB Communication toolbox, Signal processing
@@ -227,7 +229,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>VLSI & Verilog HDL Laboratory</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             VLSI laboratory uses Microwind 3.1 software. By using this software
             cover layout of different digital logic gates: AND, OR, NAND, NOR,
             XOR, XNOR Gates, and Complex Gates.
@@ -248,7 +250,7 @@ const LaboratoriesResources = () => {
           Fiber Optic Communication System
         </h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             Fiber Optic Communication System laboratory is mandatory laboratory
             session for Fiber Optic Communication System course. This course
             introduces the fundamental principles and applications of

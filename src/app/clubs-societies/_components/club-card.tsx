@@ -1,7 +1,8 @@
 'use client';
-import ClientImage from '@/components/client-image';
 
 import React from 'react';
+
+import ClientImage from '@/components/client-image';
 
 const ClubCard: React.FC<{
   image: string;
@@ -12,7 +13,7 @@ const ClubCard: React.FC<{
   description: string;
 }> = ({ image, name, email, phone, description }) => {
   return (
-    <div className='flex flex-col-reverse lg:flex-row gap-4'>
+    <div className='flex flex-col-reverse gap-4 lg:flex-row'>
       <div className='flex flex-col'>
         <ClientImage src={image} alt='Person' width={200} height={200} />
         <p className='mt-3 text-xl font-semibold'>President</p>
@@ -23,9 +24,7 @@ const ClubCard: React.FC<{
         </div>
       </div>
 
-      <p className=' flex-1 text-muted-foreground text-justify'>
-        {description}
-      </p>
+      <p className='flex-1 text-justify text-muted-foreground'>{description}</p>
     </div>
   );
 };

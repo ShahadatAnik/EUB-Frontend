@@ -1,5 +1,6 @@
-import { cn } from '@/lib/utils';
 import React from 'react';
+
+import { cn } from '@/lib/utils';
 
 interface IPageContainerProps {
   children: React.ReactNode;
@@ -10,7 +11,7 @@ const PageContainer: React.FC<IPageContainerProps> = ({
   className,
 }) => {
   return (
-    <div className={cn('container py-4 lg:py-12 space-y-8', className)}>
+    <div className={cn('container space-y-8 py-4 lg:py-12', className)}>
       {children}
     </div>
   );

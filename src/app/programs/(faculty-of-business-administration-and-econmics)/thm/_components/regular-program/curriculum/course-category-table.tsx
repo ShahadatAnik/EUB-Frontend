@@ -63,7 +63,7 @@ const courseCategory = [
   },
 ];
 
-const columns: SystemTableColumn<any>[] = [
+const columns: SystemTableColumn<{ symbol: string; subject_name: string }>[] = [
   {
     accessorKey: 'symbol',
     header: 'Letter Symbol',

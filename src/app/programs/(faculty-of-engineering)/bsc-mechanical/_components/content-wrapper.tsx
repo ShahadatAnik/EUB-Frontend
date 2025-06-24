@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { cn } from '@/lib/utils';
 import Title from '@/components/title';
+
+import { cn } from '@/lib/utils';
 
 const ContentWrapper: React.FC<{
   title: string;

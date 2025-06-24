@@ -1,20 +1,20 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
+import type React from 'react';
 
+import { format } from 'date-fns';
 import { NumericFormat } from 'react-number-format';
 
 import {
   Table,
-  TableCaption,
   TableBody,
+  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+
 import { cn } from '@/lib/utils';
-import { format } from 'date-fns';
-import NoDataFound from '../no-data-found';
+
 import { Skeleton } from '../ui/skeleton';
 
 type CellType = 'string' | 'number' | 'date' | 'currency' | 'default';
@@ -28,8 +28,29 @@ export type SystemTableColumn<T> = {
     row: T,
     index: number
   ) => string | number | React.ReactNode;
-  cellClassName?: string;
+  cellClassName?:
+    | string
+    | ((
+        row: T,
+        index: number,
+        isFirstRow: boolean,
+        isLastRow: boolean
+      ) => string);
   type?: CellType;
+  rowSpan?: (
+    row: T,
+    index: number,
+    isFirstRow: boolean,
+    isLastRow: boolean
+  ) => number;
+  colSpan?: (
+    row: T,
+    index: number,
+    isFirstRow: boolean,
+    isLastRow: boolean
+  ) => number;
+  skipRender?: (row: T, index: number) => boolean;
+  isHidden?: boolean;
 };
 
 interface IProps<T> {
@@ -39,7 +60,17 @@ interface IProps<T> {
   className?: string;
   children?: React.ReactNode;
   isLoading?: boolean;
+  groupedRows?: boolean;
+  rowClassName?: (row: T, index: number) => string;
 }
+
+// Simple NoDataFound component since it's not provided
+const NoDataFound = () => (
+  <div className='flex flex-col items-center justify-center py-8 text-gray-500'>
+    <div className='text-lg font-medium'>No Data Found</div>
+    <div className='text-sm'>There are no records to display</div>
+  </div>
+);
 
 function SystemTable<T>({
   columns,
@@ -48,8 +79,11 @@ function SystemTable<T>({
   className,
   children,
   isLoading,
+  rowClassName,
 }: IProps<T>) {
-  const headers = columns.map((column) => column.header || column.accessorKey);
+  const headers = columns
+    .filter((column) => column.isHidden !== true)
+    .map((column) => column.header || column.accessorKey);
 
   return (
     <Table className={cn('border', className)}>
@@ -60,7 +94,7 @@ function SystemTable<T>({
             <TableHead
               key={index}
               className={cn(
-                'text-white capitalize font-medium min-h-10 py-3 border-r last:border-r-0',
+                'min-h-10 border-r py-3 font-medium capitalize text-white last:border-r-0',
                 columns[index].headerClassName
               )}
             >
@@ -90,30 +124,69 @@ function SystemTable<T>({
 
         {!isLoading &&
           data &&
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           data.map((item: any, rowIndex: number) => (
-            <TableRow key={rowIndex}>
-              {columns.map((column, index) => (
-                <TableCell
-                  key={index}
-                  className={cn(
-                    'border-r last:border-r-0',
-                    column.cellClassName
-                  )}
-                >
-                  {column.cell ? (
-                    column.cell(
-                      item[column.accessorKey] as string,
-                      item as T as any,
-                      rowIndex
-                    )
-                  ) : (
-                    <RenderCell
-                      type={column.type}
-                      value={item[column.accessorKey]}
-                    />
-                  )}
-                </TableCell>
-              ))}
+            <TableRow
+              key={rowIndex}
+              className={
+                rowClassName ? rowClassName(item as T, rowIndex) : undefined
+              }
+            >
+              {columns
+                .filter((column) => column.isHidden !== true)
+                .map((column, colIndex) => {
+                  // Skip rendering if skipRender function returns true
+                  if (
+                    column.skipRender &&
+                    column.skipRender(item as T, rowIndex)
+                  ) {
+                    return null;
+                  }
+
+                  const rowSpan = column.rowSpan
+                    ? column.rowSpan(
+                        item as T,
+                        rowIndex,
+                        rowIndex === 0,
+                        rowIndex === data.length - 1
+                      )
+                    : 1;
+                  const cellValue = item[column.accessorKey as string];
+
+                  return (
+                    <TableCell
+                      key={colIndex}
+                      className={cn(
+                        'border-r last:border-r-0',
+                        typeof column.cellClassName === 'function'
+                          ? column.cellClassName(
+                              item as T,
+                              rowIndex,
+                              rowIndex === 0,
+                              rowIndex === data.length - 1
+                            )
+                          : column.cellClassName
+                      )}
+                      rowSpan={rowSpan > 1 ? rowSpan : undefined}
+                      colSpan={
+                        column.colSpan
+                          ? column.colSpan(
+                              item as T,
+                              rowIndex,
+                              rowIndex === 0,
+                              rowIndex === data.length - 1
+                            )
+                          : 1
+                      }
+                    >
+                      {column.cell ? (
+                        column.cell(cellValue as string, item as T, rowIndex)
+                      ) : (
+                        <RenderCell type={column.type} value={cellValue} />
+                      )}
+                    </TableCell>
+                  );
+                })}
             </TableRow>
           ))}
       </TableBody>
@@ -146,7 +219,7 @@ const RenderCell = ({
           disabled
           decimalScale={2}
           className={cn(
-            'bg-transparent block w-full',
+            'block w-full bg-transparent',
             value === 0 ? 'text-center' : ''
           )}
           value={(value as number) === 0 ? '-' : (value as number)}

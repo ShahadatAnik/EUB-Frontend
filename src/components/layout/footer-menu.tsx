@@ -2,9 +2,10 @@
 
 import React from 'react';
 
-import { navLinks } from '@/config/nav-links';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
+import { navLinks } from '@/config/nav-links';
 
 const FooterMenu = () => {
   const pathName = usePathname();
@@ -20,9 +21,9 @@ const FooterMenu = () => {
   )?.children;
 
   return (
-    <div className='grid grid-cols-1  lg:grid-cols-3 gap-5 lg:gap-10 w-full '>
+    <div className='grid w-full grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-10'>
       <div className=''>
-        <h4 className='text-lg font-semibold mb-2'>About</h4>
+        <h4 className='mb-2 text-lg font-semibold'>About</h4>
         <ul className='space-y-2'>
           {aboutLinks?.map((link, index) => (
             <li key={index}>
@@ -46,7 +47,7 @@ const FooterMenu = () => {
         </ul>
       </div>
       <div className=''>
-        <h4 className='text-lg font-semibold mb-2'>Admission</h4>
+        <h4 className='mb-2 text-lg font-semibold'>Admission</h4>
         <ul className='space-y-2'>
           <li>
             <Link
@@ -69,7 +70,7 @@ const FooterMenu = () => {
         </ul>
       </div>
       <div className=''>
-        <h4 className='text-lg font-semibold mb-2'>Useful Links</h4>
+        <h4 className='mb-2 text-lg font-semibold'>Useful Links</h4>
         <ul className='space-y-2'>
           {usefulLinks?.map((link, index) => (
             <li key={index}>

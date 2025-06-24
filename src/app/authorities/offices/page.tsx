@@ -1,9 +1,12 @@
-import PageHeader from '@/components/page-header';
 import React from 'react';
-import Content from './_components/content';
+
+import { getOffices } from '@/server/get';
+
+import PageHeader from '@/components/page-header';
 
 import { generateMetaData } from '@/lib/utils';
-import { getOffices } from '@/server/get';
+
+import Content from './_components/content';
 
 export const metadata = generateMetaData({
   title: 'Offices',

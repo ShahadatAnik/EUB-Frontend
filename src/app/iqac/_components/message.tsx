@@ -1,11 +1,13 @@
 import React from 'react';
+
 import Image from 'next/image';
+
 import ContentWrapper from './content-wrapper';
 
 const Message = () => {
   return (
     <ContentWrapper title='Message from the Director' className='py-4'>
-      <div className='flex justify-center mb-4'>
+      <div className='mb-4 flex justify-center'>
         <Image
           src={'/person-placeholder.jpg'}
           alt='Chairman'

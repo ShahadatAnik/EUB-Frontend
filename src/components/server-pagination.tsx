@@ -2,6 +2,10 @@
 
 import React from 'react';
 
+import { usePathname, useSearchParams } from 'next/navigation';
+
+import { IPagination } from '@/types';
+
 import {
   Pagination,
   PaginationContent,
@@ -11,8 +15,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
-import { IPagination } from '@/types';
-import { usePathname, useSearchParams } from 'next/navigation';
+
 import { Button } from './ui/button';
 
 const createPageUrl = (
@@ -33,7 +36,7 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
 
   return (
     <Pagination>
-      <PaginationContent className="w-full md:max-w-fit">
+      <PaginationContent className='w-full md:max-w-fit'>
         <PaginationItem>
           <Button variant={'ghost'} disabled={current_page === 1}>
             <PaginationPrevious
@@ -42,7 +45,7 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
           </Button>
         </PaginationItem>
 
-        <div className="flex-1  overflow-x-auto flex items-center gap-2">
+        <div className='flex flex-1 items-center gap-2 overflow-x-auto'>
           {(() => {
             let start = 1;
             let end = 5;
@@ -70,7 +73,7 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
                   href={createPageUrl(pathName, page, searchParams)}
                   className={
                     isSelected
-                      ? 'shadow-lg border-2 border-primary rounded '
+                      ? 'rounded border-2 border-primary shadow-lg'
                       : ''
                   }
                   // If your PaginationLink doesn't accept className, wrap it in a <div> or <span> with the class
@@ -83,7 +86,7 @@ const ServerPagination: React.FC<{ pagination: IPagination }> = ({
         </div>
 
         {total_page > 5 && (
-          <PaginationItem className="hidden md:inline-flex">
+          <PaginationItem className='hidden md:inline-flex'>
             <PaginationEllipsis />
           </PaginationItem>
         )}

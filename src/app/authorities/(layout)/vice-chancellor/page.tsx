@@ -1,8 +1,11 @@
 import React from 'react';
-import Content from './_components/content';
+
+import { getAuthoritiesVC } from '@/server/get';
 
 import { generateMetaData } from '@/lib/utils';
-import { getAuthoritiesVC } from '@/server/get';
+
+import Content from './_components/content';
+
 export const metadata = generateMetaData({
   title: 'Vice Chancellor',
   description: 'The vice chancellor of the European University of Bangladesh',

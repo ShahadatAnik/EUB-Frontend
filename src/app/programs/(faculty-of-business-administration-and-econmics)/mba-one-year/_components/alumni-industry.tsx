@@ -1,7 +1,8 @@
 import React from 'react';
 
-import ContentWrapper from './content-wrapper';
 import UnderDevelopment from '@/components/under-development';
+
+import ContentWrapper from './content-wrapper';
 
 const AlumniIndustry = () => {
   return (

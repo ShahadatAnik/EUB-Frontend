@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
+
 import Image from 'next/image';
+
+import ContentWrapper from './content-wrapper';
 
 const LaboratoriesResources = () => {
   return (
@@ -16,7 +18,7 @@ const LaboratoriesResources = () => {
             alt='placeholder'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             Through hands-on experiments in this Physics Lab, students will
             develop a solid understanding of core concepts in mechanics, optics,
             electromagnetism, and materials science. They will acquire practical
@@ -47,7 +49,7 @@ const LaboratoriesResources = () => {
             alt='placeholder'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             By completing the experiments in this Physics Lab, students will
             build a strong foundation in classical mechanics, electromagnetism,
             materials science, thermodynamics, and optics. This hands-on

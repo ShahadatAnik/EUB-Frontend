@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,9 +15,9 @@ const Content = () => {
           {officesData.map((item, index) => (
             <div
               key={index}
-              className='bg-white flex flex-col rounded-sm shadow-sm overflow-hidden'
+              className='flex flex-col overflow-hidden rounded-sm bg-white shadow-sm'
             >
-              <div className='aspect-video relative'>
+              <div className='relative aspect-video'>
                 {item.image ? (
                   <Image
                     className='object-cover object-center'
@@ -34,9 +35,9 @@ const Content = () => {
                 )}
               </div>
 
-              <div className=' flex-1 px-6 py-4 border-t flex items-center  '>
+              <div className='flex flex-1 items-center border-t px-6 py-4'>
                 <Link
-                  className=' text-lg text-primary font-medium hover:underline'
+                  className='text-lg font-medium text-primary hover:underline'
                   href={item.href}
                 >
                   {item.title}

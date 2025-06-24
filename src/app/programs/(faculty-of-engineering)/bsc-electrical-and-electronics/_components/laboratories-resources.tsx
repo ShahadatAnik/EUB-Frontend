@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
+
 import Image from 'next/image';
+
+import ContentWrapper from './content-wrapper';
 
 const LaboratoriesResources = () => {
   return (
@@ -16,7 +18,7 @@ const LaboratoriesResources = () => {
             alt='Electrical Circuits Lab'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Electrical Circuit Lab course offers hands-on experience in
             analyzing and building electrical circuits. Students will explore
             essential principles of electrical engineering, including Ohm’s Law,
@@ -57,7 +59,7 @@ const LaboratoriesResources = () => {
             alt='Electronics Lab'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Electronics Lab in the Department of Electrical and Electronic
             Engineering is a well-equipped facility designed to provide students
             with hands-on experience in understanding and applying electronic
@@ -93,7 +95,7 @@ const LaboratoriesResources = () => {
           Engineering Drawing and Drafting Lab
         </h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             Engineering drawing and drafting labs are vital part of engineering
             education, providing students with the skills to create precise
             technical drawings that communicate complex design information
@@ -127,7 +129,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Electrical Machines-I Lab</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Electrical Machines-I Lab in undergraduate studies provides
             hands-on experience mainly on transformer and induction motor.
             Students perform experiments such as open-circuit and short-circuit
@@ -155,7 +157,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Electrical Machines-II Lab</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Machine II Lab focuses on advanced electrical machines,
             including DC motors, DC generators, universal motors, alternators,
             and synchronous motors. Experiments on DC machines cover motor and
@@ -182,7 +184,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Digital Logic Design Lab</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Digital Logic Design (DLD) Lab focuses on fundamental concepts
             of digital circuits and their practical applications. Students begin
             by exploring the characteristics of various logic gates and
@@ -210,7 +212,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Digital Electronics Lab</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Digital Electronics Lab provides a hands-on approach to
             understanding and experimenting with key concepts in digital
             circuits and systems. This lab covers the practical aspects of
@@ -246,7 +248,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Signal and Systems Lab</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             Our Signal and System Lab is intended to supplement the theoretical
             ideas covered in signals and systems courses. It focuses on applying
             mathematical tools and software to analyze, process, and manipulate
@@ -274,7 +276,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Communication Engineering Lab</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Communication Engineering Laboratory provides specialized
             facilities for students and researchers to engage in practical
             experimentation and research in the field of communication systems.
@@ -301,7 +303,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Digital Signal Processing Lab</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Digital Signal Processing (DSP) Lab provides hands-on experience
             in analyzing and implementing discrete-time signal processing
             techniques using MATLAB, with potential applications in Python.
@@ -342,7 +344,7 @@ const LaboratoriesResources = () => {
           Electrical Measurement and Instrumentation Lab
         </h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Electrical Measurement and Instrumentation Lab is a practical
             laboratory designed to provide hands-on experience in measuring
             electrical parameters and understanding various instruments. It

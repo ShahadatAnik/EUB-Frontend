@@ -1,14 +1,14 @@
 'use client';
 
 // Import Swiper styles
+import React from 'react';
+
+import { IHero, IOffer } from '@/types';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import React from 'react';
-
 import Slider, { ISlide } from '../../../components/slider';
 import Offers from './offers';
-import { IHero, IOffer } from '@/types';
 
 const Hero: React.FC<{
   offers: IOffer[];
@@ -20,7 +20,7 @@ const Hero: React.FC<{
   }));
 
   return (
-    <div className='h-[100svh] w-full relative'>
+    <div className='relative h-[100svh] w-full'>
       <Slider sliders={sliders} />
       <Offers data={offers} />
     </div>

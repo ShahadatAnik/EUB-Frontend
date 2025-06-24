@@ -1,7 +1,7 @@
 'use server';
 
-import fetchApi from '@/utils/fetchApi';
 import { IPaginationResponse, ISelectOption } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
 export const getPublications = async ({
   page = 1,

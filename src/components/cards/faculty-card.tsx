@@ -1,3 +1,9 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { IFaculty } from '@/types';
+import slugify from 'slugify';
+
 import {
   Card,
   CardContent,
@@ -5,17 +11,11 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import Image from 'next/image';
-
-import Link from 'next/link';
-
-import { IFaculty } from '@/types';
-import slugify from 'slugify';
 
 const FacultyCard: React.FC<{ item: IFaculty }> = ({ item }) => {
   return (
-    <Card className=' overflow-hidden flex flex-col md:flex-row  gap-0'>
-      <CardHeader className='p-0 md:h-[200px]  aspect-square   relative'>
+    <Card className='flex flex-col gap-0 overflow-hidden md:flex-row'>
+      <CardHeader className='relative aspect-square p-0 md:h-[200px]'>
         <Image
           fill
           className='object-cover'
@@ -23,7 +23,7 @@ const FacultyCard: React.FC<{ item: IFaculty }> = ({ item }) => {
           alt={'Faculty Member'}
         />
       </CardHeader>
-      <CardContent className='p-6  flex-1'>
+      <CardContent className='flex-1 p-6'>
         <Link
           href={`/faculty/school-of-business-and-economics/accounting-and-finance/${slugify(
             item.name,

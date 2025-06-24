@@ -1,25 +1,28 @@
-import Link from 'next/link';
 import React from 'react';
+
+import Link from 'next/link';
+
+import { secret } from '@/config/secret';
+import { IDataTable } from '@/types';
+
+import { getJournal } from '@/server/get/get-journal';
 
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
 import Title from '@/components/title';
-import { secret } from '@/config/secret';
+
 import { formatDate } from '@/lib/utils';
-import { getJournal } from '@/server/get/get-journal';
-import { IDataTable } from '@/types';
 
 const columns: SystemTableColumn<IDataTable>[] = [
   {
     accessorKey: 'description',
     cell: (value, row) => {
-
       return (
         <Link
-          className="underline text-primary font-medium"
+          className='font-medium text-primary underline'
           href={`${secret.imageBaseUrl}${row.file}`}
-          target="_blank"
+          target='_blank'
         >
           {value}
         </Link>
@@ -36,20 +39,20 @@ const Content = async () => {
   const data = await getJournal();
 
   return (
-    <div className="space-y-8">
+    <div className='space-y-8'>
       <div>
-        <Title title="EUB Journal" className="text-2xl" />
-        <div className="pl-4 text-base   flex flex-col space-y-2">
-          <Link href={'#'} className="underline text-primary">
+        <Title title='EUB Journal' className='text-2xl' />
+        <div className='flex flex-col space-y-2 pl-4 text-base'>
+          <Link href={'#'} className='text-primary underline'>
             Copy Right Agreement
           </Link>
-          <Link href={'#'} className="underline text-primary">
+          <Link href={'#'} className='text-primary underline'>
             Administration, Policy, and Guideline
           </Link>
-          <Link href={'#'} className="underline text-primary">
+          <Link href={'#'} className='text-primary underline'>
             Publication Ethics and Malpractices Statement
           </Link>
-          <Link href={'#'} className="underline text-primary">
+          <Link href={'#'} className='text-primary underline'>
             Templates
           </Link>
         </div>

@@ -1,15 +1,16 @@
 import React from 'react';
+
 import Image from 'next/image';
 
 const Content = () => {
   return (
     <>
       <div className='flex'>
-        <div className='h-[400px] aspect-square relative'>
+        <div className='relative aspect-square h-[400px]'>
           <Image fill src='/placeholder.svg' alt='placeholder' />
         </div>
 
-        <div className='flex-1 p-8 '>
+        <div className='flex-1 p-8'>
           <h4 className='text-2xl font-semibold'>Director</h4>
           <p className='mt-2 text-muted-foreground'>
             Prof. Dr. Md. Arifur Rahman

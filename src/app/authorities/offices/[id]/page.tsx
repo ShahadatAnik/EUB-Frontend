@@ -1,7 +1,9 @@
 import React from 'react';
 
-import PageHeader from '@/components/page-header';
 import { getOfficeEntry, getOffices } from '@/server/get';
+
+import PageHeader from '@/components/page-header';
+
 import Content from './_components/content';
 
 export default async function Page({

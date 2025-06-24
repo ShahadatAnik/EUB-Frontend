@@ -2,15 +2,14 @@
 
 import React from 'react';
 
+import dynamic from 'next/dynamic';
+
+import { INewsPortal } from '@/types';
 import { formatDate } from 'date-fns';
 
 import AlbumSlider from '@/components/album-slider';
 import LatestPosts from '@/components/latest-posts';
-
 import { Separator } from '@/components/ui/separator';
-
-import dynamic from 'next/dynamic';
-import { INewsPortal } from '@/types';
 
 const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
   ssr: false,
@@ -18,16 +17,16 @@ const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
 
 const Content: React.FC<{ data: INewsPortal }> = ({ data }) => {
   return (
-    <div className='flex flex-col lg:flex-row gap-8 '>
+    <div className='flex flex-col gap-8 lg:flex-row'>
       <div className='flex-1'>
-        <h2 className='text-xl lg:text-3xl font-medium font-poppins'>
+        <h2 className='font-poppins text-xl font-medium lg:text-3xl'>
           {data?.title}
         </h2>
         <h3>{data?.subtitle}</h3>
         <div className='mt-4'>
           <p>{formatDate(new Date(data?.published_date), 'dd MMM, yyyy')}</p>
         </div>
-        <Separator className='mt-3 mb-6' />
+        <Separator className='mb-6 mt-3' />
 
         <div>
           <AlbumSlider
@@ -49,7 +48,7 @@ const Content: React.FC<{ data: INewsPortal }> = ({ data }) => {
         </div>
       </div>
 
-      <div className='lg:border-l lg:pl-8 flex-[0_0_340px] h-fit'>
+      <div className='h-fit flex-[0_0_340px] lg:border-l lg:pl-8'>
         <LatestPosts department={data?.department_name} />
       </div>
     </div>

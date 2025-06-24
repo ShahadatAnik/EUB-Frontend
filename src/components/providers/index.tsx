@@ -1,8 +1,10 @@
 'use client';
 
 import React from 'react';
-import TanstackProvider from './tanstack-provider';
+
 import { AppProgressProvider as ProgressProvider } from '@bprogress/next';
+
+import TanstackProvider from './tanstack-provider';
 
 const Providers: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (

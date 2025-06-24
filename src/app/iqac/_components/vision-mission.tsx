@@ -4,7 +4,7 @@ import ContentWrapper from './content-wrapper';
 
 const VisionMission = () => {
   return (
-    <ContentWrapper title='Vision &amp; Mission' className='py-2 space-y-6'>
+    <ContentWrapper title='Vision &amp; Mission' className='space-y-6 py-2'>
       <div>
         <h6 className='text-lg font-semibold'>Vision :</h6>
         <p className='mt-1'>

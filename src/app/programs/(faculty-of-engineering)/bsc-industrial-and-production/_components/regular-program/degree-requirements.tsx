@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from '../content-wrapper';
+
 import Title from '@/components/title';
+
+import ContentWrapper from '../content-wrapper';
 
 const DegreeRequirements = () => {
   return (
@@ -12,7 +14,7 @@ const DegreeRequirements = () => {
 
       <div>
         <Title variant={'title'} title='Minimum GPA to pass program' />
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             <strong>Regular Students:</strong>
             Minimum 161.75 credits
@@ -25,7 +27,7 @@ const DegreeRequirements = () => {
       </div>
       <div>
         <Title variant={'title'} title='Admission Requirements' />
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             <strong>Bangladeshi Students:</strong>
             <ul className='mt-2 space-y-1'>
@@ -64,7 +66,7 @@ const DegreeRequirements = () => {
       </div>
       <div>
         <Title variant={'title'} title='Course Load Restrictions:' />
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>Full-time: Up to 15 credits per semester</li>
           <li>Part-time: Up to 9 credits per semester</li>
         </ul>

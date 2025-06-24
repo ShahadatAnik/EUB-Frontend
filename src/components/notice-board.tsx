@@ -1,12 +1,15 @@
 'use client';
 
 import React from 'react';
-import { Separator } from './ui/separator';
+
+import { useQuery } from '@tanstack/react-query';
+
+import { getNotices } from '@/server/get';
+
+import NoticeCard from '@/app/notices/_components/notice-card';
 
 import QuickLinks from './quick-links';
-import { useQuery } from '@tanstack/react-query';
-import { getNotices } from '@/server/get';
-import NoticeCard from '@/app/notices/_components/notice-card';
+import { Separator } from './ui/separator';
 
 const NoticeBoard = () => {
   const { data } = useQuery({

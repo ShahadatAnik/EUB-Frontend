@@ -1,9 +1,12 @@
 'use client';
 
-import { Input } from '@/components/ui/input';
-import { cn } from '@/lib/utils';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
+
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+
+import { Input } from '@/components/ui/input';
+
+import { cn } from '@/lib/utils';
 
 const Search: React.FC<React.ComponentProps<'input'>> = ({
   placeholder = 'Search here...',

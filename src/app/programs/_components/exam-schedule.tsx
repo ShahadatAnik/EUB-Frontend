@@ -1,8 +1,10 @@
 import React from 'react';
-import SystemTable from '@/components/table/system-table';
 
 import { columns, useGetRegularExamSchedule } from '@/hooks/use-get-course';
+
 import Loader from '@/components/loader';
+import SystemTable from '@/components/table/system-table';
+
 import ContentWrapper from './content-wrapper';
 
 const ExamSchedule: React.FC<{ department: string }> = ({ department }) => {

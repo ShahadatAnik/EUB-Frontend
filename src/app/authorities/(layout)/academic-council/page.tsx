@@ -1,8 +1,10 @@
 import React from 'react';
-import Content from './_components/content';
+
+import { getAuthoritiesAcademicCouncil } from '@/server/get';
 
 import { generateMetaData } from '@/lib/utils';
-import { getAuthoritiesAcademicCouncil } from '@/server/get';
+
+import Content from './_components/content';
 
 export const metadata = generateMetaData({
   title: 'Academic Council',

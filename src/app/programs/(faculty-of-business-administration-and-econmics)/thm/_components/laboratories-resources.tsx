@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
+
 import Image from 'next/image';
+
+import ContentWrapper from './content-wrapper';
 
 const LaboratoriesResources = () => {
   return (
@@ -8,7 +10,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>HOUSEKEEPING LAB</h4>
         <div className='mt-2'>
-          <div className=' float-right ml-6 aspect-square w-[300px] relative'>
+          <div className='relative float-right ml-6 aspect-square w-[300px]'>
             <Image
               fill
               className='object-cover object-center'
@@ -17,7 +19,7 @@ const LaboratoriesResources = () => {
             />
           </div>
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             A &quot;housekeeping lab&quot; in a tourism department is a
             dedicated space where students studying tourism and hospitality
             management can practice and develop the essential skills required
@@ -40,7 +42,7 @@ const LaboratoriesResources = () => {
       </div>
       <div>
         <h4 className='text-xl font-semibold'>CULINARY LAB</h4>
-        <div className='mt-2 flex  gap-6 '>
+        <div className='mt-2 flex gap-6'>
           <Image
             height={400}
             width={300}
@@ -50,7 +52,7 @@ const LaboratoriesResources = () => {
           />
 
           <div className='flex-1'>
-            <p className='text-justify '>
+            <p className='text-justify'>
               A culinary lab in a tourism program is a specialized kitchen where
               tourism and hospitality management students develop cooking
               skills, learn to prepare local and international dishes and
@@ -72,7 +74,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Front Office Lab</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             A Front Office Lab is a simulated or real training environment
             designed to teach students and professionals about front office
             operations in the hospitality and tourism industry. It replicates

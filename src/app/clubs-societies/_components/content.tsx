@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { Button } from '@/components/ui/button';
+import { IClubAndSociety } from '@/types';
 
 import {
   Accordion,
@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { IClubAndSociety } from '@/types';
+import { Button } from '@/components/ui/button';
 
 const Content: React.FC<{ data: IClubAndSociety[] }> = ({ data }) => {
   const [currentFaculty, setCurrentFaculty] = useState<string>(data[0].value);
@@ -22,13 +22,13 @@ const Content: React.FC<{ data: IClubAndSociety[] }> = ({ data }) => {
     data.find((faculty) => faculty.value === currentFaculty)?.clubs || [];
 
   return (
-    <div className='flex flex-col lg:flex-row gap-8 lg:gap-16'>
-      <div className='w-full lg:w-[400px] flex flex-col '>
+    <div className='flex flex-col gap-8 lg:flex-row lg:gap-16'>
+      <div className='flex w-full flex-col lg:w-[400px]'>
         {data.map((faculty) => (
           <Button
             size={'lg'}
             variant={currentFaculty === faculty.value ? 'secondary' : 'outline'}
-            className='h-12 lg:h-16 text-base lg:text-xl border-t-0 border-x-0 rounded-none  shadow-none border-b justify-start'
+            className='h-12 justify-start rounded-none border-x-0 border-b border-t-0 text-base shadow-none lg:h-16 lg:text-xl'
             onClick={() => setCurrentFaculty(faculty?.value)}
             key={faculty.value}
           >
@@ -45,7 +45,7 @@ const Content: React.FC<{ data: IClubAndSociety[] }> = ({ data }) => {
             <AccordionItem value={club.title} key={index}>
               <AccordionTrigger
                 iconClassName='text-black size-6'
-                className='px-4 py-3 bg-transparent border-b h-16 text-xl'
+                className='h-16 border-b bg-transparent px-4 py-3 text-xl'
               >
                 {club.title}
               </AccordionTrigger>

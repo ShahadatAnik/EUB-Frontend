@@ -1,8 +1,12 @@
+import React from 'react';
+
+import { IFacultyDetails } from '@/types';
+
+import { getFacultyDetails } from '@/server/get/get-faculties';
+
 import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
-import { getFacultyDetails } from '@/server/get/get-faculties';
-import { IFacultyDetails } from '@/types';
-import React from 'react';
+
 import Content from './_components/content';
 
 export default async function Page({

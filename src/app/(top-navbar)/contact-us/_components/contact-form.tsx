@@ -2,9 +2,13 @@
 
 import React from 'react';
 
-import { z } from 'zod';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useMutation } from '@tanstack/react-query';
+import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
+import { z } from 'zod';
+
+import { createContactForm } from '@/server/post';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -15,17 +19,14 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+
 import {
   defaultContactForm,
-  IContactForm,
   formSchema,
+  IContactForm,
 } from '../_const/contact-form-schema';
-import { useMutation } from '@tanstack/react-query';
-import { createContactForm } from '@/server/post';
-import { toast } from 'sonner';
 
 const ContactForm = () => {
   const mutation = useMutation({
@@ -54,7 +55,7 @@ const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <h4 className='text-lg lg:text-2xl font-semibold mb-2 '>
+      <h4 className='mb-2 text-lg font-semibold lg:text-2xl'>
         Please use the following form to contact the department/person.
       </h4>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>

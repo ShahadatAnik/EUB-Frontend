@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Title from '@/components/title';
-import MemberCard from './member-card';
 
 import data from '../_const/data';
+import MemberCard from './member-card';
 
 const Content = () => {
   return (

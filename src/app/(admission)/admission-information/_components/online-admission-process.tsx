@@ -1,7 +1,9 @@
 import React from 'react';
+
+import Link from 'next/link';
+
 import SectionContent from './section-content';
 import SectionLayout from './section-layout';
-import Link from 'next/link';
 
 const OnlineAdmissionProcess = () => {
   return (
@@ -10,7 +12,7 @@ const OnlineAdmissionProcess = () => {
       id='online-admission-process'
     >
       <SectionContent title='Step 1 - Complete your Registration'>
-        <ul className='list-decimal list-inside space-y-3'>
+        <ul className='list-inside list-decimal space-y-3'>
           <li>
             Read carefully your eligibility from the tab{' '}
             <Link
@@ -36,7 +38,7 @@ const OnlineAdmissionProcess = () => {
       </SectionContent>
 
       <SectionContent title='Step 2 - Payment options for Application Fee'>
-        <ul className='list-decimal list-inside space-y-3'>
+        <ul className='list-inside list-decimal space-y-3'>
           <li>You have to send: Tk. 10,200.00 (For Admission Fee)</li>
           <li>
             Send the admission fee on this bKash Account number:{' '}

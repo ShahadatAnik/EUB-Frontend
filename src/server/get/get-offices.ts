@@ -1,7 +1,7 @@
 'use server';
 
-import fetchApi from '@/utils/fetchApi';
 import { IOffice, IOfficeEntry } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
 export const getOffices = async (): Promise<IOffice[]> =>
   fetchApi(`/portfolio/office`);

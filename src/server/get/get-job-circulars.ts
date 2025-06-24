@@ -1,7 +1,7 @@
 'use server';
 
-import fetchApi from '@/utils/fetchApi';
 import { ICareer, IPagination } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
 export interface IJobCircularResponse {
   data: ICareer[];

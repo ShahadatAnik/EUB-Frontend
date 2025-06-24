@@ -1,14 +1,19 @@
 'use client';
 
 import React, { useState } from 'react';
-import ContentWrapper from './content-wrapper';
+
 import { useQuery } from '@tanstack/react-query';
-import NoticeCard from '@/app/notices/_components/notice-card';
-import { Input } from '@/components/ui/input';
 import { useDebounceValue } from 'usehooks-ts';
-import ClientPagination from '@/components/client-pagination';
+
 import { getNoticesByDepartment } from '@/server/get/get-notices';
+
+import ClientPagination from '@/components/client-pagination';
 import NoDataFound from '@/components/no-data-found';
+import { Input } from '@/components/ui/input';
+
+import NoticeCard from '@/app/notices/_components/notice-card';
+
+import ContentWrapper from './content-wrapper';
 
 const Notices: React.FC<{ department: string }> = ({ department }) => {
   const limit = 10;
@@ -29,7 +34,7 @@ const Notices: React.FC<{ department: string }> = ({ department }) => {
 
   return (
     <ContentWrapper title='Notices' className='space-y-8'>
-      <div className='flex justify-end '>
+      <div className='flex justify-end'>
         <Input
           onChange={(e) => setValue(e.target.value)}
           type='search'

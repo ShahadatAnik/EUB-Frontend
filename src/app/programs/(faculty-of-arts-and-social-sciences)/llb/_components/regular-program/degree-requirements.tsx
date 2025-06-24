@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from '../content-wrapper';
+
 import Title from '@/components/title';
+
+import ContentWrapper from '../content-wrapper';
 
 const DegreeRequirements = () => {
   return (

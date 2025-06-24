@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import { IPagination } from '@/types';
+
 import {
   Pagination,
   PaginationContent,
@@ -13,7 +15,6 @@ import {
 } from '@/components/ui/pagination';
 
 import { Button } from './ui/button';
-import { IPagination } from '@/types';
 
 const ClientPagination: React.FC<{
   pagination: IPagination;

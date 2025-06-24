@@ -1,23 +1,25 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
+
 import Image from 'next/image';
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
+import ContentWrapper from './content-wrapper';
+
 const LaboratoriesResources = () => {
   return (
     <ContentWrapper
       title='Laboratories and Resources'
-      className='space-y-8 max-w-3xl'
+      className='max-w-3xl space-y-8'
     >
       {/* Header Section */}
       <div className='mb-8'>
-        <h2 className='text-xl font-semibold mb-2'>
+        <h2 className='mb-2 text-xl font-semibold'>
           Introducing Description of Textile Lab
         </h2>
 
-        <div className='space-y-4 text-sm leading-relaxed text-justify'>
+        <div className='space-y-4 text-justify text-sm leading-relaxed'>
           <p>
             We place a strong emphasis on the development of our students,
             equipping them with the skills to innovate, improve, and lead the
@@ -44,14 +46,14 @@ const LaboratoriesResources = () => {
 
       {/* Textile Engineering Lab 1 */}
       <div className='mb-8'>
-        <h3 className='text-lg font-semibold mb-4'>
+        <h3 className='mb-4 text-lg font-semibold'>
           Textile Engineering Lab 1:
         </h3>
-        <h4 className='text-base font-medium mb-4'>Equipment:</h4>
+        <h4 className='mb-4 text-base font-medium'>Equipment:</h4>
 
         {/* Carding Section */}
         <div className='mb-6'>
-          <h5 className='font-medium mb-3'>1. Carding</h5>
+          <h5 className='mb-3 font-medium'>1. Carding</h5>
           <Card className='mb-4'>
             <CardContent className='p-2'>
               <Image
@@ -59,11 +61,11 @@ const LaboratoriesResources = () => {
                 alt='Carding machine - blue industrial textile equipment'
                 width={500}
                 height={300}
-                className='w-full h-auto rounded'
+                className='h-auto w-full rounded'
               />
             </CardContent>
           </Card>
-          <p className='text-sm text-justify leading-relaxed'>
+          <p className='text-justify text-sm leading-relaxed'>
             A carding machine, often referred to as the &quot;Heart of
             Spinning,&quot; is a textile device used to disentangle, clean, and
             align fibers such as cotton or wool. It achieves this by passing the
@@ -75,7 +77,7 @@ const LaboratoriesResources = () => {
 
         {/* Draw Frame Section */}
         <div className='mb-6'>
-          <h5 className='font-medium mb-3'>2. Draw Frame</h5>
+          <h5 className='mb-3 font-medium'>2. Draw Frame</h5>
           <Card className='mb-4'>
             <CardContent className='p-2'>
               <Image
@@ -83,11 +85,11 @@ const LaboratoriesResources = () => {
                 alt='Draw Frame - green industrial textile equipment'
                 width={500}
                 height={300}
-                className='w-full h-auto rounded'
+                className='h-auto w-full rounded'
               />
             </CardContent>
           </Card>
-          <p className='text-sm text-justify leading-relaxed'>
+          <p className='text-justify text-sm leading-relaxed'>
             The draw frame applies controlled stretching or elongation to the
             sliver, which aligns the fibers in parallel and reduces its
             thickness. This process, known as drafting, is accomplished by
@@ -98,7 +100,7 @@ const LaboratoriesResources = () => {
 
         {/* Ring Frame Section */}
         <div className='mb-6'>
-          <h5 className='font-medium mb-3'>3. Ring Frame</h5>
+          <h5 className='mb-3 font-medium'>3. Ring Frame</h5>
           <Card className='mb-4'>
             <CardContent className='p-2'>
               <Image
@@ -106,11 +108,11 @@ const LaboratoriesResources = () => {
                 alt='Ring Frame - large textile spinning machine'
                 width={500}
                 height={300}
-                className='w-full h-auto rounded'
+                className='h-auto w-full rounded'
               />
             </CardContent>
           </Card>
-          <p className='text-sm text-justify leading-relaxed'>
+          <p className='text-justify text-sm leading-relaxed'>
             A ring frame machine in textiles is a spinning device that utilizes
             a ring and traveler system to twist and wind loose fibers (roving)
             into yarn. It is a vital piece of equipment in a textile mill, used
@@ -123,14 +125,14 @@ const LaboratoriesResources = () => {
 
       {/* Textile Engineering Lab 2 */}
       <div className='mb-8'>
-        <h3 className='text-lg font-semibold mb-4'>
+        <h3 className='mb-4 text-lg font-semibold'>
           Textile Engineering Lab 2:
         </h3>
-        <h4 className='text-base font-medium mb-4'>Equipment:</h4>
+        <h4 className='mb-4 text-base font-medium'>Equipment:</h4>
 
         {/* Count Tester Section */}
         <div className='mb-6'>
-          <h5 className='font-medium mb-3'>1. Count Tester</h5>
+          <h5 className='mb-3 font-medium'>1. Count Tester</h5>
           <Card className='mb-4'>
             <CardContent className='p-2'>
               <Image
@@ -138,11 +140,11 @@ const LaboratoriesResources = () => {
                 alt='Count Tester - blue industrial textile equipment with multiple components'
                 width={500}
                 height={250}
-                className='w-full h-auto rounded'
+                className='h-auto w-full rounded'
               />
             </CardContent>
           </Card>
-          <p className='text-sm text-justify leading-relaxed'>
+          <p className='text-justify text-sm leading-relaxed'>
             A &quot;conventional count tester&quot; in textiles is a device used
             to measure the yarn count, which represents the linear density of
             the yarn. It determines the weight of a specific length of yarn,
@@ -153,7 +155,7 @@ const LaboratoriesResources = () => {
 
         {/* Simplex Section */}
         <div className='mb-6'>
-          <h5 className='font-medium mb-3'>2. Simplex</h5>
+          <h5 className='mb-3 font-medium'>2. Simplex</h5>
           <Card className='mb-4'>
             <CardContent className='p-2'>
               <Image
@@ -161,11 +163,11 @@ const LaboratoriesResources = () => {
                 alt='Simplex machine - blue and beige textile equipment'
                 width={500}
                 height={300}
-                className='w-full h-auto rounded'
+                className='h-auto w-full rounded'
               />
             </CardContent>
           </Card>
-          <p className='text-sm text-justify leading-relaxed'>
+          <p className='text-justify text-sm leading-relaxed'>
             A simplex machine is a textile device that converts drawn slivers
             into roving. It serves as an intermediate machine between the draw
             frame and the ring frame in the yarn production process.
@@ -174,7 +176,7 @@ const LaboratoriesResources = () => {
 
         {/* Power Loom Section */}
         <div className='mb-6'>
-          <h5 className='font-medium mb-3'>3. Power Loom</h5>
+          <h5 className='mb-3 font-medium'>3. Power Loom</h5>
           <Card className='mb-4'>
             <CardContent className='p-2'>
               <Image
@@ -182,11 +184,11 @@ const LaboratoriesResources = () => {
                 alt='Power Loom - weaving machine with wooden and metal components'
                 width={500}
                 height={300}
-                className='w-full h-auto rounded'
+                className='h-auto w-full rounded'
               />
             </CardContent>
           </Card>
-          <p className='text-sm text-justify leading-relaxed'>
+          <p className='text-justify text-sm leading-relaxed'>
             A machine used to weave fabric from threads is called a loom.
             Weaving is carried out on looms, which can be either hand-operated
             or power-operated. Hand-operated looms are referred to as
@@ -197,7 +199,7 @@ const LaboratoriesResources = () => {
 
         {/* Single Jersey Circular Knitting Machine Section */}
         <div className='mb-6'>
-          <h5 className='font-medium mb-3'>
+          <h5 className='mb-3 font-medium'>
             4. Single Jersey Circular Knitting Machine
           </h5>
           <Card className='mb-4'>
@@ -207,11 +209,11 @@ const LaboratoriesResources = () => {
                 alt='Single Jersey Circular Knitting Machine - tall circular knitting equipment'
                 width={500}
                 height={400}
-                className='w-full h-auto rounded'
+                className='h-auto w-full rounded'
               />
             </CardContent>
           </Card>
-          <p className='text-sm text-justify leading-relaxed'>
+          <p className='text-justify text-sm leading-relaxed'>
             A single jersey circular knitting machine is a textile manufacturing
             device used to produce knitted fabrics using a single set of
             needles. This machine operates in a circular fashion, creating a

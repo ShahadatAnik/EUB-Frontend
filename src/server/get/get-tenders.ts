@@ -1,7 +1,7 @@
 'use server';
 
-import fetchApi from '@/utils/fetchApi';
 import { IPaginationResponse, ITender } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
 export const getTenders = async ({
   page = 1,

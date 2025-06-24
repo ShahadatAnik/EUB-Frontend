@@ -1,12 +1,13 @@
-import Image from 'next/image';
 import React from 'react';
+
+import Image from 'next/image';
 
 const Content = () => {
   return (
     <div className='py-6 lg:py-12'>
       <div className='container space-y-8'>
         <div>
-          <div className='relative  aspect-video lg:h-[300px] lg:float-left mb-4 lg:mb-0 lg:mr-8'>
+          <div className='relative mb-4 aspect-video lg:float-left lg:mb-0 lg:mr-8 lg:h-[300px]'>
             <Image
               className='object-contain'
               fill
@@ -39,7 +40,7 @@ const Content = () => {
         </div>
 
         <div>
-          <div className='relative  aspect-video lg:h-[300px] mb-4 lg:mb-0 lg:float-right lg:ml-8'>
+          <div className='relative mb-4 aspect-video lg:float-right lg:mb-0 lg:ml-8 lg:h-[300px]'>
             <Image
               className='object-cover'
               fill
@@ -47,7 +48,7 @@ const Content = () => {
               alt='Dummy Cover Image'
             />
           </div>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The university’s expansive permanent campus, spanning 550,000 square
             feet, is strategically located in the heart of Dhaka City, within
             the prestigious institutional zone of Gabtoli (opposite the Gabtoli

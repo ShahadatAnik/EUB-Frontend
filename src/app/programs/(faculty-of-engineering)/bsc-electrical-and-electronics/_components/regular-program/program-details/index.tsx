@@ -1,9 +1,10 @@
 import React from 'react';
 
-import ContentWrapper from '../../content-wrapper';
 import Title from '@/components/title';
 
 import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
+
+import ContentWrapper from '../../content-wrapper';
 import PerformanceCriteriaTable from './performance-criteria-table';
 
 const ProgramDetails = () => {
@@ -26,7 +27,7 @@ const ProgramDetails = () => {
         <Title variant={'title'} title='Semesters' />
         <p>There are three semesters in a year.</p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-1.5'>
+        <ul className='mt-2 list-disc space-y-1.5 pl-6'>
           <li className='space-x-1'>
             <strong>Spring semester:</strong> <span>January to April</span>
           </li>
@@ -41,15 +42,11 @@ const ProgramDetails = () => {
 
       <div>
         <Title variant={'title'} title='Duration' />
-        <ul className='mb-4  space-y-1.5 pl-6 list-disc'>
-          <li>Regular batch: 4 years (12 semesters)</li>
-          <li>
-            Evening batch: 3 years and 4 months (10 semesters with 2 semesters
-            waived, totaling 18 credits)
-          </li>
+        <ul className='mb-4 list-disc space-y-1.5 pl-6'>
+          <li>4 years (12 semesters)</li>
         </ul>
         <p>Each semester spans 16 working weeks, structured as follows:</p>
-        <ul className='mt-2 space-y-1.5 pl-6 list-disc'>
+        <ul className='mt-2 list-disc space-y-1.5 pl-6'>
           <li>Classes and continuous assessments: 12 weeks</li>
           <li>
             Mid Term and Final Examinations (including Supplementary): 4 weeks
@@ -59,7 +56,7 @@ const ProgramDetails = () => {
       </div>
       <div>
         <Title variant={'title'} title='Credit Hour' />
-        <ul className='mb-4 space-y-1.5 pl-6 list-disc'>
+        <ul className='mb-4 list-disc space-y-1.5 pl-6'>
           <li>Theory Courses: 3 credit hours (3 lecture sessions per week)</li>
           <li>Lab Courses: 2 credit hours (2 lab sessions per week)</li>
           <li>One credit hour = 50 minutes of class time</li>
@@ -67,7 +64,7 @@ const ProgramDetails = () => {
       </div>
       <div>
         <Title variant={'title'} title='Course Load' />
-        <ul className='mb-4 space-y-1.5 pl-6 list-disc'>
+        <ul className='mb-4 list-disc space-y-1.5 pl-6'>
           <li>Students may take up to 18.00 credits per semester</li>
           <li>The final semester includes only the Project/Thesis</li>
           <li>
@@ -99,7 +96,7 @@ const ProgramDetails = () => {
           </p>
 
           <Title variant={'title'} title='Special Grades' />
-          <ul className='list-disc pl-6 space-y-1.5'>
+          <ul className='list-disc space-y-1.5 pl-6'>
             <li>Incomplete (I): 0.00</li>
             <li>Withdrawal (W): 0.00</li>
             <li>Retaken (R): 0.00</li>
@@ -109,7 +106,7 @@ const ProgramDetails = () => {
 
       <div>
         <Title variant={'title'} title='Supplementary Exams & Costs' />
-        <ul className='space-y-1.5 pl-6 list-disc'>
+        <ul className='list-disc space-y-1.5 pl-6'>
           <li>
             Students can attempt a maximum of two supplementary exams per
             course.

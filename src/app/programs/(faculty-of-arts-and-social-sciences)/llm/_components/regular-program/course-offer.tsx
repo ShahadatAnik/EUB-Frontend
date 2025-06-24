@@ -1,6 +1,9 @@
-import SystemTable from '@/components/table/system-table';
-import { columns, useGetRegularCourseOffer } from '@/hooks/use-get-course';
 import React from 'react';
+
+import { columns, useGetRegularCourseOffer } from '@/hooks/use-get-course';
+
+import SystemTable from '@/components/table/system-table';
+
 import ContentWrapper from '../content-wrapper';
 
 const ClassRoutine = () => {

@@ -1,19 +1,22 @@
 import React from 'react';
+
 import Link from 'next/link';
 
-import ContentWrapper from './content-wrapper';
+import { IDataTable } from '@/types';
 
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
-import { IDataTable } from '@/types';
+
 import { formatDate } from '@/lib/utils';
+
+import ContentWrapper from './content-wrapper';
 
 const columns: SystemTableColumn<IDataTable>[] = [
   {
     accessorKey: 'description',
     cell: (value) => (
-      <Link className='underline text-primary font-medium' href={value}>
+      <Link className='font-medium text-primary underline' href={value}>
         Test Pdf
       </Link>
     ),

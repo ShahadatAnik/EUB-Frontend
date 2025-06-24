@@ -4,10 +4,10 @@ import ServiceCard from './service-card';
 
 const Content = () => {
   return (
-    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8'>
+    <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8'>
       {/* REGISTRATION SERVICES */}
       <ServiceCard title='Registration Services'>
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li className='space-x-1'>
             <span>Registrar Room :</span>
             <span className='font-semibold'>218</span>
@@ -16,7 +16,7 @@ const Content = () => {
           <li>
             <span>Registrar Office :</span>
 
-            <ul className='mt-1 list-disc pl-6 space-y-1'>
+            <ul className='mt-1 list-disc space-y-1 pl-6'>
               <li className='font-semibold'>Cluster I, Level 2, Room - 201</li>
               <li className='font-semibold'>Cluster II, Level 4, Room - 418</li>
             </ul>
@@ -32,7 +32,7 @@ const Content = () => {
 
       {/* EXAMINATION SERVICE DESK */}
       <ServiceCard title='Examination Service Desk'>
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li className='space-x-1'>
             <span>Controller of Examination : </span>
             <span className='font-semibold'>Level 3, Room 303</span>
@@ -64,11 +64,11 @@ const Content = () => {
 
       {/* ACCOUNTS SERVICE DESK */}
       <ServiceCard title='Accounts Service Desk'>
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             <span>Accounts Office : </span>
 
-            <ul className='mt-1 list-disc pl-6 space-y-1'>
+            <ul className='mt-1 list-disc space-y-1 pl-6'>
               <li>
                 <strong> Cluster I: Level 2, Room 216 </strong>
               </li>
@@ -93,11 +93,11 @@ const Content = () => {
 
       {/* LIBRARY SERVICE */}
       <ServiceCard title='Library Service'>
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             <span>Library: Room 716 (open on weekdays).</span>
 
-            <ul className='mt-1 list-disc pl-6 space-y-1'>
+            <ul className='mt-1 list-disc space-y-1 pl-6'>
               <li>
                 <strong>
                   Hours: 9:00 AM - 5:00 PM (Sunday to Wednesday), 9:00 AM - 8:00
@@ -119,10 +119,10 @@ const Content = () => {
 
       {/* STUDENT SERVICE DESK */}
       <ServiceCard title='Student Service Desk'>
-        <ul className='list-disc pl-6 space-y-4'>
+        <ul className='list-disc space-y-4 pl-6'>
           <li>
             <h6 className='text-lg font-semibold'>Coordination Offices:</h6>
-            <ul className='mt-1 list-disc pl-6 space-y-2'>
+            <ul className='mt-1 list-disc space-y-2 pl-6'>
               <li>Director, Program Coordination: Room 203</li>
               <li>Manager, Program Coordination: Room 208</li>
               <li>
@@ -135,7 +135,7 @@ const Content = () => {
           </li>
           <li>
             <h6 className='text-lg font-semibold'>PCOs of Departments:</h6>
-            <ul className='mt-1 list-disc pl-6 space-y-2'>
+            <ul className='mt-1 list-disc space-y-2 pl-6'>
               <li>EEE: Room 805</li>
               <li>Textile Engineering: Room 1131</li>
               <li>CSE: Room 1031</li>
@@ -149,7 +149,7 @@ const Content = () => {
           </li>
           <li>
             <h6 className='text-lg font-semibold'>Other Services:</h6>
-            <ul className='mt-1 list-disc pl-6 space-y-2'>
+            <ul className='mt-1 list-disc space-y-2 pl-6'>
               <li>Identity Card Service: Room 718</li>
               <li>Medical Centre: Senior Medical Officer in Room 308</li>
               <li>Cafeteria 71: Level 5</li>
@@ -160,7 +160,7 @@ const Content = () => {
       <div className='space-y-4 lg:space-y-8'>
         {/* OFFICE OF THE DEPARTMENTAL CHAIRMAN */}
         <ServiceCard title='Offices of the Departmental Chairman'>
-          <ul className='list-disc pl-6 space-y-2'>
+          <ul className='list-disc space-y-2 pl-6'>
             <li>
               <strong>Civil Engineering: </strong> Room 331
             </li>
@@ -199,7 +199,7 @@ const Content = () => {
 
         {/* OFFICE OF THE DEPARTMENTAL TEACHER */}
         <ServiceCard title='Offices of the Departmental Teacher'>
-          <ul className='list-disc pl-6 space-y-2'>
+          <ul className='list-disc space-y-2 pl-6'>
             <li>
               <strong className='font-semibold'>Civil Engineering: </strong>{' '}
               Room 312, 328, 428, 528
@@ -243,7 +243,7 @@ const Content = () => {
 
       {/* COMPUTER LABORATORY */}
       <ServiceCard title='Computer Laboratory Service'>
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             <strong>Civil Engineering Labs:</strong> Room 320, 329, 429
           </li>
@@ -264,7 +264,7 @@ const Content = () => {
           </li>
           <li>
             <strong>Rules:</strong>
-            <ul className='mt-1 list-disc pl-6 space-y-2'>
+            <ul className='mt-1 list-disc space-y-2 pl-6'>
               <li>Wear ID card to access labs.</li>
               <li>Computers prioritized for coursework.</li>
               <li>Bags may be checked by lab authorities if necessary.</li>
@@ -275,7 +275,7 @@ const Content = () => {
 
       {/* ICT */}
       <ServiceCard title='Department of ICT'>
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>ICT Section: Room 116</li>
           <li>Supports student portal reset and activation.</li>
           <li>For IT support, ID cards must be worn.</li>

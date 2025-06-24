@@ -16,17 +16,17 @@ const PageHeader: React.FC<IPageHeaderProps> = ({
       style={{
         backgroundImage: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}url(${image})`,
       }}
-      className='py-8 lg:py-16 bg-default relative flex items-center'
+      className='bg-default relative flex items-center py-8 lg:py-16'
     >
       <div className='absolute inset-0 bg-black/70'></div>
       <div className='container relative z-10 text-center'>
         {
-          <h1 className='text-wrap text-2xl lg:text-4xl 2xl:text-5xl text-white font-poppins font-semibold 2xl:leading-[1.25]'>
+          <h1 className='text-wrap font-poppins text-2xl font-semibold text-white lg:text-4xl 2xl:text-5xl 2xl:leading-[1.25]'>
             {title}
           </h1>
         }
         {description && (
-          <p className='lg:mt-2 text-base lg:text-lg text-slate-300'>
+          <p className='text-base text-slate-300 lg:mt-2 lg:text-lg'>
             {description}
           </p>
         )}

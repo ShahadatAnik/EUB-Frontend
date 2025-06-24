@@ -69,7 +69,7 @@ body {
   color: blue !important;
 }
 .ql-bubble .ql-editor p {
-  @apply text-base font-sans;
+  @apply font-sans text-base;
 }
 
 @layer base {
@@ -82,13 +82,13 @@ body {
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background font-sans text-foreground;
   }
 }
 
 @layer utilities {
   .bg-default {
-    @apply bg-no-repeat bg-cover bg-center;
+    @apply bg-cover bg-center bg-no-repeat;
   }
   .sb-red {
     @apply border border-red-500;

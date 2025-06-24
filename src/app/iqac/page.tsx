@@ -1,7 +1,8 @@
 import React from 'react';
 
-import PageHeader from '@/components/page-header';
 import PageContainer from '@/components/page-container';
+import PageHeader from '@/components/page-header';
+
 import Content from './_components/content';
 
 const Page = () => {

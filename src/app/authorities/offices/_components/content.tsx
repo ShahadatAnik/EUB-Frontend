@@ -1,11 +1,14 @@
 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 
-import ClientImage from '@/components/client-image';
+import Image from 'next/image';
+import Link from 'next/link';
+
 import { IOffice } from '@/types';
+
+import ClientImage from '@/components/client-image';
+
 import { useOffices } from '../_const/query';
 
 const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
@@ -14,13 +17,13 @@ const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
   return (
     <div className='py-6 lg:py-12'>
       <div className='container max-w-[1200px]'>
-        <div className='grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
           {data.map((item, index) => (
             <div
               key={index}
-              className='bg-white flex flex-col rounded-sm shadow-sm overflow-hidden'
+              className='flex flex-col overflow-hidden rounded-sm bg-white shadow-sm'
             >
-              <div className='aspect-video relative'>
+              <div className='relative aspect-video'>
                 {item.image ? (
                   <ClientImage
                     className='object-contain object-center p-10'
@@ -38,9 +41,9 @@ const Content: React.FC<{ initialData: IOffice[] }> = ({ initialData }) => {
                 )}
               </div>
 
-              <div className=' flex-1 px-6 py-4 border-t flex items-center  '>
+              <div className='flex flex-1 items-center border-t px-6 py-4'>
                 <Link
-                  className=' text-lg text-primary font-medium hover:underline'
+                  className='text-lg font-medium text-primary hover:underline'
                   href={`/authorities/offices/${item.category}`}
                 >
                   {item.title}

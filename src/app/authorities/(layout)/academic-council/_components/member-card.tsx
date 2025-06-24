@@ -1,30 +1,28 @@
 'use-client';
+
 import React from 'react';
+
 import { Member } from '../_const/data';
 
 const MemberCard: React.FC<{ data: Member; index: number }> = ({
-	data,
-	index,
+  data,
+  index,
 }) => {
-	return (
-		<div className="flex items-center gap-5">
-			<div className="relative">
-				<div className="absolute size-full -top-1 -left-1 bg-primary/10"></div>
-				<div className="relative z-10 top-1 left-1  size-10 bg-primary text-white text-lg flex items-center justify-center">
-					{index}
-				</div>
-			</div>
+  return (
+    <div className='flex items-center gap-5'>
+      <div className='relative'>
+        <div className='absolute -left-1 -top-1 size-full bg-primary/10'></div>
+        <div className='relative left-1 top-1 z-10 flex size-10 items-center justify-center bg-primary text-lg text-white'>
+          {index}
+        </div>
+      </div>
 
-			<div>
-				<h5 className=" text-base text-primary font-poppins">
-					{data.name}
-				</h5>
-				<p className=" text-sm text-muted-foreground">
-					{data.designation}
-				</p>
-			</div>
-		</div>
-	);
+      <div>
+        <h5 className='font-poppins text-base text-primary'>{data.name}</h5>
+        <p className='text-sm text-muted-foreground'>{data.designation}</p>
+      </div>
+    </div>
+  );
 };
 
 export default MemberCard;

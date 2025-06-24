@@ -1,14 +1,15 @@
 'use client';
 
+import { ICareer } from '@/types';
+
+import { IJobCircularResponse } from '@/server/get/get-job-circulars';
+
+import PdfDownloadButton from '@/components/pdf-download-btn';
+import Search from '@/components/search';
+import ServerPagination from '@/components/server-pagination';
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
-import { ICareer } from '@/types';
-import PdfDownloadButton from '@/components/pdf-download-btn';
-import { IJobCircularResponse } from '@/server/get/get-job-circulars';
-
-import Search from '@/components/search';
-import ServerPagination from '@/components/server-pagination';
 
 const columns: SystemTableColumn<ICareer>[] = [
   {

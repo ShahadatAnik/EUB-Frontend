@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
+
 import Image from 'next/image';
+
+import ContentWrapper from './content-wrapper';
 
 const LaboratoriesResources = () => {
   return (
@@ -18,7 +20,7 @@ const LaboratoriesResources = () => {
             alt='Environmental Engineering Laboratory'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Environmental Engineering Laboratory at the European University
             of Bangladesh provides hands-on experience in water quality analysis
             and treatment. Equipped with advanced tools, it allows students to
@@ -50,7 +52,7 @@ const LaboratoriesResources = () => {
             alt='Transportation Engineering Laboratory'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Transportation Engineering Laboratory at the European University
             of Bangladesh provides students with practical experience in
             analyzing and designing transportation systems. Equipped with modern
@@ -76,7 +78,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Open Channel Flow Laboratory</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Open Channel Flow Laboratory at the Department of Civil
             Engineering, European University of Bangladesh, is designed to
             enhance students&apos; understanding of open channel hydraulics and
@@ -107,7 +109,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Fluid Mechanics Laboratory</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Fluid Mechanics Laboratory at the Department of Civil
             Engineering, European University of Bangladesh, provides students
             with practical knowledge of fluid behavior and hydraulic principles.
@@ -139,7 +141,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Soil Mechanics Laboratory</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Soil Mechanics Laboratory at the Department of Civil
             Engineering, European University of Bangladesh, provides students
             with hands-on experience in analyzing soil properties essential for
@@ -175,7 +177,7 @@ const LaboratoriesResources = () => {
           Engineering Materials Laboratory
         </h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Engineering Materials Laboratory at the Department of Civil
             Engineering, European University of Bangladesh, provides students
             with hands-on experience in testing and analyzing construction
@@ -214,7 +216,7 @@ const LaboratoriesResources = () => {
           Structural Mechanics Laboratory
         </h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Structural Mechanics Laboratory at the Department of Civil
             Engineering, European University of Bangladesh, provides students
             with hands-on experience in understanding the behavior of structural
@@ -247,7 +249,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Computer Laboratory</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Computer Laboratory at the Department of Civil Engineering,
             European University of Bangladesh, is a state-of-the-art facility
             designed to enhance students&apos; technical proficiency in civil

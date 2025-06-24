@@ -1,10 +1,13 @@
-import Hero from '@/app/(home)/_components/hero';
-import { generateMetaData } from '@/lib/utils';
 import { getHero, getNewsEvents, getOffers } from '@/server/get';
-import WhyEUB from './_components/why-eub';
+
+import { generateMetaData } from '@/lib/utils';
+
+import Hero from '@/app/(home)/_components/hero';
+
 import Courses from './_components/courses';
-import NewsEvents from './_components/news-events';
 import Gallery from './_components/gallery';
+import NewsEvents from './_components/news-events';
+import WhyEUB from './_components/why-eub';
 
 export const metadata = generateMetaData({
   title: 'European University of Bangladesh',

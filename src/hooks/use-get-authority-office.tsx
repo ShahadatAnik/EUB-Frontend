@@ -1,7 +1,8 @@
-import { getOfficeEntry, getOffices } from '@/server/get';
+import { useEffect, useState } from 'react';
+
 import { IOffice, IOfficeEntry } from '@/types';
 
-import { useEffect, useState } from 'react';
+import { getOfficeEntry, getOffices } from '@/server/get';
 
 export const useGetOffice = () => {
   const [data, setData] = useState<IOffice[]>([]);

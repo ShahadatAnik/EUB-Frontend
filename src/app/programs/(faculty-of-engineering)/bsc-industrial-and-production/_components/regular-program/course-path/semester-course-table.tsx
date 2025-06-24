@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ISemesterCourse } from '@/types';
+
 import {
   Table,
   TableBody,
@@ -10,7 +12,6 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { ISemesterCourse } from '@/types';
 
 const SemesterCourseTable: React.FC<{
   data: ISemesterCourse[];
@@ -21,7 +22,7 @@ const SemesterCourseTable: React.FC<{
       <TableCaption>{title}</TableCaption>
       <TableHeader className=''>
         <TableRow className='border-t bg-primary hover:bg-primary'>
-          <TableHead className=' border-l border-r pl-2 text-white' rowSpan={2}>
+          <TableHead className='border-l border-r pl-2 text-white' rowSpan={2}>
             No.
           </TableHead>
           <TableHead className='border-r pl-2 text-white' rowSpan={2}>

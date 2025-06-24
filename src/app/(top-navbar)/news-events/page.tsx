@@ -1,12 +1,15 @@
 import React from 'react';
-import PageHeader from '@/components/page-header';
-import PageContainer from '@/components/page-container';
 
 import { INewsPortal } from '@/types';
-import NewsCard from '@/app/(top-navbar)/news-events/_components/news-card';
+
 import { getNewsEvents } from '@/server/get';
-import ServerPagination from '@/components/server-pagination';
+
 import NoDataFound from '@/components/no-data-found';
+import PageContainer from '@/components/page-container';
+import PageHeader from '@/components/page-header';
+import ServerPagination from '@/components/server-pagination';
+
+import NewsCard from '@/app/(top-navbar)/news-events/_components/news-card';
 
 type searchParamsProps = {
   searchParams?: Promise<{
@@ -28,7 +31,7 @@ export default async function Page({ searchParams }: searchParamsProps) {
     <div>
       <PageHeader title='News & Events' image='/images/bg-2.jpg' />
       <PageContainer>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
           {data.data.map((item: INewsPortal, index: number) => (
             <NewsCard key={index} item={item} />
           ))}

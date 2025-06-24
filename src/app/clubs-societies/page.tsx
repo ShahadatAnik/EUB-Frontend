@@ -1,12 +1,18 @@
 'use server';
+
+import React from 'react';
+
+import { IClub, IClubAndSociety } from '@/types';
+
+import { getClubs, getEventCalender, getFaculties } from '@/server/get';
+
 import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
-import { getClubs, getEventCalender, getFaculties } from '@/server/get';
-import { IClub, IClubAndSociety } from '@/types';
-import React from 'react';
+
 import ClubCard from './_components/club-card';
 import Content from './_components/content';
 import EventsCalendar from './_components/events-calendar';
+
 const Page = async () => {
   const data = await getEventCalender();
   const faculties: IClubAndSociety[] = await getFaculties();

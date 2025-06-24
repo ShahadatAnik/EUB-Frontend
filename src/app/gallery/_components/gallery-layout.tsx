@@ -1,7 +1,10 @@
 import React from 'react';
-import GalleryCard from './gallery-card';
+
 import { IGallery } from '@/types';
+
 import { cn } from '@/lib/utils';
+
+import GalleryCard from './gallery-card';
 
 const GalleryLayout: React.FC<{
   data: IGallery[];

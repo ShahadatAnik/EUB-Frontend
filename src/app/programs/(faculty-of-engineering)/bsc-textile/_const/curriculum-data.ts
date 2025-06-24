@@ -1,11 +1,12 @@
 import type {
   Course,
-  ElectiveCourse,
-  Semester,
   CoursePrefix,
   CurriculumSummary,
+  ElectiveCourse,
   PerformanceEvaluation,
-} from './curriculum';
+  ProgramDetails,
+  Semester,
+} from '@/app/programs/_config/curriculum';
 
 export const semesterInfo = {
   spring: 'January-April',
@@ -13,7 +14,8 @@ export const semesterInfo = {
   fall: 'September-December',
 };
 
-export const programDetails = {
+export const programDetails: ProgramDetails = {
+  degreeName: 'Bachelor of Science in Textile Engineering',
   duration: {
     years: 4,
     semesters: 12,
@@ -29,8 +31,14 @@ export const performanceEvaluation: PerformanceEvaluation[] = [
   {
     category: '(a) Theory Courses:',
     criteria: [
-      { item: 'Class participation (i.e. attendance)', percentage: '20%' },
-      { item: 'Class tests, presentations and assignments', percentage: '20%' },
+      {
+        item: 'Class participation (i.e. attendance)',
+        percentage: '20%',
+      },
+      {
+        item: 'Class tests, presentations and assignments',
+        percentage: '20%',
+      },
       { item: 'Midterm Examination', percentage: '30%' },
       { item: 'Final Examination', percentage: '30%' },
     ],
@@ -49,7 +57,10 @@ export const performanceEvaluation: PerformanceEvaluation[] = [
     criteria: [
       { item: 'Co-Supervisor', percentage: '20%' },
       { item: 'Presentation', percentage: '20%' },
-      { item: 'Attendance / Thesis Book (Attendance)', percentage: '10%' },
+      {
+        item: 'Attendance / Thesis Book (Attendance)',
+        percentage: '10%',
+      },
       { item: 'Supervisor', percentage: '50%' },
     ],
   },
@@ -93,7 +104,12 @@ export const textileEngineeringCourses: Course[] = [
     title: 'Fabric Manufacturing Technology I Lab',
     credits: 1,
   },
-  { sl: 8, code: 'TXE-207', title: 'Wet Processing Technology I', credits: 3 },
+  {
+    sl: 8,
+    code: 'TXE-207',
+    title: 'Wet Processing Technology I',
+    credits: 3,
+  },
   {
     sl: 9,
     code: 'TXE-208',
@@ -323,7 +339,12 @@ export const nonDepartmentalCourses: Course[] = [
     credits: 1,
   },
   { sl: 27, code: 'BBA-313', title: 'Industrial Economics', credits: 2 },
-  { sl: 28, code: 'TXE-310', title: 'Elements of Machine Design', credits: 3 },
+  {
+    sl: 28,
+    code: 'TXE-310',
+    title: 'Elements of Machine Design',
+    credits: 3,
+  },
   { sl: 29, code: 'TXE-311', title: 'Textile Mill Utility', credits: 2 },
   {
     sl: 30,
@@ -459,7 +480,12 @@ export const semesterData: Semester[] = [
         courseTitle: 'Textile Raw Materials I',
         credit: 3,
       },
-      { slNo: 3, courseCode: 'PHY-109', courseTitle: 'Physics I', credit: 3 },
+      {
+        slNo: 3,
+        courseCode: 'PHY-109',
+        courseTitle: 'Physics I',
+        credit: 3,
+      },
       {
         slNo: 4,
         courseCode: 'PHY-110',
@@ -504,14 +530,24 @@ export const semesterData: Semester[] = [
         courseTitle: 'Engineering Materials and Practices Lab',
         credit: 1,
       },
-      { slNo: 5, courseCode: 'CHM-107', courseTitle: 'Chemistry I', credit: 3 },
+      {
+        slNo: 5,
+        courseCode: 'CHM-107',
+        courseTitle: 'Chemistry I',
+        credit: 3,
+      },
       {
         slNo: 6,
         courseCode: 'CHM-108',
         courseTitle: 'Chemistry I Lab',
         credit: 1,
       },
-      { slNo: 7, courseCode: 'PHY-111', courseTitle: 'Physics II', credit: 3 },
+      {
+        slNo: 7,
+        courseCode: 'PHY-111',
+        courseTitle: 'Physics II',
+        credit: 3,
+      },
       {
         slNo: 8,
         courseCode: 'PHY-112',
@@ -976,7 +1012,12 @@ export const semesterData: Semester[] = [
     semester: 3,
     title: '4th Year 3rd Semester',
     courses: [
-      { slNo: 1, courseCode: 'TXE-439', courseTitle: 'Project', credit: 3 },
+      {
+        slNo: 1,
+        courseCode: 'TXE-439',
+        courseTitle: 'Project',
+        credit: 3,
+      },
       {
         slNo: 2,
         courseCode: 'TXE-442',

@@ -1,11 +1,13 @@
-import { topNavLinks } from '@/config/nav-links';
-import Link from 'next/link';
 import React from 'react';
+
+import Link from 'next/link';
+
+import { topNavLinks } from '@/config/nav-links';
 
 const TopNavbar = () => {
   return (
-    <div className='bg-primary w-full py-2 hidden lg:block'>
-      <div className='container flex justify-center gap-4 items-center divide-x divide-border'>
+    <div className='hidden w-full bg-primary py-2 lg:block'>
+      <div className='container flex items-center justify-center gap-4 divide-x divide-border'>
         {topNavLinks.map((link) => {
           if (link.newTab) {
             return (
@@ -13,7 +15,7 @@ const TopNavbar = () => {
                 target='_blank'
                 key={link.title}
                 href={link.href}
-                className='text-white hover:underline text-sm pl-4'
+                className='pl-4 text-sm text-white hover:underline'
               >
                 {link.title}
               </Link>
@@ -24,7 +26,7 @@ const TopNavbar = () => {
             <Link
               key={link.title}
               href={link.href}
-              className='text-white hover:underline text-sm pl-4'
+              className='pl-4 text-sm text-white hover:underline'
             >
               {link.title}
             </Link>

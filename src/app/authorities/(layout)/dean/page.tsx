@@ -1,8 +1,11 @@
 import React from 'react';
-import Content from './_components/content';
+
+import { getAuthoritiesDean } from '@/server/get';
 
 import { generateMetaData } from '@/lib/utils';
-import { getAuthoritiesDean } from '@/server/get';
+
+import Content from './_components/content';
+
 export const metadata = generateMetaData({
   title: 'Dean',
   description: 'The dean of the European University of Bangladesh',

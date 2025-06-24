@@ -1,7 +1,10 @@
-import Link from 'next/link';
 import React from 'react';
-import { Button } from './ui/button';
+
+import Link from 'next/link';
+
 import { Download } from 'lucide-react';
+
+import { Button } from './ui/button';
 
 const PdfDownloadButton: React.FC<{ pdf: string }> = ({ pdf }) => {
   return pdf ? (

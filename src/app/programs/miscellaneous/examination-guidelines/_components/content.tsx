@@ -2,14 +2,16 @@
 
 import React from 'react';
 
+import { IDataTable } from '@/types';
+
+import ClientPdfLink from '@/components/client-pdf';
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
 
-import { IDataTable } from '@/types';
 import { formatDate } from '@/lib/utils';
+
 import { useExaminationGuidelines } from '../_const/query';
-import ClientPdfLink from '@/components/client-pdf';
 
 const columns: SystemTableColumn<IDataTable>[] = [
   {

@@ -1,7 +1,10 @@
-import { cn } from '@/lib/utils';
-import { IAlumni } from '@/types';
-import Image from 'next/image';
 import React from 'react';
+
+import Image from 'next/image';
+
+import { IAlumni } from '@/types';
+
+import { cn } from '@/lib/utils';
 
 const AlumniCard: React.FC<
   IAlumni & {
@@ -18,7 +21,7 @@ const AlumniCard: React.FC<
 }) => {
   return (
     <div
-      className={cn('flex flex-col lg:flex-row items-center gap-8', className)}
+      className={cn('flex flex-col items-center gap-8 lg:flex-row', className)}
     >
       <Image
         height={300}
@@ -30,7 +33,7 @@ const AlumniCard: React.FC<
 
       <div
         className={cn(
-          imageOrder === 'right' ? 'order-last lg:order-first ' : 'order-last'
+          imageOrder === 'right' ? 'order-last lg:order-first' : 'order-last'
         )}
       >
         <h4 className='text-2xl font-semibold'>{name}</h4>

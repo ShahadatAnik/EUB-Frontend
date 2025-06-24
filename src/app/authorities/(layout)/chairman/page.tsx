@@ -1,8 +1,11 @@
 import React from 'react';
-import Content from './_components/content';
+
+import { getAuthoritiesChairman } from '@/server/get';
 
 import { generateMetaData } from '@/lib/utils';
-import { getAuthoritiesChairman } from '@/server/get';
+
+import Content from './_components/content';
+
 export const metadata = generateMetaData({
   title: 'Chairman',
   description: 'The chairman of the European University of Bangladesh',

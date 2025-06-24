@@ -1,7 +1,7 @@
 'use server';
 
-import fetchApi from '@/utils/fetchApi';
 import { IDataTable, IPaginationResponse } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
 export const getNotices = async ({
   page = 1,

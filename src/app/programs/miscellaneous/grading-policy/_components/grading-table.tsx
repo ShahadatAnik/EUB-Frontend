@@ -74,7 +74,11 @@ const GradingTable = () => {
     },
   ];
 
-  const columns: SystemTableColumn<any>[] = [
+  const columns: SystemTableColumn<{
+    numerical_score: string;
+    letter_grade: string;
+    grade_points: string;
+  }>[] = [
     {
       accessorKey: 'numerical_score',
       header: 'Numerical Score',

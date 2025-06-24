@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { Autoplay } from 'swiper/modules';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import SlideNext from './slide-next';
 import SlidePrevious from './slide-previous';
-import { Autoplay } from 'swiper/modules';
 
 export interface ISlide {
   img: string;
@@ -40,9 +40,9 @@ const Slider: React.FC<ISliderProps> = ({ sliders }) => {
     >
       {sliders.map((slide, index) => (
         <SwiperSlide key={index} className='relative'>
-          <div className='absolute inset-0 bg-black/20 z-[10] flex justify-between gap-4'>
+          <div className='absolute inset-0 z-[10] flex justify-between gap-4 bg-black/20'>
             <SlidePrevious />
-            <div className='flex-1 flex items-center justify-center'>
+            <div className='flex flex-1 items-center justify-center'>
               {slide.content}
             </div>
             <SlideNext />

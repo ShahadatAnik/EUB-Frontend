@@ -1,13 +1,16 @@
 import React from 'react';
-import data from '../_const/office-members';
+
 import Image from 'next/image';
+
 import { Mail, Phone } from 'lucide-react';
+
+import data from '../_const/office-members';
 import ContentWrapper from './content-wrapper';
 
 const Offices = () => {
   return (
     <ContentWrapper title='Office of the IQAC' className='space-y-4'>
-      <div className='flex border rounded-md overflow-hidden'>
+      <div className='flex overflow-hidden rounded-md border'>
         <div className=''>
           <Image
             src={'/person-placeholder.jpg'}
@@ -17,7 +20,7 @@ const Offices = () => {
           />
         </div>
 
-        <div className='px-6 py-3 flex flex-col gap-0'>
+        <div className='flex flex-col gap-0 px-6 py-3'>
           <div>
             <h3 className='text-xl font-semibold'>{data[0].name}</h3>
             <p className='mt-1 text-muted-foreground'>{data[0].designation}</p>
@@ -36,9 +39,9 @@ const Offices = () => {
         </div>
       </div>
 
-      <div className='grid grid-cols-2 gap-4 '>
+      <div className='grid grid-cols-2 gap-4'>
         {data.map((faculty, index) => (
-          <div key={index} className='flex  border rounded-md overflow-hidden'>
+          <div key={index} className='flex overflow-hidden rounded-md border'>
             <div className=''>
               <Image
                 src={faculty.image}
@@ -48,7 +51,7 @@ const Offices = () => {
               />
             </div>
 
-            <div className='px-6 py-3 flex flex-col gap-0'>
+            <div className='flex flex-col gap-0 px-6 py-3'>
               <div>
                 <h3 className='text-xl font-semibold'>{faculty.name}</h3>
                 <p className='mt-1 text-muted-foreground'>

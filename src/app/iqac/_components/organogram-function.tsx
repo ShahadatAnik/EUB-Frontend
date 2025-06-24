@@ -1,13 +1,14 @@
 import React from 'react';
 
-import ContentWrapper from './content-wrapper';
 import Image from 'next/image';
+
+import ContentWrapper from './content-wrapper';
 
 const OrganogramFunction = () => {
   return (
     <ContentWrapper
       title='Organogram &amp; Functions'
-      className='py-2 space-y-6'
+      className='space-y-6 py-2'
     >
       <div>
         <Image

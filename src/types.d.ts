@@ -17,14 +17,6 @@ export type INewsPortal = {
   department_name: string;
 };
 
-export type IPagination = {
-  total_record: number;
-  current_page: number;
-  total_page: number;
-  next_page: number;
-  prev_page: number;
-};
-
 export type INewsPortalCarousel = {
   value: string;
   label: string;
@@ -372,11 +364,11 @@ export type IFinancial = {
 };
 
 export type IPagination = {
-  total_record: number | null;
-  current_page: number | null;
-  total_page: number | null;
-  next_page: number | null;
-  prev_page: number | null;
+  total_record: number;
+  current_page: number;
+  total_page: number;
+  next_page: number;
+  prev_page: number;
 };
 
 export type IOffer = {
@@ -388,7 +380,7 @@ export type IOffer = {
   file: string;
   deadline: string;
   created_at: string;
-  updated_at: any;
+  updated_at: string;
   created_by: string;
   created_by_name: string;
   remarks: string;
@@ -403,7 +395,7 @@ export type IHero = {
   type: string;
   is_active: boolean;
   created_at: string;
-  updated_at: any;
+  updated_at: string;
   created_by: string;
   created_by_name: string;
   remarks: string;

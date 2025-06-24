@@ -1,19 +1,6 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"],
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
   "rules": {
-    "@typescript-eslint/no-explicit-any": "off",
-    "quotes": [
-      2,
-      "single",
-      { "avoidEscape": true, "allowTemplateLiterals": true }
-    ]
-    // "@typescript-eslint/quotes": [
-    // 	"warn",
-    // 	"single",
-    // 	{
-    // 		"avoidEscape": true,
-    // 		"allowTemplateLiterals": true
-    // 	}
-    // ]
+    "@typescript-eslint/no-explicit-any": "warn"
   }
 }

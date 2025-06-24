@@ -1,10 +1,11 @@
 import React from 'react';
 
-import ContentWrapper from '../../content-wrapper';
 import Title from '@/components/title';
 
-import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
 import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
+import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
+
+import ContentWrapper from '../../content-wrapper';
 
 const ProgramDetails = () => {
   return (

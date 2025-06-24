@@ -1,6 +1,6 @@
 import React from 'react';
-import TuitionFeesTable from './tuition-fees-table';
-import { accordions } from '../_const/data';
+
+import { ICertificateFee, ITuitionFee } from '@/types';
 
 import {
   Accordion,
@@ -9,9 +9,9 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-import { ICertificateFee, ITuitionFee } from '@/types';
-
+import { accordions } from '../_const/data';
 import CertificateFeesTable from './certificate-fees-table';
+import TuitionFeesTable from './tuition-fees-table';
 
 const Undergraduate: React.FC<{
   undergraduateFeesData: ITuitionFee[];
@@ -31,7 +31,7 @@ const Undergraduate: React.FC<{
         <br />
 
         <section id='other-certificate-courses'>
-          <h4 className='text-lg font-medium mb-1'>
+          <h4 className='mb-1 text-lg font-medium'>
             Fees for other certificate courses:
           </h4>
           <CertificateFeesTable data={certificateFeesData} />
@@ -44,7 +44,7 @@ const Undergraduate: React.FC<{
         <Accordion type='multiple' className='mt-2 w-full space-y-2'>
           {accordions.map((accordion, index) => (
             <AccordionItem key={index} value={`item-${index + 1}`}>
-              <AccordionTrigger className='bg-primary text-white px-4 lg:px-6 py-2 lg:py-3 text-base lg:text-lg'>
+              <AccordionTrigger className='bg-primary px-4 py-2 text-base text-white lg:px-6 lg:py-3 lg:text-lg'>
                 {accordion.title}
               </AccordionTrigger>
               <AccordionContent className='px-4 py-3 text-base'>

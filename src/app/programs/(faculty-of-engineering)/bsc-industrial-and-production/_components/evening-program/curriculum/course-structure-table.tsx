@@ -3,12 +3,12 @@ import React from 'react';
 import {
   Table,
   TableBody,
+  TableCaption,
   TableCell,
+  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
-  TableFooter,
-  TableCaption,
 } from '@/components/ui/table';
 
 const courseStructure = [

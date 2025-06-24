@@ -1,5 +1,6 @@
 import ContentWrapper from '@/app/programs/_components/content-wrapper';
-import { CourseMapSection } from '../../sections/course-map-section';
+import { CourseMapSection } from '@/app/programs/_components/sections/course-map-section';
+
 import { getCurriculumData } from '../../../_const/get-curriculum-data';
 
 export default function CoursePath() {

@@ -1,13 +1,13 @@
 'use client';
 
 import { Separator } from '@/components/ui/separator';
-import Sidebar from './sidebar';
 
+import Sidebar from './sidebar';
 import Tender from './tender';
 
 const Content = () => {
   return (
-    <div className='flex flex-col lg:flex-row gap-8 lg:gap-12'>
+    <div className='flex flex-col gap-8 lg:flex-row lg:gap-12'>
       <Sidebar />
       <div className='flex-1 space-y-8 lg:space-y-16'>
         <Tender

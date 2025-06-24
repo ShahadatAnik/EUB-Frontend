@@ -2,13 +2,20 @@
 
 import React from 'react';
 
+import dynamic from 'next/dynamic';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+
+import { IClubAndSociety, IPaginationResponse, ISelectOption } from '@/types';
+
+import NoDataFound from '@/components/no-data-found';
+import Search from '@/components/search';
+import ServerPagination from '@/components/server-pagination';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-
 import {
   Select,
   SelectContent,
@@ -16,13 +23,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-
-import NoDataFound from '@/components/no-data-found';
-import Search from '@/components/search';
-import ServerPagination from '@/components/server-pagination';
-import { IClubAndSociety, IPaginationResponse, ISelectOption } from '@/types';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import dynamic from 'next/dynamic';
 
 const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
   ssr: false,
@@ -51,7 +51,7 @@ const Content: React.FC<
 
   return (
     <div className='space-y-4 md:space-y-8'>
-      <div className='flex flex-col md:flex-row justify-between gap-4 md:gap-8'>
+      <div className='flex flex-col justify-between gap-4 md:flex-row md:gap-8'>
         <Search placeholder='Search for name, faculty' />
         <Select onValueChange={handleSelect}>
           <SelectTrigger className='md:w-[180px]'>
@@ -69,16 +69,16 @@ const Content: React.FC<
       {res.data.length === 0 ? (
         <NoDataFound />
       ) : (
-        <Accordion type='single' collapsible className='w-full '>
+        <Accordion type='single' collapsible className='w-full'>
           {res.data.map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger
                 iconClassName='text-primary'
-                className='bg-accent border-b text-primary text-base lg:text-lg px-4 lg:px-6 py-2 lg:py-3'
+                className='border-b bg-accent px-4 py-2 text-base text-primary lg:px-6 lg:py-3 lg:text-lg'
               >
                 {item.label}
               </AccordionTrigger>
-              <AccordionContent className='pl-2 lg:px-6 py-3 lg:py-4  text-base bg-background'>
+              <AccordionContent className='bg-background py-3 pl-2 text-base lg:px-6 lg:py-4'>
                 <RichTextViewer content={item.value} />
               </AccordionContent>
             </AccordionItem>

@@ -17,8 +17,8 @@ const Waiver = () => {
           </h4>
           <ul className='mt-1 max-w-[600px] border'>
             <li className='grid grid-cols-2'>
-              <div className='py-2 px-4 border-r'>Golden GPA 5.00</div>
-              <div className='py-2 px-4 '>100% waiver</div>
+              <div className='border-r px-4 py-2'>Golden GPA 5.00</div>
+              <div className='px-4 py-2'>100% waiver</div>
             </li>
           </ul>
         </div>
@@ -29,20 +29,20 @@ const Waiver = () => {
 
           <ul className='mt-1 max-w-[600px] border'>
             <li className='grid grid-cols-2 border-b'>
-              <div className='py-2 px-4 border-r'>Siblings and spouse</div>
-              <div className='py-2 px-4 '>50% waiver</div>
+              <div className='border-r px-4 py-2'>Siblings and spouse</div>
+              <div className='px-4 py-2'>50% waiver</div>
             </li>
             <li className='grid grid-cols-2 border-b'>
-              <div className='py-2 px-4 border-r'>Female students</div>
-              <div className='py-2 px-4 '>50% waiver</div>
+              <div className='border-r px-4 py-2'>Female students</div>
+              <div className='px-4 py-2'>50% waiver</div>
             </li>
             <li className='grid grid-cols-2 border-b'>
-              <div className='py-2 px-4 border-r'>Freedom fighter’s child</div>
-              <div className='py-2 px-4 '>50% waiver</div>
+              <div className='border-r px-4 py-2'>Freedom fighter’s child</div>
+              <div className='px-4 py-2'>50% waiver</div>
             </li>
             <li className='grid grid-cols-2'>
-              <div className='py-2 px-4 border-r'>Ethnic Minority</div>
-              <div className='py-2 px-4 '>50% waiver</div>
+              <div className='border-r px-4 py-2'>Ethnic Minority</div>
+              <div className='px-4 py-2'>50% waiver</div>
             </li>
           </ul>
         </div>

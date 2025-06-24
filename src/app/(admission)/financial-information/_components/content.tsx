@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Waiver from './waiver';
 import { IFinancialFaculty } from '@/types';
+
 import { getFinancialInfoByGroup } from '../_config/getFinacialInfoByGroup';
-import EngineeringHsc from './engineering-hsc';
-import EngineeringDiploma from './engineering-diploma';
-import BBA from './bba';
 import Arts from './arts';
+import BBA from './bba';
+import EngineeringDiploma from './engineering-diploma';
+import EngineeringHsc from './engineering-hsc';
+import Waiver from './waiver';
 
 const Content: React.FC<{ data: IFinancialFaculty[] }> = ({ data }) => {
   const { engineering_hsc, engineering_diploma, bba, arts } =

@@ -1,6 +1,7 @@
 import React from 'react';
-import SectionLayout from './section-layout';
+
 import SectionContent from './section-content';
+import SectionLayout from './section-layout';
 
 const PaymentProcess = () => {
   return (

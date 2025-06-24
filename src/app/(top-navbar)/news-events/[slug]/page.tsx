@@ -1,6 +1,8 @@
+import { getNewsById } from '@/server/get';
+
 import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
-import { getNewsById } from '@/server/get';
+
 import Content from './_components/content';
 
 export default async function Page({

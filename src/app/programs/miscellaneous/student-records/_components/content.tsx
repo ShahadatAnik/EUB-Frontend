@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SectionContent from './section-content';
 
 const Content = () => {
@@ -90,11 +91,11 @@ const Content = () => {
                 right to change programs and curricula without notice whenever
                 circumstances warrant such changes.
               </p>
-              <p className='mt-2 mb-1 font-medium'>
+              <p className='mb-1 mt-2 font-medium'>
                 Meeting graduation requirements is each student&apos;s
                 responsibility. They include the following:
               </p>
-              <ul className='list-decimal list-inside space-y-1'>
+              <ul className='list-inside list-decimal space-y-1'>
                 <li>
                   <span className='italic'>
                     A minimum of 120 credits for a bachelor&apos;s degree of
@@ -134,16 +135,16 @@ const Content = () => {
                   </span>
                 </li>
               </ul>
-              <p className='mt-2 mb-1 font-medium'>
+              <p className='mb-1 mt-2 font-medium'>
                 The courses comprising the 120-credit requirement can be
                 categorized as follows:
               </p>
-              <ul className='list-disc list-inside space-y-2'>
+              <ul className='list-inside list-disc space-y-2'>
                 <li>
                   <span className='font-semibold'>
                     General Education (GEd) Courses
                   </span>
-                  <p className=' mt-0.5 '>
+                  <p className='mt-0.5'>
                     A minimum of 120 credits for a bachelor&apos;s degree of
                     which at least 60 must have been earned at EUB as a student
                     admitted into a degree program.
@@ -151,7 +152,7 @@ const Content = () => {
                 </li>
                 <li>
                   <span className='font-semibold'>Core Courses</span>
-                  <p className=' mt-0.5 '>
+                  <p className='mt-0.5'>
                     These are the courses specifically required for a degree.
                     The required credits vary for each degree. Students must
                     maintain at least CGPA 2.00 in these courses.
@@ -159,7 +160,7 @@ const Content = () => {
                 </li>
                 <li>
                   <span className='font-semibold'>Concentration/ Major</span>
-                  <p className=' mt-0.5 '>
+                  <p className='mt-0.5'>
                     These are courses specifically required for concentration/
                     major within a degree. Students must get CGPA 2.5 in this
                     category to qualify for the degree with Concentration/
@@ -168,7 +169,7 @@ const Content = () => {
                 </li>
                 <li>
                   <span className='font-semibold'>Minor</span>
-                  <p className=' mt-0.5 '>
+                  <p className='mt-0.5'>
                     Students may choose to do a Minor in addition to their
                     major/ concentration by completing additional course
                     requirements advised by the respective department. Students
@@ -179,7 +180,7 @@ const Content = () => {
                 </li>
                 <li>
                   <span className='font-semibold'>Open Electives</span>
-                  <p className=' mt-0.5 '>
+                  <p className='mt-0.5'>
                     Any course selected by a student to fulfill the degree
                     requirement after GEd, core, concentration/major, and minor
                     requirements are satisfied, is an open elective course. Open
@@ -190,7 +191,7 @@ const Content = () => {
                 </li>
                 <li>
                   <span className='font-semibold'>Dual Major</span>
-                  <p className='mt-0.5 '>
+                  <p className='mt-0.5'>
                     Departments and Programs also offer Dual Major. A student
                     must fulfill the requirements for two major/ concentration
                     areas to obtain a Dual Major. Students must get a CGPA 2.5

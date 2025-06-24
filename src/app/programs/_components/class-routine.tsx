@@ -1,8 +1,11 @@
 import React from 'react';
-import SystemTable from '@/components/table/system-table';
+
 import { columns, useGetRegularClassRoutine } from '@/hooks/use-get-course';
-import ContentWrapper from './content-wrapper';
+
 import Loader from '@/components/loader';
+import SystemTable from '@/components/table/system-table';
+
+import ContentWrapper from './content-wrapper';
 
 const ClassRoutine: React.FC<{ department: string }> = ({ department }) => {
   const { data, isLoading } = useGetRegularClassRoutine(department);

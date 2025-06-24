@@ -1,8 +1,10 @@
-import Link from 'next/link';
 import React from 'react';
-import { buttonVariants } from './ui/button';
+
+import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
+
+import { buttonVariants } from './ui/button';
 
 const QuickLinks: React.FC<{ className?: string }> = ({ className }) => {
   return (

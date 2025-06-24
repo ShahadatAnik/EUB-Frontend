@@ -34,7 +34,7 @@ const ProgramDetails = () => {
         <h6 className='text-lg font-semibold'>
           EUB follows a three-semester system per academic year:
         </h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>Spring Semester: January – April</li>
           <li>Summer Semester: May – August</li>
           <li>Fall Semester: September – December</li>
@@ -46,7 +46,7 @@ const ProgramDetails = () => {
           Each semester runs for 15 weeks, including 13 weeks of classes, one
           week for examination preparation, and one week for exams.
         </h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>B.Sc. in CSE (Regular Program): Four years (12 semesters)</li>
           <li>
             B.Sc. in CSE (Diploma Holders): Three years and four months (10
@@ -59,7 +59,7 @@ const ProgramDetails = () => {
         <h6 className='text-lg font-semibold'>
           The credit hour distribution is as follows:
         </h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>
             Theory Courses: Each course carries three credit hours, with three
             lecture hours per week (minimum 50 minutes per class).

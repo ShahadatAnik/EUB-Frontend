@@ -3,6 +3,7 @@
 import React from 'react';
 
 import { IFinancialFaculty } from '@/types';
+
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
@@ -69,7 +70,7 @@ const EngineeringDiploma: React.FC<{
 
   return (
     <div>
-      <h4 className='text-2xl text-center font-medium'>
+      <h4 className='text-center text-2xl font-medium'>
         Engineering (For Diploma Graduates)
       </h4>
       <div className='mt-4'>

@@ -1,5 +1,6 @@
 import React from 'react';
-import SectionLayout from './section-layout';
+
+import Link from 'next/link';
 
 import {
   Table,
@@ -9,7 +10,8 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import Link from 'next/link';
+
+import SectionLayout from './section-layout';
 
 const pdfs = [
   {
@@ -37,7 +39,7 @@ const RequiredDocumentsForms = () => {
             <TableRow key={index}>
               <TableCell className='font-medium'>
                 <Link
-                  className='underline text-primary'
+                  className='text-primary underline'
                   target='_blank'
                   href={pdf.pdf}
                 >

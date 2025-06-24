@@ -1,18 +1,19 @@
 import { IAcademicAccordion } from '@/types';
-import Message from '../_components/message';
+
 import AboutIQAC from '../_components/about-iqac';
-import VisionMission from '../_components/vision-mission';
-import OrganogramFunction from '../_components/organogram-function';
-import Sustainibility from '../_components/sustainibility';
-import Manuals from '../_components/manuals';
-import UgcObeTemplate from '../_components/ugc-obe-template';
-import SelfAssessmentSurvey from '../_components/self-assessment-survey';
-import WorkShop from '../_components/workshop';
-import Symposium from '../_components/symposium';
 import Archives from '../_components/archives';
+import Manuals from '../_components/manuals';
+import Message from '../_components/message';
 import NewsEvents from '../_components/news-events';
-import StudentServiceDesk from '../_components/student-service-desk';
 import Offices from '../_components/offices';
+import OrganogramFunction from '../_components/organogram-function';
+import SelfAssessmentSurvey from '../_components/self-assessment-survey';
+import StudentServiceDesk from '../_components/student-service-desk';
+import Sustainibility from '../_components/sustainibility';
+import Symposium from '../_components/symposium';
+import UgcObeTemplate from '../_components/ugc-obe-template';
+import VisionMission from '../_components/vision-mission';
+import WorkShop from '../_components/workshop';
 
 const accordions: IAcademicAccordion[] = [
   {

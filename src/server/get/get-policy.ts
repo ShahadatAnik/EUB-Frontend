@@ -1,7 +1,7 @@
 'use server';
 
-import fetchApi from '@/utils/fetchApi';
 import { IPagination, IPolicy } from '@/types';
+import fetchApi from '@/utils/fetchApi';
 
 export interface IPolicyResponse {
   data: IPolicy[];

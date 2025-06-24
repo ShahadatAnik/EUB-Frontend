@@ -1,9 +1,12 @@
 import * as React from 'react';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
+
 import { ChevronsRight } from 'lucide-react';
+
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+import { cn } from '@/lib/utils';
 
 interface IProgramCardProps {
   title: string;
@@ -16,7 +19,7 @@ interface IProgramCardProps {
 const ProgramCard: React.FC<IProgramCardProps> = ({ title, links }) => {
   return (
     <Card className='w-full border-none shadow-none'>
-      <CardHeader className='p-4 bg-primary rounded'>
+      <CardHeader className='rounded bg-primary p-4'>
         <CardTitle className='text-white'>{title}</CardTitle>
       </CardHeader>
       <CardContent className='p-2'>
@@ -24,7 +27,7 @@ const ProgramCard: React.FC<IProgramCardProps> = ({ title, links }) => {
           {links.map((item, index) => (
             <li key={index}>
               <Link
-                className={cn('hover:underline flex items-center gap-1')}
+                className={cn('flex items-center gap-1 hover:underline')}
                 href={item.href}
               >
                 <ChevronsRight className='size-4' />

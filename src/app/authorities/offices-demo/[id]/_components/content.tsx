@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ListOfOffices from './list-of-offices';
 import Employees from './employees';
+import ListOfOffices from './list-of-offices';
 
 const Content = () => {
   return (

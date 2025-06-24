@@ -1,10 +1,11 @@
 import React from 'react';
 
-import ContentWrapper from '../../content-wrapper';
 import Title from '@/components/title';
 
-import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
 import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
+import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
+
+import ContentWrapper from '../../content-wrapper';
 
 const ProgramDetails = () => {
   return (
@@ -23,7 +24,7 @@ const ProgramDetails = () => {
         <Title variant={'title'} title='Semesters' />
         <p>There are three semesters in an academic year:</p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-1.5'>
+        <ul className='mt-2 list-disc space-y-1.5 pl-6'>
           <li className='space-x-1'>
             <strong>Spring semester:</strong> <span>January to April</span>
           </li>
@@ -40,7 +41,7 @@ const ProgramDetails = () => {
         <Title variant={'title'} title='Duration' />
         <p>Each semester is 17 weeks long, comprising:</p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-1.5'>
+        <ul className='mt-2 list-disc space-y-1.5 pl-6'>
           <li>12 weeks for class teaching</li>
           <li>1 week for examination preparation</li>
           <li>3 weeks for examinations</li>
@@ -49,7 +50,7 @@ const ProgramDetails = () => {
       </div>
       <div>
         <Title variant={'title'} title='Credit Hour' />
-        <ul className='list-disc pl-6 space-y-1.5'>
+        <ul className='list-disc space-y-1.5 pl-6'>
           <li>
             Theory Course: 3 credits = 3 lecture hours/week (50 minutes/class)
           </li>
@@ -60,7 +61,7 @@ const ProgramDetails = () => {
       </div>
       <div>
         <Title variant={'title'} title='Course Load' />
-        <ul className='list-disc pl-6 space-y-1.5'>
+        <ul className='list-disc space-y-1.5 pl-6'>
           <li>Full-time Students: Maximum of 15 credits per semester</li>
           <li>Part-time Students: Maximum of 9 credits per semester</li>
         </ul>

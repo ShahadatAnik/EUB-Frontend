@@ -1,4 +1,5 @@
 import React from 'react';
+
 import data from '../_const/gallery-data.json';
 import GalleryLayout from './gallery-layout';
 

@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
+
 import Image from 'next/image';
+
+import ContentWrapper from './content-wrapper';
 
 const LaboratoriesResources = () => {
   return (
@@ -16,7 +18,7 @@ const LaboratoriesResources = () => {
             alt='placeholder'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             In this laboratory course, students will engage in the synthesis,
             isolation, purification, and characterization of a wide range of
             inorganic compounds. Through hands-on experimentation, they will
@@ -57,7 +59,7 @@ const LaboratoriesResources = () => {
             alt='placeholder'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             The Organic Chemistry Laboratory is a hands-on course designed to
             complement the theoretical material presented in Organic Chemistry
             lectures. Tailored for textile engineering majors, this

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ContentWrapper from '../content-wrapper';
 
 const DegreeRequirements = () => {
@@ -14,7 +15,7 @@ const DegreeRequirements = () => {
           dismissed after being on probation for three consecutive semesters.
         </p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>
             ENG 102 & BUS 112 is not compulsory for those who received a waiver
             in these courses in based on Admission Test. Others must have to

@@ -1,7 +1,8 @@
 import React from 'react';
-import Content from './_components/content';
 
 import { generateMetaData } from '@/lib/utils';
+
+import Content from './_components/content';
 
 export const metadata = generateMetaData({
   title: 'Vice Chancellor',

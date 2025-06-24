@@ -23,7 +23,7 @@ const tuitionFees = [
   },
 ];
 
-const columns: SystemTableColumn<any>[] = [
+const columns: SystemTableColumn<{ title: string; amount: string }>[] = [
   {
     accessorKey: 'title',
     header: 'Title',

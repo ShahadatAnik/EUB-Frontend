@@ -38,7 +38,7 @@ export const accordions = [
           In case of authorized withdrawals and changes in schedule/
           registration (adds and drops) tuition will be adjusted as follows:
         </p>
-        <ul className='my-2 space-y-2 list-inside list-disc'>
+        <ul className='my-2 list-inside list-disc space-y-2'>
           <li>
             Through the last business day prior to the first day of classes:
             100% refund
@@ -75,15 +75,15 @@ export const accordions = [
           EUB has selected some banks to collect students&apos; fees. EUB
           Students may deposit their fees to any of the following banks:
         </p>
-        <h4 className='mt-2 mb-1 font-medium'>Online Banks:</h4>
-        <ul className='space-y-2 list-inside list-disc'>
+        <h4 className='mb-1 mt-2 font-medium'>Online Banks:</h4>
+        <ul className='list-inside list-disc space-y-2'>
           <li>Southeast Bank, Any Branch, Bangladesh</li>
           <li>United Commercial Bank (UCB), Bashundhara Branch, Bangladesh</li>
           <li>ONE Bank, Any Branch, Bangladesh</li>
           <li>Mutual Trust Bank (MTB), Any Branch, Bangladesh</li>
         </ul>
-        <h4 className='mt-2 mb-1 font-medium'>Other Banks:</h4>
-        <ul className='space-y-2 list-inside list-disc'>
+        <h4 className='mb-1 mt-2 font-medium'>Other Banks:</h4>
+        <ul className='list-inside list-disc space-y-2'>
           <li>Dutch Bangla Bank, Bashundhara Branch, Dhaka</li>
           <li>Dhaka Bank, Banani Branch, Dhaka</li>
           <li>National Credit & Commerce Bank (NCC), Banani Branch, Dhaka</li>

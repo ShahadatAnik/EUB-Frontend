@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { IOffice, IOfficeEntry } from '@/types';
+
 import Employees from './employees';
 import ListOfOffices from './list-of-offices';
 
@@ -11,7 +12,7 @@ const Content: React.FC<{
 }> = ({ data, listOfOffices, category }) => {
   return (
     <div className='py-6 lg:py-12'>
-      <div className='container flex flex-col lg:flex-row gap-8'>
+      <div className='container flex flex-col gap-8 lg:flex-row'>
         <ListOfOffices data={listOfOffices} />
         <div className='flex-1 space-y-4'>
           <p className='text-lg'>

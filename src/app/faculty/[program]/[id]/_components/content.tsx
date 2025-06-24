@@ -1,12 +1,15 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { IFacultyDetails } from '@/types';
-import { facultyTabs } from './faculty-tabs';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
+
+import { IFacultyDetails } from '@/types';
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
+import { facultyTabs } from './faculty-tabs';
 
 const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
   ssr: false,
@@ -16,11 +19,11 @@ const Content = ({ faculty }: { faculty: IFacultyDetails }) => {
   const [activeTab, setActiveTab] = useState(facultyTabs[0].value);
   return (
     <div className='space-y-8'>
-      <div className='grid lg:grid-cols-5 gap-4 lg:gap-6'>
+      <div className='grid gap-4 lg:grid-cols-5 lg:gap-6'>
         <Image
           width={300}
           height={300}
-          className='w-full object-cover object-top aspect-square'
+          className='aspect-square w-full object-cover object-top'
           src={
             faculty.teacher_image
               ? process.env.NEXT_PUBLIC_IMAGE_BASE_URL + faculty.teacher_image
@@ -63,9 +66,9 @@ const Content = ({ faculty }: { faculty: IFacultyDetails }) => {
           value={activeTab}
           onValueChange={setActiveTab}
           defaultValue={activeTab}
-          className='w-full '
+          className='w-full'
         >
-          <TabsList className='size-fit  flex justify-start gap-2 flex-wrap'>
+          <TabsList className='flex size-fit flex-wrap justify-start gap-2'>
             {facultyTabs.map((tab) => (
               <TabsTrigger key={tab.value} value={tab.value}>
                 {tab.label}
@@ -73,10 +76,12 @@ const Content = ({ faculty }: { faculty: IFacultyDetails }) => {
             ))}
           </TabsList>
           {facultyTabs.map((tab) => {
+            const facultyContent: Record<string, unknown> = faculty;
+            const content = facultyContent[tab.value];
             return (
               <TabsContent key={tab.value} value={tab.value} className='p-4'>
-                {(faculty as any)[tab.value] ? (
-                  <RichTextViewer content={(faculty as any)[tab.value]} />
+                {typeof content === 'string' && content.trim() !== '' ? (
+                  <RichTextViewer content={content} />
                 ) : (
                   'No data'
                 )}

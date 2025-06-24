@@ -1,17 +1,18 @@
-import ClientImage from '@/components/client-image';
-import NoticeBoard from '@/components/notice-board';
+import React from 'react';
+
 import { getFeatures } from '@/server/get/get-feature';
 
-import React from 'react';
+import ClientImage from '@/components/client-image';
+import NoticeBoard from '@/components/notice-board';
 
 const Gallery = async () => {
   const data = await getFeatures();
 
   return (
-    <section className='py-12 lg:py-16 2xl:py-20 '>
+    <section className='py-12 lg:py-16 2xl:py-20'>
       <div className='container space-y-4 lg:space-y-8'>
         {data[0]?.is_active && (
-          <div className='flex flex-col md:flex-row gap-4 lg:gap-8 p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
+          <div className='flex flex-col gap-4 rounded-md border border-primary/10 p-4 shadow-sm md:flex-row lg:gap-8 lg:p-8'>
             <>
               <div>
                 <ClientImage
@@ -30,14 +31,14 @@ const Gallery = async () => {
           </div>
         )}
 
-        <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8'>
-          <div className='lg:col-span-2 space-y-4  lg:space-y-8'>
+        <div className='grid w-full grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8'>
+          <div className='space-y-4 lg:col-span-2 lg:space-y-8'>
             {(data[1]?.is_active || data[2]?.is_active) && (
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-4  lg:gap-8'>
+              <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8'>
                 {data[1]?.is_active && (
-                  <div className='p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
+                  <div className='rounded-md border border-primary/10 p-4 shadow-sm lg:p-8'>
                     <>
-                      <h2 className='text-xl lg:text-2xl font-semibold'>
+                      <h2 className='text-xl font-semibold lg:text-2xl'>
                         {data[1]?.title}
                       </h2>
                       <p className='mt-1 lg:mt-2'>{data[1]?.description}</p>
@@ -46,9 +47,9 @@ const Gallery = async () => {
                 )}
 
                 {data[2]?.is_active && (
-                  <div className='p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
+                  <div className='rounded-md border border-primary/10 p-4 shadow-sm lg:p-8'>
                     <>
-                      <h2 className='text-xl lg:text-2xl font-semibold'>
+                      <h2 className='text-xl font-semibold lg:text-2xl'>
                         {data[2]?.title}
                       </h2>
                       <p className='mt-1 lg:mt-2'>{data[2]?.description}</p>
@@ -59,7 +60,7 @@ const Gallery = async () => {
             )}
 
             {data[3]?.is_active && (
-              <div className='flex flex-col md:flex-row gap-4 lg:gap-8 p-4 lg:p-8  rounded-md border border-primary/10 shadow-sm'>
+              <div className='flex flex-col gap-4 rounded-md border border-primary/10 p-4 shadow-sm md:flex-row lg:gap-8 lg:p-8'>
                 <div>
                   <ClientImage
                     src={data[3]?.file}

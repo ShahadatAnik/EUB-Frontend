@@ -1,4 +1,8 @@
 import React from 'react';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
 import { IGallery } from '@/types';
 
 import {
@@ -8,14 +12,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import Image from 'next/image';
-import Link from 'next/link';
 
 const GalleryCard: React.FC<{ data: IGallery }> = ({ data }) => {
   return (
     <Card>
       <CardHeader className='p-4'>
-        <div className='relative w-full aspect-video'>
+        <div className='relative aspect-video w-full'>
           <Image
             className='object-cover'
             fill

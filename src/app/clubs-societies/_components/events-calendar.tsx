@@ -2,14 +2,16 @@
 
 import React from 'react';
 
+import { IDataTable } from '@/types';
+
+import ClientPdfLink from '@/components/client-pdf';
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
 
-import { useEventCalendar } from '@/app/clubs-societies/_const/query';
 import { formatDate } from '@/lib/utils';
-import { IDataTable } from '@/types';
-import ClientPdfLink from '@/components/client-pdf';
+
+import { useEventCalendar } from '@/app/clubs-societies/_const/query';
 
 const columns: SystemTableColumn<IDataTable>[] = [
   {

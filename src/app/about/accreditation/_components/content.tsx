@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import React from 'react';
+
+import Image from 'next/image';
 
 const Content = () => {
   return (
@@ -24,7 +25,7 @@ const Content = () => {
         </p>
 
         <div className='border p-4'>
-          <div className='max-w-[200px] mx-auto'>
+          <div className='mx-auto max-w-[200px]'>
             {['/images/ugc_logo.svg'].map((src, index) => (
               <div key={index} className='relative aspect-square w-full'>
                 <Image fill src={src} alt={'Logo'} />

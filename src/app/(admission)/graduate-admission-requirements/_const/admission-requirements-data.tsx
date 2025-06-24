@@ -4,7 +4,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'Master of Business Administration (MBA)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           A minimum of 15 years of schooling prior to MBA. A bachelor’s degree
           in any discipline. (Please note that two-year BA/B.Sc./B.Com degrees
@@ -26,7 +26,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'Executive Master of Business Administration (EMBA)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           A four-year Bachelor or a three-year Honors degree or a Master’s
           degree in any discipline
@@ -47,7 +47,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'MS in Economics',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           At least a Second Class either in the Bachelor (Hons.) or Master
           degree in Economics or in relevant disciplines from any recognized
@@ -63,7 +63,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'Master in Development Studies (MDS)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           A four-year Bachelor&apos;s or a three-year Honors or Master&apos;s
           degree in Economics, Business, Environmental Studies, Social Welfare,
@@ -79,7 +79,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'Master of Laws(LL.M)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>LL.B from any recognized university.</li>
         <li>
           A minimum CGPA of 2.75 on a 4-point scale or at least Second Class in
@@ -91,7 +91,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'MS in Computer Science and Engineering (MSCSE)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           A four-year bachelor’s or equivalent degree in Computer
           Science/Computer Engineering/Computer Science and
@@ -126,7 +126,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'MS in Electrical and Electronic Engineering (MSEEE)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           The students who have completed B.S. in EE/EEE/ETE/ECE are eligible to
           apply for admission in EEE Master Program. The students who do not
@@ -152,7 +152,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'Master of Science in Civil Engineering (M.S. in CE)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           Applicants are expected to satisfy all requirements for admission to
           the M.Sc. in Civil Engineering program. Entry into the M.Sc. in Civil
@@ -181,7 +181,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
     header:
       'Master of Science in Applied Mathematics and Computational Sciences (AMCS)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           A 4-year bachelor in mathematics or applied mathematics, or equivalent
           degree in statistics, physics, applied physics, engineering, computer
@@ -196,7 +196,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'MA in English: Language, Literature, TESOL',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>Four-year B. A. in English with a CGPA of at least 2.75</li>
         <li>At least a second class in a three-year B. A. in English</li>
         <li>M. A. or MS in subjects of liberal arts & social sciences</li>
@@ -206,7 +206,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'MS in Biotechnology',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           Graduation in Biochemistry, Microbiology, Genetic Engineering,
           Biotechnology, Pharmacy, Botany, Zoology, Chemistry, Agriculture &
@@ -219,7 +219,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'MS in Environmental Science and Management (MESM)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>A four-year Bachelor’s degree with good academic standing</li>
         <li>Experience in environment related field carries an added value</li>
         <li>Special arrangement is available for foreign students</li>
@@ -238,7 +238,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'MPharm in Pharmacology and Clinical Pharmacy (MPharm PCP)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>BPharm degree with minimum CGPA 2.75 (on a 4.0 scale)</li>
       </ul>
     ),
@@ -247,7 +247,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
     header:
       'MPharm in Pharmaceutical Technology and Biopharmaceutics (MPharm PTB)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>BPharm degree with minimum CGPA 2.75 (on a 4.0 scale)</li>
       </ul>
     ),
@@ -255,7 +255,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'Master of Public Health (MPH)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           MBBS, BDS or equivalent professional degree in medical sciences
           (dentistry, alternate medicine, homeopathy, Unani), or
@@ -285,7 +285,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'Executive Master of Public Health (EMPH)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>Minimum five-year professional experience in related field</li>
         <li>
           MBBS, BDS or equivalent professional degree in medical sciences
@@ -316,7 +316,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'MA in History and Asian Studies (MAHAS)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           Successful completion of a Bachelor&apos;s degree in History,
           International Relations, Sociology, Economics, Political Science,
@@ -332,7 +332,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'Masters in Public Policy and Governance (MPPG)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           Must have a Bachelor’s degree from any recognized university in
           Bangladesh or abroad.
@@ -346,7 +346,7 @@ const admissionRequirementsData: IAdmissionRequirement[] = [
   {
     header: 'Executive Masters in Policy and Governance (EMPG)',
     content: (
-      <ul className='space-y-2 list-inside list-disc'>
+      <ul className='list-inside list-disc space-y-2'>
         <li>
           Must have a Bachelor degree from any recognized university in
           Bangladesh or abroad.

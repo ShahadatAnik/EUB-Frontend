@@ -1,10 +1,12 @@
 'use client';
 
-import StickySidebar from '@/components/sticky-sidebar';
-import { Button } from '@/components/ui/button';
+import React from 'react';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+
+import StickySidebar from '@/components/sticky-sidebar';
+import { Button } from '@/components/ui/button';
 
 const data = [
   {
@@ -40,7 +42,7 @@ const Sidebar = () => {
           <Link className='block' key={index} href={`${pathName}#${item.id}`}>
             <Button
               variant={'default'}
-              className='w-full  justify-start rounded-none'
+              className='w-full justify-start rounded-none'
             >
               {item.title}
             </Button>

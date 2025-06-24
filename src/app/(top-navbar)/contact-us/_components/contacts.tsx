@@ -8,17 +8,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { Badge } from '@/components/ui/badge';
 
 import data from '../_const/department-contacts';
-import { Badge } from '@/components/ui/badge';
 
 const Contacts = () => {
   return (
     <div>
-      <h4 className='font-semibold text-xl'>Important Contacts</h4>
+      <h4 className='text-xl font-semibold'>Important Contacts</h4>
 
       <ul className='mt-2 space-y-2 text-muted-foreground'>
-        <li className='flex items-center  gap-2'>
+        <li className='flex items-center gap-2'>
           <Mail className='size-5' />
           <div className='flex-1'>
             <span>info@eub.edu.bd</span>
@@ -38,18 +38,18 @@ const Contacts = () => {
       <Accordion type='single' collapsible className='mt-4 w-full space-y-1'>
         {data.map((item, index) => (
           <AccordionItem key={index} value={`item-${index + 1}`}>
-            <AccordionTrigger className='bg-primary py-2 px-4 text-white text-base'>
+            <AccordionTrigger className='bg-primary px-4 py-2 text-base text-white'>
               {item.title}
             </AccordionTrigger>
-            <AccordionContent className='p-2 text-base space-y-3'>
+            <AccordionContent className='space-y-3 p-2 text-base'>
               {item.extensions && item.extensions.length > 0 && (
-                <div className='flex  gap-2'>
+                <div className='flex gap-2'>
                   <h4 className='text-sm font-semibold'>Extensions :</h4>
-                  <div className='flex-1 flex flex-wrap gap-2'>
+                  <div className='flex flex-1 flex-wrap gap-2'>
                     {item.extensions.map((extension, index) => (
                       <Badge
                         variant={'outline'}
-                        className='rounded-full font-normal '
+                        className='rounded-full font-normal'
                         key={index}
                       >
                         {extension}
@@ -59,9 +59,9 @@ const Contacts = () => {
                 </div>
               )}
               {item.emails && item.emails.length > 0 && (
-                <div className='flex  gap-2'>
+                <div className='flex gap-2'>
                   <h4 className='text-sm font-semibold'>Email : </h4>
-                  <div className='flex-1 flex flex-wrap gap-2'>
+                  <div className='flex flex-1 flex-wrap gap-2'>
                     {item.emails.map((email, index) => (
                       <Badge
                         variant={'outline'}
@@ -77,7 +77,7 @@ const Contacts = () => {
               {item.phones && item.phones.length > 0 && (
                 <div className='flex gap-2'>
                   <h4 className='text-sm font-semibold'>Phone : </h4>
-                  <div className='flex-1 flex flex-wrap gap-2'>
+                  <div className='flex flex-1 flex-wrap gap-2'>
                     {item.phones.map((phone, index) => (
                       <Badge
                         variant={'outline'}

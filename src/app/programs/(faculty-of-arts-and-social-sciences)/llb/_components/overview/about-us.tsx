@@ -1,23 +1,29 @@
 import React from 'react';
 
-import ContentWrapper from '../content-wrapper';
-import RichTextViewer from '@/components/rich-text-viewer';
+import dynamic from 'next/dynamic';
+
 import { useGetAboutUs } from '@/hooks/use-get-course';
 
-const AboutUs = () => {
-	const { data } = useGetAboutUs('llb');
+import ContentWrapper from '../content-wrapper';
 
-	return (
-		<ContentWrapper title="About Us">
-			<RichTextViewer
-				content={
-					data && data.length > 0
-						? data[0].description
-						: 'No description available'
-				}
-			/>
-		</ContentWrapper>
-	);
+const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
+  ssr: false,
+});
+
+const AboutUs = () => {
+  const { data } = useGetAboutUs('llb');
+
+  return (
+    <ContentWrapper title='About Us'>
+      <RichTextViewer
+        content={
+          data && data.length > 0
+            ? data[0].description
+            : 'No description available'
+        }
+      />
+    </ContentWrapper>
+  );
 };
 
 export default AboutUs;

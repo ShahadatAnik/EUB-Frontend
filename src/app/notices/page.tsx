@@ -1,8 +1,11 @@
-import PageHeader from '@/components/page-header';
 import React from 'react';
-import PageContainer from '@/components/page-container';
-import Content from './_components/content';
+
 import { getNotices } from '@/server/get';
+
+import PageContainer from '@/components/page-container';
+import PageHeader from '@/components/page-header';
+
+import Content from './_components/content';
 
 export default async function Page(props: {
   searchParams?: Promise<{

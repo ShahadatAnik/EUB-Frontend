@@ -1,5 +1,7 @@
-import { IAlumni } from '@/types';
 import React from 'react';
+
+import { IAlumni } from '@/types';
+
 import AlumniCard from './alumni-card';
 
 const AlumniGallery: React.FC<{ data: IAlumni[] }> = ({ data }) => {

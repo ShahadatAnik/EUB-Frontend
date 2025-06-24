@@ -1,21 +1,23 @@
 import React from 'react';
 
-import ContentWrapper from '../../content-wrapper';
-import CourseCategoryTable from './course-category-table';
 import Image from 'next/image';
-import CourseStructureTable from './course-structure-table';
+
+import UnderDevelopment from '@/components/under-development';
+
 import {
-  generalEducation,
-  foundationCourses,
-  interDisciplinaryCourses,
   coreCSE,
   electiveCSE1,
   electiveCSE2,
-  projectAndThesis,
+  foundationCourses,
+  generalEducation,
   industrialTraining,
+  interDisciplinaryCourses,
+  projectAndThesis,
 } from '../../../_const/list-of-courses';
+import ContentWrapper from '../../content-wrapper';
+import CourseCategoryTable from './course-category-table';
+import CourseStructureTable from './course-structure-table';
 import CourseTable from './course-table';
-import UnderDevelopment from '@/components/under-development';
 
 const Curriculum = () => {
   return (
@@ -24,7 +26,7 @@ const Curriculum = () => {
     </ContentWrapper>
   );
   return (
-    <ContentWrapper title='Curriculum' className='py-4 space-y-6'>
+    <ContentWrapper title='Curriculum' className='space-y-6 py-4'>
       <p>
         The undergraduate students of different years of the Department of
         Computer Science and Engineering have to follow the course schedule
@@ -36,7 +38,7 @@ const Curriculum = () => {
           The courses included in the undergraduate curriculam are divided into
           the following groups:
         </p>
-        <ul className='mt-2 list-disc pl-6 space-y-4'>
+        <ul className='mt-2 list-disc space-y-4 pl-6'>
           <li>
             <h6 className='font-semibold'>Core Courses</h6>
             <p className='mt-1'>
@@ -93,7 +95,7 @@ const Curriculum = () => {
           having the following interpretation:
         </p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>
             The first digit corresponds to the year/level in which the course is
             normally taken by the students.
@@ -127,7 +129,7 @@ const Curriculum = () => {
           of laboratory course, which is stated as follows:
         </p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>
             For theoretical courses one lecture per week per term is equivalent
             to one credit.

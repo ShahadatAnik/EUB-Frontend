@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ICertificateFee } from '@/types';
+
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import ContentWrapper from '../../content-wrapper';
-import TuitionFeesTable from './tuition-fees-table';
 import PerformanceCriteriaTable from './performance-criteria-table';
+import TuitionFeesTable from './tuition-fees-table';
 
 const ProgramDetails = () => {
   return (
@@ -13,7 +13,7 @@ const ProgramDetails = () => {
           There will be three semesters in an academic year, which are namely:
         </p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>Spring Semester; (Duration: January to April)</li>
           <li>Summer Semester; (Duration: May to August)</li>
           <li>Fall Semester; (Duration: September to December)</li>
@@ -50,7 +50,7 @@ const ProgramDetails = () => {
           Course load / Conditions applicable for enrolling students of CSE
           Program
         </h6>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>
             A full time student can register in a semester for a maximum of 15
             credits.
@@ -76,7 +76,7 @@ const ProgramDetails = () => {
           <TuitionFeesTable />
         </div>
 
-        <ul className='mt-4 list-disc pl-6 space-y-2'>
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
           <li>
             Please note that all students must pay a non-refundable, one time
             only admission fee Admission Fee 25,000/-

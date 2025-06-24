@@ -2,32 +2,32 @@
 
 import React, { useState } from 'react';
 
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetTitle,
-  SheetDescription,
-} from '@/components/ui/sheet';
+import Link from 'next/link';
 
+import { navLinks, topNavLinks } from '@/config/nav-links';
+import { ChevronsRight, Menu } from 'lucide-react';
+
+import BrandLogo from '@/components/brand-logo';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-
 import { Button } from '@/components/ui/button';
-import { ChevronsRight, Menu } from 'lucide-react';
-import BrandLogo from '@/components/brand-logo';
-import { navLinks, topNavLinks } from '@/config/nav-links';
-import Link from 'next/link';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className='block lg:hidden bg-[#FFFBF5]/80 backdrop-blur-sm py-4'>
-      <div className='container flex justify-between items-center'>
+    <nav className='block bg-[#FFFBF5]/80 py-4 backdrop-blur-sm lg:hidden'>
+      <div className='container flex items-center justify-between'>
         <BrandLogo className='w-40' />
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
@@ -35,7 +35,7 @@ const MobileNavbar = () => {
               <Menu />
             </Button>
           </SheetTrigger>
-          <SheetContent className='w-full space-y-8 h-full overflow-auto'>
+          <SheetContent className='h-full w-full space-y-8 overflow-auto'>
             <SheetTitle className='sr-only'>
               European University of Bangladesh
             </SheetTitle>
@@ -51,7 +51,7 @@ const MobileNavbar = () => {
                       <AccordionTrigger className='bg-primary px-4 py-3 text-white'>
                         {item.title}
                       </AccordionTrigger>
-                      <AccordionContent className='pt-2.5 pb-2 pl-2'>
+                      <AccordionContent className='pb-2 pl-2 pt-2.5'>
                         <ul className='space-y-3'>
                           {item.children.map((child, index) => (
                             <li key={index}>
@@ -104,7 +104,7 @@ const MobileNavbar = () => {
                   <Link className='block' key={index} href={item.href!}>
                     <Button
                       onClick={() => setIsOpen(false)}
-                      className='w-full rounded-none justify-start'
+                      className='w-full justify-start rounded-none'
                     >
                       {item.title}
                     </Button>
@@ -118,7 +118,7 @@ const MobileNavbar = () => {
                     <Link className='block' key={index} href={item.href!}>
                       <Button
                         onClick={() => setIsOpen(false)}
-                        className='w-full rounded-none justify-start'
+                        className='w-full justify-start rounded-none'
                       >
                         {item.title}
                       </Button>

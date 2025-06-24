@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from '../content-wrapper';
+
 import Title from '@/components/title';
+
+import ContentWrapper from '../content-wrapper';
 
 const DegreeRequirements = () => {
   return (
@@ -18,7 +20,7 @@ const DegreeRequirements = () => {
       </div>
       <div>
         <Title variant={'title'} title='Supplementary rules & cost' />
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             <p>
               <strong>Rule:</strong>Students receiving an &apos;I&apos; grade
@@ -35,7 +37,7 @@ const DegreeRequirements = () => {
       </div>
       <div>
         <Title variant={'title'} title='Total Credits of Course' />
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             <strong>Regular Students:</strong> 161.0 credit hours
           </li>
@@ -50,7 +52,7 @@ const DegreeRequirements = () => {
           Applicable to diploma holders in Electrical, Electronics, Computer,
           Power, Mechanical, or Telecommunication.
         </p>
-        <ul className='mt-2 list-disc pl-6 space-y-2'>
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
           <li>
             Waivers apply only to General Educational Development (GED) courses.
           </li>
@@ -63,7 +65,7 @@ const DegreeRequirements = () => {
       </div>
       <div>
         <Title variant={'title'} title='Mandatory completions' />
-        <ul className='list-disc pl-6 space-y-2'>
+        <ul className='list-disc space-y-2 pl-6'>
           <li>
             ME 370: Industrial Training (4 weeks; non-credit; graded as
             &apos;S&apos; or &apos;U&apos;)

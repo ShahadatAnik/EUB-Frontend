@@ -1,5 +1,6 @@
-import Title from '@/components/title';
 import React from 'react';
+
+import Title from '@/components/title';
 
 const Content = () => {
   return (
@@ -33,7 +34,7 @@ const Content = () => {
             addressing the unique challenges of a developing nation. We are
             committed to:
           </p>
-          <ul className=' mt-2 list-decimal list-inside space-y-1'>
+          <ul className='mt-2 list-inside list-decimal space-y-1'>
             <li>
               Delivering a dynamic curriculum that blends global knowledge with
               local relevance, equipping graduates with the skills and mindset
@@ -71,7 +72,7 @@ const Content = () => {
             <h4 className='text-lg font-semibold'>
               Core Values Instilled in EUB Graduates
             </h4>
-            <ul className=' mt-1 list-decimal list-inside space-y-1'>
+            <ul className='mt-1 list-inside list-decimal space-y-1'>
               <li>
                 Treating all individuals equally and without discrimination,
                 while fostering respect, tolerance, and non-violent conflict
@@ -103,7 +104,7 @@ const Content = () => {
             <h4 className='text-lg font-semibold'>
               Skills, Knowledge, and Competencies of EUB Graduates
             </h4>
-            <ul className=' mt-1 list-decimal list-inside space-y-1'>
+            <ul className='mt-1 list-inside list-decimal space-y-1'>
               <li>
                 Proficient in listening, speaking, reading, writing, and
                 non-verbal communication to share and receive complex ideas

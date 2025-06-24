@@ -23,7 +23,7 @@ const performanceCriteriaData = [
   },
 ];
 
-const columns: SystemTableColumn<any>[] = [
+const columns: SystemTableColumn<{ criteriaName: string; marks: string }>[] = [
   {
     accessorKey: 'criteriaName',
     header: 'Criteria',

@@ -1,7 +1,9 @@
+import React from 'react';
+
+import Link from 'next/link';
+
 import { format } from 'date-fns';
 import { CalendarDays } from 'lucide-react';
-import Link from 'next/link';
-import React from 'react';
 
 interface INotice {
   title: string;
@@ -19,10 +21,10 @@ const NoticeCard: React.FC<{ data: INotice }> = ({ data }) => {
       >
         {data.title}
       </Link>
-      <p className='text-sm line-clamp-2'>{data.description}</p>
+      <p className='line-clamp-2 text-sm'>{data.description}</p>
       <div className='mt-2 flex items-center gap-1'>
         <CalendarDays className='size-5 text-orange-500' />
-        <span className='text-sm text-orange-500 font-medium'>
+        <span className='text-sm font-medium text-orange-500'>
           {format(new Date(data.date), 'dd MMM, yyyy')}
         </span>
       </div>

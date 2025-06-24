@@ -1,10 +1,11 @@
 import React from 'react';
 
-import ContentWrapper from '../../content-wrapper';
 import Title from '@/components/title';
 
-import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
 import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
+import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
+
+import ContentWrapper from '../../content-wrapper';
 
 const ProgramDetails = () => {
   return (
@@ -18,7 +19,7 @@ const ProgramDetails = () => {
           structured into three semesters: Spring, Summer, and Fall.
         </p>
 
-        <ul className='mt-2 list-disc pl-6 space-y-1.5'>
+        <ul className='mt-2 list-disc space-y-1.5 pl-6'>
           <li className='space-x-1'>
             <strong>Spring semester:</strong> <span>January to April</span>
           </li>

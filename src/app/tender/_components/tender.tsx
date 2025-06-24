@@ -2,18 +2,18 @@
 
 import { useState } from 'react';
 
+import { ITender } from '@/types';
+import { useQuery } from '@tanstack/react-query';
 import { useDebounceValue } from 'usehooks-ts';
 
-import { Input } from '@/components/ui/input';
+import { getTenders } from '@/server/get';
 
+import ClientPagination from '@/components/client-pagination';
+import PdfDownloadButton from '@/components/pdf-download-btn';
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
-import { ITender } from '@/types';
-import PdfDownloadButton from '@/components/pdf-download-btn';
-import { useQuery } from '@tanstack/react-query';
-import { getTenders } from '@/server/get';
-import ClientPagination from '@/components/client-pagination';
+import { Input } from '@/components/ui/input';
 
 const columns: SystemTableColumn<ITender>[] = [
   {
@@ -70,13 +70,18 @@ const Tender: React.FC<ITenderProps> = ({ title, type }) => {
   const { data, isLoading } = useQuery({
     queryKey: ['tenders', type, page, limit, debouncedValue],
     queryFn: async () =>
-      await getTenders({ page, limit, q: debouncedValue, table_name: type }),
+      await getTenders({
+        page,
+        limit,
+        q: debouncedValue,
+        table_name: type,
+      }),
   });
 
   return (
     <div id={type} className='space-y-8'>
-      <div className='flex flex-col gap-2 lg:flex-row justify-between lg:items-center'>
-        <h2 className='text-lg lg:text-2xl font-semibold text-primary'>
+      <div className='flex flex-col justify-between gap-2 lg:flex-row lg:items-center'>
+        <h2 className='text-lg font-semibold text-primary lg:text-2xl'>
           {title}
         </h2>
         <Input

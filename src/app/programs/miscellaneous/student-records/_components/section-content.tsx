@@ -6,12 +6,7 @@ const SectionContent: React.FC<{
 }> = ({ title, content }) => {
   return (
     <section>
-      <h4
-        className='
-        text-lg font-semibold text-primary'
-      >
-        {title}
-      </h4>
+      <h4 className='text-lg font-semibold text-primary'>{title}</h4>
 
       {typeof content === 'string' ? (
         <p className='mt-1'>{content}</p>

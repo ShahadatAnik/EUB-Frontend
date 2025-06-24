@@ -1,13 +1,13 @@
 import { IAcademicAccordion } from '@/types';
 
+import Notices from '@/app/programs/_components/notices';
+
 import CoreFacultyMembers from '../_components/core-faculty-members';
 import LaboratoriesResources from '../_components/laboratories-resources';
+import NewsEvents from '../_components/news-events';
 import AboutUs from '../_components/overview/about-us';
 import Chairman from '../_components/overview/chairman';
 import StudentServiceDesk from '../_components/student-service-desk';
-
-import NewsEvents from '../_components/news-events';
-import Notices from '@/app/programs/_components/notices';
 
 const accordions: IAcademicAccordion[] = [
   {

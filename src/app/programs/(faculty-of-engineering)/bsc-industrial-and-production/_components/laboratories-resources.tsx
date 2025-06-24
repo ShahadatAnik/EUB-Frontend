@@ -1,6 +1,8 @@
 import React from 'react';
-import ContentWrapper from './content-wrapper';
+
 import Image from 'next/image';
+
+import ContentWrapper from './content-wrapper';
 
 const LaboratoriesResources = () => {
   return (
@@ -16,7 +18,7 @@ const LaboratoriesResources = () => {
             alt='placeholder'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             A machine shop lab is a specialized workspace equipped with tools
             and machinery for fabricating, modifying, and repairing metal or
             plastic parts. It typically includes equipment such as lathes,
@@ -45,7 +47,7 @@ const LaboratoriesResources = () => {
             alt='placeholder'
           />
 
-          <p className='text-justify '>
+          <p className='text-justify'>
             An Engineering Drawing Lab is a practical workspace where students
             and professionals learn and practice the creation of technical
             drawings, a fundamental skill for engineering design and
@@ -69,7 +71,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Refrigeration & Air Condition</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             Refrigeration and Air Conditioning (RAC) encompass systems designed
             to regulate temperature and humidity for specific purposes.
             Refrigeration focuses on cooling spaces to preserve food, materials,
@@ -92,7 +94,7 @@ const LaboratoriesResources = () => {
       <div>
         <h4 className='text-xl font-semibold'>Computer Lab</h4>
         <div className='mt-2'>
-          <p className='text-justify '>
+          <p className='text-justify'>
             A Computer Lab is a dedicated space where computer resources and
             services are provided to a specific community, such as students,
             researchers, or the general public. Commonly found in public

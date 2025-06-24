@@ -1,42 +1,45 @@
-import PageHeader from '@/components/page-header';
 import React from 'react';
-import PageContainer from '@/components/page-container';
-import Content from './_components/content';
+
 import { getFaculties, getPublications } from '@/server/get';
 
+import PageContainer from '@/components/page-container';
+import PageHeader from '@/components/page-header';
+
+import Content from './_components/content';
+
 export default async function Page(props: {
-	searchParams?: Promise<{
-		q?: string;
-		page?: string;
-		limit?: string;
-		filter?: string;
-	}>;
+  searchParams?: Promise<{
+    q?: string;
+    page?: string;
+    limit?: string;
+    filter?: string;
+  }>;
 }) {
-	const searchParams = await props.searchParams;
-	const q = searchParams?.q || '';
-	const filter = searchParams?.filter || '';
-	const page = Number(searchParams?.page) || 1;
-	const limit = Number(searchParams?.limit) || 10;
+  const searchParams = await props.searchParams;
+  const q = searchParams?.q || '';
+  const filter = searchParams?.filter || '';
+  const page = Number(searchParams?.page) || 1;
+  const limit = Number(searchParams?.limit) || 10;
 
-	const data = await getPublications({
-		page,
-		limit,
-		q,
-		filter
-	});
+  const data = await getPublications({
+    page,
+    limit,
+    q,
+    filter,
+  });
 
-	const faculties = await getFaculties();
+  const faculties = await getFaculties();
 
-	return (
-		<>
-			<PageHeader
-				image="/images/accounting-and-finance.jpg"
-				title="Publications"
-			/>
+  return (
+    <>
+      <PageHeader
+        image='/images/accounting-and-finance.jpg'
+        title='Publications'
+      />
 
-			<PageContainer>
-				<Content faculties={faculties} {...data} />
-			</PageContainer>
-		</>
-	);
+      <PageContainer>
+        <Content faculties={faculties} {...data} />
+      </PageContainer>
+    </>
+  );
 }
