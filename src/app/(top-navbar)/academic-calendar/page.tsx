@@ -15,7 +15,7 @@ export const metadata = generateMetaData({
 
   // A description highlighting the key dates and semesters
   description:
-    'View the official academic calendar for the European University of Bangladesh for 2025. Find key dates for the Spring, Summer, and Fall semesters, including admission deadlines, registration, mid-term and final exams, and holidays.',
+    'View the official 2025 academic calendar. Find key dates for admissions, registration, exams, and holidays for the Spring, Summer, and Fall semesters.',
 
   // Targeted keywords for users searching for academic dates
   keywords: [

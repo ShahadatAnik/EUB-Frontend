@@ -20,9 +20,9 @@ type searchParamsProps = {
 };
 
 export const metadata = generateMetaData({
-  title: 'Latest News and Events | European University of Bangladesh (EUB)',
+  title: 'Latest News & Events | European University of Bangladesh (EUB)',
   description:
-    'Stay updated with the latest news, events, and announcements from the European University of Bangladesh. Discover academic achievements, campus life, workshops, admission circulars, and more.',
+    'Stay updated with the latest news, events, workshops, and announcements from the EUB campus. See our student achievements and admission circulars.',
   keywords: [
     'EUB news',
     'European University of Bangladesh events',

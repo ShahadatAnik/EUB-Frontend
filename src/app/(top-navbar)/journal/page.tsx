@@ -9,11 +9,12 @@ import Content from './_components/content';
 
 export const metadata = generateMetaData({
   // A specific and academic title
-  title: 'Journal of European University of Bangladesh (EUB)',
+  title:
+    'MJEUB | Multidisciplinary Journal of European University of Bangladesh',
 
   // A detailed description for researchers and academics
   description:
-    'Official peer-reviewed, open-access journal of EUB. The MJEUB publishes original research articles, review papers, and case studies across arts, social science, business, science, and engineering.',
+    'The official peer-reviewed, open-access journal of EUB. We publish original research across science, engineering, business, arts, and social sciences.',
 
   // A targeted list of keywords for academic search
   keywords: [

@@ -7,13 +7,8 @@ import { generateMetaData } from '@/lib/utils';
 import Content from './_components/content';
 
 export const metadata = generateMetaData({
-  // A clear and action-oriented title
   title: 'Contact Us | European University of Bangladesh (EUB)',
-
-  // A description providing key contact details directly
-  description: `Get in touch with the European University of Bangladesh. Find our campus address at Gabtoli, Dhaka, phone numbers for admission and information, and email addresses for all inquiries.`,
-
-  // Keywords for users trying to find contact information
+  description: `Find our campus address in Gabtoli, Dhaka, phone numbers for admissions and information, and email contacts. Get in touch with EUB today.Get in touch with the European University of Bangladesh. Find our campus address at Gabtoli, Dhaka, phone numbers for admission and information, and email addresses for all inquiries.`,
   keywords: [
     'Contact EUB',
     'European University of Bangladesh address',

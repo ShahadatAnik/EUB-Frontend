@@ -10,9 +10,9 @@ import { generateMetaData } from '@/lib/utils';
 import Content from './_components/content';
 
 export const metadata = generateMetaData({
-  title: 'Publications and Research | European University of Bangladesh (EUB)',
+  title: 'Publications & Research | European University of Bangladesh (EUB)',
   description:
-    'Explore the scholarly work, research papers, and academic journals from the faculty and students of the European University of Bangladesh (EUB). Access the EUB Journal and other publications across engineering, science, business, and social sciences.',
+    'Explore scholarly work, research papers, and academic journals from the faculty and students of EUB. Access publications across all departments.',
   keywords: [
     'EUB publications',
     'European University of Bangladesh research',
