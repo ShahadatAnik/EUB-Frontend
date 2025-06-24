@@ -3,9 +3,9 @@ export type SiteConfig = typeof siteConfig;
 export const siteUrl = 'https://eub.edu.bd/';
 
 export const siteConfig = {
-  name: 'European University of Bangladesh',
+  name: 'European University of Bangladesh | Quality & Affordable Education',
   description:
-    'The European University of Bangladesh has started its journey towards achieving excellence in higher education in this country. In its consideration, the fount of progress in Europe has been higher education centering around science and technology. In search of excellence, the European University of Bangladesh will, go at length, to emulate the ways traversed by universities and institutions of higher education and learning in Europe.For Math Department students: Calculate your yearly and overall CGPA in seconds. Print official-looking academic transcripts directly from our easy-to-use online tool.',
+    'A leading private university in Dhaka with UGC-approved degrees. Explore programs in Engineering, Business & Arts. Admissions are open for Fall 2025!',
   url: siteUrl,
   ogImage: `${siteUrl}/opengraph-image.jpg`,
   keywords: [
