@@ -5,7 +5,30 @@ import { getFaculties, getPublications } from '@/server/get';
 import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
 
+import { generateMetaData } from '@/lib/utils';
+
 import Content from './_components/content';
+
+export const metadata = generateMetaData({
+  title: 'Publications and Research | European University of Bangladesh (EUB)',
+  description:
+    'Explore the scholarly work, research papers, and academic journals from the faculty and students of the European University of Bangladesh (EUB). Access the EUB Journal and other publications across engineering, science, business, and social sciences.',
+  keywords: [
+    'EUB publications',
+    'European University of Bangladesh research',
+    'EUB Journal',
+    'Academic journals Bangladesh',
+    'University research papers',
+    'Faculty publications EUB',
+    'Dhaka university research',
+    'Scholarly articles Bangladesh',
+    'Engineering research',
+    'Computer Science publications',
+    'Business research papers',
+    'Social sciences journal',
+  ],
+  pageUrl: 'https://eub.edu.bd/publications',
+});
 
 export default async function Page(props: {
   searchParams?: Promise<{

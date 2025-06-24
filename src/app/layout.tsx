@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 
+import { siteConfig } from '@/config/site';
 import { Toaster } from 'sonner';
 
 import Layout from '@/components/layout';
@@ -21,9 +22,26 @@ const fontPoppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'European University Of Bangladesh',
-  description:
-    'The European University of Bangladesh has started its journey towards achieving excellence in higher education in this country. In its consideration, the fount of progress in Europe has been higher education centering around science and technology. In search of excellence, the European University of Bangladesh will, go at length, to emulate the ways traversed by universities and institutions of higher education and learning in Europe.',
+  metadataBase: new URL(siteConfig.url),
+  title: siteConfig.name,
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [
+    {
+      name: 'European University of Bangladesh',
+      url: 'https://www.eub.edu.bd',
+    },
+  ],
+  publisher: 'European University of Bangladesh',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [`${siteConfig.url}/opengraph-image.png`],
+  },
 };
 
 export default function RootLayout({
