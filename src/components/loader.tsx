@@ -10,10 +10,10 @@ const Loader: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div className={cn('flex h-screen items-center justify-center', className)}>
       <RotatingLines
-        strokeColor='#303188'
+        strokeColor='hsl(var(--primary))'
         visible={true}
-        width='50'
-        strokeWidth='5'
+        width='40'
+        strokeWidth='3'
         animationDuration='0.75'
         ariaLabel='rotating-lines-loading'
       />

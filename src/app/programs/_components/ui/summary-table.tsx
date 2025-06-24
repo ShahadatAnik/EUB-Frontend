@@ -35,10 +35,22 @@ export const SummaryTable = React.memo<SummaryTableProps>(
       {
         accessorKey: 'category',
         header: 'Category',
-        cellClassName: 'w-80',
+        cellClassName: (row, index, isFirstRow, isLastRow) => {
+          return isLastRow
+            ? 'text-right pr-4 font-medium border-b'
+            : 'border-b w-40';
+        },
         cell: (value) => (
           <div className='whitespace-pre-line text-sm'>{value}</div>
         ),
+
+        colSpan(row, index, isFirstRow, isLastRow) {
+          return isLastRow
+            ? Object.values(summaryData?.[0]).filter(Boolean).length === 2
+              ? 1
+              : Object.values(summaryData?.[0]).filter(Boolean).length - 1
+            : 1;
+        },
       },
       {
         accessorKey: 'theory_courses',
@@ -46,6 +58,7 @@ export const SummaryTable = React.memo<SummaryTableProps>(
         headerClassName: 'w-24 text-center',
         cellClassName: 'text-center font-medium',
         isHidden: tableData.every((row) => row.theory_courses === undefined),
+        skipRender: (row, index, isFirstRow, isLastRow) => isLastRow,
       },
       {
         accessorKey: 'sessional_courses',
@@ -53,19 +66,22 @@ export const SummaryTable = React.memo<SummaryTableProps>(
         headerClassName: 'w-24 text-center',
         cellClassName: 'text-center font-medium',
         isHidden: tableData.every((row) => row.sessional_courses === undefined),
+        skipRender: (row, index, isFirstRow, isLastRow) => isLastRow,
       },
-      {
-        accessorKey: 'credits',
-        header: 'Credit',
-        headerClassName: 'w-24 text-center',
-        cellClassName: 'text-center font-medium',
-      },
+
       {
         accessorKey: 'percentage',
         header: 'Credit Proportions (Percentage)',
         headerClassName: 'w-32 text-center',
         cellClassName: 'text-center font-medium',
         isHidden: tableData.every((row) => row.percentage === undefined),
+        skipRender: (row, index, isFirstRow, isLastRow) => isLastRow,
+      },
+      {
+        accessorKey: 'credits',
+        header: 'Credit',
+        headerClassName: 'w-24 text-center',
+        cellClassName: 'text-center font-medium',
       },
     ];
 
@@ -75,6 +91,9 @@ export const SummaryTable = React.memo<SummaryTableProps>(
         data={tableData}
         columns={columns}
         className='overflow-hidden'
+        rowClassName={(row, index, isFirstRow, isLastRow) =>
+          isLastRow ? 'bg-primary/10 text-foreground' : ''
+        }
       />
     );
   }

@@ -17,12 +17,13 @@ import { cn } from '@/lib/utils';
 import type { Semester } from '@/app/programs/_config/curriculum';
 
 interface CourseMapSectionProps {
+  title?: string;
   semesterData: Semester[];
   backgroundStudents?: string;
 }
 
 export const CourseMapSection = React.memo<CourseMapSectionProps>(
-  ({ semesterData, backgroundStudents }) => {
+  ({ semesterData, backgroundStudents, title }) => {
     const grandTotal = useMemo(
       () => semesterData.reduce((sum, semester) => sum + semester.total, 0),
       [semesterData]
@@ -66,8 +67,14 @@ export const CourseMapSection = React.memo<CourseMapSectionProps>(
     return (
       <div>
         <h3 className='mb-6 text-center text-lg font-semibold'>
-          Semester Wise Distribution of Courses (
-          {backgroundStudents || 'For H.S.C. Background Students'})
+          {title ? (
+            title
+          ) : (
+            <>
+              Semester Wise Distribution of Courses (
+              {backgroundStudents || 'For H.S.C. Background Students'})
+            </>
+          )}
         </h3>
 
         <div className='space-y-8'>
@@ -124,22 +131,9 @@ export const CourseMapSection = React.memo<CourseMapSectionProps>(
                                   {courseIndex === 0 && (
                                     <TableCell
                                       rowSpan={totalRows}
-                                      className='border-r text-center align-top font-medium'
+                                      className='align-center border-r bg-primary/5 text-center font-medium'
                                     >
-                                      <div
-                                      // className={
-                                      //   semester.isWaived
-                                      //     ? 'text-red-600'
-                                      //     : ''
-                                      // }
-                                      >
-                                        {semester.title}
-                                        {/* {semester.isWaived && (
-                                          <div className='text-xs text-red-600 mt-1 font-semibold'>
-                                            WAIVED
-                                          </div>
-                                        )} */}
-                                      </div>
+                                      {semester.title}
                                     </TableCell>
                                   )}
                                   <TableCell className='border-r text-center font-medium'>
@@ -159,17 +153,14 @@ export const CourseMapSection = React.memo<CourseMapSectionProps>(
 
                               {/* Semester total row */}
                               <TableRow
-                                className={cn('bg-secondary font-semibold')}
+                                className={cn('bg-primary/10 font-semibold')}
                               >
-                                {/* Empty cell for Sl. No. */}
-                                <TableCell className='border-r'></TableCell>
-                                {/* Empty cell for Course Code */}
-                                <TableCell className='border-r'></TableCell>
-                                {/* Total label in Course Title */}
-                                <TableCell className='border-r text-right'>
+                                <TableCell
+                                  colSpan={3}
+                                  className='border-r text-right'
+                                >
                                   Total
                                 </TableCell>
-                                {/* Total value in Credit */}
                                 <TableCell className='text-center font-bold'>
                                   {semester.total}
                                 </TableCell>
