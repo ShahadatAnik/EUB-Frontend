@@ -6,7 +6,10 @@ export default async function fetchApi<Response>(
 ): Promise<Response> {
   const res = await fetch(secret.apiBaseUrl + url, {
     ...options,
-    cache: 'no-store',
+    cache: 'no-cache',
+    next: {
+      revalidate: 0,
+    },
     headers: {
       'Content-Type': 'application/json',
       ...options.headers,
