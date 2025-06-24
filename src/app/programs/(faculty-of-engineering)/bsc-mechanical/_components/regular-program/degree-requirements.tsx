@@ -1,76 +1,75 @@
 import React from 'react';
 
-import Title from '@/components/title';
-
 import ContentWrapper from '../content-wrapper';
 
 const DegreeRequirements = () => {
   return (
-    <ContentWrapper title='Degree Requirements' className='space-y-6'>
-      <p>
-        To successfully complete the B.Sc. in Mechanical Engineering program:
-      </p>
+    <ContentWrapper title='Degree Requirements' className='space-y-4 py-4'>
+      <div>
+        <h4 className='mb-2 font-semibold'>2.4. Degree Requirements</h4>
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
+          <li>
+            Completion of minimum <strong>161 .75</strong> credit hours for
+            Regular Students
+          </li>
+          <li>
+            Completion of minimum <strong>142.75</strong> credit hours for
+            Diploma Students.
+          </li>
+        </ul>
+      </div>
 
       <div>
-        <Title variant={'title'} title='Minimum GPA to pass program' />
-        <p>
-          Students must maintain a minimum CGPA of 2.50 and pass all required
-          courses.
-        </p>
+        <h4 className='mb-2 font-semibold'>
+          2.4.1. Minimum GPA to pass program: 2.50 CGPA
+        </h4>
       </div>
+
       <div>
-        <Title variant={'title'} title='Supplementary rules & cost' />
-        <ul className='list-disc space-y-2 pl-6'>
+        <h4 className='mb-2 font-semibold'>
+          2.4.2. Supplementary Rules & Cost
+        </h4>
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
           <li>
-            <p>
-              <strong>Rule:</strong>Students receiving an &apos;I&apos; grade
-              may take the next final supplementary examination without
-              re-registering.
-            </p>
+            <strong>Rule:</strong> Students with an &#39;I&#39; grade
+            (incomplete due to missing the final exam but having completed other
+            requirements) can take the next final supplementary examination
+            without re-registering for the course.
           </li>
           <li>
-            <p>
-              <strong>Cost:</strong>As per university policy.
-            </p>
+            <strong>Cost:</strong> According to the policy of the university.
           </li>
         </ul>
       </div>
+
       <div>
-        <Title variant={'title'} title='Total Credits of Course' />
-        <ul className='list-disc space-y-2 pl-6'>
+        <h4 className='mb-2 font-semibold'>2.4.3. Total Credits of Course</h4>
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
           <li>
-            <strong>Regular Students:</strong> 161.0 credit hours
+            <strong>Regular students:</strong> 161.0 credit hours.
           </li>
           <li>
-            <strong>Diploma Holders:</strong> 142.0 credit hours
+            <strong>Diploma holders:</strong> 142.0 credit hours.
           </li>
         </ul>
       </div>
+
       <div>
-        <Title variant={'title'} title='Waivers' />
-        <p>
-          Applicable to diploma holders in Electrical, Electronics, Computer,
-          Power, Mechanical, or Telecommunication.
-        </p>
-        <ul className='mt-2 list-disc space-y-2 pl-6'>
+        <h4 className='mb-2 font-semibold'>2.4.4. Waivers (if any)</h4>
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
           <li>
-            Waivers apply only to General Educational Development (GED) courses.
+            Diploma holders in Electrical /Electronics /Computer /Power
+            /Mechanical / Telecommunication are eligible for waivers.
           </li>
           <li>
-            Basic sciences, Mathematics, and core engineering courses are not
-            eligible for waivers.
+            Waivers apply only to General Educational Development (GED) group
+            courses.
           </li>
-          <li>Maximum waiver: 13.5 credits</li>
-        </ul>
-      </div>
-      <div>
-        <Title variant={'title'} title='Mandatory completions' />
-        <ul className='list-disc space-y-2 pl-6'>
           <li>
-            ME 370: Industrial Training (4 weeks; non-credit; graded as
-            &apos;S&apos; or &apos;U&apos;)
+            Basic sciences, Mathematics, and engineering courses cannot be
+            exempted.
           </li>
-          <li>Industrial Tour (3 weeks; co-curricular activity)</li>
+          <li>Maximum exempted credits: 13.5 credits.</li>
         </ul>
       </div>
     </ContentWrapper>

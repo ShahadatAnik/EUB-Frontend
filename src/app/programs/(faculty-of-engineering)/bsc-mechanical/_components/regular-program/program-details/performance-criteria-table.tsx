@@ -3,6 +3,7 @@ import React from 'react';
 import SystemTable, {
   SystemTableColumn,
 } from '@/components/table/system-table';
+import { TableCell, TableFooter, TableRow } from '@/components/ui/table';
 
 const performanceCriteriaData = [
   {
@@ -11,7 +12,7 @@ const performanceCriteriaData = [
   },
   {
     criteriaName: 'Continuous Assessment',
-    marks: '30',
+    marks: '20',
   },
   {
     criteriaName: 'Mid-term Examination',
@@ -19,7 +20,7 @@ const performanceCriteriaData = [
   },
   {
     criteriaName: 'Final Examination',
-    marks: '30',
+    marks: '40',
   },
 ];
 
@@ -42,7 +43,14 @@ const PerformanceCriteriaTable = () => {
       caption='Performance Criteria'
       data={performanceCriteriaData}
       columns={columns}
-    />
+    >
+      <TableFooter>
+        <TableRow>
+          <TableCell className='border-r'>Total</TableCell>
+          <TableCell>100</TableCell>
+        </TableRow>
+      </TableFooter>
+    </SystemTable>
   );
 };
 

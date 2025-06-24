@@ -4,40 +4,72 @@ import ContentWrapper from '../content-wrapper';
 
 const DegreeRequirements = () => {
   return (
-    <ContentWrapper title='Degree Requirements' className='py-4'>
+    <ContentWrapper title='Degree Requirements' className='space-y-4 py-4'>
       <div>
-        <p>
-          A student must complete 120 credits with a minimum CGPA of 2.00/4.00
-          to earn the BBA degree. To continue in the program a student must be
-          in good standing (i.e. maintain a minimum CGPA of 2.00/4.00 at all
-          levels of academic advancement). If in any semester the CGPA drops
-          below 2.00 the student is put on academic probation. A student will be
-          dismissed after being on probation for three consecutive semesters.
-        </p>
+        <h4 className='mb-2 font-semibold'>2.4. Degree Requirements</h4>
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
+          <li>
+            Completion of minimum <strong>161 .75</strong> credit hours for
+            Regular Students
+          </li>
+          <li>
+            Completion of minimum <strong>142.75</strong> credit hours for
+            Diploma Students.
+          </li>
+        </ul>
+      </div>
 
-        <ul className='mt-2 list-disc space-y-2 pl-6'>
+      <div>
+        <h4 className='mb-2 font-semibold'>
+          2.4.1. Minimum GPA to pass program: 2.50 CGPA
+        </h4>
+      </div>
+
+      <div>
+        <h4 className='mb-2 font-semibold'>
+          2.4.2. Supplementary Rules & Cost
+        </h4>
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
           <li>
-            ENG 102 & BUS 112 is not compulsory for those who received a waiver
-            in these courses in based on Admission Test. Others must have to
-            complete these courses for Degree completion.
+            <strong>Rule:</strong> Students with an &#39;I&#39; grade
+            (incomplete due to missing the final exam but having completed other
+            requirements) can take the next final supplementary examination
+            without re-registering for the course.
           </li>
           <li>
-            To qualify for degree, a student must maintain a minimum CGPA of
-            2.00 out of 4.00 in both School Core Courses & BBA Core Courses.
+            <strong>Cost:</strong> According to the policy of the university.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 className='mb-2 font-semibold'>2.4.3. Total Credits of Course</h4>
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
+          <li>
+            <strong>Regular students:</strong> 161.0 credit hours.
           </li>
           <li>
-            Minimum GPA 2.50 is required in order to declare the Major or at
-            least 2.00 is required to be eligible for the BBA degree.
+            <strong>Diploma holders:</strong> 142.0 credit hours.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 className='mb-2 font-semibold'>2.4.4. Waivers (if any)</h4>
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
+          <li>
+            Diploma holders in Electrical /Electronics /Computer /Power
+            /Mechanical / Telecommunication are eligible for waivers.
           </li>
           <li>
-            For single major students required to complete 126 credits including
-            ENG 102 & BUS 112.
+            Waivers apply only to General Educational Development (GED) group
+            courses.
           </li>
           <li>
-            For dual major students required to complete 135 credits including
-            ENG 102 & BUS 112.
+            Basic sciences, Mathematics, and engineering courses cannot be
+            exempted.
           </li>
-          <li>Internship ( BUS 498) is mandatory non-credit course.</li>
+          <li>Maximum exempted credits: 13.5 credits.</li>
         </ul>
       </div>
     </ContentWrapper>
