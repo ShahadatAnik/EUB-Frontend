@@ -411,14 +411,7 @@ const LaboratoriesResources = () => {
           Computer Laboratory
         </h3>
         <Card className='mb-4 shadow-lg'>
-          <CardContent className='grid gap-2 p-2 lg:grid-cols-2'>
-            <Image
-              src='/images/programs/civil/lab/Computer lab room no 429.jfif'
-              alt='Computer lab with students working on engineering software'
-              width={800}
-              height={400}
-              className='size-full rounded-md object-cover'
-            />
+          <CardContent className='p-2'>
             <Image
               src='/images/programs/civil/lab/Computer lab room no 329.jpg'
               alt='Computer lab with students working on engineering software'
