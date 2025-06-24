@@ -1,91 +1,94 @@
 import React from 'react';
 
+import Title from '@/components/title';
+
+import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
+import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
+
 import ContentWrapper from '../../content-wrapper';
-import PerformanceCriteriaTable from './performance-criteria-table';
-import TuitionFeesTable from './tuition-fees-table';
 
 const ProgramDetails = () => {
   return (
-    <ContentWrapper className='space-y-8' title='Program Details'>
-      <div>
-        <h6 className='text-lg font-semibold'>Semesters</h6>
-        <p className='mt-1'>
-          There will be three semesters in an academic year, which are namely:
-        </p>
+    <ContentWrapper title='Program Details' className='space-y-8'>
+      <p>
+        The B.Sc. in Industrial and Production Engineering (IPE) program at the
+        European University of Bangladesh (EUB) is designed to prepare students
+        for careers in industrial operations, production systems, manufacturing
+        engineering, and quality management. Through a balanced curriculum of
+        theory and lab courses, the program aims to equip graduates with the
+        skills necessary to improve productivity, reduce waste, and manage
+        technological processes across various industries.
+      </p>
 
-        <ul className='mt-2 list-disc space-y-2 pl-6'>
-          <li>Spring Semester; (Duration: January to April)</li>
-          <li>Summer Semester; (Duration: May to August)</li>
-          <li>Fall Semester; (Duration: September to December)</li>
-        </ul>
+      <div>
+        <Title variant={'title'} title='Semesters' />
+        <p>There are three semesters in an academic year:</p>
 
-        <p className='mt-2'>
-          Each semester will be of 15 weeks duration with 13 weeks for class
-          teaching, one-week break for examination preparation and one week for
-          examinations.
-        </p>
-      </div>
-      <div>
-        <h6 className='text-lg font-semibold'>Duration of the Program</h6>
-        <p className='mt-1'>
-          The duration for B.Sc. in Computer Science and Engineering program
-          will be four years divided into 12 semesters and Diploma Holders will
-          be 10 semesters.
-        </p>
-      </div>
-      <div>
-        <h6 className='text-lg font-semibold'>Credit Hour</h6>
-        <p className='mt-1'>
-          Three credit hours are assigned to a theory course i.e. there are
-          three hours lecture in a week. A class period for theory courses will
-          have a minimum duration of 50 minutes.
-          <br />
-          One credit of lab course will have a minimum of 24 -hours of actual
-          lab works per semester and each lab class will have a minimum duration
-          of 1.5 -hours.
-        </p>
-      </div>
-      <div>
-        <h6 className='text-lg font-semibold'>
-          Course load / Conditions applicable for enrolling students of CSE
-          Program
-        </h6>
-        <ul className='mt-2 list-disc space-y-2 pl-6'>
-          <li>
-            A full time student can register in a semester for a maximum of 15
-            credits.
+        <ul className='mt-2 list-disc space-y-1.5 pl-6'>
+          <li className='space-x-1'>
+            <strong>Spring semester:</strong> <span>January to April</span>
           </li>
-          <li>
-            Part-time student can register in a semester for a maximum of 9
-            credits.
+          <li className='space-x-1'>
+            <strong>Summer semester:</strong> <span>May to August</span>
+          </li>
+          <li className='space-x-1'>
+            <strong>Fall semester:</strong> <span>September to December</span>
           </li>
         </ul>
       </div>
-      <PerformanceCriteriaTable />
 
       <div>
-        <h6 className='text-lg font-semibold'>Tuition Fee Structure</h6>
-        <p className='mt-1'>
-          Total cost of the program ranges from Taka 9,25,000 to Taka 10,25,000,
-          depending on the standing of the student at the time of admission. All
-          fees are subject to change. Please check with the BBA Program Office
-          for the most recent fee structure.
-        </p>
+        <Title variant={'title'} title='Duration' />
+        <p>Each semester is 17 weeks long, comprising:</p>
 
-        <div className='mt-4'>
-          <TuitionFeesTable />
+        <ul className='mt-2 list-disc space-y-1.5 pl-6'>
+          <li>12 weeks for class teaching</li>
+          <li>1 week for examination preparation</li>
+          <li>3 weeks for examinations</li>
+          <li>1 week for government and other holidays</li>
+        </ul>
+      </div>
+      <div>
+        <Title variant={'title'} title='Credit Hour' />
+        <ul className='list-disc space-y-1.5 pl-6'>
+          <li>
+            Theory Course: 3 credits = 3 lecture hours/week (50 minutes/class)
+          </li>
+          <li>
+            Lab Course: 1 credit = 24 hours/semester, minimum 2-hour sessions
+          </li>
+        </ul>
+      </div>
+      <div>
+        <Title variant={'title'} title='Course Load' />
+        <ul className='list-disc space-y-1.5 pl-6'>
+          <li>Full-time Students: Maximum of 15 credits per semester</li>
+          <li>Part-time Students: Maximum of 9 credits per semester</li>
+        </ul>
+      </div>
+      <div>
+        <Title variant={'title'} title='Performance Evaluation Criterion' />
+        <p className='mb-4'>Evaluation Criteria for each course:</p>
+        <PerformanceCriteriaTable />
+
+        <div className='mt-8'>
+          <p className='mb-4'>
+            The university will comply with the uniform grading system suggested
+            by UGC as follows.
+          </p>
+          <UgcGradingTable />
+          <p className='mt-4'>
+            Incomplete (I) Grade: An Incomplete (I) grade is used in special
+            circumstances. An ‘I’ grade may be given only at the end of a
+            semester to a student who has completed all other requirements
+            except the final examination.
+          </p>
         </div>
+      </div>
 
-        <ul className='mt-4 list-disc space-y-2 pl-6'>
-          <li>
-            Please note that all students must pay a non-refundable, one time
-            only admission fee Admission Fee 25,000/-
-          </li>
-          <li>
-            Each student has to pay 10,000/-as Caution money (Refundable) during
-            the time of admission
-          </li>
-        </ul>
+      <div>
+        <Title variant={'title'} title='Tuition Fee Structure' />
+        <p>(Refer to the Admission Office, EUB)</p>
       </div>
     </ContentWrapper>
   );

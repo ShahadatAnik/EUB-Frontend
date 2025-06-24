@@ -49,7 +49,12 @@ export type SystemTableColumn<T> = {
     isFirstRow: boolean,
     isLastRow: boolean
   ) => number;
-  skipRender?: (row: T, index: number) => boolean;
+  skipRender?: (
+    row: T,
+    index: number,
+    isFirstRow: boolean,
+    isLastRow: boolean
+  ) => boolean;
   isHidden?: boolean;
 };
 
@@ -61,7 +66,12 @@ interface IProps<T> {
   children?: React.ReactNode;
   isLoading?: boolean;
   groupedRows?: boolean;
-  rowClassName?: (row: T, index: number) => string;
+  rowClassName?: (
+    row: T,
+    index: number,
+    isFirstRow: boolean,
+    isLastRow: boolean
+  ) => string;
 }
 
 // Simple NoDataFound component since it's not provided
@@ -129,7 +139,14 @@ function SystemTable<T>({
             <TableRow
               key={rowIndex}
               className={
-                rowClassName ? rowClassName(item as T, rowIndex) : undefined
+                rowClassName
+                  ? rowClassName(
+                      item as T,
+                      rowIndex as number,
+                      rowIndex === 0,
+                      rowIndex === data.length - 1
+                    )
+                  : undefined
               }
             >
               {columns
@@ -138,7 +155,12 @@ function SystemTable<T>({
                   // Skip rendering if skipRender function returns true
                   if (
                     column.skipRender &&
-                    column.skipRender(item as T, rowIndex)
+                    column.skipRender(
+                      item as T,
+                      rowIndex as number,
+                      rowIndex === 0,
+                      rowIndex === data.length - 1
+                    )
                   ) {
                     return null;
                   }
