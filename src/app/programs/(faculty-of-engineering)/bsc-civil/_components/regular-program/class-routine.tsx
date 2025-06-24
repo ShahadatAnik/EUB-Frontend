@@ -7,7 +7,7 @@ import SystemTable from '@/components/table/system-table';
 import ContentWrapper from '../content-wrapper';
 
 const ClassRoutine = () => {
-  const { data } = useGetRegularClassRoutine('BSC-EEE');
+  const { data } = useGetRegularClassRoutine('BSC-CIVIL');
   return (
     <ContentWrapper title='Class Routine'>
       <SystemTable caption='Class Routine' data={data!} columns={columns} />

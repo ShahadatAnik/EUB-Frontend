@@ -7,7 +7,7 @@ import SystemTable from '@/components/table/system-table';
 import ContentWrapper from '../content-wrapper';
 
 const ExamSchedule = () => {
-  const { data } = useGetRegularExamSchedule('BSC-EEE');
+  const { data } = useGetRegularExamSchedule('BSC-CIVIL');
   return (
     <ContentWrapper title='Exam Schedule'>
       <SystemTable caption='Exam Schedule' data={data!} columns={columns} />
