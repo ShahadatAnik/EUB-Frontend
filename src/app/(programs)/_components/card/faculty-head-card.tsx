@@ -16,17 +16,10 @@ export function FacultyHeadCard({
   redirectLink,
 }: FacultyHeadCardProps) {
   return (
-    <Card className='group mb-8 overflow-hidden bg-white transition-all duration-300 hover:shadow-lg'>
+    <Card className='group mb-8 overflow-hidden border-gray-200 bg-white transition-all duration-300 hover:shadow-lg'>
       <CardContent className='p-0'>
         {/* Mobile Layout (vertical) */}
         <div className='flex flex-col sm:hidden'>
-          {/* Mobile - Header */}
-          <div className='bg-primary px-4 py-3 text-white'>
-            <div className='text-center'>
-              <span className='text-sm font-medium'>Department Head</span>
-            </div>
-          </div>
-
           {/* Mobile - Image */}
           <div className='flex items-center justify-center bg-gray-50 p-6'>
             <div className='relative aspect-passport w-[300px] overflow-hidden rounded-lg border-2 border-gray-200 shadow-md'>
@@ -96,7 +89,7 @@ export function FacultyHeadCard({
         {/* Desktop/Tablet Layout (horizontal) */}
         <div className='hidden sm:block'>
           {/* Desktop - Header */}
-          <div className='py- bg-primary px-4 py-3 text-white'>
+          {/* <div className='py- bg-primary px-4 py-3 text-white'>
             <div className='flex items-center justify-between'>
               <span className='text-lg font-medium'>Department Head</span>
 
@@ -108,7 +101,7 @@ export function FacultyHeadCard({
                 <ExternalLink className='size-4' />
               </Link>
             </div>
-          </div>
+          </div> */}
 
           <div className='flex'>
             {/* Desktop - Image on left */}
@@ -130,20 +123,30 @@ export function FacultyHeadCard({
 
             {/* Desktop - Content on right */}
             <div className='flex-1 p-8'>
-              <div className='mb-6'>
-                <Link
-                  target='_blank'
-                  className='hover:underline'
-                  href={redirectLink || ''}
-                >
-                  <h3 className='mb-2 text-2xl font-bold leading-tight text-primary'>
-                    {faculty.teacher_name}
-                  </h3>
-                </Link>
+              <div className='mb-6 flex items-start justify-between'>
+                <div className='min-w-0 flex-1'>
+                  <Link
+                    target='_blank'
+                    className='hover:underline'
+                    href={redirectLink || ''}
+                  >
+                    <h3 className='mb-2 text-2xl font-bold leading-tight text-primary'>
+                      {faculty.teacher_name}
+                    </h3>
+                  </Link>
 
-                <p className='text-lg font-medium text-gray-600'>
-                  {faculty.teacher_designation}
-                </p>
+                  <p className='text-lg font-medium text-gray-600'>
+                    {faculty.teacher_designation}
+                  </p>
+                </div>
+
+                <Link
+                  href={redirectLink || ''}
+                  target='_blank'
+                  className='ml-2 rounded-full bg-white p-2 shadow-md transition-colors group-hover:bg-primary group-hover:text-white'
+                >
+                  <ExternalLink className='size-4' />
+                </Link>
               </div>
 
               {/* Desktop - Contact Information */}

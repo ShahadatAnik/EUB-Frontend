@@ -3,11 +3,12 @@
   "arrowParens": "always",
   "bracketSpacing": true,
   "plugins": [
-    "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
+    "prettier-plugin-tailwindcss",
+    "@trivago/prettier-plugin-sort-imports"
   ],
-  "tailwindAttributes": ["clsx", "className", "cx", "tw", "twc", "cn"],
-  "tailwindFunctions": ["clsx", "className", "cx", "tw", "twc", "cn"],
+
+  "tailwindAttributes": ["tw"],
+  "tailwindFunctions": ["tw"],
   "importOrder": [
     "^(react/(.*)$)|^(react$)",
     "^(next/(.*)$)|^(next$)",
