@@ -9,7 +9,7 @@ const Offers: React.FC<{ data: IOffer[] }> = ({ data }) => {
   if (data.length === 0) return null;
 
   return (
-    <div className='absolute bottom-0 left-0 right-0 z-10 bg-primary'>
+    <div className='bg-primary'>
       <Marquee className='h-10 lg:h-14' autoFill pauseOnHover>
         <div>
           {data.map((item, index) => (

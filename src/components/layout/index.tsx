@@ -2,8 +2,6 @@
 
 import React from 'react';
 
-import { usePathname } from 'next/navigation';
-
 import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 
 import { cn } from '@/lib/utils';
@@ -19,16 +17,13 @@ interface ILayoutProps {
 }
 
 const Layout: React.FC<ILayoutProps> = ({ children, navbarClassName }) => {
-  const pathName = usePathname();
-  const isHome = pathName === '/';
-
   const { isVisible, scrollToTop } = useScrollToTop({ threshold: 300 });
   return (
     <div className='relative'>
       <div
         className={cn(
-          'left-0 right-0 top-0 z-50 border-b-2 border-primary shadow-md',
-          isHome ? 'fixed' : 'sticky',
+          'shadow- sticky left-0 right-0 top-0 z-50 border-b-2 border-primary',
+          // isHome ? 'fixed' : 'sticky',
           navbarClassName
         )}
       >

@@ -87,7 +87,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       aspectRatio: {
-        passport: '9/11',
+        passport: '591/709',
       },
     },
     container: {

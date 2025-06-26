@@ -13,7 +13,7 @@ const TanstackProvider: React.FC<{ children: React.ReactNode }> = ({
   return (
     <QueryClientProvider client={queryClient}>
       {children}
-      <ReactQueryDevtools initialIsOpen={false} buttonPosition='top-right' />
+      <ReactQueryDevtools initialIsOpen={false} buttonPosition='bottom-left' />
     </QueryClientProvider>
   );
 };
