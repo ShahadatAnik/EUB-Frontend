@@ -68,10 +68,12 @@ const Page = () => {
             <FullScreenImage
               src='/images/programs/civil/lab/Environmental Engineering Lab pic 2.jpg'
               alt='Environmental Engineering Laboratory with beakers and testing equipment'
+              className='rounded-md'
             />
             <FullScreenImage
               src='/images/programs/civil/lab/Environmental Engineering Lab.jpg'
               alt='Environmental Engineering Laboratory with beakers and testing equipment'
+              className='rounded-md'
             />
           </CardContent>
         </Card>
@@ -112,10 +114,12 @@ const Page = () => {
             <FullScreenImage
               src='/images/programs/civil/lab/Transportation Engineering Lab.jpg'
               alt='Transportation Engineering equipment like Marshall Stability tester'
+              className='rounded-md'
             />
             <FullScreenImage
               src='/images/programs/civil/lab/Transportation Engineering Lab pic 2.jpg'
               alt='Transportation Engineering equipment like Marshall Stability tester'
+              className='rounded-md'
             />
           </CardContent>
         </Card>
@@ -256,10 +260,12 @@ const Page = () => {
             <FullScreenImage
               src='/images/programs/civil/lab/Soil Mechanics Lab.jpg'
               alt='Soil mechanics testing equipment like sieves and hydrometers'
+              className='rounded-md'
             />
             <FullScreenImage
               src='/images/programs/civil/lab/Soil Mechanics lab pic 2.jpg'
               alt='Soil mechanics testing equipment like sieves and hydrometers'
+              className='rounded-md'
             />
           </CardContent>
         </Card>
@@ -304,10 +310,12 @@ const Page = () => {
             <FullScreenImage
               src='/images/programs/civil/lab/Engineering Materials Lab.jpeg'
               alt='Concrete mixture machine and cube molds'
+              className='rounded-md'
             />
             <FullScreenImage
               src='/images/programs/civil/lab/Engineering Materials Lab pic 2.jpeg'
               alt='Concrete mixture machine and cube molds'
+              className='rounded-md'
             />
           </CardContent>
         </Card>
@@ -411,6 +419,7 @@ const Page = () => {
             <FullScreenImage
               src='/images/programs/civil/lab/Computer lab room no 329.jpg'
               alt='Computer lab with students working on engineering software'
+              className='rounded-md'
             />
           </CardContent>
         </Card>

@@ -10,7 +10,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 
-import type { Semester } from '../_config/curriculum';
+import type { Semester } from '../../_config/curriculum';
 
 interface YearGroupCardProps {
   year: number;

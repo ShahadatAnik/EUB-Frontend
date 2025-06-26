@@ -2,7 +2,7 @@ import React from 'react';
 
 import { IAlumni } from '@/types';
 
-import AlumniCard from './alumni-card';
+import AlumniCard from './card/alumni-card';
 import ContentWrapper from './content-wrapper';
 
 const AlumniIndustry: React.FC<{ data: IAlumni[] }> = ({ data }) => {

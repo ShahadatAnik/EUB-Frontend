@@ -28,6 +28,7 @@ export interface FullScreenImageProps {
   className?: string;
   /** Priority loading for above-the-fold images */
   priority?: boolean;
+  containerClassName?: string;
 }
 
 /**
@@ -38,7 +39,7 @@ const DEFAULT_CONFIG = {
   alt: 'Lab image',
   width: 800,
   height: 400,
-  className: 'size-full rounded-md object-cover',
+  className: 'size-full  object-cover',
   priority: false,
 } as const;
 
@@ -62,6 +63,7 @@ export default function FullScreenImage({
   height = DEFAULT_CONFIG.height,
   priority = DEFAULT_CONFIG.priority,
   className,
+  containerClassName,
 }: FullScreenImageProps) {
   const fullscreenRef = useRef<HTMLDivElement>(null);
   const {
@@ -152,7 +154,7 @@ export default function FullScreenImage({
   );
 
   return (
-    <div className='group relative block size-full'>
+    <div className={cn('group relative block size-full', containerClassName)}>
       {/* Main image container */}
       <div
         className='relative size-full overflow-hidden'
