@@ -165,19 +165,19 @@ export const navLinks: INavLink[] = [
       },
       {
         title: 'Faculty of Sciences',
-        href: '/programs/physics',
+        href: '/physics',
         children: [
           {
             title: 'Physics',
-            href: '/programs/physics',
+            href: '/physics',
           },
           {
             title: 'Chemistry',
-            href: '/programs/chemistry',
+            href: '/chemistry',
           },
           {
             title: 'Mathematics',
-            href: '/programs/mathematics',
+            href: '/mathematics',
           },
         ],
       },
