@@ -14,14 +14,14 @@ const ProgramLayout: React.FC<{ children: React.ReactNode }> = ({
     <div>
       <PageHeader
         image='/images/cse-2.jpg'
-        title='Master of Business Administration (MBA) For BBA Graduates'
+        title='Master of Governance and Development Studies (MGDS)'
       />
       <PageContainer>
         <PageLayout
           pages={pages}
           bannerImage={{
             src: '/banner.jpg',
-            alt: 'Master of Business Administration (MBA) For BBA Graduates',
+            alt: 'Master of Governance and Development Studies (MGDS)',
           }}
         >
           {children}
