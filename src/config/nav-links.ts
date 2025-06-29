@@ -89,11 +89,11 @@ export const navLinks: INavLink[] = [
           },
           {
             title: 'MBA (1 Year)',
-            href: '/programs/mba-one-year',
+            href: '/mba-one-year',
           },
           {
             title: 'BTHM', //! need to update
-            href: '/programs/thm',
+            href: '/thm',
           },
 
           {
@@ -102,11 +102,11 @@ export const navLinks: INavLink[] = [
           },
           {
             title: 'MSS in Economics',
-            href: '/programs/mss-economics',
+            href: '/mss-economics',
           },
           {
             title: 'MGDS (1 Year)',
-            href: '/programs/mgds-one-year',
+            href: '/mgds-one-year',
           },
         ],
       },
