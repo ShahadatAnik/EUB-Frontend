@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { generateMetaData } from '@/lib/utils';
+// import { generateMetaData } from '@/lib/utils';
 
 import ClassRoutine from '@/app/(programs)/_components/class-routine';
 // export const metadata = generateMetaData({

@@ -1,5 +1,5 @@
 import NewsAndEvents from '@/app/(programs)/_components/news-and-events';
-import { generateMetaData } from '@/lib/utils';
+// import { generateMetaData } from '@/lib/utils';
 import React from 'react';
 
 // export const metadata = generateMetaData({

@@ -1,5 +1,5 @@
 import FacultyAndStaff from '@/app/(programs)/_components/faculty-and-staff';
-import { generateMetaData } from '@/lib/utils';
+// import { generateMetaData } from '@/lib/utils';
 import React from 'react';
 
 // export const metadata = generateMetaData({

@@ -1,12 +1,6 @@
 import React from 'react';
-
-import { columns, useGetRegularCourseOffer } from '@/hooks/use-get-course';
-
-import SystemTable from '@/components/table/system-table';
-
-import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 import CourseOffer from '@/app/(programs)/_components/course-offer';
-import { generateMetaData } from '@/lib/utils';
+// import { generateMetaData } from '@/lib/utils';
 // export const metadata = generateMetaData({
 //   pageUrl: 'https://eub.edu.bd/bba/regular-program/course-offer',
 //   title: 'Offered Courses | Summer 2025 | Bachelor of Business Administration(BBA) | EUB',

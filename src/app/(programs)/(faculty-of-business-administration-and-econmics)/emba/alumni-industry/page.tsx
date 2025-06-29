@@ -5,7 +5,7 @@ import { IAlumni } from '@/types';
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 
 import AlumniIndustry from '@/app/(programs)/_components/alumni-and-industry';
-import { generateMetaData } from '@/lib/utils';
+// import { generateMetaData } from '@/lib/utils';
 
 // export const metadata = generateMetaData({
 //   pageUrl: 'https://eub.edu.bd/bba/alumni-industry',
