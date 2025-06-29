@@ -73,62 +73,62 @@ export const navLinks: INavLink[] = [
     children: [
       {
         title: 'Faculty of Business Administration and Economics',
-        href: '/programs/bba',
+        href: '/bba',
         children: [
           {
             title: 'BBA',
-            href: '/programs/bba',
+            href: '/bba',
           },
           {
             title: 'MBA',
-            href: '/programs/mba',
+            href: '/mba',
           },
           {
             title: 'Executive MBA',
-            href: '/programs/emba',
+            href: '/emba',
           },
           {
             title: 'MBA (1 Year)',
-            href: '/programs/mba-one-year',
+            href: '/mba-one-year',
           },
           {
             title: 'BTHM', //! need to update
-            href: '/programs/thm',
+            href: '/thm',
           },
 
           {
             title: 'BSS in Economics',
-            href: '/programs/bss-economics',
+            href: '/bss-economics',
           },
           {
             title: 'MSS in Economics',
-            href: '/programs/mss-economics',
+            href: '/mss-economics',
           },
           {
             title: 'MGDS (1 Year)',
-            href: '/programs/mgds-one-year',
+            href: '/mgds-one-year',
           },
         ],
       },
       {
         title: 'Faculty of Arts and Social Sciences',
-        href: '/programs/ba-english',
+        href: '/ba-english',
         children: [
           {
             title: 'BA in English',
-            href: '/programs/ba-english',
+            href: '/ba-english',
           },
           {
             title: 'MA in English',
-            href: '/programs/ma-english',
+            href: '/ma-english',
           },
           {
             title: 'LLB',
-            href: '/programs/llb',
+            href: '/llb',
           },
           {
             title: 'LLM',
-            href: '/programs/llm',
+            href: '/llm',
           },
         ],
       },
