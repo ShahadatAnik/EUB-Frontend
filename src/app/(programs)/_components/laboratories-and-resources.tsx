@@ -43,7 +43,7 @@ const LaboratoriesAndResources: React.FC<{
           <>
             <LabCard key={index} {...lab} />
             {index !== data.length - 1 && (
-              <Separator className='my-4 lg:my-8' />
+              <Separator key={index} className='my-4 lg:my-8' />
             )}
           </>
         ))}
