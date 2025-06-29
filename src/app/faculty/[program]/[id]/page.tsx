@@ -10,6 +10,8 @@ import { getFacultyDetails } from '@/server/get/get-faculties';
 import PageContainer from '@/components/page-container';
 import PageHeader from '@/components/page-header';
 
+import { generateMetaData as generatePageMetaData } from '@/lib/utils';
+
 import Content from './_components/content';
 
 type Props = {
@@ -20,14 +22,31 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { program, id } = await params;
   const faculty: IFacultyDetails = await getFacultyDetails((await params).id);
 
-  return {
-    title: faculty.teacher_name + ' | EUB',
+  const metadata = generatePageMetaData({
+    title:
+      faculty.teacher_name +
+      ' | ' +
+      faculty.teacher_designation +
+      ', ' +
+      faculty.department_name +
+      ' | EUB',
     description: convert(faculty.education, {
       limits: { maxInputLength: 160 },
     }),
-  };
+    keywords: [
+      faculty.teacher_name,
+      faculty.teacher_designation,
+      faculty.department_name,
+      'European University of Bangladesh',
+      'EUB',
+    ],
+    pageUrl: `https://eub.edu.bd/faculty/${program}/${id}`,
+  });
+
+  return metadata;
 }
 
 export default async function Page({
@@ -46,6 +65,9 @@ export default async function Page({
       <PageHeader
         image='/images/accounting-and-finance.jpg'
         title={faculty?.teacher_name}
+        description={
+          faculty.teacher_designation + ', ' + faculty.department_name
+        }
       />
 
       <PageContainer>
