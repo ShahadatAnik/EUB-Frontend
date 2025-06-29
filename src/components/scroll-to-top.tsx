@@ -18,7 +18,7 @@ export function ScrollToTopButton({
       variant={'default'}
       onClick={onClick}
       size='icon'
-      className={`fixed bottom-6 right-6 z-50 shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-2 hover:shadow-xl ${
+      className={`fixed bottom-6 right-6 z-50 shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-2 hover:shadow-xl border border-background/20 ${
         className || ''
       }`}
       aria-label='Scroll to top'

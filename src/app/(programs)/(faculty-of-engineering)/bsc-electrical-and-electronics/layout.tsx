@@ -14,14 +14,14 @@ const ProgramLayout: React.FC<{ children: React.ReactNode }> = ({
     <div>
       <PageHeader
         image='/images/cse-2.jpg'
-        title='B. Sc. in Civil Engineering (CE)'
+        title='B. Sc. in Electrical and Electronic Engineering (EEE)'
       />
       <PageContainer>
         <PageLayout
           pages={pages}
           bannerImage={{
             src: '/banner.jpg',
-            alt: 'B. Sc. in Civil Engineering (CE)',
+            alt: 'B. Sc. in Electrical and Electronic Engineering (EEE)',
           }}
         >
           {children}

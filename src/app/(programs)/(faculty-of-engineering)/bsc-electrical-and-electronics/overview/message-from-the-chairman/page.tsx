@@ -7,7 +7,7 @@ import MessageFromChairman from '@/app/(programs)/_components/message-from-chair
 // export const metadata = generateMetaData({});
 
 const Page = () => {
-  return <MessageFromChairman departmentName='BSC-CIVIL' />;
+  return <MessageFromChairman departmentName='BSC-EEE' />;
 };
 
 export default Page;
