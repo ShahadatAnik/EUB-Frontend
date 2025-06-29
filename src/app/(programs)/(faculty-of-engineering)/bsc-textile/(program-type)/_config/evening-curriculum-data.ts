@@ -8,26 +8,29 @@ import type {
   Semester,
 } from '@/app/(programs)/_config/curriculum';
 
-export const semesterInfo = {
+export const eveningSemesterInfo = {
   spring: 'January-April',
   summer: 'May-August',
   fall: 'September-December',
 };
 
-export const programDetails: ProgramDetails = {
-  degreeName: 'Bachelor of Science in Textile Engineering',
+export const eveningProgramDetails: ProgramDetails = {
+  degreeName: 'Bachelor of Science in Textile Engineering (B.Sc. in Textile)',
   duration: {
-    years: 4,
-    semesters: 12,
+    years: '3 Years 4 Months (2 Semester Waived)',
+    semesters: '10 (2 Semester Waived)',
   },
-  creditHours: 165,
+  creditHours: '165 Credits (140 Credits + 25 Credits Waiver)',
   courseLoad: '16 Weeks/Semester',
   courseLoadDetails:
     '(12 Weeks class + 2 Weeks Exam + 2 Weeks Result Processing)',
   minimumGPA: 2.2,
+  backgroundStudents: 'For Diploma in Engg. Background Students',
+  waiverInfo:
+    'Diploma in Engg. Background students will get 25 credits waiver which is equivalent to 2 semesters (1st year 1st semester and 1st year 2nd semester).',
 };
 
-export const performanceEvaluation: PerformanceEvaluation[] = [
+export const eveningPerformanceEvaluation: PerformanceEvaluation[] = [
   {
     category: '(a) Theory Courses:',
     criteria: [
@@ -66,7 +69,7 @@ export const performanceEvaluation: PerformanceEvaluation[] = [
   },
 ];
 
-export const textileEngineeringCourses: Course[] = [
+export const eveningTextileEngineeringCourses: Course[] = [
   {
     sl: 1,
     code: 'TXE-101',
@@ -90,7 +93,7 @@ export const textileEngineeringCourses: Course[] = [
     sl: 5,
     code: 'TXE-202',
     title: 'Yarn Manufacturing Technology I Lab',
-    credits: 1,
+    credits: 1.5,
   },
   {
     sl: 6,
@@ -102,7 +105,7 @@ export const textileEngineeringCourses: Course[] = [
     sl: 7,
     code: 'TXE-204',
     title: 'Fabric Manufacturing Technology I Lab',
-    credits: 1,
+    credits: 1.5,
   },
   {
     sl: 8,
@@ -114,7 +117,7 @@ export const textileEngineeringCourses: Course[] = [
     sl: 9,
     code: 'TXE-208',
     title: 'Wet Processing Technology I Lab',
-    credits: 1,
+    credits: 1.5,
   },
   {
     sl: 10,
@@ -126,20 +129,20 @@ export const textileEngineeringCourses: Course[] = [
     sl: 11,
     code: 'TXE-210',
     title: 'Apparel Manufacturing Technology I Lab',
-    credits: 1,
+    credits: 1.5,
   },
   { sl: 12, code: 'TXE-211', title: 'Textile Physics I', credits: 2 },
   {
     sl: 13,
     code: 'CSE-205',
     title: 'Application of Computer in Textiles',
-    credits: 3,
+    credits: 2,
   },
   {
     sl: 14,
     code: 'CSE-206',
     title: 'Application of Computer in Textiles Lab',
-    credits: 1,
+    credits: 1.5,
   },
   {
     sl: 15,
@@ -151,132 +154,120 @@ export const textileEngineeringCourses: Course[] = [
     sl: 16,
     code: 'TXE-216',
     title: 'Fabric Structure and Design Analysis Lab',
-    credits: 1,
+    credits: 1.5,
   },
   {
     sl: 17,
-    code: 'TXE-219',
-    title: 'Textile Testing and Quality Control I',
-    credits: 3,
-  },
-  {
-    sl: 18,
-    code: 'TXE-220',
-    title: 'Textile Testing and Quality Control I Lab',
-    credits: 1,
-  },
-  {
-    sl: 19,
     code: 'TXE-301',
     title: 'Yarn Manufacturing Technology II',
     credits: 3,
   },
   {
-    sl: 20,
+    sl: 18,
     code: 'TXE-302',
     title: 'Yarn Manufacturing Technology II Lab',
-    credits: 1,
+    credits: 1.5,
   },
   {
-    sl: 21,
+    sl: 19,
     code: 'TXE-303',
     title: 'Fabric Manufacturing Technology II',
     credits: 3,
   },
   {
-    sl: 22,
+    sl: 20,
     code: 'TXE-304',
     title: 'Fabric Manufacturing Technology II Lab',
-    credits: 1,
+    credits: 1.5,
   },
-  { sl: 23, code: 'TXE-305', title: 'Textile Raw Materials II', credits: 3 },
+  { sl: 21, code: 'TXE-305', title: 'Textile Raw Materials II', credits: 3 },
   {
-    sl: 24,
+    sl: 22,
     code: 'TXE-307',
     title: 'Wet Processing Technology II',
     credits: 3,
   },
   {
-    sl: 25,
+    sl: 23,
     code: 'TXE-308',
     title: 'Wet Processing Technology II Lab',
-    credits: 1,
+    credits: 1.5,
   },
-  { sl: 26, code: 'TXE-309', title: 'Textile Physics II', credits: 2 },
+  { sl: 24, code: 'TXE-309', title: 'Textile Physics II', credits: 2 },
   {
-    sl: 27,
+    sl: 25,
     code: 'TXE-315',
     title: 'Apparel Manufacturing Technology II',
     credits: 3,
   },
   {
-    sl: 28,
+    sl: 26,
     code: 'TXE-316',
     title: 'Apparel Manufacturing Technology II Lab',
-    credits: 1,
+    credits: 1.5,
   },
   {
-    sl: 29,
+    sl: 27,
     code: 'TXE-317',
     title: 'Economic Issues of Textile and Apparel Business',
     credits: 2,
   },
   {
-    sl: 30,
+    sl: 28,
     code: 'TXE-321',
     title: 'Textile Testing and Quality Control II',
     credits: 3,
   },
   {
-    sl: 31,
+    sl: 29,
     code: 'TXE-322',
     title: 'Textile Testing and Quality Control II Lab',
-    credits: 1,
+    credits: 1.5,
   },
   {
-    sl: 32,
+    sl: 30,
     code: 'TXE-423',
     title: 'Textile Testing and Quality Control III',
     credits: 3,
   },
   {
-    sl: 33,
+    sl: 31,
     code: 'TXE-424',
     title: 'Textile Testing and Quality Control III Lab',
-    credits: 1,
+    credits: 1.5,
   },
-  { sl: 34, code: 'TXE-433', title: 'Technical Textiles', credits: 2 },
+  { sl: 32, code: 'TXE-433', title: 'Technical Textiles', credits: 2 },
   {
-    sl: 35,
+    sl: 33,
     code: 'TXE-411',
     title: 'Maintenance of Textile Machineries',
     credits: 3,
   },
   {
-    sl: 36,
+    sl: 34,
     code: 'TXE-413',
     title: 'Forecasting and Trend Analysis of Textile and Apparel Business',
     credits: 2,
   },
   {
-    sl: 37,
+    sl: 35,
     code: 'EPC-401',
     title: 'Environment and Pollution Control',
     credits: 2,
   },
 ];
 
-export const nonDepartmentalCourses: Course[] = [
+export const eveningNonDepartmentalCourses: Course[] = [
   { sl: 1, code: 'ENG-101', title: 'Foundation English', credits: 3 },
   { sl: 2, code: 'PHY-109', title: 'Physics I', credits: 3 },
-  { sl: 3, code: 'PHY-110', title: 'Physics I Lab', credits: 1 },
+  { sl: 3, code: 'PHY-110', title: 'Physics I Lab', credits: 1.5 },
   { sl: 4, code: 'MTH-113', title: 'Mathematics I', credits: 3 },
   { sl: 5, code: 'CHM-107', title: 'Chemistry I', credits: 3 },
-  { sl: 6, code: 'CHM-108', title: 'Chemistry I Lab', credits: 1 },
+  { sl: 6, code: 'CHM-108', title: 'Chemistry I Lab', credits: 1.5 },
   { sl: 7, code: 'PHY-111', title: 'Physics II', credits: 3 },
-  { sl: 8, code: 'PHY-112', title: 'Physics II Lab', credits: 1 },
+  { sl: 8, code: 'PHY-112', title: 'Physics II Lab', credits: 1.5 },
   { sl: 9, code: 'CHM-109', title: 'Chemistry II', credits: 3 },
-  { sl: 10, code: 'CHM-110', title: 'Chemistry II Lab', credits: 1 },
+  { sl: 10, code: 'CHM-110', title: 'Chemistry II Lab', credits: 1.5 },
   { sl: 11, code: 'TXE-102', title: 'Engineering Drawing', credits: 2 },
   {
     sl: 12,
@@ -303,66 +294,64 @@ export const nonDepartmentalCourses: Course[] = [
     credits: 2,
   },
   { sl: 16, code: 'MTH-115', title: 'Mathematics II', credits: 3 },
-  { sl: 17, code: 'CSE-101', title: 'Computer Fundamentals', credits: 2 },
-  { sl: 18, code: 'CSE-102', title: 'Computer Fundamentals Lab', credits: 1 },
   {
-    sl: 19,
+    sl: 17,
     code: 'TXE-205',
     title: 'Automation and Control Engineering',
     credits: 2,
   },
-  { sl: 20, code: 'BBA-207', title: 'Business Statistics', credits: 2 },
+  { sl: 18, code: 'BBA-207', title: 'Business Statistics', credits: 2 },
   {
-    sl: 21,
+    sl: 19,
     code: 'EEE-211',
     title: 'Basic Electrical and Electronic Engineering',
     credits: 3,
   },
   {
-    sl: 22,
+    sl: 20,
     code: 'EEE-212',
     title: 'Basic Electrical and Electronic Engineering Lab',
-    credits: 1,
+    credits: 1.5,
   },
-  { sl: 23, code: 'MGT-215', title: 'Industrial Management', credits: 2 },
-  { sl: 24, code: 'GED-102', title: 'Bangladesh Studies', credits: 2 },
+  { sl: 21, code: 'MGT-215', title: 'Industrial Management', credits: 2 },
+  { sl: 22, code: 'GED-102', title: 'Bangladesh Studies', credits: 2 },
   {
-    sl: 25,
+    sl: 23,
     code: 'EME-219',
     title: 'Elements of Mechanical Engineering',
     credits: 3,
   },
   {
-    sl: 26,
+    sl: 24,
     code: 'EME-218',
     title: 'Elements of Mechanical Engineering Lab',
-    credits: 1,
+    credits: 1.5,
   },
-  { sl: 27, code: 'BBA-313', title: 'Industrial Economics', credits: 2 },
+  { sl: 25, code: 'BBA-313', title: 'Industrial Economics', credits: 2 },
   {
-    sl: 28,
+    sl: 26,
     code: 'TXE-310',
     title: 'Elements of Machine Design',
     credits: 3,
   },
-  { sl: 29, code: 'TXE-311', title: 'Textile Mill Utility', credits: 2 },
+  { sl: 27, code: 'TXE-311', title: 'Textile Mill Utility', credits: 2 },
   {
-    sl: 30,
+    sl: 28,
     code: 'TXE-313',
     title: 'Production Planning and Control',
     credits: 2,
   },
-  { sl: 31, code: 'TXE-319', title: 'Consumer Behavior', credits: 2 },
-  { sl: 32, code: 'BBA-101', title: 'Business Communication', credits: 2 },
+  { sl: 29, code: 'TXE-319', title: 'Consumer Behavior', credits: 2 },
+  { sl: 30, code: 'BBA-101', title: 'Business Communication', credits: 2 },
   {
-    sl: 33,
+    sl: 31,
     code: 'TXE-409',
     title: 'Industrial Compliance and ISO Certification',
     credits: 2,
   },
 ];
 
-export const electiveCourses: ElectiveCourse[] = [
+export const eveningElectiveCourses: ElectiveCourse[] = [
   {
     sl: 1,
     codes: ['TXE-401', 'TXE-403', 'TXE-405', 'TXE-407'],
@@ -383,7 +372,7 @@ export const electiveCourses: ElectiveCourse[] = [
       'Wet Processing Technology III Lab',
       'Apparel Manufacturing Technology III Lab',
     ],
-    credits: 1,
+    credits: 1.5,
   },
   {
     sl: 3,
@@ -405,7 +394,7 @@ export const electiveCourses: ElectiveCourse[] = [
       'Wet Processing Technology IV Lab',
       'Apparel Manufacturing Technology IV Lab',
     ],
-    credits: 1,
+    credits: 1.5,
   },
   {
     sl: 5,
@@ -420,13 +409,13 @@ export const electiveCourses: ElectiveCourse[] = [
   },
 ];
 
-export const projectCourses: Course[] = [
+export const eveningProjectCourses: Course[] = [
   { sl: 1, code: 'TXE-439', title: 'Project', credits: 3 },
-  { sl: 2, code: 'TXE-442', title: 'Industrial Attachment', credits: 3 },
-  { sl: 3, code: 'TXE-444', title: 'Comprehensive Viva', credits: 3 },
+  { sl: 2, code: 'TXE-442', title: 'Industrial Attachment', credits: 2 },
+  { sl: 3, code: 'TXE-444', title: 'Comprehensive Viva', credits: 2 },
 ];
 
-export const coursePrefixes: CoursePrefix[] = [
+export const eveningCoursePrefixes: CoursePrefix[] = [
   { symbol: 'TXE', name: 'Textile Engineering' },
   { symbol: 'CHM', name: 'Chemistry' },
   { symbol: 'EEE', name: 'Electrical and Electronics Engineering' },
@@ -437,12 +426,12 @@ export const coursePrefixes: CoursePrefix[] = [
   { symbol: 'CSE', name: 'ICT & Computer Science' },
 ];
 
-export const curriculumSummary: CurriculumSummary[] = [
+export const eveningCurriculumSummary: CurriculumSummary[] = [
   {
     category:
       'Textile Engineering Core Courses & Lab\n(Including Project work, Industrial Attachment & Comprehensive Viva)',
-    credits: 78.0,
-    percentage: '47.27%',
+    credits: 79.0,
+    percentage: '47.88%',
   },
   {
     category:
@@ -452,71 +441,33 @@ export const curriculumSummary: CurriculumSummary[] = [
   },
   {
     category: 'Elective Courses\n(Textile Engineering Advanced Courses)',
-    credits: 10.0,
-    percentage: '6.06%',
+    credits: 11.0,
+    percentage: '6.66%',
   },
   {
     category: 'Project work, Industrial Attachment & Comprehensive Viva',
-    credits: 9.0,
-    percentage: '5.46%',
+    credits: 7.0,
+    percentage: '4.25%',
   },
 ];
 
-export const semesterData: Semester[] = [
+export const eveningSemesterData: Semester[] = [
   {
     year: 1,
     semester: 1,
-    title: '1st Year 1st Semester',
+    title: '1st Year 1st Semester (Waived/Exempted)',
     courses: [
       {
         slNo: 1,
         courseCode: 'TXE-101',
-        courseTitle: 'Fundamentals of Textile Engineering',
+        courseTitle: 'Fundamentals of Textile Engineering and Technology',
         credit: 3,
       },
       {
         slNo: 2,
-        courseCode: 'TXE-107',
-        courseTitle: 'Textile Raw Materials I',
-        credit: 3,
-      },
-      {
-        slNo: 3,
-        courseCode: 'PHY-109',
-        courseTitle: 'Physics I',
-        credit: 3,
-      },
-      {
-        slNo: 4,
-        courseCode: 'PHY-110',
-        courseTitle: 'Physics I Lab',
+        courseCode: 'TXE-104',
+        courseTitle: 'Engineering Materials and Practices Lab',
         credit: 1,
-      },
-      {
-        slNo: 5,
-        courseCode: 'MTH-113',
-        courseTitle: 'Mathematics I',
-        credit: 3,
-      },
-    ],
-    total: 13,
-  },
-  {
-    year: 1,
-    semester: 2,
-    title: '1st Year 2nd Semester',
-    courses: [
-      {
-        slNo: 1,
-        courseCode: 'TXE-102',
-        courseTitle: 'Engineering Drawing',
-        credit: 2,
-      },
-      {
-        slNo: 2,
-        courseCode: 'TXE-103',
-        courseTitle: 'Polymer Science and Engineering',
-        credit: 2,
       },
       {
         slNo: 3,
@@ -526,36 +477,64 @@ export const semesterData: Semester[] = [
       },
       {
         slNo: 4,
-        courseCode: 'TXE-104',
-        courseTitle: 'Engineering Materials and Practices Lab',
-        credit: 1,
+        courseCode: 'GED-102',
+        courseTitle: 'Bangladesh Studies',
+        credit: 2,
       },
       {
         slNo: 5,
+        courseCode: 'TXE-102',
+        courseTitle: 'Engineering Drawing Lab',
+        credit: 2,
+      },
+      {
+        slNo: 6,
+        courseCode: 'TXE-107',
+        courseTitle: 'Textile Raw Materials I',
+        credit: 3,
+      },
+    ],
+    total: 13,
+    isWaived: true,
+  },
+  {
+    year: 1,
+    semester: 2,
+    title: '1st Year 2nd Semester (Waived/Exempted)',
+    courses: [
+      {
+        slNo: 1,
+        courseCode: 'PHY-109',
+        courseTitle: 'Physics I',
+        credit: 3,
+      },
+      {
+        slNo: 2,
+        courseCode: 'PHY-110',
+        courseTitle: 'Physics I Lab',
+        credit: 1.5,
+      },
+      {
+        slNo: 3,
         courseCode: 'CHM-107',
         courseTitle: 'Chemistry I',
         credit: 3,
       },
       {
-        slNo: 6,
+        slNo: 4,
         courseCode: 'CHM-108',
         courseTitle: 'Chemistry I Lab',
-        credit: 1,
+        credit: 1.5,
       },
       {
-        slNo: 7,
-        courseCode: 'PHY-111',
-        courseTitle: 'Physics II',
+        slNo: 5,
+        courseCode: 'MTH-113',
+        courseTitle: 'Mathematics I',
         credit: 3,
       },
-      {
-        slNo: 8,
-        courseCode: 'PHY-112',
-        courseTitle: 'Physics II Lab',
-        credit: 1,
-      },
     ],
-    total: 15,
+    total: 12,
+    isWaived: true,
   },
   {
     year: 1,
@@ -564,42 +543,42 @@ export const semesterData: Semester[] = [
     courses: [
       {
         slNo: 1,
+        courseCode: 'BBA-101',
+        courseTitle: 'Business Communication',
+        credit: 2,
+      },
+      {
+        slNo: 2,
         courseCode: 'ENG-101',
         courseTitle: 'Foundation English',
         credit: 3,
       },
       {
-        slNo: 2,
-        courseCode: 'BBA-109',
-        courseTitle: 'Principles of Accounting and Cost Accounting',
+        slNo: 3,
+        courseCode: 'TXE-103',
+        courseTitle: 'Polymer Science and Engineering',
         credit: 2,
       },
       {
-        slNo: 3,
+        slNo: 4,
         courseCode: 'CHM-109',
         courseTitle: 'Chemistry II',
         credit: 3,
       },
       {
-        slNo: 4,
+        slNo: 5,
         courseCode: 'CHM-110',
         courseTitle: 'Chemistry II Lab',
-        credit: 1,
-      },
-      {
-        slNo: 5,
-        courseCode: 'BBA-111',
-        courseTitle: 'Principles of Marketing and Cost Marketing',
-        credit: 2,
+        credit: 1.5,
       },
       {
         slNo: 6,
-        courseCode: 'MTH-115',
-        courseTitle: 'Mathematics II',
+        courseCode: 'TXE-305',
+        courseTitle: 'Textile Raw Materials II',
         credit: 3,
       },
     ],
-    total: 14,
+    total: 14.5,
   },
   {
     year: 2,
@@ -608,54 +587,48 @@ export const semesterData: Semester[] = [
     courses: [
       {
         slNo: 1,
-        courseCode: 'CSE-101',
-        courseTitle: 'Computer Fundamentals',
-        credit: 2,
+        courseCode: 'PHY-111',
+        courseTitle: 'Physics II',
+        credit: 3,
       },
       {
         slNo: 2,
-        courseCode: 'CSE-102',
-        courseTitle: 'Computer Fundamentals Lab',
-        credit: 1,
+        courseCode: 'PHY-112',
+        courseTitle: 'Physics II Lab',
+        credit: 1.5,
       },
       {
         slNo: 3,
+        courseCode: 'MTH-115',
+        courseTitle: 'Mathematics II',
+        credit: 3,
+      },
+      {
+        slNo: 4,
         courseCode: 'TXE-201',
         courseTitle: 'Yarn Manufacturing Technology I',
         credit: 3,
       },
       {
-        slNo: 4,
+        slNo: 5,
         courseCode: 'TXE-202',
         courseTitle: 'Yarn Manufacturing Technology I Lab',
-        credit: 1,
+        credit: 1.5,
       },
       {
-        slNo: 5,
+        slNo: 6,
         courseCode: 'TXE-203',
         courseTitle: 'Fabric Manufacturing Technology I',
         credit: 3,
       },
       {
-        slNo: 6,
+        slNo: 7,
         courseCode: 'TXE-204',
         courseTitle: 'Fabric Manufacturing Technology I Lab',
-        credit: 1,
-      },
-      {
-        slNo: 7,
-        courseCode: 'TXE-205',
-        courseTitle: 'Automation and Control Engineering',
-        credit: 2,
-      },
-      {
-        slNo: 8,
-        courseCode: 'BBA-207',
-        courseTitle: 'Business Statistics',
-        credit: 2,
+        credit: 1.5,
       },
     ],
-    total: 15,
+    total: 16.5,
   },
   {
     year: 2,
@@ -664,54 +637,48 @@ export const semesterData: Semester[] = [
     courses: [
       {
         slNo: 1,
+        courseCode: 'BBA-207',
+        courseTitle: 'Business Statistics',
+        credit: 2,
+      },
+      {
+        slNo: 2,
         courseCode: 'TXE-207',
         courseTitle: 'Wet Processing Technology I',
         credit: 3,
       },
       {
-        slNo: 2,
+        slNo: 3,
         courseCode: 'TXE-208',
         courseTitle: 'Wet Processing Technology I Lab',
-        credit: 1,
+        credit: 1.5,
       },
       {
-        slNo: 3,
+        slNo: 4,
         courseCode: 'TXE-209',
         courseTitle: 'Apparel Manufacturing Technology I',
         credit: 3,
       },
       {
-        slNo: 4,
+        slNo: 5,
         courseCode: 'TXE-210',
         courseTitle: 'Apparel Manufacturing Technology I Lab',
-        credit: 1,
+        credit: 1.5,
       },
       {
-        slNo: 5,
+        slNo: 6,
         courseCode: 'TXE-211',
         courseTitle: 'Textile Physics I',
         credit: 2,
       },
       {
-        slNo: 6,
-        courseCode: 'EEE-211',
-        courseTitle: 'Basic Electrical and Electronic Engineering',
-        credit: 3,
-      },
-      {
         slNo: 7,
-        courseCode: 'EEE-212',
-        courseTitle: 'Basic Electrical and Electronic Engineering Lab',
-        credit: 1,
-      },
-      {
-        slNo: 8,
-        courseCode: 'MGT-215',
-        courseTitle: 'Industrial Management',
+        courseCode: 'TXE-313',
+        courseTitle: 'Production Planning and Control',
         credit: 2,
       },
     ],
-    total: 16,
+    total: 15,
   },
   {
     year: 2,
@@ -720,60 +687,48 @@ export const semesterData: Semester[] = [
     courses: [
       {
         slNo: 1,
-        courseCode: 'GED-102',
-        courseTitle: 'Bangladesh Studies',
+        courseCode: 'BBA-109',
+        courseTitle: 'Principles of Accounting and Cost Accounting',
         credit: 2,
       },
       {
         slNo: 2,
-        courseCode: 'CSE-205',
-        courseTitle: 'Application of Computer in Textiles',
+        courseCode: 'EEE-211',
+        courseTitle: 'Basic Electrical and Electronic Engineering',
         credit: 3,
       },
       {
         slNo: 3,
-        courseCode: 'CSE-206',
-        courseTitle: 'Application of Computer in Textiles Lab',
-        credit: 1,
+        courseCode: 'EEE-212',
+        courseTitle: 'Basic Electrical and Electronic Engineering Lab',
+        credit: 1.5,
       },
       {
         slNo: 4,
-        courseCode: 'TXE-217',
-        courseTitle: 'Fabric Structure and Design Analysis',
+        courseCode: 'TXE-301',
+        courseTitle: 'Yarn Manufacturing Technology II',
         credit: 3,
       },
       {
         slNo: 5,
-        courseCode: 'TXE-216',
-        courseTitle: 'Fabric Structure and Design Analysis Lab',
-        credit: 1,
+        courseCode: 'TXE-302',
+        courseTitle: 'Yarn Manufacturing Technology II Lab',
+        credit: 1.5,
       },
       {
         slNo: 6,
-        courseCode: 'EME-219',
-        courseTitle: 'Elements of Mechanical Engineering',
+        courseCode: 'TXE-303',
+        courseTitle: 'Fabric Manufacturing Technology II',
         credit: 3,
       },
       {
         slNo: 7,
-        courseCode: 'EME-218',
-        courseTitle: 'Elements of Mechanical Engineering Lab',
-        credit: 1,
-      },
-      {
-        slNo: 8,
-        courseCode: 'TXE-219',
-        courseTitle: 'Textile Testing and Quality Control I',
-        credit: 3,
-      },
-      {
-        slNo: 9,
-        courseCode: 'TXE-220',
-        courseTitle: 'Textile Testing and Quality Control I Lab',
-        credit: 1,
+        courseCode: 'TXE-304',
+        courseTitle: 'Fabric Manufacturing Technology II Lab',
+        credit: 1.5,
       },
     ],
-    total: 18,
+    total: 15.5,
   },
   {
     year: 3,
@@ -782,42 +737,48 @@ export const semesterData: Semester[] = [
     courses: [
       {
         slNo: 1,
-        courseCode: 'TXE-301',
-        courseTitle: 'Yarn Manufacturing Technology II',
-        credit: 3,
+        courseCode: 'MGT-215',
+        courseTitle: 'Industrial Management',
+        credit: 2,
       },
       {
         slNo: 2,
-        courseCode: 'TXE-302',
-        courseTitle: 'Yarn Manufacturing Technology II Lab',
-        credit: 1,
+        courseCode: 'TXE-217',
+        courseTitle: 'Fabric Structure and Design Analysis',
+        credit: 3,
       },
       {
         slNo: 3,
-        courseCode: 'TXE-303',
-        courseTitle: 'Fabric Manufacturing Technology II',
-        credit: 3,
+        courseCode: 'TXE-216',
+        courseTitle: 'Fabric Structure and Design Analysis Lab',
+        credit: 1.5,
       },
       {
         slNo: 4,
-        courseCode: 'TXE-304',
-        courseTitle: 'Fabric Manufacturing Technology II Lab',
-        credit: 1,
-      },
-      {
-        slNo: 5,
-        courseCode: 'TXE-305',
-        courseTitle: 'Textile Raw Materials II',
+        courseCode: 'TXE-307',
+        courseTitle: 'Wet Processing Technology II',
         credit: 3,
       },
       {
+        slNo: 5,
+        courseCode: 'TXE-308',
+        courseTitle: 'Wet Processing Technology II Lab',
+        credit: 1.5,
+      },
+      {
         slNo: 6,
-        courseCode: 'BBA-313',
-        courseTitle: 'Industrial Economics',
-        credit: 2,
+        courseCode: 'TXE-315',
+        courseTitle: 'Apparel Manufacturing Technology II',
+        credit: 3,
+      },
+      {
+        slNo: 7,
+        courseCode: 'TXE-316',
+        courseTitle: 'Apparel Manufacturing Technology II Lab',
+        credit: 1.5,
       },
     ],
-    total: 13,
+    total: 15.5,
   },
   {
     year: 3,
@@ -826,20 +787,78 @@ export const semesterData: Semester[] = [
     courses: [
       {
         slNo: 1,
-        courseCode: 'TXE-307',
-        courseTitle: 'Wet Processing Technology II',
+        courseCode: 'TXE-205',
+        courseTitle: 'Automation and Control Engineering',
+        credit: 2,
+      },
+      {
+        slNo: 2,
+        courseCode: 'CSE-205',
+        courseTitle: 'Application of Computer in Textiles',
+        credit: 2,
+      },
+      {
+        slNo: 3,
+        courseCode: 'CSE-206',
+        courseTitle: 'Application of Computer in Textiles Lab',
+        credit: 1.5,
+      },
+      {
+        slNo: 4,
+        courseCode: 'EME-219',
+        courseTitle: 'Elements of Mechanical Engineering',
+        credit: 3,
+      },
+      {
+        slNo: 5,
+        courseCode: 'EME-218',
+        courseTitle: 'Elements of Mechanical Engineering Lab',
+        credit: 1.5,
+      },
+      {
+        slNo: 6,
+        courseCode: 'TXE-309',
+        courseTitle: 'Textile Physics II',
+        credit: 2,
+      },
+      {
+        slNo: 7,
+        courseCode: 'TXE-321',
+        courseTitle: 'Textile Testing and Quality Control II',
+        credit: 3,
+      },
+      {
+        slNo: 8,
+        courseCode: 'TXE-322',
+        courseTitle: 'Textile Testing and Quality Control II Lab',
+        credit: 1.5,
+      },
+    ],
+    total: 16.5,
+  },
+  {
+    year: 3,
+    semester: 3,
+    title: '3rd Year 3rd Semester',
+    courses: [
+      {
+        slNo: 1,
+        courseCode: 'TXE-401/403/405/407',
+        courseTitle:
+          'Yarn/Fabric/Wet Processing/Apparel Manufacturing Technology III (Any one)',
         credit: 3,
       },
       {
         slNo: 2,
-        courseCode: 'TXE-308',
-        courseTitle: 'Wet Processing Technology II Lab',
-        credit: 1,
+        courseCode: 'TXE-402/404/406/408',
+        courseTitle:
+          'Yarn/Fabric/Wet Processing/Apparel Manufacturing Technology III Lab (Any one)',
+        credit: 1.5,
       },
       {
         slNo: 3,
-        courseCode: 'TXE-309',
-        courseTitle: 'Textile Physics II',
+        courseCode: 'BBA-111',
+        courseTitle: 'Principles of Marketing and Cost Marketing',
         credit: 2,
       },
       {
@@ -856,108 +875,17 @@ export const semesterData: Semester[] = [
       },
       {
         slNo: 6,
-        courseCode: 'TXE-313',
-        courseTitle: 'Production Planning and Control',
+        courseCode: 'BBA-313',
+        courseTitle: 'Industrial Economics',
         credit: 2,
       },
     ],
-    total: 13,
-  },
-  {
-    year: 3,
-    semester: 3,
-    title: '3rd Year 3rd Semester',
-    courses: [
-      {
-        slNo: 1,
-        courseCode: 'TXE-315',
-        courseTitle: 'Apparel Manufacturing Technology II',
-        credit: 3,
-      },
-      {
-        slNo: 2,
-        courseCode: 'TXE-316',
-        courseTitle: 'Apparel Manufacturing Technology II Lab',
-        credit: 1,
-      },
-      {
-        slNo: 3,
-        courseCode: 'TXE-317',
-        courseTitle: 'Economic Issues of Textile and Apparel Business',
-        credit: 2,
-      },
-      {
-        slNo: 4,
-        courseCode: 'TXE-319',
-        courseTitle: 'Consumer Behavior',
-        credit: 2,
-      },
-      {
-        slNo: 5,
-        courseCode: 'TXE-321',
-        courseTitle: 'Textile Testing and Quality Control II',
-        credit: 3,
-      },
-      {
-        slNo: 6,
-        courseCode: 'TXE-322',
-        courseTitle: 'Textile Testing and Quality Control II Lab',
-        credit: 1,
-      },
-    ],
-    total: 12,
+    total: 13.5,
   },
   {
     year: 4,
     semester: 1,
     title: '4th Year 1st Semester',
-    courses: [
-      {
-        slNo: 1,
-        courseCode: 'BBA-101',
-        courseTitle: 'Business Communication',
-        credit: 2,
-      },
-      {
-        slNo: 2,
-        courseCode: 'TXE-401/403/405/407',
-        courseTitle:
-          'Yarn/Fabric/Wet Processing/Apparel Manufacturing Technology III (Any one)',
-        credit: 3,
-      },
-      {
-        slNo: 3,
-        courseCode: 'TXE-402/404/406/408',
-        courseTitle:
-          'Yarn/Fabric/Wet Processing/Apparel Manufacturing Technology III Lab (Any one)',
-        credit: 1,
-      },
-      {
-        slNo: 4,
-        courseCode: 'TXE-409',
-        courseTitle: 'Industrial Compliance and ISO Certification',
-        credit: 2,
-      },
-      {
-        slNo: 5,
-        courseCode: 'TXE-411',
-        courseTitle: 'Maintenance of Textile Machineries',
-        credit: 3,
-      },
-      {
-        slNo: 6,
-        courseCode: 'TXE-413',
-        courseTitle:
-          'Forecasting and Trend Analysis of Textile and Apparel Business',
-        credit: 2,
-      },
-    ],
-    total: 13,
-  },
-  {
-    year: 4,
-    semester: 2,
-    title: '4th Year 2nd Semester',
     courses: [
       {
         slNo: 1,
@@ -971,41 +899,80 @@ export const semesterData: Semester[] = [
         courseCode: 'TXE-410/412/414/416',
         courseTitle:
           'Yarn/Fabric/Wet Processing/Apparel Manufacturing Technology IV Lab (Any one)',
-        credit: 1,
+        credit: 1.5,
       },
       {
         slNo: 3,
-        courseCode: 'TXE-423',
-        courseTitle: 'Textile Testing and Quality Control III',
-        credit: 3,
-      },
-      {
-        slNo: 4,
-        courseCode: 'TXE-424',
-        courseTitle: 'Textile Testing and Quality Control III Lab',
-        credit: 1,
-      },
-      {
-        slNo: 5,
         courseCode: 'TXE-425/427/429/431',
         courseTitle:
           'Special Yarn/Fabric/Wet Processing/Apparel Manufacturing Technology (Any one)',
         credit: 2,
       },
       {
-        slNo: 6,
-        courseCode: 'TXE-433',
-        courseTitle: 'Technical Textiles',
+        slNo: 4,
+        courseCode: 'TXE-319',
+        courseTitle: 'Consumer Behavior',
         credit: 2,
       },
       {
+        slNo: 5,
+        courseCode: 'TXE-411',
+        courseTitle: 'Maintenance of Textile Machineries',
+        credit: 3,
+      },
+      {
+        slNo: 6,
+        courseCode: 'TXE-423',
+        courseTitle: 'Textile Testing and Quality Control III',
+        credit: 3,
+      },
+      {
         slNo: 7,
+        courseCode: 'TXE-424',
+        courseTitle: 'Textile Testing and Quality Control III Lab',
+        credit: 1.5,
+      },
+    ],
+    total: 16,
+  },
+  {
+    year: 4,
+    semester: 2,
+    title: '4th Year 2nd Semester',
+    courses: [
+      {
+        slNo: 1,
+        courseCode: 'TXE-409',
+        courseTitle: 'Industrial Compliance and ISO Certification',
+        credit: 2,
+      },
+      {
+        slNo: 2,
+        courseCode: 'TXE-433',
+        courseTitle: 'Technical Textile',
+        credit: 2,
+      },
+      {
+        slNo: 3,
         courseCode: 'EPC-401',
         courseTitle: 'Environment and Pollution Control',
         credit: 2,
       },
+      {
+        slNo: 4,
+        courseCode: 'TXE-413',
+        courseTitle:
+          'Forecasting and Trend Analysis of Textile and Apparel Business',
+        credit: 2,
+      },
+      {
+        slNo: 5,
+        courseCode: 'TXE-317',
+        courseTitle: 'Economic Issues of Textile and Apparel Business',
+        credit: 2,
+      },
     ],
-    total: 14,
+    total: 10,
   },
   {
     year: 4,
@@ -1022,15 +989,15 @@ export const semesterData: Semester[] = [
         slNo: 2,
         courseCode: 'TXE-442',
         courseTitle: 'Industrial Attachment',
-        credit: 3,
+        credit: 2,
       },
       {
         slNo: 3,
         courseCode: 'TXE-444',
         courseTitle: 'Comprehensive Viva',
-        credit: 3,
+        credit: 2,
       },
     ],
-    total: 9,
+    total: 7,
   },
 ];

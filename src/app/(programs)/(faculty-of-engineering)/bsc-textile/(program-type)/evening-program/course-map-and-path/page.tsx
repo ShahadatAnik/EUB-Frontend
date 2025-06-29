@@ -14,9 +14,7 @@ const Page = () => {
     <ContentWrapper title='Course Map and Path'>
       <CourseMapSection
         semesterData={getCurriculumData('evening').semesterData}
-        backgroundStudents={
-          getCurriculumData('evening').programDetails.backgroundStudents
-        }
+        backgroundStudents={'For Diploma in Engg. Background Students'}
       />
     </ContentWrapper>
   );
