@@ -434,7 +434,7 @@ export type IFeature = {
 
 export interface IAlumni {
   name: string;
-  designation: string;
+  designation?: string;
   description: string;
   image: string;
 }

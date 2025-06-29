@@ -12,8 +12,9 @@ import { getCurriculumData } from '../../_config/get-curriculum-data';
 const Page = () => {
   const data = getCurriculumData('regular');
   return (
-    <ContentWrapper title='Course Map and Path'>
+    <ContentWrapper title='Course Map and Path (Regular)'>
       <CourseMapSection
+        title='Course Offered in Different Terms for B. Sc. Engg. (Industrial and Production Engineering) Degree'
         semesterData={data.semesterData}
         backgroundStudents={data.programDetails.backgroundStudents}
       />

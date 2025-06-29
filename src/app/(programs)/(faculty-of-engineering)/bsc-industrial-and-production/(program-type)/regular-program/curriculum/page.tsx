@@ -16,11 +16,8 @@ const Page = () => {
       <CurriculumSection
         coreCoursesData={data.coreCoursesData}
         generalEducationCourses={data.generalEducationCourses}
-        basicScienceCourses={data.basicScienceCourses}
-        interDisciplinaryCourses={data.interDisciplinaryCourses}
         electiveCourses={data.electiveCourses}
         coursePrefixes={data.coursePrefixes}
-        curriculumSummary={data.curriculumSummary}
       />
     </ContentWrapper>
   );

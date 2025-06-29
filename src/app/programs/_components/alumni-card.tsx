@@ -37,7 +37,9 @@ const AlumniCard: React.FC<
         )}
       >
         <h4 className='text-2xl font-semibold'>{name}</h4>
-        <h6 className='mt-1 text-muted-foreground'>{designation}</h6>
+        {designation && (
+          <h6 className='mt-1 text-muted-foreground'>{designation}</h6>
+        )}
         <p className='mt-2 text-justify italic'>{description}</p>
       </div>
     </div>
