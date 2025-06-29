@@ -7,7 +7,7 @@ import ClassRoutine from '@/app/(programs)/_components/class-routine';
 // export const metadata = generateMetaData({});
 
 const Page = () => {
-  return <ClassRoutine department='BSC-CIVIL' type='evening' />;
+  return <ClassRoutine department='BSC-EEE' type='evening' />;
 };
 
 export default Page;
