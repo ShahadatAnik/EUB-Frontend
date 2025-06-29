@@ -2,10 +2,12 @@
 
 import React from 'react';
 
-const NoDataFound = () => {
+const NoDataFound: React.FC<{ message?: string }> = ({
+  message = 'No Data Found.',
+}) => {
   return (
     <div className='rounded-lg bg-primary/5 p-6 text-center'>
-      <p className='font-medium text-primary'>No Data Found.</p>
+      <p className='font-medium text-primary'>{message}</p>
     </div>
   );
 };

@@ -49,12 +49,7 @@ const Slider: React.FC<ISliderProps> = ({ sliders }) => {
           </div>
 
           <div className='absolute inset-0 z-[1] bg-primary/30'></div>
-          <Image
-            fill
-            src={slide.img}
-            alt={slide.alt}
-            className='object-cover'
-          />
+          <Image fill src={slide.img} alt={slide.alt} className='object-fill' />
         </SwiperSlide>
       ))}
     </Swiper>

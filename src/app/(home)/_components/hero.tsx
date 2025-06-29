@@ -20,7 +20,7 @@ const Hero: React.FC<{
   }));
 
   return (
-    <div className='relative h-[100svh] w-full'>
+    <div className='relative flex aspect-video w-full flex-col overflow-hidden lg:h-[calc(100svh-132px)]'>
       <Slider sliders={sliders} />
       <Offers data={offers} />
     </div>

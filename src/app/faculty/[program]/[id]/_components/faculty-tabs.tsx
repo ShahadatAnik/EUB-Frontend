@@ -1,44 +1,65 @@
-export interface IFacultyTab {
-  value: string;
-  label: string;
-  content: React.ReactNode | string;
-}
+'use client';
 
-export const facultyTabs: IFacultyTab[] = [
-  {
-    label: 'About',
-    value: 'about',
-    content:
-      'Arif obtained his PhD degree in Finance from the University of Western Sydney, Australia. His doctoral research work explored the information content of idiosyncratic volatility of asset returns. He joined the School of Business and Economics (SBE) at European University (EUB) in August 2015 as an Associate Professor of Finance. Prior to joining EUB, he has served fulltime faculty positions at the Universiti Brunei Darussalam and University of Rajshahi. During his doctoral study, he has also served as an adjunct faculty member at the University of Western Sydney in Australia. Over the years, he has taught a number of graduate and post-graduate level courses in the areas of finance and accounting. His research interests include asset pricing anomalies, investor and analyst behavior, empirical corporate finance, accounting information and asset prices and implication of corporate ESG issues. He has published in refereed international journals including the Review of Quantitative Finance and Accounting, Quarterly Review of Economics and Finance, North American Journal of Economics and Finance, Singapore Economic Review, Applied Financial Economics, Review of Accounting and Finance and Physica A: Statistical Mechanics and its Applications. He has also been an ad-hoc reviewer for peer reviewed journals such as the Quarterly Review of Economics and Finance, Economic Modeling, Studies in Economics and Finance, Journal of Behavioral and Experimental Finance, Singapore Economic Review   and Journal of Asia Business Studies.',
-  },
-  {
-    label: 'Publications',
-    value: 'publication',
-    content: 'Publications',
-  },
-  {
-    label: 'Research Interests',
-    value: 'interests',
-    content: 'Research Interests',
-  },
-  {
-    label: 'Awards & Honors',
-    value: 'awards',
-    content: 'Awards & Honors',
-  },
-  {
-    label: 'Academic Experience',
-    value: 'experience',
-    content: 'Academic Experience',
-  },
-  {
-    label: 'Courses',
-    value: 'courses',
-    content: 'Courses',
-  },
-  {
-    label: 'Corporate Experience',
-    value: 'corporate',
-    content: 'Corporate Experience',
-  },
-];
+import { useState } from 'react';
+
+import dynamic from 'next/dynamic';
+
+import { IFacultyDetails } from '@/types';
+
+import NoDataFound from '@/components/no-data-found';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
+import { facultyTabs } from '../_config/faculty-tabs-data';
+
+const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
+  ssr: false,
+});
+
+export function FacultyTabs({ faculty }: { faculty: IFacultyDetails }) {
+  const [activeTab, setActiveTab] = useState(facultyTabs[0].value);
+  return (
+    <Tabs
+      value={activeTab}
+      onValueChange={setActiveTab}
+      defaultValue={activeTab}
+      className='w-full'
+    >
+      <TabsList className='mb-4 flex size-fit w-full flex-wrap justify-start gap-2 bg-secondary'>
+        {facultyTabs.map((tab) => (
+          <TabsTrigger
+            key={tab.value}
+            className='data-[state=active]:bg-white'
+            value={tab.value}
+          >
+            {tab.label}
+          </TabsTrigger>
+        ))}
+      </TabsList>
+
+      {facultyTabs.map((tab) => {
+        const facultyContent: Record<string, unknown> = faculty;
+        const content = facultyContent[tab.value];
+
+        return (
+          <TabsContent key={tab.value} value={tab.value}>
+            <Card className='border-gray-200 bg-white'>
+              <CardHeader>
+                <CardTitle className='text-primary'>{tab.label}</CardTitle>
+              </CardHeader>
+              <CardContent className='prose max-w-none pt-0'>
+                {typeof content === 'string' && content.trim() !== '' ? (
+                  <RichTextViewer content={content} />
+                ) : (
+                  <NoDataFound
+                    message={`${tab.label} information will be updated soon.`}
+                  />
+                )}
+              </CardContent>
+            </Card>
+          </TabsContent>
+        );
+      })}
+    </Tabs>
+  );
+}

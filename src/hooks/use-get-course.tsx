@@ -34,6 +34,51 @@ export const columns: SystemTableColumn<IDataTable>[] = [
   },
 ];
 
+// Course Offer
+export const useGetCourseOffer = (
+  department: string,
+  type: 'regular' | 'evening'
+) =>
+  useQuery({
+    queryKey: ['courseOffer', department, type],
+    queryFn: () =>
+      type === 'regular'
+        ? getRegularCourseOffer(department)
+        : getEveningCourseOffer(department),
+
+    enabled: !!type && !!department,
+  });
+
+// Class Routine
+export const useClassRoutine = (
+  department: string,
+  type: 'regular' | 'evening'
+) =>
+  useQuery({
+    queryKey: ['classRoutine', department, type],
+    queryFn: () =>
+      type === 'regular'
+        ? getRegularClassRoutine(department)
+        : getEveningClassRoutine(department),
+
+    enabled: !!type && !!department,
+  });
+
+// Exam Schedule
+export const useExamSchedule = (
+  department: string,
+  type: 'regular' | 'evening'
+) =>
+  useQuery({
+    queryKey: ['examSchedule', department, type],
+    queryFn: () =>
+      type === 'regular'
+        ? getRegularExamSchedule(department)
+        : getEveningExamSchedule(department),
+
+    enabled: !!type && !!department,
+  });
+
 export const useGetEveningClassRoutine = (department: string) =>
   useQuery({
     queryKey: ['eveningClassRoutine', department],

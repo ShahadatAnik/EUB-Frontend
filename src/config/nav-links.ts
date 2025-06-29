@@ -135,11 +135,11 @@ export const navLinks: INavLink[] = [
 
       {
         title: 'Faculty of Engineering',
-        href: '/programs/bsc-civil',
+        href: '/bsc-civil',
         children: [
           {
             title: 'BSc in Civil',
-            href: '/programs/bsc-civil',
+            href: '/bsc-civil',
           },
           {
             title: 'BSc in Computer Science',
