@@ -155,7 +155,7 @@ export const navLinks: INavLink[] = [
           },
           {
             title: 'BSc in Industrial & Production',
-            href: '/programs/bsc-industrial-and-production',
+            href: '/bsc-industrial-and-production',
           },
           {
             title: 'BSc in Mechanical',
