@@ -5,6 +5,7 @@ import { columns, useGetRegularCourseOffer } from '@/hooks/use-get-course';
 import SystemTable from '@/components/table/system-table';
 
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
+import CourseOffer from '@/app/(programs)/_components/course-offer';
 import { generateMetaData } from '@/lib/utils';
 export const metadata = generateMetaData({
   pageUrl: 'https://eub.edu.bd/bba/regular-program/course-offer',
@@ -23,12 +24,7 @@ export const metadata = generateMetaData({
   ],
 });
 const Page = () => {
-  const { data } = useGetRegularCourseOffer('BBA');
-  return (
-    <ContentWrapper title='Course Offer'>
-      <SystemTable caption='Course Offer' data={data!} columns={columns} />
-    </ContentWrapper>
-  );
+  return <CourseOffer department='BBA' type='regular' />;
 };
 
 export default Page;

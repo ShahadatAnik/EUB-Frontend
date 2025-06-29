@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 import Title from '@/components/title';
 
-import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
-import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
+import PerformanceCriteriaTable from '@/app/(programs)/_components/performance-criteria-table';
+import UgcGradingTable from '@/app/(programs)/_components/ugc-grading-table';
 
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 
-const ProgramDetails = () => {
+const Page = () => {
   return (
     <ContentWrapper title='Program Details' className='space-y-8'>
       <p>
@@ -107,4 +107,4 @@ const ProgramDetails = () => {
   );
 };
 
-export default ProgramDetails;
+export default Page;

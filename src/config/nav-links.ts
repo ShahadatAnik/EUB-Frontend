@@ -77,7 +77,7 @@ export const navLinks: INavLink[] = [
         children: [
           {
             title: 'BBA',
-            href: '/programs/bba',
+            href: '/bba',
           },
           {
             title: 'MBA',

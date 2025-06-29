@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 import { Separator } from '@/components/ui/separator';
 
-import ContentWrapper from './content-wrapper';
+import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 
-const StudentServiceDesk = () => {
+const Page = () => {
   return (
     <ContentWrapper title='Student Service Desk' className='space-y-6 pt-2'>
       <Link
@@ -56,4 +56,4 @@ const StudentServiceDesk = () => {
   );
 };
 
-export default StudentServiceDesk;
+export default Page;
