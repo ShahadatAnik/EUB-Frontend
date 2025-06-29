@@ -24,6 +24,8 @@ const getDepartmentName = (department: string) => {
       return 'Department of Business Administration';
     case 'Civil':
       return 'Department of Civil Engineering';
+    case 'Mechanical':
+      return 'Department of Mechanical Engineering';
     default:
       return department;
   }
