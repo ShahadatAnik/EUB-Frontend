@@ -4,3 +4,11 @@ export type IPageItem = {
   items?: IPageItem[];
   redirect?: boolean;
 };
+
+export interface ILab {
+  title: string;
+  description: string | React.ReactNode;
+  images?: { src: string; alt: string }[];
+  equipment?: string;
+  software?: string;
+}

@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 
 import { CourseTable } from '@/app/(programs)/_components/table/course-table';
-import { ElectiveCourseGroupTable } from '@/app/(programs)/_components/table/elective-course-group-table';
+import { ElectiveCourseTable } from '@/app/(programs)/_components/table/elective-course-table';
 import { PrefixTable } from '@/app/(programs)/_components/table/prefix-table';
 import { SummaryTable } from '@/app/(programs)/_components/table/summary-table';
 import {
   Course,
   CoursePrefix,
   CurriculumSummary,
-  ElectiveCourseGroup,
+  ElectiveCourse,
 } from '@/app/(programs)/_config/curriculum';
 
 interface CurriculumSectionProps {
@@ -18,18 +18,20 @@ interface CurriculumSectionProps {
   generalEducationCourses: Course[];
   basicScienceCourses: Course[];
   interDisciplinaryCourses: Course[];
-  electiveCourses: ElectiveCourseGroup[];
+  electiveCourses: ElectiveCourse[];
+  projectCourses: Course[];
   coursePrefixes: CoursePrefix[];
   curriculumSummary: CurriculumSummary[];
 }
 
-export const CurriculumSection = React.memo<CurriculumSectionProps>(
+export const CurriculumSection = memo<CurriculumSectionProps>(
   ({
     coreCoursesData,
     generalEducationCourses,
     basicScienceCourses,
     interDisciplinaryCourses,
     electiveCourses,
+    projectCourses,
     coursePrefixes,
     curriculumSummary,
   }) => {
@@ -63,16 +65,13 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
     );
 
     const electiveTotal = useMemo(
-      () =>
-        electiveCourses.reduce(
-          (sum, group) =>
-            sum +
-            (group.courses
-              ? group.courses.reduce((gSum, course) => gSum + course.credits, 0)
-              : 0),
-          0
-        ),
+      () => electiveCourses.reduce((sum, course) => sum + course.credits, 0),
       [electiveCourses]
+    );
+
+    const projectTotal = useMemo(
+      () => projectCourses.reduce((sum, course) => sum + course.credits, 0),
+      [projectCourses]
     );
 
     return (
@@ -83,8 +82,8 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>a. List of Core Courses</h4>
           <p className='mb-4 text-sm text-gray-600'>
-            List of Core Courses: 28 Theory Courses & 19 Lab Courses with
-            Project/ Thesis <br /> (Total: {coreTotal} Credits)
+            23 Theory Courses, 18 Laboratory (Lab) Courses (Total: {coreTotal}{' '}
+            Credits)
           </p>
           <CourseTable courses={coreCoursesData} totalCredits={coreTotal} />
         </div>
@@ -92,14 +91,17 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
         {/* Prerequisite Courses */}
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>
-            b. List of Non-Departmental Courses
+            b. List of Prerequisite Courses
           </h4>
 
           {/* General Education */}
           <div className='mb-6'>
-            <h5 className='mb-2 font-medium'>(I) General Education Courses:</h5>
+            <h5 className='mb-2 font-medium'>
+              (I) General Education Courses: English & Others
+            </h5>
             <p className='mb-4 text-sm text-gray-600'>
-              5 Theory Courses & 1 Lab (Total: {generalTotal} Credits)
+              Any Five including GED-101 (Compulsory) (Total: {generalTotal}{' '}
+              Credits)
             </p>
             <CourseTable
               courses={generalEducationCourses}
@@ -113,7 +115,7 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
               (II) Basic Science and Mathematics Courses:
             </h5>
             <p className='mb-4 text-sm text-gray-600'>
-              7 Theory Courses and 2 Laboratory Courses (Total:{' '}
+              9 Theory Courses and 3 Laboratory Courses (Total:{' '}
               {basicScienceTotal} Credits)
             </p>
             <CourseTable
@@ -125,10 +127,11 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
           {/* Inter-Disciplinary Engineering */}
           <div className='mb-6'>
             <h5 className='mb-2 font-medium'>
-              (III) Other Engineering Discipline Courses:
+              (III) Inter-Disciplinary Engineering Courses
             </h5>
             <p className='mb-4 text-sm text-gray-600'>
-              1 Theory Course (Total: {interDisciplinaryTotal} Credits)
+              2 Theory Courses, 1 Laboratory (Lab) Course (Total:{' '}
+              {interDisciplinaryTotal} Credits)
             </p>
             <CourseTable
               courses={interDisciplinaryCourses}
@@ -148,10 +151,16 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
           <p className='mb-4 text-sm text-gray-600'>
             5 Theory Courses (Total: {electiveTotal} Credits)
           </p>
-          <ElectiveCourseGroupTable
-            electiveCourses={electiveCourses}
+          <ElectiveCourseTable
+            courses={electiveCourses}
             totalCredits={electiveTotal}
           />
+        </div>
+
+        {/* Project/Thesis */}
+        <div className='mb-8'>
+          <h4 className='mb-4 font-semibold'>Project/Thesis</h4>
+          <CourseTable courses={projectCourses} totalCredits={projectTotal} />
         </div>
 
         {/* Course Prefix Table */}
@@ -169,8 +178,10 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>2.2.3. Course Structure</h4>
           <p className='mb-4 text-sm text-gray-600'>
-            The B.Sc in Civil Engineering Program consists of the following
-            categories of courses:
+            The first digit in the number indicates the year/level for which the
+            course is intended, the second digit in the number indicates for the
+            Department and the last digit, if odd, indicates a theory course and
+            if even, indicates a laboratory course.
           </p>
           <SummaryTable summaryData={curriculumSummary} />
         </div>
