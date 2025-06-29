@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
 
 export default async function Page() {
-  redirect('/llb/overview/about-us');
+  redirect('/llm/overview/about-us');
 }

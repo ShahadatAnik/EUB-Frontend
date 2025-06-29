@@ -73,7 +73,7 @@ export const navLinks: INavLink[] = [
     children: [
       {
         title: 'Faculty of Business Administration and Economics',
-        href: '/programs/bba',
+        href: '/bba',
         children: [
           {
             title: 'BBA',
@@ -112,23 +112,23 @@ export const navLinks: INavLink[] = [
       },
       {
         title: 'Faculty of Arts and Social Sciences',
-        href: '/programs/ba-english',
+        href: '/ba-english',
         children: [
           {
             title: 'BA in English',
-            href: '/programs/ba-english',
+            href: '/ba-english',
           },
           {
             title: 'MA in English',
-            href: '/programs/ma-english',
+            href: '/ma-english',
           },
           {
             title: 'LLB',
-            href: '/programs/llb',
+            href: '/llb',
           },
           {
             title: 'LLM',
-            href: '/programs/llm',
+            href: '/llm',
           },
         ],
       },

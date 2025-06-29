@@ -17,7 +17,7 @@ import {
 } from '../../_const/semester-wise-courses';
 import SemesterCourseTable from './semester-course-table';
 
-const CoursePath = () => {
+const Page = () => {
   return (
     <ContentWrapper title='Course Map and Path'>
       <UnderDevelopment />
@@ -84,4 +84,4 @@ const CoursePath = () => {
   );
 };
 
-export default CoursePath;
+export default Page;
