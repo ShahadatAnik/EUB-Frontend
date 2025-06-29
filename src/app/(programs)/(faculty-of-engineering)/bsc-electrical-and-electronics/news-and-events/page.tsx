@@ -7,7 +7,7 @@ import NewsAndEvents from '@/app/(programs)/_components/news-and-events';
 // export const metadata = generateMetaData({});
 
 const Page = () => {
-  return <NewsAndEvents department='bsc-civil' />;
+  return <NewsAndEvents department='bsc-eee' />;
 };
 
 export default Page;

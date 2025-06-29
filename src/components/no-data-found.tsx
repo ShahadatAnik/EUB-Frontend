@@ -2,12 +2,16 @@
 
 import React from 'react';
 
-const NoDataFound: React.FC<{ message?: string }> = ({
-  message = 'No Data Found.',
-}) => {
+import { cn } from '@/lib/utils';
+
+const NoDataFound: React.FC<{
+  message?: string;
+  className?: string;
+  textClassName?: string;
+}> = ({ message = 'No Data Found.', className, textClassName }) => {
   return (
-    <div className='rounded-lg bg-primary/5 p-6 text-center'>
-      <p className='font-medium text-primary'>{message}</p>
+    <div className={cn('rounded-lg bg-primary/5 p-6 text-center', className)}>
+      <p className={cn('font-medium text-primary', textClassName)}>{message}</p>
     </div>
   );
 };
