@@ -7,7 +7,7 @@ import Notices from '@/app/(programs)/_components/notices';
 // export const metadata = generateMetaData({});
 
 const Page = () => {
-  return <Notices department='BSC-CIVIL' />;
+  return <Notices department='BSC-IP' />;
 };
 
 export default Page;

@@ -136,7 +136,7 @@ export default function FullScreenImage({
           className='object-contain'
           priority
           sizes='100vw'
-          quality={90}
+          quality={100}
         />
 
         <Button
@@ -167,7 +167,7 @@ export default function FullScreenImage({
           className={cn(DEFAULT_CONFIG.className, className)}
           sizes={imageSizes}
           priority={priority}
-          quality={85}
+          quality={100}
           height={height}
           width={width}
         />

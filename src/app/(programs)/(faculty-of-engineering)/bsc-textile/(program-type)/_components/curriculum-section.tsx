@@ -3,175 +3,133 @@
 import React, { useMemo } from 'react';
 
 import { CourseTable } from '@/app/(programs)/_components/table/course-table';
-import { ElectiveCourseGroupTable } from '@/app/(programs)/_components/table/elective-course-group-table';
+import { ElectiveCourseTable } from '@/app/(programs)/_components/table/elective-course-table';
 import { PrefixTable } from '@/app/(programs)/_components/table/prefix-table';
 import { SummaryTable } from '@/app/(programs)/_components/table/summary-table';
 import {
   Course,
   CoursePrefix,
   CurriculumSummary,
-  ElectiveCourseGroup,
+  ElectiveCourse,
 } from '@/app/(programs)/_config/curriculum';
 
 interface CurriculumSectionProps {
-  coreCoursesData: Course[];
-  generalEducationCourses: Course[];
-  basicScienceCourses: Course[];
-  interDisciplinaryCourses: Course[];
-  electiveCourses: ElectiveCourseGroup[];
+  textileEngineeringCourses: Course[];
+  nonDepartmentalCourses: Course[];
+  electiveCourses: ElectiveCourse[];
+  projectCourses: Course[];
   coursePrefixes: CoursePrefix[];
   curriculumSummary: CurriculumSummary[];
 }
 
 export const CurriculumSection = React.memo<CurriculumSectionProps>(
   ({
-    coreCoursesData,
-    generalEducationCourses,
-    basicScienceCourses,
-    interDisciplinaryCourses,
+    textileEngineeringCourses,
+    nonDepartmentalCourses,
     electiveCourses,
+    projectCourses,
     coursePrefixes,
     curriculumSummary,
   }) => {
-    const coreTotal = useMemo(
-      () => coreCoursesData.reduce((sum, course) => sum + course.credits, 0),
-      [coreCoursesData]
-    );
-
-    const generalTotal = useMemo(
+    const textileTotal = useMemo(
       () =>
-        generalEducationCourses.reduce(
+        textileEngineeringCourses.reduce(
           (sum, course) => sum + course.credits,
           0
         ),
-      [generalEducationCourses]
+      [textileEngineeringCourses]
     );
 
-    const basicScienceTotal = useMemo(
+    const nonDeptTotal = useMemo(
       () =>
-        basicScienceCourses.reduce((sum, course) => sum + course.credits, 0),
-      [basicScienceCourses]
-    );
-
-    const interDisciplinaryTotal = useMemo(
-      () =>
-        interDisciplinaryCourses.reduce(
-          (sum, course) => sum + course.credits,
-          0
-        ),
-      [interDisciplinaryCourses]
+        nonDepartmentalCourses.reduce((sum, course) => sum + course.credits, 0),
+      [nonDepartmentalCourses]
     );
 
     const electiveTotal = useMemo(
-      () =>
-        electiveCourses.reduce(
-          (sum, group) =>
-            sum +
-            (group.courses
-              ? group.courses.reduce((gSum, course) => gSum + course.credits, 0)
-              : 0),
-          0
-        ),
+      () => electiveCourses.reduce((sum, course) => sum + course.credits, 0),
       [electiveCourses]
+    );
+
+    const projectTotal = useMemo(
+      () => projectCourses.reduce((sum, course) => sum + course.credits, 0),
+      [projectCourses]
     );
 
     return (
       <div>
         <h3 className='mb-4 text-lg font-semibold'>2.2.1. List of Courses</h3>
 
-        {/* Core Courses */}
+        {/* Textile Engineering Core Courses */}
         <div className='mb-8'>
-          <h4 className='mb-4 font-semibold'>a. List of Core Courses</h4>
+          <h4 className='mb-4 font-semibold'>
+            a. Textile Engineering Core Courses & Lab:
+          </h4>
           <p className='mb-4 text-sm text-gray-600'>
-            List of Core Courses: 28 Theory Courses & 19 Lab Courses with
-            Project/ Thesis <br /> (Total: {coreTotal} Credits)
+            23 Theory Courses & 12 Lab Courses (Total: {textileTotal} Credits)
           </p>
-          <CourseTable courses={coreCoursesData} totalCredits={coreTotal} />
+          <CourseTable
+            courses={textileEngineeringCourses}
+            totalCredits={textileTotal}
+          />
         </div>
 
-        {/* Prerequisite Courses */}
+        {/* Non-Departmental Courses */}
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>
             b. List of Non-Departmental Courses
           </h4>
-
-          {/* General Education */}
-          <div className='mb-6'>
-            <h5 className='mb-2 font-medium'>(I) General Education Courses:</h5>
-            <p className='mb-4 text-sm text-gray-600'>
-              5 Theory Courses & 1 Lab (Total: {generalTotal} Credits)
-            </p>
-            <CourseTable
-              courses={generalEducationCourses}
-              totalCredits={generalTotal}
-            />
-          </div>
-
-          {/* Basic Science and Mathematics */}
-          <div className='mb-6'>
-            <h5 className='mb-2 font-medium'>
-              (II) Basic Science and Mathematics Courses:
-            </h5>
-            <p className='mb-4 text-sm text-gray-600'>
-              7 Theory Courses and 2 Laboratory Courses (Total:{' '}
-              {basicScienceTotal} Credits)
-            </p>
-            <CourseTable
-              courses={basicScienceCourses}
-              totalCredits={basicScienceTotal}
-            />
-          </div>
-
-          {/* Inter-Disciplinary Engineering */}
-          <div className='mb-6'>
-            <h5 className='mb-2 font-medium'>
-              (III) Other Engineering Discipline Courses:
-            </h5>
-            <p className='mb-4 text-sm text-gray-600'>
-              1 Theory Course (Total: {interDisciplinaryTotal} Credits)
-            </p>
-            <CourseTable
-              courses={interDisciplinaryCourses}
-              totalCredits={interDisciplinaryTotal}
-            />
-          </div>
+          <p className='mb-2 text-sm text-gray-600'>
+            i. General Education Courses (Inter Disciplinary Engineering Courses
+            include ICT/ Computer, Technical Elective Courses, Basic Science),
+            Compulsory Courses, Social Science & Humanities:
+          </p>
+          <p className='mb-4 text-sm text-gray-600'>
+            24 Theory Courses & 7 Lab (Total: {nonDeptTotal} Credits)
+          </p>
+          <CourseTable
+            courses={nonDepartmentalCourses}
+            totalCredits={nonDeptTotal}
+          />
         </div>
 
         {/* Elective Courses */}
         <div className='mb-8'>
-          <h4 className='mb-4 font-semibold'>c. List of Elective Courses</h4>
-          <p className='mb-2 text-sm text-gray-600'>
-            Elective courses are divided into three groups: power, electronics
-            and communication. A student will have to take five elective courses
-            from these area of concentration.
-          </p>
+          <h4 className='mb-4 font-semibold'>
+            c. Elective Courses (Textile Engineering Advanced Courses):
+          </h4>
           <p className='mb-4 text-sm text-gray-600'>
-            5 Theory Courses (Total: {electiveTotal} Credits)
+            3 Theory Courses & 2 Labs (Total: {electiveTotal} Credits)
           </p>
-          <ElectiveCourseGroupTable
-            electiveCourses={electiveCourses}
+          <ElectiveCourseTable
+            courses={electiveCourses}
             totalCredits={electiveTotal}
           />
         </div>
 
+        {/* Project Work */}
+        <div className='mb-8'>
+          <h4 className='mb-4 font-semibold'>
+            d. Project work, Industrial Attachment & Comprehensive Viva:
+          </h4>
+          <p className='mb-4 text-sm text-gray-600'>
+            3 Courses (Total: {projectTotal} Credits)
+          </p>
+          <CourseTable courses={projectCourses} totalCredits={projectTotal} />
+        </div>
+
         {/* Course Prefix Table */}
         <div className='mb-8'>
-          <h4 className='mb-4 font-semibold'>2.2.2. Course Prefix Table</h4>
-          <p className='mb-4 text-sm text-gray-600'>
-            The letter prefix in any course number indicates the
-            discipline/subject offering the course. Letter symbols for course
-            categories are:
-          </p>
+          <h4 className='mb-4 font-semibold'>2.2.2. Course Prefix Table:</h4>
           <PrefixTable prefixes={coursePrefixes} />
         </div>
 
         {/* Course Structure */}
         <div className='mb-8'>
-          <h4 className='mb-4 font-semibold'>2.2.3. Course Structure</h4>
-          <p className='mb-4 text-sm text-gray-600'>
-            The B.Sc in Civil Engineering Program consists of the following
-            categories of courses:
-          </p>
+          <h4 className='mb-4 font-semibold'>
+            2.2.3. Course Structure: The B. Sc. in Textile Engineering Program
+            consists of the following categories of courses:
+          </h4>
           <SummaryTable summaryData={curriculumSummary} />
         </div>
       </div>
@@ -179,4 +137,4 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
   }
 );
 
-CurriculumSection.displayName = 'EEECurriculumSection';
+CurriculumSection.displayName = 'CurriculumSection';

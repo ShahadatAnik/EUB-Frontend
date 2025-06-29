@@ -7,7 +7,7 @@ import FacultyAndStaff from '@/app/(programs)/_components/faculty-and-staff';
 // export const metadata = generateMetaData({});
 
 const Page = () => {
-  return <FacultyAndStaff department='BSC-CIVIL' />;
+  return <FacultyAndStaff department='BSC-TEXTILE' />;
 };
 
 export default Page;

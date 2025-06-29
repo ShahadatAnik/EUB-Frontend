@@ -7,7 +7,7 @@ import AboutUs from '@/app/(programs)/_components/about-us';
 // export const metadata = generateMetaData({});
 
 const Page = () => {
-  return <AboutUs department='bsc-eee' />;
+  return <AboutUs department='bsc-ip' />;
 };
 
 export default Page;

@@ -11,17 +11,9 @@ import AlumniIndustry from '@/app/(programs)/_components/alumni-and-industry';
 const Page = () => {
   const data: IAlumni[] = [
     {
-      name: 'Syed Muntasir Hafiz',
-      image: '/images/programs/civil/alumni/Syed Muntasir Hafiz.jpg',
-      designation: 'Assistant Engineer, Roads and Highways Department',
-      description: `The European University of Bangladesh (EUB) stands out as a remarkable institution among those approved by the University Grants Commission, committed to developing a skilled and capable nation. Here, students are provided with extensive opportunities for both personal and academic development. The university is equipped with modern educational facilities, supported by a dedicated team of experienced faculty members and an efficient administrative staff, whose combined efforts have significantly enhanced the institution’s reputation. EUB offers well-furnished classrooms, a rich library, and an open, supportive learning environment that fosters academic excellence. Within a short span of time, EUB has earned recognition as a prestigious academic institution. The university hosts various departmental clubs, including Civil, EEE, Textile, and Mechanical clubs, along with cultural clubs and a strong alumni network that keeps former students connected. All these achievements have been made possible due to the visionary leadership and honest management of the governing body. Best wishes to the university for its continued progress and its contribution to building a self-sufficient Bangladesh.`,
-    },
-    {
-      name: 'Mollah Mohammad Tamal',
-      image: '/images/programs/civil/alumni/Mollah Mohammad Tamal.png',
-      designation:
-        'Master’s Student & Research Assistant, Technical University of Darmstadt, Germany',
-      description: `A Heartfelt Thank You to EUB. I am proud to be a graduate of the Department of Civil Engineering, European University of Bangladesh (EUB), 12th Batch. Currently, I am pursuing my Master’s in Tropical Hydrogeology and Environmental Engineering at Technical University of Darmstadt, Germany, and working as a Research Assistant at TU Darmstadt. EUB has been a strong foundation in my academic journey. The quality education, dedicated faculty, and supportive learning environment have helped me achieve my goals. It has served as a bridge, enabling me to pursue higher education at a globally recognized institution. I believe EUB students have the potential to excel worldwide. With determination and the right guidance, they can achieve remarkable success. I am deeply grateful to EUB, my respected teachers, and mentors for their continuous support. Thank you, EUB, for shaping my future!`,
+      name: 'Md. Ashiqur Rahman',
+      image: '/placeholder.svg',
+      description: `Engr. Md. Ashiqur Rahman is a dynamic industrial and production engineer excelling in manufacturing and entrepreneurship. Since 2018, the European University of Bangladesh graduate has been a Senior Officer (Production) at DBL Ceramics Ltd., managing operations, quality control, and process enhancements. He is also the founder of the brand INSAAF, aspiring to make it a top 10 brand in Bangladesh through quality, strategic marketing, and customer trust. Skilled in production management and leadership, Ashiqur is a married father who balances his corporate responsibilities with his entrepreneurial vision.`,
     },
   ];
   return <AlumniIndustry data={data} />;

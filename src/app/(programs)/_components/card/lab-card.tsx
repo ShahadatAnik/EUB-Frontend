@@ -34,7 +34,7 @@ const LabCard: React.FC<ILab> = ({
                 alt={image.alt}
                 width={800}
                 height={400}
-                className={cn('h-auto w-full rounded-md object-cover')}
+                className={cn('h-full w-full rounded-md object-cover')}
               />
             ))}
           </CardContent>

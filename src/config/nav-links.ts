@@ -151,11 +151,11 @@ export const navLinks: INavLink[] = [
           },
           {
             title: 'BSc in Textile',
-            href: '/programs/bsc-textile',
+            href: '/bsc-textile',
           },
           {
             title: 'BSc in Industrial & Production',
-            href: '/programs/bsc-industrial-and-production',
+            href: '/bsc-industrial-and-production',
           },
           {
             title: 'BSc in Mechanical',
@@ -165,19 +165,19 @@ export const navLinks: INavLink[] = [
       },
       {
         title: 'Faculty of Sciences',
-        href: '/programs/physics',
+        href: '/physics',
         children: [
           {
             title: 'Physics',
-            href: '/programs/physics',
+            href: '/physics',
           },
           {
             title: 'Chemistry',
-            href: '/programs/chemistry',
+            href: '/chemistry',
           },
           {
             title: 'Mathematics',
-            href: '/programs/mathematics',
+            href: '/mathematics',
           },
         ],
       },
