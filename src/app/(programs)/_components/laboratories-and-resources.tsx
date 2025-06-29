@@ -41,9 +41,9 @@ const LaboratoriesAndResources: React.FC<{
         data.length > 0 &&
         data.map((lab, index) => (
           <>
-            <LabCard key={index} {...lab} />
+            <LabCard key={'lab-card-' + index} {...lab} />
             {index !== data.length - 1 && (
-              <Separator key={index} className='my-4 lg:my-8' />
+              <Separator key={'separator-' + index} className='my-4 lg:my-8' />
             )}
           </>
         ))}
