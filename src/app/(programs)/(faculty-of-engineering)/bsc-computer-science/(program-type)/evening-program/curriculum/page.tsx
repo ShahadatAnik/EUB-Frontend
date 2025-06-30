@@ -21,6 +21,9 @@ const Page = () => {
         electiveCourses={data.electiveCourses}
         coursePrefixes={data.coursePrefixes}
         curriculumSummary={data.curriculumSummary}
+        foundationCourses={data.foundationCourses}
+        projectCourses={data.projectCourses}
+        industrialCourses={data.industrialCourses}
       />
     </ContentWrapper>
   );
