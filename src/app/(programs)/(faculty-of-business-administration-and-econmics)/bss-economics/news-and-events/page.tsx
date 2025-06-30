@@ -1,6 +1,7 @@
-import NewsAndEvents from '@/app/(programs)/_components/news-and-events';
 // import { generateMetaData } from '@/lib/utils';
 import React from 'react';
+
+import NewsAndEvents from '@/app/(programs)/_components/news-and-events';
 
 // export const metadata = generateMetaData({
 //   pageUrl: 'https://eub.edu.bd/bba/news-and-events',

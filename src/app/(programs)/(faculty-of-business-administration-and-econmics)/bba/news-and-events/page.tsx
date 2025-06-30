@@ -1,10 +1,13 @@
-import NewsAndEvents from '@/app/(programs)/_components/news-and-events';
-import { generateMetaData } from '@/lib/utils';
 import React from 'react';
+
+import { generateMetaData } from '@/lib/utils';
+
+import NewsAndEvents from '@/app/(programs)/_components/news-and-events';
 
 export const metadata = generateMetaData({
   pageUrl: 'https://eub.edu.bd/bba/news-and-events',
-  title: 'Bachelor of Business Administration(BBA) News & Events | European University of Bangladesh',
+  title:
+    'Bachelor of Business Administration(BBA) News & Events | European University of Bangladesh',
   description:
     'Stay updated on news and events from the EUB Bachelor of Business Administration(BBA) department, including workshops, seminars, student achievements, and industrial visits.',
   keywords: [

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
+
 import {
   accountingMajor,
   coreCourses,

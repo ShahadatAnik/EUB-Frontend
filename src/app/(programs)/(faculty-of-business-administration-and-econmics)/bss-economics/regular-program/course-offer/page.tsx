@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CourseOffer from '@/app/(programs)/_components/course-offer';
+
 // import { generateMetaData } from '@/lib/utils';
 // export const metadata = generateMetaData({
 //   pageUrl: 'https://eub.edu.bd/bba/regular-program/course-offer',

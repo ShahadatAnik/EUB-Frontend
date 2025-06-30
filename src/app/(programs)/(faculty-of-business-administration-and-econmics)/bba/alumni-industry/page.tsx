@@ -2,9 +2,9 @@ import React from 'react';
 
 import { IAlumni } from '@/types';
 
+import AlumniIndustry from '@/app/(programs)/_components/alumni-and-industry';
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 
-import AlumniIndustry from '@/app/(programs)/_components/alumni-and-industry';
 // import { generateMetaData } from '@/lib/utils';
 
 // export const metadata = generateMetaData({

@@ -1,7 +1,11 @@
 import React from 'react';
+
 import Image from 'next/image';
+
 import UnderDevelopment from '@/components/under-development';
+
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
+
 import {
   coreCSE,
   electiveCSE1,

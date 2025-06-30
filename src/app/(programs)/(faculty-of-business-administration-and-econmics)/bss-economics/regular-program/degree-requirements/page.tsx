@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Title from '@/components/title';
 
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';

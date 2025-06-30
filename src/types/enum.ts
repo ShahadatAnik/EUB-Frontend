@@ -116,3 +116,37 @@ export enum EnumReligion {
   Christian = 'christian',
   Other = 'other',
 }
+
+// Program
+
+export enum Program {
+  // FACULTY OF ARTS AND SOCIAL SCIENCES
+  'BA-ENGLISH' = 'BA-ENGLISH',
+  'LLB' = 'LLB',
+  'LLM' = 'LLM',
+  'MA-ENGLISH' = 'MA-ENGLISH',
+  'MA-ENGLISH-TWO-YEAR' = 'MA-ENGLISH-TWO-YEAR',
+
+  // FACULTY OF BUSINESS ADMINISTRATION AND ECONOMICS
+  'BBA' = 'BBA',
+  'BSS-ECONOMICS' = 'BSS-ECONOMICS',
+  'EMBA' = 'EMBA',
+  'MBA' = 'MBA',
+  'MBA-ONE-YEAR' = 'MBA-ONE-YEAR',
+  'MGDS-ONE-YEAR' = 'MGDS-ONE-YEAR',
+  'MSS-ECONOMICS' = 'MSS-ECONOMICS',
+  'THM' = 'THM',
+
+  // FACULTY OF ENGINEERING
+  'BSC-CIVIL' = 'BSC-CIVIL',
+  'BSC-CSE' = 'BSC-CSE',
+  'BSC-EEE' = 'BSC-EEE',
+  'BSC-IP' = 'BSC-IP',
+  'BSC-MECHANICAL' = 'BSC-MECHANICAL',
+  'BSC-TEXTILE' = 'BSC-TEXTILE',
+
+  // FACULTY OF SCIENCES
+  'CHEMISTRY' = 'CHEMISTRY',
+  'MATHEMATICS' = 'MATHEMATICS',
+  'PHYSICS' = 'PHYSICS',
+}

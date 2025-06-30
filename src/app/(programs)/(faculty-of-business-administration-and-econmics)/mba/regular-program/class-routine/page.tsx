@@ -3,6 +3,7 @@ import React from 'react';
 // import { generateMetaData } from '@/lib/utils';
 
 import ClassRoutine from '@/app/(programs)/_components/class-routine';
+
 // export const metadata = generateMetaData({
 //     pageUrl: 'https://eub.edu.bd/bba/regular-program/class-routine',
 //     title: 'Bachelor of Business Administration(BBA) Class Routine | European University of Bangladesh',
@@ -19,8 +20,8 @@ import ClassRoutine from '@/app/(programs)/_components/class-routine';
 //       'BSc in BBA routine',
 //     ],
 //   });
-  const Page = () => {
-    return <ClassRoutine department='MBA' type='regular' />;
-  };
+const Page = () => {
+  return <ClassRoutine department='MBA' type='regular' />;
+};
 
 export default Page;

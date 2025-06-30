@@ -123,6 +123,10 @@ export const navLinks: INavLink[] = [
             href: '/ma-english',
           },
           {
+            title: 'MA in English (2 Years)',
+            href: '/ma-english-two-years',
+          },
+          {
             title: 'LLB',
             href: '/llb',
           },

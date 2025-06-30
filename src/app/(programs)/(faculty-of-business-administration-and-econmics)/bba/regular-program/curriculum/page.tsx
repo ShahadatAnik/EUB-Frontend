@@ -1,5 +1,7 @@
-import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 import { generateMetaData } from '@/lib/utils';
+
+import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
+
 import CourseTable from './course-table';
 import {
   accountingMajor,
@@ -10,6 +12,7 @@ import {
   internship,
   marketingMajor,
 } from './list-of-courses';
+
 export const metadata = generateMetaData({
   pageUrl: 'https://eub.edu.bd/bsc-civil/regular-program/curriculum',
   title:
