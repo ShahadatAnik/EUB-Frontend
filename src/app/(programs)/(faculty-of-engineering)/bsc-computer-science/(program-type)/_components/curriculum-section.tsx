@@ -4,8 +4,8 @@ import React, { useMemo } from 'react';
 
 import { CourseTable } from '@/app/(programs)/_components/table/course-table';
 import { ElectiveCourseGroupTable } from '@/app/(programs)/_components/table/elective-course-group-table';
-import { PrefixTable } from '@/app/(programs)/_components/table/prefix-table';
-import { SummaryTable } from '@/app/(programs)/_components/table/summary-table';
+// import { PrefixTable } from '@/app/(programs)/_components/table/prefix-table';
+// import { SummaryTable } from '@/app/(programs)/_components/table/summary-table';
 import {
   Course,
   CoursePrefix,
@@ -17,21 +17,27 @@ interface CurriculumSectionProps {
   coreCoursesData: Course[];
   generalEducationCourses: Course[];
   basicScienceCourses: Course[];
+  foundationCourses: Course[];
   interDisciplinaryCourses: Course[];
   electiveCourses: ElectiveCourseGroup[];
   coursePrefixes: CoursePrefix[];
   curriculumSummary: CurriculumSummary[];
+  projectCourses: Course[];
+  industrialCourses: Course[];
 }
 
 export const CurriculumSection = React.memo<CurriculumSectionProps>(
   ({
     coreCoursesData,
     generalEducationCourses,
-    basicScienceCourses,
+    // basicScienceCourses,
     interDisciplinaryCourses,
     electiveCourses,
-    coursePrefixes,
-    curriculumSummary,
+    // coursePrefixes,
+    // curriculumSummary,
+    foundationCourses,
+    projectCourses,
+    industrialCourses,
   }) => {
     const coreTotal = useMemo(
       () => coreCoursesData.reduce((sum, course) => sum + course.credits, 0),
@@ -47,10 +53,25 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
       [generalEducationCourses]
     );
 
-    const basicScienceTotal = useMemo(
-      () =>
-        basicScienceCourses.reduce((sum, course) => sum + course.credits, 0),
-      [basicScienceCourses]
+    // const basicScienceTotal = useMemo(
+    //   () =>
+    //     basicScienceCourses.reduce((sum, course) => sum + course.credits, 0),
+    //   [basicScienceCourses]
+    // );
+
+    const foundationTotal = useMemo(
+      () => foundationCourses.reduce((sum, course) => sum + course.credits, 0),
+      [foundationCourses]
+    );
+
+    const projectTotal = useMemo(
+      () => projectCourses.reduce((sum, course) => sum + course.credits, 0),
+      [projectCourses]
+    );
+
+    const industrialTotal = useMemo(
+      () => industrialCourses.reduce((sum, course) => sum + course.credits, 0),
+      [industrialCourses]
     );
 
     const interDisciplinaryTotal = useMemo(
@@ -108,7 +129,7 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
           </div>
 
           {/* Basic Science and Mathematics */}
-          <div className='mb-6'>
+          {/* <div className='mb-6'>
             <h5 className='mb-2 font-medium'>
               (II) Basic Science and Mathematics Courses:
             </h5>
@@ -119,6 +140,19 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
             <CourseTable
               courses={basicScienceCourses}
               totalCredits={basicScienceTotal}
+            />
+          </div> */}
+
+          {/* Foundation Courses */}
+          <div className='mb-6'>
+            <h5 className='mb-2 font-medium'>(II) Foundation Courses:</h5>
+            <p className='mb-4 text-sm text-gray-600'>
+              7 Theory Courses and 2 Laboratory Courses (Total:{' '}
+              {foundationTotal} Credits)
+            </p>
+            <CourseTable
+              courses={foundationCourses}
+              totalCredits={foundationTotal}
             />
           </div>
 
@@ -154,8 +188,31 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
           />
         </div>
 
-        {/* Course Prefix Table */}
+        {/* Project and Thesis Courses */}
         <div className='mb-8'>
+          <h4 className='mb-4 font-semibold'>d. Project and Thesis Courses</h4>
+
+          <p className='mb-4 text-sm text-gray-600'>
+            (Total: {projectTotal} Credits)
+          </p>
+          <CourseTable courses={projectCourses} totalCredits={projectTotal} />
+        </div>
+
+        {/* Project and Thesis Courses */}
+        <div className='mb-8'>
+          <h4 className='mb-4 font-semibold'>e. Industrial Courses</h4>
+
+          <p className='mb-4 text-sm text-gray-600'>
+            (Total: {industrialTotal} Credits)
+          </p>
+          <CourseTable
+            courses={industrialCourses}
+            totalCredits={industrialTotal}
+          />
+        </div>
+
+        {/* Course Prefix Table */}
+        {/* <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>2.2.2. Course Prefix Table</h4>
           <p className='mb-4 text-sm text-gray-600'>
             The letter prefix in any course number indicates the
@@ -163,17 +220,17 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
             categories are:
           </p>
           <PrefixTable prefixes={coursePrefixes} />
-        </div>
+        </div> */}
 
         {/* Course Structure */}
-        <div className='mb-8'>
+        {/* <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>2.2.3. Course Structure</h4>
           <p className='mb-4 text-sm text-gray-600'>
             The B.Sc in Civil Engineering Program consists of the following
             categories of courses:
           </p>
           <SummaryTable summaryData={curriculumSummary} />
-        </div>
+        </div> */}
       </div>
     );
   }

@@ -3,14 +3,14 @@
 import React, { useMemo } from 'react';
 
 import { CourseTable } from '@/app/(programs)/_components/table/course-table';
-import { ElectiveCourseGroupTable } from '@/app/(programs)/_components/table/elective-course-group-table';
+// import { ElectiveCourseGroupTable } from '@/app/(programs)/_components/table/elective-course-group-table';
 import { PrefixTable } from '@/app/(programs)/_components/table/prefix-table';
 import { SummaryTable } from '@/app/(programs)/_components/table/summary-table';
 import {
   Course,
   CoursePrefix,
   CurriculumSummary,
-  ElectiveCourseGroup,
+  // ElectiveCourseGroup,
 } from '@/app/(programs)/_config/curriculum';
 
 interface CurriculumSectionProps {
@@ -18,7 +18,8 @@ interface CurriculumSectionProps {
   generalEducationCourses: Course[];
   basicScienceCourses: Course[];
   interDisciplinaryCourses: Course[];
-  electiveCourses: ElectiveCourseGroup[];
+  electiveCourses: Course[];
+  electiveCoursesIPE: Course[];
   coursePrefixes: CoursePrefix[];
   curriculumSummary: CurriculumSummary[];
 }
@@ -26,10 +27,8 @@ interface CurriculumSectionProps {
 export const CurriculumSection = React.memo<CurriculumSectionProps>(
   ({
     coreCoursesData,
-    generalEducationCourses,
-    basicScienceCourses,
-    interDisciplinaryCourses,
     electiveCourses,
+    electiveCoursesIPE,
     coursePrefixes,
     curriculumSummary,
   }) => {
@@ -38,41 +37,14 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
       [coreCoursesData]
     );
 
-    const generalTotal = useMemo(
-      () =>
-        generalEducationCourses.reduce(
-          (sum, course) => sum + course.credits,
-          0
-        ),
-      [generalEducationCourses]
-    );
-
-    const basicScienceTotal = useMemo(
-      () =>
-        basicScienceCourses.reduce((sum, course) => sum + course.credits, 0),
-      [basicScienceCourses]
-    );
-
-    const interDisciplinaryTotal = useMemo(
-      () =>
-        interDisciplinaryCourses.reduce(
-          (sum, course) => sum + course.credits,
-          0
-        ),
-      [interDisciplinaryCourses]
-    );
-
     const electiveTotal = useMemo(
-      () =>
-        electiveCourses.reduce(
-          (sum, group) =>
-            sum +
-            (group.courses
-              ? group.courses.reduce((gSum, course) => gSum + course.credits, 0)
-              : 0),
-          0
-        ),
+      () => electiveCourses.reduce((sum, course) => sum + course.credits, 0),
       [electiveCourses]
+    );
+
+    const electiveIPETotal = useMemo(
+      () => electiveCoursesIPE.reduce((sum, course) => sum + course.credits, 0),
+      [electiveCoursesIPE]
     );
 
     return (
@@ -83,8 +55,10 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>a. List of Core Courses</h4>
           <p className='mb-4 text-sm text-gray-600'>
-            List of Core Courses: 28 Theory Courses & 19 Lab Courses with
-            Project/ Thesis <br /> (Total: {coreTotal} Credits)
+            In ME discipline, a number of courses are identified as core
+            courses, which form the nucleus of the respective bachelor’s degree
+            program. A student has to complete the entire designated core
+            courses of his/her discipline.
           </p>
           <CourseTable courses={coreCoursesData} totalCredits={coreTotal} />
         </div>
@@ -92,48 +66,16 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
         {/* Prerequisite Courses */}
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>
-            b. List of Non-Departmental Courses
+            b. List of Prerequisite Courses
           </h4>
 
           {/* General Education */}
           <div className='mb-6'>
-            <h5 className='mb-2 font-medium'>(I) General Education Courses:</h5>
             <p className='mb-4 text-sm text-gray-600'>
-              5 Theory Courses & 1 Lab (Total: {generalTotal} Credits)
+              Some of the core courses are identified as prerequisite courses
+              for a specific subject. A prerequisite course is one, which is
+              required to be completed before some other course(s) can be taken.
             </p>
-            <CourseTable
-              courses={generalEducationCourses}
-              totalCredits={generalTotal}
-            />
-          </div>
-
-          {/* Basic Science and Mathematics */}
-          <div className='mb-6'>
-            <h5 className='mb-2 font-medium'>
-              (II) Basic Science and Mathematics Courses:
-            </h5>
-            <p className='mb-4 text-sm text-gray-600'>
-              7 Theory Courses and 2 Laboratory Courses (Total:{' '}
-              {basicScienceTotal} Credits)
-            </p>
-            <CourseTable
-              courses={basicScienceCourses}
-              totalCredits={basicScienceTotal}
-            />
-          </div>
-
-          {/* Inter-Disciplinary Engineering */}
-          <div className='mb-6'>
-            <h5 className='mb-2 font-medium'>
-              (III) Other Engineering Discipline Courses:
-            </h5>
-            <p className='mb-4 text-sm text-gray-600'>
-              1 Theory Course (Total: {interDisciplinaryTotal} Credits)
-            </p>
-            <CourseTable
-              courses={interDisciplinaryCourses}
-              totalCredits={interDisciplinaryTotal}
-            />
           </div>
         </div>
 
@@ -141,16 +83,20 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>c. List of Elective Courses</h4>
           <p className='mb-2 text-sm text-gray-600'>
-            Elective courses are divided into three groups: power, electronics
-            and communication. A student will have to take five elective courses
-            from these area of concentration.
+            Apart from the core courses, the students can choose courses from a
+            set of elective courses. Elective courses are divided into computer
+            science, software engineering, communication technology and computer
+            engineering.
           </p>
-          <p className='mb-4 text-sm text-gray-600'>
-            5 Theory Courses (Total: {electiveTotal} Credits)
-          </p>
-          <ElectiveCourseGroupTable
-            electiveCourses={electiveCourses}
-            totalCredits={electiveTotal}
+          <CourseTable courses={electiveCourses} totalCredits={electiveTotal} />
+
+          <h4 className='my-4 font-semibold'>
+            Elective Courses offered by IPE Department (Optional for ME
+            Students):
+          </h4>
+          <CourseTable
+            courses={electiveCoursesIPE}
+            totalCredits={electiveIPETotal}
           />
         </div>
 
@@ -169,8 +115,10 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>2.2.3. Course Structure</h4>
           <p className='mb-4 text-sm text-gray-600'>
-            The B.Sc in Civil Engineering Program consists of the following
-            categories of courses:
+            The first digit in the number indicates the year/level for which the
+            course is intended, the second digit in the number indicates for the
+            Department and the last digit, if odd, indicates a theory course and
+            if even, indicates a laboratory course.
           </p>
           <SummaryTable summaryData={curriculumSummary} />
         </div>

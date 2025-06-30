@@ -143,7 +143,7 @@ export const navLinks: INavLink[] = [
           },
           {
             title: 'BSc in Computer Science',
-            href: '/programs/bsc-computer-science',
+            href: '/bsc-computer-science',
           },
           {
             title: 'BSc in Electrical and Electronics',
@@ -159,7 +159,7 @@ export const navLinks: INavLink[] = [
           },
           {
             title: 'BSc in Mechanical',
-            href: '/programs/bsc-mechanical',
+            href: '/bsc-mechanical',
           },
         ],
       },
