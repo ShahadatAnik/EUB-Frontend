@@ -3,8 +3,8 @@ import React from 'react';
 import Title from '@/components/title';
 
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
-import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
-import UgcGradingTable from '@/app/programs/_components/ugc-grading-table';
+import PerformanceCriteriaTable from '@/app/(programs)/_components/performance-criteria-table';
+import UgcGradingTable from '@/app/(programs)/_components/ugc-grading-table';
 
 const Page = () => {
   return (

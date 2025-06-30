@@ -3,7 +3,7 @@ import React from 'react';
 import Title from '@/components/title';
 
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
-import PerformanceCriteriaTable from '@/app/programs/_components/performance-criteria-table';
+import PerformanceCriteriaTable from '@/app/(programs)/_components/performance-criteria-table';
 
 const Page = () => {
   return (

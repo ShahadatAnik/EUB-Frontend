@@ -1,5 +1,4 @@
-import { generateMetaData } from '@/lib/utils';
-
+// import { generateMetaData } from '@/lib/utils';
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 
 import CourseTable from './course-table';
@@ -13,22 +12,8 @@ import {
   marketingMajor,
 } from './list-of-courses';
 
-export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/regular-program/curriculum',
-  title:
-    'B.Sc. in Bachelor of Business Administration Curriculum | European University of Bangladesh',
-  description:
-    'View the complete curriculum for the B.Sc. in Bachelor of Business Administration at EUB. See a semester-by-semester breakdown of all courses, from foundation to core subjects.',
-  keywords: [
-    'Bachelor of Business Administration curriculum',
-    'BSc in BBA course list',
-    'EUB BBA syllabus',
-    'Semester-wise engineering courses',
-    'Business course breakdown',
-    'BBA course codes',
-    'Structural Analysis course',
-  ],
-});
+// export const metadata = generateMetaData({});
+
 const Page = () => {
   return (
     <ContentWrapper title='Curriculum' className='space-y-6 py-4'>
