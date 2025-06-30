@@ -12,7 +12,7 @@ import ContentWrapper from './content-wrapper';
 import NewsCardSkeleton from './skeleton/news-card-skeleton';
 
 const NewsAndEvents = ({ department }: { department: string }) => {
-  const { data, isLoading } = useGetDepartmentNews(department);
+  const { data, isLoading } = useGetDepartmentNews(department.toLowerCase());
 
   return (
     <ContentWrapper title='News & Events'>
