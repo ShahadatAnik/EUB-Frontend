@@ -19,6 +19,8 @@ const Page = () => {
         basicScienceCourses={data.basicScienceCourses}
         interDisciplinaryCourses={data.interDisciplinaryCourses}
         electiveCourses={data.electiveCourses}
+        electiveCoursesIPE={data.electiveCoursesIPE}
+        // projectCourses={data.projectCourses}
         coursePrefixes={data.coursePrefixes}
         curriculumSummary={data.curriculumSummary}
       />

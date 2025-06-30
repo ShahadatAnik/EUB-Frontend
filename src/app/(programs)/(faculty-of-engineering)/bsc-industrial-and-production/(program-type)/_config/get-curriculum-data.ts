@@ -1,52 +1,47 @@
 import {
-  civilBasicScienceCourses,
-  civilCoreCoursesData,
-  civilCoursePrefixes,
-  civilCurriculumSummary,
-  civilElectiveCourses,
-  civilEveningProgramDetails,
-  civilEveningSemesterData,
-  civilGeneralEducationCourses,
-  civilOtherEngineeringCourses,
-  civilPerformanceEvaluation,
-  civilProjectCourses,
-  civilRegularProgramDetails,
-  civilRegularSemesterData,
-  civilSemesterInfo,
+  ipeCoreCoursesData,
+  ipeCoursePrefixes,
+  ipeCurriculumSummary,
+  ipeElectiveCourses,
+  ipeEveningProgramDetails,
+  ipeGeneralEducationCourses,
+  ipePerformanceEvaluation,
+  ipeProjectCourses,
+  ipeRegularProgramDetails,
+  ipeSemesterData,
+  ipeSemesterInfo,
 } from './curriculum-data';
 
 // Assuming the data is in this file
 
 export const getCurriculumData = (type: 'regular' | 'evening') => {
+  // NOTE: The provided PDF does not contain a separate semester-by-semester course plan for the evening/diploma program.
+  // It returns the regular semester data for both and relies on the 'programDetails' object to differentiate.
   if (type === 'evening') {
     return {
-      semesterInfo: civilSemesterInfo,
-      programDetails: civilEveningProgramDetails,
-      performanceEvaluation: civilPerformanceEvaluation,
-      coreCoursesData: civilCoreCoursesData,
-      generalEducationCourses: civilGeneralEducationCourses,
-      basicScienceCourses: civilBasicScienceCourses,
-      interDisciplinaryCourses: civilOtherEngineeringCourses,
-      electiveCourses: civilElectiveCourses,
-      projectCourses: civilProjectCourses,
-      coursePrefixes: civilCoursePrefixes,
-      curriculumSummary: civilCurriculumSummary,
-      semesterData: civilEveningSemesterData,
+      semesterInfo: ipeSemesterInfo,
+      programDetails: ipeEveningProgramDetails,
+      performanceEvaluation: ipePerformanceEvaluation,
+      coreCoursesData: ipeCoreCoursesData,
+      generalEducationCourses: ipeGeneralEducationCourses,
+      projectCourses: ipeProjectCourses,
+      electiveCourses: ipeElectiveCourses,
+      coursePrefixes: ipeCoursePrefixes,
+      curriculumSummary: ipeCurriculumSummary,
+      semesterData: ipeSemesterData,
     };
   }
 
   return {
-    semesterInfo: civilSemesterInfo,
-    programDetails: civilRegularProgramDetails,
-    performanceEvaluation: civilPerformanceEvaluation,
-    coreCoursesData: civilCoreCoursesData,
-    generalEducationCourses: civilGeneralEducationCourses,
-    basicScienceCourses: civilBasicScienceCourses,
-    interDisciplinaryCourses: civilOtherEngineeringCourses,
-    electiveCourses: civilElectiveCourses,
-    projectCourses: civilProjectCourses,
-    coursePrefixes: civilCoursePrefixes,
-    curriculumSummary: civilCurriculumSummary,
-    semesterData: civilRegularSemesterData,
+    semesterInfo: ipeSemesterInfo,
+    programDetails: ipeRegularProgramDetails,
+    performanceEvaluation: ipePerformanceEvaluation,
+    coreCoursesData: ipeCoreCoursesData,
+    generalEducationCourses: ipeGeneralEducationCourses,
+    projectCourses: ipeProjectCourses,
+    electiveCourses: ipeElectiveCourses,
+    coursePrefixes: ipeCoursePrefixes,
+    curriculumSummary: ipeCurriculumSummary,
+    semesterData: ipeSemesterData,
   };
 };

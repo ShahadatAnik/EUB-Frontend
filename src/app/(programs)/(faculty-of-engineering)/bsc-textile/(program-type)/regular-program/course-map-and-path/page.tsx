@@ -13,10 +13,7 @@ const Page = () => {
   const data = getCurriculumData('regular');
   return (
     <ContentWrapper title='Course Map and Path'>
-      <CourseMapSection
-        semesterData={data.semesterData}
-        backgroundStudents={data.programDetails.backgroundStudents}
-      />
+      <CourseMapSection semesterData={data.semesterData} />
     </ContentWrapper>
   );
 };

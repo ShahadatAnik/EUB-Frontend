@@ -7,62 +7,109 @@ import Title from '@/components/title';
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 
 import PerformanceCriteriaTable from './performance-criteria-table';
+import TuitionFeesTable from './tuition-fees-table';
 
 // export const metadata = generateMetaData({});
 
 const Page = () => {
   return (
-    <ContentWrapper title='Program Details' className='space-y-8'>
-      <p>
-        The Bachelor of Science in Civil Engineering at the European University
-        of Bangladesh (EUB) equips students with the knowledge and practical
-        skills necessary for designing, constructing, and maintaining
-        infrastructure projects that shape the modern world. From bridges and
-        roads to buildings and water supply systems, the Civil Engineering
-        program empowers future engineers to innovate and contribute
-        meaningfully to sustainable development. The program is supported by
-        dedicated faculty members and modern lab facilities, ensuring that
-        students receive both theoretical understanding and hands-on experience.
-      </p>
-
+    <ContentWrapper className='space-y-8' title='Program Details'>
       <div>
-        <h6 className='text-lg font-semibold'>
-          The program comprises 12 semesters, with each semester lasting four
-          months. These are distributed across the academic year as follows:
-        </h6>
+        <Title variant={'title'} title='Semesters' />
+
+        <p className='mt-1'>
+          There will be two semesters in an academic year, which are namely:
+        </p>
+
         <ul className='mt-2 list-disc space-y-2 pl-6'>
-          <li>Spring Semester (January - April)</li>
-          <li>Summer Semester (May - August)</li>
-          <li>Fall Semester (September - December)</li>
+          <li>Spring Semester; (Duration: January to June)</li>
+          <li>Summer Semester; (Duration: July to December) </li>
+        </ul>
+
+        <p className='mt-2'>
+          Each semester will be of 26 weeks duration with 22 weeks for class
+          teaching, two weeks break for examination preparation and two weeks
+          for examinations. In addition, midterm examination will be held after
+          12 weeks with 11 weeks class teaching and one week examination
+          preparation.
+        </p>
+      </div>
+      <div>
+        <Title variant={'title'} title='Duration of the Program' />
+
+        <p className='mt-1'>
+          The duration for B.Sc. in Mechanical Engineering program will be four
+          years divided into 8 semesters.
+        </p>
+      </div>
+      <div>
+        <Title variant={'title'} title='Credit Hour' />
+
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
+          <li>
+            <strong>Theory Course:</strong> 3 credit hours = 3 hours of lecture
+            per week. (Minimum 50 minutes per class).
+          </li>
+          <li>
+            <strong>Sessional Course:</strong> 1 credit hour = minimum 24 hours
+            of actual lab work per semester. (Minimum 2-hour lab class).
+          </li>
+        </ul>
+      </div>
+      <div>
+        <Title
+          variant={'title'}
+          title='Course load / Conditions applicable for enrolling students of
+          Mechanical Program'
+        />
+
+        <ul className='mt-2 list-disc space-y-2 pl-6'>
+          <li>
+            <strong>Regular students:</strong> Maximum 20.125 credits per
+            semester (Total 161.0 credits over 8 semesters).
+          </li>
+          <li>
+            <strong>Diploma holders:</strong> Maximum 20.285 credits per
+            semester (Total 142.0 credits over 7 semesters).
+          </li>
         </ul>
       </div>
 
       <div>
-        <Title variant={'title'} title='Duration' />
-        <p>The duration of the program is 4 years (12 semesters).</p>
-      </div>
-      <div>
-        <Title variant={'title'} title='Credit Hour' />
-        <p>The program consists of 165 credits.</p>
-      </div>
-      <div>
-        <Title variant={'title'} title='Course Load' />
-        <p>
-          Each semester includes 16 weeks of classes, covering theory and
-          practical courses, as well as project and thesis work in the later
-          stages of the program.
-        </p>
-      </div>
-      <div>
         <Title variant={'title'} title='Performance Evaluation Criterion' />
-        <p className='mb-4'>
-          The final grade for each course will be determined based on
-          students&apos; performance in class attendance, continuous assessment
-          (including class tests, assignments, presentations, etc.), midterm
-          examination, and final examination as outlined below.
+        <p className='mb-2'>
+          Final grade in each course will be given on the basis of the
+          performance on class attendance & participation, continuous
+          assessment, mid-term examination and final examination as indicated as
+          under
+        </p>
+        <PerformanceCriteriaTable />
+      </div>
+
+      <div>
+        <Title variant={'title'} title='Tuition Fee Structure' />
+
+        <p className='mt-1'>
+          Total cost of the program ranges from Taka 9,25,000 to Taka 10,25,000,
+          depending on the standing of the student at the time of admission. All
+          fees are subject to change. Please check with the BBA Program Office
+          for the most recent fee structure.
         </p>
 
-        <PerformanceCriteriaTable />
+        <div className='mt-4'>
+          <TuitionFeesTable />
+        </div>
+
+        <ul className='mt-4 list-disc space-y-2 pl-6'>
+          <li>
+            Please note that all students must pay a non-refundable, one time
+            only admission fee Admission Fee 25,000/-
+          </li>
+          <li>
+            Each student has to pay 10,000/-as Caution money (Refundable) during
+            the time of admission
+          </li>
+        </ul>
       </div>
     </ContentWrapper>
   );

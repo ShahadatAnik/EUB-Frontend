@@ -84,10 +84,10 @@ export const pages: IPageItem[] = [
     title: 'Laboratories & Resources',
     href: '/laboratories-and-resources',
   },
-  {
-    title: 'Alumni Industry',
-    href: '/alumni-industry',
-  },
+  // {
+  //   title: 'Alumni Industry',
+  //   href: '/alumni-industry',
+  // },
   {
     title: 'Faculty Members & Staff',
     href: '/faculty-members',

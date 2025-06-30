@@ -14,11 +14,10 @@ const Page = () => {
   return (
     <ContentWrapper title='Program Curriculum (Evening)'>
       <CurriculumSection
-        coreCoursesData={data.coreCoursesData}
-        generalEducationCourses={data.generalEducationCourses}
-        basicScienceCourses={data.basicScienceCourses}
-        interDisciplinaryCourses={data.interDisciplinaryCourses}
+        textileEngineeringCourses={data.textileEngineeringCourses}
+        nonDepartmentalCourses={data.nonDepartmentalCourses}
         electiveCourses={data.electiveCourses}
+        projectCourses={data.projectCourses}
         coursePrefixes={data.coursePrefixes}
         curriculumSummary={data.curriculumSummary}
       />

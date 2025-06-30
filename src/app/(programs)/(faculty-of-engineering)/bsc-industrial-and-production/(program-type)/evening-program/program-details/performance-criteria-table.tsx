@@ -5,13 +5,13 @@ import SystemTable, {
 } from '@/components/table/system-table';
 import { TableCell, TableFooter, TableRow } from '@/components/ui/table';
 
-const theoryCourses = [
+const performanceCriteriaData = [
   {
-    criteriaName: 'Class Participation (Attendance)',
-    marks: '20',
+    criteriaName: 'Class Attendance',
+    marks: '10',
   },
   {
-    criteriaName: 'Class Tests, Presentations & Assignments',
+    criteriaName: 'Continuous Assessment',
     marks: '20',
   },
   {
@@ -20,43 +20,7 @@ const theoryCourses = [
   },
   {
     criteriaName: 'Final Examination',
-    marks: '30',
-  },
-];
-const labs = [
-  {
-    criteriaName: 'Class Participation (Attendance)',
-    marks: '20',
-  },
-  {
-    criteriaName: 'Quiz',
-    marks: '20',
-  },
-  {
-    criteriaName: 'Viva Voce',
-    marks: '20',
-  },
-  {
-    criteriaName: 'Performance/Reports',
     marks: '40',
-  },
-];
-const projectAndThesis = [
-  {
-    criteriaName: 'Attendance',
-    marks: '10',
-  },
-  {
-    criteriaName: 'Presentation and Viva Voce',
-    marks: '20',
-  },
-  {
-    criteriaName: 'Co-Supervisor',
-    marks: '20',
-  },
-  {
-    criteriaName: 'Supervisor',
-    marks: '50',
   },
 ];
 
@@ -75,44 +39,18 @@ const columns: SystemTableColumn<{ criteriaName: string; marks: string }>[] = [
 
 const PerformanceCriteriaTable = () => {
   return (
-    <div className='space-y-8'>
-      <SystemTable
-        caption='Theory Courses'
-        data={theoryCourses}
-        columns={columns}
-      >
-        <TableFooter>
-          <TableRow>
-            <TableCell className='border-r'>Total</TableCell>
-            <TableCell>100</TableCell>
-          </TableRow>
-        </TableFooter>
-      </SystemTable>
-      <SystemTable
-        caption='Laboratory/Sessional/Field Work Courses'
-        data={labs}
-        columns={columns}
-      >
-        <TableFooter>
-          <TableRow>
-            <TableCell className='border-r'>Total</TableCell>
-            <TableCell>100</TableCell>
-          </TableRow>
-        </TableFooter>
-      </SystemTable>
-      <SystemTable
-        caption='Project and Thesis'
-        data={projectAndThesis}
-        columns={columns}
-      >
-        <TableFooter>
-          <TableRow>
-            <TableCell className='border-r'>Total</TableCell>
-            <TableCell>100</TableCell>
-          </TableRow>
-        </TableFooter>
-      </SystemTable>
-    </div>
+    <SystemTable
+      caption='Performance Evaluation Criteria'
+      data={performanceCriteriaData}
+      columns={columns}
+    >
+      <TableFooter>
+        <TableRow>
+          <TableCell className='border-r'>Total</TableCell>
+          <TableCell>100</TableCell>
+        </TableRow>
+      </TableFooter>
+    </SystemTable>
   );
 };
 

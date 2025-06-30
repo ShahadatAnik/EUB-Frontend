@@ -7,7 +7,7 @@ import CourseOffer from '@/app/(programs)/_components/course-offer';
 // export const metadata = generateMetaData({});
 
 const Page = () => {
-  return <CourseOffer department='BSC-CIVIL' type='evening' />;
+  return <CourseOffer department='BSC-MECHANICAL' type='evening' />;
 };
 
 export default Page;

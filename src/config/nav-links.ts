@@ -73,62 +73,62 @@ export const navLinks: INavLink[] = [
     children: [
       {
         title: 'Faculty of Business Administration and Economics',
-        href: '/programs/bba',
+        href: '/bba',
         children: [
           {
             title: 'BBA',
-            href: '/programs/bba',
+            href: '/bba',
           },
           {
             title: 'MBA',
-            href: '/programs/mba',
+            href: '/mba',
           },
           {
             title: 'Executive MBA',
-            href: '/programs/emba',
+            href: '/emba',
           },
           {
             title: 'MBA (1 Year)',
-            href: '/programs/mba-one-year',
+            href: '/mba-one-year',
           },
           {
             title: 'BTHM', //! need to update
-            href: '/programs/thm',
+            href: '/thm',
           },
 
           {
             title: 'BSS in Economics',
-            href: '/programs/bss-economics',
+            href: '/bss-economics',
           },
           {
             title: 'MSS in Economics',
-            href: '/programs/mss-economics',
+            href: '/mss-economics',
           },
           {
             title: 'MGDS (1 Year)',
-            href: '/programs/mgds-one-year',
+            href: '/mgds-one-year',
           },
         ],
       },
       {
         title: 'Faculty of Arts and Social Sciences',
-        href: '/programs/ba-english',
+        href: '/ba-english',
         children: [
           {
             title: 'BA in English',
-            href: '/programs/ba-english',
+            href: '/ba-english',
           },
           {
             title: 'MA in English',
-            href: '/programs/ma-english',
+            href: '/ma-english',
           },
           {
             title: 'LLB',
-            href: '/programs/llb',
+            href: '/llb',
           },
           {
             title: 'LLM',
-            href: '/programs/llm',
+            href: '/llm',
           },
         ],
       },
@@ -143,41 +143,41 @@ export const navLinks: INavLink[] = [
           },
           {
             title: 'BSc in Computer Science',
-            href: '/programs/bsc-computer-science',
+            href: '/bsc-computer-science',
           },
           {
             title: 'BSc in Electrical and Electronics',
-            href: '/programs/bsc-electrical-and-electronics',
+            href: '/bsc-electrical-and-electronics',
           },
           {
             title: 'BSc in Textile',
-            href: '/programs/bsc-textile',
+            href: '/bsc-textile',
           },
           {
             title: 'BSc in Industrial & Production',
-            href: '/programs/bsc-industrial-and-production',
+            href: '/bsc-industrial-and-production',
           },
           {
             title: 'BSc in Mechanical',
-            href: '/programs/bsc-mechanical',
+            href: '/bsc-mechanical',
           },
         ],
       },
       {
         title: 'Faculty of Sciences',
-        href: '/programs/physics',
+        href: '/physics',
         children: [
           {
             title: 'Physics',
-            href: '/programs/physics',
+            href: '/physics',
           },
           {
             title: 'Chemistry',
-            href: '/programs/chemistry',
+            href: '/chemistry',
           },
           {
             title: 'Mathematics',
-            href: '/programs/mathematics',
+            href: '/mathematics',
           },
         ],
       },
