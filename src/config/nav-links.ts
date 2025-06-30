@@ -123,6 +123,10 @@ export const navLinks: INavLink[] = [
             href: '/ma-english',
           },
           {
+            title: 'MA in English (2 Years)',
+            href: '/ma-english-two-years',
+          },
+          {
             title: 'LLB',
             href: '/llb',
           },
@@ -187,23 +191,23 @@ export const navLinks: INavLink[] = [
         children: [
           {
             title: 'Academic Information & Policies',
-            href: '/programs/miscellaneous/academic-information-policies',
+            href: '/miscellaneous/academic-information-policies',
           },
           {
             title: 'Grading Policy',
-            href: '/programs/miscellaneous/grading-policy',
+            href: '/miscellaneous/grading-policy',
           },
           {
             title: 'Examination Guidelines',
-            href: '/programs/miscellaneous/examination-guidelines',
+            href: '/miscellaneous/examination-guidelines',
           },
           {
             title: 'Student Records',
-            href: '/programs/miscellaneous/student-records',
+            href: '/miscellaneous/student-records',
           },
           {
             title: 'Information about Provisional Certificates',
-            href: '/programs/miscellaneous/information-about-provisional-certificates',
+            href: '/miscellaneous/information-about-provisional-certificates',
           },
         ],
       },

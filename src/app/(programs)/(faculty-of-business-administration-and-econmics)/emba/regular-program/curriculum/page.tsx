@@ -1,4 +1,5 @@
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
+
 import CourseTable from './course-table';
 import {
   accountingMajor,

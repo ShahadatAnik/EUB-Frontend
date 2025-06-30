@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Program } from '@/types/enum';
+
 import { generateMetaData } from '@/lib/utils';
 
 import MessageFromChairman from '@/app/(programs)/_components/message-from-chairman';
@@ -22,7 +24,7 @@ export const metadata = generateMetaData({
 });
 
 const Page = () => {
-  return <MessageFromChairman departmentName='BSC-CIVIL' />;
+  return <MessageFromChairman departmentName={Program['BSC-CIVIL']} />;
 };
 
 export default Page;

@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { Program } from '@/types/enum';
+
 import ExamSchedule from '@/app/(programs)/_components/exam-schedule';
 
 const Page = () => {
-  return <ExamSchedule department='LLB' type='regular' />;
+  return <ExamSchedule department={Program.LLB} type='regular' />;
 };
 
 export default Page;

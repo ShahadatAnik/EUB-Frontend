@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 import UnderDevelopment from '@/components/under-development';
 
+import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
+
 import {
   coreCSE,
   electiveCSE1,
@@ -14,7 +16,6 @@ import {
   interDisciplinaryCourses,
   projectAndThesis,
 } from '../../_const/list-of-courses';
-import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 import CourseCategoryTable from './course-category-table';
 import CourseStructureTable from './course-structure-table';
 import CourseTable from './course-table';

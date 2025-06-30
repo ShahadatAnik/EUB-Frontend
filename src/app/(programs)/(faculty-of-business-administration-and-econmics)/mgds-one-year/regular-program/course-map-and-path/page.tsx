@@ -2,6 +2,8 @@ import React from 'react';
 
 import UnderDevelopment from '@/components/under-development';
 
+import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
+
 import {
   firstYearFirstSemester,
   firstYearSecondSemester,
@@ -16,7 +18,6 @@ import {
   thirdYearSecondSemester,
   thirdYearThirdSemester,
 } from '../../_const/semester-wise-courses';
-import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 import SemesterCourseTable from './semester-course-table';
 
 const Page = () => {
