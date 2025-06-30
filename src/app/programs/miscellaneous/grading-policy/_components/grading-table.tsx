@@ -7,69 +7,53 @@ import SystemTable, {
 const GradingTable = () => {
   const scores = [
     {
-      numerical_score: '93 and above',
-      letter_grade: 'A (Excellent)',
+      numerical_score: '80% and above',
+      letter_grade: 'A+',
       grade_points: '4.0',
     },
     {
-      numerical_score: '90 - 92',
+      numerical_score: '75% to less than 80%',
+      letter_grade: 'A',
+      grade_points: '3.75',
+    },
+    {
+      numerical_score: '70% to less than 75%',
       letter_grade: 'A-',
-      grade_points: '3.7',
+      grade_points: '3.5',
     },
     {
-      numerical_score: '87 - 89',
+      numerical_score: '65% to less than 70%',
       letter_grade: 'B+',
-      grade_points: '3.3',
+      grade_points: '3.25',
     },
     {
-      numerical_score: '83 - 86',
-      letter_grade: 'B (Good)',
+      numerical_score: '60% to less than 65%',
+      letter_grade: 'B',
       grade_points: '3.0',
     },
     {
-      numerical_score: '80 - 82',
+      numerical_score: '55% to less than 60%',
       letter_grade: 'B-',
-      grade_points: '2.7',
+      grade_points: '2.75',
     },
     {
-      numerical_score: '77 - 79',
+      numerical_score: '50% to less than 55%',
       letter_grade: 'C+',
-      grade_points: '2.3',
+      grade_points: '2.5',
     },
     {
-      numerical_score: '73 - 76',
-      letter_grade: 'C (Average)',
+      numerical_score: '45% to less than 50%',
+      letter_grade: 'C',
+      grade_points: '2.25',
+    },
+    {
+      numerical_score: '40% to less than 45%',
+      letter_grade: 'D',
       grade_points: '2.0',
     },
     {
-      numerical_score: '70 - 72',
-      letter_grade: 'C-',
-      grade_points: '1.7',
-    },
-    {
-      numerical_score: '67 - 69',
-      letter_grade: 'D+',
-      grade_points: '1.3',
-    },
-    {
-      numerical_score: '60 - 66',
-      letter_grade: 'D (Poor)',
-      grade_points: '1.0',
-    },
-    {
-      numerical_score: 'Below 60',
-      letter_grade: 'F (Fail)',
-      grade_points: '0.0',
-    },
-
-    {
-      numerical_score: 'I',
-      letter_grade: 'Incomplete',
-      grade_points: '0.0',
-    },
-    {
-      numerical_score: 'W',
-      letter_grade: 'Withdrawal',
+      numerical_score: 'Less than 40%',
+      letter_grade: 'F',
       grade_points: '0.0',
     },
   ];
@@ -97,7 +81,6 @@ const GradingTable = () => {
     <div className='space-y-4'>
       <SystemTable className='max-w-[1000px]' data={scores} columns={columns} />
       <div>
-        <p>* Credits for courses with this grade do not apply towards grad</p>
         <p>
           ** Credits for courses with this grade do not apply towards graduation
           and they are not accepted in the calculation of the grade point
