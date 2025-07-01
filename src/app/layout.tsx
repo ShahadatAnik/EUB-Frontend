@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 
 import { siteConfig } from '@/config/site';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Toaster } from 'sonner';
 
 import Layout from '@/components/layout';
@@ -63,6 +64,7 @@ export default function RootLayout({
           <Layout>{children}</Layout>
           <Toaster />
         </Providers>
+        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID as string} />
       </body>
     </html>
   );
