@@ -64,7 +64,7 @@ const Page = () => {
       <div>
         <Title variant={'title'} title='Course Load' />
         <p>
-          Each semester includes 16 weeks of classes, covering theory and
+          Each semester includes 12 weeks of classes, covering theory and
           practical courses, as well as project and thesis work in the later
           stages of the program.
         </p>

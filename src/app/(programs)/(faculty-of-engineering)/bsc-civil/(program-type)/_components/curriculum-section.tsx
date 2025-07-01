@@ -140,11 +140,6 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
         {/* Elective Courses */}
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>c. List of Elective Courses</h4>
-          <p className='mb-2 text-sm text-gray-600'>
-            Elective courses are divided into three groups: power, electronics
-            and communication. A student will have to take five elective courses
-            from these area of concentration.
-          </p>
           <p className='mb-4 text-sm text-gray-600'>
             5 Theory Courses (Total: {electiveTotal} Credits)
           </p>

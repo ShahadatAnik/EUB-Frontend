@@ -30,6 +30,7 @@ const Page = () => {
     <ContentWrapper title='Degree Requirements'>
       <DegreeRequirementsSection
         programDetails={getCurriculumData('regular').programDetails}
+        registerOffice='registrar office cluster-II'
       />
     </ContentWrapper>
   );
