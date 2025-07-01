@@ -151,7 +151,6 @@ const faqData: IFAQ[] = [
                 <li>
                   A bachelor’s degree from a recognized university is required.
                 </li>
-                <li>Must have TOEFL (550) & GMAT (500) scores.</li>
                 <li>
                   For the <strong>EMBA Program</strong>, work experience in an
                   executive position is preferred.
@@ -320,7 +319,7 @@ const faqData: IFAQ[] = [
     answer: (
       <p>
         <strong>
-          Admission Office : 01968774931, 01968774933, 01968774927 (Director){' '}
+          Admission Office : 01968774931, 01968774933, 01896066056 (Director){' '}
           <br />
           <br />
           Email : admission@eub.edu.bd
@@ -357,7 +356,7 @@ const faqData: IFAQ[] = [
     answer: (
       <p>
         <strong>
-          Admission Office : 01968774931, 01968774933, 01968774927 (Director){' '}
+          Admission Office : 01968774931, 01968774933, 01896066056 (Director){' '}
           <br />
           <br />
           Email : admission@eub.edu.bd

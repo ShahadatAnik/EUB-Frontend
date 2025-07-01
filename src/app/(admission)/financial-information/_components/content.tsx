@@ -23,7 +23,7 @@ const Content: React.FC<{ data: IFinancialFaculty[] }> = ({ data }) => {
       <div className='text-center'>
         <h6 className='text-lg'>
           <span className='font-semibold'>Admission Office : </span>{' '}
-          01968774930-31, 01968774933, 01968774927 (Admission Director).
+          01968774930-31, 01968774933 (Admission Director).
         </h6>
         <h6 className='text-lg'>
           <span className='font-semibold'>Email : </span>

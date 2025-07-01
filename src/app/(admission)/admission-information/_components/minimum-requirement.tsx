@@ -116,7 +116,6 @@ const MinimumRequirement = () => {
               <li>
                 A bachelor’s degree from a recognized university is required.
               </li>
-              <li>Must have TOEFL (550) & GMAT (500) scores.</li>
               <li>
                 For the <strong>EMBA Program</strong>, work experience in an
                 executive position is preferred.
