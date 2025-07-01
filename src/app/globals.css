@@ -101,13 +101,29 @@ body {
 }
 
 .ql-bubble .ql-editor {
-  padding: 0px !important;
+  @apply !p-0;
 }
 .ql-bubble .ql-editor a {
   color: blue !important;
 }
 .ql-bubble .ql-editor p {
-  @apply font-sans text-base;
+  @apply !font-sans !text-base !leading-6 !text-foreground;
+}
+.ql-bubble .ql-editor em {
+  @apply !font-sans !text-base font-medium !leading-6 !text-foreground;
+}
+
+.ql-editor ul,
+.ql-editor ol {
+  @apply !my-2 space-y-1.5;
+}
+
+.ql-editor li,
+.ql-editor li span {
+  @apply !font-sans !text-base !text-foreground;
+}
+.ql-editor .ql-align-justify {
+  @apply !text-justify;
 }
 
 @layer base {

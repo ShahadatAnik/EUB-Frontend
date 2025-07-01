@@ -34,7 +34,14 @@ const LabCard: React.FC<ILab> = ({
                 alt={image.alt}
                 width={800}
                 height={400}
-                className={cn('h-full w-full rounded-md object-cover')}
+                className={cn(
+                  'h-full w-full rounded-md object-cover object-[top_center] group-hover:scale-[1.025] transition-transform duration-200 ease-in',
+                  image.className
+                )}
+                containerClassName={cn(
+                  ' group transition-all duration-200 ease-in rounded-md overflow-hidden',
+                  image.containerClassName
+                )}
               />
             ))}
           </CardContent>
