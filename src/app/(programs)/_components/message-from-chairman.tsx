@@ -17,6 +17,7 @@ const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
 });
 
 const getDepartmentName = (department: string) => {
+  console.log({ department });
   switch (department) {
     case 'MBA 1 Year':
     case 'EMBA':
@@ -28,6 +29,9 @@ const getDepartmentName = (department: string) => {
       return 'Department of Mechanical Engineering';
     case 'CSE':
       return 'Department of Computer Science and Engineering';
+    case 'EEE':
+    case 'Electrical and Electronic Engineering (EEE)':
+      return 'Dept. of Electrical and Electronic Engineering (EEE)';
     default:
       return department;
   }

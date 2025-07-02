@@ -150,8 +150,8 @@ export const navLinks: INavLink[] = [
             href: '/bsc-computer-science',
           },
           {
-            title: 'BSc in Electrical and Electronics',
-            href: '/bsc-electrical-and-electronics',
+            title: 'BSc in Electrical and Electronic',
+            href: '/bsc-electrical-and-electronic',
           },
           {
             title: 'BSc in Textile',

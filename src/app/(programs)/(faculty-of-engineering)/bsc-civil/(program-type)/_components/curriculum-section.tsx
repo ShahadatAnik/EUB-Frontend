@@ -77,7 +77,7 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
 
     return (
       <div>
-        <h3 className='mb-4 text-lg font-semibold'>2.2.1. List of Courses</h3>
+        <h3 className='mb-4 text-lg font-semibold'>List of Courses</h3>
 
         {/* Core Courses */}
         <div className='mb-8'>
@@ -151,7 +151,7 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
 
         {/* Course Prefix Table */}
         <div className='mb-8'>
-          <h4 className='mb-4 font-semibold'>2.2.2. Course Prefix Table</h4>
+          <h4 className='mb-4 font-semibold'>Course Prefix Table</h4>
           <p className='mb-4 text-sm text-gray-600'>
             The letter prefix in any course number indicates the
             discipline/subject offering the course. Letter symbols for course
@@ -162,7 +162,7 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
 
         {/* Course Structure */}
         <div className='mb-8'>
-          <h4 className='mb-4 font-semibold'>2.2.3. Course Structure</h4>
+          <h4 className='mb-4 font-semibold'>Course Structure</h4>
           <p className='mb-4 text-sm text-gray-600'>
             The B.Sc in Civil Engineering Program consists of the following
             categories of courses:
