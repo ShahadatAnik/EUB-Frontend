@@ -15,7 +15,7 @@ import {
 
 import { cn } from '@/lib/utils';
 
-import type { Semester } from '@/app/programs/_config/curriculum';
+import { Semester } from '../../_config/curriculum';
 
 interface CourseMapSectionProps {
   title?: string;

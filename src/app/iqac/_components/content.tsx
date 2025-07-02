@@ -2,7 +2,7 @@
 
 import { Suspense } from 'react';
 
-import ContentLayout from '@/app/programs/_components/content-layout';
+import ContentLayout from '@/app/(programs)/_components/content-layout';
 
 import accordions from '../_const/accordion-data';
 
