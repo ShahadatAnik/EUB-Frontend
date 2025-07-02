@@ -9,7 +9,7 @@ const Page = () => {
   return (
     <>
       <PageHeader
-        image='/images/cse-2.jpg'
+        className='object-contain'
         title='Master of Business Administration (MBA-Regular)'
       />
       <PageContainer>

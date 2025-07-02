@@ -27,7 +27,7 @@ export default async function Page(props: {
 
   return (
     <>
-      <PageHeader image='/images/accounting-and-finance.jpg' title='Notices' />
+      <PageHeader className='object-contain' title='Notices' />
 
       <PageContainer>
         <Content {...data} />
