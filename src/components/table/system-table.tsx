@@ -233,7 +233,7 @@ const RenderCell = ({
     case 'number':
       return <>{Number(value) === 0 ? '-' : Number(value).toFixed(2)}</>;
     case 'date':
-      return <>{format(new Date(value as string), 'dd/MM/yy')}</>;
+      return <>{format(new Date(value as string), 'dd MMMM, yyyy')}</>;
     case 'currency':
       return (
         <NumericFormat

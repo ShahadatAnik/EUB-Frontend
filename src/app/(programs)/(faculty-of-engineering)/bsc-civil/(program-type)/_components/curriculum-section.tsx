@@ -141,7 +141,8 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>c. List of Elective Courses</h4>
           <p className='mb-4 text-sm text-gray-600'>
-            5 Theory Courses (Total: {electiveTotal} Credits)
+            {/* 5 Theory Courses (Total: {electiveTotal} Credits) */}4 Theory
+            Courses & 3 Labs (Total: 15 Credits)
           </p>
           <ElectiveCourseGroupTable
             electiveCourses={electiveCourses}
