@@ -2,6 +2,7 @@
 
 import React, { useMemo } from 'react';
 
+import FullScreenImage from '@/components/fullscreen-image';
 import { Badge } from '@/components/ui/badge';
 import {
   Table,
@@ -20,10 +21,11 @@ interface CourseMapSectionProps {
   title?: string;
   semesterData: Semester[];
   backgroundStudents?: string;
+  referenceImage?: string;
 }
 
 export const CourseMapSection = React.memo<CourseMapSectionProps>(
-  ({ semesterData, backgroundStudents, title }) => {
+  ({ semesterData, backgroundStudents, title, referenceImage }) => {
     const grandTotal = useMemo(
       () => semesterData.reduce((sum, semester) => sum + semester.total, 0),
       [semesterData]
@@ -198,6 +200,16 @@ export const CourseMapSection = React.memo<CourseMapSectionProps>(
             GRAND Total: {grandTotal} Credits
           </Badge>
         </div>
+
+        {referenceImage && (
+          <FullScreenImage
+            width={1200}
+            height={1200}
+            src={referenceImage}
+            alt={'Course Map Reference Image'}
+            className='mt-8 rounded-md w-full aspect-auto'
+          />
+        )}
       </div>
     );
   }

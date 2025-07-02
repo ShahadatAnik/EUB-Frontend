@@ -13,7 +13,7 @@ const ProgramLayout: React.FC<{ children: React.ReactNode }> = ({
   return (
     <div>
       <PageHeader
-        image='/images/cse-2.jpg'
+        className='object-contain'
         title='Master of Business Administration (MBA) For BBA Graduates'
       />
       <PageContainer>

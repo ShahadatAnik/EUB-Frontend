@@ -5,23 +5,26 @@ import type { ProgramDetails } from '../../_config/curriculum';
 interface DegreeRequirementsSectionProps {
   programDetails: ProgramDetails;
   registerOffice?: string;
+  examControlOffice?: string;
 }
 
 export const DegreeRequirementsSection =
   React.memo<DegreeRequirementsSectionProps>(
-    ({ programDetails, registerOffice = 'registrar office cluster-I' }) => {
+    ({
+      programDetails,
+      registerOffice = 'registrar office cluster-I',
+      examControlOffice = 'exam control office cluster-I',
+    }) => {
       return (
         <div className='space-y-6'>
           <div>
             <h4 className='mb-2 font-semibold'>
-              2.4.1. Minimum GPA to pass program: {programDetails.minimumGPA}
+              Minimum GPA to pass program: {programDetails.minimumGPA}
             </h4>
           </div>
 
           <div>
-            <h4 className='mb-4 font-semibold'>
-              2.4.2. Supplementary rules & cost:
-            </h4>
+            <h4 className='mb-4 font-semibold'>Supplementary rules & cost:</h4>
 
             <div className='space-y-4'>
               <div>
@@ -39,8 +42,8 @@ export const DegreeRequirementsSection =
                   </p>
                   <p>
                     ii. After collecting the withdrawal form, the student will
-                    fill up the form and take the sign from the exam control
-                    office cluster-I.
+                    fill up the form and take the sign from the{' '}
+                    {examControlOffice}.
                   </p>
                   <p>
                     iii. After that, the student will take the sign from the
@@ -105,9 +108,7 @@ export const DegreeRequirementsSection =
           </div>
 
           <div>
-            <h4 className='mb-2 font-semibold'>
-              2.4.3. Total Credits of Course:
-            </h4>
+            <h4 className='mb-2 font-semibold'>Total Credits of Course:</h4>
             <p>
               A student will be awarded {programDetails.degreeName} degree after
               completion of a minimum {programDetails.creditHours} credits.
@@ -116,7 +117,7 @@ export const DegreeRequirementsSection =
 
           {programDetails.waiverInfo && (
             <div>
-              <h4 className='mb-2 font-semibold'>2.4.4. Waivers (if any):</h4>
+              <h4 className='mb-2 font-semibold'>Waivers (if any):</h4>
               <p>{programDetails.waiverInfo}</p>
             </div>
           )}

@@ -33,7 +33,7 @@ export const PerformanceEvaluationSection =
     return (
       <div>
         <h4 className='mb-4 font-semibold'>
-          2.1.5. Performance Evaluation Criterion:
+          Performance Evaluation Criterion:
         </h4>
         <div className='space-y-6'>
           {evaluations.map((evaluation, evalIndex) => {

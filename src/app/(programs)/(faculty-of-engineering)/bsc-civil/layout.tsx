@@ -13,8 +13,8 @@ const ProgramLayout: React.FC<{ children: React.ReactNode }> = ({
   return (
     <div>
       <PageHeader
-        image='/images/cse-2.jpg'
         title='B. Sc. in Civil Engineering (CE)'
+        className='object-contain'
       />
       <PageContainer>
         <PageLayout

@@ -58,7 +58,7 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
 
     return (
       <div>
-        <h3 className='mb-4 text-lg font-semibold'>2.2.1. List of Courses</h3>
+        <h3 className='mb-4 text-lg font-semibold'>List of Courses</h3>
 
         {/* Textile Engineering Core Courses */}
         <div className='mb-8'>
@@ -120,15 +120,15 @@ export const CurriculumSection = React.memo<CurriculumSectionProps>(
 
         {/* Course Prefix Table */}
         <div className='mb-8'>
-          <h4 className='mb-4 font-semibold'>2.2.2. Course Prefix Table:</h4>
+          <h4 className='mb-4 font-semibold'>Course Prefix Table:</h4>
           <PrefixTable prefixes={coursePrefixes} />
         </div>
 
         {/* Course Structure */}
         <div className='mb-8'>
           <h4 className='mb-4 font-semibold'>
-            2.2.3. Course Structure: The B. Sc. in Textile Engineering Program
-            consists of the following categories of courses:
+            Course Structure: The B. Sc. in Textile Engineering Program consists
+            of the following categories of courses:
           </h4>
           <SummaryTable summaryData={curriculumSummary} />
         </div>

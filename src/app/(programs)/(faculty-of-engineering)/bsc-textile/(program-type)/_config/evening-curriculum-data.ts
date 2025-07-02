@@ -428,8 +428,7 @@ export const eveningCoursePrefixes: CoursePrefix[] = [
 
 export const eveningCurriculumSummary: CurriculumSummary[] = [
   {
-    category:
-      'Textile Engineering Core Courses & Lab\n(Including Project work, Industrial Attachment & Comprehensive Viva)',
+    category: 'Textile Engineering Core Courses & Lab',
     credits: 79.0,
     percentage: '47.88%',
   },

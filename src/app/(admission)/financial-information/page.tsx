@@ -12,10 +12,7 @@ export default async function Page() {
 
   return (
     <>
-      <PageHeader
-        image='/images/accounting-and-finance.jpg'
-        title='Financial Information'
-      />
+      <PageHeader title='Financial Information' />
 
       <PageContainer>
         <Content data={financialInformation} />

@@ -28,6 +28,13 @@ const getDepartmentName = (department: string) => {
       return 'Department of Mechanical Engineering';
     case 'CSE':
       return 'Department of Computer Science and Engineering';
+    case 'EEE':
+    case 'Electrical and Electronic Engineering (EEE)':
+      return 'Dept. of Electrical and Electronic Engineering (EEE)';
+
+    case 'Economics BSS':
+    case 'Master of Social Science in Economics (MSSE)':
+      return 'Department of Economics';
     default:
       return department;
   }

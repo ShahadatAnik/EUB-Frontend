@@ -43,10 +43,7 @@ const Page = async () => {
   }
   return (
     <>
-      <PageHeader
-        image='/images/accounting-and-finance.jpg'
-        title='Clubs and Societies'
-      />
+      <PageHeader title='Clubs and Societies' />
 
       <PageContainer>
         <Content data={faculties} />

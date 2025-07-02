@@ -9,7 +9,7 @@ const Page = () => {
   return (
     <>
       <PageHeader
-        image='/images/cse-2.jpg'
+        className='object-contain'
         title='Master of Governance and Development Studies (MGDS)'
       />
       <PageContainer>

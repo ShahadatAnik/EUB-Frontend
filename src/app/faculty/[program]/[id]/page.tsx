@@ -63,7 +63,6 @@ export default async function Page({
   return (
     <>
       <PageHeader
-        image='/images/accounting-and-finance.jpg'
         title={faculty?.teacher_name}
         description={
           faculty.teacher_designation + ', ' + faculty.department_name
