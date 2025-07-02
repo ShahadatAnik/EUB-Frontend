@@ -19,6 +19,7 @@ const Employees: React.FC<{ data: IOfficeEntry[] }> = ({ data }) => {
                 alt={item.user_name}
                 height={120}
                 width={120}
+                className='aspect-passport rounded-md object-cover'
               />
             ) : (
               <Image
@@ -26,6 +27,7 @@ const Employees: React.FC<{ data: IOfficeEntry[] }> = ({ data }) => {
                 alt={item.user_name}
                 height={120}
                 width={120}
+                className='aspect-passport rounded-md object-cover'
               />
             )}
 

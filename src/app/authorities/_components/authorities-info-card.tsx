@@ -16,14 +16,16 @@ const AuthoritiesInfoCard: React.FC<{ data: IAuthorityInfo }> = ({ data }) => {
   return (
     <div className='space-y-8'>
       <div className='flex flex-col lg:flex-row'>
-        <div className='relative aspect-square w-full max-w-[400px] sm:w-auto lg:h-[400px]'>
-          <ClientImage
-            className='object-cover object-top'
-            fill
-            src={`${data?.personal_info?.profile_image}`}
-            alt={`${data.personal_info.name}'s profile picture`}
-          />
-        </div>
+        <ClientImage
+          height={400}
+          width={400}
+          className='object-cover object-top aspect-passport rounded-md'
+          src={`${data?.personal_info?.profile_image}`}
+          alt={`${data.personal_info.name}'s profile picture`}
+        />
+        {/* <div className='relative aspect-square w-full max-w-[400px] sm:w-auto lg:h-[400px]'>
+         
+        </div> */}
 
         <div className='flex-1 px-0 pt-4 lg:p-8'>
           <h4 className='text-2xl font-semibold'>{data.personal_info.name}</h4>
