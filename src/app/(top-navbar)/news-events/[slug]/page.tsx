@@ -15,10 +15,7 @@ export default async function Page({
 
   return (
     <div>
-      <PageHeader
-        title={'Details'}
-        image={data?.cover_image ? `${data?.cover_image}` : '/images/bg-2.jpg'}
-      />
+      <PageHeader title={'Details'} image='/images/textures/texture-7.jpg' />
       <PageContainer className='pb-40'>
         <Content data={data} />
       </PageContainer>
