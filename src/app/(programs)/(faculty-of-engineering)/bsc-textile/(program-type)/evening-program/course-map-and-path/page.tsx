@@ -15,6 +15,7 @@ const Page = () => {
       <CourseMapSection
         semesterData={getCurriculumData('evening').semesterData}
         backgroundStudents={'For Diploma in Engg. Background Students'}
+        referenceImage='/images/programs/textile/course-map-and-path/Textile Course Map Evening Program.jpg'
       />
     </ContentWrapper>
   );

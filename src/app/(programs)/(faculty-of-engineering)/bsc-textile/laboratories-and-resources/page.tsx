@@ -18,33 +18,27 @@ const Page = () => {
     >
       {/* Header Section */}
       <div className='mb-8'>
-        <h2 className='mb-2 text-xl font-semibold'>
-          Introducing Description of Textile Lab
-        </h2>
-
-        <div className='space-y-4 text-justify text-sm leading-relaxed'>
-          <p>
-            We place a strong emphasis on the development of our students,
-            equipping them with the skills to innovate, improve, and lead the
-            textile sector, with a particular focus on sustainability. To
-            achieve this objective, we carefully design our curriculum and
-            ensure the provision of appropriate infrastructure. The department
-            currently operates several key laboratories, including Textile
-            Engineering Lab-1 and Textile Engineering Lab-2, both of which are
-            located in the basement of the Academic Building. These labs offer
-            vital resources and facilities for research and hands-on work in
-            textile engineering. In response to the industry&apos;s evolving
-            demands, plans are underway to establish a Dyeing Lab. All of our
-            laboratories are comprehensively equipped and meticulously organized
-            to support student learning across various technologies. This
-            infrastructure enables students to effectively engage with these
-            technologies, preparing them to excel in their professional careers.
-            In addition to our in-house laboratories, we maintain strong
-            partnerships with several industry leaders and actively organize
-            industry visits for our students, further enhancing their
-            educational experience and practical expertise.
-          </p>
-        </div>
+        <p className='text-justify text-sm leading-relaxed'>
+          We place a strong emphasis on the development of our students,
+          equipping them with the skills to innovate, improve, and lead the
+          textile sector, with a particular focus on sustainability. To achieve
+          this objective, we carefully design our curriculum and ensure the
+          provision of appropriate infrastructure. The department currently
+          operates several key laboratories, including Textile Engineering Lab-1
+          and Textile Engineering Lab-2, both of which are located in the
+          basement of the Academic Building. These labs offer vital resources
+          and facilities for research and hands-on work in textile engineering.
+          In response to the industry&apos;s evolving demands, plans are
+          underway to establish a Dyeing Lab. All of our laboratories are
+          comprehensively equipped and meticulously organized to support student
+          learning across various technologies. This infrastructure enables
+          students to effectively engage with these technologies, preparing them
+          to excel in their professional careers. In addition to our in-house
+          laboratories, we maintain strong partnerships with several industry
+          leaders and actively organize industry visits for our students,
+          further enhancing their educational experience and practical
+          expertise.
+        </p>
       </div>
 
       {/* Textile Engineering Lab 1 */}
@@ -183,7 +177,7 @@ const Page = () => {
           <Card className='mb-4'>
             <CardContent className='p-2'>
               <FullScreenImage
-                src='/images/programs/textile/lab/lab-1/3. Ring Frame.png'
+                src='/images/programs/textile/lab/lab-2/3. Power Loom.jpg'
                 alt='Power Loom - weaving machine with wooden and metal components'
                 width={500}
                 height={300}

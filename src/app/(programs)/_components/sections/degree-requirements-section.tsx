@@ -14,14 +14,12 @@ export const DegreeRequirementsSection =
         <div className='space-y-6'>
           <div>
             <h4 className='mb-2 font-semibold'>
-              2.4.1. Minimum GPA to pass program: {programDetails.minimumGPA}
+              Minimum GPA to pass program: {programDetails.minimumGPA}
             </h4>
           </div>
 
           <div>
-            <h4 className='mb-4 font-semibold'>
-              2.4.2. Supplementary rules & cost:
-            </h4>
+            <h4 className='mb-4 font-semibold'>Supplementary rules & cost:</h4>
 
             <div className='space-y-4'>
               <div>
@@ -105,9 +103,7 @@ export const DegreeRequirementsSection =
           </div>
 
           <div>
-            <h4 className='mb-2 font-semibold'>
-              2.4.3. Total Credits of Course:
-            </h4>
+            <h4 className='mb-2 font-semibold'>Total Credits of Course:</h4>
             <p>
               A student will be awarded {programDetails.degreeName} degree after
               completion of a minimum {programDetails.creditHours} credits.
@@ -116,7 +112,7 @@ export const DegreeRequirementsSection =
 
           {programDetails.waiverInfo && (
             <div>
-              <h4 className='mb-2 font-semibold'>2.4.4. Waivers (if any):</h4>
+              <h4 className='mb-2 font-semibold'>Waivers (if any):</h4>
               <p>{programDetails.waiverInfo}</p>
             </div>
           )}

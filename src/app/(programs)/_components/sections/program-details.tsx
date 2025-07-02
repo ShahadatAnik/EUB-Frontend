@@ -19,10 +19,10 @@ interface ProgramDetailsSectionProps {
 export const ProgramDetailsSection = React.memo<ProgramDetailsSectionProps>(
   ({ semesterInfo, programDetails, performanceEvaluation }) => {
     return (
-      <div className='space-y-4'>
+      <div className='space-y-6'>
         {/* Semesters */}
         <div>
-          <h4 className='mb-2 font-semibold'>2.1.1. Semesters:</h4>
+          <h4 className='mb-2 font-semibold'>Semesters:</h4>
           <div className='ml-4 space-y-1'>
             <p>
               <strong>Spring:</strong> {semesterInfo.spring}
@@ -38,7 +38,7 @@ export const ProgramDetailsSection = React.memo<ProgramDetailsSectionProps>(
 
         {/* Duration */}
         <div>
-          <h4 className='mb-2 font-semibold'>2.1.2. Duration:</h4>
+          <h4 className='mb-2 font-semibold'>Duration:</h4>
           <div className='ml-4 space-y-1'>
             <p>
               <strong>Year:</strong> {programDetails.duration.years}
@@ -51,13 +51,13 @@ export const ProgramDetailsSection = React.memo<ProgramDetailsSectionProps>(
 
         {/* Credit Hour */}
         <div>
-          <h4 className='mb-2 font-semibold'>2.1.3. Credit Hour:</h4>
+          <h4 className='mb-2 font-semibold'>Credit Hour:</h4>
           <p className='ml-4'>{programDetails.creditHours}</p>
         </div>
 
         {/* Course Load */}
         <div>
-          <h4 className='mb-2 font-semibold'>2.1.4. Course Load:</h4>
+          <h4 className='mb-2 font-semibold'>Course Load:</h4>
           <p className='ml-4'>{programDetails.courseLoad}</p>
           <p className='ml-8'>{programDetails.courseLoadDetails}</p>
         </div>
@@ -66,9 +66,9 @@ export const ProgramDetailsSection = React.memo<ProgramDetailsSectionProps>(
         <PerformanceEvaluationSection evaluations={performanceEvaluation} />
 
         {/* Tuition Fee Structure */}
-        <div>
+        {/* <div>
           <h4 className='mb-2 font-semibold'>2.1.6. Tuition Fee Structure:</h4>
-        </div>
+        </div> */}
       </div>
     );
   }

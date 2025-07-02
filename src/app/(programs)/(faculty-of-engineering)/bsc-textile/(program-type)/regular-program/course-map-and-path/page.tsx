@@ -13,7 +13,10 @@ const Page = () => {
   const data = getCurriculumData('regular');
   return (
     <ContentWrapper title='Course Map and Path'>
-      <CourseMapSection semesterData={data.semesterData} />
+      <CourseMapSection
+        semesterData={data.semesterData}
+        referenceImage='/images/programs/textile/course-map-and-path/Textile Course Map Regular Program.jpg'
+      />
     </ContentWrapper>
   );
 };
