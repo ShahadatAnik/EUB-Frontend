@@ -31,6 +31,7 @@ const Page = () => {
       <DegreeRequirementsSection
         programDetails={getCurriculumData('regular').programDetails}
         registerOffice='registrar office cluster-II'
+        examControlOffice='exam control office cluster-II'
       />
     </ContentWrapper>
   );

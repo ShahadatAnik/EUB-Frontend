@@ -5,11 +5,16 @@ import type { ProgramDetails } from '../../_config/curriculum';
 interface DegreeRequirementsSectionProps {
   programDetails: ProgramDetails;
   registerOffice?: string;
+  examControlOffice?: string;
 }
 
 export const DegreeRequirementsSection =
   React.memo<DegreeRequirementsSectionProps>(
-    ({ programDetails, registerOffice = 'registrar office cluster-I' }) => {
+    ({
+      programDetails,
+      registerOffice = 'registrar office cluster-I',
+      examControlOffice = 'exam control office cluster-I',
+    }) => {
       return (
         <div className='space-y-6'>
           <div>
@@ -37,8 +42,8 @@ export const DegreeRequirementsSection =
                   </p>
                   <p>
                     ii. After collecting the withdrawal form, the student will
-                    fill up the form and take the sign from the exam control
-                    office cluster-I.
+                    fill up the form and take the sign from the{' '}
+                    {examControlOffice}.
                   </p>
                   <p>
                     iii. After that, the student will take the sign from the
