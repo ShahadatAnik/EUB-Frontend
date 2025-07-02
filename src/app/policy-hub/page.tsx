@@ -27,10 +27,7 @@ export default async function Page(props: {
 
   return (
     <>
-      <PageHeader
-        image='/images/accounting-and-finance.jpg'
-        title='Policy Hub'
-      />
+      <PageHeader title='Policy Hub' />
 
       <PageContainer>
         <Content {...data} />

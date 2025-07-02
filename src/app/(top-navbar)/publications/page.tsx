@@ -55,10 +55,7 @@ export default async function Page(props: {
 
   return (
     <>
-      <PageHeader
-        image='/images/accounting-and-finance.jpg'
-        title='Publications'
-      />
+      <PageHeader title='Publications' />
 
       <PageContainer>
         <Content faculties={faculties} {...data} />

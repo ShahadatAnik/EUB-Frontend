@@ -8,10 +8,7 @@ import Content from './_components/content';
 const Page = () => {
   return (
     <>
-      <PageHeader
-        image='/images/accounting-and-finance.jpg'
-        title='Student Service Guideline for Freshers'
-      />
+      <PageHeader title='Student Service Guideline for Freshers' />
 
       <PageContainer>
         <Content />
