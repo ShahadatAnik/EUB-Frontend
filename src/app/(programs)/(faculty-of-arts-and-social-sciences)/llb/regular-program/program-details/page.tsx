@@ -11,54 +11,49 @@ const ProgramDetails = () => {
     <ContentWrapper title='Program Details' className='space-y-8'>
       <p>
         The LL.B. (Hons.) program is a four-year undergraduate degree divided
-        into 12 semesters. An academic year consists of three semesters: Spring
-        (January – April), Summer (May – August), and Fall (September –
-        December). Each semester lasts 15 weeks, including 13 weeks of classroom
-        instruction, one week for examination preparation, and one week for
-        examinations. The medium of instruction for the program is English,
-        ensuring students develop strong legal communication skills.
-        Additionally, all courses in the LL.B. (Hons.) program are compulsory,
-        providing a comprehensive legal education that prepares graduates for
-        careers in the legal profession and related fields.
+        into 8 semesters. An academic year consists of two semesters: Spring
+        (January – June), Summer (July– December). Each semester lasts 26 weeks,
+        including 20 weeks of classroom instruction, one week for examination
+        preparation, and three weeks for examinations. The medium of instruction
+        for the program is English, ensuring students develop strong legal
+        communication skills. Additionally, all courses in the LL.B. (Hons.)
+        program are compulsory, providing a comprehensive legal education that
+        prepares graduates for careers in the legal profession and related
+        fields.
       </p>
 
       <div>
         <Title variant={'title'} title='Semesters' />
         <p>
-          The program comprises 12 semesters (trimesters), each spanning four
-          months. Of these, 11 semesters are dedicated to coursework, while the
-          final semester is reserved for an internship or project. The academic
-          year is structured into three semesters: Spring, Summer, and Fall.
+          The program comprises 8 semesters, each spanning six months. The
+          academic year is structured into two semesters: Spring, and Summer.
         </p>
 
         <ul className='mt-2 list-disc space-y-1.5 pl-6'>
           <li className='space-x-1'>
-            <strong>Spring semester:</strong> <span>January to April</span>
+            <strong>Spring semester:</strong> <span>January to June, and</span>
           </li>
           <li className='space-x-1'>
-            <strong>Summer semester:</strong> <span>May to August</span>
-          </li>
-          <li className='space-x-1'>
-            <strong>Fall semester:</strong> <span>September to December</span>
+            <strong>Summer semester:</strong> <span>July to December</span>
           </li>
         </ul>
       </div>
 
       <div>
         <Title variant={'title'} title='Duration' />
-        <p>Duration of the program is 4 years (12 Semesters).</p>
+        <p>The duration of the program is 4 years (8 Semesters).</p>
       </div>
       <div>
         <Title variant={'title'} title='Credit Hour' />
-        <p>125 </p>
+        <p>130 </p>
       </div>
       <div>
         <Title variant={'title'} title='Course Load' />
         <p>
-          In each semester, students are required to complete four courses,
-          totaling 12 credits. In the 12th semester, they must undertake a
-          3-credit internship/project along with a 1-credit Applied Research
-          Methodology course.
+          In each semester, students are required to complete five courses,
+          totaling 15-17 credits (Some courses are of 3 credit while others are
+          of 4 credit). In the 8th semester, they must undertake a 3-credit
+          Legal Research Methodology course.
         </p>
       </div>
       <div>

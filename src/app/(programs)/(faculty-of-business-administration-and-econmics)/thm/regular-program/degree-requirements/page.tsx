@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from 'next/link';
+
 import Title from '@/components/title';
 
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
@@ -31,8 +33,15 @@ const Page = () => {
       <div>
         <Title variant={'title'} title='Waivers' />
         <p>
-          (Not applicable; please consult the credit transfer guidelines for
-          eligibility and requirements).
+          (Not applicable; please consult the{' '}
+          <Link
+            target='_blank'
+            className='underline text-blue-600'
+            href={'/credit-transfer'}
+          >
+            credit transfer guidelines
+          </Link>{' '}
+          for eligibility and requirements).
         </p>
       </div>
     </ContentWrapper>

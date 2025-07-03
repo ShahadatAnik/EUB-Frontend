@@ -10,51 +10,44 @@ const ProgramDetails = () => {
   return (
     <ContentWrapper title='Program Details' className='space-y-8'>
       <p>
-        The LL.M. (Preliminary) program is a one-year degree divided into 3
+        The LL.M. (Preliminary) program is a one-year degree divided into 2
         semesters. The LL.M. (Final) program is also a one-year degree divided
-        into 3 semesters. An academic year consists of three semesters: Spring
-        (January – April), Summer (May – August), and Fall (September –
-        December). Each semester lasts 15 weeks, including 13 weeks of classroom
-        instruction, one week for examination preparation, and one week for
-        examinations. The medium of instruction for the program is English,
-        ensuring students develop strong legal communication skills.
-        Additionally, all courses in the LL.M. programs are compulsory,
-        providing a comprehensive legal education that prepares graduates for
-        careers in the legal profession and related fields.
+        into 2 semesters. An academic year consists of two semesters: Spring
+        (January – June), Summer (July– December). Each semester lasts 26 weeks,
+        including 20 weeks of classroom instruction, one week for examination
+        preparation, and three weeks for examinations. The medium of instruction
+        for the program is English, ensuring students develop strong legal
+        communication skills. Additionally, all courses in the LL.M. programs
+        are compulsory, providing a comprehensive legal education that prepares
+        graduates for careers in the legal profession and related fields.
       </p>
 
       <div>
         <Title variant={'title'} title='Semesters' />
         <p>
-          The program comprises 12 semesters (trimesters), each spanning four
-          months. Of these, 11 semesters are dedicated to coursework, while the
-          final semester is reserved for an internship or project. The academic
-          year is structured into three semesters: Spring, Summer, and Fall.
+          The program comprises 2 semesters, each spanning six months. In the
+          2nd semester, they must undertake a 6-credit Legal Research and
+          Monograph. The academic year is structured into two semesters: Spring,
+          and Summer.
         </p>
 
         <ul className='mt-2 list-disc space-y-1.5 pl-6'>
           <li className='space-x-1'>
-            <strong>Spring semester:</strong> <span>January to April</span>
+            <strong>Spring semester:</strong> <span>January to June, and</span>
           </li>
           <li className='space-x-1'>
-            <strong>Summer semester:</strong> <span>May to August</span>
-          </li>
-          <li className='space-x-1'>
-            <strong>Fall semester:</strong> <span>September to December</span>
+            <strong>Summer semester:</strong> <span>July to December</span>
           </li>
         </ul>
       </div>
 
       <div>
         <Title variant={'title'} title='Duration' />
-        <p>
-          4 months [13 weeks of classroom instruction, one week for examination
-          preparation, and one week for examinations]
-        </p>
+        <p>The duration of the program is 1 year (2 Semesters).</p>
       </div>
       <div>
         <Title variant={'title'} title='Credit Hour' />
-        <p>36 hours</p>
+        <p>36</p>
       </div>
       <div>
         <Title variant={'title'} title='Course Load' />

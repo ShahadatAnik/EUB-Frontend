@@ -35,6 +35,8 @@ const getDepartmentName = (department: string) => {
     case 'Economics BSS':
     case 'Master of Social Science in Economics (MSSE)':
       return 'Department of Economics';
+    case 'Bachelor of Tourism and Hospitality Management (THM)':
+      return 'Department of Tourism and Hospitality Management';
     default:
       return department;
   }

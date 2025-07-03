@@ -112,13 +112,13 @@ export const labData: ILab[] = [
     software: 'MATLAB/Simulink, Python (NumPy, SciPy, Matplotlib)',
   },
   {
-    title: 'Electrical Measurement and Instrumentation Lab',
+    title: 'Electrical Measurements and Instrumentation Lab',
     description:
-      'The Electrical Measurement and Instrumentation Lab is a practical laboratory designed to provide hands-on experience in measuring electrical parameters and understanding various instruments. It focuses on the principles and techniques used to measure electrical quantities such as voltage, current, resistance, power, and energy. It involves the study of various instruments, sensors, and transducers, along with calibration methods and error analysis to ensure precise and accurate measurements in electrical systems. This field ensures accurate data acquisition for electrical and electronic applications. Through experiments, students gain a deeper understanding of measurement principles, Instrument characteristics, and the importance of accuracy and precision in electrical engineering applications.',
+      'The Electrical Measurements and Instrumentation Lab is a practical laboratory designed to provide hands-on experience in measuring electrical parameters and understanding various instruments. It focuses on the principles and techniques used to measure electrical quantities such as voltage, current, resistance, power, and energy. It involves the study of various instruments, sensors, and transducers, along with calibration methods and error analysis to ensure precise and accurate measurements in electrical systems. This field ensures accurate data acquisition for electrical and electronic applications. Through experiments, students gain a deeper understanding of measurement principles, Instrument characteristics, and the importance of accuracy and precision in electrical engineering applications.',
     images: [
       {
         src: '/images/programs/eee/lab/Electrical Measurements and Instrumentation Lab.jpg',
-        alt: 'Electrical Measurement and Instrumentation Lab',
+        alt: 'Electrical Measurements and Instrumentation Lab',
       },
     ],
     equipment:
