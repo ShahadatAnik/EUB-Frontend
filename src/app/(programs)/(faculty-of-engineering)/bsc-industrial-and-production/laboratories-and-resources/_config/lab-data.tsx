@@ -63,21 +63,21 @@ export const labData: ILab[] = [
       'Refrigeration and Air Conditioning (RAC) encompass systems designed to regulate temperature and humidity for specific purposes. Refrigeration focuses on cooling spaces to preserve food, materials, or other perishables, while air conditioning ensures comfortable indoor environments by controlling both temperature and humidity. These systems rely on key components such as compressors, condensers, evaporators, and refrigerants to absorb and release heat efficiently. RAC technology plays a critical role in various industries, including food storage, healthcare, and residential or commercial comfort, making it indispensable in modern life.',
     images: [
       {
-        src: '/images/programs/ipe/lab/Refrigeration & Air Condition Lab/JPEG image (2).jpeg',
+        src: '/images/programs/ipe/lab/refrigeration-lab/JPEG image (2).jpeg',
         alt: 'Automatic Plant Watering System',
         containerClassName: 'lg:col-span-2',
       },
       {
-        src: '/images/programs/ipe/lab/Refrigeration & Air Condition Lab/3d printer.jpeg',
+        src: '/images/programs/ipe/lab/refrigeration-lab/3d printer.jpeg',
         alt: '3D Printer',
       },
       {
-        src: '/images/programs/ipe/lab/Refrigeration & Air Condition Lab/Automatic Electronic Steam Boiler.jpeg',
+        src: '/images/programs/ipe/lab/refrigeration-lab/Automatic Electronic Steam Boiler.jpeg',
         alt: 'Automatic Electronic Steam Boiler',
       },
 
       {
-        src: '/images/programs/ipe/lab/Refrigeration & Air Condition Lab/Refrigeration.jpeg',
+        src: '/images/programs/ipe/lab/refrigeration-lab/Refrigeration.jpeg',
         alt: 'Refrigeration',
         containerClassName: 'lg:col-span-2',
       },
