@@ -73,6 +73,11 @@ export interface ProgramDetails {
   additionalInfo?: string;
 }
 
+export interface Prerequisite {
+  course: { code: string; title: string };
+  prerequisites: Array<{ code: string; title: string; credits: number }>;
+}
+
 export type ProgramType = 'regular' | 'evening';
 export type DepartmentType = 'textile' | 'eee';
 export type StudentBackground = 'hsc' | 'diploma';

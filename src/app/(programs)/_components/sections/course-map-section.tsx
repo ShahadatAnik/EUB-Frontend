@@ -22,10 +22,21 @@ interface CourseMapSectionProps {
   semesterData: Semester[];
   backgroundStudents?: string;
   referenceImage?: string;
+  disabledTitle?: boolean;
+  showTotal?: boolean;
+  showTitle?: boolean;
 }
 
 export const CourseMapSection = React.memo<CourseMapSectionProps>(
-  ({ semesterData, backgroundStudents, title, referenceImage }) => {
+  ({
+    semesterData,
+    backgroundStudents,
+    title,
+    referenceImage,
+    disabledTitle = false,
+    showTotal = true,
+    showTitle = true,
+  }) => {
     const grandTotal = useMemo(
       () => semesterData.reduce((sum, semester) => sum + semester.total, 0),
       [semesterData]
@@ -68,16 +79,18 @@ export const CourseMapSection = React.memo<CourseMapSectionProps>(
 
     return (
       <div>
-        <h3 className='mb-6 text-center text-lg font-semibold'>
-          {title ? (
-            title
-          ) : (
-            <>
-              Semester Wise Distribution of Courses (
-              {backgroundStudents || 'For H.S.C. Background Students'})
-            </>
-          )}
-        </h3>
+        {disabledTitle ? null : (
+          <h3 className='mb-6 text-center text-lg font-semibold'>
+            {title ? (
+              title
+            ) : (
+              <>
+                Semester Wise Distribution of Courses (
+                {backgroundStudents || 'For H.S.C. Background Students'})
+              </>
+            )}
+          </h3>
+        )}
 
         <div className='space-y-8'>
           {Object.entries(groupedByYear)
@@ -90,10 +103,12 @@ export const CourseMapSection = React.memo<CourseMapSectionProps>(
 
               return (
                 <div key={year} className='mb-8'>
-                  <h4 className='mb-4 font-semibold'>
-                    {getYearOrdinal(Number.parseInt(year))} Year ({yearTotal}{' '}
-                    Credits)
-                  </h4>
+                  {showTitle && (
+                    <h4 className='mb-4 font-semibold'>
+                      {getYearOrdinal(Number.parseInt(year))} Year ({yearTotal}{' '}
+                      Credits)
+                    </h4>
+                  )}
 
                   <div className='overflow-hidden border'>
                     <Table>
@@ -172,21 +187,23 @@ export const CourseMapSection = React.memo<CourseMapSectionProps>(
                         })}
 
                         {/* Year total row */}
-                        <TableRow className='border-t-2 bg-primary font-bold hover:bg-primary'>
-                          <TableCell className='border-r text-center text-white'>
-                            {getYearOrdinal(Number.parseInt(year))} Year Total
-                          </TableCell>
+                        {showTotal && (
+                          <TableRow className='border-t-2 bg-primary font-bold hover:bg-primary'>
+                            <TableCell className='border-r text-center text-white'>
+                              {getYearOrdinal(Number.parseInt(year))} Year Total
+                            </TableCell>
 
-                          <TableCell
-                            colSpan={3}
-                            className='border-r text-right text-white'
-                          >
-                            Total
-                          </TableCell>
-                          <TableCell className='text-center text-white'>
-                            {yearTotal}
-                          </TableCell>
-                        </TableRow>
+                            <TableCell
+                              colSpan={3}
+                              className='border-r text-right text-white'
+                            >
+                              Total
+                            </TableCell>
+                            <TableCell className='text-center text-white'>
+                              {yearTotal}
+                            </TableCell>
+                          </TableRow>
+                        )}
                       </TableBody>
                     </Table>
                   </div>
