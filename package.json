@@ -10,8 +10,8 @@
     "types": "tsc --pretty --noEmit",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
-    "build": "next build",
-    "deploy": "git pull && npm i && next build && pm2 restart eub-frontend --update-env",
+    "build": "rm -r .next && next build",
+    "deploy": "git pull && npm i && rm -r .next && next build && pm2 restart eub-frontend --update-env",
     "prepare": "husky && husky install"
   },
   "dependencies": {
