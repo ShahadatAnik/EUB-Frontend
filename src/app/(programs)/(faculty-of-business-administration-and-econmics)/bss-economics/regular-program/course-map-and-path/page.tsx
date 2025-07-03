@@ -1,6 +1,8 @@
 import React from 'react';
 
-import UnderDevelopment from '@/components/under-development';
+import Image from 'next/image';
+
+// import UnderDevelopment from '@/components/under-development';
 
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 
@@ -23,7 +25,15 @@ import SemesterCourseTable from './semester-course-table';
 const Page = () => {
   return (
     <ContentWrapper title='Course Map and Path'>
-      <UnderDevelopment />
+      {/* <UnderDevelopment /> */}
+      <Image
+        src='/images/programs/bss-eco/course-map/bss-eco-course-map.png'
+        alt='Course Map and Path'
+        width={100}
+        height={100}
+        className='w-full'
+        unoptimized
+      />
     </ContentWrapper>
   );
   return (
