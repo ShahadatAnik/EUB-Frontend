@@ -9,7 +9,7 @@ import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 import PerformanceCriteriaTable from './performance-criteria-table';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/evening-program/program-details',
+  pageUrl: '/bsc-civil/evening-program/program-details',
   title: 'B.Sc. in Civil Engineering (Evening) Program Details | EUB',
   description:
     'Explore details of our B.Sc. in Civil Engineering (Evening) program, designed for diploma holders and working professionals seeking to advance their careers.',

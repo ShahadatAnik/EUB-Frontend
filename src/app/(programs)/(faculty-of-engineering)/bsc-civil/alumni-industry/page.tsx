@@ -7,7 +7,7 @@ import { generateMetaData } from '@/lib/utils';
 import AlumniIndustry from '@/app/(programs)/_components/alumni-and-industry';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/alumni-industry',
+  pageUrl: '/bsc-civil/alumni-industry',
   title:
     'Civil Engineering Alumni & Industry Links | European University of Bangladesh',
   description:

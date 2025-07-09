@@ -7,7 +7,7 @@ import LaboratoriesAndResources from '@/app/(programs)/_components/laboratories-
 import { labData } from './_config/lab-data';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/laboratories-and-resources',
+  pageUrl: '/bsc-civil/laboratories-and-resources',
   title:
     'Civil Engineering Labs & Resources | European University of Bangladesh',
   description:

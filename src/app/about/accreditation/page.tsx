@@ -23,7 +23,7 @@ export const metadata = generateMetaData({
     'Higher education accreditation',
     'International university accreditation',
   ],
-  pageUrl: 'https://eub.edu.bd/about/accreditation',
+  pageUrl: '/about/accreditation',
 });
 
 const Page = () => {

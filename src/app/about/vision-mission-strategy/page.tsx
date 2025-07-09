@@ -23,7 +23,7 @@ export const metadata = generateMetaData({
     'Social responsibility in education',
     'EUB core values',
   ],
-  pageUrl: 'https://eub.edu.bd/about/vision-mission-strategy',
+  pageUrl: '/about/vision-mission-strategy',
 });
 
 const Page = () => {

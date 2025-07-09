@@ -33,7 +33,7 @@ export const metadata = generateMetaData({
   ],
 
   // The URL of the page
-  pageUrl: 'https://eub.edu.bd/academic-calendar',
+  pageUrl: '/academic-calendar',
 });
 
 export default async function Page() {

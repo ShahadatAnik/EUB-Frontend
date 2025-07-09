@@ -7,7 +7,7 @@ import { generateMetaData } from '@/lib/utils';
 import Notices from '@/app/(programs)/_components/notices';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/notices',
+  pageUrl: '/bsc-civil/notices',
   title:
     'Civil Engineering Department Notices | European University of Bangladesh',
   description:

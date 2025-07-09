@@ -7,7 +7,7 @@ import { generateMetaData } from '@/lib/utils';
 import ClassRoutine from '@/app/(programs)/_components/class-routine';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/regular-program/class-routine',
+  pageUrl: '/bsc-civil/regular-program/class-routine',
   title: 'Civil Engineering Class Routine | European University of Bangladesh',
   description:
     'View the official class routine for the B.Sc. in Civil Engineering program at EUB. Find schedules, course timings, and room numbers for the current semester.',

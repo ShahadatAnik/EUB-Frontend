@@ -8,7 +8,7 @@ import { CourseMapSection } from '@/app/(programs)/_components/sections/course-m
 import { getCurriculumData } from '../../_config/get-curriculum-data';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/evening-program/course-map-and-path',
+  pageUrl: '/bsc-civil/evening-program/course-map-and-path',
   title: 'Civil Engineering (Evening) Course Map | EUB',
   description:
     'See the detailed course map and academic path for the Civil Engineering evening program. Plan your studies semester by semester to fit your schedule.',

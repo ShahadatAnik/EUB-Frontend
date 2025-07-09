@@ -27,7 +27,7 @@ export const metadata = generateMetaData({
     'Business research papers',
     'Social sciences journal',
   ],
-  pageUrl: 'https://eub.edu.bd/publications',
+  pageUrl: '/publications',
 });
 
 export default async function Page(props: {

@@ -23,7 +23,7 @@ export const metadata = generateMetaData({
   ],
 
   // The URL of the page
-  pageUrl: 'https://eub.edu.bd/contact-us',
+  pageUrl: '/contact-us',
 });
 
 const Page = () => {

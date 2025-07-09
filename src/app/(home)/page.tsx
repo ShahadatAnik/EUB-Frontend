@@ -27,7 +27,6 @@ export const metadata = generateMetaData({
     'LLB admission',
     'European standard education',
   ],
-  pageUrl: 'https://eub.edu.bd',
 });
 
 export default async function Page() {
