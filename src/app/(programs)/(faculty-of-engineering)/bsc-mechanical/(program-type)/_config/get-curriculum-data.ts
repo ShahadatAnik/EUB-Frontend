@@ -6,13 +6,14 @@ import {
   meElectiveCourses,
   meElectiveCoursesIPE,
   meEveningProgramDetails,
-  meEveningSemesterData,
+  // meEveningSemesterData,
   meGeneralEducationCourses,
   meInterDisciplinaryCourses,
   mePerformanceEvaluation,
   meProjectCourses,
   meRegularProgramDetails,
-  meRegularSemesterData,
+  meSemesterData,
+  // meRegularSemesterData,
   meSemesterInfo,
 } from './curriculum-data';
 
@@ -31,7 +32,7 @@ export const getCurriculumData = (type: 'regular' | 'evening') => {
       projectCourses: meProjectCourses,
       coursePrefixes: meCoursePrefixes,
       curriculumSummary: meCurriculumSummary,
-      semesterData: meEveningSemesterData,
+      semesterData: meSemesterData,
     };
   }
 
@@ -48,6 +49,6 @@ export const getCurriculumData = (type: 'regular' | 'evening') => {
     projectCourses: meProjectCourses,
     coursePrefixes: meCoursePrefixes,
     curriculumSummary: meCurriculumSummary,
-    semesterData: meRegularSemesterData,
+    semesterData: meSemesterData,
   };
 };
