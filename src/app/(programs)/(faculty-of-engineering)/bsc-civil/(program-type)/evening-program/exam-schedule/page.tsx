@@ -7,7 +7,7 @@ import { generateMetaData } from '@/lib/utils';
 import ExamSchedule from '@/app/(programs)/_components/exam-schedule';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/evening-program/exam-schedule',
+  pageUrl: '/bsc-civil/evening-program/exam-schedule',
   title: 'Civil Engineering (Evening) Exam Schedule | EUB',
   description:
     'Get the latest exam schedule for the B.Sc. in Civil Engineering (Evening) program. Find dates and times for mid-term and final examinations.',

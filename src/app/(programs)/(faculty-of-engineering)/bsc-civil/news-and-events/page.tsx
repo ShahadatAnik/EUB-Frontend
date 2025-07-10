@@ -7,7 +7,7 @@ import { generateMetaData } from '@/lib/utils';
 import NewsAndEvents from '@/app/(programs)/_components/news-and-events';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/news-and-events',
+  pageUrl: '/bsc-civil/news-and-events',
   title: 'Civil Engineering News & Events | European University of Bangladesh',
   description:
     'Stay updated on news and events from the EUB Civil Engineering department, including workshops, seminars, student achievements, and industrial visits.',

@@ -22,7 +22,10 @@ export const generateMetaData = (props: IProps): Metadata => ({
     follow: true,
   },
   alternates: {
-    canonical: props.pageUrl,
+    canonical:
+      props.pageUrl !== undefined
+        ? (process.env.LIVE_BASE_URL as string) + props.pageUrl
+        : (process.env.LIVE_BASE_URL as string),
   },
 
   ...props,

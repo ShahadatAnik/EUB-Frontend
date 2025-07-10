@@ -32,7 +32,7 @@ export const metadata = generateMetaData({
     'Interdisciplinary research',
   ],
 
-  pageUrl: 'https://eub.edu.bd/journal',
+  pageUrl: '/journal',
 });
 
 const Page = () => {

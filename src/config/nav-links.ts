@@ -321,7 +321,7 @@ export const navLinks: INavLink[] = [
 
       {
         title: 'Clubs & Societies',
-        href: '/clubs-societies',
+        href: '/clubs-and-societies',
       },
       {
         title: 'Online Admission',

@@ -37,7 +37,7 @@ export const metadata = generateMetaData({
     'University events calendar',
     'Student achievements EUB',
   ],
-  pageUrl: 'https://eub.edu.bd/news-events',
+  pageUrl: '/news-events',
 });
 
 export default async function Page({ searchParams }: searchParamsProps) {

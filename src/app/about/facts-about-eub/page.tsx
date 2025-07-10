@@ -24,7 +24,7 @@ export const metadata = generateMetaData({
     'University with installment plans',
     'EUB global collaboration',
   ],
-  pageUrl: 'https://eub.edu.bd/about/facts-about-eub',
+  pageUrl: '/about/facts-about-eub',
 });
 
 const Page = () => {

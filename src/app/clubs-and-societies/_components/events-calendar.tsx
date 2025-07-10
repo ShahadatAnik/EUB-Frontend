@@ -11,7 +11,7 @@ import SystemTable, {
 
 import { formatDate } from '@/lib/utils';
 
-import { useEventCalendar } from '@/app/clubs-societies/_const/query';
+import { useEventCalendar } from '@/app/clubs-and-societies/_const/query';
 
 const columns: SystemTableColumn<IDataTable>[] = [
   {

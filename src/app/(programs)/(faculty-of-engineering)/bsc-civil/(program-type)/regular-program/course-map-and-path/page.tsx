@@ -8,7 +8,7 @@ import { CourseMapSection } from '@/app/(programs)/_components/sections/course-m
 import { getCurriculumData } from '../../_config/get-curriculum-data';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/regular-program/course-map-and-path',
+  pageUrl: '/bsc-civil/regular-program/course-map-and-path',
   title:
     'Civil Engineering Course Map & Path | European University of Bangladesh',
   description:

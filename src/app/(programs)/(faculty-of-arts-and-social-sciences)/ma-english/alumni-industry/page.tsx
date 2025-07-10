@@ -4,7 +4,7 @@ import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 import UnderDevelopment from '@/app/(programs)/_components/under-development';
 
 // export const metadata = generateMetaData({
-//   pageUrl: 'https://eub.edu.bd/bba/alumni-industry',
+//   pageUrl: '/bba/alumni-industry',
 //   title:
 //     'Bachelor of Business Administration(BBA) Alumni & Industry Links | European University of Bangladesh',
 //   description:

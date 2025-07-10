@@ -8,7 +8,7 @@ import { DegreeRequirementsSection } from '@/app/(programs)/_components/sections
 import { getCurriculumData } from '../../_config/get-curriculum-data';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/evening-program/degree-requirements',
+  pageUrl: '/bsc-civil/evening-program/degree-requirements',
   title: 'CE (Evening) Degree Requirements | European University of Bangladesh',
   description:
     'Understand the graduation requirements for the Civil Engineering evening program at EUB, including total credits, GPA, and policies for working students.',

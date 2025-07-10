@@ -8,7 +8,7 @@ import { CurriculumSection } from '../../_components/curriculum-section';
 import { getCurriculumData } from '../../_config/get-curriculum-data';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/evening-program/curriculum',
+  pageUrl: '/bsc-civil/evening-program/curriculum',
   title:
     'Civil Engineering (Evening) Curriculum | European University of Bangladesh',
   description:

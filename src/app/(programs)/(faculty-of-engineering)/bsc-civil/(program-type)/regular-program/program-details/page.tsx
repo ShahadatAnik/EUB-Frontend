@@ -9,7 +9,7 @@ import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 import PerformanceCriteriaTable from './performance-criteria-table';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/regular-program/program-details',
+  pageUrl: '/bsc-civil/regular-program/program-details',
   title:
     'B.Sc. in Civil Engineering Program Details | European University of Bangladesh',
   description:

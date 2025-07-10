@@ -7,7 +7,7 @@ import { generateMetaData } from '@/lib/utils';
 import MessageFromChairman from '@/app/(programs)/_components/message-from-chairman';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/overview/message-from-the-chairman',
+  pageUrl: '/bsc-civil/overview/message-from-the-chairman',
   title: 'Welcome from the CE Chairman | European University of Bangladesh',
   description:
     "Read a welcome message from the Chairman of EUB's Civil Engineering Dept. Learn about our vision for world-class education and industry collaboration.",

@@ -29,7 +29,7 @@ export const metadata = generateMetaData({
   ],
 
   // The URL of the page
-  pageUrl: 'https://eub.edu.bd/about/brief-history',
+  pageUrl: '/about/brief-history',
 });
 
 const Page = () => {

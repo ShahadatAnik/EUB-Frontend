@@ -8,7 +8,7 @@ import { DegreeRequirementsSection } from '@/app/(programs)/_components/sections
 import { getCurriculumData } from '../../_config/get-curriculum-data';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/regular-program/degree-requirements',
+  pageUrl: '/bsc-civil/regular-program/degree-requirements',
   title:
     'Civil Engineering Degree Requirements | European University of Bangladesh',
   description:

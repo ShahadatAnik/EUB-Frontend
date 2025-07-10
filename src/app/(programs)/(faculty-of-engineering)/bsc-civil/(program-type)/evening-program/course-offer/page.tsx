@@ -7,7 +7,7 @@ import { generateMetaData } from '@/lib/utils';
 import CourseOffer from '@/app/(programs)/_components/course-offer';
 
 export const metadata = generateMetaData({
-  pageUrl: 'https://eub.edu.bd/bsc-civil/evening-program/course-offer',
+  pageUrl: '/bsc-civil/evening-program/course-offer',
   title: 'Offered Courses | Summer 2025 | CE (Evening) | EUB',
   description:
     'View the list of offered courses for the Summer 2025 semester for the B.Sc. in Civil Engineering (Evening) program. See available subjects for registration.',
