@@ -28,8 +28,7 @@ const Contacts = () => {
           <PhoneCall className='size-5' />
           <div className='flex-1'>
             <span>
-              01968774927 ( Admission Director), 01968774933, 01968774928,
-              01968774930-32
+              01968774927 (Admission), 01968774933, 01968774928, 01968774930-32
             </span>
           </div>
         </li>

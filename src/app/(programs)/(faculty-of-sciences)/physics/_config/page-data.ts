@@ -19,7 +19,7 @@ export const pages: IPageItem[] = [
     href: '/laboratories-and-resources',
   },
   {
-    title: 'Faculty Members & Staff',
+    title: 'Faculty Members',
     href: '/faculty-members',
   },
   {

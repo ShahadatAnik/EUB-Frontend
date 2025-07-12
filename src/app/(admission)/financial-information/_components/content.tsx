@@ -23,7 +23,7 @@ const Content: React.FC<{ data: IFinancialFaculty[] }> = ({ data }) => {
       <div className='text-center'>
         <h6 className='text-lg'>
           <span className='font-semibold'>Admission Office : </span>{' '}
-          01968774930-31, 01968774933 (Admission Director).
+          01968774930-31, 01968774933 (Admission).
         </h6>
         <h6 className='text-lg'>
           <span className='font-semibold'>Email : </span>
@@ -31,6 +31,9 @@ const Content: React.FC<{ data: IFinancialFaculty[] }> = ({ data }) => {
         </h6>
         <h6 className='mt-2 text-lg font-semibold'>
           100% waiver for Son/Daughter of Freedom Fighter
+        </h6>
+        <h6 className='mt-2 text-lg font-semibold'>
+          Must apply on a specific form with 100% waiver
         </h6>
       </div>
       <Waiver />

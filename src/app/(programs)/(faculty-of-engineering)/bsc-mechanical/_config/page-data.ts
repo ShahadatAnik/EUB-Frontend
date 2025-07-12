@@ -89,7 +89,7 @@ export const pages: IPageItem[] = [
   //   href: '/alumni-industry',
   // },
   {
-    title: 'Faculty Members & Staff',
+    title: 'Faculty Members',
     href: '/faculty-members',
   },
   {

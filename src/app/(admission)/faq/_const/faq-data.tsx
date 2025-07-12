@@ -319,7 +319,7 @@ const faqData: IFAQ[] = [
     answer: (
       <p>
         <strong>
-          Admission Office : 01968774931, 01968774933, 01896066056 (Director){' '}
+          Admission Office : 01968774931, 01968774933, 01896066056
           <br />
           <br />
           Email : admission@eub.edu.bd
@@ -356,7 +356,7 @@ const faqData: IFAQ[] = [
     answer: (
       <p>
         <strong>
-          Admission Office : 01968774931, 01968774933, 01896066056 (Director){' '}
+          Admission Office : 01968774931, 01968774933, 01896066056
           <br />
           <br />
           Email : admission@eub.edu.bd

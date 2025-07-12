@@ -25,7 +25,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
   const redirectUrlForHead = `/faculty/${program}/${departmentHead?.teachers_uuid}`;
 
   return (
-    <ContentWrapper title='Faculty Members & Staff' className='space-y-4'>
+    <ContentWrapper title='Faculty Members' className='space-y-4'>
       {isLoading && <FacultySkeleton />}
 
       {!isLoading && (!teachers || teachers.length === 0) && (
@@ -43,7 +43,7 @@ const FacultyAndStaff = ({ department }: { department: string }) => {
           <div className='mb-6 flex items-center gap-4'>
             <div className='h-px flex-1 bg-gray-300'></div>
             <h2 className='px-4 text-xl font-semibold text-primary'>
-              Other Members & Staff
+              Other Members
             </h2>
             <div className='h-px flex-1 bg-gray-300'></div>
           </div>
