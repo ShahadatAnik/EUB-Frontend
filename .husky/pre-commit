@@ -4,6 +4,9 @@
 echo '🚀 Commencing pre-commit checks: Styling, linting, type checking, and building...'
 
 # Run Prettier check
+npm run format || echo '❌ Prettier check failed: Code formatting issues detected. Please run "npm run format", add the changes, and attempt to commit again.'
+
+# Run Prettier check
 npm run check ||
 (
   echo '❌ Prettier check failed: Code formatting issues detected. Please run "npm run format", add the changes, and attempt to commit again.'
