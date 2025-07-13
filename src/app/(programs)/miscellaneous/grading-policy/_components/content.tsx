@@ -14,10 +14,10 @@ const Content = () => {
         />
         <GradingTable />
 
-        <SectionContent
+        {/* <SectionContent
           title={`Grade Change`}
           content='Grade change is strongly discouraged. Letter grades may be changed only for posting errors or errors in calculation. If a grade change is inevitable, it must be completed within one semester following the submission of the grade. The program directors and department chairs will ask for necessary papers and records to substantiate the grade change.'
-        />
+        /> */}
         <SectionContent
           title={`Incomplete (I)`}
           content={
