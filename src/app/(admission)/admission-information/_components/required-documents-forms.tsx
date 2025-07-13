@@ -15,9 +15,19 @@ import SectionLayout from './section-layout';
 
 const pdfs = [
   {
-    updatedAt: '2022-01-01',
-    pdf: '/pdf/test.pdf',
-    title: 'Document',
+    updatedAt: '2025-07-13',
+    pdf: '/pdf/application-admission.pdf',
+    title: 'Admission Application Form',
+  },
+  {
+    updatedAt: '2025-07-13',
+    pdf: '/pdf/waiver-approval-form.pdf',
+    title: 'Waiver Approval Form',
+  },
+  {
+    updatedAt: '2025-07-13',
+    pdf: '/pdf/students-id-card-form.pdf',
+    title: 'Student ID Card Form',
   },
 ];
 
