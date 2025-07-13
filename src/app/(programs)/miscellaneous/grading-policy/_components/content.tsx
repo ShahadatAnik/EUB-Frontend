@@ -18,7 +18,7 @@ const Content = () => {
           title={`Grade Change`}
           content='Grade change is strongly discouraged. Letter grades may be changed only for posting errors or errors in calculation. If a grade change is inevitable, it must be completed within one semester following the submission of the grade. The program directors and department chairs will ask for necessary papers and records to substantiate the grade change.'
         /> */}
-        {/* <SectionContent
+        <SectionContent
           title={`Incomplete (I)`}
           content={
             <p>
@@ -44,15 +44,15 @@ const Content = () => {
               semester after the grade is assigned.
             </p>
           }
-        /> */}
-        {/* <SectionContent
+        />
+        <SectionContent
           title={`Withdrawal (W)`}
           content={`The grade Withdrawal (W) is assigned when a student officially drops a course during the period between the ends of the third and twelfth weeks. Prior to that time if a student drops a course, no entry is made on the academic record. A "W" does not affect the student's GPA.`}
-        /> */}
-        {/* <SectionContent
+        />
+        <SectionContent
           title={`Retaking Courses`}
           content={`A student may repeat a course in which the grade is 'B' or lower. When a student retakes a course, the actual grade will be recorded. In case of a retake course, only the best grade will be used to calculate the CGPA. An "F" grade earned in any credit course will be used to calculate CGPA until the course is retaken/ replaced by taking another appropriate course, and a better grade is obtained. The retake policy in case of courses with "F" grades applies to all students of EUB irrespective of their date of enrollment. A student who wishes to retake a course must register for the course again and will be assessed for tuition and applicable fees.`}
-        /> */}
+        />
         <SectionContent
           title={`Abandoning Course`}
           content={`Grade F will be recorded for students who have not fulfilled academic obligations and have not obtained a grade, and for students who abandon their courses without officially withdrawing from a course.`}
