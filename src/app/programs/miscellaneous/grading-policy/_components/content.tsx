@@ -8,16 +8,41 @@ const Content = () => {
     <div className='py-6 lg:py-12'>
       <div className='container space-y-8'>
         <SectionContent
-          title='Grading System'
-          content='A uniform grading system approved by the University Grants Commission of Bangladesh (UGC), the highest controlling authority of the universities in Bangladesh for all universities (public, private) is followed for the placement of students in different grades. All coursework is graded according to a unified grading system as shown in the following chart.
-'
+          title='Grades'
+          content='Letter grades indicating the quality of course work completed is interpreted as follows'
         />
         <GradingTable />
 
-        {/* <SectionContent
+        <SectionContent
+          title={`Grade Point Average (GPA)`}
+          content="Student's grade-point averages are numerical values obtained by
+            dividing the total grade points earned by the credits attempted.
+            Only courses' graded A, A-, B+, B, B-, C+, C, C-, D+, D, and F
+            are used to determine credits attempted. Only the grades earned in
+            the courses that are required for a degree are included in the GPA
+            calculation. Grades earned in other courses are reported on the
+            transcript but are not counted in calculating the GPA."
+        />
+        <SectionContent
+          title={`GPA - Class Equivalence`}
+          content={
+            <p>
+              EUB students are graded on GPA. Comparison of the GPA earned by
+              EUB students to the Classes earned by students in other
+              universities in the country is as follows:
+              <br />
+              GPA 3.00 and above = First Class
+              <br />
+              GPA 2.50 to 2.99 = Second Class
+              <br />
+              GPA 2.00 to 2.49 = Third Class
+            </p>
+          }
+        />
+        <SectionContent
           title={`Grade Change`}
           content='Grade change is strongly discouraged. Letter grades may be changed only for posting errors or errors in calculation. If a grade change is inevitable, it must be completed within one semester following the submission of the grade. The program directors and department chairs will ask for necessary papers and records to substantiate the grade change.'
-        /> */}
+        />
         {/* <SectionContent
           title={`Incomplete (I)`}
           content={
@@ -44,8 +69,8 @@ const Content = () => {
               semester after the grade is assigned.
             </p>
           }
-        /> */}
-        {/* <SectionContent
+        />
+        <SectionContent
           title={`Withdrawal (W)`}
           content={`The grade Withdrawal (W) is assigned when a student officially drops a course during the period between the ends of the third and twelfth weeks. Prior to that time if a student drops a course, no entry is made on the academic record. A "W" does not affect the student's GPA.`}
         />
