@@ -1,6 +1,12 @@
 import Link from 'next/link';
 
+
+
 import { IFAQ } from '@/types';
+
+
+
+
 
 const faqData: IFAQ[] = [
   {
@@ -57,47 +63,77 @@ const faqData: IFAQ[] = [
           <p className='text-lg'>
             <strong>Minimum Academic Qualifications</strong>
           </p>
-          <ul className='mt-1 list-disc space-y-1 pl-8'>
+          <ul className='list-inside list-decimal space-y-3'>
+            <span className='italic'>
+              The admission eligibility for undergraduate, graduate and Diploma
+              level at private Universities approved by UGC is determined as
+              follows:
+            </span>
+            <br />
             <li>
-              Combined GPA of 6.0 in both SSC and HSC with a minimum GPA of 2.5
-              in each OR GPA of at least 2.00 either in the SSC or HSC
-              examination, but the total GPA in both the examination must be at
-              least 6.00
+              Private Universities shall not advertise admission or admission to
+              any program or course other than the program or course approved by
+              the University Grants Commission.
             </li>
             <li>
-              O-Levels and A-Levels: A minimum of five O-Level subjects with an
-              Average Grade Point of at least 2.5 and two A-Level subjects with
-              an Average Grade Point of at least 2.0. A maximum of one ‘E’ grade
-              is allowed across both O-Levels and A-Levels combined. (Grading
-              scale: A = 5, B = 4, C = 3, D = 2, E = 1) OR
-              <ul className='list-inside list-decimal pl-4'>
-                <li>
-                  LL.B. (Honors) degree or completion of LL.M. (Preliminary)
-                  required.
-                </li>
-              </ul>
+              A candidate must have a minimum GPA 2.50 or equivalent grade in
+              each SSC or equivalent examination and HSC examinations or
+              equivalent examination. If there is a minimum GPA 2.00 in any of
+              these two examinations, the candidate must have a total GPA 6.00
+              in both examinations.
             </li>
             <li>
-              US High School Diploma, IB Diploma Program (IB-DP) or equivalent.
+              The candidate must have minimum 5 Subjects in O-Level and 2
+              subjects in A-Level examinations with minimum grade of B (GPA 4.00
+              ) in 4 subjects and of C (GPA 3.50) in 3 subjects of 7 subjects in
+              both the examinations.
             </li>
             <li>
-              Students with academic qualifications other than the above need to
-              contact the Admissions Office to check their eligibility.
+              Offspring of the freedom fighters may apply with an aggregate GPA
+              of 5.00 in SSC/SSC(Vocational)/Dakhil and HSC/Alim or equivalent.
             </li>
             <li>
-              Foreign Applicants: candidates must meet academic qualifications
-              equivalent to Bangladeshi students. Foreign candidates without
-              security clearance from their respective Embassy or High
-              Commission in Bangladesh are not eligible to apply.
+              For the programs or courses titled Music, Fashion Design, Fine
+              Arts, Graphics Design, Library Science & Information Technology,
+              the candidate should have a minimum of GPA 2.00 in SSC/O-Level and
+              HSC/A or equivalent public examinations at each level.
             </li>
             <li>
-              Credit transfer is allowed between EUB and other institutions if
-              course equivalencies are met.
+              Students with a science background in SSC/SSC(Vocational)/Dakhil,
+              HSC/Alim or equivalent examinations are only allowed to get
+              admission in the programs/courses at the Bachelor’s (BSc),
+              Master’s (MSc) and Diploma level under the Faculty of Science and
+              Technology. Students who passed from Arts, Humanities and Business
+              background are not allowed to get admission in B.Sc., MSc and
+              Diploma programs.
             </li>
+            <li>
+              Students having a GED Diploma degree will not be eligible for
+              admission to the Private Universities.
+            </li>
+            <li>
+              Students seeking admission to the Masters programs must have a GPA
+              2.00 or equivalent at Bachelor program having the above mentioned
+              educational qualifications.
+            </li>
+            <br />
+            <span className='italic'>
+              It is, therefore, directed to admit the students in the approved
+              programs/courses of the commission at the private universities
+              subject to the educational qualifications mentioned above. At the
+              same time, the commissions office circular regarding the admission
+              policy of the students issued on 10 April 2016 (Office Memo
+              no.3010) has been cancelled.
+            </span>
+            <br />
+            <br />
+            The Admission Committee looks for individuals who want to learn in
+            any suitable course(s). Students who want to learn are encouraged to
+            enroll.
           </ul>
         </div>
         <div>
-          <p className='text-lg'>
+          {/* <p className='text-lg'>
             <strong>Specific Program Requirements</strong>
           </p>
           <ul className='mt-1 list-disc space-y-1 pl-8'>
@@ -130,7 +166,7 @@ const faqData: IFAQ[] = [
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     ),
@@ -183,7 +219,7 @@ const faqData: IFAQ[] = [
               <ul className='mt-1 list-decimal space-y-1 pl-8'>
                 <li>
                   Four-year B.S.S. (Honors) in Economics students can join
-                  directly at the Second Year Level.
+                  directly at the Final Year Level.
                 </li>
                 <li>
                   Three-year B.S.S. (Honors) or B.A. (Pass) degree holders must

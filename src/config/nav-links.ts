@@ -275,10 +275,10 @@ export const navLinks: INavLink[] = [
         title: 'Financial Information',
         href: '/financial-information',
       },
-      {
-        title: 'Tuition & Other Fees Structure',
-        href: '/tuition-and-other-fees-structure',
-      },
+      // {
+      //   title: 'Tuition & Other Fees Structure',
+      //   href: '/tuition-and-other-fees-structure',
+      // },
       {
         title: 'FAQs / Ask',
         href: '/faq',

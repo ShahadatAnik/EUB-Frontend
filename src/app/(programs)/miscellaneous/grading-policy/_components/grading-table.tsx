@@ -86,15 +86,15 @@ const GradingTable = () => {
           and they are not accepted in the calculation of the grade point
           average.
         </p>
-        <br />
+        {/* <br /> */}
 
-        <p>
+        {/* <p>
           The exact cut off points for assigning letter grades is at the
           discretion of individual instructor. The same applies to the
           assignment of + or - after a letter grade. It is meant to give more
           flexibility so that shades of performance can be distinguished and
           rewarded. The + and - has a value of 0.3 grade point.
-        </p>
+        </p> */}
       </div>
     </div>
   );

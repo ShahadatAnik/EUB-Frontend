@@ -76,7 +76,7 @@ const MinimumRequirement = () => {
         </ul>
       </SectionContent>
 
-      <SectionContent title='Specific programs requirements'>
+      {/* <SectionContent title='Specific programs requirements'>
         <ul className='list-inside list-decimal space-y-3'>
           <li>
             For <strong>B.A. (Honors) in English Program</strong>, minimum 2nd
@@ -106,7 +106,7 @@ const MinimumRequirement = () => {
             </ul>
           </li>
         </ul>
-      </SectionContent>
+      </SectionContent> */}
 
       <SectionContent title='Postgraduate Program Requirements'>
         <ul className='list-inside list-decimal space-y-3'>

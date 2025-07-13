@@ -26,7 +26,7 @@ const Footer = () => {
                   <span className='font-bold'>Admission Office : </span>{' '}
                   01968774933, 01968774931
                   <br />
-                  01896066056 (Director)
+                  01896066056
                 </p>
               </div>
             </div>
