@@ -28,7 +28,14 @@ const CourseTable: React.FC<{
     },
   ];
 
-  return <SystemTable caption={title} data={data} columns={columns} />;
+  return (
+    <div>
+      <p className='text-base font-semibold'>{title}</p>
+      <br />
+      <SystemTable data={data} columns={columns} />
+    
+    </div>
+  );
 };
 
 export default CourseTable;

@@ -39,11 +39,11 @@ const Curriculum = () => {
             title='First Year Second Semester (12 Credits)'
             data={firstYearSecondSemester}
           />
+          <CourseTable
+            title='First Year Third Semester (15 Credits)'
+            data={firstYearThirdSemester}
+          />
         </div>
-        <CourseTable
-          title='First Year Third Semester (15 Credits)'
-          data={firstYearThirdSemester}
-        />
       </div>
       <div>
         <h6 className='text-lg font-semibold'>Course Structure</h6>
