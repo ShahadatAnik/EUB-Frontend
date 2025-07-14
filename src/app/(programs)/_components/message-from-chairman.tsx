@@ -16,29 +16,34 @@ const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
   ssr: false,
 });
 
-const getDepartmentName = (department: string) => {
+const getDepartmentName = (department: string,full_department_name:string) => {
   switch (department) {
-    case 'MBA 1 Year':
-    case 'EMBA':
-    case 'BBA':
+    case 'mba':
+    case 'mba-one-year':
+    case 'bba':
+    case 'emba':
+    case 'thm':
+    case 'mss-economics':
+    case 'bss-economics':
+    case 'mgds-one-year':
       return 'Department of Business Administration';
-    case 'Civil':
+    case 'bsc-civil':
       return 'Department of Civil Engineering';
-    case 'Mechanical':
+    case 'bsc-mechanical':
       return 'Department of Mechanical Engineering';
-    case 'CSE':
+    case 'bsc-cse':
       return 'Department of Computer Science and Engineering';
-    case 'EEE':
-    case 'Electrical and Electronic Engineering (EEE)':
+    case 'bsc-eee':
+    // case 'Electrical and Electronic Engineering (EEE)':
       return 'Dept. of Electrical and Electronic Engineering (EEE)';
 
-    case 'Economics BSS':
-    case 'Master of Social Science in Economics (MSS)':
-      return 'Department of Economics';
-    case 'Bachelor of Tourism and Hospitality Management (THM)':
-      return 'Department of Tourism and Hospitality Management';
+    // case 'Economics BSS':
+    // case 'Master of Social Science in Economics (MSS)':
+    //   return 'Department of Economics';
+    // case 'Bachelor of Tourism and Hospitality Management (THM)':
+    //   return 'Department of Tourism and Hospitality Management';
     default:
-      return department;
+      return full_department_name;
   }
 };
 
@@ -93,7 +98,7 @@ const MessageFromChairman: React.FC<{
               <br />
               {chairman?.teacher_designation}
               {', '}
-              {getDepartmentName(chairman.department_name)}
+              {getDepartmentName(chairman.department_short_name,chairman.department_name)}
               <br />
               European University of Bangladesh
             </p>
