@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UnderDevelopment from '@/components/under-development';
+// import UnderDevelopment from '@/components/under-development';
 
 import ContentWrapper from '@/app/(programs)/_components/content-wrapper';
 
@@ -8,80 +8,47 @@ import {
   firstYearFirstSemester,
   firstYearSecondSemester,
   firstYearThirdSemester,
-  fourthYearFirstSemester,
-  fourthYearSecondSemester,
-  fourthYearThirdSemester,
-  secondYearFirstSemester,
-  secondYearSecondSemester,
-  secondYearThirdSemester,
-  thirdYearFirstSemester,
-  thirdYearSecondSemester,
-  thirdYearThirdSemester,
-} from '../../_const/semester-wise-courses';
-import SemesterCourseTable from './semester-course-table';
+  
+} from '../../_const/list-of-courses';
+// import SemesterCourseTable from './semester-course-table';
+import CourseTable from '../curriculum/course-table';
+import CourseStructureTable from '../curriculum/course-structure-table';
 
 const Page = () => {
-  return (
-    <ContentWrapper title='Course Map and Path'>
-      <UnderDevelopment />
-    </ContentWrapper>
-  );
+  // return (
+  //   <ContentWrapper title='Course Map and Path'>
+  //     <UnderDevelopment />
+  //   </ContentWrapper>
+  // );
   return (
     <ContentWrapper title='Course Map and Path' className='space-y-4 py-4'>
-      <p>
-        The B.Sc in Computer Science and Engineering Program consists of the
-        following categories of courses:
-      </p>
-      <div className='space-y-16'>
-        <SemesterCourseTable
-          title='First Year - First Semester'
-          data={firstYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='First Year - Second Semester'
-          data={firstYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='First Year - Third Semester'
+       <div>
+        <h6 className='text-lg font-semibold'>List of Courses</h6>
+        {/* <p className='mt-1'>
+          The list of the courses that will be offered under the program is
+          given below:
+        </p> */}
+
+        <div className='mt-6 space-y-12'>
+          <CourseTable
+            title='First Year First Semester (12 Credits)'
+            data={firstYearFirstSemester}
+          />
+          <CourseTable
+            title='First Year Second Semester (12 Credits)'
+            data={firstYearSecondSemester}
+          />
+        </div>
+        <CourseTable
+          title='First Year Third Semester (15 Credits)'
           data={firstYearThirdSemester}
         />
-        <SemesterCourseTable
-          title='Second Year - First Semester'
-          data={secondYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='Second Year - Second Semester'
-          data={secondYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='Second Year - Third Semester'
-          data={secondYearThirdSemester}
-        />
-        <SemesterCourseTable
-          title='Third Year - First Semester'
-          data={thirdYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='Third Year - Second Semester'
-          data={thirdYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='Third Year - Third Semester'
-          data={thirdYearThirdSemester}
-        />
-
-        <SemesterCourseTable
-          title='Fourth Year - First Semester'
-          data={fourthYearFirstSemester}
-        />
-        <SemesterCourseTable
-          title='Fourth Year - Second Semester'
-          data={fourthYearSecondSemester}
-        />
-        <SemesterCourseTable
-          title='Fourth Year - Third Semester'
-          data={fourthYearThirdSemester}
-        />
+      </div>
+      <div>
+        <h6 className='text-lg font-semibold'>Course Structure</h6>
+        <div className='my-4'>
+          <CourseStructureTable/>
+        </div>
       </div>
     </ContentWrapper>
   );
