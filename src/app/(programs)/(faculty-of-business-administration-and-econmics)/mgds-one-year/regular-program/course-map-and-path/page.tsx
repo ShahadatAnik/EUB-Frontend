@@ -8,11 +8,10 @@ import {
   firstYearFirstSemester,
   firstYearSecondSemester,
   firstYearThirdSemester,
-  
 } from '../../_const/list-of-courses';
 // import SemesterCourseTable from './semester-course-table';
-import CourseTable from '../curriculum/course-table';
 import CourseStructureTable from '../curriculum/course-structure-table';
+import CourseTable from '../curriculum/course-table';
 
 const Page = () => {
   // return (
@@ -22,7 +21,7 @@ const Page = () => {
   // );
   return (
     <ContentWrapper title='Course Map and Path' className='space-y-4 py-4'>
-       <div>
+      <div>
         <h6 className='text-lg font-semibold'>List of Courses</h6>
         {/* <p className='mt-1'>
           The list of the courses that will be offered under the program is
@@ -38,16 +37,16 @@ const Page = () => {
             title='First Year Second Semester (12 Credits)'
             data={firstYearSecondSemester}
           />
+          <CourseTable
+            title='First Year Third Semester (15 Credits)'
+            data={firstYearThirdSemester}
+          />
         </div>
-        <CourseTable
-          title='First Year Third Semester (15 Credits)'
-          data={firstYearThirdSemester}
-        />
       </div>
       <div>
         <h6 className='text-lg font-semibold'>Course Structure</h6>
         <div className='my-4'>
-          <CourseStructureTable/>
+          <CourseStructureTable />
         </div>
       </div>
     </ContentWrapper>
