@@ -217,6 +217,7 @@ export type IDepartmentTeacher = {
   uuid: string;
   department_uuid: string;
   department_name: string;
+  department_short_name: string;
   teachers_uuid: string;
   teacher_uuid: string;
   teacher_name: string;

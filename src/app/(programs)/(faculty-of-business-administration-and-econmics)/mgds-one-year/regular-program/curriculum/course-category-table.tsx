@@ -61,6 +61,10 @@ const courseCategory = [
     symbol: 'IT',
     subject_name: 'Industrial Training',
   },
+  {
+    symbol: 'MGDS',
+    subject_name: 'Master of Governance and Development Studies',
+  },
 ];
 
 const columns: SystemTableColumn<{ symbol: string; subject_name: string }>[] = [
