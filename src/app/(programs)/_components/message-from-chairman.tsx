@@ -25,10 +25,10 @@ const getDepartmentName = (
     case 'mba-one-year':
     case 'bba':
     case 'emba':
-    case 'mgds-one-year':
       return 'Department of Business Administration';
     case 'mss-economics':
     case 'bss-economics':
+    case 'mgds-one-year':
       return 'Department of Economics';
     case 'thm':
       return 'Department of Tourism and Hospitality Management';
