@@ -33,7 +33,6 @@ const CourseTable: React.FC<{
       <p className='text-base font-semibold'>{title}</p>
       <br />
       <SystemTable data={data} columns={columns} />
-    
     </div>
   );
 };

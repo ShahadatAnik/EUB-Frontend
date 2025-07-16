@@ -33,10 +33,7 @@ const pdfs = [
 
 const RequiredDocumentsForms = () => {
   return (
-    <SectionLayout
-      title='Required Forms'
-      id='required-documents-and-forms'
-    >
+    <SectionLayout title='Required Forms' id='required-documents-and-forms'>
       <Table>
         <TableHeader>
           <TableRow>

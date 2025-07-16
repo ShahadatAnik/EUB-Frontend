@@ -1,12 +1,6 @@
 import Link from 'next/link';
 
-
-
 import { IFAQ } from '@/types';
-
-
-
-
 
 const faqData: IFAQ[] = [
   {
