@@ -16,17 +16,22 @@ const RichTextViewer = dynamic(() => import('@/components/rich-text-viewer'), {
   ssr: false,
 });
 
-const getDepartmentName = (department: string,full_department_name:string) => {
+const getDepartmentName = (
+  department: string,
+  full_department_name: string
+) => {
   switch (department) {
     case 'mba':
     case 'mba-one-year':
     case 'bba':
     case 'emba':
-    case 'thm':
-    case 'mss-economics':
-    case 'bss-economics':
     case 'mgds-one-year':
       return 'Department of Business Administration';
+    case 'mss-economics':
+    case 'bss-economics':
+      return 'Department of Economics';
+    case 'thm':
+      return 'Department of Tourism and Hospitality Management';
     case 'bsc-civil':
       return 'Department of Civil Engineering';
     case 'bsc-mechanical':
@@ -34,14 +39,8 @@ const getDepartmentName = (department: string,full_department_name:string) => {
     case 'bsc-cse':
       return 'Department of Computer Science and Engineering';
     case 'bsc-eee':
-    // case 'Electrical and Electronic Engineering (EEE)':
       return 'Dept. of Electrical and Electronic Engineering (EEE)';
 
-    // case 'Economics BSS':
-    // case 'Master of Social Science in Economics (MSS)':
-    //   return 'Department of Economics';
-    // case 'Bachelor of Tourism and Hospitality Management (THM)':
-    //   return 'Department of Tourism and Hospitality Management';
     default:
       return full_department_name;
   }
@@ -98,7 +97,10 @@ const MessageFromChairman: React.FC<{
               <br />
               {chairman?.teacher_designation}
               {', '}
-              {getDepartmentName(chairman.department_short_name,chairman.department_name)}
+              {getDepartmentName(
+                chairman.department_short_name,
+                chairman.department_name
+              )}
               <br />
               European University of Bangladesh
             </p>

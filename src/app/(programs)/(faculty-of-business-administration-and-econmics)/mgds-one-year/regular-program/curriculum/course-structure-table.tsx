@@ -1,9 +1,6 @@
-import React from 'react';
-
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableFooter,
   TableHead,
@@ -42,7 +39,6 @@ const courseStructure = [
 const CourseStructureTable = () => {
   return (
     <Table>
-      <TableCaption>Course Structure</TableCaption>
       <TableHeader>
         <TableRow className='bg-primary hover:bg-primary'>
           <TableHead className='text-white'>Course Category</TableHead>
