@@ -22,6 +22,11 @@ export const topNavLinks: ITopNavLink[] = [
     href: '/notices',
   },
   {
+    title: 'Library',
+    href: 'https://drive.google.com/drive/folders/12eBFWvIsLrszQgKGCEyamvINngSt92st',
+    newTab: true,
+  },
+  {
     title: 'Degree Verification',
     href: 'https://iems.eub.edu.bd/ResultVerification',
     newTab: true,
