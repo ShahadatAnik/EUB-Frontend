@@ -20,7 +20,8 @@ const ProgramLayout: React.FC<{ children: React.ReactNode }> = ({
         <PageLayout
           pages={pages}
           bannerImage={{
-            src: '/banner.jpg',
+            // src: '/banner.jpg',
+            src: '/images/programs/bss-eco/banner.jpg',
             alt: 'Bachelor of Social Sciences (BSS) in Economics',
           }}
         >

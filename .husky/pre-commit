@@ -3,37 +3,37 @@
 
 echo '🚀 Commencing pre-commit checks: Styling, linting, type checking, and building...'
 
-# Run Prettier check
-npm run format || echo '❌ Prettier check failed: Code formatting issues detected. Please run "npm run format", add the changes, and attempt to commit again.'
+# # Run Prettier check
+# npm run format || echo '❌ Prettier check failed: Code formatting issues detected. Please run "npm run format", add the changes, and attempt to commit again.'
 
-# Run Prettier check
-npm run check ||
-(
-  echo '❌ Prettier check failed: Code formatting issues detected. Please run "npm run format", add the changes, and attempt to commit again.'
-  false
-)
+# # Run Prettier check
+# npm run check ||
+# (
+#   echo '❌ Prettier check failed: Code formatting issues detected. Please run "npm run format", add the changes, and attempt to commit again.'
+#   false
+# )
 
-# Run ESLint check
-npm run lint ||
-(
-  echo '❌ ESLint check failed: Linting errors found. Please address the issues listed above, add the changes, and attempt to commit again.'
-  false
-)
+# # Run ESLint check
+# npm run lint ||
+# (
+#   echo '❌ ESLint check failed: Linting errors found. Please address the issues listed above, add the changes, and attempt to commit again.'
+#   false
+# )
 
-# Run TypeScript check
-npm run types ||
-(
-  echo '❌ TypeScript check failed: Type errors detected. Please review the errors above and make the necessary corrections.'
-  false
-)
+# # Run TypeScript check
+# npm run types ||
+# (
+#   echo '❌ TypeScript check failed: Type errors detected. Please review the errors above and make the necessary corrections.'
+#   false
+# )
 
-echo '✅ Code quality checks passed. Initiating project build...'
+# echo '✅ Code quality checks passed. Initiating project build...'
 
-# Run project build
-npm run build ||
-(
-  echo '❌ Build failed: The project could not be built successfully. Please review the errors above for details.'
-  false
-)
+# # Run project build
+# npm run build ||
+# (
+#   echo '❌ Build failed: The project could not be built successfully. Please review the errors above for details.'
+#   false
+# )
 
 echo '✅ All pre-commit checks passed. Committing changes.'

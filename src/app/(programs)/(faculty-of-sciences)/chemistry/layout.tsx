@@ -17,7 +17,7 @@ const ProgramLayout: React.FC<{ children: React.ReactNode }> = ({
         <PageLayout
           pages={pages}
           bannerImage={{
-            src: '/banner.jpg',
+            src: '/images/programs/chemistry/banner.jpg',
             alt: 'Chemistry (CHE)',
           }}
         >
